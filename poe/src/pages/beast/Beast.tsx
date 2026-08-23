@@ -6,13 +6,14 @@ import "./Beast.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import {dateTextFromString} from "../expedition/ExpeditionUtils";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
+import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
 
 export interface PoeNinjaBeast {
   name: string
@@ -69,6 +70,11 @@ const generateRegex = (
 const Beast = () => {
   const {globalProfile} = useContext(ProfileContext);
   const profile = loadSettings(globalProfile);
+  const savedProfile = loadProfiles()[globalProfile];
+  const hasSavedPriceRange = React.useRef(
+    valueFromKeyMap(savedProfile, "beast.minChaosValue") !== undefined ||
+    valueFromKeyMap(savedProfile, "beast.maxChaosValue") !== undefined
+  );
   const {league} = usePoe1League();
   const [minChaosValue, setMinChaosValue] = useState<string>(profile.beast.minChaosValue);
   const [maxChaosValue, setMaxChaosValue] = useState<string>(profile.beast.maxChaosValue);
@@ -79,6 +85,7 @@ const Beast = () => {
   const [beastPrices, setBeastPrices] = useState<BeastPriceRegex[]>([]);
   const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
   const [result, setResult] = useState<string>("");
+  const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
 
   useEffect(() => {
     if (!league) return;
@@ -111,36 +118,50 @@ const Beast = () => {
   }, [league]);
 
   useEffect(() => {
-    saveSettings({
-      ...profile,
-      beast: {
-        includeHarvest,
-        minChaosValue,
-        maxChaosValue,
-        menagerieLimit,
-        redBeastsOnly,
-      }
-    });
+    if (priceRangeInitialized) return;
+    const range = economyPriceRange(beastPrices.map((beast) => beast.chaosValue));
+    if (!range) return;
+    setMinChaosValue(range.min);
+    setMaxChaosValue(range.max);
+    setPriceRangeInitialized(true);
+  }, [beastPrices, priceRangeInitialized]);
+
+  useEffect(() => {
+    if (priceRangeInitialized) {
+      saveSettings({
+        ...profile,
+        beast: {
+          includeHarvest,
+          minChaosValue,
+          maxChaosValue,
+          menagerieLimit,
+          redBeastsOnly,
+        }
+      });
+    }
     const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
     const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
     setResult(generateRegex(beastPrices, includeHarvest, minChaosN, maxChaosN, menagerieLimit, redBeastsOnly));
-  }, [includeHarvest, minChaosValue, maxChaosValue, beastPrices, menagerieLimit, redBeastsOnly]);
+  }, [includeHarvest, minChaosValue, maxChaosValue, beastPrices, menagerieLimit, redBeastsOnly, priceRangeInitialized]);
 
   return (
     <>
       <Header text={"Bestiary"}/>
       <RegexResultBox result={result} warning={""} maxLength={(menagerieLimit ? 100 : 250)} reset={() => {
+        const range = economyPriceRange(beastPrices.map((beast) => beast.chaosValue));
         setIncludeHarvest(defaultSettings.beast.includeHarvest);
-        setMinChaosValue(defaultSettings.beast.minChaosValue);
-        setMaxChaosValue(defaultSettings.beast.maxChaosValue);
+        setPriceRangeInitialized(range !== undefined);
+        setMinChaosValue(range?.min ?? "0");
+        setMaxChaosValue(range?.max ?? "");
         setMenagerieLimit(defaultSettings.beast.menagerieLimit);
       }}/>
       <p className="beast-price-info">Using price data from the {league} League. Last updated: {lastUpdated}</p>
       <div className="filter-card-grid">
         <FilterCard title="Settings">
           <PriceRangeSlider id="beast-price" minValue={minChaosValue} maxValue={maxChaosValue}
-                            onMinChange={setMinChaosValue} onMaxChange={setMaxChaosValue}
-                            availablePrices={beastPrices.map((beast) => beast.chaosValue)}/>
+                            onMinChange={(value) => { setPriceRangeInitialized(true); setMinChaosValue(value); }}
+                            onMaxChange={(value) => { setPriceRangeInitialized(true); setMaxChaosValue(value); }}
+                            availablePrices={beastPrices.map((beast) => beast.chaosValue)} allowZero/>
           <div className="beast-card-divider"/>
           <Checkbox label="Include harvest beasts" value={includeHarvest} onChange={setIncludeHarvest}/>
           <Checkbox label="Use menagerie regex character limit (100)" value={menagerieLimit}

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import "./Scarab.css";
@@ -14,6 +14,7 @@ import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
+import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
 
 export interface PoeNinjaScarabLine {
   id: string
@@ -39,6 +40,11 @@ const sortByChaosValue = (prices: Map<string, number>, e1: Scarab, e2: Scarab) =
 const Scarabs = () => {
   const {globalProfile} = useContext(ProfileContext);
   const profile = loadSettings(globalProfile);
+  const savedProfile = loadProfiles()[globalProfile];
+  const hasSavedPriceRange = React.useRef(
+    valueFromKeyMap(savedProfile, "scarab.minPrice") !== undefined ||
+    valueFromKeyMap(savedProfile, "scarab.maxPrice") !== undefined
+  );
   const {league} = usePoe1League();
 
   const scarabNames = Array.from(Object.keys(scarabs));
@@ -51,6 +57,7 @@ const Scarabs = () => {
   const [selected, setSelected] = useState<string[]>(profile.scarab.selected.filter((e) => scarabNames.includes(e)));
 
   const [result, setResult] = useState("");
+  const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
 
   useEffect(() => {
     if (!league) return;
@@ -73,10 +80,19 @@ const Scarabs = () => {
   }, [league]);
 
   useEffect(() => {
+    if (priceRangeInitialized) return;
+    const range = economyPriceRange(Array.from(priceLookup.values()));
+    if (!range) return;
+    setMinPrice(range.min);
+    setMaxPrice(range.max);
+    setPriceRangeInitialized(true);
+  }, [priceLookup, priceRangeInitialized]);
+
+  useEffect(() => {
     const settings: ScarabSettings = {minPrice, maxPrice, selected,};
-    saveSettings({...profile, scarab: {...settings}});
+    if (priceRangeInitialized) saveSettings({...profile, scarab: {...settings}});
     setResult(generateScarabRegex(settings));
-  }, [minPrice, maxPrice, selected]);
+  }, [minPrice, maxPrice, selected, priceRangeInitialized]);
 
 
   return (
@@ -86,7 +102,11 @@ const Scarabs = () => {
         result={result}
         warning={undefined}
         reset={() => {
+          const range = economyPriceRange(Array.from(priceLookup.values()));
           setSelected(defaultSettings.scarab.selected);
+          setPriceRangeInitialized(range !== undefined);
+          setMinPrice(range?.min ?? "0");
+          setMaxPrice(range?.max ?? "");
         }}
       />
       <div className="break"/>
@@ -109,8 +129,9 @@ const Scarabs = () => {
               Auto select cheap scarabs between:
             </button>
             <PriceRangeSlider id="scarab-price" minValue={minPrice} maxValue={maxPrice}
-                              onMinChange={setMinPrice} onMaxChange={setMaxPrice}
-                              availablePrices={Array.from(priceLookup.values())}/>
+                              onMinChange={(value) => { setPriceRangeInitialized(true); setMinPrice(value); }}
+                              onMaxChange={(value) => { setPriceRangeInitialized(true); setMaxPrice(value); }}
+                              availablePrices={Array.from(priceLookup.values())} allowZero/>
           </div>
         </FilterCard>
       </div>
