@@ -20,6 +20,7 @@ import ExactOptimizedToggle from "@poe/components/ExactOptimizedToggle/ExactOpti
 import {mapModTokenColor} from "@poe/utils/MapModColor";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
+import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
 const OptimizedMapMods = () => {
   const {globalProfile} = useContext(ProfileContext);
@@ -51,6 +52,7 @@ const OptimizedMapMods = () => {
   const [tradeEightModOnly, setTradeEightModOnly] = useState(profile.map.tradeEightModOnly);
   const [tradeExcludeValdo, setTradeExcludeValdo] = useState(profile.map.tradeExcludeValdo);
   const [tradeExcludeShaperElder, setTradeExcludeShaperElder] = useState(profile.map.tradeExcludeShaperElder);
+  const [asyncPriceRange, setAsyncPriceRange] = useState(profile.map.asyncPriceRange);
   const eightModDisabled = corrupted.enabled && !corrupted.include;
 
   const [customTextStr, setCustomTextStr] = useState(profile.map.customText.value);
@@ -83,6 +85,7 @@ const OptimizedMapMods = () => {
         quality,
         anyQuality,
         anyYield,
+        asyncPriceRange,
         corrupted,
         unidentified,
       };
@@ -123,6 +126,7 @@ const OptimizedMapMods = () => {
       tradeEightModOnly,
       tradeExcludeValdo,
       tradeExcludeShaperElder,
+      asyncPriceRange,
       customText: {
         value: customTextStr,
         enabled: enableCustomText,
@@ -134,7 +138,7 @@ const OptimizedMapMods = () => {
       map: {...settings},
     });
     setResult(generateMapModRegex(settings, regex, profile.language));
-  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder]);
+  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange]);
 
   const renderAffixTag = displayAffixBadges
     ? (token: Token<MapModsTokenOption>) => (
@@ -166,6 +170,9 @@ const OptimizedMapMods = () => {
         setEnableCustomText={setEnableCustomText}
         onTradeSearch={handleTradeSearch}
         tradeSearchLoading={tradeSearchLoading}
+        middleAction={
+          <AsyncTradePriceRange value={asyncPriceRange} onChange={setAsyncPriceRange}/>
+        }
         reset={() => {
           setSelectedBadIds(defaultSettings.map.badIds);
           setSelectedGoodIds(defaultSettings.map.goodIds);
@@ -192,6 +199,7 @@ const OptimizedMapMods = () => {
           setTradeEightModOnly(defaultSettings.map.tradeEightModOnly);
           setTradeExcludeValdo(defaultSettings.map.tradeExcludeValdo);
           setTradeExcludeShaperElder(defaultSettings.map.tradeExcludeShaperElder);
+          setAsyncPriceRange(defaultSettings.map.asyncPriceRange);
         }}
       />
       {tradeMessage && (

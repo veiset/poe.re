@@ -211,6 +211,13 @@ export interface MapSettings {
   tradeEightModOnly: boolean;
   tradeExcludeValdo: boolean;
   tradeExcludeShaperElder: boolean;
+  asyncPriceRange: {
+    min: string;
+    max: string;
+    currency: "chaos" | "divine";
+    enabled: boolean;
+    tradeEnabled: boolean;
+  };
   rarity: {
     normal: boolean;
     magic: boolean;
@@ -432,6 +439,13 @@ export const defaultSettings: SavedSettings = {
     tradeEightModOnly: false,
     tradeExcludeValdo: true,
     tradeExcludeShaperElder: true,
+    asyncPriceRange: {
+      min: "0",
+      max: "999",
+      currency: "chaos",
+      enabled: false,
+      tradeEnabled: false,
+    },
     rarity: {
       normal: true,
       magic: true,

@@ -19,6 +19,7 @@ const baseSettings = (overrides: Partial<TradeSettings> = {}): TradeSettings => 
   anyYield: false,
   corrupted: {enabled: false, include: true},
   unidentified: {enabled: false, include: true},
+  asyncPriceRange: {min: "0", max: "999", currency: "chaos", enabled: false, tradeEnabled: false},
   ...overrides,
 });
 
@@ -145,4 +146,31 @@ describe("buildTradeQuery", () => {
       ]);
     })
   })
+
+  describe("async trade price range", () => {
+    test.each(["chaos", "divine"] as const)("adds a %s price filter", (currency) => {
+      const q = buildTradeQuery(baseSettings({
+        asyncPriceRange: {min: "1", max: "25", currency, enabled: false, tradeEnabled: true},
+      }));
+      expect(q.query.filters.trade_filters).toEqual({
+        filters: {price: {option: currency, min: 1, max: 25}},
+      });
+    });
+
+    test("does not add a price filter when disabled", () => {
+      const q = buildTradeQuery(baseSettings());
+      expect(q.query.filters.trade_filters).toBeUndefined();
+    });
+
+    test("uses slider limits for empty endpoints", () => {
+      const q = buildTradeQuery(baseSettings({
+        asyncPriceRange: {min: "", max: "", currency: "chaos", enabled: false, tradeEnabled: true},
+      }));
+      expect(q.query.filters.trade_filters?.filters.price).toEqual({
+        option: "chaos",
+        min: 0,
+        max: 999,
+      });
+    });
+  });
 });

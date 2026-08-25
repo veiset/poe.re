@@ -4,14 +4,14 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Tattoo.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import { dateTextFromString } from "../expedition/ExpeditionUtils";
-import { loadSettings, saveSettings } from "@poe/utils/LocalStorage";
-import {defaultSettings} from "@poe/utils/SavedSettings";
+import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import { ProfileContext } from "@poe/components/profile/ProfileContext";
 import { tattooRegex } from "@poe/generated/GeneratedTattoo";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
-import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
+import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
+import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
 
 interface PoeNinjaTattooLine {
     id: string
@@ -62,6 +62,11 @@ const generateRegex = (
 const Tattoo = () => {
     const { globalProfile } = useContext(ProfileContext);
     const profile = loadSettings(globalProfile);
+    const savedProfile = loadProfiles()[globalProfile];
+    const hasSavedPriceRange = React.useRef(
+        valueFromKeyMap(savedProfile, "tattoo.minValue") !== undefined ||
+        valueFromKeyMap(savedProfile, "tattoo.maxValue") !== undefined
+    );
     const {league} = usePoe1League();
     const [minChaosValue, setMinChaosValue] = useState<string>(profile.tattoo.minValue || "0");
     const [maxChaosValue, setMaxChaosValue] = useState<string>(profile.tattoo.maxValue || "999");
@@ -69,6 +74,7 @@ const Tattoo = () => {
     const [tattooPrices, setTattooPrices] = useState<TattooPriceRegex[]>([]);
     const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
     const [result, setResult] = useState<string>("");
+    const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
 
     useEffect(() => {
         if (!league) return;
@@ -103,31 +109,45 @@ const Tattoo = () => {
     }, [league]);
 
     useEffect(() => {
-        saveSettings({
-            ...profile,
-            tattoo: {
-                minValue: minChaosValue,
-                maxValue: maxChaosValue,
-            }
-        });
+        if (priceRangeInitialized) return;
+        const range = economyPriceRange(tattooPrices.map((tattoo) => tattoo.chaosValue));
+        if (!range) return;
+        setMinChaosValue(range.min);
+        setMaxChaosValue(range.max);
+        setPriceRangeInitialized(true);
+    }, [tattooPrices, priceRangeInitialized]);
+
+    useEffect(() => {
+        if (priceRangeInitialized) {
+            saveSettings({
+                ...profile,
+                tattoo: {
+                    minValue: minChaosValue,
+                    maxValue: maxChaosValue,
+                }
+            });
+        }
         const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
         const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
         setResult(generateRegex(tattooPrices, minChaosN, maxChaosN));
-    }, [minChaosValue, maxChaosValue, tattooPrices]);
+    }, [minChaosValue, maxChaosValue, tattooPrices, priceRangeInitialized]);
 
     return (
         <>
             <Header text={"Tattoo"}/>
             <RegexResultBox result={result} warning={""} reset={() => {
-                setMinChaosValue(defaultSettings.tattoo.minValue);
-                setMaxChaosValue(defaultSettings.tattoo.maxValue);
+                const range = economyPriceRange(tattooPrices.map((tattoo) => tattoo.chaosValue));
+                setPriceRangeInitialized(range !== undefined);
+                setMinChaosValue(range?.min ?? "0");
+                setMaxChaosValue(range?.max ?? "");
             }} />
             <p className="tattoo-price-info">Using price data from the {league} League. Last updated: {lastUpdated}</p>
             <div className="filter-card-grid">
                 <FilterCard title="Settings">
                     <PriceRangeSlider id="tattoo-price" minValue={minChaosValue} maxValue={maxChaosValue}
-                                      onMinChange={setMinChaosValue} onMaxChange={setMaxChaosValue}
-                                      availablePrices={tattooPrices.map((tattoo) => tattoo.chaosValue)}/>
+                                      onMinChange={(value) => { setPriceRangeInitialized(true); setMinChaosValue(value); }}
+                                      onMaxChange={(value) => { setPriceRangeInitialized(true); setMaxChaosValue(value); }}
+                                      availablePrices={tattooPrices.map((tattoo) => tattoo.chaosValue)} allowZero/>
                 </FilterCard>
             </div>
             <div className="row">

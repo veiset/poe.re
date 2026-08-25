@@ -17,6 +17,7 @@ export interface RegexResultBoxProps {
   enableBug?: boolean
   onTradeSearch?: () => void
   tradeSearchLoading?: boolean
+  middleAction?: React.ReactNode
   // Optional externally controlled auto-copy state (defaults to internal state)
   autoCopy?: boolean
   onAutoCopyChange?: (enabled: boolean) => void
@@ -36,6 +37,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
     enableBug,
     onTradeSearch,
     tradeSearchLoading,
+    middleAction,
     autoCopy: autoCopyProp,
     onAutoCopyChange,
   } = props;
@@ -109,6 +111,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
             {tradeSearchLoading ? "Loading..." : "Trade"}
           </button>
         )}
+        {middleAction}
         <button className="rrb-option-button" onClick={() => {
           const next = !showOptions;
           setShowOptions(next);

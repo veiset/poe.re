@@ -7,9 +7,12 @@ interface PriceRangeSliderProps {
   onMinChange: (value: string) => void
   onMaxChange: (value: string) => void
   availablePrices: number[]
+  unit?: string
+  allowZero?: boolean
 }
 
-const validPrices = (prices: number[]) => prices.filter((price) => Number.isFinite(price) && price > 0);
+const validPrices = (prices: number[], allowZero: boolean) => prices.filter((price) =>
+  Number.isFinite(price) && (allowZero ? price >= 0 : price > 0));
 
 const parsePrice = (value: string): number | undefined => {
   if (value.trim() === "") return undefined;
@@ -24,8 +27,10 @@ const PriceRangeSlider = ({
   onMinChange,
   onMaxChange,
   availablePrices,
+  unit = "chaos",
+  allowZero = false,
 }: PriceRangeSliderProps) => {
-  const prices = validPrices(availablePrices);
+  const prices = validPrices(availablePrices, allowZero);
   if (prices.length === 0) {
     return <div className="price-range-slider-loading">Loading available price range…</div>;
   }
@@ -42,29 +47,29 @@ const PriceRangeSlider = ({
   const upperPosition = range === 0 ? 100 : ((upperValue - minimum) / range) * 100;
 
   return (
-    <section className="price-range-slider" aria-label="Chaos value range">
+    <section className="price-range-slider" aria-label={`${unit} price range`}>
       <div className="price-range-slider-values">
         <div className="price-range-slider-value">
           <input
             id={`${id}-min`}
-            aria-label="Minimum chaos value"
+            aria-label={`Minimum ${unit} price`}
             type="text"
             inputMode="decimal"
             value={minValue}
             onChange={(event) => onMinChange(event.target.value)}
           />
-          <span>chaos</span>
+          <span>{unit}</span>
         </div>
         <div className="price-range-slider-value">
           <input
             id={`${id}-max`}
-            aria-label="Maximum chaos value"
+            aria-label={`Maximum ${unit} price`}
             type="text"
             inputMode="decimal"
             value={maxValue}
             onChange={(event) => onMaxChange(event.target.value)}
           />
-          <span>chaos</span>
+          <span>{unit}</span>
         </div>
       </div>
       <div className="price-range-slider-track-wrap">
@@ -74,7 +79,7 @@ const PriceRangeSlider = ({
           style={{left: `${lowerPosition}%`, width: `${upperPosition - lowerPosition}%`}}
         />
         <input
-          aria-label="Minimum chaos value slider"
+          aria-label={`Minimum ${unit} price slider`}
           className="price-range-slider-thumb"
           type="range"
           min={minimum}
@@ -84,7 +89,7 @@ const PriceRangeSlider = ({
           onChange={(event) => onMinChange(String(Math.min(Number(event.target.value), upperValue)))}
         />
         <input
-          aria-label="Maximum chaos value slider"
+          aria-label={`Maximum ${unit} price slider`}
           className="price-range-slider-thumb"
           type="range"
           min={minimum}

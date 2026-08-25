@@ -3,6 +3,7 @@ import {Regex} from "@poe/generated/GeneratedTypes";
 import {idToRegex, optimizeRegexFromIds} from "@poe/utils/regex/OptimizeRegexResult";
 import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {LanguageFiles, MapStaticStatRegex, RepoeLanguageKey} from "@poe/utils/Languages";
+import {generatePriceRangeRegex} from "@poe/utils/regex/GeneratePriceRangeRegex";
 
 export function generateMapModRegex(settings: MapSettings, regex: Regex<any>, language: RepoeLanguageKey): string {
   const exclusions = generateBadMods(settings, regex, language);
@@ -13,8 +14,11 @@ export function generateMapModRegex(settings: MapSettings, regex: Regex<any>, la
   const rarity = addRarityRegex(settings.rarity.normal, settings.rarity.magic, settings.rarity.rare, settings.rarity.include, language);
   const corrupted = corruptedMapCheck(settings, language);
   const unidentified = unidentifiedMap(settings, language);
+  const price = settings.asyncPriceRange.enabled
+    ? generatePriceRangeRegex(settings.asyncPriceRange.min, settings.asyncPriceRange.max, settings.asyncPriceRange.currency)
+    : "";
 
-  const result = `${exclusions} ${inclusions} ${yieldRegex} ${quality} ${rarity} ${corrupted} ${unidentified}`
+  const result = `${exclusions} ${inclusions} ${yieldRegex} ${quality} ${rarity} ${corrupted} ${unidentified} ${price}`
     .trim().replaceAll(/\s{2,}/g, ' ');
 
   return optimize(result);

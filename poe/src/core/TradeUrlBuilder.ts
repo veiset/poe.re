@@ -1,6 +1,7 @@
 import tradeStatIds from "@poe/generated/mapmods/trade/TradeStatIdMatching.json";
 import { MapSettings } from "../utils/SavedSettings";
 import { tradeSearchBase } from "@shared/core/TradeUrlBuilder";
+import {normalizePriceRange} from "@shared/core/PriceRange";
 
 interface StatFilter {
   id: string;
@@ -30,6 +31,7 @@ export interface TradeSettings {
   quality: Omit<MapSettings["quality"], "regular">;
   anyQuality: boolean;
   anyYield: boolean;
+  asyncPriceRange: MapSettings["asyncPriceRange"];
   corrupted: {
     enabled: boolean;
     include: boolean;
@@ -69,6 +71,15 @@ interface TradeQuery {
           foil_variation?: { option: "none" };
         };
       };
+      trade_filters?: {
+        filters: {
+          price: {
+            option: "chaos" | "divine";
+            min: number;
+            max: number;
+          };
+        };
+      };
     };
   };
   sort: { price: string };
@@ -92,6 +103,11 @@ function toStatFilters(ids: number[]): { id: string }[] {
 function parseMinFilter(value: string): { min: number } | undefined {
   const num = parseInt(value, 10);
   return !isNaN(num) && num > 0 ? { min: num } : undefined;
+}
+
+function parsePriceRange(settings: TradeSettings["asyncPriceRange"]) {
+  const range = normalizePriceRange(settings.min, settings.max);
+  return range ? {option: settings.currency, ...range} : undefined;
 }
 
 export function buildTradeQuery(settings: TradeSettings): TradeQuery {
@@ -255,6 +271,13 @@ export function buildTradeQuery(settings: TradeSettings): TradeQuery {
         }),
       },
     };
+  }
+
+  if (settings.asyncPriceRange.tradeEnabled) {
+    const price = parsePriceRange(settings.asyncPriceRange);
+    if (price) {
+      query.query.filters.trade_filters = {filters: {price}};
+    }
   }
 
   return query;

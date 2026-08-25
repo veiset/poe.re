@@ -4,8 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Runegraft.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import { dateTextFromString } from "../expedition/ExpeditionUtils";
-import { loadSettings, saveSettings } from "@poe/utils/LocalStorage";
-import {defaultSettings} from "@poe/utils/SavedSettings";
+import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import { ProfileContext } from "@poe/components/profile/ProfileContext";
 import { runegraftRegex } from "@poe/generated/GeneratedRunegraft";
 import { tattooRegex } from "@poe/generated/GeneratedTattoo";
@@ -13,7 +12,8 @@ import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
-import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
+import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
+import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
 
 interface PoeNinjaRunegraftLine {
     id: string
@@ -80,6 +80,11 @@ const generateRegex = (
 const Runegraft = () => {
     const { globalProfile } = useContext(ProfileContext);
     const profile = loadSettings(globalProfile);
+    const savedProfile = loadProfiles()[globalProfile];
+    const hasSavedPriceRange = React.useRef(
+        valueFromKeyMap(savedProfile, "runegraft.minValue") !== undefined ||
+        valueFromKeyMap(savedProfile, "runegraft.maxValue") !== undefined
+    );
     const {league} = usePoe1League();
     const [minChaosValue, setMinChaosValue] = useState<string>(profile.runegraft.minValue);
     const [maxChaosValue, setMaxChaosValue] = useState<string>(profile.runegraft.maxValue);
@@ -90,6 +95,7 @@ const Runegraft = () => {
     const [displayedPrices, setDisplayedPrices] = useState<RunegraftPriceRegex[]>([]);
     const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
     const [result, setResult] = useState<string>("");
+    const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
 
     useEffect(() => {
         if (!league) return;
@@ -142,14 +148,25 @@ const Runegraft = () => {
     }, [league]);
 
     useEffect(() => {
-        saveSettings({
-            ...profile,
-            runegraft: {
-                minValue: minChaosValue,
-                maxValue: maxChaosValue,
-                includeTattoos: includeTattoos
-            }
-        });
+        if (priceRangeInitialized) return;
+        const range = economyPriceRange(displayedPrices.map((price) => price.chaosValue));
+        if (!range) return;
+        setMinChaosValue(range.min);
+        setMaxChaosValue(range.max);
+        setPriceRangeInitialized(true);
+    }, [displayedPrices, priceRangeInitialized]);
+
+    useEffect(() => {
+        if (priceRangeInitialized) {
+            saveSettings({
+                ...profile,
+                runegraft: {
+                    minValue: minChaosValue,
+                    maxValue: maxChaosValue,
+                    includeTattoos: includeTattoos
+                }
+            });
+        }
         const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
         const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
 
@@ -161,21 +178,24 @@ const Runegraft = () => {
         setDisplayedPrices(prices);
 
         setResult(generateRegex(prices, minChaosN, maxChaosN));
-    }, [minChaosValue, maxChaosValue, runegraftPrices, includeTattoos, tattooPrices]);
+    }, [minChaosValue, maxChaosValue, runegraftPrices, includeTattoos, tattooPrices, priceRangeInitialized]);
 
     return (
         <>
             <Header text={"Runegraft"}/>
             <RegexResultBox result={result} warning={""} reset={() => {
-                setMinChaosValue("0");
-                setMaxChaosValue("999");
+                const range = economyPriceRange(displayedPrices.map((price) => price.chaosValue));
+                setPriceRangeInitialized(range !== undefined);
+                setMinChaosValue(range?.min ?? "0");
+                setMaxChaosValue(range?.max ?? "");
             }} />
             <p className="runegraft-price-info">Using price data from the {league} League. Last updated: {lastUpdated}</p>
             <div className="filter-card-grid">
                 <FilterCard title="Settings">
                     <PriceRangeSlider id="runegraft-price" minValue={minChaosValue} maxValue={maxChaosValue}
-                                      onMinChange={setMinChaosValue} onMaxChange={setMaxChaosValue}
-                                      availablePrices={displayedPrices.map((price) => price.chaosValue)}/>
+                                      onMinChange={(value) => { setPriceRangeInitialized(true); setMinChaosValue(value); }}
+                                      onMaxChange={(value) => { setPriceRangeInitialized(true); setMaxChaosValue(value); }}
+                                      availablePrices={displayedPrices.map((price) => price.chaosValue)} allowZero/>
                     <div className="runegraft-card-divider"/>
                     <Checkbox label="Include tattoos" value={includeTattoos} onChange={setIncludeTattoos}/>
                 </FilterCard>
