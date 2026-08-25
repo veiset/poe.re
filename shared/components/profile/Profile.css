@@ -87,7 +87,21 @@
 }
 
 .export-profile-box {
-    min-width: 600px;
+    box-sizing: border-box;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: auto;
+    right: 0;
+    transform: none;
+    width: min(600px, calc(100vw - 24px));
+    min-width: 0;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+.export-profile-box textarea {
+    box-sizing: border-box;
+    max-width: 100%;
 }
 
 .profile-warning {
