@@ -1,13 +1,13 @@
 ---
-name: poe.re bug report
-about: Report a problem with the Path of Exile 1 website
-title: '[poe.re] Bug: '
+name: poe2.re bug report
+about: Report a problem with the Path of Exile 2 website
+title: '[poe2.re] Bug: '
 labels: bug
 assignees: veiset
 
 ---
 
-<!-- Thanks for reporting a problem with poe.re (Path of Exile 1).
+<!-- Thanks for reporting a problem with poe2.re (Path of Exile 2).
 Please search the existing issues first and fill in every relevant section. -->
 
 ## Describe the bug
@@ -35,7 +35,7 @@ Paste the generated regex here
 
 ## Item or input data
 
-<!-- If an item is involved, hover over it in Path of Exile and press Ctrl+C,
+<!-- If an item is involved, hover over it in Path of Exile 2 and press Ctrl+C,
 then paste the complete item description below. Include other inputs/settings
 needed to reproduce the problem. -->
 
