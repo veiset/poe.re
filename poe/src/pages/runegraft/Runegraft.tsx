@@ -12,7 +12,7 @@ import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
-import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
+import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
 import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
 
 interface PoeNinjaRunegraftLine {

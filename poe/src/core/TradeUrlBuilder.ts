@@ -1,7 +1,7 @@
 import tradeStatIds from "@poe/generated/mapmods/trade/TradeStatIdMatching.json";
 import { MapSettings } from "../utils/SavedSettings";
 import { tradeSearchBase } from "@shared/core/TradeUrlBuilder";
-import {normalizePriceRange} from "@poe/utils/PriceRange";
+import {normalizePriceRange} from "@shared/core/PriceRange";
 
 interface StatFilter {
   id: string;

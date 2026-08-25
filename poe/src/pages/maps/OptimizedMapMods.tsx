@@ -20,7 +20,7 @@ import ExactOptimizedToggle from "@poe/components/ExactOptimizedToggle/ExactOpti
 import {mapModTokenColor} from "@poe/utils/MapModColor";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
-import AsyncTradePriceRange from "@poe/components/AsyncTradePriceRange/AsyncTradePriceRange";
+import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
 const OptimizedMapMods = () => {
   const {globalProfile} = useContext(ProfileContext);

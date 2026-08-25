@@ -1,7 +1,7 @@
 import {useEffect, useRef, useState} from "react";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
-import PriceRangeSlider from "@poe/components/PriceRangeSlider/PriceRangeSlider";
-import {PRICE_RANGE_MAX, PRICE_RANGE_MIN} from "@poe/utils/PriceRange";
+import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
+import {PRICE_RANGE_MAX, PRICE_RANGE_MIN} from "@shared/core/PriceRange";
 import "./AsyncTradePriceRange.css";
 
 const PRICE_LIMITS = [PRICE_RANGE_MIN, PRICE_RANGE_MAX];

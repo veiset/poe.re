@@ -1,4 +1,4 @@
-import {normalizePriceRange} from "@poe/utils/PriceRange";
+import {normalizePriceRange} from "@shared/core/PriceRange";
 
 export type PriceCurrency = "chaos" | "divine";
 
