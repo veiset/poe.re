@@ -2,7 +2,7 @@
 name: poe2.re bug report
 about: Report a problem with the Path of Exile 2 website
 title: '[poe2.re] Bug: '
-labels: bug
+labels: bug, poe2
 assignees: veiset
 
 ---

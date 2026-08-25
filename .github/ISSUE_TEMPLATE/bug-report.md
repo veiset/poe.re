@@ -2,7 +2,7 @@
 name: poe.re bug report
 about: Report a problem with the Path of Exile 1 website
 title: '[poe.re] Bug: '
-labels: bug
+labels: bug, poe1
 assignees: veiset
 
 ---
