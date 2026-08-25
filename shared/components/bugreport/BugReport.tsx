@@ -1,4 +1,5 @@
 import "./BugReport.css";
+import {getBugReportUrl} from "@shared/core/issueTracker";
 
 interface BugreportPros {
   regex: string
@@ -8,13 +9,12 @@ export const BugReport = (props: BugreportPros) => {
   const {regex} = props;
   const site = window.location.pathname.replace(/^\//, "");
   
-  const title = `[Bug,${site}]: "${regex.slice(0, 250)}"`;
-  const encodedTitle = encodeURIComponent(title);
+  const title = `Bug on /${site}: "${regex.slice(0, 250)}"`;
 
   return (<a
     className="bug-report"
     target="_blank"
-    href={`https://github.com/veiset/poe.re/issues/new?template=bug-report.md&title=${encodedTitle}`}>
+    href={getBugReportUrl(title)}>
     <svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 512 512"
          className="bug-report-icon">
       <path
