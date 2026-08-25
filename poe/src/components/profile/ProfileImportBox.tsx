@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { SavedSettings } from "../../utils/SavedSettings";
+import {decodeProfile} from "./ProfileTransfer";
 
 interface ProfileImportBoxProps {
   existingProfiles: string[];
@@ -20,8 +21,7 @@ const ProfileImportBox = (props: ProfileImportBoxProps) => {
   const parsedPreview = useMemo(() => {
     if (!importString.trim()) return null;
     try {
-      const jsonString = decodeURIComponent(escape(atob(importString.trim())));
-      const parsed = JSON.parse(jsonString) as SavedSettings;
+      const parsed = decodeProfile(importString);
 
       // Basic check to ensure it's a valid profile object before returning
       if (parsed && typeof parsed === "object" && parsed.name) {

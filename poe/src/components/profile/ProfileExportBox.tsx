@@ -1,5 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { SavedSettings, defaultSettings } from "../../utils/SavedSettings";
+import { SavedSettings } from "../../utils/SavedSettings";
+import {encodeProfile} from "./ProfileTransfer";
 
 interface ProfileExportBoxProps {
   settings: SavedSettings;
@@ -13,51 +14,7 @@ const ProfileExportBox = (props: ProfileExportBoxProps) => {
   // Serialize the profile object to a Base64 string
   const base64Profile = useMemo(() => {
     try {
-      const minimalSettings: Record<string, any> = {};
-
-      (Object.keys(settings) as Array<keyof SavedSettings>).forEach((key) => {
-        const currentVal = settings[key];
-        const defaultVal = defaultSettings[key];
-
-        // 1. Check if the value is a standard nested object (not null, not an array)
-        if (
-          typeof currentVal === "object" &&
-          currentVal !== null &&
-          !Array.isArray(currentVal)
-        ) {
-          const nestedDeltas: Record<string, any> = {};
-
-          // Loop through the nested object one level deeper
-          Object.keys(currentVal).forEach((nestedKey) => {
-            const nestedCurrent = (currentVal as Record<string, any>)[nestedKey];
-            const nestedDefault = defaultVal
-              ? (defaultVal as Record<string, any>)[nestedKey]
-              : undefined;
-
-            if (JSON.stringify(nestedCurrent) !== JSON.stringify(nestedDefault)) {
-              nestedDeltas[nestedKey] = nestedCurrent;
-            }
-          });
-
-          // Only add this top-level key if there were actually nested changes
-          if (Object.keys(nestedDeltas).length > 0) {
-            minimalSettings[key as string] = nestedDeltas;
-          }
-        }
-        // 2. Handle primitives (strings, numbers, booleans) and Arrays
-        else {
-          if (JSON.stringify(currentVal) !== JSON.stringify(defaultVal)) {
-            minimalSettings[key as string] = currentVal;
-          }
-        }
-      });
-
-      // Stringify the stripped-down object
-      const jsonString = JSON.stringify(minimalSettings) || "{}";
-      console.log(jsonString);
-
-      // Encode to Base64 safely
-      return btoa(unescape(encodeURIComponent(jsonString)));
+      return encodeProfile(settings);
     } catch (e) {
       console.error("Failed to serialize profile", e);
       return "Error generating export string.";

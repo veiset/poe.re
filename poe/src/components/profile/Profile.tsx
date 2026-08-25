@@ -39,6 +39,8 @@ const Profile = (props: ProfileProps) => {
         setShowNew(false);
         setShowDelete(false);
         setShowEdit(false);
+        setShowExport(false);
+        setShowImport(false);
       }
       if (event.key === 'Enter') {
         if (showNew) confirmAdd();
@@ -198,7 +200,7 @@ const Profile = (props: ProfileProps) => {
           </option>
         ))}
       </select>
-      <div>
+      <div className="profile-actions">
         <button className="export-button" onClick={() => {
           setShowImport(false);
           setShowExport(true);
@@ -207,14 +209,14 @@ const Profile = (props: ProfileProps) => {
           setShowExport(false);
           setShowImport(true);
         }}>Import</button>
-      </div>
 
-      {showExport &&
-        <ExportDialog settings={loadSettings(profile)} setShow={setShowExport}></ExportDialog>
-      }
-      {showImport &&
-        <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile} />
-      }
+        {showExport &&
+          <ExportDialog settings={loadSettings(profile)} setShow={setShowExport}></ExportDialog>
+        }
+        {showImport &&
+          <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile} />
+        }
+      </div>
 
     </div>
   )
