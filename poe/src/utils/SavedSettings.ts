@@ -443,8 +443,8 @@ export const defaultSettings: SavedSettings = {
       min: "0",
       max: "999",
       currency: "chaos",
-      enabled: true,
-      tradeEnabled: true,
+      enabled: false,
+      tradeEnabled: false,
     },
     rarity: {
       normal: true,
