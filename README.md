@@ -21,7 +21,6 @@ A tool for generating vendor search strings. With no false positives matches and
 - Map mods
 - Boat (Lake of Kalandra)
 - Items (inc. flasks)
-- Map names
 - Expedition
 - Heist
 - Bestiary

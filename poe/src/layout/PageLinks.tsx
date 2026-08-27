@@ -4,7 +4,6 @@ import vendorIcon from "@shared/img/linkicons/fusing.png";
 import mapIcon from "@shared/img/linkicons/crimson_temple_map.png";
 import boatIcon from "@shared/img/chart.png";
 import alterationIcon from "@shared/img/linkicons/alteration.png";
-import mapNameIcon from "@shared/img/linkicons/chateau_map.png";
 import heistIcon from "@shared/img/linkicons/blueprint.png";
 import expeditionIcon from "@shared/img/linkicons/expeidition_reroll.png";
 import jewelIcon from "@shared/img/linkicons/cobalt.png";
@@ -18,7 +17,6 @@ const items: NavigationItem[] = [
   {text: "Map mods", icon: mapIcon, route: "/maps"},
   {text: "Boat", icon: boatIcon, route: "/boat"},
   {text: "Items", icon: alterationIcon, route: "/items"},
-  {text: "Map names", icon: mapNameIcon, route: "/mapnames"},
   {text: "Expedition", icon: expeditionIcon, route: "/expedition"},
   {text: "Heist", icon: heistIcon, route: "/heist"},
   {text: "Bestiary", icon: beastIcon, route: "/beast"},
