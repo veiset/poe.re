@@ -6,7 +6,6 @@ import Vendor from "../pages/vendor/Vendor";
 import OptimizedMapMods from "../pages/maps/OptimizedMapMods";
 import Boat from "../pages/boat/Boat";
 import Item from "../pages/item/Item";
-import MapNames from "../pages/mapnames/MapNames";
 import MovedContent from "../pages/moved/MovedContent";
 import Heist from "../pages/heist/Heist";
 import Expedition from "../pages/expedition/Expedition";
@@ -24,7 +23,6 @@ export const Poe1Routes = () => (
       <Route path="maps" element={<OptimizedMapMods/>}/>
       <Route path="boat" element={<Boat/>}/>
       <Route path="items" element={<Item/>}/>
-      <Route path="mapnames" element={<MapNames/>}/>
       <Route path="flasks" element={
         <MovedContent title="[Moved] Flasks" newPath="/items" linkText="Items"
                       extraInfo="Under the item section, select the flask base you want to craft and then select mods."/>

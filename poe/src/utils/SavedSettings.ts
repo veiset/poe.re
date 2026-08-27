@@ -122,7 +122,6 @@ export interface SavedSettings {
   boat: BoatSettings;
   item: ItemSettings;
   vendor: VendorSettings;
-  mapNames: MapNameSettings;
   scarab: ScarabSettings;
   jewel: JewelSettings;
   itemCrafting: ItemCraftingSettings;
@@ -265,11 +264,6 @@ export interface BoatSettings {
     include: boolean;
   };
   selectedAreaRegexes: string[];
-}
-
-export interface MapNameSettings {
-  selected: string[];
-  mapTabSearch: boolean;
 }
 
 export interface ScarabSettings {
@@ -484,10 +478,6 @@ export const defaultSettings: SavedSettings = {
       include: true,
     },
     selectedAreaRegexes: [],
-  },
-  mapNames: {
-    selected: [],
-    mapTabSearch: false,
   },
   vendor: {
     anyTwoLink: false,

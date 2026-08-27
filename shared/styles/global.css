@@ -376,7 +376,7 @@ input[type="search"] {
     border-color: var(--color-accent);
 }
 
-/* ---------- Shared selectable list (Vendor, Jewel, Flasks, Map names) ---------- */
+/* ---------- Shared selectable list (Vendor, Jewel, Flasks) ---------- */
 
 .selectable-item {
     font-size: 16px;
