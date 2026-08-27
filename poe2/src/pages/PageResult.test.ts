@@ -126,6 +126,22 @@ describe("poe2 generateWaystoneRegex", () => {
 });
 
 describe("poe2 generateTabletRegex", () => {
+  test("price range uses PoE 2 divine currency", () => {
+    const s = fullSettings({
+      tablet: {
+        ...defaultSettings.tablet,
+        asyncPriceRange: {
+          min: "1",
+          max: "9",
+          currency: "divine",
+          enabled: true,
+          tradeEnabled: false,
+        },
+      },
+    });
+    expect(generateTabletRegex(s)).toBe(`"[1-9] divine"`);
+  });
+
   test("single tablet type", () => {
     const s = fullSettings({
       tablet: {

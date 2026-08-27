@@ -232,6 +232,18 @@ function buildTabletQuery(
     query.query.stats = stats;
   }
 
+  if (tablet.asyncPriceRange.tradeEnabled) {
+    const priceRange = normalizePriceRange(
+      tablet.asyncPriceRange.min,
+      tablet.asyncPriceRange.max,
+    );
+    if (priceRange) {
+      query.query.filters.trade_filters = {
+        filters: {price: {option: tablet.asyncPriceRange.currency, ...priceRange}},
+      };
+    }
+  }
+
   // The trade site only accepts a single base type. If the user picked exactly
   // one tablet type, narrow to it; otherwise leave the category-only filter.
   if (selectedTypes.length === 1) {

@@ -12,6 +12,7 @@ import Poe2Header from "@poe2/components/Poe2Header";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import NumberField from "@shared/components/NumberField/NumberField";
 import ModSearchBox from "@shared/components/ModSearchBox";
+import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
 export function Tablet() {
   const {currentProfile} = useContext(Poe2ProfileContext);
@@ -80,6 +81,13 @@ export function Tablet() {
             ...settings, resultSettings: {...settings.resultSettings, customTextEnabled: enabled,}
           })
         }}
+        middleAction={
+          <AsyncTradePriceRange
+            value={settings.asyncPriceRange}
+            onChange={(asyncPriceRange) => setSettings({...settings, asyncPriceRange})}
+            currencies={["exalted", "divine"] as const}
+          />
+        }
       />
       <div className="filter-card-grid">
         <FilterCard title="Tablet rarity">

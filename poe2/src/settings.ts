@@ -170,7 +170,8 @@ type TabletSettings = {
     round10: boolean,
     affixSelectType: string,
     affixes: SelectOption[],
-  }
+  },
+  asyncPriceRange: AsyncTradePriceRangeValue<"exalted" | "divine">,
 };
 
 type WaystoneSettings = {
@@ -391,7 +392,14 @@ export const defaultSettings: Settings = {
       round10: false,
       affixSelectType: "any",
       affixes: [],
-    }
+    },
+    asyncPriceRange: {
+      min: "0",
+      max: "999",
+      currency: "exalted",
+      enabled: false,
+      tradeEnabled: false,
+    },
   },
   relic: {
     resultSettings: defaultResultSettings,
