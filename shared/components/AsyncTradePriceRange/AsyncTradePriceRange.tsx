@@ -5,21 +5,29 @@ import {PRICE_RANGE_MAX, PRICE_RANGE_MIN} from "@shared/core/PriceRange";
 import "./AsyncTradePriceRange.css";
 
 const PRICE_LIMITS = [PRICE_RANGE_MIN, PRICE_RANGE_MAX];
+const DEFAULT_CURRENCIES = ["chaos", "divine"] as const;
 
-export interface AsyncTradePriceRangeValue {
+export type AsyncTradePriceCurrency = "chaos" | "exalted" | "divine";
+
+export interface AsyncTradePriceRangeValue<TCurrency extends AsyncTradePriceCurrency = AsyncTradePriceCurrency> {
   min: string;
   max: string;
-  currency: "chaos" | "divine";
+  currency: TCurrency;
   enabled: boolean;
   tradeEnabled: boolean;
 }
 
-export interface AsyncTradePriceRangeProps {
-  value: AsyncTradePriceRangeValue;
-  onChange: (value: AsyncTradePriceRangeValue) => void;
+export interface AsyncTradePriceRangeProps<TCurrency extends AsyncTradePriceCurrency> {
+  value: AsyncTradePriceRangeValue<TCurrency>;
+  onChange: (value: AsyncTradePriceRangeValue<TCurrency>) => void;
+  currencies?: readonly TCurrency[];
 }
 
-const AsyncTradePriceRange = ({value, onChange}: AsyncTradePriceRangeProps) => {
+const AsyncTradePriceRange = <TCurrency extends AsyncTradePriceCurrency = (typeof DEFAULT_CURRENCIES)[number]>({
+  value,
+  onChange,
+  currencies = DEFAULT_CURRENCIES as unknown as readonly TCurrency[],
+}: AsyncTradePriceRangeProps<TCurrency>) => {
   const [open, setOpen] = useState(false);
   const popoverRef = useRef<HTMLDivElement>(null);
 
@@ -66,7 +74,7 @@ const AsyncTradePriceRange = ({value, onChange}: AsyncTradePriceRangeProps) => {
           />
           <div className="async-price-modal-footer">
             <div className="async-price-currency" role="group" aria-label="Price currency">
-              {(["chaos", "divine"] as const).map((currency) => (
+              {currencies.map((currency) => (
                 <button
                   type="button"
                   key={currency}

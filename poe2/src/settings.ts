@@ -1,4 +1,5 @@
 import {Itembase, ItemModifier} from "./types/generated/ItemTypedef";
+import {AsyncTradePriceRangeValue} from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
 export interface SelectOption {
   name: string
@@ -206,6 +207,7 @@ type WaystoneSettings = {
     magic: boolean,
     rare: boolean,
   },
+  asyncPriceRange: AsyncTradePriceRangeValue<"exalted" | "divine">,
 };
 
 type VendorSettings = {
@@ -358,6 +360,13 @@ export const defaultSettings: Settings = {
       normal: false,
       magic: false,
       rare: false,
+    },
+    asyncPriceRange: {
+      min: "0",
+      max: "999",
+      currency: "exalted",
+      enabled: false,
+      tradeEnabled: false,
     },
   },
   tablet: {
