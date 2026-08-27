@@ -13,11 +13,13 @@ export interface SelectOption {
 export interface WebSettings {
   sidebarOpen: boolean
   optionsOpen: boolean
+  poe2League: string
 }
 
 export const defaultWebSettings: WebSettings = {
   sidebarOpen: true,
   optionsOpen: false,
+  poe2League: "",
 }
 
 export interface ResultSettings {

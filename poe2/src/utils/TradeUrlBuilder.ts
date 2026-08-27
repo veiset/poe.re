@@ -1,4 +1,5 @@
 import { Settings } from "../settings";
+import {loadWebSettings} from "../localStorage";
 import { TradeStatIdMap } from "./loadData";
 import { buildTradeUrl, challengeLeague, getLeagues } from "@shared/core/TradeUrlBuilder";
 import {normalizePriceRange} from "@shared/core/PriceRange";
@@ -257,7 +258,8 @@ function buildUrl(query: TradeQuery, league: string): string {
   return buildTradeUrl(query, league, "poe2");
 }
 
-const currentLeague = async () => challengeLeague(await getLeagues("poe2"));
+const currentLeague = async () =>
+  loadWebSettings().poe2League || challengeLeague(await getLeagues("poe2"));
 
 export async function openWaystoneTradeSearch(
   settings: Settings,
