@@ -35,6 +35,7 @@ const OptimizedMapMods = () => {
   const [itemRarity, setItemRarity] = useState(profile.map.itemRarity);
   const [currency, setCurrency] = useState(profile.map.currency);
   const [scarab, setScarab] = useState(profile.map.scarab);
+  const [divination, setDivination] = useState(profile.map.divination);
   const [optimizeQuant, setOptimizeQuant] = useState(profile.map.optimizeQuant);
   const [optimizePacksize, setOptimizePacksize] = useState(profile.map.optimizePacksize);
   const [optimizeQuality, setOptimizeQuality] = useState(profile.map.optimizeQuality);
@@ -77,6 +78,7 @@ const OptimizedMapMods = () => {
         itemRarity,
         currency,
         scarab,
+        divination,
         regex: result,
         eightModOnly: tradeEightModOnly && !eightModDisabled,
         excludeValdo: tradeExcludeValdo,
@@ -111,6 +113,7 @@ const OptimizedMapMods = () => {
       itemRarity,
       currency,
       scarab,
+      divination,
       optimizeQuant,
       optimizePacksize,
       optimizeQuality,
@@ -138,7 +141,7 @@ const OptimizedMapMods = () => {
       map: {...settings},
     });
     setResult(generateMapModRegex(settings, regex, profile.language));
-  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange]);
+  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, divination, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange]);
 
   const renderAffixTag = displayAffixBadges
     ? (token: Token<MapModsTokenOption>) => (
@@ -185,6 +188,7 @@ const OptimizedMapMods = () => {
           setItemRarity(defaultSettings.map.itemRarity);
           setCurrency(defaultSettings.map.currency);
           setScarab(defaultSettings.map.scarab);
+          setDivination(defaultSettings.map.divination);
           setAnyYield(defaultSettings.map.anyYield);
           setRarity(defaultSettings.map.rarity);
           setCorrupted(defaultSettings.map.corrupted);
@@ -227,6 +231,7 @@ const OptimizedMapMods = () => {
             <NumberField id="itemRarity" label="Item rarity" value={itemRarity} onChange={setItemRarity} trade/>
             <NumberField id="currency" label="More currency" value={currency} onChange={setCurrency} trade/>
             <NumberField id="scarab" label="More scarab" value={scarab} onChange={setScarab} trade/>
+            <NumberField id="divination" label="More divination" value={divination} onChange={setDivination} trade/>
           </div>
           <Checkbox label="Match any of the yield types (disable to match ALL selected yields)"
                     value={anyYield}

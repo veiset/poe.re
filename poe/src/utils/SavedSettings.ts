@@ -201,6 +201,7 @@ export interface MapSettings {
   itemRarity: string;
   currency: string;
   scarab: string;
+  divination: string;
   optimizeQuant: boolean;
   optimizePacksize: boolean;
   optimizeQuality: boolean;
@@ -424,6 +425,7 @@ export const defaultSettings: SavedSettings = {
     itemRarity: "",
     currency: "",
     scarab: "",
+    divination: "",
     optimizeQuant: false,
     optimizePacksize: false,
     optimizeQuality: false,

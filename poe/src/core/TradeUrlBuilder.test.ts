@@ -9,6 +9,7 @@ const baseSettings = (overrides: Partial<TradeSettings> = {}): TradeSettings => 
   itemRarity: "",
   currency: "",
   scarab: "",
+  divination: "",
   regex: "",
   eightModOnly: false,
   excludeValdo: false,
@@ -44,6 +45,16 @@ describe("buildTradeQuery", () => {
         },
       ]);
     });
+  });
+
+  test("uses the Divination Cards yield pseudostat", () => {
+    const q = buildTradeQuery(baseSettings({divination: "30"}));
+    expect(q.query.stats).toEqual([
+      {
+        type: "and",
+        filters: [{id: "pseudo.pseudo_map_more_card_drops", value: {min: 30}}],
+      },
+    ]);
   });
 
   describe("quality + anyQuality group selection", () => {

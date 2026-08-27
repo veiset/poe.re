@@ -33,6 +33,7 @@ function yieldQualifier(settings: MapSettings, language: RepoeLanguageKey) {
     addQuantifier(statRegex.itemrarity, generateNumberRegex(settings.itemRarity, settings.optimizeQuant)),
     addQuantifier(statRegex.currency, generateNumberRegex(settings.currency, settings.optimizeQuant)),
     addQuantifier(statRegex.scarab, generateNumberRegex(settings.scarab, settings.optimizeQuant)),
+    addQuantifier(statRegex.divination, generateNumberRegex(settings.divination, settings.optimizeQuant)),
   ].filter((e) => e !== "");
   if (!settings.anyYield || result.length === 0) return result.join(" ");
   return `"${result.map((e) => e.slice(1, -1)).join("|")}"`;
