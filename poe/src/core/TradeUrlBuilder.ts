@@ -23,6 +23,7 @@ export interface TradeSettings {
   itemRarity: string;
   currency: string;
   scarab: string;
+  divination: string;
   regex: string;
   eightModOnly: boolean;
   excludeValdo: boolean;
@@ -180,6 +181,14 @@ export function buildTradeQuery(settings: TradeSettings): TradeQuery {
     yieldFilters.push({
       id: "pseudo.pseudo_map_more_scarab_drops",
       value: scarabMin,
+    });
+  }
+
+  const divinationMin = parseMinFilter(settings.divination);
+  if (divinationMin) {
+    yieldFilters.push({
+      id: "pseudo.pseudo_map_more_card_drops",
+      value: divinationMin,
     });
   }
 
