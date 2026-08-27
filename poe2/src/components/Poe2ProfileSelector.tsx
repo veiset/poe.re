@@ -4,12 +4,18 @@ import "@shared/components/profile/Profile.css";
 import ProfileEditBox from "@shared/components/profile/ProfileEditBox";
 import {deleteProfile, loadProfileNames, loadSettings, saveSettings, setSelectedProfile} from "../localStorage";
 import {Poe2ProfileContext} from "../layout/Poe2ProfileContext";
+import {Settings} from "../settings";
+import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
+import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
+import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 
 const Poe2ProfileSelector = () => {
   const {currentProfile, setCurrentProfile} = useContext(Poe2ProfileContext);
   const [profiles, setProfiles] = useState<string[]>(() => loadProfileNames());
   const [showNew, setShowNew] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
+  const [showExport, setShowExport] = useState(false);
+  const [showImport, setShowImport] = useState(false);
   const [editName, setEditName] = useState("");
   const [warning, setWarning] = useState<string | undefined>(undefined);
 
@@ -60,6 +66,13 @@ const Poe2ProfileSelector = () => {
     setProfiles(names);
     const next = names.includes("default") ? "default" : (names[0] ?? "default");
     changeProfile(next);
+  };
+
+  const importProfile = (settings: Settings) => {
+    saveSettings(settings);
+    setProfiles(loadProfileNames());
+    changeProfile(settings.name);
+    setShowImport(false);
   };
 
   return (
@@ -114,6 +127,26 @@ const Poe2ProfileSelector = () => {
             warning={warning}
           />
         }
+      </div>
+      <div className="profile-actions">
+        <button className="export-button" onClick={() => {
+          setShowNew(false);
+          setShowEdit(false);
+          setShowImport(false);
+          setShowExport(true);
+        }}>Export</button>
+        <button className="import-button" onClick={() => {
+          setShowNew(false);
+          setShowEdit(false);
+          setShowExport(false);
+          setShowImport(true);
+        }}>Import</button>
+
+        {showExport && <ProfileExportBox settings={loadSettings(currentProfile)} setShow={setShowExport}
+                                                encode={encodeProfile} />}
+        {showImport && <ProfileImportBox existingProfiles={profiles} setShow={setShowImport}
+                                                 onImport={importProfile} decode={decodeProfile}
+                                                 expectedGame="poe2" profileType="PoE2 profile" />}
       </div>
     </div>
   );

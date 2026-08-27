@@ -11,8 +11,9 @@ import {
 import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
 import {ProfileContext} from "./ProfileContext";
 import {RepoeLanguage, RepoeLanguageData, RepoeLanguageKey} from "../../utils/Languages";
-import ExportDialog from "./ProfileExportBox";
-import ProfileImportBox from "./ProfileImportBox";
+import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
+import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
+import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 import LeagueSelect from "@shared/components/LeagueSelect";
 
 interface ProfileProps {
@@ -211,10 +212,16 @@ const Profile = (props: ProfileProps) => {
         }}>Import</button>
 
         {showExport &&
-          <ExportDialog settings={loadSettings(profile)} setShow={setShowExport}></ExportDialog>
+          <ProfileExportBox settings={loadSettings(profile)} setShow={setShowExport} encode={encodeProfile} />
         }
         {showImport &&
-          <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile} />
+          <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile}
+                            decode={decodeProfile} expectedGame="poe" metadata={(settings) => [
+                              {label: "Name", value: settings.name},
+                              {label: "Language", value: settings.language || "Not specified"},
+                              {label: "Selected map mods", value: settings.map.goodIds.length + settings.map.badIds.length},
+                              {label: "Schema version", value: settings.version || "Not specified"},
+                            ]} />
         }
       </div>
 
