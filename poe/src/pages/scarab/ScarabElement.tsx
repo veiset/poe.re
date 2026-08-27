@@ -24,7 +24,7 @@ const ScarabElement = (props: ScarabElementProps) => {
       }}
     >
       <span className="scarab-item-tooltip">
-        <img alt={scarab.name} className="scarab-img" src={scarab.icon}/>
+        <img alt={scarab.name} className="scarab-img" src={"https://web.poecdn.com/" + scarab.icon}/>
         <span className="scarab-item-hover">
           {scarab.description}
         </span>
