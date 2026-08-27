@@ -1,6 +1,7 @@
 import {Settings} from "../../settings";
 import {selectedOptionRegex} from "../../utils/SelectedOptionRegex";
 import {generateRarityRegex} from "../../utils/GenerateRarityRegex";
+import {generatePriceRangeRegex} from "@poe/utils/regex/GeneratePriceRangeRegex";
 
 /**
  * Generates tablet regex to be pasted in PoE2
@@ -16,6 +17,13 @@ export function generateTabletRegex(settings: Settings): string {
       ? generateUsesRemainingRegex(settings.tablet.modifier)
       : null,
     ...generateModifierRegex(settings.tablet.modifier),
+    settings.tablet.asyncPriceRange.enabled
+      ? generatePriceRangeRegex(
+        settings.tablet.asyncPriceRange.min,
+        settings.tablet.asyncPriceRange.max,
+        settings.tablet.asyncPriceRange.currency,
+      )
+      : null,
     settings.tablet.resultSettings.customText || null,
   ].filter((e) => e !== null && e !== "");
 

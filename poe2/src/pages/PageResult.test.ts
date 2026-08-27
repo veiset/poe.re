@@ -107,9 +107,41 @@ describe("poe2 generateWaystoneRegex", () => {
     });
     expect(generateWaystoneRegex(s)).toBe(`"y: (m|r)"`);
   });
+
+  test("price range uses PoE 2 exalted currency", () => {
+    const s = fullSettings({
+      waystone: {
+        ...defaultSettings.waystone,
+        asyncPriceRange: {
+          min: "1",
+          max: "25",
+          currency: "exalted",
+          enabled: true,
+          tradeEnabled: false,
+        },
+      },
+    });
+    expect(generateWaystoneRegex(s)).toBe(`"([1-9]|1[0-9]|2[0-5]) exalted"`);
+  });
 });
 
 describe("poe2 generateTabletRegex", () => {
+  test("price range uses PoE 2 divine currency", () => {
+    const s = fullSettings({
+      tablet: {
+        ...defaultSettings.tablet,
+        asyncPriceRange: {
+          min: "1",
+          max: "9",
+          currency: "divine",
+          enabled: true,
+          tradeEnabled: false,
+        },
+      },
+    });
+    expect(generateTabletRegex(s)).toBe(`"[1-9] divine"`);
+  });
+
   test("single tablet type", () => {
     const s = fullSettings({
       tablet: {

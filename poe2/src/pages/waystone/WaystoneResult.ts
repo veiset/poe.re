@@ -2,6 +2,7 @@ import {Settings} from "../../settings";
 import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {selectedOptionRegex} from "../../utils/SelectedOptionRegex";
 import {generateRarityRegex} from "../../utils/GenerateRarityRegex";
+import {generatePriceRangeRegex} from "@poe/utils/regex/GeneratePriceRangeRegex";
 
 export function generateWaystoneRegex(settings: Settings): string {
   const result = [
@@ -11,6 +12,13 @@ export function generateWaystoneRegex(settings: Settings): string {
     generateModifiers(settings.waystone.modifier),
     generateState(settings.waystone.state),
     ...generateQuantifiers(settings.waystone),
+    settings.waystone.asyncPriceRange.enabled
+      ? generatePriceRangeRegex(
+        settings.waystone.asyncPriceRange.min,
+        settings.waystone.asyncPriceRange.max,
+        settings.waystone.asyncPriceRange.currency,
+      )
+      : null,
     settings.waystone.resultSettings.customText || null,
   ].filter((e) => e !== null);
 

@@ -1,6 +1,6 @@
 import {normalizePriceRange} from "@shared/core/PriceRange";
 
-export type PriceCurrency = "chaos" | "divine";
+export type PriceCurrency = "chaos" | "exalted" | "divine";
 
 export function generatePriceRangeRegex(min: string, max: string, currency: PriceCurrency): string {
   const range = normalizePriceRange(min, max);

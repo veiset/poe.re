@@ -1,6 +1,7 @@
 import { Settings } from "../settings";
 import { TradeStatIdMap } from "./loadData";
 import { buildTradeUrl, challengeLeague, getLeagues } from "@shared/core/TradeUrlBuilder";
+import {normalizePriceRange} from "@shared/core/PriceRange";
 
 interface StatFilter {
   id: string;
@@ -42,6 +43,15 @@ interface TradeQuery {
       map_filters?: { disabled: boolean; filters: MapFilters };
       type_filters?: { disabled: boolean; filters: TypeFilters };
       misc_filters?: { disabled: boolean; filters: MiscFilters };
+      trade_filters?: {
+        filters: {
+          price: {
+            option: "exalted" | "divine";
+            min: number;
+            max: number;
+          };
+        };
+      };
     };
   };
   sort: { price: string };
@@ -147,6 +157,18 @@ function buildWaystoneQuery(
     query.query.stats = stats;
   }
 
+  if (waystone.asyncPriceRange.tradeEnabled) {
+    const priceRange = normalizePriceRange(
+      waystone.asyncPriceRange.min,
+      waystone.asyncPriceRange.max,
+    );
+    if (priceRange) {
+      query.query.filters.trade_filters = {
+        filters: {price: {option: waystone.asyncPriceRange.currency, ...priceRange}},
+      };
+    }
+  }
+
   return query;
 }
 
@@ -208,6 +230,18 @@ function buildTabletQuery(
 
   if (stats.length > 0) {
     query.query.stats = stats;
+  }
+
+  if (tablet.asyncPriceRange.tradeEnabled) {
+    const priceRange = normalizePriceRange(
+      tablet.asyncPriceRange.min,
+      tablet.asyncPriceRange.max,
+    );
+    if (priceRange) {
+      query.query.filters.trade_filters = {
+        filters: {price: {option: tablet.asyncPriceRange.currency, ...priceRange}},
+      };
+    }
   }
 
   // The trade site only accepts a single base type. If the user picked exactly

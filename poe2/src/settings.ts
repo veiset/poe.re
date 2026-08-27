@@ -1,4 +1,5 @@
 import {Itembase, ItemModifier} from "./types/generated/ItemTypedef";
+import {AsyncTradePriceRangeValue} from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
 export interface SelectOption {
   name: string
@@ -169,7 +170,8 @@ type TabletSettings = {
     round10: boolean,
     affixSelectType: string,
     affixes: SelectOption[],
-  }
+  },
+  asyncPriceRange: AsyncTradePriceRangeValue<"exalted" | "divine">,
 };
 
 type WaystoneSettings = {
@@ -206,6 +208,7 @@ type WaystoneSettings = {
     magic: boolean,
     rare: boolean,
   },
+  asyncPriceRange: AsyncTradePriceRangeValue<"exalted" | "divine">,
 };
 
 type VendorSettings = {
@@ -359,6 +362,13 @@ export const defaultSettings: Settings = {
       magic: false,
       rare: false,
     },
+    asyncPriceRange: {
+      min: "0",
+      max: "999",
+      currency: "exalted",
+      enabled: false,
+      tradeEnabled: false,
+    },
   },
   tablet: {
     resultSettings: defaultResultSettings,
@@ -382,7 +392,14 @@ export const defaultSettings: Settings = {
       round10: false,
       affixSelectType: "any",
       affixes: [],
-    }
+    },
+    asyncPriceRange: {
+      min: "0",
+      max: "999",
+      currency: "exalted",
+      enabled: false,
+      tradeEnabled: false,
+    },
   },
   relic: {
     resultSettings: defaultResultSettings,
