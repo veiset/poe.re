@@ -11,8 +11,10 @@ import beastIcon from "@shared/img/BestiaryOrbFull.png";
 import scarabIcon from "@shared/img/scarab.png";
 import tattooIcon from "@shared/img/tattoo.png";
 import runegraftIcon from "@shared/img/runegraft.png";
+import favoriteIcon from "@shared/img/linkicons/favorite.svg";
 
 const items: NavigationItem[] = [
+  {text: "Favorites", icon: favoriteIcon, route: "/favorites"},
   {text: "Vendor", icon: vendorIcon, route: "/vendor"},
   {text: "Map mods", icon: mapIcon, route: "/maps"},
   {text: "Boat", icon: boatIcon, route: "/boat"},

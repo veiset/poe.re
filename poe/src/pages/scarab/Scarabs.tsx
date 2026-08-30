@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import "./Scarab.css";
@@ -15,6 +15,7 @@ import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
 import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 export interface PoeNinjaScarabLine {
   id: string
@@ -39,10 +40,12 @@ const sortByChaosValue = (prices: Map<string, number>, e1: Scarab, e2: Scarab) =
 
 const Scarabs = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("scarab", storedProfile.scarab);
+  const profile = {...storedProfile, scarab: favoritePage.initialConfiguration};
   const savedProfile = loadProfiles()[globalProfile];
   const hasSavedPriceRange = React.useRef(
-    valueFromKeyMap(savedProfile, "scarab.minPrice") !== undefined ||
+    favoritePage.isEditingFavorite || valueFromKeyMap(savedProfile, "scarab.minPrice") !== undefined ||
     valueFromKeyMap(savedProfile, "scarab.maxPrice") !== undefined
   );
   const {league} = usePoe1League();
@@ -90,7 +93,7 @@ const Scarabs = () => {
 
   useEffect(() => {
     const settings: ScarabSettings = {minPrice, maxPrice, selected,};
-    if (priceRangeInitialized) saveSettings({...profile, scarab: {...settings}});
+    if (priceRangeInitialized && !favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, scarab: {...settings}}));
     setResult(generateScarabRegex(settings));
   }, [minPrice, maxPrice, selected, priceRangeInitialized]);
 
@@ -100,6 +103,7 @@ const Scarabs = () => {
       <Header text={"Scarab"}/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action({minPrice, maxPrice, selected}, {language: storedProfile.language, league}, !priceRangeInitialized || priceLookup.size === 0 ? "Economy data is still loading." : undefined)}
         warning={undefined}
         reset={() => {
           const range = economyPriceRange(Array.from(priceLookup.values()));

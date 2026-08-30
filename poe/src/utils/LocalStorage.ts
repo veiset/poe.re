@@ -20,7 +20,10 @@ export const deleteProfile = (profile: string): void => {
 }
 export const loadSettings = (profile: string): SavedSettings => {
   const settings = loadProfiles()[profile] ?? {};
-  return merge(defaultSettings, settings);
+  const hydrated = merge(defaultSettings, settings);
+  hydrated.version = Math.max(Number(hydrated.version) || 1, defaultSettings.version);
+  hydrated.favorites = Array.isArray(hydrated.favorites) ? hydrated.favorites : [];
+  return hydrated;
 }
 
 export const selectedProfile = (): string =>
@@ -36,6 +39,17 @@ export const saveSettings = (settings: SavedSettings): void => {
   profiles[settings.name] = settings;
   localStorage.setItem("profiles", JSON.stringify(profiles));
 }
+
+/** Atomically updates one profile from its latest persisted value. */
+export const updateSettings = (profileName: string, updater: (settings: SavedSettings) => SavedSettings): SavedSettings => {
+  const profiles = loadProfiles();
+  const current = merge(defaultSettings, profiles[profileName] ?? {name: profileName});
+  current.version = Math.max(Number(current.version) || 1, defaultSettings.version);
+  const next = updater(current);
+  profiles[profileName] = next;
+  localStorage.setItem("profiles", JSON.stringify(profiles));
+  return next;
+};
 
 
 export const valueFromKeyMap = (savedSettings: any, key: string): any | undefined => {

@@ -7,11 +7,12 @@ import HeistContractSelect, {changeVal} from "./HeistContractSelect";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {addExpression} from "@poe/utils/OutputString";
 import {defaultSettings} from "@poe/utils/SavedSettings";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {Link} from "react-router-dom";
 import alterationIcon from "@shared/img/linkicons/alteration.png";
 import {PageLink} from "@shared/components/PageLink";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 
 export interface ContractLevel {
@@ -75,29 +76,25 @@ const generateHeistStr = (contractLevels: ContractLevel[], targetValue: number, 
 
 const Heist = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("heist", storedProfile.heist);
+  const profile = {...storedProfile, heist: favoritePage.initialConfiguration};
   const [contractLevels, setContractLevels] = useState<ContractLevel[]>(profile.heist.contractLevels);
   const [targetValue, setTargetValue] = useState<number>(profile.heist.targetValue);
   const [requireCoinValue, setRequireCoinValue] = useState(profile.heist.requireCoinValue);
   const [result, setResult] = useState("");
+  const settings = {contractLevels, targetValue, requireCoinValue};
 
   useEffect(() => {
     setResult(generateHeistStr(contractLevels, targetValue, requireCoinValue));
-    saveSettings({
-      ...profile,
-      heist: {
-        contractLevels,
-        targetValue,
-        requireCoinValue
-      }
-    });
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, heist: settings}));
   }, [contractLevels, targetValue, requireCoinValue]);
 
 
   return (
     <>
       <Header text={"Heist"}/>
-      <RegexResultBox result={result} warning={undefined} reset={() => {
+      <RegexResultBox result={result} warning={undefined} favorite={favoritePage.action(settings, {language: storedProfile.language})} reset={() => {
         setContractLevels(defaultSettings.heist.contractLevels)
         setTargetValue(defaultSettings.heist.targetValue);
         setRequireCoinValue(defaultSettings.heist.requireCoinValue);

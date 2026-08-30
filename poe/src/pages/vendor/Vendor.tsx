@@ -10,7 +10,7 @@ import socketAnyColor from '@shared/img/color-socket.png';
 import {generateResultString, generateWarnings} from "@poe/utils/OutputString";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Header from "@poe/components/Header";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {VendorSettings} from "@poe/utils/SavedSettings";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {gems} from "@poe/generated/GeneratedGems";
@@ -19,11 +19,14 @@ import Infobox from '@poe/components/infobox/Infobox';
 import {regexGems} from "@poe/generated/gems/Generated.Gems.English";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 
 const Vendor = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("vendor", storedProfile.vendor);
+  const profile = {...storedProfile, vendor: favoritePage.initialConfiguration};
 
   const [result, setResult] = React.useState("");
   const [warning, setWarning] = React.useState<string | undefined>();
@@ -193,12 +196,7 @@ const Vendor = () => {
   };
 
   useEffect(() => {
-    saveSettings({
-      ...profile,
-      vendor: {
-        ...settings
-      },
-    });
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, vendor: {...settings}}));
     setResult(generateResultString(settings));
     setWarning(generateWarnings(settings));
   }, listOfvalues)
@@ -207,7 +205,7 @@ const Vendor = () => {
     <>
       <Header text="Vendor"/>
       <div className="break"/>
-      <RegexResultBox result={result} warning={warning} reset={() => {
+      <RegexResultBox result={result} warning={warning} favorite={favoritePage.action(settings, {language: storedProfile.language})} reset={() => {
         listOfOptions.forEach(setting => {
           setting(false);
         })

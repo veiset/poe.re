@@ -25,10 +25,11 @@ import {
 } from "./ExpeditionUtils";
 import {ExpeditionHelp} from "./ExpeditionHelp";
 import {defaultSettings} from "@poe/utils/SavedSettings";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 dayjs.extend(relativeTime);
 
@@ -50,7 +51,9 @@ const fetchLeaguePricing = (league: string, type: string): Promise<PoeNinjaData>
 
 const Expedition = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("expedition", storedProfile.expedition);
+  const profile = {...storedProfile, expedition: favoritePage.initialConfiguration};
   const {league} = usePoe1League();
   const allBasesTypes = Array.from(Object.keys(baseTypeRegex));
 
@@ -74,6 +77,7 @@ const Expedition = () => {
   const [result, setResult] = useState("");
   const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
   const [displayedItems, setDisplayedItems] = useState(15);
+  const settings = {selectedBaseTypes, minValueToDisplay, addFillerItems, minAddValue};
 
   useEffect(() => {
     if (!league) return;
@@ -126,16 +130,8 @@ const Expedition = () => {
   }, [priceData, addFillerItems, selectedBaseTypes, leaguePrices, minAddValue]);
 
   useEffect(() => {
-    saveSettings({
-      ...profile,
-      expedition: {
-        selectedBaseTypes,
-        minValueToDisplay,
-        addFillerItems,
-        minAddValue,
-      },
-    });
-  }, [profile, selectedBaseTypes, minValueToDisplay, addFillerItems, minAddValue]);
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, expedition: settings}));
+  }, [selectedBaseTypes, minValueToDisplay, addFillerItems, minAddValue]);
 
   if (priceData === undefined) {
     return <div>Loading...</div>;
@@ -146,7 +142,7 @@ const Expedition = () => {
   return (
     <>
       <Header text={"Gwennen Expedition"}/>
-      <RegexResultBox result={result} warning={warning} reset={() => {
+      <RegexResultBox result={result} warning={warning} favorite={favoritePage.action(settings, {language: storedProfile.language, league}, !priceData ? "Economy data is still loading." : undefined)} reset={() => {
         setSelectedBaseTypes(defaultSettings.expedition.selectedBaseTypes);
         setMinValueToDisplay(defaultSettings.expedition.minValueToDisplay);
         setAddFillerItems(defaultSettings.expedition.addFillerItems);

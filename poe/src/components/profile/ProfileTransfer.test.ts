@@ -20,6 +20,28 @@ describe("profile transfer", () => {
     expect(decodeProfile(encodeProfile(settings))).toEqual(settings);
   });
 
+  it("round-trips favorites in their stored order and filters invalid records", () => {
+    const favorite = {
+      schemaVersion: 1 as const,
+      id: "favorite-1",
+      pageKey: "maps" as const,
+      name: "Juicy maps",
+      description: "",
+      color: "#c6930a",
+      tags: ["Mapping"],
+      regex: "quant",
+      configuration: {...defaultSettings.map, quantity: "80"},
+      context: {language: "ENGLISH", league: "Standard"},
+      createdAt: "2026-08-27T00:00:00.000Z",
+      updatedAt: "2026-08-27T00:00:00.000Z",
+    };
+    const settings = {...defaultSettings, name: "with-favorites", favorites: [favorite]};
+    expect(decodeProfile(encodeProfile(settings)).favorites).toEqual([favorite]);
+
+    const invalidPayload = btoa(JSON.stringify({game: "poe", settings: {name: "invalid", favorites: [{...favorite, pageKey: "unknown"}]}}));
+    expect(decodeProfile(invalidPayload).favorites).toEqual([]);
+  });
+
   it("imports legacy default exports that omitted the name", () => {
     expect(decodeProfile(btoa("{}"))).toEqual(defaultSettings);
   });

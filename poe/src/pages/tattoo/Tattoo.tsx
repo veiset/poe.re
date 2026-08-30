@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Tattoo.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import { dateTextFromString } from "../expedition/ExpeditionUtils";
-import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import { ProfileContext } from "@poe/components/profile/ProfileContext";
 import { tattooRegex } from "@poe/generated/GeneratedTattoo";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
@@ -12,6 +12,7 @@ import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
 import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 interface PoeNinjaTattooLine {
     id: string
@@ -61,10 +62,12 @@ const generateRegex = (
 
 const Tattoo = () => {
     const { globalProfile } = useContext(ProfileContext);
-    const profile = loadSettings(globalProfile);
+    const storedProfile = loadSettings(globalProfile);
+    const favoritePage = useFavoritePage("tattoo", storedProfile.tattoo);
+    const profile = {...storedProfile, tattoo: favoritePage.initialConfiguration};
     const savedProfile = loadProfiles()[globalProfile];
     const hasSavedPriceRange = React.useRef(
-        valueFromKeyMap(savedProfile, "tattoo.minValue") !== undefined ||
+        favoritePage.isEditingFavorite || valueFromKeyMap(savedProfile, "tattoo.minValue") !== undefined ||
         valueFromKeyMap(savedProfile, "tattoo.maxValue") !== undefined
     );
     const {league} = usePoe1League();
@@ -75,6 +78,7 @@ const Tattoo = () => {
     const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
     const [result, setResult] = useState<string>("");
     const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
+    const settings = {minValue: minChaosValue, maxValue: maxChaosValue};
 
     useEffect(() => {
         if (!league) return;
@@ -119,13 +123,7 @@ const Tattoo = () => {
 
     useEffect(() => {
         if (priceRangeInitialized) {
-            saveSettings({
-                ...profile,
-                tattoo: {
-                    minValue: minChaosValue,
-                    maxValue: maxChaosValue,
-                }
-            });
+            if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, tattoo: settings}));
         }
         const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
         const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
@@ -135,7 +133,7 @@ const Tattoo = () => {
     return (
         <>
             <Header text={"Tattoo"}/>
-            <RegexResultBox result={result} warning={""} reset={() => {
+            <RegexResultBox result={result} warning={""} favorite={favoritePage.action(settings, {language: storedProfile.language, league}, !priceRangeInitialized || tattooPrices.length === 0 ? "Economy data is still loading." : undefined)} reset={() => {
                 const range = economyPriceRange(tattooPrices.map((tattoo) => tattoo.chaosValue));
                 setPriceRangeInitialized(range !== undefined);
                 setMinChaosValue(range?.min ?? "0");

@@ -9,10 +9,11 @@ import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import IncludeExcludeToggle from "@poe/components/IncludeExcludeToggle/IncludeExcludeToggle";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {BoatSettings, defaultSettings} from "@poe/utils/SavedSettings";
 import "../maps/OptimizedMapMods.css";
 import "../boat/Boat.css";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 const boatAreaOptions = [
   {
@@ -63,24 +64,25 @@ const boatAreaOptions = [
 
 const Boat = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("boat", storedProfile.boat);
+  const profile = {...storedProfile, boat: favoritePage.initialConfiguration};
 
   const [result, setResult] = useState("");
   const [selectedGoodIds, setSelectedGoodIds] = useState<number[]>(profile.boat.selectedGoodIds);
   const [allGoodMods, setAllGoodMods] = useState(profile.boat.allGoodMods);
   const [adjacentModifier, setAdjacentModifier] = useState(profile.boat.adjacentModifier);
   const [selectedAreaRegexes, setSelectedAreaRegexes] = useState<string[]>(profile.boat.selectedAreaRegexes);
-  const [customTextStr, setCustomTextStr] = useState("");
-  const [enableCustomText, setEnableCustomText] = useState(false);
+  const [customTextStr, setCustomTextStr] = useState(profile.boat.customText.value);
+  const [enableCustomText, setEnableCustomText] = useState(profile.boat.customText.enabled);
+
+  const settings: BoatSettings = {
+    selectedGoodIds, allGoodMods, adjacentModifier, selectedAreaRegexes,
+    customText: {value: customTextStr, enabled: enableCustomText},
+  };
 
   useEffect(() => {
-    const settings: BoatSettings = {
-      selectedGoodIds,
-      allGoodMods,
-      adjacentModifier,
-      selectedAreaRegexes,
-    };
-    saveSettings({...profile, boat: {...settings}});
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, boat: {...settings}}));
 
     setResult(generateBoatModRegex(
       selectedGoodIds,
@@ -90,7 +92,7 @@ const Boat = () => {
       adjacentModifier.enabled && !adjacentModifier.include,
       selectedAreaRegexes,
     ));
-  }, [selectedGoodIds, allGoodMods, adjacentModifier, selectedAreaRegexes]);
+  }, [selectedGoodIds, allGoodMods, adjacentModifier, selectedAreaRegexes, customTextStr, enableCustomText]);
 
   const renderAffixTag = (token: Token<BoatModsTokenOption>) => (
     <span className={`mod-affix-tag mod-affix-tag--${token.options.prefix ? "prefix" : "suffix"}`}>
@@ -108,6 +110,7 @@ const Boat = () => {
       <HeaderWithLanguage text={"Boat Modifiers"}/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings, {language: storedProfile.language})}
         warning={undefined}
         enableBug={true}
         customText={customTextStr}
@@ -119,8 +122,8 @@ const Boat = () => {
           setAllGoodMods(defaultSettings.boat.allGoodMods);
           setAdjacentModifier(defaultSettings.boat.adjacentModifier);
           setSelectedAreaRegexes(defaultSettings.boat.selectedAreaRegexes);
-          setEnableCustomText(false);
-          setCustomTextStr("");
+          setEnableCustomText(defaultSettings.boat.customText.enabled);
+          setCustomTextStr(defaultSettings.boat.customText.value);
         }}
       />
 
