@@ -9,6 +9,7 @@ import { Itembase } from "@poe/pages/item/ItemBaseSelector";
 import { RareModSelection } from "@poe/pages/item/RareItemSelect";
 import { SelectedMagicMod } from "@poe/pages/item/MagicItemSelect";
 import { RepoeLanguage, RepoeLanguageKey } from "./Languages";
+import type {FavoriteRecord} from "@poe/core/favorites/FavoriteTypes";
 
 export const categories: ItemCategory[] = [
   {
@@ -114,6 +115,7 @@ export interface SavedSettings {
   language: RepoeLanguageKey;
   name: string;
   version: number;
+  favorites: FavoriteRecord[];
   beast: BeastSettings;
   heist: HeistSettings;
   flask: FlaskSettings;
@@ -265,6 +267,7 @@ export interface BoatSettings {
     include: boolean;
   };
   selectedAreaRegexes: string[];
+  customText: { value: string; enabled: boolean };
 }
 
 export interface ScarabSettings {
@@ -373,7 +376,8 @@ export interface VendorSettings {
 export const defaultSettings: SavedSettings = {
   language: "ENGLISH",
   name: "default",
-  version: 1,
+  version: 2,
+  favorites: [],
   beast: {
     includeHarvest: true,
     minChaosValue: "",
@@ -480,6 +484,7 @@ export const defaultSettings: SavedSettings = {
       include: true,
     },
     selectedAreaRegexes: [],
+    customText: {value: "", enabled: false},
   },
   vendor: {
     anyTwoLink: false,

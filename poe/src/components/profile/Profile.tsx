@@ -15,6 +15,7 @@ import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
 import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
 import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 import LeagueSelect from "@shared/components/LeagueSelect";
+import {useLocation, useNavigate} from "react-router-dom";
 
 interface ProfileProps {
   languageSelect?: boolean
@@ -33,6 +34,14 @@ const Profile = (props: ProfileProps) => {
   const [showImport, setShowImport] = useState(false);
   const [editName, setEditName] = useState("");
   const [warning, setWarning] = useState<string | undefined>(undefined);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const selectProfile = (nextProfile: string) => {
+    if (location.search.includes("favorite=") && !window.confirm("Discard changes to this favorite and switch profiles?")) return;
+    if (location.search.includes("favorite=")) navigate("/favorites");
+    setProfile(nextProfile);
+  };
 
   useEffect(() => {
     const handleEsc = (event: any) => {
@@ -126,7 +135,7 @@ const Profile = (props: ProfileProps) => {
       <LeagueSelect/>
       <div className="profile-label">Profile:</div>
       <select name="profile" className="dropdown-select dropdown-md" value={profile}
-              onChange={(e) => setProfile(e.target.value)}>
+              onChange={(e) => selectProfile(e.target.value)}>
         {profiles.map((profile) => {
           return <option className="option-league" key={profile} value={profile}>{profile}</option>;
         })};

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import ItemBaseSelector, {Itembase} from "./ItemBaseSelector";
@@ -9,15 +9,18 @@ import {ItemAffixRegex, ItemRegex, itemRegex} from "@poe/generated/GeneratedItem
 import RareItemSelect, {RareModSelection} from "./RareItemSelect";
 import ModWarning from "./ModWarning";
 import {generateMagicItemRegex, generateRareItemRegex} from "./ItemOuput";
-import {defaultSettings} from "@poe/utils/SavedSettings";
+import {defaultSettings, ItemCraftingSettings} from "@poe/utils/SavedSettings";
 import MagicItemSelect, {SelectedMagicMod} from "./MagicItemSelect";
 import Infobox from "@poe/components/infobox/Infobox";
 import InfoBanner from "@poe/components/InfoBanner/InfoBanner";
 import item from "./Item";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 const Item = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("items", storedProfile.itemCrafting);
+  const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
 
   const affixMap: Record<string, ItemAffixRegex> = Object.entries(itemRegex)
     .flatMap(([basetype, item]) =>
@@ -46,11 +49,17 @@ const Item = () => {
   const [onlyIfBothPrefixAndSuffix, setOnlyIfBothPrefixAndSuffix] = useState(profile.itemCrafting.magicSettings.onlyIfBothPrefixAndSuffix);
   const [matchOpenAffix, setMatchOpenAffix] = useState(profile.itemCrafting.magicSettings.matchOpenAffix);
 
-  const [customTextStr, setCustomTextStr] = useState(profile.map.customText.value);
-  const [enableCustomText, setEnableCustomText] = useState(profile.map.customText.enabled);
+  const [customTextStr, setCustomTextStr] = useState(profile.itemCrafting.customText.value);
+  const [enableCustomText, setEnableCustomText] = useState(profile.itemCrafting.customText.enabled);
 
   const [nonMagicalBase, setNonMagicalBase] = useState(false);
   const nonMagicBases = ["heist"];
+  const currentSettings: ItemCraftingSettings = {
+    itembase, selectedRareMods, selectedMagicMods,
+    rareSettings: {matchAnyMod, matchPrefixAndSuffix},
+    magicSettings: {onlyIfBothPrefixAndSuffix, matchOpenAffix},
+    customText: {value: customTextStr, enabled: enableCustomText},
+  };
 
   useEffect(() => {
     if (itembase) {
@@ -64,40 +73,20 @@ const Item = () => {
   }, [itembase]);
 
   useEffect(() => {
-    const settings = {
-      ...profile,
-      itemCrafting: {
-        itembase,
-        selectedRareMods,
-        selectedMagicMods,
-        rareSettings: {
-          matchAnyMod,
-          matchPrefixAndSuffix,
-        },
-        magicSettings: {
-          onlyIfBothPrefixAndSuffix,
-          matchOpenAffix,
-        },
-        customText: {
-          value: customTextStr,
-          enabled: enableCustomText,
-        },
-      }
-    };
-
     if (itembase && itembase.rarity === "Rare") {
-      setResult(generateRareItemRegex(affixMap, settings.itemCrafting));
+      setResult(generateRareItemRegex(affixMap, currentSettings));
     }
     if (itembase && itembase.rarity === "Magic") {
-      setResult(generateMagicItemRegex(settings.itemCrafting));
+      setResult(generateMagicItemRegex(currentSettings));
     }
-    saveSettings(settings)
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, itemCrafting: currentSettings}));
   }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText]);
 
   return (<>
       <Header text={"Item"}/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(currentSettings, {language: storedProfile.language})}
         reset={() => {
           setNonMagicalBase(false);
           if (itembase?.rarity === "Rare") {

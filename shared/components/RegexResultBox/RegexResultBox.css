@@ -131,6 +131,25 @@
     background-color: var(--color-area-hover);
 }
 
+.rrb-favorite-button,
+.rrb-cancel-favorite-button {
+    font-family: inherit;
+    box-sizing: border-box;
+    border: none;
+    color: var(--color-text);
+    padding: 9px 18px;
+    font-size: 13px;
+    border-radius: 3px;
+    cursor: pointer;
+    min-width: 78px;
+}
+
+.rrb-favorite-button { background: #c6930a; }
+.rrb-favorite-button:hover:not(:disabled) { background: #eaaf0f; }
+.rrb-cancel-favorite-button { background: var(--color-area-2); }
+.rrb-favorite-button:disabled { opacity: .5; cursor: not-allowed; }
+.rrb-favorite-status { color: #e1bd78; font-family: inherit; font-size: 12px; padding-top: 5px; }
+
 .rrb-trade-button {
     background-color: var(--color-accent);
 }
@@ -205,10 +224,12 @@
     .rrb-copy-button,
     .rrb-reset-button,
     .rrb-trade-button,
-    .rrb-option-button {
+    .rrb-option-button,
+    .rrb-favorite-button,
+    .rrb-cancel-favorite-button {
         padding: 8px 14px;
         min-width: 0;
-        flex-grow: 1;
+        flex: 1 1 0;
     }
 
     .rrb-options {

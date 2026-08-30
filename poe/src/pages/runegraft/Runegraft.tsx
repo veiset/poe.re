@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import "./Runegraft.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import { dateTextFromString } from "../expedition/ExpeditionUtils";
-import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import { ProfileContext } from "@poe/components/profile/ProfileContext";
 import { runegraftRegex } from "@poe/generated/GeneratedRunegraft";
 import { tattooRegex } from "@poe/generated/GeneratedTattoo";
@@ -14,6 +14,7 @@ import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
 import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 interface PoeNinjaRunegraftLine {
     id: string
@@ -79,10 +80,12 @@ const generateRegex = (
 
 const Runegraft = () => {
     const { globalProfile } = useContext(ProfileContext);
-    const profile = loadSettings(globalProfile);
+    const storedProfile = loadSettings(globalProfile);
+    const favoritePage = useFavoritePage("runegraft", storedProfile.runegraft);
+    const profile = {...storedProfile, runegraft: favoritePage.initialConfiguration};
     const savedProfile = loadProfiles()[globalProfile];
     const hasSavedPriceRange = React.useRef(
-        valueFromKeyMap(savedProfile, "runegraft.minValue") !== undefined ||
+        favoritePage.isEditingFavorite || valueFromKeyMap(savedProfile, "runegraft.minValue") !== undefined ||
         valueFromKeyMap(savedProfile, "runegraft.maxValue") !== undefined
     );
     const {league} = usePoe1League();
@@ -96,6 +99,7 @@ const Runegraft = () => {
     const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
     const [result, setResult] = useState<string>("");
     const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
+    const settings = {minValue: minChaosValue, maxValue: maxChaosValue, includeTattoos};
 
     useEffect(() => {
         if (!league) return;
@@ -158,14 +162,7 @@ const Runegraft = () => {
 
     useEffect(() => {
         if (priceRangeInitialized) {
-            saveSettings({
-                ...profile,
-                runegraft: {
-                    minValue: minChaosValue,
-                    maxValue: maxChaosValue,
-                    includeTattoos: includeTattoos
-                }
-            });
+            if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, runegraft: settings}));
         }
         const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
         const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
@@ -183,7 +180,7 @@ const Runegraft = () => {
     return (
         <>
             <Header text={"Runegraft"}/>
-            <RegexResultBox result={result} warning={""} reset={() => {
+            <RegexResultBox result={result} warning={""} favorite={favoritePage.action(settings, {language: storedProfile.language, league}, !priceRangeInitialized || displayedPrices.length === 0 ? "Economy data is still loading." : undefined)} reset={() => {
                 const range = economyPriceRange(displayedPrices.map((price) => price.chaosValue));
                 setPriceRangeInitialized(range !== undefined);
                 setMinChaosValue(range?.min ?? "0");

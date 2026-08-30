@@ -76,4 +76,18 @@ describe("RegexResultBox auto-copy", () => {
     render(<Harness />);
     await waitFor(() => expect(screen.queryByLabelText(/auto copy result text/i)).not.toBeInTheDocument());
   });
+
+  test("favorite capture receives the exact final result including custom text", async () => {
+    const onSave = vi.fn();
+    render(<RegexResultBox result="bar" reset={() => {}} customText="foo" enableCustomText favorite={{mode: "create", onSave}}/>);
+    fireEvent.click(screen.getByRole("button", {name: "Favorite"}));
+    await waitFor(() => expect(onSave).toHaveBeenCalledWith("bar foo"));
+  });
+
+  test("empty output disables favorite creation with an explanation", () => {
+    render(<RegexResultBox result="" reset={() => {}} favorite={{mode: "create", onSave: vi.fn()}}/>);
+    const button = screen.getByRole("button", {name: "Favorite"});
+    expect(button).toBeDisabled();
+    expect(button).toHaveAttribute("title", expect.stringMatching(/non-empty regex/i));
+  });
 });

@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {HeaderWithLanguage} from "@poe/components/Header";
 import SelectableTokenList from "@poe/components/SelectableTokenList/SelectableTokenList";
 import {defaultSettings, MapSettings} from "@poe/utils/SavedSettings";
@@ -21,10 +21,13 @@ import {mapModTokenColor} from "@poe/utils/MapModColor";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 const OptimizedMapMods = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("maps", storedProfile.map);
+  const profile = {...storedProfile, map: favoritePage.initialConfiguration};
   const {league} = usePoe1League();
   const [result, setResult] = useState("");
   const [selectedBadIds, setSelectedBadIds] = useState<number[]>(profile.map.badIds);
@@ -60,6 +63,13 @@ const OptimizedMapMods = () => {
   const [enableCustomText, setEnableCustomText] = useState(profile.map.customText.enabled);
   const [tradeSearchLoading, setTradeSearchLoading] = useState(false);
   const [tradeMessage, setTradeMessage] = useState<string | null>(null);
+  const settings: MapSettings = {
+    badIds: selectedBadIds, goodIds: selectedGoodIds, allGoodMods: modGrouping,
+    quantity, packsize, itemRarity, currency, scarab, optimizeQuant, optimizePacksize, optimizeQuality,
+    rarity, corrupted, unidentified, quality, anyQuality, anyYield, displayNightmareMods, displayAffixBadges,
+    groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange,
+    customText: {value: customTextStr, enabled: enableCustomText}, mapDropChance,
+  };
 
   const handleTradeSearch = async () => {
     if (!league) {
@@ -165,6 +175,7 @@ const OptimizedMapMods = () => {
       <HeaderWithLanguage text={"Optimized Map Modifiers"}/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings, {language: storedProfile.language, league})}
         warning={undefined}
         enableBug={true}
         customText={customTextStr}

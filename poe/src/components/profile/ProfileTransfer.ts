@@ -1,6 +1,7 @@
 import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
 import {createProfileDelta, hydrateProfileDelta} from "@shared/components/profile/ProfileDelta";
 import {decodeProfilePayload} from "@shared/components/profile/ProfileGame";
+import {parseFavoriteRecords} from "@poe/core/favorites/FavoriteTypes";
 
 interface PoeProfilePayload {
   game: "poe";
@@ -8,7 +9,8 @@ interface PoeProfilePayload {
 }
 
 export const encodeProfile = (settings: SavedSettings): string => {
-  const minimalSettings = (createProfileDelta(settings, defaultSettings) ?? {}) as Partial<SavedSettings>;
+  const transferableSettings = {...settings, favorites: parseFavoriteRecords(settings.favorites)};
+  const minimalSettings = (createProfileDelta(transferableSettings, defaultSettings) ?? {}) as Partial<SavedSettings>;
   minimalSettings.name = settings.name;
   minimalSettings.language = settings.language;
   minimalSettings.version = settings.version;
@@ -34,5 +36,7 @@ export const decodeProfile = (value: string): SavedSettings => {
   if (typeof profile.name !== "string" || !profile.name.trim()) {
     throw new Error("Profile name is missing");
   }
+  profile.favorites = parseFavoriteRecords(profile.favorites);
+  profile.version = Math.max(profile.version || 1, defaultSettings.version);
   return profile;
 };

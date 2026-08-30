@@ -4,6 +4,15 @@ import {Checkbox} from "../Checkbox/Checkbox";
 import {BugReport} from "../bugreport/BugReport";
 import {loadWebSettings, saveWebSettings} from "../../core/WebSettings";
 
+export interface RegexFavoriteAction {
+  mode: "create" | "edit";
+  favoriteName?: string;
+  savedResult?: string;
+  disabledReason?: string;
+  onSave: (finalResult: string) => void | Promise<void>;
+  onCancel?: () => void;
+}
+
 export interface RegexResultBoxProps {
   result: string
   reset: () => any
@@ -21,6 +30,7 @@ export interface RegexResultBoxProps {
   // Optional externally controlled auto-copy state (defaults to internal state)
   autoCopy?: boolean
   onAutoCopyChange?: (enabled: boolean) => void
+  favorite?: RegexFavoriteAction
 }
 
 const RegexResultBox = (props: RegexResultBoxProps) => {
@@ -40,6 +50,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
     middleAction,
     autoCopy: autoCopyProp,
     onAutoCopyChange,
+    favorite,
   } = props;
 
   const maxLen = maxLength ?? 250;
@@ -49,6 +60,8 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
   const [autoCopyInternal, setAutoCopyInternal] = React.useState(false);
   const [customTextInternal, setCustomTextInternal] = useState("");
   const [enableCustomTextInternal, setEnableCustomTextInternal] = useState(customTextProp?.length ? true : false);
+  const [favoriteError, setFavoriteError] = useState("");
+  const [favoriteSaving, setFavoriteSaving] = useState(false);
 
   const customText = customTextProp ?? customTextInternal;
   const setCustomText = setCustomTextProp ?? setCustomTextInternal;
@@ -61,6 +74,20 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
   const finalResult = (customText.length > 0 && enableCustomText)
     ? `${result} ${customText}`
     : result;
+  const favoriteDisabledReason = favorite?.disabledReason || (!finalResult.trim() ? "Generate a non-empty regex before saving a favorite." : undefined);
+
+  const saveFavorite = async () => {
+    if (!favorite || favoriteDisabledReason) return;
+    setFavoriteSaving(true);
+    setFavoriteError("");
+    try {
+      await favorite.onSave(finalResult);
+    } catch (reason) {
+      setFavoriteError(reason instanceof Error ? reason.message : "Could not save favorite");
+    } finally {
+      setFavoriteSaving(false);
+    }
+  };
 
   useEffect(() => {
     if (!autoCopy) return;
@@ -79,6 +106,11 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
         </div>
         {error && <div className="error">Error: {error}</div>}
         {warning && <div className="warning">{warning}</div>}
+        {favorite?.mode === "edit" && <div className="rrb-favorite-status">
+          Editing favorite{favorite.favoriteName ? `: ${favorite.favoriteName}` : ""}
+          {favorite.savedResult !== undefined && favorite.savedResult !== finalResult && " — output changed; save to replace the stored snapshot"}
+        </div>}
+        {favoriteError && <div className="error" role="alert">Error: {favoriteError}</div>}
         {finalResult.length > maxLen &&
             <div className="error">Error: {finalResult.length} / {maxLen} characters used - PoE client has a max limit
                 of {maxLen} characters
@@ -92,8 +124,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
       </div>
       <div className="rrb-actions">
         <button className="rrb-copy-button" onClick={() => {
-          setCopied(finalResult);
-          navigator.clipboard.writeText(finalResult);
+          navigator.clipboard.writeText(finalResult).then(() => setCopied(finalResult)).catch(() => setCopied(undefined));
         }}>
           Copy
         </button>
@@ -112,6 +143,16 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
           </button>
         )}
         {middleAction}
+        {favorite && <>
+          <button className="rrb-favorite-button" type="button"
+                  disabled={Boolean(favoriteDisabledReason) || favoriteSaving}
+                  title={favoriteDisabledReason ?? (favorite.mode === "edit" ? "Update this favorite" : "Save the current regex as a favorite")}
+                  onClick={saveFavorite}>
+            {favoriteSaving ? "Saving…" : favorite.mode === "edit" ? "Update favorite" : "Favorite"}
+          </button>
+          {favorite.mode === "edit" && favorite.onCancel &&
+            <button className="rrb-cancel-favorite-button" type="button" onClick={favorite.onCancel}>Cancel</button>}
+        </>}
         <button className="rrb-option-button" onClick={() => {
           const next = !showOptions;
           setShowOptions(next);

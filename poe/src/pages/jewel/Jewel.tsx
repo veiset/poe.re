@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {loadSettings, saveSettings} from "@poe/utils/LocalStorage";
+import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import {defaultSettings, JewelSettings} from "@poe/utils/SavedSettings";
@@ -10,11 +10,14 @@ import JewelMods from "./JewelMods";
 import {generateJewelRegex} from "./JewelOutput";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import "./Jewel.css";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 
 const Jewel = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("jewel", storedProfile.jewel);
+  const profile = {...storedProfile, jewel: favoritePage.initialConfiguration};
 
   const regularMods = jewelRegular;
   const abyssMods = jewelAbyss;
@@ -30,18 +33,10 @@ const Jewel = () => {
   const [matchOpenPrefixSuffix, setMatchOpenPrefixSuffix] = React.useState(profile.jewel.matchOpenPrefixSuffix);
 
   const [result, setResult] = useState("");
+  const settings: JewelSettings = {allMatch, magicOnly, abyssJewel, selectedRegular, selectedAbyss, matchBothPrefixAndSuffix, matchOpenPrefixSuffix};
 
   useEffect(() => {
-    const settings: JewelSettings = {
-      allMatch,
-      magicOnly,
-      abyssJewel,
-      selectedRegular,
-      selectedAbyss,
-      matchBothPrefixAndSuffix,
-      matchOpenPrefixSuffix
-    }
-    saveSettings({...profile, jewel: {...settings}});
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, jewel: {...settings}}));
     setResult(generateJewelRegex(settings));
   }, [allMatch, magicOnly, abyssJewel, selectedRegular, selectedAbyss, matchOpenPrefixSuffix, matchBothPrefixAndSuffix]);
 
@@ -50,6 +45,7 @@ const Jewel = () => {
       <Header text={"Jewel"}/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings, {language: storedProfile.language})}
         warning={undefined}
         reset={() => {
           setSelectedRegular(defaultSettings.jewel.selectedRegular);

@@ -6,7 +6,7 @@ import "./Beast.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import {dateTextFromString} from "../expedition/ExpeditionUtils";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
-import {loadProfiles, loadSettings, saveSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
+import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
@@ -14,6 +14,7 @@ import {economyUrl, fetchEconomyFile} from "@shared/economy";
 import {usePoe1League} from "@shared/core/LeagueContext";
 import PriceRangeSlider from "@shared/components/PriceRangeSlider/PriceRangeSlider";
 import {economyPriceRange} from "@poe/utils/EconomyPriceRange";
+import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 
 export interface PoeNinjaBeast {
   name: string
@@ -69,10 +70,12 @@ const generateRegex = (
 
 const Beast = () => {
   const {globalProfile} = useContext(ProfileContext);
-  const profile = loadSettings(globalProfile);
+  const storedProfile = loadSettings(globalProfile);
+  const favoritePage = useFavoritePage("beast", storedProfile.beast);
+  const profile = {...storedProfile, beast: favoritePage.initialConfiguration};
   const savedProfile = loadProfiles()[globalProfile];
   const hasSavedPriceRange = React.useRef(
-    valueFromKeyMap(savedProfile, "beast.minChaosValue") !== undefined ||
+    favoritePage.isEditingFavorite || valueFromKeyMap(savedProfile, "beast.minChaosValue") !== undefined ||
     valueFromKeyMap(savedProfile, "beast.maxChaosValue") !== undefined
   );
   const {league} = usePoe1League();
@@ -86,6 +89,7 @@ const Beast = () => {
   const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
   const [result, setResult] = useState<string>("");
   const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
+  const settings = {includeHarvest, minChaosValue, maxChaosValue, menagerieLimit, redBeastsOnly};
 
   useEffect(() => {
     if (!league) return;
@@ -128,16 +132,7 @@ const Beast = () => {
 
   useEffect(() => {
     if (priceRangeInitialized) {
-      saveSettings({
-        ...profile,
-        beast: {
-          includeHarvest,
-          minChaosValue,
-          maxChaosValue,
-          menagerieLimit,
-          redBeastsOnly,
-        }
-      });
+      if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, beast: settings}));
     }
     const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
     const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
@@ -147,7 +142,7 @@ const Beast = () => {
   return (
     <>
       <Header text={"Bestiary"}/>
-      <RegexResultBox result={result} warning={""} maxLength={(menagerieLimit ? 100 : 250)} reset={() => {
+      <RegexResultBox result={result} warning={""} maxLength={(menagerieLimit ? 100 : 250)} favorite={favoritePage.action(settings, {language: storedProfile.language, league}, !priceRangeInitialized || beastPrices.length === 0 ? "Economy data is still loading." : undefined)} reset={() => {
         const range = economyPriceRange(beastPrices.map((beast) => beast.chaosValue));
         setIncludeHarvest(defaultSettings.beast.includeHarvest);
         setPriceRangeInitialized(range !== undefined);

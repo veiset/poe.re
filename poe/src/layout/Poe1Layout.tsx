@@ -6,6 +6,7 @@ import {loadSettings, selectedProfile} from "@poe/utils/LocalStorage";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {LeagueProvider} from "@shared/core/LeagueContext";
+import {FavoritesProvider} from "@poe/core/favorites/FavoritesContext";
 
 export const Poe1Layout = () => {
   const [globalProfile, setGlobalProfile] = useState(selectedProfile());
@@ -24,6 +25,7 @@ export const Poe1Layout = () => {
   return (
     <ProfileContext.Provider value={{globalProfile, setGlobalProfile, lang, setLang}}>
       <LeagueProvider>
+        <FavoritesProvider>
         <CoffeeBanner/>
         <div className="content-height-wrapper">
           <div className="content-container">
@@ -41,6 +43,7 @@ export const Poe1Layout = () => {
             </div>
           </div>
         </div>
+        </FavoritesProvider>
       </LeagueProvider>
     </ProfileContext.Provider>
   );

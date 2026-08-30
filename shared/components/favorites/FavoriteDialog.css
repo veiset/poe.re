@@ -1,0 +1,24 @@
+.favorite-dialog-backdrop {
+    position: fixed; inset: 0; z-index: 200;
+    display: grid; place-items: center; padding: 18px;
+    background: rgba(0, 0, 0, .72);
+}
+.favorite-dialog {
+    width: min(540px, 100%); max-height: calc(100vh - 36px); overflow: auto;
+    box-sizing: border-box; padding: 22px; border: 1px solid var(--color-border-strong);
+    border-radius: 7px; background: var(--color-card-bg); color: var(--color-text);
+    box-shadow: 0 18px 50px rgba(0,0,0,.55);
+}
+.favorite-dialog h2 { margin: 0 0 18px; padding: 0; }
+.favorite-dialog-field { display: grid; gap: 6px; margin: 13px 0; color: var(--color-text-muted); font-size: 13px; }
+.favorite-dialog-field input, .favorite-dialog-field textarea { box-sizing: border-box; width: 100%; padding: 9px 10px; font: inherit; }
+.favorite-dialog-field textarea { min-height: 90px; resize: vertical; }
+.favorite-dialog-colors { display: flex; flex-wrap: wrap; gap: 8px; }
+.favorite-color-choice { width: 30px; height: 30px; border: 2px solid transparent; border-radius: 50%; cursor: pointer; }
+.favorite-color-choice[aria-checked="true"] { border-color: white; box-shadow: 0 0 0 2px var(--color-accent); }
+.favorite-dialog-help { color: var(--color-text-dim); font-size: 12px; }
+.favorite-dialog-error { color: var(--color-text-error); min-height: 20px; }
+.favorite-dialog-actions { display: flex; justify-content: flex-end; gap: 9px; margin-top: 18px; }
+.favorite-dialog-actions button { padding: 9px 16px; border: 1px solid var(--color-border-strong); border-radius: 3px; color: var(--color-text); background: var(--color-area-2); cursor: pointer; }
+.favorite-dialog-actions .favorite-dialog-save { background: var(--color-correct); border-color: var(--color-correct); }
+.favorite-dialog-actions button:disabled { opacity: .5; cursor: not-allowed; }
