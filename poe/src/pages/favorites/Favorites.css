@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     min-width: 0;
-    padding: 16px 14px 36px 10px;
+    padding: 16px 14px 16px 10px;
     border: 0;
     color: inherit;
     text-align: left;
@@ -52,10 +52,11 @@
 .favorite-card-icon { width: 30px; height: 30px; display: grid; place-items: center; flex: 0 0 auto; font-size: 24px; line-height: 1; }
 .favorite-card-icon img { display: block; max-width: 30px; max-height: 30px; }
 .favorite-card-name { overflow: hidden; color: var(--color-deep-text); font-weight: 650; text-overflow: ellipsis; white-space: nowrap; }
-.favorite-card-source { margin-top: 6px; color: var(--color-text-dim); font-size: 12px; }
-.favorite-card-tags { display: flex; flex-wrap: wrap; gap: 5px; min-height: 21px; margin-top: 9px; }
+.favorite-card-meta { display: flex; align-items: baseline; gap: 8px; min-width: 0; margin-top: 6px; color: var(--color-text-dim); font-size: 12px; white-space: nowrap; }
+.favorite-card-source { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.favorite-card-tags { display: flex; flex-wrap: wrap; gap: 5px; min-height: 21px; margin-top: auto; padding-top: 9px; }
 .favorite-card-tag { max-width: 90px; overflow: hidden; padding: 3px 7px; border-radius: 999px; color: var(--color-text-muted); background: var(--color-area); font-size: 11px; text-overflow: ellipsis; white-space: nowrap; }
-.favorite-card-updated { position: absolute; right: 48px; bottom: 9px; color: var(--color-text-dim); font-size: 11px; }
+.favorite-card-updated { flex: 0 0 auto; font-size: 11px; }
 .favorite-card-copy-state { position: absolute; right: 48px; top: 8px; color: var(--color-text-copied); font-size: 17px; }
 .favorite-card-copy-state.error { color: var(--color-text-error); }
 .favorite-card-menu { position: absolute; z-index: 20; top: 48px; right: 8px; width: 185px; padding: 5px; border: 1px solid var(--color-border-strong); border-radius: 5px; background: var(--color-area); box-shadow: 0 10px 30px rgba(0,0,0,.55); }

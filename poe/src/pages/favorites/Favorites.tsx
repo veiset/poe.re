@@ -92,12 +92,15 @@ const FavoriteCard = ({favorite, index, total, copiedFavoriteId, onCopied, onDet
         <span className="favorite-card-icon" aria-hidden="true"><img src={page.icon} alt=""/></span>
         <span className="favorite-card-name">{favorite.name}</span>
       </span>
-      <span className="favorite-card-source">{page.label}</span>
+      <span className="favorite-card-meta">
+        <span className="favorite-card-source">{page.label}</span>
+        <span>-</span>
+        <time className="favorite-card-updated" dateTime={favorite.updatedAt} title={new Date(favorite.updatedAt).toLocaleString()}>Modified {new Date(favorite.updatedAt).toLocaleDateString()}</time>
+      </span>
       <span className="favorite-card-tags">
         {favorite.tags.map((tag) => <span className="favorite-card-tag" key={tag}>{tag}</span>)}
       </span>
     </button>
-    <time className="favorite-card-updated" dateTime={favorite.updatedAt} title={new Date(favorite.updatedAt).toLocaleString()}>Modified {new Date(favorite.updatedAt).toLocaleDateString()}</time>
     <button ref={menuButtonRef} className="favorite-card-menu-button" type="button" title={`Actions for ${favorite.name}`} aria-label={`Actions for ${favorite.name}`} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>⋮</button>
     {(copyStatus === "error" || copiedFavoriteId === favorite.id) && <span className={`favorite-card-copy-state${copyStatus === "error" ? " error" : ""}`} aria-hidden="true">{copyStatus === "error" ? "⚠" : "✓"}</span>}
     <span className="visually-hidden" aria-live="polite">{copyStatus === "error" ? "Copy failed" : copiedFavoriteId === favorite.id ? "Copied" : ""}</span>
