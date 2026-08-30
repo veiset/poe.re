@@ -126,7 +126,7 @@ const Scarabs = () => {
                 .map((e) => e.name);
               setSelected(matchingScarabs);
             }}>
-              Auto select cheap scarabs between:
+              Auto select scarabs between:
             </button>
             <PriceRangeSlider id="scarab-price" minValue={minPrice} maxValue={maxPrice}
                               onMinChange={(value) => { setPriceRangeInitialized(true); setMinPrice(value); }}
