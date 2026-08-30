@@ -19,7 +19,7 @@ import Favorites from "../pages/favorites/Favorites";
 export const Poe1Routes = () => (
   <Routes>
     <Route element={<Poe1Layout/>}>
-      <Route index element={<Navigate to="/vendor" replace/>}/>
+      <Route index element={<Favorites/>}/>
       <Route path="favorites" element={<Favorites/>}/>
       <Route path="vendor" element={<Vendor/>}/>
       <Route path="maps" element={<OptimizedMapMods/>}/>

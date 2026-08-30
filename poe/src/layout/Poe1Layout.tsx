@@ -26,23 +26,23 @@ export const Poe1Layout = () => {
     <ProfileContext.Provider value={{globalProfile, setGlobalProfile, lang, setLang}}>
       <LeagueProvider>
         <FavoritesProvider>
-        <CoffeeBanner/>
-        <div className="content-height-wrapper">
-          <div className="content-container">
-            <div className="content-links">
-              <PageLinks/>
-            </div>
-            <div className="content-main">
-              <div className="content-left-gfx"/>
-              <div className="content-main-area">
-                <div className="page-content" key={`poe1-${profile.name}-${profile.language}`}>
-                  <Outlet/>
-                </div>
+          <CoffeeBanner/>
+          <div className="content-height-wrapper">
+            <div className="content-container">
+              <div className="content-links">
+                <PageLinks/>
               </div>
-              <div className="content-right-gfx"/>
+              <div className="content-main">
+                <div className="content-left-gfx"/>
+                <div className="content-main-area">
+                  <div className="page-content" key={`poe1-${profile.name}-${profile.language}`}>
+                    <Outlet/>
+                  </div>
+                </div>
+                <div className="content-right-gfx"/>
+              </div>
             </div>
           </div>
-        </div>
         </FavoritesProvider>
       </LeagueProvider>
     </ProfileContext.Provider>
