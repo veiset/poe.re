@@ -149,6 +149,7 @@
 .rrb-cancel-favorite-button { background: var(--color-area-2); }
 .rrb-favorite-button:disabled { opacity: .5; cursor: not-allowed; }
 .rrb-favorite-status { color: #e1bd78; font-family: inherit; font-size: 12px; padding-top: 5px; }
+.rrb-favorite-success { color: #79d99a; font-family: inherit; font-size: 12px; font-weight: 650; padding-top: 5px; }
 
 .rrb-trade-button {
     background-color: var(--color-accent);

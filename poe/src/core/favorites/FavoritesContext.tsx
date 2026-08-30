@@ -2,14 +2,17 @@ import React, {createContext, ReactNode, useCallback, useContext, useEffect, use
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
 import {createFavorite, listFavorites, removeFavorite, reorderFavorites, updateFavoriteMetadata, updateFavoriteSnapshot} from "./FavoriteStorage";
-import {FavoriteMetadata, FavoriteRecord, FavoriteSnapshot} from "./FavoriteTypes";
+import {FavoriteMetadata, FavoriteRecord, FavoriteSnapshot, Poe1FavoritePageKey} from "./FavoriteTypes";
 import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
 
 interface PendingFavorite { snapshot: FavoriteSnapshot; suggestedName: string }
+interface CreationSuccess { pageKey: Poe1FavoritePageKey; configuration: string }
 
 interface FavoritesValue {
   favorites: FavoriteRecord[];
   storageError?: string;
+  lastCreationSuccess?: CreationSuccess;
+  clearCreationSuccess: () => void;
   requestCreate: (snapshot: FavoriteSnapshot, suggestedName?: string) => void;
   updateMetadata: (id: string, metadata: FavoriteMetadata) => void;
   updateSnapshot: (id: string, snapshot: FavoriteSnapshot, ownerProfile?: string) => void;
@@ -25,6 +28,7 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
   const [favorites, setFavorites] = useState<FavoriteRecord[]>(() => listFavorites(globalProfile));
   const [pending, setPending] = useState<PendingFavorite | undefined>();
   const [storageError, setStorageError] = useState<string | undefined>();
+  const [lastCreationSuccess, setLastCreationSuccess] = useState<CreationSuccess | undefined>();
 
   const reload = useCallback(() => setFavorites(listFavorites(globalProfile)), [globalProfile]);
   useEffect(() => { reload(); setPending(undefined); }, [reload]);
@@ -37,6 +41,8 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
   const value = useMemo<FavoritesValue>(() => ({
     favorites,
     storageError,
+    lastCreationSuccess,
+    clearCreationSuccess: () => setLastCreationSuccess(undefined),
     requestCreate: (snapshot, suggestedName = FAVORITE_PAGE_REGISTRY[snapshot.pageKey].label) => {
       setStorageError(undefined);
       setPending({snapshot, suggestedName});
@@ -67,7 +73,7 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
       catch { setStorageError("Your browser's local storage is full or unavailable."); }
     },
     reload,
-  }), [favorites, globalProfile, reload, storageError]);
+  }), [favorites, globalProfile, lastCreationSuccess, reload, storageError]);
 
   return <FavoritesContext.Provider value={value}>
     {children}
@@ -81,6 +87,7 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
           createFavorite(globalProfile, pending.snapshot, metadata);
           setPending(undefined);
           reload();
+          setLastCreationSuccess({pageKey: pending.snapshot.pageKey, configuration: JSON.stringify(pending.snapshot.configuration)});
         } catch (error) {
           setStorageError("Your browser's local storage is full or unavailable.");
           throw new Error("Your browser's local storage is full or unavailable.");

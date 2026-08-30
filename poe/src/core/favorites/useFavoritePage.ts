@@ -18,7 +18,7 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
   const navigate = useNavigate();
   const location = useLocation();
   const {globalProfile} = useContext(ProfileContext);
-  const {favorites, requestCreate, updateSnapshot} = useFavorites();
+  const {favorites, requestCreate, updateSnapshot, lastCreationSuccess, clearCreationSuccess} = useFavorites();
   const requestedId = searchParams.get("favorite");
   const requestedFavorite = requestedId ? favorites.find((candidate) => candidate.id === requestedId) : undefined;
   const favorite = requestedFavorite?.pageKey === pageKey ? requestedFavorite : undefined;
@@ -45,6 +45,10 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
     window.addEventListener("beforeunload", warnBeforeUnload);
     return () => window.removeEventListener("beforeunload", warnBeforeUnload);
   }, [isEditingFavorite]);
+  useEffect(() => () => clearCreationSuccess(), [pageKey]);
+  useEffect(() => {
+    if (isEditingFavorite) clearCreationSuccess();
+  }, [isEditingFavorite]);
   const initialConfiguration = useMemo(() => {
     if (!favorite || !favorite.configuration || typeof favorite.configuration !== "object" || Array.isArray(favorite.configuration)) {
       return cloneFavoriteConfiguration(normalConfiguration);
@@ -60,6 +64,7 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
       mode: isEditingFavorite ? "edit" : "create",
       favoriteName: favorite?.name,
       savedResult: favorite?.regex,
+      successMessage: !isEditingFavorite && lastCreationSuccess?.pageKey === pageKey && lastCreationSuccess.configuration === JSON.stringify(configuration) ? "Successfully added as a favorite." : undefined,
       disabledReason: disabledReason ?? (requestedId && !favorite ? "This favorite does not exist in the active profile or belongs to another page." : undefined),
       onSave: async (finalResult) => {
         const snapshot: FavoriteSnapshot = {pageKey, regex: finalResult, configuration, context};

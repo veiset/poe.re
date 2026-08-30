@@ -14,7 +14,6 @@ export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, o
   const [name, setName] = useState(initial?.name ?? "");
   const [description, setDescription] = useState(initial?.description ?? "");
   const [color, setColor] = useState(initial?.color ?? DEFAULT_FAVORITE_COLOR);
-  const [icon, setIcon] = useState(initial?.icon ?? "");
   const [tagsText, setTagsText] = useState((initial?.tags ?? []).join(", "));
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -28,7 +27,7 @@ export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, o
     if (!name.trim()) { setError("Name is required"); return; }
     setSaving(true); setError("");
     try {
-      await onSave({name: name.trim(), description, color, icon: icon.trim() || undefined, tags});
+      await onSave({name: name.trim(), description, color, tags});
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "Could not save favorite");
       setSaving(false);
@@ -43,9 +42,6 @@ export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, o
           {FAVORITE_COLORS.map((option) => <button key={option} type="button" className="favorite-color-choice" style={{backgroundColor: option}} aria-label={`Use ${option}`} aria-checked={color === option} role="radio" onClick={() => setColor(option)}/>)}
         </div>
       </div>
-      <label className="favorite-dialog-field">Emoji <span className="favorite-dialog-help">Optional; the source icon is used when empty</span>
-        <input value={icon} maxLength={8} onChange={(event) => setIcon(event.target.value)}/>
-      </label>
       <label className="favorite-dialog-field">Name
         <input ref={nameRef} value={name} maxLength={80} onChange={(event) => setName(event.target.value)} required/>
       </label>

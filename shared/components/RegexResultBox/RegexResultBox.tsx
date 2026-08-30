@@ -8,6 +8,7 @@ export interface RegexFavoriteAction {
   mode: "create" | "edit";
   favoriteName?: string;
   savedResult?: string;
+  successMessage?: string;
   disabledReason?: string;
   onSave: (finalResult: string) => void | Promise<void>;
   onCancel?: () => void;
@@ -110,6 +111,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
           Editing favorite{favorite.favoriteName ? `: ${favorite.favoriteName}` : ""}
           {favorite.savedResult !== undefined && favorite.savedResult !== finalResult && " — output changed; save to replace the stored snapshot"}
         </div>}
+        {favorite?.successMessage && <div className="rrb-favorite-success" role="status">{favorite.successMessage}</div>}
         {favoriteError && <div className="error" role="alert">Error: {favoriteError}</div>}
         {finalResult.length > maxLen &&
             <div className="error">Error: {finalResult.length} / {maxLen} characters used - PoE client has a max limit

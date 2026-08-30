@@ -65,7 +65,7 @@ const OptimizedMapMods = () => {
   const [tradeMessage, setTradeMessage] = useState<string | null>(null);
   const settings: MapSettings = {
     badIds: selectedBadIds, goodIds: selectedGoodIds, allGoodMods: modGrouping,
-    quantity, packsize, itemRarity, currency, scarab, optimizeQuant, optimizePacksize, optimizeQuality,
+    quantity, packsize, itemRarity, currency, scarab, divination, optimizeQuant, optimizePacksize, optimizeQuality,
     rarity, corrupted, unidentified, quality, anyQuality, anyYield, displayNightmareMods, displayAffixBadges,
     groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange,
     customText: {value: customTextStr, enabled: enableCustomText}, mapDropChance,
@@ -114,42 +114,7 @@ const OptimizedMapMods = () => {
   };
 
   useEffect(() => {
-    const settings: MapSettings = {
-      badIds: selectedBadIds,
-      goodIds: selectedGoodIds,
-      allGoodMods: modGrouping,
-      quantity,
-      packsize,
-      itemRarity,
-      currency,
-      scarab,
-      divination,
-      optimizeQuant,
-      optimizePacksize,
-      optimizeQuality,
-      rarity,
-      corrupted,
-      unidentified,
-      quality,
-      anyQuality,
-      anyYield,
-      displayNightmareMods,
-      displayAffixBadges,
-      groupByAffix,
-      tradeEightModOnly,
-      tradeExcludeValdo,
-      tradeExcludeShaperElder,
-      asyncPriceRange,
-      customText: {
-        value: customTextStr,
-        enabled: enableCustomText,
-      },
-      mapDropChance,
-    };
-    saveSettings({
-      ...profile,
-      map: {...settings},
-    });
+    if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, map: {...settings}}));
     setResult(generateMapModRegex(settings, regex, profile.language));
   }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, divination, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange]);
 

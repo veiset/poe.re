@@ -10,7 +10,7 @@ import {FAVORITE_PAGE_REGISTRY} from "@poe/core/favorites/FavoritePageRegistry";
 import {FavoriteMetadata, FavoriteRecord} from "@poe/core/favorites/FavoriteTypes";
 import "./Favorites.css";
 
-const DetailsDialog = ({favorite, onClose, onCustomize}: {favorite: FavoriteRecord; onClose: () => void; onCustomize: () => void}) => {
+const DetailsDialog = ({favorite, onClose, onCustomize, onEdit}: {favorite: FavoriteRecord; onClose: () => void; onCustomize: () => void; onEdit: () => void}) => {
   const page = FAVORITE_PAGE_REGISTRY[favorite.pageKey];
   const [copyStatus, setCopyStatus] = useState("");
   const closeButtonRef = useRef<HTMLButtonElement>(null);
@@ -25,7 +25,7 @@ const DetailsDialog = ({favorite, onClose, onCustomize}: {favorite: FavoriteReco
   const copy = () => navigator.clipboard.writeText(favorite.regex).then(() => setCopyStatus("Copied")).catch(() => setCopyStatus("Copy failed"));
   return <div className="favorite-dialog-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
     <section className="favorite-dialog" role="dialog" aria-modal="true" aria-labelledby="favorite-details-title">
-      <h2 id="favorite-details-title">{favorite.icon || "★"} {favorite.name}</h2>
+      <h2 id="favorite-details-title"><img className="favorite-details-icon" src={page.icon} alt=""/> {favorite.name}</h2>
       {favorite.description && <p className="favorite-details-description">{favorite.description}</p>}
       <dl className="favorite-details-grid">
         <dt>Source</dt><dd>{page.label}</dd>
@@ -39,6 +39,7 @@ const DetailsDialog = ({favorite, onClose, onCustomize}: {favorite: FavoriteReco
       <div className="favorite-dialog-actions">
         <button ref={closeButtonRef} type="button" onClick={onClose}>Close</button>
         <button type="button" onClick={onCustomize}>Customize</button>
+        <button type="button" onClick={onEdit}>Edit regex</button>
         <button type="button" onClick={copy}>Copy regex</button>
       </div>
     </section>
@@ -47,10 +48,11 @@ const DetailsDialog = ({favorite, onClose, onCustomize}: {favorite: FavoriteReco
 
 interface CardProps {
   favorite: FavoriteRecord; index: number; total: number;
-  onDetails: () => void; onCustomize: () => void; onDelete: () => void; onMove: (offset: number) => void;
+  copiedFavoriteId?: string;
+  onCopied: () => void; onDetails: () => void; onCustomize: () => void; onDelete: () => void; onMove: (offset: number) => void;
 }
 
-const FavoriteCard = ({favorite, index, total, onDetails, onCustomize, onDelete, onMove}: CardProps) => {
+const FavoriteCard = ({favorite, index, total, copiedFavoriteId, onCopied, onDetails, onCustomize, onDelete, onMove}: CardProps) => {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
   const [copyStatus, setCopyStatus] = useState<"" | "copied" | "error">("");
@@ -61,7 +63,7 @@ const FavoriteCard = ({favorite, index, total, onDetails, onCustomize, onDelete,
   const style = {"--favorite-accent": favorite.color, transform: CSS.Transform.toString(transform), transition} as CSSProperties;
   const copy = () => {
     navigator.clipboard.writeText(favorite.regex)
-      .then(() => { setCopyStatus("copied"); window.setTimeout(() => setCopyStatus(""), 1800); })
+      .then(() => { setCopyStatus("copied"); onCopied(); })
       .catch(() => setCopyStatus("error"));
   };
   useEffect(() => {
@@ -87,18 +89,18 @@ const FavoriteCard = ({favorite, index, total, onDetails, onCustomize, onDelete,
     <button className="favorite-card-handle" type="button" title={`Reorder ${favorite.name}`} aria-label={`Reorder ${favorite.name}`} {...attributes} {...listeners}>⠿</button>
     <button className="favorite-card-copy" type="button" title={`Copy ${favorite.name}`} aria-label={`Copy ${favorite.name} regex`} onClick={copy}>
       <span className="favorite-card-top">
-        <span className="favorite-card-icon" aria-hidden="true">{favorite.icon || <img src={page.icon} alt=""/>}</span>
+        <span className="favorite-card-icon" aria-hidden="true"><img src={page.icon} alt=""/></span>
         <span className="favorite-card-name">{favorite.name}</span>
       </span>
       <span className="favorite-card-source">{page.label}</span>
-      {favorite.tags.length > 0 && <span className="favorite-card-tags">
-        {favorite.tags.slice(0, 2).map((tag) => <span className="favorite-card-tag" key={tag}>{tag}</span>)}
-        {favorite.tags.length > 2 && <span className="favorite-card-tag">+{favorite.tags.length - 2}</span>}
-      </span>}
+      <span className="favorite-card-tags">
+        {favorite.tags.map((tag) => <span className="favorite-card-tag" key={tag}>{tag}</span>)}
+      </span>
     </button>
+    <time className="favorite-card-updated" dateTime={favorite.updatedAt} title={new Date(favorite.updatedAt).toLocaleString()}>Modified {new Date(favorite.updatedAt).toLocaleDateString()}</time>
     <button ref={menuButtonRef} className="favorite-card-menu-button" type="button" title={`Actions for ${favorite.name}`} aria-label={`Actions for ${favorite.name}`} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>⋮</button>
-    {copyStatus && <span className={`favorite-card-copy-state${copyStatus === "error" ? " error" : ""}`} aria-hidden="true">{copyStatus === "copied" ? "✓" : "⚠"}</span>}
-    <span className="visually-hidden" aria-live="polite">{copyStatus === "copied" ? "Copied" : copyStatus === "error" ? "Copy failed" : ""}</span>
+    {(copyStatus === "error" || copiedFavoriteId === favorite.id) && <span className={`favorite-card-copy-state${copyStatus === "error" ? " error" : ""}`} aria-hidden="true">{copyStatus === "error" ? "⚠" : "✓"}</span>}
+    <span className="visually-hidden" aria-live="polite">{copyStatus === "error" ? "Copy failed" : copiedFavoriteId === favorite.id ? "Copied" : ""}</span>
     {menuOpen && <div ref={menuRef} className="favorite-card-menu" role="menu" onClick={() => setMenuOpen(false)}>
       <button type="button" role="menuitem" onClick={onDetails}>ⓘ View details</button>
       <button type="button" role="menuitem" onClick={onCustomize}>✎ Customize</button>
@@ -115,7 +117,9 @@ const Favorites = () => {
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [detailsId, setDetailsId] = useState<string>();
   const [customizeId, setCustomizeId] = useState<string>();
+  const [copiedFavoriteId, setCopiedFavoriteId] = useState<string>();
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const allTags = useMemo(() => [...new Set(favorites.flatMap((favorite) => favorite.tags))].sort((a, b) => a.localeCompare(b)), [favorites]);
   const visible = selectedTags.length ? favorites.filter((favorite) => favorite.tags.some((tag) => selectedTags.includes(tag))) : favorites;
   const sensors = useSensors(useSensor(PointerSensor, {activationConstraint: {distance: 8}}), useSensor(TouchSensor, {activationConstraint: {delay: 180, tolerance: 5}}), useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}));
@@ -155,13 +159,13 @@ const Favorites = () => {
             <div className="favorites-grid">{visible.map((favorite) => {
               const index = favorites.findIndex((candidate) => candidate.id === favorite.id);
               return <FavoriteCard key={favorite.id} favorite={favorite} index={index} total={favorites.length}
-                onDetails={() => setDetailsId(favorite.id)} onCustomize={() => setCustomizeId(favorite.id)} onMove={(offset) => move(favorite.id, offset)}
+                copiedFavoriteId={copiedFavoriteId} onCopied={() => setCopiedFavoriteId(favorite.id)} onDetails={() => setDetailsId(favorite.id)} onCustomize={() => setCustomizeId(favorite.id)} onMove={(offset) => move(favorite.id, offset)}
                 onDelete={() => { if (window.confirm(`Delete favorite “${favorite.name}”?`)) remove(favorite.id); }}/>
             })}</div>
           </SortableContext>
         </DndContext>}
     </main>
-    {details && <DetailsDialog favorite={details} onClose={() => setDetailsId(undefined)} onCustomize={() => { setDetailsId(undefined); setCustomizeId(details.id); }}/>} 
+    {details && <DetailsDialog favorite={details} onClose={() => setDetailsId(undefined)} onCustomize={() => { setDetailsId(undefined); setCustomizeId(details.id); }} onEdit={() => navigate(`${FAVORITE_PAGE_REGISTRY[details.pageKey].route}?favorite=${encodeURIComponent(details.id)}`)}/>}
     {customize && <FavoriteDialog title={`Customize ${customize.name}`} initial={customize} duplicateNames={favorites.filter((favorite) => favorite.id !== customize.id).map((favorite) => favorite.name)} onCancel={() => setCustomizeId(undefined)} onSave={(metadata: FavoriteMetadata) => { updateMetadata(customize.id, metadata); setCustomizeId(undefined); }}/>} 
   </>;
 };
