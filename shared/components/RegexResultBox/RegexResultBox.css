@@ -205,6 +205,11 @@
     padding-top: 6px;
 }
 
+.warning-link {
+    color: var(--color-text-warn);
+    text-decoration: underline;
+}
+
 @media (max-width: 700px) {
     .rrb-layout {
         padding: 10px 12px;

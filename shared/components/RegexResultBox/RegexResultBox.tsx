@@ -3,6 +3,7 @@ import React, {Dispatch, SetStateAction, useEffect, useState} from "react";
 import {Checkbox} from "../Checkbox/Checkbox";
 import {BugReport} from "../bugreport/BugReport";
 import {loadWebSettings, saveWebSettings} from "../../core/WebSettings";
+import {TRANSLATION_NEED} from "@poe/utils/Languages";
 
 export interface RegexFavoriteAction {
   mode: "create" | "edit";
@@ -107,6 +108,9 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
         </div>
         {error && <div className="error">Error: {error}</div>}
         {warning && <div className="warning">{warning}</div>}
+        {finalResult.includes(TRANSLATION_NEED) &&
+            <div className="warning">Some parts of the result are not translated, if you are able to translate them please
+                open an issue on <a className="warning-link" href="https://github.com/veiset/poe.re/issues">GitHub</a></div>}
         {favorite?.mode === "edit" && <div className="rrb-favorite-status">
           Editing favorite{favorite.favoriteName ? `: ${favorite.favoriteName}` : ""}
           {favorite.savedResult !== undefined && favorite.savedResult !== finalResult && " — output changed; save to replace the stored snapshot"}
