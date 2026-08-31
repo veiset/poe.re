@@ -1,6 +1,7 @@
 import {defaultSettings, Settings} from "../settings";
 import {createProfileDelta, hydrateProfileDelta} from "@shared/components/profile/ProfileDelta";
 import {decodeProfilePayload} from "@shared/components/profile/ProfileGame";
+import {parseFavorites} from "../favorites";
 
 interface Poe2ProfilePayload {
   game: "poe2";
@@ -34,5 +35,6 @@ export const decodeProfile = (value: string): Settings => {
   if (typeof profile.name !== "string" || !profile.name.trim()) {
     throw new Error("Profile name is missing");
   }
+  profile.favorites = parseFavorites(profile.favorites);
   return profile;
 };

@@ -10,11 +10,13 @@ import {ItemBasetype} from "../../types/generated/ItemBasetypesTypedef";
 import {generateRareItemRegex} from "./ItemResult";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
+import {useFavoritePage} from "@poe2/useFavoritePage";
 
 export function Item() {
   const {currentProfile} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile);
-  const [settings, setSettings] = useState<ItemSettings>(globalSettings.item);
+  const favoritePage = useFavoritePage("item", globalSettings.item);
+  const [settings, setSettings] = useState<ItemSettings>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
 
   const [basetypes, setBasetypes] = useState<ItemBasetype[]>([]);
@@ -22,6 +24,7 @@ export function Item() {
   const [searchText, setSearchText] = useState("");
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) { setResult(generateRareItemRegex(settings)); return; }
     loadItemBasetypes().then(setBasetypes);
     loadItemRegex().then(setAllItemRegex);
   }, []);
@@ -53,13 +56,14 @@ export function Item() {
     const settingsResult = {...base, item: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateRareItemRegex(settings));
-  }, [settings]);
+  }, [settings, favoritePage.isEditingFavorite]);
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) return;
     const gs = loadSettings(currentProfile);
     setSettings(gs.item);
     setSelectedProfile(currentProfile);
-  }, [currentProfile]);
+  }, [currentProfile, favoritePage.isEditingFavorite]);
 
   const setItemBase = (itemBase: Itembase) => {
     setSettings({...settings, itemBase});
@@ -71,6 +75,7 @@ export function Item() {
       <Poe2Header text="Item"/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.item)}
         customText={settings.resultSettings.customText}
         enableCustomText={settings.resultSettings.customTextEnabled}

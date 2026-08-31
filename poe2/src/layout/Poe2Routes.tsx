@@ -7,11 +7,13 @@ import {Waystone as Poe2Waystone} from "../pages/waystone/Waystone";
 import {Tablet as Poe2Tablet} from "../pages/tablet/Tablet";
 import {Relic as Poe2Relic} from "../pages/relic/Relic";
 import {Item as Poe2Item} from "../pages/item/Item";
+import Favorites from "../pages/favorites/Favorites";
 
 export const Poe2Routes = () => (
   <Routes>
     <Route element={<Poe2Layout/>}>
-      <Route index element={<Navigate to="/vendor" replace/>}/>
+      <Route index element={<Favorites/>}/>
+      <Route path="favorites" element={<Favorites/>}/>
       <Route path="vendor" element={<Poe2Vendor/>}/>
       <Route path="waystone" element={<Poe2Waystone/>}/>
       <Route path="tablet" element={<Poe2Tablet/>}/>
@@ -19,7 +21,7 @@ export const Poe2Routes = () => (
       <Route path="item" element={<Poe2Item/>}/>
     </Route>
 
-    <Route path="*" element={<Navigate to="/vendor" replace/>}/>
+    <Route path="*" element={<Navigate to="/favorites" replace/>}/>
   </Routes>
 );
 

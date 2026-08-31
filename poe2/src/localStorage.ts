@@ -49,3 +49,9 @@ export const saveSettings = (settings: Settings): void => {
   profiles[settings.name] = settings;
   localStorage.setItem(PROFILE_KEY, JSON.stringify(profiles));
 }
+
+export const updateSettings = (profile: string, updater: (settings: Settings) => Settings): Settings => {
+  const settings = {...updater(loadSettings(profile)), name: profile};
+  saveSettings(settings);
+  return settings;
+};

@@ -13,17 +13,20 @@ import FilterCard from "@shared/components/FilterCard/FilterCard";
 import NumberField from "@shared/components/NumberField/NumberField";
 import ModSearchBox from "@shared/components/ModSearchBox";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
+import {useFavoritePage} from "@poe2/useFavoritePage";
 
 export function Tablet() {
   const {currentProfile} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
-  const [settings, setSettings] = useState<Settings["tablet"]>(globalSettings.tablet);
+  const favoritePage = useFavoritePage("tablet", globalSettings.tablet);
+  const [settings, setSettings] = useState<Settings["tablet"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
   const [affixes, setAffixes] = useState<TabletAffix[]>([]);
   const [affixSearch, setAffixSearch] = useState("");
   const [tradeStatIds, setTradeStatIds] = useState<TradeStatIdMap>({});
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) { setResult(generateTabletRegex({...loadSettings(currentProfile), tablet: settings})); return; }
     loadTabletAffixes().then(setAffixes);
     loadTabletTradeStatIds().then(setTradeStatIds);
   }, []);
@@ -47,20 +50,22 @@ export function Tablet() {
     const settingsResult = {...base, tablet: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateTabletRegex(settingsResult));
-  }, [settings]);
+  }, [settings, favoritePage.isEditingFavorite]);
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) return;
     const gs = loadSettings(currentProfile);
     setSettings(gs.tablet);
     setResult(generateTabletRegex(gs));
     setSelectedProfile(currentProfile);
-  }, [currentProfile]);
+  }, [currentProfile, favoritePage.isEditingFavorite]);
 
   return (
     <>
       <Poe2Header text="Tablet"/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.tablet)}
         onTradeSearch={() => openTabletTradeSearch({...loadSettings(currentProfile), tablet: settings}, tradeStatIds).catch(() => {})}
         customText={settings.resultSettings.customText}

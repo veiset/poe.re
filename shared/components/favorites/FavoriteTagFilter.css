@@ -1,0 +1,5 @@
+.favorite-tag-filter { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; margin: 0 0 18px; }
+.favorite-tag-filter-label { color: var(--color-text-muted); font-size: 13px; margin-right: 3px; }
+.favorite-tag-filter button { padding: 6px 10px; border: 1px solid var(--color-border-strong); border-radius: 999px; color: var(--color-text-muted); background: var(--color-area); cursor: pointer; }
+.favorite-tag-filter button[aria-pressed="true"] { color: white; background: var(--color-accent); border-color: var(--color-accent); }
+.favorite-tag-filter-clear { border-style: dashed !important; }
