@@ -94,18 +94,9 @@ export function generateRareItemRegex(
   const mods: RareModSelectionEntry[] = Object.entries(selectedMods)
     .map(([key, value]) => ({key, value, regex: affixMap[key]}));
 
-
-  const baseWordCount = countWords(itemBase.baseType);
   const result = mods
     .filter((e) => e.value.selected)
-    .filter((e) => {
-      if (settings.matchSimilarBases) {
-        // e.key is expected to be "baseType-category-desc"
-        const modBaseType = e.key.split("-")[0];
-        return countWords(modBaseType) === baseWordCount;
-      }
-      return e.key.startsWith(itemBase.baseType);
-    })
+    .filter((e) => e.key.startsWith(itemBase.baseType))
     .map((e) => {
       const rangeInRegex = e.regex.on[0];
       const hasRangeInsideRegex = rangeInRegex !== undefined
