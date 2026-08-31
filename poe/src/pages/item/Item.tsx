@@ -16,6 +16,7 @@ import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
 import {countWords} from "@shared/core/utils";
+import {haveSameLastWord} from "@shared/core/regex/NumberOfWordsRegex";
 
 const Item = () => {
   const {globalProfile} = useContext(ProfileContext);
@@ -61,6 +62,7 @@ const Item = () => {
   const similarItems = matchSimilarBases && itembase ?
     basetypes.find(b => b.name === itembase.baseType)?.items
       .filter(item => countWords(item) === countWords(itembase.item))
+      .filter(item => countWords(item) === 1 || haveSameLastWord(item, itembase.item))
       .filter(item => item !== itembase.item) ?? [] : [];
 
 
@@ -147,7 +149,7 @@ const Item = () => {
           <>
               <div className="break"/>
               <div className="similar-items-infobox">
-                  Also matching: {similarItems.join(", ")}
+                  <b>Also matching</b>: {similarItems.join(", ")}
               </div>
           </>
       }
