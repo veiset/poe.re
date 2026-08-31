@@ -3,6 +3,7 @@
 :root {
     --bg-color: #0d0d12;
     --color-bg: var(--bg-color);
+    --color-radio-bg: #161a22;
 }
 
 .poe2-section-label {

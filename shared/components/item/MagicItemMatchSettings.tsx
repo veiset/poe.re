@@ -14,7 +14,7 @@ const MagicItemMatchSettings = ({
   setMatchOpenAffix,
 }: MagicItemMatchSettingsProps) => {
   return (
-    <div className="radio-button-modgroup">
+    <div className="radio-button-modgroup radio-button-modgroup-items">
       <input
         type="radio"
         id="magic-mods-open-and-correct-affix"

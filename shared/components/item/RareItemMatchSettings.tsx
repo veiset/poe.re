@@ -14,7 +14,7 @@ const RareItemMatchSettings = ({
   setMatchPrefixAndSuffix,
 }: RareItemMatchSettingsProps) => {
   return (
-    <div className="radio-button-modgroup">
+    <div className="radio-button-modgroup radio-button-modgroup-items">
       <input
         type="radio"
         className="radio-button-map"

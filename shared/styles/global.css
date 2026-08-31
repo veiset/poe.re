@@ -48,7 +48,7 @@
     --color-export-hover: #b88c5a;
 
     /* Radio */
-    --color-radio-bg: #161a22;
+    --color-radio-bg: #343f48;
 }
 
 body {
@@ -194,6 +194,11 @@ input[type="radio"]:checked::after {
     padding: 3px;
     gap: 2px;
     font-size: 13px;
+}
+
+.radio-button-modgroup-items {
+    margin-left: 10px;
+    margin-top: 16px;
 }
 
 .radio-button-modgroup-sm {
