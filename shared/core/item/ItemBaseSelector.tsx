@@ -1,8 +1,8 @@
-import Dropdown from "@shared/components/dropdown/Dropdown";
 import React, {useEffect, useState} from "react";
 import {ReactSearchAutocomplete} from 'react-search-autocomplete';
+import Dropdown from "@shared/components/dropdown/Dropdown";
 import "./ItemBaseSelector.css";
-import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
+import {BaseType} from "@shared/types/GeneratedItemMod.Types";
 
 type Rarity = "Magic" | "Rare";
 
@@ -17,10 +17,11 @@ interface ItemBaseSelectorProps {
   itemBase: Itembase | undefined
   nonMagicalBase: boolean
   onlyMagicBase: boolean
+  basetypes: BaseType[]
 }
 
 const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
-  const {setItemBase, itemBase, nonMagicalBase, onlyMagicBase} = props;
+  const {setItemBase, itemBase, nonMagicalBase, onlyMagicBase, basetypes} = props;
   const search = basetypes.flatMap((base) =>
     base.items.map((item) => `${base.name} - ${item}`)
   ).map((e, index) => ({

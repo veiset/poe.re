@@ -5,11 +5,9 @@ import {
   MagicItemType,
   SelectedMod,
 } from "@poe/pages/magicitem/MagicItem";
-import { Itembase } from "@poe/pages/item/ItemBaseSelector";
-import { RareModSelection } from "@poe/pages/item/RareItemSelect";
-import { SelectedMagicMod } from "@poe/pages/item/MagicItemSelect";
-import { RepoeLanguage, RepoeLanguageKey } from "./Languages";
+import { RepoeLanguageKey } from "./Languages";
 import type {FavoriteRecord} from "@poe/core/favorites/FavoriteTypes";
+import {itemCraftingDefault, ItemCraftingSettings} from "@shared/types/Settings.types";
 
 export const categories: ItemCategory[] = [
   {
@@ -170,25 +168,6 @@ export interface ItemSettings {
   category: ItemCategory;
   itemType: MagicItemType;
   selected: SelectedMod[];
-  customText: {
-    value: string;
-    enabled: boolean;
-  };
-}
-
-export interface ItemCraftingSettings {
-  itembase: Itembase | undefined;
-  matchSimilarBases: boolean;
-  selectedRareMods: { [p: string]: RareModSelection };
-  selectedMagicMods: SelectedMagicMod[];
-  rareSettings: {
-    matchAnyMod: boolean;
-    matchPrefixAndSuffix: boolean;
-  };
-  magicSettings: {
-    onlyIfBothPrefixAndSuffix: boolean;
-    matchOpenAffix: boolean;
-  };
   customText: {
     value: string;
     enabled: boolean;
@@ -582,24 +561,7 @@ export const defaultSettings: SavedSettings = {
     selectedRegular: [],
     selectedAbyss: [],
   },
-  itemCrafting: {
-    itembase: undefined,
-    matchSimilarBases: true,
-    selectedRareMods: {},
-    selectedMagicMods: [],
-    rareSettings: {
-      matchAnyMod: false,
-      matchPrefixAndSuffix: false,
-    },
-    magicSettings: {
-      onlyIfBothPrefixAndSuffix: false,
-      matchOpenAffix: true,
-    },
-    customText: {
-      value: "",
-      enabled: true,
-    },
-  },
+  itemCrafting: itemCraftingDefault,
   tattoo: {
     minValue: "",
     maxValue: "",
