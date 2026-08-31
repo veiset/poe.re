@@ -1,131 +1,168 @@
-import React, {useContext, useEffect, useMemo, useState} from "react";
-import {loadSettings, saveSettings, setSelectedProfile} from "../../localStorage";
+import React, {useContext, useEffect, useState} from "react";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
-import {defaultSettings, ItemSettings} from "../../settings";
-import {loadItemBasetypes, loadItemRegex} from "../../utils/loadData";
-import {ItemBaseSelector} from "./ItemBaseSelector";
-import {RareModifierSelect} from "./RareModifierSelect";
-import {Itembase, ItemRegex} from "../../types/generated/ItemTypedef";
-import {ItemBasetype} from "../../types/generated/ItemBasetypesTypedef";
-import {generateRareItemRegex} from "./ItemResult";
+import {defaultSettings} from "../../settings";
+import {itemRegex} from "@poe2/generated/GeneratedItemModsPOE2";
+import {basetypes} from "@poe2/generated/GeneratedItemBasesPOE2";
+import {loadSettings, updateSettings} from "../../localStorage";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import {findSimilarBases, groupAffixes} from "@shared/core/item/GroupUtils";
+import RareItemSelect, {RareModSelection} from "@shared/core/item/RareItemSelect";
+import MagicItemSelect, {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
+import {ItemCraftingSettings} from "@shared/types/Settings.types";
+import {generateMagicItemRegex, generateRareItemRegex} from "@shared/core/item/ItemOutput";
+import ItemBaseSelector, {Itembase} from "@shared/core/item/ItemBaseSelector";
+import ItemInfoBanner from "@shared/components/item/ItemInfoBanner";
+import {Checkbox} from "@shared/components/Checkbox/Checkbox";
+import SimilarItemsInfo from "@shared/components/item/SimilarItemsInfo";
+import ModWarning from "@shared/core/item/ModWarning";
+import RareItemMatchSettings from "@shared/components/item/RareItemMatchSettings";
+import MagicItemMatchSettings from "@shared/components/item/MagicItemMatchSettings";
+import "./Item.css";
 
 export function Item() {
   const {currentProfile} = useContext(Poe2ProfileContext);
-  const globalSettings = loadSettings(currentProfile);
-  const favoritePage = useFavoritePage("item", globalSettings.item);
-  const [settings, setSettings] = useState<ItemSettings>(favoritePage.initialConfiguration);
+  const storedProfile = loadSettings(currentProfile);
+  const favoritePage = useFavoritePage("item", storedProfile.itemCrafting);
   const [result, setResult] = useState("");
+  const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
 
-  const [basetypes, setBasetypes] = useState<ItemBasetype[]>([]);
-  const [allItemRegex, setAllItemRegex] = useState<ItemRegex[]>([]);
-  const [searchText, setSearchText] = useState("");
+  const affixMap: Record<string, ItemAffixRegex> = groupAffixes(itemRegex);
 
-  useEffect(() => {
-    if (favoritePage.isEditingFavorite) { setResult(generateRareItemRegex(settings)); return; }
-    loadItemBasetypes().then(setBasetypes);
-    loadItemRegex().then(setAllItemRegex);
-  }, []);
+  const [itembase, setItembase] = useState<Itembase | undefined>(profile.itemCrafting.itembase);
+  const [matchSimilarBases, setMatchSimilarBases] = useState(profile.itemCrafting.matchSimilarBases);
+  const [regexMods, setRegexMods] = useState<ItemRegex | undefined>(undefined);
+  const [selectedRareMods, setSelectedRareMods] = useState<{
+    [key: string]: RareModSelection
+  }>(profile.itemCrafting.selectedRareMods);
+  const [selectedMagicMods, setSelectedMagicMods] = useState<SelectedMagicMod[]>(profile.itemCrafting.selectedMagicMods);
+  const [matchAnyMod, setMatchAnyMod] = useState(profile.itemCrafting.rareSettings.matchAnyMod);
+  const [matchPrefixAndSuffix, setMatchPrefixAndSuffix] = useState(profile.itemCrafting.rareSettings.matchPrefixAndSuffix);
+  const [onlyIfBothPrefixAndSuffix, setOnlyIfBothPrefixAndSuffix] = useState(profile.itemCrafting.magicSettings.onlyIfBothPrefixAndSuffix);
+  const [matchOpenAffix, setMatchOpenAffix] = useState(profile.itemCrafting.magicSettings.matchOpenAffix);
 
-  const searchItems = useMemo(() => {
-    return basetypes.flatMap((base) =>
-      base.item.map((item) => ({baseType: base.base, item}))
-    );
-  }, [basetypes]);
+  const [customTextStr, setCustomTextStr] = useState(profile.itemCrafting.customText.value);
+  const [enableCustomText, setEnableCustomText] = useState(profile.itemCrafting.customText.enabled);
 
-  const filteredItems = useMemo(() => {
-    const q = searchText.trim().toLowerCase();
-    if (q === "") return [];
-    return searchItems.filter(
-      (e) =>
-        e.item.toLowerCase().includes(q) ||
-        e.baseType.toLowerCase().includes(q)
-    ).slice(0, 20);
-  }, [searchText, searchItems]);
+  const [nonMagicalBase, setNonMagicalBase] = useState(false);
+  const [onlyMagicBase, setOnlyMagicBase] = useState(false);
+  const nonMagicBases = ["heist"];
+  const onlyMagicBases = ["utility flasks"];
 
-  const currentItemRegex = useMemo(() => {
-    if (!settings.itemBase) return undefined;
-    return allItemRegex.find((e) => e.basetype === settings.itemBase!.baseType);
-  }, [settings.itemBase, allItemRegex]);
+  const similarItems = matchSimilarBases && itembase ?
+    findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
 
-  // Save settings and generate result
-  useEffect(() => {
-    const base = loadSettings(currentProfile);
-    const settingsResult = {...base, item: {...settings}, name: currentProfile};
-    saveSettings(settingsResult);
-    setResult(generateRareItemRegex(settings));
-  }, [settings, favoritePage.isEditingFavorite]);
-
-  useEffect(() => {
-    if (favoritePage.isEditingFavorite) return;
-    const gs = loadSettings(currentProfile);
-    setSettings(gs.item);
-    setSelectedProfile(currentProfile);
-  }, [currentProfile, favoritePage.isEditingFavorite]);
-
-  const setItemBase = (itemBase: Itembase) => {
-    setSettings({...settings, itemBase});
-    setSearchText("");
+  const currentSettings: ItemCraftingSettings = {
+    itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
+    rareSettings: {matchAnyMod, matchPrefixAndSuffix},
+    magicSettings: {onlyIfBothPrefixAndSuffix, matchOpenAffix},
+    customText: {value: customTextStr, enabled: enableCustomText},
   };
 
-  return (
-    <>
-      <Poe2Header text="Item"/>
+  useEffect(() => {
+    if (itembase) {
+      setRegexMods(itemRegex[itembase.baseType]);
+      const nonMagicalType = nonMagicBases.some((e) => itembase?.baseType.toLowerCase().includes(e.toLowerCase()));
+      setNonMagicalBase(nonMagicalType);
+      if (nonMagicalType && itembase.rarity === "Magic") {
+        setItembase({...itembase, rarity: "Rare"});
+      }
+
+      const onlyMagicType = onlyMagicBases.some((e) => itembase?.baseType.toLowerCase().includes(e.toLowerCase()));
+      setOnlyMagicBase(onlyMagicType);
+      if (onlyMagicType && itembase.rarity === "Rare") {
+        setItembase({...itembase, rarity: "Magic"});
+      }
+    }
+  }, [itembase]);
+
+  useEffect(() => {
+    if (itembase && itembase.rarity === "Rare") {
+      setResult(generateRareItemRegex(affixMap, currentSettings));
+    }
+    if (itembase && itembase.rarity === "Magic") {
+      setResult(generateMagicItemRegex(currentSettings, basetypes));
+    }
+    if (!favoritePage.isEditingFavorite) updateSettings(currentProfile, (latest) => ({
+      ...latest,
+      itemCrafting: currentSettings
+    }));
+  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases]);
+
+  return (<>
+      <Poe2Header text={"Item"}/>
       <RegexResultBox
         result={result}
-        favorite={favoritePage.action(settings)}
-        reset={() => setSettings(defaultSettings.item)}
-        customText={settings.resultSettings.customText}
-        enableCustomText={settings.resultSettings.customTextEnabled}
-        autoCopy={settings.resultSettings.autoCopy}
-        setCustomText={(text) => {
-          setSettings({
-            ...settings,
-            resultSettings: {...settings.resultSettings, customText: text}
-          })
+        favorite={favoritePage.action(currentSettings)}
+        reset={() => {
+          setNonMagicalBase(false);
+          setMatchSimilarBases(defaultSettings.itemCrafting.matchSimilarBases);
+          if (itembase?.rarity === "Rare") {
+            setMatchAnyMod(defaultSettings.itemCrafting.rareSettings.matchAnyMod);
+            setMatchPrefixAndSuffix(defaultSettings.itemCrafting.rareSettings.matchPrefixAndSuffix);
+            setSelectedRareMods(defaultSettings.itemCrafting.selectedRareMods);
+          }
+          if (itembase?.rarity === "Magic") {
+            // setSelectedMagicMods(defaultSettings.itemCrafting.selectedMagicMods);
+            setSelectedMagicMods(selectedMagicMods.filter((e) => e.basetype !== itembase.baseType));
+            setOnlyIfBothPrefixAndSuffix(defaultSettings.itemCrafting.magicSettings.onlyIfBothPrefixAndSuffix);
+            setMatchOpenAffix(defaultSettings.itemCrafting.magicSettings.matchOpenAffix);
+          }
+          setEnableCustomText(defaultSettings.itemCrafting.customText.enabled);
+          setCustomTextStr(defaultSettings.itemCrafting.customText.value);
         }}
-        onAutoCopyChange={(enable: boolean) => {
-          setSettings({
-            ...settings,
-            resultSettings: {...settings.resultSettings, autoCopy: enable}
-          })
-        }}
-        setEnableCustomText={(enabled: boolean) => {
-          setSettings({
-            ...settings,
-            resultSettings: {...settings.resultSettings, customTextEnabled: enabled}
-          })
-        }}
+        customText={customTextStr}
+        setCustomText={setCustomTextStr}
+        enableCustomText={enableCustomText}
+        setEnableCustomText={setEnableCustomText}
+        enableBug={true}
       />
+      <ItemBaseSelector itemBase={itembase} basetypes={basetypes} setItemBase={setItembase}
+                        nonMagicalBase={nonMagicalBase}
+                        onlyMagicBase={onlyMagicBase}/>
+      {itembase && <h2 className="item-selected-header">Selected: <span
+          className={"item-" + itembase.rarity}>{itembase.item}</span></h2>}
+      <Checkbox className="item-crafting-checkbox" label="Match similar item bases" value={matchSimilarBases}
+                onChange={setMatchSimilarBases}/>
+      <SimilarItemsInfo similarItems={similarItems}/>
+      {regexMods && itembase?.rarity === "Rare" && <ModWarning itemRegex={regexMods}/>}
       <div className="break"/>
-      <div className="warning-banner">
-        <b>Beta feature!</b><br/>
-        Regex might incorrectly match modifiers. <br/>
-        Please report bugs for incorrect matches and I'll try to fix them. Keep in mind that generating unique regex for generic item modifiers is really hard!
-      </div>
-
-      <div className="filter-card-grid">
-        <ItemBaseSelector
-          searchText={searchText}
-          setSearchText={setSearchText}
-          filteredItems={filteredItems}
-          setItemBase={setItemBase}
-          settings={settings}
-          setSettings={setSettings}
-          currentItemRegex={currentItemRegex}
-        />
-      </div>
-
-      {settings.itemBase && currentItemRegex && (
-        <RareModifierSelect
-          itemRegex={currentItemRegex}
-          itemBase={settings.itemBase}
-          selected={settings.selectedMods}
-          setSelected={(mods) => setSettings({...settings, selectedMods: mods})}
-        />
-      )}
+      {itembase && regexMods && itembase.rarity === "Rare" &&
+          <div>
+              <RareItemMatchSettings
+                  matchAnyMod={matchAnyMod}
+                  setMatchAnyMod={setMatchAnyMod}
+                  matchPrefixAndSuffix={matchPrefixAndSuffix}
+                  setMatchPrefixAndSuffix={setMatchPrefixAndSuffix}
+              />
+              <RareItemSelect
+                  itemRegex={regexMods}
+                  itembase={itembase}
+                  displayTiers={true}
+                  setSelected={setSelectedRareMods}
+                  selected={selectedRareMods}
+              />
+          </div>
+      }
+      {
+        itembase && regexMods && itembase.rarity === "Magic" &&
+          <div>
+              <MagicItemMatchSettings
+                  onlyIfBothPrefixAndSuffix={onlyIfBothPrefixAndSuffix}
+                  setOnlyIfBothPrefixAndSuffix={setOnlyIfBothPrefixAndSuffix}
+                  matchOpenAffix={matchOpenAffix}
+                  setMatchOpenAffix={setMatchOpenAffix}
+              />
+              <MagicItemSelect
+                  itemRegex={regexMods}
+                  itembase={itembase}
+                  selected={selectedMagicMods}
+                  setSelected={setSelectedMagicMods}
+              />
+          </div>
+      }
     </>
-  );
+  )
 }

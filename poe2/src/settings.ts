@@ -1,5 +1,6 @@
 import {Itembase, ItemModifier} from "./types/generated/ItemTypedef";
 import {AsyncTradePriceRangeValue} from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
+import {itemCraftingDefault, ItemCraftingSettings} from "@shared/types/Settings.types";
 
 export type Poe2FavoritePageKey = "vendor" | "waystone" | "tablet" | "relic" | "item";
 
@@ -140,15 +141,6 @@ export interface VendorGroup {
   }
 }
 
-export interface ItemSettings {
-  itemBase: Itembase | undefined,
-  selectedMods: SelectedItemMod[],
-  rareSettings: {
-    matchAnyMod: boolean
-  },
-  resultSettings: ResultSettings
-}
-
 export interface SelectedItemMod {
   basetype: string
   category: string
@@ -241,7 +233,7 @@ export interface Settings {
   waystone: WaystoneSettings,
   tablet: TabletSettings,
   relic: RelicSettings,
-  item: ItemSettings,
+  itemCrafting: ItemCraftingSettings,
 }
 
 const defaultResultSettings: ResultSettings = ({
@@ -425,12 +417,5 @@ export const defaultSettings: Settings = {
       suffixes: [],
     }
   },
-  item: {
-    itemBase: undefined,
-    selectedMods: [],
-    rareSettings: {
-      matchAnyMod: true
-    },
-    resultSettings: defaultResultSettings,
-  }
+  itemCrafting: itemCraftingDefault,
 }

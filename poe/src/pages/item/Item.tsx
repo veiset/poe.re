@@ -27,10 +27,10 @@ const Item = () => {
   const storedProfile = loadSettings(globalProfile);
   const favoritePage = useFavoritePage("items", storedProfile.itemCrafting);
   const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
+  const [result, setResult] = useState<string>("");
 
   const affixMap: Record<string, ItemAffixRegex> = groupAffixes(itemRegex);
 
-  const [result, setResult] = useState<string>("");
   const [itembase, setItembase] = useState<Itembase | undefined>(profile.itemCrafting.itembase);
   const [matchSimilarBases, setMatchSimilarBases] = useState(profile.itemCrafting.matchSimilarBases);
   const [regexMods, setRegexMods] = useState<ItemRegex | undefined>(undefined);

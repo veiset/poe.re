@@ -17,6 +17,19 @@ const MagicItemMatchSettings = ({
     <div className="radio-button-modgroup">
       <input
         type="radio"
+        id="magic-mods-open-and-correct-affix"
+        name="Magic mod matching"
+        checked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
+        onChange={() => {
+          setOnlyIfBothPrefixAndSuffix(true);
+          setMatchOpenAffix(true);
+        }}
+      />
+      <label htmlFor="magic-mods-open-and-correct-affix" className="radio-button-map">
+        Match both affixes, but allow for open prefix or suffix
+      </label>
+      <input
+        type="radio"
         className="radio-button-map"
         id="magic-mods-default"
         name="Magic mod matching"
@@ -54,19 +67,6 @@ const MagicItemMatchSettings = ({
       />
       <label htmlFor="magic-mods-open" className="radio-button-map">
         Match an open prefix or suffix
-      </label>
-      <input
-        type="radio"
-        id="magic-mods-open-and-correct-affix"
-        name="Magic mod matching"
-        checked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
-        onChange={() => {
-          setOnlyIfBothPrefixAndSuffix(true);
-          setMatchOpenAffix(true);
-        }}
-      />
-      <label htmlFor="magic-mods-open-and-correct-affix" className="radio-button-map">
-        Match both affixes, but allow for open prefix or suffix
       </label>
     </div>
   );

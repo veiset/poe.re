@@ -31,7 +31,7 @@ export const itemCraftingDefault: ItemCraftingSettings = {
     matchPrefixAndSuffix: false,
   },
   magicSettings: {
-    onlyIfBothPrefixAndSuffix: false,
+    onlyIfBothPrefixAndSuffix: true,
     matchOpenAffix: true,
   },
   customText: {

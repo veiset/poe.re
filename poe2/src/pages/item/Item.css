@@ -1,0 +1,125 @@
+.item-Rare {
+    color: #dfc34c;
+    font-weight: bold;
+}
+
+.item-Magic {
+    color: #848bff;
+    font-weight: bold;
+}
+
+.mod-warning {
+    color: #d89c8e;
+}
+
+.mod-before {
+    color: #ac39a2;
+}
+
+.mod-after {
+    color: #697865;
+}
+
+.mod-on {
+    color: #5b6bb5;
+}
+
+.mod-extra-info {
+    color: #8F8F9D;
+}
+
+.modgroup-header {
+    padding-top: 15px;
+    color: #8F8F9D;
+}
+
+.modgroup-regex-preview {
+    color: #8F8F9D;
+    padding-left: 10px;
+}
+
+.rare-mod-input {
+    font-size: 14px;
+    padding: 2px 2px 2px 6px;
+    min-height: 30px;
+    cursor: pointer;
+}
+
+.rare-mod-selected:nth-child(even) {
+    background-color: #9ed7fd !important;
+    color: black;
+}
+.rare-mod-selected:nth-child(odd) {
+    background-color: #90c5e6 !important;
+    color: black;
+}
+
+.rare-mod-group {
+    padding: 10px;
+}
+
+.rare-mod-input input[type=number] {
+    text-align: left;
+    font-size: 16px;
+    border-radius: 4px;
+    margin: 4px;
+    padding-left: 4px;
+    background-color: #1b1e23;
+    padding-right: 4px;
+    color: #ffffff;
+    width: 70px;
+    border: 1px solid black;
+}
+
+
+.rare-mod-input input[type=checkbox] {
+    background-color: #f3a575;
+    width: 19px;
+    height: 19px;
+}
+
+.mod-no-select-input {
+    color: #c8c8c8;
+    background-color: rgba(27, 30, 35, 0.74);
+    padding: 4px;
+    border-radius: 4px;
+}
+
+.mod-no-input {
+}
+
+.mod-checkbox-input {
+    accent-color: #4d6873;
+    height: 20px;
+    width: 20px;
+    margin: 3px 10px;
+    padding-top: 20px;
+}
+.rare-display-affixes {
+    color: #000000;
+    cursor: default;
+    font-family: monospace;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    margin-right: 4px;
+    padding: 2px 2px 2px 2px;
+    font-size: 12px;
+    background-color: #7ea0c3;
+}
+.mod-tier {
+    display: inline-block;
+    min-width: 25px;
+    text-align: right;
+    color: #000000;
+    padding-right: 10px;
+}
+
+.item-crafting-checkbox {
+    padding-top: 14px;
+    padding-left: 10px;
+}
+
+.item-selected-header {
+    padding-left: 16px;
+    margin-bottom: 8px;
+}
