@@ -65,7 +65,6 @@ function generateRegexAffixes(
     return s ? `"${s}"` : "";
   }
   return "Error reading configuration";
-
 }
 
 export function generateRareItemRegex(

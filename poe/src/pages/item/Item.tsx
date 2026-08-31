@@ -60,8 +60,10 @@ const Item = () => {
 
   const similarItems = matchSimilarBases && itembase ?
     basetypes.find(b => b.name === itembase.baseType)?.items
-      .filter(item => countWords(item) === countWords(itembase.baseType))
+      .filter(item => countWords(item) === countWords(itembase.item))
       .filter(item => item !== itembase.item) ?? [] : [];
+
+  console.log({itembase, similarItems})
 
   const currentSettings: ItemCraftingSettings = {
     itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
@@ -143,9 +145,12 @@ const Item = () => {
       <Checkbox className="item-crafting-checkbox" label="Match similar item bases" value={matchSimilarBases}
                 onChange={setMatchSimilarBases}/>
       {similarItems.length > 0 &&
-          <div className="similar-items-infobox">
-              Also matching: {similarItems.join(", ")}
-          </div>
+          <>
+              <div className="break"/>
+              <div className="similar-items-infobox">
+                  Also matching: {similarItems.join(", ")}
+              </div>
+          </>
       }
       {regexMods && itembase?.rarity === "Rare" && <ModWarning itemRegex={regexMods}/>}
       <div className="break"/>
@@ -213,16 +218,16 @@ const Item = () => {
                          defaultChecked={matchOpenAffix && !onlyIfBothPrefixAndSuffix}
                          checked={matchOpenAffix && !onlyIfBothPrefixAndSuffix}
                          onChange={v => {
-                           setMatchOpenAffix(true);
                            setOnlyIfBothPrefixAndSuffix(false);
+                           setMatchOpenAffix(true);
                          }}/>
                   <label htmlFor="magic-mods-open" className="radio-button-map">Match an open prefix or suffix</label>
                   <input type="radio" id="magic-mods-open-and-correct-affix" name="Magic mod matching"
                          defaultChecked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
                          checked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
                          onChange={v => {
-                           setMatchOpenAffix(true);
                            setOnlyIfBothPrefixAndSuffix(true);
+                           setMatchOpenAffix(true);
                          }}/>
                   <label htmlFor="magic-mods-open-and-correct-affix" className="radio-button-map">Match both affixes,
                       but allow for open prefix or suffix</label>
