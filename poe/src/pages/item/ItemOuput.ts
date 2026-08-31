@@ -5,6 +5,7 @@ import {ItemCraftingSettings} from "@poe/utils/SavedSettings";
 import {countWords} from "@shared/core/utils";
 import {SelectedMagicMod} from "@poe/pages/item/MagicItemSelect";
 import {Itembase} from "@poe/pages/item/ItemBaseSelector";
+import {wordRegex} from "@shared/core/regex/NumberOfWordsRegex";
 
 type RareModSelectionEntry = {
   key: string;
@@ -25,10 +26,11 @@ export function generateMagicItemRegex(
   const regex = generateRegexAffixes(settings, itemBase);
   if (settings.matchSimilarBases) {
     const wordCount = countWords(itemBase.item);
-    return regex.replaceAll(itemBase.item, `\\w\{${wordCount}\}`);
+    return regex.replaceAll(itemBase.item, wordRegex(wordCount));
   }
   return regex;
 }
+
 
 function generateRegexAffixes(
   settings: ItemCraftingSettings,

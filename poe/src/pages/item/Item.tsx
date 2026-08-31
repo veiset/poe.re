@@ -14,6 +14,8 @@ import MagicItemSelect, {SelectedMagicMod} from "./MagicItemSelect";
 import InfoBanner from "@poe/components/InfoBanner/InfoBanner";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
+import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
+import {countWords} from "@shared/core/utils";
 
 const Item = () => {
   const {globalProfile} = useContext(ProfileContext);
@@ -55,6 +57,11 @@ const Item = () => {
   const [onlyMagicBase, setOnlyMagicBase] = useState(false);
   const nonMagicBases = ["heist"];
   const onlyMagicBases = ["utility flasks"];
+
+  const similarItems = matchSimilarBases && itembase ?
+    basetypes.find(b => b.name === itembase.baseType)?.items
+      .filter(item => countWords(item) === countWords(itembase.baseType))
+      .filter(item => item !== itembase.item) ?? [] : [];
 
   const currentSettings: ItemCraftingSettings = {
     itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
@@ -135,6 +142,11 @@ const Item = () => {
       {itembase && <h2 className="item-selected-header">Selected: <span className={"item-" + itembase.rarity}>{itembase.item}</span></h2>}
       <Checkbox className="item-crafting-checkbox" label="Match similar item bases" value={matchSimilarBases}
                 onChange={setMatchSimilarBases}/>
+      {similarItems.length > 0 &&
+          <div className="similar-items-infobox">
+              Also matching: {similarItems.join(", ")}
+          </div>
+      }
       {regexMods && itembase?.rarity === "Rare" && <ModWarning itemRegex={regexMods}/>}
       <div className="break"/>
       {itembase && regexMods && itembase.rarity === "Rare" &&
