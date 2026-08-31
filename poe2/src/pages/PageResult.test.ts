@@ -3,6 +3,7 @@ import {generateVendorGroupRegex, generateVendorRegex} from "./vendor/VendorResu
 import {generateWaystoneRegex} from "./waystone/WaystoneResult";
 import {generateTabletRegex} from "./tablet/TabletResult";
 import {generateRelicResult} from "./relic/RelicResult";
+import {buildTabletQuery, buildWaystoneQuery} from "../utils/TradeUrlBuilder";
 
 const vendorGroup = (overrides: Partial<VendorGroup> = {}): VendorGroup => ({
   ...defaultSettings.vendor.vendorGroups[0],
@@ -68,6 +69,13 @@ describe("poe2 generateVendorRegex", () => {
 });
 
 describe("poe2 generateWaystoneRegex", () => {
+  test("maps pack size to the trade map-pack-size filter", () => {
+    const waystone = {...defaultSettings.waystone, packSize: "20"};
+
+    expect(buildWaystoneQuery(waystone, {}).query.filters.map_filters)
+      .toEqual({disabled: false, filters: {map_packsize: {min: 20}}});
+  });
+
   test("full range tier emits nothing", () => {
     const s = fullSettings();
     expect(generateWaystoneRegex(s)).toBe("");
@@ -91,11 +99,6 @@ describe("poe2 generateWaystoneRegex", () => {
       },
     });
     expect(generateWaystoneRegex(s)).toBe(`corr`);
-  });
-
-  test("item quantity quantifier", () => {
-    const s = fullSettings({waystone: {...defaultSettings.waystone, itemQuantity: "20"}});
-    expect(generateWaystoneRegex(s)).toBe(`"m q.*([2-9].|\\d..)%"`);
   });
 
   test("rarity rare+magic", () => {
@@ -126,6 +129,26 @@ describe("poe2 generateWaystoneRegex", () => {
 });
 
 describe("poe2 generateTabletRegex", () => {
+  test("includes selected modifier minimum values in trade searches", () => {
+    const tablet = {
+      ...defaultSettings.tablet,
+      modifier: {
+        ...defaultSettings.tablet.modifier,
+        affixes: [{
+          id: 123,
+          name: "##% increased Pack Size in Map",
+          value: 25,
+          isSelected: true,
+          ranges: [[5, 30]],
+          regex: "pack",
+        }],
+      },
+    };
+
+    expect(buildTabletQuery(tablet, {"123": "explicit.stat_123"}).query.stats)
+      .toEqual([{type: "count", filters: [{id: "explicit.stat_123", value: {min: 25}}], value: {min: 1}}]);
+  });
+
   test("price range uses PoE 2 divine currency", () => {
     const s = fullSettings({
       tablet: {

@@ -19,11 +19,9 @@ interface StatGroup {
 
 interface MapFilters {
   map_tier?: { min?: number; max?: number };
-  map_iiq?: { min: number };
   map_iir?: { min: number };
+  map_packsize?: { min: number };
   map_bonus?: { min: number };
-  map_magic_monsters?: { min: number };
-  map_rare_monsters?: { min: number };
 }
 
 interface TypeFilters {
@@ -66,17 +64,26 @@ function parseMin(
 }
 
 function idsToFilters(
-  options: { id?: number; isSelected: boolean }[],
+  options: { id?: number; isSelected: boolean; value?: number | null }[],
   lookup: TradeStatIdMap,
 ): StatFilter[] {
   return options
     .filter((o) => o.isSelected && o.id !== undefined)
-    .map((o) => lookup[String(o.id)])
-    .filter((statId): statId is string => Boolean(statId))
-    .map((id) => ({ id }));
+    .map((option) => {
+      const id = lookup[String(option.id)];
+      if (!id) return undefined;
+
+      return {
+        id,
+        ...(option.value !== null && option.value !== undefined && Number.isFinite(option.value)
+          ? { value: { min: option.value } }
+          : {}),
+      };
+    })
+    .filter((filter): filter is StatFilter => Boolean(filter));
 }
 
-function buildWaystoneQuery(
+export function buildWaystoneQuery(
   waystone: Settings["waystone"],
   lookup: TradeStatIdMap,
 ): TradeQuery {
@@ -115,15 +122,11 @@ function buildWaystoneQuery(
         : {}),
     };
   }
-  const iiq = parseMin(waystone.itemQuantity);
   const iir = parseMin(waystone.itemRarity);
-  const magicMon = parseMin(waystone.magicMonsters);
-  const rareMon = parseMin(waystone.rareMonsters);
+  const packSize = parseMin(waystone.packSize);
   const dropChance = parseMin(waystone.waystoneDropChance);
-  if (iiq) mapFilters.map_iiq = iiq;
   if (iir) mapFilters.map_iir = iir;
-  if (magicMon) mapFilters.map_magic_monsters = magicMon;
-  if (rareMon) mapFilters.map_rare_monsters = rareMon;
+  if (packSize) mapFilters.map_packsize = packSize;
   if (dropChance) mapFilters.map_bonus = dropChance;
 
   const typeFilters: TypeFilters = {
@@ -182,7 +185,7 @@ const TABLET_TYPE_BY_KEY: Record<string, string> = {
   overseer: "Overseer Precursor Tablet",
 };
 
-function buildTabletQuery(
+export function buildTabletQuery(
   tablet: Settings["tablet"],
   lookup: TradeStatIdMap,
 ): TradeQuery {

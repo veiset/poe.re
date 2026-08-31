@@ -65,7 +65,7 @@ export function Waystone() {
     setSelectedProfile(currentProfile);
   }, [currentProfile]);
 
-  const quantifierField = (id: string, label: string, value: string, key: "itemQuantity" | "itemRarity" | "waystoneDropChance" | "monsterEffectiveness" | "monsterRarity" | "packSize" | "magicMonsters" | "rareMonsters") => (
+  const quantifierField = (id: string, label: string, value: string, key: "itemRarity" | "waystoneDropChance" | "monsterEffectiveness" | "monsterRarity" | "packSize") => (
     <NumberField id={id} label={label} value={value}
                  onChange={(v) => setSettings({
                    ...settings,
@@ -109,14 +109,11 @@ export function Waystone() {
       />
       <div className="filter-card-grid">
         <FilterCard title="Quantity & yield">
-          {quantifierField("waystone-iiq", "Waystone item quantity", settings.itemQuantity, "itemQuantity")}
-          {quantifierField("waystone-iir", "Waystone item rarity", settings.itemRarity, "itemRarity")}
-          {quantifierField("waystone-drop-chance", "Waystone drop chance", settings.waystoneDropChance, "waystoneDropChance")}
-          {quantifierField("waystone-magic-monsters", "Magic monsters", settings.magicMonsters, "magicMonsters")}
-          {quantifierField("waystone-rare-monsters", "Rare monsters", settings.rareMonsters, "rareMonsters")}
-          {quantifierField("waystone-monster-effectiveness", "Monster effectiveness", settings.monsterEffectiveness, "monsterEffectiveness")}
-          {quantifierField("waystone-monster-rarity", "Monster rarity", settings.monsterRarity, "monsterRarity")}
+          {quantifierField("waystone-iir", "Item rarity (IIR)", settings.itemRarity, "itemRarity")}
           {quantifierField("waystone-pack-size", "Pack size", settings.packSize, "packSize")}
+          {quantifierField("waystone-monster-rarity", "Monster rarity", settings.monsterRarity, "monsterRarity")}
+          {quantifierField("waystone-monster-effectiveness", "Monster effectiveness", settings.monsterEffectiveness, "monsterEffectiveness")}
+          {quantifierField("waystone-drop-chance", "Waystone drop chance", settings.waystoneDropChance, "waystoneDropChance")}
         </FilterCard>
 
         <FilterCard title="Tier & revives">
