@@ -113,3 +113,12 @@
     color: #000000;
     padding-right: 10px;
 }
+
+.item-crafting-checkbox {
+    padding-top: 14px;
+    padding-left: 10px;
+}
+
+.item-selected-header {
+    padding-left: 16px;
+}

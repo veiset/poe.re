@@ -178,6 +178,7 @@ export interface ItemSettings {
 
 export interface ItemCraftingSettings {
   itembase: Itembase | undefined;
+  matchSimilarBases: boolean;
   selectedRareMods: { [p: string]: RareModSelection };
   selectedMagicMods: SelectedMagicMod[];
   rareSettings: {
@@ -583,6 +584,7 @@ export const defaultSettings: SavedSettings = {
   },
   itemCrafting: {
     itembase: undefined,
+    matchSimilarBases: true,
     selectedRareMods: {},
     selectedMagicMods: [],
     rareSettings: {

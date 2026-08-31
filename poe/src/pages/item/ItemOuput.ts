@@ -1,8 +1,10 @@
-import {Itembase} from "./ItemBaseSelector";
 import {RareModSelection} from "./RareItemSelect";
 import {ItemAffixRegex} from "@poe/generated/GeneratedItemModsPOE1";
 import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {ItemCraftingSettings} from "@poe/utils/SavedSettings";
+import {countWords} from "@shared/core/utils";
+import {SelectedMagicMod} from "@poe/pages/item/MagicItemSelect";
+import {Itembase} from "@poe/pages/item/ItemBaseSelector";
 
 type RareModSelectionEntry = {
   key: string;
@@ -18,9 +20,23 @@ export function generateMagicItemRegex(
   settings: ItemCraftingSettings,
 ) {
   const itemBase = settings.itembase;
-  const selectedMods = settings.selectedMagicMods;
   if (!itemBase) return "";
+
+  const regex = generateRegexAffixes(settings, itemBase);
+  if (settings.matchSimilarBases) {
+    const wordCount = countWords(itemBase.item);
+    return regex.replaceAll(itemBase.item, `\\w\{${wordCount}\}`);
+  }
+  return regex;
+}
+
+function generateRegexAffixes(
+  settings: ItemCraftingSettings,
+  itemBase: Itembase,
+) {
+  const selectedMods: SelectedMagicMod[] = settings.selectedMagicMods;
   const mods = selectedMods.filter((e) => e.basetype === itemBase.baseType);
+
   const prefixes = mods.filter((e) => e.affix === "PREFIX").map((e) => e.regex.desc);
   const suffixes = mods.filter((e) => e.affix === "SUFFIX").map((e) => e.regex.desc);
 
@@ -47,6 +63,7 @@ export function generateMagicItemRegex(
     return s ? `"${s}"` : "";
   }
   return "Error reading configuration";
+
 }
 
 export function generateRareItemRegex(
@@ -62,9 +79,17 @@ export function generateRareItemRegex(
     .map(([key, value]) => ({key, value, regex: affixMap[key]}));
 
 
+  const baseWordCount = countWords(itemBase.baseType);
   const result = mods
     .filter((e) => e.value.selected)
-    .filter((e) => e.key.startsWith(itemBase.baseType))
+    .filter((e) => {
+      if (settings.matchSimilarBases) {
+        // e.key is expected to be "baseType-category-desc"
+        const modBaseType = e.key.split("-")[0];
+        return countWords(modBaseType) === baseWordCount;
+      }
+      return e.key.startsWith(itemBase.baseType);
+    })
     .map((e) => {
       const rangeInRegex = e.regex.on[0];
       const hasRangeInsideRegex = rangeInRegex !== undefined
@@ -101,7 +126,7 @@ export function generateRareItemRegex(
   if (settings.rareSettings.matchPrefixAndSuffix) {
     const prefixes = result.filter(e => e.affixtype === "PREFIX").map(e => e.str).join("|");
     const suffixes = result.filter(e => e.affixtype === "SUFFIX").map(e => e.str).join("|");
-    
+
     if (prefixes && suffixes) {
       return `"${prefixes}" "${suffixes}"`;
     }
