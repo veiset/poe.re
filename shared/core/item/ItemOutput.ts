@@ -1,10 +1,10 @@
 import {RareModSelection} from "@shared/core/item/RareItemSelect";
-import {generateBoundedValueRegex, generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
+import {generateBoundedValueRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {countWords} from "@shared/core/utils";
 import {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import {Itembase} from "@shared/core/item/ItemBaseSelector";
 import {wordRegex} from "@shared/core/regex/NumberOfWordsRegex";
-import {BaseType, ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
+import {AffixStat, BaseType, ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
 type RareModSelectionEntry = {
@@ -16,6 +16,12 @@ type RareModSelectionEntry = {
 
 const openPrefix = (item: string) => `^${item}`;
 const openSuffix = (item: string) => `${item}$`;
+
+function boundedValueRegex(value: string, numberIndex: number, stats: AffixStat[]): string {
+  const max = stats.find((stat) => stat.numberIndex === numberIndex)?.max
+    ?? stats[numberIndex]?.max;
+  return generateBoundedValueRegex(value, max?.toString() ?? "", false);
+}
 
 export function generateMagicItemRegex(
   settings: ItemCraftingSettings,
@@ -102,26 +108,28 @@ export function generateRareItemRegex(
       const hasRangeInsideRegex = rangeInRegex !== undefined
         && e.value.values[rangeInRegex] !== ""
         && e.value.values[rangeInRegex] !== undefined;
-      const stats = e.regex.stats
-      const maxInRange = stats[rangeInRegex]?.max;
-      const maxBefore = stats[e.regex.before[0]]?.max;
-      const maxAfter = stats[e.regex.after[0]]?.max;
       const regex = hasRangeInsideRegex
         ? e.regex.regex
           .replace(
             "\\d+",
-            generateBoundedValueRegex(e.value.values[rangeInRegex], maxInRange.toString(), false) + "[^ ]+"
+            boundedValueRegex(e.value.values[rangeInRegex], rangeInRegex, e.regex.stats) + "[^ ]+"
           )
         : e.regex.regex;
       const numbersBefore = e.regex.before
-        .map((number) => e.value.values[number])
-        .filter((e) => e !== undefined && e !== "")
-        .map((f) => generateBoundedValueRegex(f, maxBefore.toString(), false))
+        .flatMap((numberIndex) => {
+          const value = e.value.values[numberIndex];
+          return value !== undefined && value !== ""
+            ? [boundedValueRegex(value, numberIndex, e.regex.stats)]
+            : [];
+        })
         .join(".*");
       const numbersAfter = e.regex.after
-        .map((number) => e.value.values[number])
-        .filter((e) => e !== undefined && e !== "")
-        .map((f) => generateBoundedValueRegex(f, maxAfter.toString(), false))
+        .flatMap((numberIndex) => {
+          const value = e.value.values[numberIndex];
+          return value !== undefined && value !== ""
+            ? [boundedValueRegex(value, numberIndex, e.regex.stats)]
+            : [];
+        })
         .join(".*");
 
       const regexStr = [numbersBefore, regex, numbersAfter]
