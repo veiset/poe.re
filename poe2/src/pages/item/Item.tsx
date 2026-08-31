@@ -14,7 +14,6 @@ import MagicItemSelect, {SelectedMagicMod} from "@shared/core/item/MagicItemSele
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 import {generateMagicItemRegex, generateRareItemRegex} from "@shared/core/item/ItemOutput";
 import ItemBaseSelector, {Itembase} from "@shared/core/item/ItemBaseSelector";
-import ItemInfoBanner from "@shared/components/item/ItemInfoBanner";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import SimilarItemsInfo from "@shared/components/item/SimilarItemsInfo";
 import ModWarning from "@shared/core/item/ModWarning";
