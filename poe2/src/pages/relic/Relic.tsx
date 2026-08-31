@@ -8,11 +8,13 @@ import {generateRelicResult} from "./RelicResult";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
+import {useFavoritePage} from "@poe2/useFavoritePage";
 
 export function Relic() {
   const {currentProfile} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
-  const [settings, setSettings] = useState<Settings["relic"]>(globalSettings.relic);
+  const favoritePage = useFavoritePage("relic", globalSettings.relic);
+  const [settings, setSettings] = useState<Settings["relic"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
 
   const prefixes: SelectOption[] = relicRegex
@@ -36,24 +38,27 @@ export function Relic() {
     }));
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) { setResult(generateRelicResult({...loadSettings(currentProfile), relic: settings})); return; }
     const base = loadSettings(currentProfile);
     const settingsResult = {...base, relic: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateRelicResult(settingsResult));
-  }, [settings]);
+  }, [settings, favoritePage.isEditingFavorite]);
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) return;
     const gs = loadSettings(currentProfile);
     setSettings(gs.relic);
     setResult(generateRelicResult(gs));
     setSelectedProfile(currentProfile);
-  }, [currentProfile]);
+  }, [currentProfile, favoritePage.isEditingFavorite]);
 
   return (
     <>
       <Poe2Header text="Relic"/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.relic)}
         customText={settings.resultSettings.customText}
         enableCustomText={settings.resultSettings.customTextEnabled}

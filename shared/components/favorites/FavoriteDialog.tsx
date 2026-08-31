@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from "react";
 import "./FavoriteDialog.css";
-import {DEFAULT_FAVORITE_COLOR, FAVORITE_COLORS, FavoriteMetadata, MAX_FAVORITE_TAG_LENGTH, MAX_FAVORITE_TAGS, normalizeFavoriteTags} from "@poe/core/favorites/FavoriteTypes";
+import {DEFAULT_FAVORITE_COLOR, FAVORITE_COLORS, FavoriteMetadata, MAX_FAVORITE_TAG_LENGTH, MAX_FAVORITE_TAGS, normalizeFavoriteTags} from "@shared/core/favorites/FavoriteTypes";
 
 interface FavoriteDialogProps {
   title: string;

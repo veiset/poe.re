@@ -22,3 +22,5 @@
 .favorite-dialog-actions button { padding: 9px 16px; border: 1px solid var(--color-border-strong); border-radius: 3px; color: var(--color-text); background: var(--color-area-2); cursor: pointer; }
 .favorite-dialog-actions .favorite-dialog-save { background: var(--color-correct); border-color: var(--color-correct); }
 .favorite-dialog-actions button:disabled { opacity: .5; cursor: not-allowed; }
+.favorite-details-regex { max-height: 180px; overflow: auto; padding: 12px; border-radius: 4px; color: var(--color-text); background: var(--color-bg); font-family: ui-monospace, monospace; font-size: 13px; overflow-wrap: anywhere; white-space: pre-wrap; }
+.favorite-details-grid { display: grid; grid-template-columns: auto 1fr; gap: 7px 13px; margin: 14px 0; font-size: 13px; }.favorite-details-grid dt { color: var(--color-text-dim); }.favorite-details-grid dd { margin: 0; }.favorite-details-description { white-space: pre-wrap; }.favorite-details-icon { width: 28px; height: 28px; margin-right: 8px; vertical-align: middle; object-fit: contain; }

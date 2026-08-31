@@ -13,16 +13,19 @@ import FilterCard from "@shared/components/FilterCard/FilterCard";
 import NumberField from "@shared/components/NumberField/NumberField";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
+import {useFavoritePage} from "@poe2/useFavoritePage";
 
 export function Waystone() {
   const {currentProfile} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
-  const [settings, setSettings] = useState<Settings["waystone"]>(globalSettings.waystone);
+  const favoritePage = useFavoritePage("waystone", globalSettings.waystone);
+  const [settings, setSettings] = useState<Settings["waystone"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
   const [affixes, setAffixes] = useState<WaystoneAffix[]>([]);
   const [tradeStatIds, setTradeStatIds] = useState<TradeStatIdMap>({});
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) { setResult(generateWaystoneRegex({...loadSettings(currentProfile), waystone: settings})); return; }
     loadWaystoneAffixes().then(setAffixes);
     loadWaystoneTradeStatIds().then(setTradeStatIds);
   }, []);
@@ -56,14 +59,15 @@ export function Waystone() {
     const settingsResult = {...base, waystone: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateWaystoneRegex(settingsResult));
-  }, [settings]);
+  }, [settings, favoritePage.isEditingFavorite]);
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) return;
     const gs = loadSettings(currentProfile);
     setSettings(gs.waystone);
     setResult(generateWaystoneRegex(gs));
     setSelectedProfile(currentProfile);
-  }, [currentProfile]);
+  }, [currentProfile, favoritePage.isEditingFavorite]);
 
   const quantifierField = (id: string, label: string, value: string, key: "itemRarity" | "waystoneDropChance" | "monsterEffectiveness" | "monsterRarity" | "packSize") => (
     <NumberField id={id} label={label} value={value}
@@ -79,6 +83,7 @@ export function Waystone() {
       <Poe2Header text="Waystone"/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.waystone)}
         onTradeSearch={() => openWaystoneTradeSearch({...loadSettings(currentProfile), waystone: settings}, tradeStatIds).catch(() => {})}
         customText={settings.resultSettings.customText}

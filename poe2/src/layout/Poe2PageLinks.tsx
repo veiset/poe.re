@@ -5,8 +5,10 @@ import waystoneIcon from "@shared/img/waystone_inventory_icon.png";
 import tabletIcon from "@shared/img/precursortablet_inventory_icon.png";
 import relicIcon from "@shared/img/relic_inventory_icon.png";
 import itemIcon from "@shared/img/item_perfect_aug.png";
+import favoriteIcon from "@shared/img/linkicons/favorite.svg";
 
 const items: NavigationItem[] = [
+  {text: "Favorites", icon: favoriteIcon, route: "/favorites"},
   {text: "Vendor", icon: vendorIcon, route: "/vendor"},
   {text: "Waystones", icon: waystoneIcon, route: "/waystone"},
   {text: "Tablets", icon: tabletIcon, route: "/tablet"},

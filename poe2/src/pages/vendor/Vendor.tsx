@@ -9,12 +9,15 @@ import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import NumberField from "@shared/components/NumberField/NumberField";
+import {useFavoritePage} from "@poe2/useFavoritePage";
 
 export function Vendor() {
   const {currentProfile} = useContext(Poe2ProfileContext);
   const initSettings = loadSettings(currentProfile).vendor;
-  const [settings, setSettings] = useState<Settings["vendor"]>(() => initSettings);
-  const [selectedGroup, setSelectedGroup] = useState<VendorGroup>(initSettings.vendorGroups[initSettings.selectedGroupId]);
+  const favoritePage = useFavoritePage("vendor", initSettings);
+  const initialSettings = favoritePage.initialConfiguration;
+  const [settings, setSettings] = useState<Settings["vendor"]>(() => initialSettings);
+  const [selectedGroup, setSelectedGroup] = useState<VendorGroup>(initialSettings.vendorGroups[initialSettings.selectedGroupId]);
   const [result, setResult] = useState("");
 
   const removeGroup = () => {
@@ -56,6 +59,10 @@ export function Vendor() {
 
   // Save whenever settings change (for the currently selected profile)
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) {
+      setResult(generateVendorGroupRegex({...settings, vendorGroups: settings.vendorGroups.map((group, index) => index === settings.selectedGroupId ? {...group, ...selectedGroup} : group)}));
+      return;
+    }
     const base = loadSettings(currentProfile);
     const updatedGroups = settings.vendorGroups.map((group, index) =>
       index === settings.selectedGroupId
@@ -70,9 +77,10 @@ export function Vendor() {
     const settingsResult: Settings = {...base, vendor: vendor, name: currentProfile};
     saveSettings(settingsResult);
     setSettings(vendor);
-  }, [selectedGroup]);
+  }, [selectedGroup, favoritePage.isEditingFavorite]);
 
   useEffect(() => {
+    if (favoritePage.isEditingFavorite) return;
     setResult(generateVendorGroupRegex(settings));
   }, [settings]);
 
@@ -81,7 +89,7 @@ export function Vendor() {
     const gs = loadSettings(currentProfile);
     setSettings(gs.vendor);
     setSelectedProfile(currentProfile);
-  }, [currentProfile]);
+  }, [currentProfile, favoritePage.isEditingFavorite]);
 
   const isEmpty = settings.vendorGroups.length === 1 && getSelectedPropertiesFromObject(settings.vendorGroups[0]).length === 0;
 
@@ -90,6 +98,7 @@ export function Vendor() {
       <Poe2Header text="Vendor"/>
       <RegexResultBox
         result={result}
+        favorite={favoritePage.action({...settings, vendorGroups: settings.vendorGroups.map((group, index) => index === settings.selectedGroupId ? {...group, ...selectedGroup} : group)})}
         reset={() => {
           setSettings({...defaultSettings.vendor})
           setSelectedGroup({...defaultSettings.vendor.vendorGroups[0]})

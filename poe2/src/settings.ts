@@ -1,6 +1,24 @@
 import {Itembase, ItemModifier} from "./types/generated/ItemTypedef";
 import {AsyncTradePriceRangeValue} from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 
+export type Poe2FavoritePageKey = "vendor" | "waystone" | "tablet" | "relic" | "item";
+
+export interface Poe2FavoriteRecord {
+  schemaVersion: 1;
+  id: string;
+  pageKey: Poe2FavoritePageKey;
+  name: string;
+  description: string;
+  color: string;
+  icon?: string;
+  tags: string[];
+  regex: string;
+  configuration: unknown;
+  context: {league?: string};
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface SelectOption {
   name: string
   value: number | null
@@ -218,6 +236,7 @@ type VendorSettings = {
 
 export interface Settings {
   name: string
+  favorites: Poe2FavoriteRecord[]
   vendor: VendorSettings
   waystone: WaystoneSettings,
   tablet: TabletSettings,
@@ -322,6 +341,7 @@ export const defaultEmptyVendor = {
 };
 export const defaultSettings: Settings = {
   name: "default",
+  favorites: [],
   vendor: {
     resultSettings: defaultResultSettings,
     selectedGroupId: 0,
