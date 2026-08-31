@@ -110,7 +110,7 @@ export function generateRareItemRegex(
         ? e.regex.regex
           .replace(
             "\\d+",
-            generateBoundedValueRegex(e.value.values[rangeInRegex], maxInRange.toString(), false)
+            generateBoundedValueRegex(e.value.values[rangeInRegex], maxInRange.toString(), false) + "[^ ]+"
           )
         : e.regex.regex;
       const numbersBefore = e.regex.before
