@@ -1,3 +1,4 @@
+import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
 import {RareModSelection} from "./RareItemSelect";
 import {ItemAffixRegex} from "@poe/generated/GeneratedItemModsPOE1";
 import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
@@ -20,17 +21,31 @@ const openSuffix = (item: string) => `${item}$`;
 export function generateMagicItemRegex(
   settings: ItemCraftingSettings,
 ) {
-  const itemBase = settings.itembase;
-  if (!itemBase) return "";
+  const itembase = settings.itembase;
+  if (!itembase) return "";
 
-  const regex = generateRegexAffixes(settings, itemBase);
+  const regex = generateRegexAffixes(settings, itembase);
+
   if (settings.matchSimilarBases) {
-    const wordCount = countWords(itemBase.item);
-    return regex.replaceAll(itemBase.item, wordRegex(wordCount));
+    return regex.replaceAll(itembase.item, itemGenericMatch(itembase));
   }
   return regex;
 }
 
+function itemGenericMatch(itembase: Itembase) {
+  const words = itembase.item.trim().split(/\s+/);
+  const lastWord = words[words.length - 1];
+  const firstWordsCount = words.length - 1;
+
+  if (firstWordsCount > 0) {
+    return `${wordRegex(firstWordsCount)}\\s${lastWord}`;
+  }
+
+  const similarItems = basetypes
+    .find(b => b.name === itembase.baseType)?.items
+    .filter(item => countWords(item) === 1) ?? [];
+  return similarItems.length > 1 ? `(${similarItems.join("|")})` : itembase.item;
+}
 
 function generateRegexAffixes(
   settings: ItemCraftingSettings,

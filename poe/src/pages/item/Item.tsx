@@ -63,7 +63,6 @@ const Item = () => {
       .filter(item => countWords(item) === countWords(itembase.item))
       .filter(item => item !== itembase.item) ?? [] : [];
 
-  console.log({itembase, similarItems})
 
   const currentSettings: ItemCraftingSettings = {
     itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
@@ -206,8 +205,8 @@ const Item = () => {
                   <label htmlFor="magic-mods-default" className="radio-button-map radio-first-ele">Match if ANY mod is
                       found</label>
                   <input type="radio" id="magic-mods-both" name="Magic mod matching"
-                         defaultChecked={onlyIfBothPrefixAndSuffix}
-                         checked={onlyIfBothPrefixAndSuffix}
+                         defaultChecked={onlyIfBothPrefixAndSuffix && !matchOpenAffix}
+                         checked={onlyIfBothPrefixAndSuffix && !matchOpenAffix}
                          onChange={v => {
                            setOnlyIfBothPrefixAndSuffix(true);
                            setMatchOpenAffix(false);
