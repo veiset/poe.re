@@ -1,5 +1,5 @@
 import {RareModSelection} from "@shared/core/item/RareItemSelect";
-import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
+import {generateBoundedValueRegex, generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {countWords} from "@shared/core/utils";
 import {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import {Itembase} from "@shared/core/item/ItemBaseSelector";
@@ -102,22 +102,26 @@ export function generateRareItemRegex(
       const hasRangeInsideRegex = rangeInRegex !== undefined
         && e.value.values[rangeInRegex] !== ""
         && e.value.values[rangeInRegex] !== undefined;
+      const stats = e.regex.stats
+      const maxInRange = stats[rangeInRegex]?.max;
+      const maxBefore = stats[e.regex.before[0]]?.max;
+      const maxAfter = stats[e.regex.after[0]]?.max;
       const regex = hasRangeInsideRegex
         ? e.regex.regex
           .replace(
             "\\d+",
-            generateNumberRegex(e.value.values[rangeInRegex], false).replaceAll(".", "\\d")
+            generateBoundedValueRegex(e.value.values[rangeInRegex], maxInRange.toString(), false)
           )
         : e.regex.regex;
       const numbersBefore = e.regex.before
         .map((number) => e.value.values[number])
         .filter((e) => e !== undefined && e !== "")
-        .map((f) => generateNumberRegex(f, false).replaceAll(".", "\\d"))
+        .map((f) => generateBoundedValueRegex(f, maxBefore.toString(), false))
         .join(".*");
       const numbersAfter = e.regex.after
         .map((number) => e.value.values[number])
         .filter((e) => e !== undefined && e !== "")
-        .map((f) => generateNumberRegex(f, false).replaceAll(".", "\\d"))
+        .map((f) => generateBoundedValueRegex(f, maxAfter.toString(), false))
         .join(".*");
 
       const regexStr = [numbersBefore, regex, numbersAfter]
