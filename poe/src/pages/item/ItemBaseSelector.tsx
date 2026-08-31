@@ -16,10 +16,11 @@ interface ItemBaseSelectorProps {
   setItemBase: (itemBase: Itembase) => void
   itemBase: Itembase | undefined
   nonMagicalBase: boolean
+  onlyMagicBase: boolean
 }
 
 const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
-  const {setItemBase, itemBase, nonMagicalBase} = props;
+  const {setItemBase, itemBase, nonMagicalBase, onlyMagicBase} = props;
   const search = basetypes.flatMap((base) =>
     base.items.map((item) => `${base.name} - ${item}`)
   ).map((e, index) => ({
@@ -52,6 +53,7 @@ const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
             placeholderColor: "#afaeae",
             iconColor: "#fff",
             hoverBackgroundColor: "#283242",
+            zIndex: 10,
           }}
           inputDebounce={100}
           placeholder="Search for item"
@@ -66,7 +68,7 @@ const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
         />
       </div>
       <h2>Item rarity</h2>
-      {!nonMagicalBase ?
+      {!nonMagicalBase && !onlyMagicBase ?
         <Dropdown
           elements={rarity}
           selected={selectedRarity}
@@ -74,7 +76,8 @@ const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
             setSelectedRarity(selected as Rarity);
           }}
           style={"dropdown-sm"}
-        /> : <div className="item-rarity-warning">Selected item base only supports rare items</div>}
+        /> : (nonMagicalBase ? <div className="item-rarity-warning">Selected item base only supports rare items</div> :
+          <div className="item-rarity-warning">Selected item base only supports magic items</div>)}
     </div>
   </>)
 }

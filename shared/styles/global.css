@@ -46,6 +46,9 @@
     --color-import-hover: #5a7d9e;
     --color-export: #cfa06b;
     --color-export-hover: #b88c5a;
+
+    /* Radio */
+    --color-radio-bg: #161a22;
 }
 
 body {
@@ -185,8 +188,8 @@ input[type="radio"]:checked::after {
 
 .radio-button-modgroup {
     display: inline-flex;
-    background-color: var(--color-bg);
-    border: 1px solid var(--color-border-soft);
+    background-color: var(--color-radio-bg);
+    border: 1px solid var(--color-border-strong);
     border-radius: 4px;
     padding: 3px;
     gap: 2px;
