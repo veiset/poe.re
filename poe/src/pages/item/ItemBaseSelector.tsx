@@ -53,6 +53,7 @@ const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
             placeholderColor: "#afaeae",
             iconColor: "#fff",
             hoverBackgroundColor: "#283242",
+            zIndex: 10,
           }}
           inputDebounce={100}
           placeholder="Search for item"
