@@ -101,10 +101,6 @@ function generateQuantifiers(waystone: Settings["waystone"]): string[] {
 
   return [
     addQuantifier(
-      "m q.*",
-      generateNumberRegex(waystone.itemQuantity, round10),
-    ),
-    addQuantifier(
       "m rar.*",
       generateNumberRegex(waystone.itemRarity, round10),
     ),
@@ -123,14 +119,6 @@ function generateQuantifiers(waystone: Settings["waystone"]): string[] {
     addQuantifier(
       "k s.*",
       generateNumberRegex(waystone.packSize, round10),
-    ),
-    addQuantifier(
-      "c m.*",
-      generateNumberRegex(waystone.magicMonsters, round10),
-    ),
-    addQuantifier(
-      "e mo.*",
-      generateNumberRegex(waystone.rareMonsters, round10),
     ),
   ];
 }
