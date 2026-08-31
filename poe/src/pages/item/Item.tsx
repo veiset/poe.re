@@ -1,44 +1,36 @@
 import React, {useContext, useEffect, useState} from "react";
+import {itemRegex} from "@poe/generated/GeneratedItemModsPOE1";
+import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
+import {defaultSettings} from "@poe/utils/SavedSettings";
 import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
-import ItemBaseSelector, {Itembase} from "./ItemBaseSelector";
-import "./Item.css";
-import {ItemAffixRegex, ItemRegex, itemRegex} from "@poe/generated/GeneratedItemModsPOE1";
-import RareItemSelect, {RareModSelection} from "./RareItemSelect";
-import ModWarning from "./ModWarning";
-import {generateMagicItemRegex, generateRareItemRegex} from "./ItemOuput";
-import {defaultSettings, ItemCraftingSettings} from "@poe/utils/SavedSettings";
-import MagicItemSelect, {SelectedMagicMod} from "./MagicItemSelect";
-import InfoBanner from "@poe/components/InfoBanner/InfoBanner";
+import ItemBaseSelector, {Itembase} from "@shared/core/item/ItemBaseSelector";
+import RareItemSelect, {RareModSelection} from "@shared/core/item/RareItemSelect";
+import ModWarning from "@shared/core/item/ModWarning";
+import {generateMagicItemRegex, generateRareItemRegex} from "@shared/core/item/ItemOutput";
+import MagicItemSelect, {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
-import {basetypes} from "@poe/generated/GeneratedItemBasesPOE1";
-import {countWords} from "@shared/core/utils";
-import {haveSameLastWord} from "@shared/core/regex/NumberOfWordsRegex";
+import ItemInfoBanner from "@shared/components/item/ItemInfoBanner";
+import SimilarItemsInfo from "@shared/components/item/SimilarItemsInfo";
+import RareItemMatchSettings from "@shared/components/item/RareItemMatchSettings";
+import MagicItemMatchSettings from "@shared/components/item/MagicItemMatchSettings";
+import {ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import {findSimilarBases, groupAffixes} from "@shared/core/item/GroupUtils";
+import {ItemCraftingSettings} from "@shared/types/Settings.types";
+import "./Item.css";
 
 const Item = () => {
   const {globalProfile} = useContext(ProfileContext);
   const storedProfile = loadSettings(globalProfile);
   const favoritePage = useFavoritePage("items", storedProfile.itemCrafting);
   const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
-
-  const affixMap: Record<string, ItemAffixRegex> = Object.entries(itemRegex)
-    .flatMap(([basetype, item]) =>
-      item.categoryRegex.flatMap(cat =>
-        cat.modifiers.map(mod => ({
-          key: `${basetype}-${cat.category}-${mod.desc}`,
-          value: mod
-        }))
-      )
-    )
-    .reduce<Record<string, ItemAffixRegex>>((acc, {key, value}) => {
-      acc[key] = value;
-      return acc;
-    }, {});
-
   const [result, setResult] = useState<string>("");
+
+  const affixMap: Record<string, ItemAffixRegex> = groupAffixes(itemRegex);
+
   const [itembase, setItembase] = useState<Itembase | undefined>(profile.itemCrafting.itembase);
   const [matchSimilarBases, setMatchSimilarBases] = useState(profile.itemCrafting.matchSimilarBases);
   const [regexMods, setRegexMods] = useState<ItemRegex | undefined>(undefined);
@@ -60,11 +52,7 @@ const Item = () => {
   const onlyMagicBases = ["utility flasks"];
 
   const similarItems = matchSimilarBases && itembase ?
-    basetypes.find(b => b.name === itembase.baseType)?.items
-      .filter(item => countWords(item) === countWords(itembase.item))
-      .filter(item => countWords(item) === 1 || haveSameLastWord(item, itembase.item))
-      .filter(item => item !== itembase.item) ?? [] : [];
-
+    findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
 
   const currentSettings: ItemCraftingSettings = {
     itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
@@ -95,7 +83,7 @@ const Item = () => {
       setResult(generateRareItemRegex(affixMap, currentSettings));
     }
     if (itembase && itembase.rarity === "Magic") {
-      setResult(generateMagicItemRegex(currentSettings));
+      setResult(generateMagicItemRegex(currentSettings, basetypes));
     }
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({
       ...latest,
@@ -131,59 +119,26 @@ const Item = () => {
         setEnableCustomText={setEnableCustomText}
         enableBug={true}
       />
-      <InfoBanner>
-        <ul>
-          <li>Clusters are missing notables</li>
-          <li>Open prefix/suffix doesn't work for magic synth items</li>
-          <li>Magic items with influenced mods will match any tier of the influenced mod</li>
-          <li>Some ranges can be weird (the data is a bit weird)</li>
-        </ul>
-      </InfoBanner>
+      <ItemInfoBanner/>
 
-      <ItemBaseSelector itemBase={itembase} setItemBase={setItembase} nonMagicalBase={nonMagicalBase}
+      <ItemBaseSelector itemBase={itembase} basetypes={basetypes} setItemBase={setItembase}
+                        nonMagicalBase={nonMagicalBase}
                         onlyMagicBase={onlyMagicBase}/>
-      {itembase && <h2 className="item-selected-header">Selected: <span className={"item-" + itembase.rarity}>{itembase.item}</span></h2>}
+      {itembase && <h2 className="item-selected-header">Selected: <span
+          className={"item-" + itembase.rarity}>{itembase.item}</span></h2>}
       <Checkbox className="item-crafting-checkbox" label="Match similar item bases" value={matchSimilarBases}
                 onChange={setMatchSimilarBases}/>
-      {similarItems.length > 0 &&
-          <>
-              <div className="break"/>
-              <div className="similar-items-infobox">
-                  <b>Also matching</b>: {similarItems.join(", ")}
-              </div>
-          </>
-      }
+      <SimilarItemsInfo similarItems={similarItems}/>
       {regexMods && itembase?.rarity === "Rare" && <ModWarning itemRegex={regexMods}/>}
       <div className="break"/>
       {itembase && regexMods && itembase.rarity === "Rare" &&
           <div>
-              <div className="radio-button-modgroup">
-                  <input type="radio" className="radio-button-map" id="rare-mods-all" name="Match any rare mod"
-                         defaultChecked={!matchAnyMod && !matchPrefixAndSuffix}
-                         checked={!matchAnyMod && !matchPrefixAndSuffix}
-                         onChange={v => {
-                           setMatchAnyMod(false);
-                           setMatchPrefixAndSuffix(false);
-                         }}/>
-                  <label htmlFor="rare-mods-all" className="radio-button-map radio-first-ele">Match if only ALL mods are
-                      found</label>
-                  <input type="radio" id="rare-mods-any" name="Match all rare mods" defaultChecked={matchAnyMod}
-                         checked={matchAnyMod}
-                         onChange={v => {
-                           setMatchAnyMod(true);
-                           setMatchPrefixAndSuffix(false);
-                         }}/>
-                  <label htmlFor="rare-mods-any" className="radio-button-map">Match if ANY mod is found</label>
-                  <input type="radio" id="rare-mods-prefix-suffix" name="Match all rare mods"
-                         defaultChecked={matchPrefixAndSuffix}
-                         checked={matchPrefixAndSuffix}
-                         onChange={v => {
-                           setMatchPrefixAndSuffix(true);
-                           setMatchAnyMod(false);
-                         }}/>
-                  <label htmlFor="rare-mods-prefix-suffix" className="radio-button-map">Match at least 1 Prefix AND 1
-                      Suffix</label>
-              </div>
+              <RareItemMatchSettings
+                  matchAnyMod={matchAnyMod}
+                  setMatchAnyMod={setMatchAnyMod}
+                  matchPrefixAndSuffix={matchPrefixAndSuffix}
+                  setMatchPrefixAndSuffix={setMatchPrefixAndSuffix}
+              />
               <RareItemSelect
                   itemRegex={regexMods}
                   itembase={itembase}
@@ -196,43 +151,12 @@ const Item = () => {
       {
         itembase && regexMods && itembase.rarity === "Magic" &&
           <div>
-              <div className="radio-button-modgroup">
-                  <input type="radio" className="radio-button-map" id="magic-mods-default" name="Magic mod matching"
-                         defaultChecked={!onlyIfBothPrefixAndSuffix && !matchOpenAffix}
-                         checked={!onlyIfBothPrefixAndSuffix && !matchOpenAffix}
-                         onChange={v => {
-                           setOnlyIfBothPrefixAndSuffix(false);
-                           setMatchOpenAffix(false);
-                         }}/>
-                  <label htmlFor="magic-mods-default" className="radio-button-map radio-first-ele">Match if ANY mod is
-                      found</label>
-                  <input type="radio" id="magic-mods-both" name="Magic mod matching"
-                         defaultChecked={onlyIfBothPrefixAndSuffix && !matchOpenAffix}
-                         checked={onlyIfBothPrefixAndSuffix && !matchOpenAffix}
-                         onChange={v => {
-                           setOnlyIfBothPrefixAndSuffix(true);
-                           setMatchOpenAffix(false);
-                         }}/>
-                  <label htmlFor="magic-mods-both" className="radio-button-map">Match at least 1 Prefix AND 1
-                      Suffix</label>
-                  <input type="radio" id="magic-mods-open" name="Magic mod matching"
-                         defaultChecked={matchOpenAffix && !onlyIfBothPrefixAndSuffix}
-                         checked={matchOpenAffix && !onlyIfBothPrefixAndSuffix}
-                         onChange={v => {
-                           setOnlyIfBothPrefixAndSuffix(false);
-                           setMatchOpenAffix(true);
-                         }}/>
-                  <label htmlFor="magic-mods-open" className="radio-button-map">Match an open prefix or suffix</label>
-                  <input type="radio" id="magic-mods-open-and-correct-affix" name="Magic mod matching"
-                         defaultChecked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
-                         checked={matchOpenAffix && onlyIfBothPrefixAndSuffix}
-                         onChange={v => {
-                           setOnlyIfBothPrefixAndSuffix(true);
-                           setMatchOpenAffix(true);
-                         }}/>
-                  <label htmlFor="magic-mods-open-and-correct-affix" className="radio-button-map">Match both affixes,
-                      but allow for open prefix or suffix</label>
-              </div>
+              <MagicItemMatchSettings
+                  onlyIfBothPrefixAndSuffix={onlyIfBothPrefixAndSuffix}
+                  setOnlyIfBothPrefixAndSuffix={setOnlyIfBothPrefixAndSuffix}
+                  matchOpenAffix={matchOpenAffix}
+                  setMatchOpenAffix={setMatchOpenAffix}
+              />
               <MagicItemSelect
                   itemRegex={regexMods}
                   itembase={itembase}

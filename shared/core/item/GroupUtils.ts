@@ -1,4 +1,6 @@
-import {CategoryRegex} from "@poe/generated/GeneratedItemModsPOE1";
+import {BaseType, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import {countWords} from "@shared/core/utils";
+import {haveSameLastWord} from "@shared/core/regex/NumberOfWordsRegex";
 
 export const cleanCategoryName = (category: string): string => category
   .replace(RegExp("suffix_?"), "Suffix")
@@ -36,4 +38,27 @@ export function groupedCategory(categories: CategoryRegex[]): Record<string, Cat
     acc[key].push(category);
     return acc;
   }, {});
+}
+
+export function groupAffixes(itemRegex: Record<string, ItemRegex>): Record<string, ItemAffixRegex> {
+  return Object.entries(itemRegex)
+    .flatMap(([basetype, item]) =>
+      item.categoryRegex.flatMap(cat =>
+        cat.modifiers.map(mod => ({
+          key: `${basetype}-${cat.category}-${mod.desc}`,
+          value: mod
+        }))
+      )
+    )
+    .reduce<Record<string, ItemAffixRegex>>((acc, {key, value}) => {
+      acc[key] = value;
+      return acc;
+    }, {});
+}
+
+export function findSimilarBases(baseType: string, item: string, basetypes: BaseType[]): string[] {
+  return basetypes.find(b => b.name === baseType)?.items
+    .filter(bitem => countWords(bitem) === countWords(item))
+    .filter(bitem => countWords(bitem) === 1 || haveSameLastWord(bitem, item))
+    .filter(bitem => bitem !== item) ?? [];
 }

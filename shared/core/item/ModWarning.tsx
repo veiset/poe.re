@@ -1,5 +1,5 @@
-import {ItemRegex} from "@poe/generated/GeneratedItemModsPOE1";
 import Collapsable from "@poe/components/collapsable/Collapsable";
+import {ItemRegex} from "@shared/types/GeneratedItemMod.Types";
 
 interface ModWarningProps {
   itemRegex: ItemRegex

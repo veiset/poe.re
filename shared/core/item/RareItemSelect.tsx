@@ -1,7 +1,7 @@
-import {CategoryRegex, ItemAffixRegex, ItemRegex} from "@poe/generated/GeneratedItemModsPOE1";
 import {Itembase} from "./ItemBaseSelector";
 import classNames from "classnames";
-import {categoryOrder, cleanCategoryName, groupedCategory} from "./GroupUtils";
+import {categoryOrder, cleanCategoryName, groupedCategory} from "@shared/core/item/GroupUtils";
+import {CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
 
 export interface RateItemSelectProps {
   itemRegex: ItemRegex
