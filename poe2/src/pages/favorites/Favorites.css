@@ -16,7 +16,9 @@
 .poe2-favorite-actions button { width: 22px; height: 22px; padding: 0; }
 .poe2-favorite-copy-state { position: absolute; top: 8px; right: 52px; color: var(--color-text-copied); font-size: 17px; }
 .poe2-favorite-copy-state.error { color: var(--color-text-error); }
-.poe2-favorites-empty { width: min(520px, 100%); box-sizing: border-box; margin: 0; padding: 30px; border: 1px dashed var(--color-border-strong); text-align: center; }
+.poe2-favorites-empty { width: min(570px, 100%); box-sizing: border-box; margin: 0; padding: 30px; border: 1px dashed var(--color-border-strong); border-radius: 7px; color: var(--color-text-muted); text-align: center; background: transparent; }
+.poe2-favorites-empty-icon { color: #c6930a; font-size: 38px; }
+.poe2-favorites-empty a { color: var(--color-text-link); }
 .poe2-favorite-details-regex { max-height: 180px; overflow: auto; padding: 12px; border-radius: 4px; color: var(--color-text); background: var(--color-bg); font-family: ui-monospace, monospace; font-size: 13px; overflow-wrap: anywhere; white-space: pre-wrap; }
 .poe2-favorite-details-grid { display: grid; grid-template-columns: auto 1fr; gap: 7px 13px; margin: 14px 0; font-size: 13px; }
 .poe2-favorite-details-grid dt { color: var(--color-text-dim); }
