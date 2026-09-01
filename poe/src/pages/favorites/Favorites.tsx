@@ -9,6 +9,7 @@ import {FavoriteTagFilter} from "@shared/components/favorites/FavoriteTagFilter"
 import {useFavorites} from "@poe/core/favorites/FavoritesContext";
 import {FAVORITE_PAGE_REGISTRY} from "@poe/core/favorites/FavoritePageRegistry";
 import {FavoriteMetadata, FavoriteRecord} from "@poe/core/favorites/FavoriteTypes";
+import {restrictToViewportEdges} from "@shared/core/favorites/restrictToViewportEdges";
 import "./Favorites.css";
 
 interface DetailsDialogProps {
@@ -106,7 +107,7 @@ const Favorites = () => {
       <FavoriteTagFilter tags={allTags} selectedTags={selectedTags} onChange={setSelectedTags}/>
       {favorites.length === 0 ? <div className="favorites-empty"><div className="favorites-empty-icon">★</div><h2>No favorites yet</h2><p>Open a generator, configure a regex, then choose <strong>Favorite</strong> in the result bar.</p><Link to="/vendor">Create a vendor regex</Link></div>
         : visible.length === 0 ? <div className="favorites-empty"><p>No favorites match the selected tags.</p><button type="button" onClick={() => setSelectedTags([])}>Clear filters</button></div>
-        : <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={dragEnd}>
+        : <DndContext sensors={sensors} collisionDetection={closestCenter} modifiers={[restrictToViewportEdges]} onDragEnd={dragEnd}>
           <SortableContext items={visible.map((favorite) => favorite.id)} strategy={rectSortingStrategy}>
             <div className="favorites-grid">{visible.map((favorite) => {
               const index = favorites.findIndex((candidate) => candidate.id === favorite.id);
