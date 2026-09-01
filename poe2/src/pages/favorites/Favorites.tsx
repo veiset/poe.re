@@ -7,6 +7,7 @@ import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
 import {FavoriteCard} from "@shared/components/favorites/FavoriteCard";
 import {FavoriteTagFilter} from "@shared/components/favorites/FavoriteTagFilter";
 import {FavoriteMetadata} from "@shared/core/favorites/FavoriteTypes";
+import {restrictToViewportEdges} from "@shared/core/favorites/restrictToViewportEdges";
 import {useFavorites} from "../../FavoritesContext";
 import {FAVORITE_PAGE_REGISTRY} from "../../FavoritePageRegistry";
 import {Poe2FavoriteRecord} from "../../settings";
@@ -138,7 +139,7 @@ const Favorites = () => {
             <Link to="/vendor">Create a vendor regex</Link>
           </div>
         ) : (
-          <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={dragEnd}>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} modifiers={[restrictToViewportEdges]} onDragEnd={dragEnd}>
             <SortableContext items={visibleFavorites.map((favorite) => favorite.id)} strategy={rectSortingStrategy}>
               <div className="favorites-grid">
                 {visibleFavorites.map((favorite) => {
