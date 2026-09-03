@@ -1,7 +1,7 @@
 import {describe, expect, test} from "vitest";
 import {generateBoundedValueRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {generateRareItemRegex} from "./ItemOutput";
-import {ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {ItemAffixRegex} from "@shared/generated/item";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
 const itemBase = {
@@ -36,15 +36,10 @@ const settings = (values: Record<number, string>): ItemCraftingSettings => ({
 });
 
 const modifier = (overrides: Partial<ItemAffixRegex>): ItemAffixRegex => ({
-  desc: "Test modifier",
+  description: "Test modifier",
   regex: "damage$",
-  start: 0,
-  end: 0,
-  disabled: [],
-  before: [],
-  on: [],
-  after: [],
-  affixtype: "PREFIX",
+  regexPosition: {start: 0, end: 0, disabled: [], before: [], on: [], after: []},
+  affixType: "PREFIX",
   stats: [],
   affixes: [],
   ...overrides,
@@ -53,7 +48,7 @@ const modifier = (overrides: Partial<ItemAffixRegex>): ItemAffixRegex => ({
 describe("generateRareItemRegex", () => {
   test("uses each numeric placeholder's own maximum", () => {
     const affix = modifier({
-      before: [0, 1],
+      regexPosition: {start: 0, end: 0, disabled: [], before: [0, 1], on: [], after: []},
       stats: [
         {id: "high", min: 1, max: 71, numberIndex: 1, hasRange: true},
         {id: "low", min: 1, max: 4, numberIndex: 0, hasRange: true},
@@ -72,7 +67,7 @@ describe("generateRareItemRegex", () => {
 
   test("falls back safely when a placeholder has no stat metadata", () => {
     const affix = modifier({
-      before: [0, 1],
+      regexPosition: {start: 0, end: 0, disabled: [], before: [0, 1], on: [], after: []},
       stats: [
         {id: "chance", min: 5, max: 12, numberIndex: 0, hasRange: true},
       ],

@@ -1,13 +1,12 @@
 import React, {useContext, useEffect, useState} from "react";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings} from "../../settings";
-import {itemRegex} from "@poe2/generated/GeneratedItemModsPOE2";
-import {basetypes} from "@poe2/generated/GeneratedItemBasesPOE2";
 import {loadSettings, updateSettings} from "../../localStorage";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
 import {useFavoritePage} from "@poe2/useFavoritePage";
-import {ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {BaseType, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
+import {loadItemBasetypes, loadItemRegex} from "../../utils/loadData";
 import {findSimilarBases, groupAffixes} from "@shared/core/item/GroupUtils";
 import RareItemSelect, {RareModSelection} from "@shared/core/item/RareItemSelect";
 import MagicItemSelect, {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
@@ -26,6 +25,8 @@ export function Item() {
   const storedProfile = loadSettings(currentProfile);
   const favoritePage = useFavoritePage("item", storedProfile.itemCrafting);
   const [result, setResult] = useState("");
+  const [basetypes, setBasetypes] = useState<BaseType[]>([]);
+  const [itemRegex, setItemRegex] = useState<ItemRegex[]>([]);
   const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
 
   const affixMap: Record<string, ItemAffixRegex> = groupAffixes(itemRegex);
@@ -50,6 +51,13 @@ export function Item() {
   const nonMagicBases = ["heist"];
   const onlyMagicBases = ["utility flasks"];
 
+  useEffect(() => {
+    Promise.all([loadItemBasetypes(), loadItemRegex()]).then(([bases, regex]) => {
+      setBasetypes(bases);
+      setItemRegex(regex);
+    });
+  }, []);
+
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
 
@@ -62,7 +70,7 @@ export function Item() {
 
   useEffect(() => {
     if (itembase) {
-      setRegexMods(itemRegex[itembase.baseType]);
+      setRegexMods(itemRegex.find((entry) => entry.basetype === itembase.baseType));
       const nonMagicalType = nonMagicBases.some((e) => itembase?.baseType.toLowerCase().includes(e.toLowerCase()));
       setNonMagicalBase(nonMagicalType);
       if (nonMagicalType && itembase.rarity === "Magic") {
@@ -75,7 +83,7 @@ export function Item() {
         setItembase({...itembase, rarity: "Magic"});
       }
     }
-  }, [itembase]);
+  }, [itembase, itemRegex]);
 
   useEffect(() => {
     if (itembase && itembase.rarity === "Rare") {
@@ -88,7 +96,7 @@ export function Item() {
       ...latest,
       itemCrafting: currentSettings
     }));
-  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases]);
+  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases, itemRegex, basetypes]);
 
   return (<>
       <Poe2Header text={"Item"}/>

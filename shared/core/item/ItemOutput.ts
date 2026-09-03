@@ -4,7 +4,7 @@ import {countWords} from "@shared/core/utils";
 import {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import {Itembase} from "@shared/core/item/ItemBaseSelector";
 import {wordRegex} from "@shared/core/regex/NumberOfWordsRegex";
-import {AffixStat, BaseType, ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {AffixStat, BaseType, ItemAffixRegex} from "@shared/generated/item";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
 type RareModSelectionEntry = {
@@ -48,7 +48,7 @@ function itemGenericMatch(itembase: Itembase, basetypes: BaseType[]) {
   }
 
   const similarItems = basetypes
-    .find(b => b.name === itembase.baseType)?.items
+    .find(b => b.base === itembase.baseType)?.item
     .filter(item => countWords(item) === 1) ?? [];
   return similarItems.length > 1 ? `(${similarItems.join("|")})` : itembase.item;
 }
@@ -60,8 +60,9 @@ function generateRegexAffixes(
   const selectedMods: SelectedMagicMod[] = settings.selectedMagicMods;
   const mods = selectedMods.filter((e) => e.basetype === itemBase.baseType);
 
-  const prefixes = mods.filter((e) => e.affix === "PREFIX").map((e) => e.regex.desc);
-  const suffixes = mods.filter((e) => e.affix === "SUFFIX").map((e) => e.regex.desc);
+  const affixDescription = (mod: SelectedMagicMod) => mod.regex.description ?? mod.regex.desc ?? mod.desc;
+  const prefixes = mods.filter((e) => e.affix === "PREFIX").map(affixDescription);
+  const suffixes = mods.filter((e) => e.affix === "SUFFIX").map(affixDescription);
 
   if (!settings.magicSettings.matchOpenAffix && !settings.magicSettings.onlyIfBothPrefixAndSuffix) {
     const prefixMatch = prefixes.length > 0 ? prefixes.map((e) => `^${e}`) : [];
@@ -104,7 +105,7 @@ export function generateRareItemRegex(
     .filter((e) => e.value.selected)
     .filter((e) => e.key.startsWith(itemBase.baseType))
     .map((e) => {
-      const rangeInRegex = e.regex.on[0];
+      const rangeInRegex = e.regex.regexPosition.on[0];
       const hasRangeInsideRegex = rangeInRegex !== undefined
         && e.value.values[rangeInRegex] !== ""
         && e.value.values[rangeInRegex] !== undefined;
@@ -115,7 +116,7 @@ export function generateRareItemRegex(
             boundedValueRegex(e.value.values[rangeInRegex], rangeInRegex, e.regex.stats) + "[^ ]+"
           )
         : e.regex.regex;
-      const numbersBefore = e.regex.before
+      const numbersBefore = e.regex.regexPosition.before
         .flatMap((numberIndex) => {
           const value = e.value.values[numberIndex];
           return value !== undefined && value !== ""
@@ -123,7 +124,7 @@ export function generateRareItemRegex(
             : [];
         })
         .join(".*");
-      const numbersAfter = e.regex.after
+      const numbersAfter = e.regex.regexPosition.after
         .flatMap((numberIndex) => {
           const value = e.value.values[numberIndex];
           return value !== undefined && value !== ""
@@ -138,7 +139,7 @@ export function generateRareItemRegex(
 
       return {
         str: regexStr,
-        affixtype: e.regex.affixtype
+        affixtype: e.regex.affixType
       };
     });
 

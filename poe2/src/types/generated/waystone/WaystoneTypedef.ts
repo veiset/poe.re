@@ -4,4 +4,4 @@ export interface WaystoneOption {
   prefix: boolean;
   tags: string[];
 }
-export type WaystoneRegex = RegexResult<WaystoneOption>
+export type WaystoneRegex = RegexResult<WaystoneOption>;

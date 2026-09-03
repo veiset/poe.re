@@ -1,4 +1,4 @@
-import {BaseType, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {BaseType, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
 import {countWords} from "@shared/core/utils";
 import {haveSameLastWord} from "@shared/core/regex/NumberOfWordsRegex";
 
@@ -26,12 +26,12 @@ export const categoryOrder = (a: CategoryRegex, b: CategoryRegex) => {
     const name = group.replace(RegExp("(prefix|suffix)_?"), "");
     return priorityMap[name] ?? Infinity;
   };
-  return getPriority(a.category) - getPriority(b.category);
+  return getPriority(a.modCategory) - getPriority(b.modCategory);
 };
 
 export function groupedCategory(categories: CategoryRegex[]): Record<string, CategoryRegex[]> {
   return categories.reduce<Record<string, CategoryRegex[]>>((acc, category) => {
-    const key = category.category.replace(RegExp("(suffix|prefix)_?"), "");
+    const key = category.modCategory.replace(RegExp("(suffix|prefix)_?"), "");
     if (!acc[key]) {
       acc[key] = [];
     }
@@ -40,12 +40,12 @@ export function groupedCategory(categories: CategoryRegex[]): Record<string, Cat
   }, {});
 }
 
-export function groupAffixes(itemRegex: Record<string, ItemRegex>): Record<string, ItemAffixRegex> {
-  return Object.entries(itemRegex)
-    .flatMap(([basetype, item]) =>
-      item.categoryRegex.flatMap(cat =>
+export function groupAffixes(itemRegex: ItemRegex[]): Record<string, ItemAffixRegex> {
+  return itemRegex
+    .flatMap(item =>
+      item.itemRegexForCategory.flatMap(cat =>
         cat.modifiers.map(mod => ({
-          key: `${basetype}-${cat.category}-${mod.desc}`,
+          key: `${item.basetype}-${cat.modCategory}-${mod.description}`,
           value: mod
         }))
       )
@@ -57,7 +57,7 @@ export function groupAffixes(itemRegex: Record<string, ItemRegex>): Record<strin
 }
 
 export function findSimilarBases(baseType: string, item: string, basetypes: BaseType[]): string[] {
-  return basetypes.find(b => b.name === baseType)?.items
+  return basetypes.find(b => b.base === baseType)?.item
     .filter(bitem => countWords(bitem) === countWords(item))
     .filter(bitem => countWords(bitem) === 1 || haveSameLastWord(bitem, item))
     .filter(bitem => bitem !== item) ?? [];

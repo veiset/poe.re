@@ -3,4 +3,4 @@ export interface TabletOption {
   prefix: boolean;
   tags: string[];
 }
-export type TabletRegex = RegexResult<TabletOption>
+export type TabletRegex = RegexResult<TabletOption>;

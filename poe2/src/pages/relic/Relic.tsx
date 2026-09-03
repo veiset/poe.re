@@ -3,7 +3,8 @@ import {loadSettings, saveSettings, setSelectedProfile} from "../../localStorage
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings, SelectOption, Settings} from "../../settings";
 import {SelectList} from "@poe2/components/SelectList";
-import {relicRegex} from "../../generated/Relic.Gen";
+import {loadRelicRegex} from "../../utils/loadData";
+import type {RelicRegex} from "@poe2/types/generated/relic";
 import {generateRelicResult} from "./RelicResult";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
@@ -16,6 +17,11 @@ export function Relic() {
   const favoritePage = useFavoritePage("relic", globalSettings.relic);
   const [settings, setSettings] = useState<Settings["relic"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
+  const [relicRegex, setRelicRegex] = useState<RelicRegex[]>([]);
+
+  useEffect(() => {
+    loadRelicRegex().then(setRelicRegex);
+  }, []);
 
   const prefixes: SelectOption[] = relicRegex
     .filter((e) => e.affix === "PREFIX")
