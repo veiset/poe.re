@@ -60,9 +60,8 @@ function generateRegexAffixes(
   const selectedMods: SelectedMagicMod[] = settings.selectedMagicMods;
   const mods = selectedMods.filter((e) => e.basetype === itemBase.baseType);
 
-  const affixDescription = (mod: SelectedMagicMod) => mod.regex.desc ?? mod.desc;
-  const prefixes = mods.filter((e) => e.affix === "PREFIX").map(affixDescription);
-  const suffixes = mods.filter((e) => e.affix === "SUFFIX").map(affixDescription);
+  const prefixes = mods.filter((e) => e.affix === "PREFIX").map((e) => e.regex.desc);
+  const suffixes = mods.filter((e) => e.affix === "SUFFIX").map((e) => e.regex.desc);
 
   if (!settings.magicSettings.matchOpenAffix && !settings.magicSettings.onlyIfBothPrefixAndSuffix) {
     const prefixMatch = prefixes.length > 0 ? prefixes.map((e) => `^${e}`) : [];
