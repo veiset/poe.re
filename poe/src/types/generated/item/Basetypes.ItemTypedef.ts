@@ -1,6 +1,6 @@
 export interface ItemBase {
-  base: string;
-  item: Array<string>;
+  items: Array<string>;
+  name: string;
 }
 
 export type ItemBasetypes = Array<ItemBase>;

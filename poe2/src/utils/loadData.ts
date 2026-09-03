@@ -1,4 +1,4 @@
-import type {ItemBasetype, ItemRegexForBasetype as ItemRegex} from "@poe2/types/generated/item";
+import type {ItemBase as ItemBasetype, LegacyItemRegex as ItemRegex} from "@poe2/types/generated/item";
 import type {RelicRegex} from "@poe2/types/generated/relic";
 import type {Token} from "@poe2/types/generated/tablet";
 import {ParsedAffix, parseAffixToken} from "./parseAffixToken";

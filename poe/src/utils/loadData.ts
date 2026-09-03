@@ -1,4 +1,4 @@
-import type {ItemBase, ItemRegexForBasetype as ItemRegex} from "@poe/types/generated/item";
+import type {ItemBase, LegacyItemRegex as ItemRegex} from "@poe/types/generated/item";
 
 const basePath = "/generated";
 

@@ -1,41 +1,34 @@
-export interface ItemRegexForBasetype {
+export interface LegacyItemRegex {
   basetype: string;
-  itemRegexForCategory: Array<ItemRegexForCategory>;
+  categoryRegex: Array<LegacyCategoryRegex>;
 }
 
-export interface ItemRegexForCategory {
-  baseitems: Array<string>;
-  modCategory: string;
-  modifiers: Array<ItemAffixRegex>;
+export interface LegacyCategoryRegex {
+  category: string;
+  modifiers: Array<LegacyItemAffixRegex>;
   warnings: Array<string>;
 }
 
-export interface ItemAffixRegex {
-  affixType: AffixType;
-  affixes: Array<Affix>;
-  description: string;
-  regex: string;
-  regexPosition: RegexPosition;
-  stats: Array<Stat>;
-}
-
-export type AffixType = "PREFIX" | "SUFFIX";
-
-export interface Affix {
-  description: string;
-  name: string;
-}
-
-export interface RegexPosition {
+export interface LegacyItemAffixRegex {
+  affixes: Array<LegacyAffix>;
+  affixtype: string;
   after: Array<number>;
   before: Array<number>;
+  desc: string;
   disabled: Array<number>;
   end: number;
   on: Array<number>;
+  regex: string;
   start: number;
+  stats: Array<LegacyStat>;
 }
 
-export interface Stat {
+export interface LegacyAffix {
+  desc: string;
+  name: string;
+}
+
+export interface LegacyStat {
   hasRange: boolean;
   id: string;
   max: number;
@@ -43,4 +36,4 @@ export interface Stat {
   numberIndex?: number | null;
 }
 
-export type ItemGenerated = Array<ItemRegexForBasetype>;
+export type ItemGenerated = Array<LegacyItemRegex>;

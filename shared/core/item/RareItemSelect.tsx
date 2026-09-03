@@ -23,7 +23,7 @@ const RareItemSelect = (props: RateItemSelectProps) => {
 
   const {itemRegex, selected, setSelected, itembase, displayTiers} = props;
 
-  const filteredCategories: CategoryRegex[] = itemRegex.itemRegexForCategory
+  const filteredCategories: CategoryRegex[] = itemRegex.categoryRegex
   const groupedCategories = groupedCategory(filteredCategories);
 
   return (<>
@@ -35,9 +35,9 @@ const RareItemSelect = (props: RateItemSelectProps) => {
 
         return (<div className="rare-mod-group full-size row">
           <div className="eq-col-2">
-            <h2>{cleanCategoryName(prefix.modCategory)}</h2>
+            <h2>{cleanCategoryName(prefix.category)}</h2>
             {prefix.modifiers.map((mod) => {
-              const id = itemRegex.basetype + "-" + prefix.modCategory + "-" + mod.description;
+              const id = itemRegex.basetype + "-" + prefix.category + "-" + mod.desc;
               return <RareMod
                 displayTiers={displayTiers}
                 itembase={itembase}
@@ -48,9 +48,9 @@ const RareItemSelect = (props: RateItemSelectProps) => {
             })}
           </div>
           {suffix && <div className="eq-col-2">
-              <h2>{cleanCategoryName(suffix.modCategory)}</h2>
+              <h2>{cleanCategoryName(suffix.category)}</h2>
             {suffix.modifiers.map((mod) => {
-              const id = itemRegex.basetype + "-" + suffix.modCategory + "-" + mod.description;
+              const id = itemRegex.basetype + "-" + suffix.category + "-" + mod.desc;
               return <RareMod
                 displayTiers={displayTiers}
                 itembase={itembase}
@@ -99,11 +99,11 @@ const RareMod = (props: RareModProps) => {
       const updatedValue = {...selected[id] ?? defaultState, selected: !data.selected, itembase};
       setSelected({...selected, [id]: updatedValue});
     }}>
-    {!hasRange ? <span>{regexInfo.description}</span> :
-      regexInfo.description.replace("|", " • ").split("#").map((e, index) => {
+    {!hasRange ? <span>{regexInfo.desc}</span> :
+      regexInfo.desc.replace("|", " • ").split("#").map((e, index) => {
         const range = regexInfo.stats[index] ?? {id: index, min: '#', max: '#', numberIndex: index, hasRange: false}
 
-        if (regexInfo.regexPosition.before.includes(index) || regexInfo.regexPosition.after.includes(index) || regexInfo.regexPosition.on.includes(index)) {
+        if (regexInfo.before.includes(index) || regexInfo.after.includes(index) || regexInfo.on.includes(index)) {
           return (
             <span key={id + index}>
               <span>{e}</span><input
@@ -119,7 +119,7 @@ const RareMod = (props: RareModProps) => {
                 setSelected({...selected, [id]: updatedValue});
               }}/>
             </span>)
-        } else if (regexInfo.regexPosition.disabled.includes(index)) {
+        } else if (regexInfo.disabled.includes(index)) {
           return (
             <span key={e + index}>
               {e}<span className="mod-no-select-input">{range.min}-{range.max}</span>

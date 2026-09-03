@@ -1,7 +1,7 @@
 [
     {
-        "base": "Daggers",
-        "item": [
+        "name": "Daggers",
+        "items": [
             "Glass Shank",
             "Crone Knife",
             "Simple Dagger",
@@ -18,8 +18,8 @@
         ]
     },
     {
-        "base": "Hidden Items",
-        "item": [
+        "name": "Hidden Items",
+        "items": [
             "Random One Handed Sword",
             "Random Two Handed Sword",
             "Random One Handed Axe",
@@ -53,14 +53,14 @@
         ]
     },
     {
-        "base": "Fishing Rods",
-        "item": [
+        "name": "Fishing Rods",
+        "items": [
             "Fishing Rod"
         ]
     },
     {
-        "base": "Sceptres",
-        "item": [
+        "name": "Sceptres",
+        "items": [
             "Rattling Sceptre",
             "Stoic Sceptre",
             "Lupine Sceptre",
@@ -77,8 +77,8 @@
         ]
     },
     {
-        "base": "Flails",
-        "item": [
+        "name": "Flails",
+        "items": [
             "Splintered Flail",
             "Chain Flail",
             "Holy Flail",
@@ -95,8 +95,8 @@
         ]
     },
     {
-        "base": "Traps",
-        "item": [
+        "name": "Traps",
+        "items": [
             "Clay Trap",
             "Clamping Trap",
             "Shrapnel Trap",
@@ -113,8 +113,8 @@
         ]
     },
     {
-        "base": "Gloves",
-        "item": [
+        "name": "Gloves",
+        "items": [
             "Golden Bracers",
             "Stocky Mitts",
             "Riveted Mitts",
@@ -210,8 +210,8 @@
         ]
     },
     {
-        "base": "Staves",
-        "item": [
+        "name": "Staves",
+        "items": [
             "Ashen Staff",
             "Pyrophyte Staff",
             "Gelid Staff",
@@ -232,8 +232,8 @@
         ]
     },
     {
-        "base": "Bows",
-        "item": [
+        "name": "Bows",
+        "items": [
             "Crude Bow",
             "Shortbow",
             "Warden Bow",
@@ -264,8 +264,8 @@
         ]
     },
     {
-        "base": "Rings",
-        "item": [
+        "name": "Rings",
+        "items": [
             "Golden Hoop",
             "Iron Ring",
             "Lazuli Ring",
@@ -296,8 +296,8 @@
         ]
     },
     {
-        "base": "One Hand Swords",
-        "item": [
+        "name": "One Hand Swords",
+        "items": [
             "Golden Blade",
             "Energy Blade",
             "Shortsword",
@@ -316,8 +316,8 @@
         ]
     },
     {
-        "base": "Shields",
-        "item": [
+        "name": "Shields",
+        "items": [
             "Golden Flame",
             "Splintered Tower Shield",
             "Painted Tower Shield",
@@ -390,8 +390,8 @@
         ]
     },
     {
-        "base": "Memories",
-        "item": [
+        "name": "Memories",
+        "items": [
             "Kirac's Memory",
             "Alva's Memory",
             "Niko's Memory",
@@ -399,8 +399,8 @@
         ]
     },
     {
-        "base": "Charms",
-        "item": [
+        "name": "Charms",
+        "items": [
             "Thawing Charm",
             "Staunching Charm",
             "Antidote Charm",
@@ -417,8 +417,8 @@
         ]
     },
     {
-        "base": "Spears",
-        "item": [
+        "name": "Spears",
+        "items": [
             "Hardwood Spear",
             "Ironhead Spear",
             "Hunting Spear",
@@ -450,8 +450,8 @@
         ]
     },
     {
-        "base": "Wands",
-        "item": [
+        "name": "Wands",
+        "items": [
             "Withered Wand",
             "Primordial Wand",
             "Bone Wand",
@@ -470,8 +470,8 @@
         ]
     },
     {
-        "base": "Quivers",
-        "item": [
+        "name": "Quivers",
+        "items": [
             "Broadhead Quiver",
             "Fire Quiver",
             "Sacral Quiver",
@@ -486,8 +486,8 @@
         ]
     },
     {
-        "base": "Two Hand Axes",
-        "item": [
+        "name": "Two Hand Axes",
+        "items": [
             "Splitting Greataxe",
             "Light Halberd",
             "Executioner Greataxe",
@@ -504,8 +504,8 @@
         ]
     },
     {
-        "base": "Heist Cloaks",
-        "item": [
+        "name": "Heist Cloaks",
+        "items": [
             "Torn Cloak",
             "Tattered Cloak",
             "Hooded Cloak",
@@ -513,8 +513,8 @@
         ]
     },
     {
-        "base": "Foci",
-        "item": [
+        "name": "Foci",
+        "items": [
             "Twig Focus",
             "Woven Focus",
             "Antler Focus",
@@ -541,8 +541,8 @@
         ]
     },
     {
-        "base": "Relics",
-        "item": [
+        "name": "Relics",
+        "items": [
             "Urn Relic",
             "Seal Relic",
             "Amphora Relic",
@@ -553,14 +553,14 @@
         ]
     },
     {
-        "base": "Inscribed Ultimatum",
-        "item": [
+        "name": "Inscribed Ultimatum",
+        "items": [
             "Inscribed Ultimatum"
         ]
     },
     {
-        "base": "Claws",
-        "item": [
+        "name": "Claws",
+        "items": [
             "Crude Claw",
             "Pict Claw",
             "Wolfbone Claw",
@@ -577,8 +577,8 @@
         ]
     },
     {
-        "base": "Two Hand Swords",
-        "item": [
+        "name": "Two Hand Swords",
+        "items": [
             "Keyblade",
             "Energy Blade",
             "Corroded Longsword",
@@ -597,8 +597,8 @@
         ]
     },
     {
-        "base": "Helmets",
-        "item": [
+        "name": "Helmets",
+        "items": [
             "Golden Wreath",
             "Golden Visage",
             "Rusted Greathelm",
@@ -718,8 +718,8 @@
         ]
     },
     {
-        "base": "Jewels",
-        "item": [
+        "name": "Jewels",
+        "items": [
             "Ruby",
             "Emerald",
             "Sapphire",
@@ -727,8 +727,8 @@
         ]
     },
     {
-        "base": "Quarterstaves",
-        "item": [
+        "name": "Quarterstaves",
+        "items": [
             "Wrapped Quarterstaff",
             "Long Quarterstaff",
             "Gothic Quarterstaff",
@@ -760,8 +760,8 @@
         ]
     },
     {
-        "base": "Blueprints",
-        "item": [
+        "name": "Blueprints",
+        "items": [
             "Blueprint: Bunker",
             "Blueprint: Smuggler's Den",
             "Blueprint: Laboratory",
@@ -774,8 +774,8 @@
         ]
     },
     {
-        "base": "Crossbows",
-        "item": [
+        "name": "Crossbows",
+        "items": [
             "Makeshift Crossbow",
             "Tense Crossbow",
             "Sturdy Crossbow",
@@ -806,14 +806,14 @@
         ]
     },
     {
-        "base": "Sentinels",
-        "item": [
+        "name": "Sentinels",
+        "items": [
             "Verisium Sentry"
         ]
     },
     {
-        "base": "One Hand Maces",
-        "item": [
+        "name": "One Hand Maces",
+        "items": [
             "Wooden Club",
             "Smithing Hammer",
             "Slim Mace",
@@ -844,8 +844,8 @@
         ]
     },
     {
-        "base": "Body Armours",
-        "item": [
+        "name": "Body Armours",
+        "items": [
             "Golden Mantle",
             "Rusted Cuirass",
             "Fur Plate",
@@ -1002,8 +1002,8 @@
         ]
     },
     {
-        "base": "Two Hand Maces",
-        "item": [
+        "name": "Two Hand Maces",
+        "items": [
             "Felled Greatclub",
             "Oak Greathammer",
             "Forge Maul",
@@ -1034,8 +1034,8 @@
         ]
     },
     {
-        "base": "Talismans",
-        "item": [
+        "name": "Talismans",
+        "items": [
             "Changeling Talisman",
             "Nettle Talisman",
             "Cinderbark Talisman",
@@ -1064,8 +1064,8 @@
         ]
     },
     {
-        "base": "Bucklers",
-        "item": [
+        "name": "Bucklers",
+        "items": [
             "Leather Buckler",
             "Wooden Buckler",
             "Plated Buckler",
@@ -1091,8 +1091,8 @@
         ]
     },
     {
-        "base": "Tablet",
-        "item": [
+        "name": "Tablet",
+        "items": [
             "Breach Tablet",
             "Expedition Tablet",
             "Delirium Tablet",
@@ -1104,8 +1104,8 @@
         ]
     },
     {
-        "base": "Contracts",
-        "item": [
+        "name": "Contracts",
+        "items": [
             "Contract: Bunker",
             "Contract: Smuggler's Den",
             "Contract: Laboratory",
@@ -1118,8 +1118,8 @@
         ]
     },
     {
-        "base": "Heist Brooches",
-        "item": [
+        "name": "Heist Brooches",
+        "items": [
             "Silver Brooch",
             "Golden Brooch",
             "Enamel Brooch",
@@ -1127,8 +1127,8 @@
         ]
     },
     {
-        "base": "Heist Gear",
-        "item": [
+        "name": "Heist Gear",
+        "items": [
             "Rough Sharpening Stone",
             "Standard Sharpening Stone",
             "Fine Sharpening Stone",
@@ -1144,8 +1144,8 @@
         ]
     },
     {
-        "base": "Mana Flasks",
-        "item": [
+        "name": "Mana Flasks",
+        "items": [
             "Lesser Mana Flask",
             "Medium Mana Flask",
             "Greater Mana Flask",
@@ -1158,8 +1158,8 @@
         ]
     },
     {
-        "base": "Heist Tools",
-        "item": [
+        "name": "Heist Tools",
+        "items": [
             "Simple Lockpick",
             "Standard Lockpick",
             "Fine Lockpick",
@@ -1199,8 +1199,8 @@
         ]
     },
     {
-        "base": "One Hand Axes",
-        "item": [
+        "name": "One Hand Axes",
+        "items": [
             "Dull Hatchet",
             "Hook Axe",
             "Bearded Axe",
@@ -1217,8 +1217,8 @@
         ]
     },
     {
-        "base": "Boots",
-        "item": [
+        "name": "Boots",
+        "items": [
             "Golden Caligae",
             "Rough Greaves",
             "Iron Greaves",
@@ -1313,8 +1313,8 @@
         ]
     },
     {
-        "base": "Belts",
-        "item": [
+        "name": "Belts",
+        "items": [
             "Golden Obi",
             "Rawhide Belt",
             "Linen Belt",
@@ -1334,8 +1334,8 @@
         ]
     },
     {
-        "base": "Amulets",
-        "item": [
+        "name": "Amulets",
+        "items": [
             "Crimson Amulet",
             "Azure Amulet",
             "Amber Amulet",
@@ -1361,8 +1361,8 @@
         ]
     },
     {
-        "base": "Life Flasks",
-        "item": [
+        "name": "Life Flasks",
+        "items": [
             "Lesser Life Flask",
             "Medium Life Flask",
             "Greater Life Flask",
@@ -1375,8 +1375,8 @@
         ]
     },
     {
-        "base": "Misc Map Items",
-        "item": [
+        "name": "Misc Map Items",
+        "items": [
             "Maven's Invitation: The Formed",
             "Maven's Invitation: The Twisted",
             "Maven's Invitation: The Forgotten",

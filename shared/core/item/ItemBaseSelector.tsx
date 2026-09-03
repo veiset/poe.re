@@ -23,7 +23,7 @@ interface ItemBaseSelectorProps {
 const ItemBaseSelector = (props: ItemBaseSelectorProps) => {
   const {setItemBase, itemBase, nonMagicalBase, onlyMagicBase, basetypes} = props;
   const search = basetypes.flatMap((base) =>
-    base.item.map((item) => `${base.base} - ${item}`)
+    base.items.map((item) => `${base.name} - ${item}`)
   ).map((e, index) => ({
     id: index,
     name: e

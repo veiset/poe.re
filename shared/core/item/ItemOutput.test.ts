@@ -36,10 +36,10 @@ const settings = (values: Record<number, string>): ItemCraftingSettings => ({
 });
 
 const modifier = (overrides: Partial<ItemAffixRegex>): ItemAffixRegex => ({
-  description: "Test modifier",
+  desc: "Test modifier",
   regex: "damage$",
-  regexPosition: {start: 0, end: 0, disabled: [], before: [], on: [], after: []},
-  affixType: "PREFIX",
+  start: 0, end: 0, disabled: [], before: [], on: [], after: [],
+  affixtype: "PREFIX",
   stats: [],
   affixes: [],
   ...overrides,
@@ -48,7 +48,7 @@ const modifier = (overrides: Partial<ItemAffixRegex>): ItemAffixRegex => ({
 describe("generateRareItemRegex", () => {
   test("uses each numeric placeholder's own maximum", () => {
     const affix = modifier({
-      regexPosition: {start: 0, end: 0, disabled: [], before: [0, 1], on: [], after: []},
+      before: [0, 1],
       stats: [
         {id: "high", min: 1, max: 71, numberIndex: 1, hasRange: true},
         {id: "low", min: 1, max: 4, numberIndex: 0, hasRange: true},
@@ -67,7 +67,7 @@ describe("generateRareItemRegex", () => {
 
   test("falls back safely when a placeholder has no stat metadata", () => {
     const affix = modifier({
-      regexPosition: {start: 0, end: 0, disabled: [], before: [0, 1], on: [], after: []},
+      before: [0, 1],
       stats: [
         {id: "chance", min: 5, max: 12, numberIndex: 0, hasRange: true},
       ],

@@ -26,12 +26,12 @@ export const categoryOrder = (a: CategoryRegex, b: CategoryRegex) => {
     const name = group.replace(RegExp("(prefix|suffix)_?"), "");
     return priorityMap[name] ?? Infinity;
   };
-  return getPriority(a.modCategory) - getPriority(b.modCategory);
+  return getPriority(a.category) - getPriority(b.category);
 };
 
 export function groupedCategory(categories: CategoryRegex[]): Record<string, CategoryRegex[]> {
   return categories.reduce<Record<string, CategoryRegex[]>>((acc, category) => {
-    const key = category.modCategory.replace(RegExp("(suffix|prefix)_?"), "");
+    const key = category.category.replace(RegExp("(suffix|prefix)_?"), "");
     if (!acc[key]) {
       acc[key] = [];
     }
@@ -43,9 +43,9 @@ export function groupedCategory(categories: CategoryRegex[]): Record<string, Cat
 export function groupAffixes(itemRegex: ItemRegex[]): Record<string, ItemAffixRegex> {
   return itemRegex
     .flatMap(item =>
-      item.itemRegexForCategory.flatMap(cat =>
+      item.categoryRegex.flatMap(cat =>
         cat.modifiers.map(mod => ({
-          key: `${item.basetype}-${cat.modCategory}-${mod.description}`,
+          key: `${item.basetype}-${cat.category}-${mod.desc}`,
           value: mod
         }))
       )
@@ -57,7 +57,7 @@ export function groupAffixes(itemRegex: ItemRegex[]): Record<string, ItemAffixRe
 }
 
 export function findSimilarBases(baseType: string, item: string, basetypes: BaseType[]): string[] {
-  return basetypes.find(b => b.base === baseType)?.item
+  return basetypes.find(b => b.name === baseType)?.items
     .filter(bitem => countWords(bitem) === countWords(item))
     .filter(bitem => countWords(bitem) === 1 || haveSameLastWord(bitem, item))
     .filter(bitem => bitem !== item) ?? [];

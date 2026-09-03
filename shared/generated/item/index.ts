@@ -1,13 +1,11 @@
 export interface BaseType {
-  base: string
-  item: string[]
+  name: string
+  items: string[]
 }
 
 export interface Affix {
   name: string
-  description: string
-  /** Retained for item selections saved before the JSON migration. */
-  desc?: string
+  desc: string
 }
 
 export interface AffixStat {
@@ -19,30 +17,26 @@ export interface AffixStat {
 }
 
 export interface ItemAffixRegex {
-  description: string,
+  desc: string,
   regex: string,
-  regexPosition: RegexPosition
-  affixType: "PREFIX" | "SUFFIX"
-  stats: AffixStat[]
-  affixes: Affix[]
-}
-
-export interface RegexPosition {
   start: number
   end: number
   disabled: number[]
   before: number[]
   on: number[]
   after: number[]
+  affixtype: string
+  stats: AffixStat[]
+  affixes: Affix[]
 }
 
 export interface CategoryRegex {
-  modCategory: string,
+  category: string,
   warnings: string[],
   modifiers: ItemAffixRegex[]
 }
 
 export interface ItemRegex {
   basetype: string,
-  itemRegexForCategory: CategoryRegex[]
+  categoryRegex: CategoryRegex[]
 }
