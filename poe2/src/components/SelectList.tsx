@@ -11,7 +11,7 @@ interface SelectElementProps {
 
 export function SelectElement(props: SelectElementProps) {
   const {name, ranges, current, selected, setSelected} = props;
-  const hasRange = name.startsWith("##%") && ranges.length > 0 && ranges[0][0] > 0;
+  const hasRange = name.includes("#") && ranges[0]?.length >= 2;
   const displayName = name
     .replace(/\|/g, " • ");
 
@@ -35,7 +35,7 @@ export function SelectElement(props: SelectElementProps) {
           .filter((e) => e.name !== name)
           .concat({...current, isSelected: !current.isSelected}))
       }>
-        {hasRange && displayName.replace(/##/, "")}
+        {hasRange && displayName.replace("#", "")}
         {!hasRange && displayName.replace(/##/g, "#")}
       </span>
     </div>

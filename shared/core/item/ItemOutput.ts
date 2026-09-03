@@ -99,7 +99,8 @@ export function generateRareItemRegex(
   if (!itemBase) return "";
 
   const mods: RareModSelectionEntry[] = Object.entries(selectedMods)
-    .map(([key, value]) => ({key, value, regex: affixMap[key]}));
+    .map(([key, value]) => ({key, value, regex: affixMap[key]}))
+    .filter((entry): entry is RareModSelectionEntry => entry.regex !== undefined);
 
   const result = mods
     .filter((e) => e.value.selected)
