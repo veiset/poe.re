@@ -25,7 +25,7 @@ export interface ItemAffixRegex {
   before: number[]
   on: number[]
   after: number[]
-  affixtype: string
+  affixtype: "PREFIX" | "SUFFIX"
   stats: AffixStat[]
   affixes: Affix[]
 }
