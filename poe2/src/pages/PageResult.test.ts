@@ -228,4 +228,22 @@ describe("poe2 generateRelicResult", () => {
     });
     expect(generateRelicResult(s)).toBe(`"ms" "eac"`);
   });
+
+  test("places a numeric relic filter on the correct side of its generated regex", () => {
+    const s = fullSettings({
+      relic: {
+        resultSettings: {customText: "", autoCopy: false, customTextEnabled: false},
+        matchType: "any",
+        modifier: {
+          prefixes: [
+            {name: "Bosses take #% increased Damage", value: 11, isSelected: true, ranges: [[11, 30]], regex: "^bo"},
+            {name: "#% chance for each of your Keys to upgrade", value: 3, isSelected: true, ranges: [[3, 9]], regex: "eac"},
+          ],
+          suffixes: [],
+        },
+      },
+    });
+
+    expect(generateRelicResult(s)).toBe(`"^bo.*(1[1-9]|2\\d|30)\\(|[3-9]\\(.*eac"`);
+  });
 });
