@@ -1,6 +1,16 @@
 {
     "tokens": [
         {
+            "id": -2140088796,
+            "regex": "nel s",
+            "rawText": "Divine Sentinel Support",
+            "generalizedText": "^divine sentinel support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -2137186526,
             "regex": "in ho",
             "rawText": "Chain Hook",
@@ -17,6 +27,16 @@
             "generalizedText": "^pierce support$",
             "options": {
                 "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": -2128780554,
+            "regex": "pse su",
+            "rawText": "Eclipse Support",
+            "generalizedText": "^eclipse support$",
+            "options": {
+                "c": "w",
                 "support": true
             }
         },
@@ -72,7 +92,7 @@
         },
         {
             "id": -2081798838,
-            "regex": "ve su",
+            "regex": "^shockwave s",
             "rawText": "Shockwave Support",
             "generalizedText": "^shockwave support$",
             "options": {
@@ -82,7 +102,7 @@
         },
         {
             "id": -2071776800,
-            "regex": "fice s",
+            "regex": "^sacrifice s",
             "rawText": "Sacrifice Support",
             "generalizedText": "^sacrifice support$",
             "options": {
@@ -175,6 +195,16 @@
             "regex": "inci",
             "rawText": "Incinerate",
             "generalizedText": "^incinerate$",
+            "options": {
+                "c": "b",
+                "support": false
+            }
+        },
+        {
+            "id": -2018270632,
+            "regex": "used s",
+            "rawText": "Mana-Infused Staff",
+            "generalizedText": "^mana-infused staff$",
             "options": {
                 "c": "b",
                 "support": false
@@ -332,7 +362,7 @@
         },
         {
             "id": -1911099198,
-            "regex": "ter p",
+            "regex": "ter pr",
             "rawText": "Faster Projectiles Support",
             "generalizedText": "^faster projectiles support$",
             "options": {
@@ -341,13 +371,13 @@
             }
         },
         {
-            "id": -1910399860,
-            "regex": "act$",
-            "rawText": "Dark Pact",
-            "generalizedText": "^dark pact$",
+            "id": -1900535964,
+            "regex": "cull t",
+            "rawText": "Cull the Weak Support",
+            "generalizedText": "^cull the weak support$",
             "options": {
-                "c": "b",
-                "support": false
+                "c": "g",
+                "support": true
             }
         },
         {
@@ -358,6 +388,16 @@
             "options": {
                 "c": "g",
                 "support": false
+            }
+        },
+        {
+            "id": -1895223627,
+            "regex": "gati",
+            "rawText": "Congregation Support",
+            "generalizedText": "^congregation support$",
+            "options": {
+                "c": "b",
+                "support": true
             }
         },
         {
@@ -372,7 +412,7 @@
         },
         {
             "id": -1874965883,
-            "regex": "rstorm$",
+            "regex": "^thu",
             "rawText": "Thunderstorm",
             "generalizedText": "^thunderstorm$",
             "options": {
@@ -401,6 +441,16 @@
             }
         },
         {
+            "id": -1826808405,
+            "regex": "^pyre",
+            "rawText": "Pyre Support",
+            "generalizedText": "^pyre support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -1818636171,
             "regex": "^swift af",
             "rawText": "Swift Affliction Support",
@@ -418,6 +468,16 @@
             "options": {
                 "c": "r",
                 "support": false
+            }
+        },
+        {
+            "id": -1803629919,
+            "regex": "ih",
+            "rawText": "Annihilation Support",
+            "generalizedText": "^annihilation support$",
+            "options": {
+                "c": "r",
+                "support": true
             }
         },
         {
@@ -451,6 +511,16 @@
             }
         },
         {
+            "id": -1771286896,
+            "regex": "^hal",
+            "rawText": "Hallow Support",
+            "generalizedText": "^hallow support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -1756962867,
             "regex": "ethr",
             "rawText": "Flamethrower Trap",
@@ -477,6 +547,16 @@
             "generalizedText": "^seismic trap$",
             "options": {
                 "c": "g",
+                "support": false
+            }
+        },
+        {
+            "id": -1736816480,
+            "regex": "y swe",
+            "rawText": "Holy Sweep",
+            "generalizedText": "^holy sweep$",
+            "options": {
+                "c": "r",
                 "support": false
             }
         },
@@ -518,6 +598,16 @@
             "options": {
                 "c": "b",
                 "support": false
+            }
+        },
+        {
+            "id": -1701134445,
+            "regex": "^bles",
+            "rawText": "Blessed Call Support",
+            "generalizedText": "^blessed call support$",
+            "options": {
+                "c": "r",
+                "support": true
             }
         },
         {
@@ -601,6 +691,16 @@
             }
         },
         {
+            "id": -1658531975,
+            "regex": "ony s",
+            "rawText": "Gluttony Support",
+            "generalizedText": "^gluttony support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": -1652039974,
             "regex": "^fli",
             "rawText": "Flicker Strike",
@@ -652,7 +752,7 @@
         },
         {
             "id": -1600637249,
-            "regex": "or$",
+            "regex": "ctor",
             "rawText": "Ancestral Protector",
             "generalizedText": "^ancestral protector$",
             "options": {
@@ -752,7 +852,7 @@
         },
         {
             "id": -1535741505,
-            "regex": "ss su",
+            "regex": "ess su",
             "rawText": "Ruthless Support",
             "generalizedText": "^ruthless support$",
             "options": {
@@ -872,7 +972,7 @@
         },
         {
             "id": -1459467322,
-            "regex": "vour s",
+            "regex": "^devour s",
             "rawText": "Devour Support",
             "generalizedText": "^devour support$",
             "options": {
@@ -1042,7 +1142,7 @@
         },
         {
             "id": -1375103957,
-            "regex": "^burning da",
+            "regex": "^burning damage s",
             "rawText": "Burning Damage Support",
             "generalizedText": "^burning damage support$",
             "options": {
@@ -1052,7 +1152,7 @@
         },
         {
             "id": -1367286605,
-            "regex": "^hext",
+            "regex": "^hextou",
             "rawText": "Hextouch Support",
             "generalizedText": "^hextouch support$",
             "options": {
@@ -1102,7 +1202,7 @@
         },
         {
             "id": -1342992954,
-            "regex": "mon h",
+            "regex": "mon ho",
             "rawText": "Summon Holy Relic",
             "generalizedText": "^summon holy relic$",
             "options": {
@@ -1162,7 +1262,7 @@
         },
         {
             "id": -1312186422,
-            "regex": "glu",
+            "regex": "ony of",
             "rawText": "Gluttony of Elements",
             "generalizedText": "^gluttony of elements$",
             "options": {
@@ -1381,6 +1481,26 @@
             }
         },
         {
+            "id": -1223714701,
+            "regex": "rhe",
+            "rawText": "Overheat Support",
+            "generalizedText": "^overheat support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": -1223285448,
+            "regex": "harr",
+            "rawText": "Harrowing Throng Support",
+            "generalizedText": "^harrowing throng support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": -1223250019,
             "regex": "^crush",
             "rawText": "Crushing Fist",
@@ -1458,6 +1578,16 @@
             "options": {
                 "c": "b",
                 "support": false
+            }
+        },
+        {
+            "id": -1172243836,
+            "regex": "rm s",
+            "rawText": "Voidstorm Support",
+            "generalizedText": "^voidstorm support$",
+            "options": {
+                "c": "g",
+                "support": true
             }
         },
         {
@@ -1552,7 +1682,7 @@
         },
         {
             "id": -1113758297,
-            "regex": "eiz",
+            "regex": "esh$",
             "rawText": "Seize the Flesh",
             "generalizedText": "^seize the flesh$",
             "options": {
@@ -1741,6 +1871,16 @@
             }
         },
         {
+            "id": -1016213475,
+            "regex": "nven",
+            "rawText": "Invention Support",
+            "generalizedText": "^invention support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
             "id": -1011027500,
             "regex": "ives$",
             "rawText": "Ethereal Knives",
@@ -1861,6 +2001,16 @@
             }
         },
         {
+            "id": -933960497,
+            "regex": "^exc",
+            "rawText": "Excommunicate Support",
+            "generalizedText": "^excommunicate support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -923301778,
             "regex": "ulv",
             "rawText": "Pulverise Support",
@@ -1912,7 +2062,7 @@
         },
         {
             "id": -857621555,
-            "regex": "pyre",
+            "regex": "pyre$",
             "rawText": "Call the Pyre",
             "generalizedText": "^call the pyre$",
             "options": {
@@ -1932,7 +2082,7 @@
         },
         {
             "id": -842018292,
-            "regex": "nstab",
+            "regex": "^kinetic i",
             "rawText": "Kinetic Instability Support",
             "generalizedText": "^kinetic instability support$",
             "options": {
@@ -2051,6 +2201,16 @@
             }
         },
         {
+            "id": -776191670,
+            "regex": "nesp",
+            "rawText": "Bonespire Support",
+            "generalizedText": "^bonespire support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -754304079,
             "regex": "al rai",
             "rawText": "Vaal Rain of Arrows",
@@ -2062,7 +2222,7 @@
         },
         {
             "id": -750268838,
-            "regex": "rini",
+            "regex": "^trin",
             "rawText": "Trinity Support",
             "generalizedText": "^trinity support$",
             "options": {
@@ -2212,7 +2372,7 @@
         },
         {
             "id": -649758479,
-            "regex": "ct m",
+            "regex": "act m",
             "rawText": "High-Impact Mine Support",
             "generalizedText": "^high-impact mine support$",
             "options": {
@@ -2341,6 +2501,16 @@
             }
         },
         {
+            "id": -559103030,
+            "regex": "ater c",
+            "rawText": "Greater Chain Support",
+            "generalizedText": "^greater chain support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
             "id": -541126630,
             "regex": "tal h",
             "rawText": "Elemental Hit",
@@ -2441,6 +2611,26 @@
             }
         },
         {
+            "id": -477204265,
+            "regex": "ter f",
+            "rawText": "Greater Fork Support",
+            "generalizedText": "^greater fork support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": -469328900,
+            "regex": "dso",
+            "rawText": "Bloodsoaked Banner Support",
+            "generalizedText": "^bloodsoaked banner support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -458442819,
             "regex": "xb",
             "rawText": "Hexblast",
@@ -2457,6 +2647,16 @@
             "generalizedText": "^more duration support$",
             "options": {
                 "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": -455160090,
+            "regex": "ater k",
+            "rawText": "Greater Kinetic Instability Support",
+            "generalizedText": "^greater kinetic instability support$",
+            "options": {
+                "c": "b",
                 "support": true
             }
         },
@@ -2487,6 +2687,16 @@
             "generalizedText": "^returning projectiles support$",
             "options": {
                 "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": -435413570,
+            "regex": "id sh",
+            "rawText": "Void Shockwave Support",
+            "generalizedText": "^void shockwave support$",
+            "options": {
+                "c": "r",
                 "support": true
             }
         },
@@ -2681,6 +2891,16 @@
             }
         },
         {
+            "id": -320915756,
+            "regex": "sure s",
+            "rawText": "Fissure Support",
+            "generalizedText": "^fissure support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -320725928,
             "regex": "d anc",
             "rawText": "Awakened Ancestral Call Support",
@@ -2802,7 +3022,7 @@
         },
         {
             "id": -239583834,
-            "regex": "st wa",
+            "regex": "t wall$",
             "rawText": "Frost Wall",
             "generalizedText": "^frost wall$",
             "options": {
@@ -2842,7 +3062,7 @@
         },
         {
             "id": -215623412,
-            "regex": "dst",
+            "regex": "^swo",
             "rawText": "Swordstorm",
             "generalizedText": "^swordstorm$",
             "options": {
@@ -2941,13 +3161,33 @@
             }
         },
         {
+            "id": -145564373,
+            "regex": "^mac",
+            "rawText": "Machinations Support",
+            "generalizedText": "^machinations support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
             "id": -139481681,
-            "regex": "^greater m",
+            "regex": "^greater multip",
             "rawText": "Greater Multiple Projectiles Support",
             "generalizedText": "^greater multiple projectiles support$",
             "options": {
                 "c": "g",
                 "support": true
+            }
+        },
+        {
+            "id": -133186783,
+            "regex": "mers$",
+            "rawText": "Holy Hammers",
+            "generalizedText": "^holy hammers$",
+            "options": {
+                "c": "r",
+                "support": false
             }
         },
         {
@@ -2968,6 +3208,16 @@
             "options": {
                 "c": "g",
                 "support": false
+            }
+        },
+        {
+            "id": -112806287,
+            "regex": "ldr",
+            "rawText": "Eldritch Blasphemy Support",
+            "generalizedText": "^eldritch blasphemy support$",
+            "options": {
+                "c": "b",
+                "support": true
             }
         },
         {
@@ -3021,6 +3271,16 @@
             }
         },
         {
+            "id": -60046395,
+            "regex": "r spell c",
+            "rawText": "Greater Spell Cascade Support",
+            "generalizedText": "^greater spell cascade support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": -56240619,
             "regex": "c cr",
             "rawText": "Seismic Cry",
@@ -3041,6 +3301,16 @@
             }
         },
         {
+            "id": -46857722,
+            "regex": "r anc",
+            "rawText": "Greater Ancestral Call Support",
+            "generalizedText": "^greater ancestral call support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": -36228818,
             "regex": "mpurity of f",
             "rawText": "Vaal Impurity of Fire",
@@ -3052,7 +3322,7 @@
         },
         {
             "id": -36046395,
-            "regex": "te p",
+            "regex": "ite p",
             "rawText": "Ignite Proliferation Support",
             "generalizedText": "^ignite proliferation support$",
             "options": {
@@ -3067,6 +3337,16 @@
             "generalizedText": "^knockback support$",
             "options": {
                 "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": -22587406,
+            "regex": "unio",
+            "rawText": "Communion Support",
+            "generalizedText": "^communion support$",
+            "options": {
+                "c": "b",
                 "support": true
             }
         },
@@ -3138,6 +3418,16 @@
             "options": {
                 "c": "r",
                 "support": false
+            }
+        },
+        {
+            "id": 31662932,
+            "regex": "dos",
+            "rawText": "Lethal Dose Support",
+            "generalizedText": "^lethal dose support$",
+            "options": {
+                "c": "g",
+                "support": true
             }
         },
         {
@@ -3631,6 +3921,16 @@
             }
         },
         {
+            "id": 315351789,
+            "regex": "ater u",
+            "rawText": "Greater Unleash Support",
+            "generalizedText": "^greater unleash support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 326516981,
             "regex": "l hea",
             "rawText": "Vaal Heavy Strike",
@@ -3642,7 +3942,7 @@
         },
         {
             "id": 331166938,
-            "regex": "ie$",
+            "regex": "bie$",
             "rawText": "Raise Zombie",
             "generalizedText": "^raise zombie$",
             "options": {
@@ -3662,7 +3962,7 @@
         },
         {
             "id": 344612921,
-            "regex": "ser r",
+            "regex": "sser",
             "rawText": "Lesser Reduced Mana Cost Support",
             "generalizedText": "^lesser reduced mana cost support$",
             "options": {
@@ -3671,10 +3971,40 @@
             }
         },
         {
+            "id": 345110222,
+            "regex": "pta",
+            "rawText": "Vaal Temptation Support",
+            "generalizedText": "^vaal temptation support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": 357282413,
+            "regex": "ules",
+            "rawText": "Invert the Rules Support",
+            "generalizedText": "^invert the rules support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 360422256,
             "regex": "^disci",
             "rawText": "Discipline",
             "generalizedText": "^discipline$",
+            "options": {
+                "c": "b",
+                "support": false
+            }
+        },
+        {
+            "id": 362822504,
+            "regex": "rga",
+            "rawText": "Dark Bargain",
+            "generalizedText": "^dark bargain$",
             "options": {
                 "c": "b",
                 "support": false
@@ -3751,6 +4081,16 @@
             }
         },
         {
+            "id": 390703712,
+            "regex": "lfa",
+            "rawText": "Crystalfall Support",
+            "generalizedText": "^crystalfall support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": 394232392,
             "regex": "ned fi",
             "rawText": "Awakened Fire Penetration Support",
@@ -3781,6 +4121,26 @@
             }
         },
         {
+            "id": 415408475,
+            "regex": "xpas",
+            "rawText": "Hexpass Support",
+            "generalizedText": "^hexpass support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
+            "id": 417594248,
+            "regex": "gne",
+            "rawText": "Magnetism Support",
+            "generalizedText": "^magnetism support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
             "id": 418832911,
             "regex": "^dead",
             "rawText": "Deadly Ailments Support",
@@ -3801,12 +4161,12 @@
             }
         },
         {
-            "id": 438728995,
-            "regex": "ser m",
-            "rawText": "Lesser Multiple Projectiles Support",
-            "generalizedText": "^lesser multiple projectiles support$",
+            "id": 432656887,
+            "regex": "xem",
+            "rawText": "Exemplar Support",
+            "generalizedText": "^exemplar support$",
             "options": {
-                "c": "g",
+                "c": "b",
                 "support": true
             }
         },
@@ -3861,12 +4221,32 @@
             }
         },
         {
+            "id": 492068964,
+            "regex": "d of l",
+            "rawText": "Shield of Light",
+            "generalizedText": "^shield of light$",
+            "options": {
+                "c": "r",
+                "support": false
+            }
+        },
+        {
             "id": 504727185,
             "regex": "ple to",
             "rawText": "Multiple Totems Support",
             "generalizedText": "^multiple totems support$",
             "options": {
                 "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": 506882021,
+            "regex": "ostm",
+            "rawText": "Frostmage Support",
+            "generalizedText": "^frostmage support$",
+            "options": {
+                "c": "b",
                 "support": true
             }
         },
@@ -4011,6 +4391,16 @@
             }
         },
         {
+            "id": 576102204,
+            "regex": "eid",
+            "rawText": "Pact of Beidat",
+            "generalizedText": "^pact of beidat$",
+            "options": {
+                "c": "w",
+                "support": false
+            }
+        },
+        {
             "id": 589910703,
             "regex": "forb",
             "rawText": "Forbidden Rite",
@@ -4032,7 +4422,7 @@
         },
         {
             "id": 592134694,
-            "regex": "fused",
+            "regex": "^infused",
             "rawText": "Infused Channelling Support",
             "generalizedText": "^infused channelling support$",
             "options": {
@@ -4061,6 +4451,16 @@
             }
         },
         {
+            "id": 605495468,
+            "regex": "^ed",
+            "rawText": "Edify Support",
+            "generalizedText": "^edify support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": 608236363,
             "regex": "ld ch",
             "rawText": "Shield Charge",
@@ -4075,6 +4475,16 @@
             "regex": "l prol",
             "rawText": "Elemental Proliferation Support",
             "generalizedText": "^elemental proliferation support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
+            "id": 623929585,
+            "regex": "rnf",
+            "rawText": "Scornful Herald Support",
+            "generalizedText": "^scornful herald support$",
             "options": {
                 "c": "b",
                 "support": true
@@ -4181,6 +4591,16 @@
             }
         },
         {
+            "id": 752815945,
+            "regex": "^multiple p",
+            "rawText": "Multiple Projectiles Support",
+            "generalizedText": "^multiple projectiles support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
             "id": 768157647,
             "regex": "^trap a",
             "rawText": "Trap and Mine Damage Support",
@@ -4198,6 +4618,16 @@
             "options": {
                 "c": "r",
                 "support": true
+            }
+        },
+        {
+            "id": 776831625,
+            "regex": "k'",
+            "rawText": "Pact of K'Tash",
+            "generalizedText": "^pact of k'tash$",
+            "options": {
+                "c": "w",
+                "support": false
             }
         },
         {
@@ -4251,6 +4681,16 @@
             }
         },
         {
+            "id": 791499353,
+            "regex": "^coo",
+            "rawText": "Cooldown Recovery Support",
+            "generalizedText": "^cooldown recovery support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 796259969,
             "regex": "al pe",
             "rawText": "Elemental Penetration Support",
@@ -4272,7 +4712,7 @@
         },
         {
             "id": 816539748,
-            "regex": "iction$",
+            "regex": "viction$",
             "rawText": "Wave of Conviction",
             "generalizedText": "^wave of conviction$",
             "options": {
@@ -4292,7 +4732,7 @@
         },
         {
             "id": 824814599,
-            "regex": "vine b",
+            "regex": "ne ble",
             "rawText": "Divine Blessing Support",
             "generalizedText": "^divine blessing support$",
             "options": {
@@ -4325,6 +4765,16 @@
             "regex": "ta s",
             "rawText": "Focused Ballista Support",
             "generalizedText": "^focused ballista support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": 848276215,
+            "regex": "nsh",
+            "rawText": "Companionship Support",
+            "generalizedText": "^companionship support$",
             "options": {
                 "c": "g",
                 "support": true
@@ -4421,6 +4871,16 @@
             }
         },
         {
+            "id": 959760050,
+            "regex": "r spell e",
+            "rawText": "Greater Spell Echo Support",
+            "generalizedText": "^greater spell echo support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 959925250,
             "regex": "ter v",
             "rawText": "Greater Volley Support",
@@ -4447,6 +4907,16 @@
             "generalizedText": "^withering step$",
             "options": {
                 "c": "g",
+                "support": false
+            }
+        },
+        {
+            "id": 988210247,
+            "regex": "ine bla",
+            "rawText": "Divine Blast",
+            "generalizedText": "^divine blast$",
+            "options": {
+                "c": "r",
                 "support": false
             }
         },
@@ -4531,6 +5001,26 @@
             }
         },
         {
+            "id": 1053826855,
+            "regex": "^unh",
+            "rawText": "Unholy Trinity Support",
+            "generalizedText": "^unholy trinity support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": 1061384747,
+            "regex": "^ward",
+            "rawText": "Ward Support",
+            "generalizedText": "^ward support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 1066859238,
             "regex": "ning ci",
             "rawText": "Lightning Circle",
@@ -4548,6 +5038,16 @@
             "options": {
                 "c": "g",
                 "support": false
+            }
+        },
+        {
+            "id": 1091319144,
+            "regex": "^hiv",
+            "rawText": "Hiveborn Support",
+            "generalizedText": "^hiveborn support$",
+            "options": {
+                "c": "b",
+                "support": true
             }
         },
         {
@@ -4631,6 +5131,16 @@
             }
         },
         {
+            "id": 1137164610,
+            "regex": "sp s",
+            "rawText": "Foulgrasp Support",
+            "generalizedText": "^foulgrasp support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 1148776949,
             "regex": "^trau",
             "rawText": "Trauma Support",
@@ -4688,6 +5198,16 @@
             "options": {
                 "c": "r",
                 "support": false
+            }
+        },
+        {
+            "id": 1188998747,
+            "regex": "^overl",
+            "rawText": "Overloaded Intensity Support",
+            "generalizedText": "^overloaded intensity support$",
+            "options": {
+                "c": "b",
+                "support": true
             }
         },
         {
@@ -4751,6 +5271,16 @@
             }
         },
         {
+            "id": 1222079660,
+            "regex": "r dev",
+            "rawText": "Greater Devour Support",
+            "generalizedText": "^greater devour support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 1227434663,
             "regex": "^cy",
             "rawText": "Cyclone",
@@ -4795,6 +5325,16 @@
             "regex": "^ins",
             "rawText": "Inspiration Support",
             "generalizedText": "^inspiration support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
+            "id": 1249439835,
+            "regex": "nsfu",
+            "rawText": "Transfusion Support",
+            "generalizedText": "^transfusion support$",
             "options": {
                 "c": "r",
                 "support": true
@@ -4852,7 +5392,7 @@
         },
         {
             "id": 1291973236,
-            "regex": "aal spe",
+            "regex": "aal spec",
             "rawText": "Vaal Spectral Throw",
             "generalizedText": "^vaal spectral throw$",
             "options": {
@@ -4865,6 +5405,16 @@
             "regex": "tem r",
             "rawText": "Item Rarity Support",
             "generalizedText": "^item rarity support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
+            "id": 1295990304,
+            "regex": "cours",
+            "rawText": "Coursing Current Support",
+            "generalizedText": "^coursing current support$",
             "options": {
                 "c": "b",
                 "support": true
@@ -5212,7 +5762,7 @@
         },
         {
             "id": 1557237228,
-            "regex": "ir$",
+            "regex": "espa",
             "rawText": "Despair",
             "generalizedText": "^despair$",
             "options": {
@@ -5412,7 +5962,7 @@
         },
         {
             "id": 1666681520,
-            "regex": "tone$",
+            "regex": "esh a",
             "rawText": "Flesh and Stone",
             "generalizedText": "^flesh and stone$",
             "options": {
@@ -5501,6 +6051,16 @@
             }
         },
         {
+            "id": 1720449110,
+            "regex": "al sa",
+            "rawText": "Vaal Sacrifice Support",
+            "generalizedText": "^vaal sacrifice support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 1734523688,
             "regex": "^veno",
             "rawText": "Venom Gyre",
@@ -5582,7 +6142,7 @@
         },
         {
             "id": 1773793540,
-            "regex": "^pois",
+            "regex": "us co",
             "rawText": "Poisonous Concoction",
             "generalizedText": "^poisonous concoction$",
             "options": {
@@ -5637,6 +6197,36 @@
             "generalizedText": "^autoexertion$",
             "options": {
                 "c": "r",
+                "support": false
+            }
+        },
+        {
+            "id": 1819988170,
+            "regex": "t on w",
+            "rawText": "Cast on Ward Break Support",
+            "generalizedText": "^cast on ward break support$",
+            "options": {
+                "c": "g",
+                "support": true
+            }
+        },
+        {
+            "id": 1824412451,
+            "regex": "t of g",
+            "rawText": "Pact of Ghorr",
+            "generalizedText": "^pact of ghorr$",
+            "options": {
+                "c": "w",
+                "support": false
+            }
+        },
+        {
+            "id": 1829524675,
+            "regex": "lyc",
+            "rawText": "Pact of Lycia",
+            "generalizedText": "^pact of lycia$",
+            "options": {
+                "c": "w",
                 "support": false
             }
         },
@@ -5802,7 +6392,7 @@
         },
         {
             "id": 1961932152,
-            "regex": "l tot",
+            "regex": "pell to",
             "rawText": "Spell Totem Support",
             "generalizedText": "^spell totem support$",
             "options": {
@@ -5842,7 +6432,7 @@
         },
         {
             "id": 1982324000,
-            "regex": "^py",
+            "regex": "yro",
             "rawText": "Pyroclast Mine",
             "generalizedText": "^pyroclast mine$",
             "options": {
@@ -5858,6 +6448,26 @@
             "options": {
                 "c": "b",
                 "support": false
+            }
+        },
+        {
+            "id": 1990884478,
+            "regex": "^holy st",
+            "rawText": "Holy Strike",
+            "generalizedText": "^holy strike$",
+            "options": {
+                "c": "r",
+                "support": false
+            }
+        },
+        {
+            "id": 1992645795,
+            "regex": "acif",
+            "rawText": "Pacifism Support",
+            "generalizedText": "^pacifism support$",
+            "options": {
+                "c": "g",
+                "support": true
             }
         },
         {
@@ -5891,6 +6501,16 @@
             }
         },
         {
+            "id": 2026560948,
+            "regex": "r multis",
+            "rawText": "Greater Multistrike Support",
+            "generalizedText": "^greater multistrike support$",
+            "options": {
+                "c": "r",
+                "support": true
+            }
+        },
+        {
             "id": 2036157292,
             "regex": "al reap",
             "rawText": "Vaal Reap",
@@ -5912,7 +6532,7 @@
         },
         {
             "id": 2041811980,
-            "regex": "^emp",
+            "regex": "^empower s",
             "rawText": "Empower Support",
             "generalizedText": "^empower support$",
             "options": {
@@ -6042,7 +6662,7 @@
         },
         {
             "id": 2119094491,
-            "regex": "ter c",
+            "regex": "ster c",
             "rawText": "Faster Casting Support",
             "generalizedText": "^faster casting support$",
             "options": {
@@ -6081,6 +6701,16 @@
             }
         },
         {
+            "id": 2128513064,
+            "regex": "xtoa",
+            "rawText": "Hextoad Support",
+            "generalizedText": "^hextoad support$",
+            "options": {
+                "c": "b",
+                "support": true
+            }
+        },
+        {
             "id": 2136969571,
             "regex": "ned bu",
             "rawText": "Awakened Burning Damage Support",
@@ -6102,17 +6732,28 @@
         }
     ],
     "optimizationTable": {
-        "-2135793929:-2071776800:-810856355:169820709:1450992759": {
+        "-2135793929:-2071776800:-810856355:169820709:1450992759:1720449110": {
             "ids": [
                 -2135793929,
                 -2071776800,
                 -810856355,
                 169820709,
-                1450992759
+                1450992759,
+                1720449110
             ],
             "regex": "ce su",
             "weight": 7,
-            "count": 5
+            "count": 6
+        },
+        "-2128780554:-923301778:31662932": {
+            "ids": [
+                -2128780554,
+                -923301778,
+                31662932
+            ],
+            "regex": "se sup",
+            "weight": 8,
+            "count": 3
         },
         "-2123919667:-1128169193": {
             "ids": [
@@ -6184,6 +6825,24 @@
             "weight": 6,
             "count": 4
         },
+        "-2081798838:-435413570": {
+            "ids": [
+                -2081798838,
+                -435413570
+            ],
+            "regex": "ve su",
+            "weight": 7,
+            "count": 2
+        },
+        "-2071776800:1720449110": {
+            "ids": [
+                -2071776800,
+                1720449110
+            ],
+            "regex": "fice s",
+            "weight": 8,
+            "count": 2
+        },
         "-2054406769:-500268763": {
             "ids": [
                 -2054406769,
@@ -6214,24 +6873,26 @@
             "weight": 4,
             "count": 5
         },
-        "-2044732924:1267368140": {
+        "-2044732924:959760050:1267368140": {
             "ids": [
                 -2044732924,
-                1267368140
-            ],
-            "regex": "ho s",
-            "weight": 6,
-            "count": 2
-        },
-        "-2044732924:1267368140:1267368140": {
-            "ids": [
-                -2044732924,
-                1267368140,
+                959760050,
                 1267368140
             ],
             "regex": "ho s",
             "weight": 6,
             "count": 3
+        },
+        "-2044732924:959760050:1267368140:1267368140": {
+            "ids": [
+                -2044732924,
+                959760050,
+                1267368140,
+                1267368140
+            ],
+            "regex": "ho s",
+            "weight": 6,
+            "count": 4
         },
         "-2044732924:208213811:1734696877": {
             "ids": [
@@ -6319,30 +6980,32 @@
             "weight": 9,
             "count": 3
         },
-        "-2030112190:-1322490150:-1322490150:-1175755183:-918408030:1780896778": {
+        "-2030112190:-1322490150:-1322490150:-1175755183:-918408030:1780896778:2026560948": {
             "ids": [
                 -2030112190,
                 -1322490150,
                 -1322490150,
                 -1175755183,
                 -918408030,
-                1780896778
+                1780896778,
+                2026560948
+            ],
+            "regex": "ke su",
+            "weight": 7,
+            "count": 7
+        },
+        "-2030112190:-1322490150:-1175755183:-918408030:1780896778:2026560948": {
+            "ids": [
+                -2030112190,
+                -1322490150,
+                -1175755183,
+                -918408030,
+                1780896778,
+                2026560948
             ],
             "regex": "ke su",
             "weight": 7,
             "count": 6
-        },
-        "-2030112190:-1322490150:-1175755183:-918408030:1780896778": {
-            "ids": [
-                -2030112190,
-                -1322490150,
-                -1175755183,
-                -918408030,
-                1780896778
-            ],
-            "regex": "ke su",
-            "weight": 7,
-            "count": 5
         },
         "-2030112190:1780896778": {
             "ids": [
@@ -6353,24 +7016,53 @@
             "weight": 8,
             "count": 2
         },
+        "-2024445174:432656887": {
+            "ids": [
+                -2024445174,
+                432656887
+            ],
+            "regex": "ar su",
+            "weight": 7,
+            "count": 2
+        },
+        "-2024445174:-2024445174:432656887": {
+            "ids": [
+                -2024445174,
+                -2024445174,
+                432656887
+            ],
+            "regex": "ar su",
+            "weight": 7,
+            "count": 3
+        },
+        "-2018270632:592134694": {
+            "ids": [
+                -2018270632,
+                592134694
+            ],
+            "regex": "fused",
+            "weight": 5,
+            "count": 2
+        },
         "-2010391190:822309610": {
             "ids": [
                 -2010391190,
                 822309610
             ],
-            "regex": "k n",
-            "weight": 5,
+            "regex": "k nov",
+            "weight": 7,
             "count": 2
         },
-        "-2010391190:822309610:822309610": {
+        "-2010391190:822309610:822309610:822309610": {
             "ids": [
                 -2010391190,
                 822309610,
+                822309610,
                 822309610
             ],
-            "regex": "k n",
-            "weight": 5,
-            "count": 3
+            "regex": "k nov",
+            "weight": 7,
+            "count": 4
         },
         "-1981730702:1451735100": {
             "ids": [
@@ -6504,6 +7196,15 @@
             "weight": 4,
             "count": 4
         },
+        "-1900535964:1819988170": {
+            "ids": [
+                -1900535964,
+                1819988170
+            ],
+            "regex": "ak s",
+            "weight": 6,
+            "count": 2
+        },
         "-1896162899:-1896162899:-1049116177:-152924988:-72622734:2042864668:2042864668": {
             "ids": [
                 -1896162899,
@@ -6565,15 +7266,17 @@
             "weight": 9,
             "count": 2
         },
-        "-1818636171:381663029:1734696877": {
+        "-1826808405:-781123538:-776191670:-320915756:-172607696": {
             "ids": [
-                -1818636171,
-                381663029,
-                1734696877
+                -1826808405,
+                -781123538,
+                -776191670,
+                -320915756,
+                -172607696
             ],
-            "regex": "lictio",
-            "weight": 6,
-            "count": 3
+            "regex": "re su",
+            "weight": 7,
+            "count": 5
         },
         "-1818636171:-1056170494:1734696877": {
             "ids": [
@@ -6607,60 +7310,94 @@
             "weight": 10,
             "count": 6
         },
-        "-1806712752:1079540035:1079540035:1079540035:1950155796:1950155796": {
+        "-1818636171:381663029:1734696877": {
+            "ids": [
+                -1818636171,
+                381663029,
+                1734696877
+            ],
+            "regex": "iction s",
+            "weight": 10,
+            "count": 3
+        },
+        "-1806712752:623929585:1079540035:1079540035:1079540035:1950155796:1950155796": {
             "ids": [
                 -1806712752,
+                623929585,
                 1079540035,
                 1079540035,
                 1079540035,
                 1950155796,
+                1950155796
+            ],
+            "regex": "sco",
+            "weight": 3,
+            "count": 7
+        },
+        "-1806712752:623929585:1079540035:1079540035:1079540035:1950155796": {
+            "ids": [
+                -1806712752,
+                623929585,
+                1079540035,
+                1079540035,
+                1079540035,
                 1950155796
             ],
             "regex": "sco",
             "weight": 3,
             "count": 6
         },
-        "-1806712752:1079540035:1079540035:1079540035:1950155796": {
+        "-1806712752:623929585:1079540035:1950155796:1950155796": {
             "ids": [
                 -1806712752,
+                623929585,
                 1079540035,
-                1079540035,
-                1079540035,
+                1950155796,
                 1950155796
             ],
             "regex": "sco",
             "weight": 3,
             "count": 5
         },
-        "-1806712752:1079540035:1950155796:1950155796": {
+        "-1806712752:623929585:1950155796:1950155796": {
             "ids": [
                 -1806712752,
-                1079540035,
+                623929585,
                 1950155796,
                 1950155796
             ],
-            "regex": "sco",
-            "weight": 3,
+            "regex": "scor",
+            "weight": 4,
             "count": 4
         },
-        "-1806712752:1950155796:1950155796": {
+        "-1806712752:623929585:1950155796": {
             "ids": [
                 -1806712752,
-                1950155796,
+                623929585,
                 1950155796
             ],
             "regex": "scor",
             "weight": 4,
             "count": 3
         },
-        "-1806712752:1950155796": {
+        "-1803629919:-1123339390": {
             "ids": [
-                -1806712752,
-                1950155796
+                -1803629919,
+                -1123339390
             ],
-            "regex": "scor",
-            "weight": 4,
+            "regex": "ila",
+            "weight": 3,
             "count": 2
+        },
+        "-1803629919:-1483733728:32091480": {
+            "ids": [
+                -1803629919,
+                -1483733728,
+                32091480
+            ],
+            "regex": "latio",
+            "weight": 5,
+            "count": 3
         },
         "-1780056473:-754304079": {
             "ids": [
@@ -6683,15 +7420,16 @@
             "weight": 7,
             "count": 5
         },
-        "-1756962867:-1756962867:-1570631441": {
+        "-1756962867:-1756962867:-1756962867:-1570631441": {
             "ids": [
+                -1756962867,
                 -1756962867,
                 -1756962867,
                 -1570631441
             ],
             "regex": "er trap",
             "weight": 9,
-            "count": 3
+            "count": 4
         },
         "-1756962867:-1570631441": {
             "ids": [
@@ -6711,16 +7449,6 @@
             "weight": 3,
             "count": 2
         },
-        "-1742953374:-1113758297:-56240619": {
-            "ids": [
-                -1742953374,
-                -1113758297,
-                -56240619
-            ],
-            "regex": "sei",
-            "weight": 3,
-            "count": 3
-        },
         "-1742953374:-1742953374:-56240619": {
             "ids": [
                 -1742953374,
@@ -6731,17 +7459,6 @@
             "weight": 3,
             "count": 3
         },
-        "-1742953374:-1742953374:-1113758297:-56240619": {
-            "ids": [
-                -1742953374,
-                -1742953374,
-                -1113758297,
-                -56240619
-            ],
-            "regex": "sei",
-            "weight": 3,
-            "count": 4
-        },
         "-1735448760:529596554": {
             "ids": [
                 -1735448760,
@@ -6751,28 +7468,30 @@
             "weight": 8,
             "count": 2
         },
-        "-1732766033:-1567646869:208213811:965882783": {
+        "-1732766033:-1567646869:-60046395:208213811:965882783": {
             "ids": [
                 -1732766033,
                 -1567646869,
-                208213811,
-                965882783
-            ],
-            "regex": "de s",
-            "weight": 6,
-            "count": 4
-        },
-        "-1732766033:-1567646869:-1567646869:208213811:965882783": {
-            "ids": [
-                -1732766033,
-                -1567646869,
-                -1567646869,
+                -60046395,
                 208213811,
                 965882783
             ],
             "regex": "de s",
             "weight": 6,
             "count": 5
+        },
+        "-1732766033:-1567646869:-1567646869:-60046395:208213811:965882783": {
+            "ids": [
+                -1732766033,
+                -1567646869,
+                -1567646869,
+                -60046395,
+                208213811,
+                965882783
+            ],
+            "regex": "de s",
+            "weight": 6,
+            "count": 6
         },
         "-1732766033:965882783": {
             "ids": [
@@ -6823,6 +7542,54 @@
             "weight": 3,
             "count": 5
         },
+        "-1701134445:-320725928:-46857722:462167840": {
+            "ids": [
+                -1701134445,
+                -320725928,
+                -46857722,
+                462167840
+            ],
+            "regex": "call s",
+            "weight": 8,
+            "count": 4
+        },
+        "-1701134445:-320725928:-46857722:390703712:462167840": {
+            "ids": [
+                -1701134445,
+                -320725928,
+                -46857722,
+                390703712,
+                462167840
+            ],
+            "regex": "all su",
+            "weight": 8,
+            "count": 5
+        },
+        "-1701134445:-320725928:-46857722:462167840:462167840": {
+            "ids": [
+                -1701134445,
+                -320725928,
+                -46857722,
+                462167840,
+                462167840
+            ],
+            "regex": "call s",
+            "weight": 8,
+            "count": 5
+        },
+        "-1701134445:-320725928:-46857722:390703712:462167840:462167840": {
+            "ids": [
+                -1701134445,
+                -320725928,
+                -46857722,
+                390703712,
+                462167840,
+                462167840
+            ],
+            "regex": "all su",
+            "weight": 8,
+            "count": 6
+        },
         "-1698280748:1887768680": {
             "ids": [
                 -1698280748,
@@ -6865,25 +7632,27 @@
             "weight": 4,
             "count": 4
         },
-        "-1698280748:-1050732861:-842018292:782087819": {
+        "-1698280748:-1050732861:-842018292:-455160090:782087819": {
             "ids": [
                 -1698280748,
                 -1050732861,
                 -842018292,
+                -455160090,
                 782087819
             ],
             "regex": "lity s",
             "weight": 8,
-            "count": 4
+            "count": 5
         },
-        "-1698280748:-842018292": {
+        "-1698280748:-842018292:-455160090": {
             "ids": [
                 -1698280748,
-                -842018292
+                -842018292,
+                -455160090
             ],
             "regex": "ility s",
             "weight": 9,
-            "count": 2
+            "count": 3
         },
         "-1690136249:300836513:510403601": {
             "ids": [
@@ -7097,26 +7866,6 @@
             "weight": 10,
             "count": 3
         },
-        "-1627476220:1741234076:1741234076:1741234076": {
-            "ids": [
-                -1627476220,
-                1741234076,
-                1741234076,
-                1741234076
-            ],
-            "regex": "rend",
-            "weight": 4,
-            "count": 4
-        },
-        "-1627476220:1741234076": {
-            "ids": [
-                -1627476220,
-                1741234076
-            ],
-            "regex": "rend",
-            "weight": 4,
-            "count": 2
-        },
         "-1605960776:2141102986": {
             "ids": [
                 -1605960776,
@@ -7185,43 +7934,6 @@
             "regex": "cto",
             "weight": 3,
             "count": 3
-        },
-        "-1597135245:-1597135245:-1244206679:-287816079:-23384982": {
-            "ids": [
-                -1597135245,
-                -1597135245,
-                -1244206679,
-                -287816079,
-                -23384982
-            ],
-            "regex": "k sup",
-            "weight": 7,
-            "count": 5
-        },
-        "-1597135245:-1244206679:-287816079:-23384982:-23384982": {
-            "ids": [
-                -1597135245,
-                -1244206679,
-                -287816079,
-                -23384982,
-                -23384982
-            ],
-            "regex": "k sup",
-            "weight": 7,
-            "count": 5
-        },
-        "-1597135245:-1597135245:-1244206679:-287816079:-23384982:-23384982": {
-            "ids": [
-                -1597135245,
-                -1597135245,
-                -1244206679,
-                -287816079,
-                -23384982,
-                -23384982
-            ],
-            "regex": "k sup",
-            "weight": 7,
-            "count": 6
         },
         "-1573855148:603305868:2066150790:2066150790": {
             "ids": [
@@ -7299,24 +8011,26 @@
             "weight": 8,
             "count": 2
         },
-        "-1567646869:208213811": {
+        "-1567646869:-60046395:208213811": {
             "ids": [
                 -1567646869,
-                208213811
-            ],
-            "regex": "cade s",
-            "weight": 8,
-            "count": 2
-        },
-        "-1567646869:-1567646869:208213811": {
-            "ids": [
-                -1567646869,
-                -1567646869,
+                -60046395,
                 208213811
             ],
             "regex": "cade s",
             "weight": 8,
             "count": 3
+        },
+        "-1567646869:-1567646869:-60046395:208213811": {
+            "ids": [
+                -1567646869,
+                -1567646869,
+                -60046395,
+                208213811
+            ],
+            "regex": "cade s",
+            "weight": 8,
+            "count": 4
         },
         "-1564693134:1734523688": {
             "ids": [
@@ -7326,16 +8040,6 @@
             "regex": "gyr",
             "weight": 3,
             "count": 2
-        },
-        "-1564693134:-857621555:1734523688": {
-            "ids": [
-                -1564693134,
-                -857621555,
-                1734523688
-            ],
-            "regex": "yre",
-            "weight": 3,
-            "count": 3
         },
         "-1564693134:1734523688:1734523688": {
             "ids": [
@@ -7347,17 +8051,6 @@
             "weight": 3,
             "count": 3
         },
-        "-1564693134:-857621555:1734523688:1734523688": {
-            "ids": [
-                -1564693134,
-                -857621555,
-                1734523688,
-                1734523688
-            ],
-            "regex": "yre",
-            "weight": 3,
-            "count": 4
-        },
         "-1564693134:797504454": {
             "ids": [
                 -1564693134,
@@ -7367,21 +8060,10 @@
             "weight": 7,
             "count": 2
         },
-        "-1555296088:-834315048:-834315048:1878169714": {
+        "-1555296088:-834315048:-834315048:-834315048:1878169714": {
             "ids": [
                 -1555296088,
                 -834315048,
-                -834315048,
-                1878169714
-            ],
-            "regex": "iph",
-            "weight": 3,
-            "count": 4
-        },
-        "-1555296088:-1555296088:-834315048:-834315048:1878169714": {
-            "ids": [
-                -1555296088,
-                -1555296088,
                 -834315048,
                 -834315048,
                 1878169714
@@ -7389,6 +8071,19 @@
             "regex": "iph",
             "weight": 3,
             "count": 5
+        },
+        "-1555296088:-1555296088:-834315048:-834315048:-834315048:1878169714": {
+            "ids": [
+                -1555296088,
+                -1555296088,
+                -834315048,
+                -834315048,
+                -834315048,
+                1878169714
+            ],
+            "regex": "iph",
+            "weight": 3,
+            "count": 6
         },
         "-1555296088:-1555296088:-834315048:1878169714": {
             "ids": [
@@ -7442,6 +8137,15 @@
             "regex": "power s",
             "weight": 9,
             "count": 5
+        },
+        "-1535741505:415408475": {
+            "ids": [
+                -1535741505,
+                415408475
+            ],
+            "regex": "ss su",
+            "weight": 7,
+            "count": 2
         },
         "-1525574002:741763058:1767515452": {
             "ids": [
@@ -7517,76 +8221,26 @@
             "weight": 2,
             "count": 3
         },
-        "-1511810207:-990408421:-214090724": {
+        "-1511810207:-990408421:-933960497:-214090724": {
             "ids": [
                 -1511810207,
                 -990408421,
+                -933960497,
                 -214090724
             ],
             "regex": "te su",
             "weight": 7,
-            "count": 3
+            "count": 4
         },
-        "-1511810207:-990408421": {
+        "-1511810207:-990408421:-933960497": {
             "ids": [
                 -1511810207,
-                -990408421
+                -990408421,
+                -933960497
             ],
             "regex": "ate su",
             "weight": 8,
-            "count": 2
-        },
-        "-1509759495:-1113755394:-320725928:2429071:462167840:462167840:725957081": {
-            "ids": [
-                -1509759495,
-                -1113755394,
-                -320725928,
-                2429071,
-                462167840,
-                462167840,
-                725957081
-            ],
-            "regex": "l sup",
-            "weight": 7,
-            "count": 7
-        },
-        "-1509759495:-1113755394:-320725928:2429071:462167840:725957081": {
-            "ids": [
-                -1509759495,
-                -1113755394,
-                -320725928,
-                2429071,
-                462167840,
-                725957081
-            ],
-            "regex": "l sup",
-            "weight": 7,
-            "count": 6
-        },
-        "-1509759495:-320725928:2429071:462167840:462167840:725957081": {
-            "ids": [
-                -1509759495,
-                -320725928,
-                2429071,
-                462167840,
-                462167840,
-                725957081
-            ],
-            "regex": "ll sup",
-            "weight": 8,
-            "count": 6
-        },
-        "-1509759495:-320725928:2429071:462167840:725957081": {
-            "ids": [
-                -1509759495,
-                -320725928,
-                2429071,
-                462167840,
-                725957081
-            ],
-            "regex": "ll sup",
-            "weight": 8,
-            "count": 5
+            "count": 3
         },
         "-1509759495:2429071:725957081": {
             "ids": [
@@ -7616,51 +8270,64 @@
             "weight": 7,
             "count": 2
         },
-        "-1459467322:1250060492": {
+        "-1459467322:1222079660:1250060492": {
             "ids": [
                 -1459467322,
+                1222079660,
                 1250060492
             ],
             "regex": "vour",
             "weight": 4,
+            "count": 3
+        },
+        "-1459467322:1222079660": {
+            "ids": [
+                -1459467322,
+                1222079660
+            ],
+            "regex": "vour s",
+            "weight": 8,
             "count": 2
         },
-        "-1455456646:-1208226029:-1208226029:-1097100478:-227548965": {
+        "-1455456646:-1208226029:-1208226029:-1097100478:-227548965:315351789": {
             "ids": [
                 -1455456646,
                 -1208226029,
                 -1208226029,
                 -1097100478,
-                -227548965
-            ],
-            "regex": "sh s",
-            "weight": 6,
-            "count": 5
-        },
-        "-1455456646:-1208226029:-1097100478:-1097100478:-227548965": {
-            "ids": [
-                -1455456646,
-                -1208226029,
-                -1097100478,
-                -1097100478,
-                -227548965
-            ],
-            "regex": "sh s",
-            "weight": 6,
-            "count": 5
-        },
-        "-1455456646:-1208226029:-1208226029:-1097100478:-1097100478:-227548965": {
-            "ids": [
-                -1455456646,
-                -1208226029,
-                -1208226029,
-                -1097100478,
-                -1097100478,
-                -227548965
+                -227548965,
+                315351789
             ],
             "regex": "sh s",
             "weight": 6,
             "count": 6
+        },
+        "-1455456646:-1208226029:-1097100478:-1097100478:-227548965:315351789": {
+            "ids": [
+                -1455456646,
+                -1208226029,
+                -1097100478,
+                -1097100478,
+                -227548965,
+                315351789
+            ],
+            "regex": "sh s",
+            "weight": 6,
+            "count": 6
+        },
+        "-1455456646:-1208226029:-1208226029:-1097100478:-1097100478:-227548965:315351789": {
+            "ids": [
+                -1455456646,
+                -1208226029,
+                -1208226029,
+                -1097100478,
+                -1097100478,
+                -227548965,
+                315351789
+            ],
+            "regex": "sh s",
+            "weight": 6,
+            "count": 7
         },
         "-1455456646:-1097100478": {
             "ids": [
@@ -7696,15 +8363,6 @@
                 -1424259925
             ],
             "regex": "l shi",
-            "weight": 7,
-            "count": 2
-        },
-        "-1429624874:1734696877": {
-            "ids": [
-                -1429624874,
-                1734696877
-            ],
-            "regex": "d swi",
             "weight": 7,
             "count": 2
         },
@@ -8037,13 +8695,23 @@
             "weight": 9,
             "count": 3
         },
+        "-1367286605:-1031068693:2128513064": {
+            "ids": [
+                -1367286605,
+                -1031068693,
+                2128513064
+            ],
+            "regex": "xto",
+            "weight": 3,
+            "count": 3
+        },
         "-1367286605:-1031068693": {
             "ids": [
                 -1367286605,
                 -1031068693
             ],
-            "regex": "xto",
-            "weight": 3,
+            "regex": "xtou",
+            "weight": 4,
             "count": 2
         },
         "-1367286605:-1031068693:1127679133": {
@@ -8088,45 +8756,26 @@
             "weight": 8,
             "count": 3
         },
-        "-1331101267:-1118982488:-1118982488:1066859238": {
+        "-1322490150:-918408030:2026560948": {
             "ids": [
-                -1331101267,
-                -1118982488,
-                -1118982488,
-                1066859238
+                -1322490150,
+                -918408030,
+                2026560948
             ],
-            "regex": "tning c",
-            "weight": 9,
+            "regex": "istrike s",
+            "weight": 11,
+            "count": 3
+        },
+        "-1322490150:-1322490150:-918408030:2026560948": {
+            "ids": [
+                -1322490150,
+                -1322490150,
+                -918408030,
+                2026560948
+            ],
+            "regex": "istrike s",
+            "weight": 11,
             "count": 4
-        },
-        "-1331101267:-1118982488:1066859238": {
-            "ids": [
-                -1331101267,
-                -1118982488,
-                1066859238
-            ],
-            "regex": "tning c",
-            "weight": 9,
-            "count": 3
-        },
-        "-1322490150:-918408030": {
-            "ids": [
-                -1322490150,
-                -918408030
-            ],
-            "regex": "istrike s",
-            "weight": 11,
-            "count": 2
-        },
-        "-1322490150:-1322490150:-918408030": {
-            "ids": [
-                -1322490150,
-                -1322490150,
-                -918408030
-            ],
-            "regex": "istrike s",
-            "weight": 11,
-            "count": 3
         },
         "-1312970239:99050123": {
             "ids": [
@@ -8369,14 +9018,15 @@
             "weight": 8,
             "count": 2
         },
-        "-1244206679:-287816079": {
+        "-1244206679:-477204265:-287816079": {
             "ids": [
                 -1244206679,
+                -477204265,
                 -287816079
             ],
             "regex": "rk s",
             "weight": 6,
-            "count": 2
+            "count": 3
         },
         "-1244206679:394232392": {
             "ids": [
@@ -8415,6 +9065,35 @@
             "regex": "ive l",
             "weight": 7,
             "count": 3
+        },
+        "-1223714701:1597219275:2108237356": {
+            "ids": [
+                -1223714701,
+                1597219275,
+                2108237356
+            ],
+            "regex": "at su",
+            "weight": 7,
+            "count": 3
+        },
+        "-1223714701:-364935411:2108237356": {
+            "ids": [
+                -1223714701,
+                -364935411,
+                2108237356
+            ],
+            "regex": "eat s",
+            "weight": 7,
+            "count": 3
+        },
+        "-1223714701:2108237356": {
+            "ids": [
+                -1223714701,
+                2108237356
+            ],
+            "regex": "eat su",
+            "weight": 8,
+            "count": 2
         },
         "-1222938347:-732556179": {
             "ids": [
@@ -8504,24 +9183,26 @@
             "weight": 7,
             "count": 3
         },
-        "-1208226029:-227548965": {
+        "-1208226029:-227548965:315351789": {
             "ids": [
                 -1208226029,
-                -227548965
-            ],
-            "regex": "eash s",
-            "weight": 8,
-            "count": 2
-        },
-        "-1208226029:-1208226029:-227548965": {
-            "ids": [
-                -1208226029,
-                -1208226029,
-                -227548965
+                -227548965,
+                315351789
             ],
             "regex": "eash s",
             "weight": 8,
             "count": 3
+        },
+        "-1208226029:-1208226029:-227548965:315351789": {
+            "ids": [
+                -1208226029,
+                -1208226029,
+                -227548965,
+                315351789
+            ],
+            "regex": "eash s",
+            "weight": 8,
+            "count": 4
         },
         "-1156556355:-624651582": {
             "ids": [
@@ -8629,31 +9310,6 @@
             "weight": 6,
             "count": 5
         },
-        "-978120228:-978120228:-738776691:282125270:282125270:1617597785": {
-            "ids": [
-                -978120228,
-                -978120228,
-                -738776691,
-                282125270,
-                282125270,
-                1617597785
-            ],
-            "regex": "p su",
-            "weight": 6,
-            "count": 6
-        },
-        "-978120228:-738776691:282125270:282125270:1617597785": {
-            "ids": [
-                -978120228,
-                -738776691,
-                282125270,
-                282125270,
-                1617597785
-            ],
-            "regex": "p su",
-            "weight": 6,
-            "count": 5
-        },
         "-978120228:282125270:282125270:1426692605:1426692605:1426692605": {
             "ids": [
                 -978120228,
@@ -8667,17 +9323,19 @@
             "weight": 6,
             "count": 6
         },
-        "-978120228:-978120228:-738776691:282125270:1617597785": {
+        "-978120228:-738776691:282125270:282125270:848276215:1137164610:1617597785": {
             "ids": [
-                -978120228,
                 -978120228,
                 -738776691,
                 282125270,
+                282125270,
+                848276215,
+                1137164610,
                 1617597785
             ],
             "regex": "p su",
             "weight": 6,
-            "count": 5
+            "count": 7
         },
         "-978120228:-978120228:282125270:1426692605:1426692605:1426692605": {
             "ids": [
@@ -8691,6 +9349,20 @@
             "regex": "ap s",
             "weight": 6,
             "count": 6
+        },
+        "-978120228:-978120228:-738776691:282125270:848276215:1137164610:1617597785": {
+            "ids": [
+                -978120228,
+                -978120228,
+                -738776691,
+                282125270,
+                848276215,
+                1137164610,
+                1617597785
+            ],
+            "regex": "p su",
+            "weight": 6,
+            "count": 7
         },
         "-978120228:282125270:282125270": {
             "ids": [
@@ -8712,31 +9384,6 @@
             "weight": 7,
             "count": 3
         },
-        "-967908565:-378087180:15402754:1492476278:1667117742": {
-            "ids": [
-                -967908565,
-                -378087180,
-                15402754,
-                1492476278,
-                1667117742
-            ],
-            "regex": "g cr",
-            "weight": 6,
-            "count": 5
-        },
-        "-967908565:-378087180:-378087180:15402754:1492476278:1667117742": {
-            "ids": [
-                -967908565,
-                -378087180,
-                -378087180,
-                15402754,
-                1492476278,
-                1667117742
-            ],
-            "regex": "g cr",
-            "weight": 6,
-            "count": 6
-        },
         "-967908565:1667117742": {
             "ids": [
                 -967908565,
@@ -8746,26 +9393,28 @@
             "weight": 9,
             "count": 2
         },
-        "-943346779:-679324204:1782822412:1782822412": {
+        "-943346779:-679324204:-112806287:1782822412:1782822412": {
             "ids": [
                 -943346779,
                 -679324204,
+                -112806287,
                 1782822412,
                 1782822412
             ],
             "regex": "my su",
             "weight": 7,
-            "count": 4
+            "count": 5
         },
-        "-943346779:-679324204:1782822412": {
+        "-943346779:-679324204:-112806287:1782822412": {
             "ids": [
                 -943346779,
                 -679324204,
+                -112806287,
                 1782822412
             ],
             "regex": "my su",
             "weight": 7,
-            "count": 3
+            "count": 4
         },
         "-900399017:36343521": {
             "ids": [
@@ -8786,25 +9435,6 @@
             "regex": "le str",
             "weight": 8,
             "count": 4
-        },
-        "-857621555:1982324000": {
-            "ids": [
-                -857621555,
-                1982324000
-            ],
-            "regex": "pyr",
-            "weight": 3,
-            "count": 2
-        },
-        "-857621555:1982324000:1982324000": {
-            "ids": [
-                -857621555,
-                1982324000,
-                1982324000
-            ],
-            "regex": "pyr",
-            "weight": 3,
-            "count": 3
         },
         "-857337929:-857337929:-857337929:-451052851": {
             "ids": [
@@ -8828,6 +9458,15 @@
             "weight": 7,
             "count": 4
         },
+        "-842018292:-455160090": {
+            "ids": [
+                -842018292,
+                -455160090
+            ],
+            "regex": "nstab",
+            "weight": 5,
+            "count": 2
+        },
         "-837463000:768157647:1941679088": {
             "ids": [
                 -837463000,
@@ -8847,8 +9486,9 @@
             "weight": 13,
             "count": 2
         },
-        "-834315048:-834315048:560283331:1586035725": {
+        "-834315048:-834315048:-834315048:560283331:1586035725": {
             "ids": [
+                -834315048,
                 -834315048,
                 -834315048,
                 560283331,
@@ -8856,10 +9496,11 @@
             ],
             "regex": "g tr",
             "weight": 6,
-            "count": 4
+            "count": 5
         },
-        "-834315048:-834315048:560283331:560283331:560283331:1586035725": {
+        "-834315048:-834315048:-834315048:560283331:560283331:560283331:1586035725": {
             "ids": [
+                -834315048,
                 -834315048,
                 -834315048,
                 560283331,
@@ -8869,7 +9510,7 @@
             ],
             "regex": "g tr",
             "weight": 6,
-            "count": 6
+            "count": 7
         },
         "-834315048:560283331:560283331:560283331:1586035725": {
             "ids": [
@@ -8883,15 +9524,6 @@
             "weight": 6,
             "count": 5
         },
-        "-810856355:169820709": {
-            "ids": [
-                -810856355,
-                169820709
-            ],
-            "regex": "enh",
-            "weight": 3,
-            "count": 2
-        },
         "-810856355:169820709:1450992759": {
             "ids": [
                 -810856355,
@@ -8902,35 +9534,24 @@
             "weight": 7,
             "count": 3
         },
-        "-800708377:-139481681:438728995:438728995": {
+        "-810856355:169820709": {
             "ids": [
-                -800708377,
-                -139481681,
-                438728995,
-                438728995
+                -810856355,
+                169820709
             ],
-            "regex": "r mu",
-            "weight": 6,
-            "count": 4
+            "regex": "hance s",
+            "weight": 9,
+            "count": 2
         },
-        "-800708377:-139481681:438728995": {
+        "-800708377:-139481681:2026560948": {
             "ids": [
                 -800708377,
                 -139481681,
-                438728995
+                2026560948
             ],
             "regex": "r mu",
             "weight": 6,
             "count": 3
-        },
-        "-800708377:-139481681": {
-            "ids": [
-                -800708377,
-                -139481681
-            ],
-            "regex": "ater m",
-            "weight": 8,
-            "count": 2
         },
         "-800708377:1576023636": {
             "ids": [
@@ -8941,24 +9562,35 @@
             "weight": 8,
             "count": 2
         },
-        "-798940880:2020576512": {
+        "-800708377:-139481681": {
             "ids": [
-                -798940880,
-                2020576512
+                -800708377,
+                -139481681
             ],
-            "regex": "fy s",
-            "weight": 6,
+            "regex": "r multip",
+            "weight": 10,
             "count": 2
         },
-        "-798940880:2020576512:2020576512": {
+        "-798940880:605495468:2020576512": {
             "ids": [
                 -798940880,
-                2020576512,
+                605495468,
                 2020576512
             ],
             "regex": "fy s",
             "weight": 6,
             "count": 3
+        },
+        "-798940880:605495468:2020576512:2020576512": {
+            "ids": [
+                -798940880,
+                605495468,
+                2020576512,
+                2020576512
+            ],
+            "regex": "fy s",
+            "weight": 6,
+            "count": 4
         },
         "-783135932:123127178:692388397": {
             "ids": [
@@ -8970,8 +9602,9 @@
             "weight": 4,
             "count": 3
         },
-        "-783135932:-783135932:123127178:692388397": {
+        "-783135932:-783135932:-783135932:123127178:692388397": {
             "ids": [
+                -783135932,
                 -783135932,
                 -783135932,
                 123127178,
@@ -8979,7 +9612,7 @@
             ],
             "regex": "bond",
             "weight": 4,
-            "count": 4
+            "count": 5
         },
         "-782511470:200354762": {
             "ids": [
@@ -9000,23 +9633,53 @@
             "weight": 6,
             "count": 3
         },
-        "-781123538:-172607696": {
+        "-781123538:-776191670": {
             "ids": [
                 -781123538,
-                -172607696
+                -776191670
             ],
-            "regex": "re su",
-            "weight": 7,
+            "regex": "ire su",
+            "weight": 8,
             "count": 2
         },
-        "-738776691:1617597785": {
+        "-776191670:387244693": {
+            "ids": [
+                -776191670,
+                387244693
+            ],
+            "regex": "bones",
+            "weight": 5,
+            "count": 2
+        },
+        "-776191670:387244693:387244693:387244693": {
+            "ids": [
+                -776191670,
+                387244693,
+                387244693,
+                387244693
+            ],
+            "regex": "bones",
+            "weight": 5,
+            "count": 4
+        },
+        "-750268838:1053826855": {
+            "ids": [
+                -750268838,
+                1053826855
+            ],
+            "regex": "rini",
+            "weight": 4,
+            "count": 2
+        },
+        "-738776691:848276215:1617597785": {
             "ids": [
                 -738776691,
+                848276215,
                 1617597785
             ],
             "regex": "ip s",
             "weight": 6,
-            "count": 2
+            "count": 3
         },
         "-737184714:-103227813": {
             "ids": [
@@ -9136,24 +9799,26 @@
             "weight": 3,
             "count": 5
         },
-        "-679324204:1782822412": {
+        "-679324204:-112806287:1782822412": {
             "ids": [
                 -679324204,
-                1782822412
-            ],
-            "regex": "asph",
-            "weight": 4,
-            "count": 2
-        },
-        "-679324204:1782822412:1782822412": {
-            "ids": [
-                -679324204,
-                1782822412,
+                -112806287,
                 1782822412
             ],
             "regex": "asph",
             "weight": 4,
             "count": 3
+        },
+        "-679324204:-112806287:1782822412:1782822412": {
+            "ids": [
+                -679324204,
+                -112806287,
+                1782822412,
+                1782822412
+            ],
+            "regex": "asph",
+            "weight": 4,
+            "count": 4
         },
         "-679324204:782087819:2136969571": {
             "ids": [
@@ -9211,8 +9876,8 @@
                 1286565353,
                 1286572542
             ],
-            "regex": "hera",
-            "weight": 4,
+            "regex": "ald o",
+            "weight": 7,
             "count": 5
         },
         "-561624249:1286565353": {
@@ -9234,6 +9899,35 @@
             "regex": "aal l",
             "weight": 7,
             "count": 4
+        },
+        "-559103030:2119094491": {
+            "ids": [
+                -559103030,
+                2119094491
+            ],
+            "regex": "ter c",
+            "weight": 7,
+            "count": 2
+        },
+        "-559103030:1016963440:1433625912": {
+            "ids": [
+                -559103030,
+                1016963440,
+                1433625912
+            ],
+            "regex": "in su",
+            "weight": 7,
+            "count": 3
+        },
+        "-559103030:2119094491:2119094491": {
+            "ids": [
+                -559103030,
+                2119094491,
+                2119094491
+            ],
+            "regex": "ter c",
+            "weight": 7,
+            "count": 3
         },
         "-529536248:1663835630:1663835630:1663835630": {
             "ids": [
@@ -9342,14 +10036,15 @@
             "weight": 6,
             "count": 3
         },
-        "-500021872:-499915991": {
+        "-500021872:-499915991:-499915991": {
             "ids": [
                 -500021872,
+                -499915991,
                 -499915991
             ],
             "regex": "rm b",
             "weight": 6,
-            "count": 2
+            "count": 3
         },
         "-498337737:1818327651": {
             "ids": [
@@ -9397,13 +10092,23 @@
             "weight": 4,
             "count": 3
         },
+        "-364935411:193649974:623929585": {
+            "ids": [
+                -364935411,
+                193649974,
+                623929585
+            ],
+            "regex": "ld su",
+            "weight": 7,
+            "count": 3
+        },
         "-364935411:193649974": {
             "ids": [
                 -364935411,
                 193649974
             ],
-            "regex": "ld su",
-            "weight": 7,
+            "regex": "eld su",
+            "weight": 8,
             "count": 2
         },
         "-364935411:2108237356": {
@@ -9411,8 +10116,8 @@
                 -364935411,
                 2108237356
             ],
-            "regex": "eat s",
-            "weight": 7,
+            "regex": "meat s",
+            "weight": 8,
             "count": 2
         },
         "-344400169:162810084:162810084:162810084:162810084": {
@@ -9503,6 +10208,16 @@
             "weight": 8,
             "count": 2
         },
+        "-325211858:554467748:554467748": {
+            "ids": [
+                -325211858,
+                554467748,
+                554467748
+            ],
+            "regex": "atic s",
+            "weight": 8,
+            "count": 3
+        },
         "-325026817:591386702:840711886:2091483670": {
             "ids": [
                 -325026817,
@@ -9532,11 +10247,43 @@
             "weight": 8,
             "count": 2
         },
-        "-320725928:297710369:462167840:462167840:1234452907": {
+        "-320915756:-172607696": {
+            "ids": [
+                -320915756,
+                -172607696
+            ],
+            "regex": "ure s",
+            "weight": 7,
+            "count": 2
+        },
+        "-320725928:-46857722:297710369:462167840:462167840:1234452907": {
             "ids": [
                 -320725928,
+                -46857722,
                 297710369,
                 462167840,
+                462167840,
+                1234452907
+            ],
+            "regex": "al cal",
+            "weight": 8,
+            "count": 6
+        },
+        "-320725928:-46857722:462167840": {
+            "ids": [
+                -320725928,
+                -46857722,
+                462167840
+            ],
+            "regex": "ral ca",
+            "weight": 8,
+            "count": 3
+        },
+        "-320725928:-46857722:297710369:462167840:1234452907": {
+            "ids": [
+                -320725928,
+                -46857722,
+                297710369,
                 462167840,
                 1234452907
             ],
@@ -9544,35 +10291,16 @@
             "weight": 8,
             "count": 5
         },
-        "-320725928:462167840": {
+        "-320725928:-46857722:462167840:462167840": {
             "ids": [
                 -320725928,
+                -46857722,
+                462167840,
                 462167840
             ],
             "regex": "ral ca",
-            "weight": 8,
-            "count": 2
-        },
-        "-320725928:297710369:462167840:1234452907": {
-            "ids": [
-                -320725928,
-                297710369,
-                462167840,
-                1234452907
-            ],
-            "regex": "al cal",
             "weight": 8,
             "count": 4
-        },
-        "-320725928:462167840:462167840": {
-            "ids": [
-                -320725928,
-                462167840,
-                462167840
-            ],
-            "regex": "ral ca",
-            "weight": 8,
-            "count": 3
         },
         "-258180815:620849826": {
             "ids": [
@@ -9683,6 +10411,15 @@
             "weight": 7,
             "count": 3
         },
+        "-145564373:1044963156": {
+            "ids": [
+                -145564373,
+                1044963156
+            ],
+            "regex": "ns su",
+            "weight": 7,
+            "count": 2
+        },
         "-112104909:629529339": {
             "ids": [
                 -112104909,
@@ -9702,6 +10439,15 @@
             "regex": "ts su",
             "weight": 7,
             "count": 4
+        },
+        "-60046395:959760050": {
+            "ids": [
+                -60046395,
+                959760050
+            ],
+            "regex": "ater s",
+            "weight": 8,
+            "count": 2
         },
         "-36228818:1005138642:1938496659": {
             "ids": [
@@ -9733,13 +10479,34 @@
             "weight": 4,
             "count": 2
         },
-        "56724218:1466087510": {
+        "56724218:1249439835:1466087510:1466087510": {
             "ids": [
                 56724218,
+                1249439835,
+                1466087510,
                 1466087510
             ],
             "regex": "fusi",
             "weight": 4,
+            "count": 4
+        },
+        "56724218:1249439835:1466087510": {
+            "ids": [
+                56724218,
+                1249439835,
+                1466087510
+            ],
+            "regex": "fusi",
+            "weight": 4,
+            "count": 3
+        },
+        "56724218:1249439835": {
+            "ids": [
+                56724218,
+                1249439835
+            ],
+            "regex": "fusio",
+            "weight": 5,
             "count": 2
         },
         "66643333:1219496762": {
@@ -9841,6 +10608,15 @@
             "weight": 6,
             "count": 3
         },
+        "225192394:1295990304": {
+            "ids": [
+                225192394,
+                1295990304
+            ],
+            "regex": "nt su",
+            "weight": 7,
+            "count": 2
+        },
         "255043266:255043266:326516981": {
             "ids": [
                 255043266,
@@ -9889,25 +10665,6 @@
             "regex": "mmor",
             "weight": 4,
             "count": 2
-        },
-        "344612921:438728995": {
-            "ids": [
-                344612921,
-                438728995
-            ],
-            "regex": "sser",
-            "weight": 4,
-            "count": 2
-        },
-        "344612921:438728995:438728995": {
-            "ids": [
-                344612921,
-                438728995,
-                438728995
-            ],
-            "regex": "sser",
-            "weight": 4,
-            "count": 3
         },
         "360422256:1356172730": {
             "ids": [
@@ -9987,6 +10744,39 @@
             "weight": 8,
             "count": 6
         },
+        "417594248:442795066:1429349276:1992645795": {
+            "ids": [
+                417594248,
+                442795066,
+                1429349276,
+                1992645795
+            ],
+            "regex": "sm s",
+            "weight": 6,
+            "count": 4
+        },
+        "417594248:442795066:442795066:1429349276:1992645795": {
+            "ids": [
+                417594248,
+                442795066,
+                442795066,
+                1429349276,
+                1992645795
+            ],
+            "regex": "sm s",
+            "weight": 6,
+            "count": 5
+        },
+        "417594248:1429349276:1992645795": {
+            "ids": [
+                417594248,
+                1429349276,
+                1992645795
+            ],
+            "regex": "ism s",
+            "weight": 7,
+            "count": 3
+        },
         "418832911:1918929879": {
             "ids": [
                 418832911,
@@ -9995,25 +10785,6 @@
             "regex": "adl",
             "weight": 3,
             "count": 2
-        },
-        "442795066:1429349276": {
-            "ids": [
-                442795066,
-                1429349276
-            ],
-            "regex": "sm s",
-            "weight": 6,
-            "count": 2
-        },
-        "442795066:442795066:1429349276": {
-            "ids": [
-                442795066,
-                442795066,
-                1429349276
-            ],
-            "regex": "sm s",
-            "weight": 6,
-            "count": 3
         },
         "514948092:1591205766": {
             "ids": [
@@ -10141,7 +10912,7 @@
                 571245490,
                 1596997884
             ],
-            "regex": "esh o",
+            "regex": "sh of",
             "weight": 7,
             "count": 2
         },
@@ -10159,9 +10930,19 @@
                 593157404,
                 1576023636
             ],
-            "regex": "ero",
-            "weight": 3,
+            "regex": "nero",
+            "weight": 4,
             "count": 2
+        },
+        "593157404:1188998747:1576023636": {
+            "ids": [
+                593157404,
+                1188998747,
+                1576023636
+            ],
+            "regex": "sity s",
+            "weight": 8,
+            "count": 3
         },
         "608236363:1543958340:1543958340": {
             "ids": [
@@ -10182,6 +10963,15 @@
             "regex": "eld c",
             "weight": 7,
             "count": 3
+        },
+        "623929585:1418121244": {
+            "ids": [
+                623929585,
+                1418121244
+            ],
+            "regex": "ul h",
+            "weight": 6,
+            "count": 2
         },
         "633680979:1520334424": {
             "ids": [
@@ -10248,6 +11038,34 @@
             "regex": "rage su",
             "weight": 9,
             "count": 3
+        },
+        "791499353:1667117742": {
+            "ids": [
+                791499353,
+                1667117742
+            ],
+            "regex": "ry su",
+            "weight": 7,
+            "count": 2
+        },
+        "824814599:988210247:988210247": {
+            "ids": [
+                824814599,
+                988210247,
+                988210247
+            ],
+            "regex": "vine b",
+            "weight": 8,
+            "count": 3
+        },
+        "824814599:988210247": {
+            "ids": [
+                824814599,
+                988210247
+            ],
+            "regex": "vine b",
+            "weight": 8,
+            "count": 2
         },
         "853581844:1111679498": {
             "ids": [
@@ -10316,15 +11134,6 @@
             "regex": "ring st",
             "weight": 9,
             "count": 4
-        },
-        "1016963440:1433625912": {
-            "ids": [
-                1016963440,
-                1433625912
-            ],
-            "regex": "in su",
-            "weight": 7,
-            "count": 2
         },
         "1040962523:1563961089:1974536099": {
             "ids": [
@@ -10422,12 +11231,12 @@
             "weight": 8,
             "count": 2
         },
-        "1597219275:2108237356": {
+        "1998965074:2128513064": {
             "ids": [
-                1597219275,
-                2108237356
+                1998965074,
+                2128513064
             ],
-            "regex": "at su",
+            "regex": "ad su",
             "weight": 7,
             "count": 2
         }
