@@ -1,4 +1,4 @@
-import type {ItemBase as ItemBasetype, LegacyItemRegex as ItemRegex} from "@poe2/types/generated/item";
+import type {ItemBase, ItemRegex} from "@poe2/types/generated/item";
 import type {RelicRegex} from "@poe2/types/generated/relic";
 import type {Token} from "@poe2/types/generated/tablet";
 import {ParsedAffix, parseAffixToken} from "./parseAffixToken";
@@ -31,14 +31,14 @@ function lazy<T>(load: () => Promise<T>): () => Promise<T> {
 }
 
 const itemBasetypes = lazy(() =>
-  fetchJson<ItemBasetype[]>(`${basePath}/item/Generated.Basetypes.Item.min.json`),
+  fetchJson<ItemBase[]>(`${basePath}/item/Generated.Basetypes.Item.min.json`),
 );
 
 const itemRegex = lazy(() =>
   fetchJson<ItemRegex[]>(`${basePath}/item/Generated.Item.min.json`),
 );
 
-export function loadItemBasetypes(): Promise<ItemBasetype[]> {
+export function loadItemBasetypes(): Promise<ItemBase[]> {
   return itemBasetypes();
 }
 

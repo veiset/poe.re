@@ -1,16 +1,16 @@
-export interface LegacyItemRegex {
+export interface ItemRegex {
   basetype: string;
-  categoryRegex: Array<LegacyCategoryRegex>;
+  categoryRegex: Array<CategoryRegex>;
 }
 
-export interface LegacyCategoryRegex {
+export interface CategoryRegex {
   category: string;
-  modifiers: Array<LegacyItemAffixRegex>;
+  modifiers: Array<ItemAffixRegex>;
   warnings: Array<string>;
 }
 
-export interface LegacyItemAffixRegex {
-  affixes: Array<LegacyAffix>;
+export interface ItemAffixRegex {
+  affixes: Array<ItemAffix>;
   affixtype: string;
   after: Array<number>;
   before: Array<number>;
@@ -20,15 +20,15 @@ export interface LegacyItemAffixRegex {
   on: Array<number>;
   regex: string;
   start: number;
-  stats: Array<LegacyStat>;
+  stats: Array<ItemStat>;
 }
 
-export interface LegacyAffix {
+export interface ItemAffix {
   desc: string;
   name: string;
 }
 
-export interface LegacyStat {
+export interface ItemStat {
   hasRange: boolean;
   id: string;
   max: number;
@@ -36,4 +36,4 @@ export interface LegacyStat {
   numberIndex?: number | null;
 }
 
-export type ItemGenerated = Array<LegacyItemRegex>;
+export type ItemGenerated = Array<ItemRegex>;
