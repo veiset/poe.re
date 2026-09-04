@@ -1,7 +1,7 @@
 import {describe, expect, test} from "vitest";
 import {generateBoundedValueRegex} from "@shared/core/regex/GenerateNumberRegex";
 import {generateRareItemRegex} from "./ItemOutput";
-import {ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {ItemAffixRegex} from "@shared/generated/item";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
 const itemBase = {
@@ -38,12 +38,7 @@ const settings = (values: Record<number, string>): ItemCraftingSettings => ({
 const modifier = (overrides: Partial<ItemAffixRegex>): ItemAffixRegex => ({
   desc: "Test modifier",
   regex: "damage$",
-  start: 0,
-  end: 0,
-  disabled: [],
-  before: [],
-  on: [],
-  after: [],
+  start: 0, end: 0, disabled: [], before: [], on: [], after: [],
   affixtype: "PREFIX",
   stats: [],
   affixes: [],

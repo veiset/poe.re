@@ -1,7 +1,7 @@
 import {Itembase} from "./ItemBaseSelector";
 import classNames from "classnames";
 import {categoryOrder, cleanCategoryName, groupedCategory} from "@shared/core/item/GroupUtils";
-import {CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
 
 export interface RateItemSelectProps {
   itemRegex: ItemRegex

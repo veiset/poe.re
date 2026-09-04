@@ -1,8 +1,10 @@
 import React from "react";
 import {SelectOption} from "../settings";
+import {numericRegexPosition} from "../utils/SelectedOptionRegex";
 
 interface SelectElementProps {
   name: string
+  regex: string
   ranges: number[][]
   current: SelectOption
   selected: SelectOption[]
@@ -10,8 +12,10 @@ interface SelectElementProps {
 }
 
 export function SelectElement(props: SelectElementProps) {
-  const {name, ranges, current, selected, setSelected} = props;
-  const hasRange = name.startsWith("##%") && ranges.length > 0 && ranges[0][0] > 0;
+  const {name, regex, ranges, current, selected, setSelected} = props;
+  // Numeric regex generation currently supports integer rolls only
+  const hasRange = ranges[0]?.length >= 2 && ranges[0].every(Number.isInteger)
+    && numericRegexPosition({name, regex}) !== undefined;
   const displayName = name
     .replace(/\|/g, " • ");
 
@@ -35,7 +39,7 @@ export function SelectElement(props: SelectElementProps) {
           .filter((e) => e.name !== name)
           .concat({...current, isSelected: !current.isSelected}))
       }>
-        {hasRange && displayName.replace(/##/, "")}
+        {hasRange && displayName.replace("#", "")}
         {!hasRange && displayName.replace(/##/g, "#")}
       </span>
     </div>
@@ -61,6 +65,7 @@ export function SelectList(props: SelectListProps) {
               current={selected.find((e) => e.name === mod.name) as SelectOption || mod}
               ranges={mod.ranges}
               name={mod.name}
+              regex={mod.regex}
               selected={selected}
               setSelected={setSelected}
             />

@@ -1,0 +1,556 @@
+{
+    "tokens": [
+        {
+            "id": -2138218511,
+            "regex": "hains$",
+            "rawText": "Players are periodically Cursed with Temporal Chains",
+            "generalizedText": "^players are periodically cursed with temporal chains$",
+            "options": {
+                "name": "of Slowing",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -2081659203,
+            "regex": "a chaos$",
+            "rawText": "Monsters deal (5-20)% of Damage as Extra Chaos",
+            "generalizedText": "^monsters deal #% of damage as extra chaos$",
+            "options": {
+                "name": "Profane",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -2044821837,
+            "regex": "s of ig",
+            "rawText": "Area has patches of Ignited Ground",
+            "generalizedText": "^area has patches of ignited ground$",
+            "options": {
+                "name": "of Flames",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1922408793,
+            "regex": "h el",
+            "rawText": "Players are periodically Cursed with Elemental Weakness",
+            "generalizedText": "^players are periodically cursed with elemental weakness$",
+            "options": {
+                "name": "of Erosion",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1591163897,
+            "regex": "a cold$",
+            "rawText": "Monsters deal (5-20)% of Damage as Extra Cold",
+            "generalizedText": "^monsters deal #% of damage as extra cold$",
+            "options": {
+                "name": "Frostbitten",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1591080103,
+            "regex": "a fire$",
+            "rawText": "Monsters deal (5-20)% of Damage as Extra Fire",
+            "generalizedText": "^monsters deal #% of damage as extra fire$",
+            "options": {
+                "name": "Infernal",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1486983403,
+            "regex": "trates",
+            "rawText": "Monster Damage Penetrates (6-14)% Elemental Resistances",
+            "generalizedText": "^monster damage penetrates #% elemental resistances$",
+            "options": {
+                "name": "Penetrating",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1323891900,
+            "regex": "ed ai",
+            "rawText": "Monsters have (30-70)% increased Stun Threshold|Monsters have (39-79)% increased Ailment Threshold",
+            "generalizedText": "^monsters have #% increased stun threshold$|^monsters have #% increased ailment threshold$",
+            "options": {
+                "name": "of the Unwavering",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1315426303,
+            "regex": "less r",
+            "rawText": "Players have (29-40)% less Recovery Rate of Life and Energy Shield",
+            "generalizedText": "^players have #% less recovery rate of life and energy shield$",
+            "options": {
+                "name": "of Smothering",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1124567907,
+            "regex": "rs ta",
+            "rawText": "Monsters take (15-26)% reduced Extra Damage from Critical Hits",
+            "generalizedText": "^monsters take #% reduced extra damage from critical hits$",
+            "options": {
+                "name": "of Obstruction",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1041278836,
+            "regex": "ealt$",
+            "rawText": "Monsters Break Armour equal to (15-30)% of Physical Damage dealt",
+            "generalizedText": "^monsters break armour equal to #% of physical damage dealt$",
+            "options": {
+                "name": "Shattering",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1024503212,
+            "regex": "ra ma",
+            "rawText": "Monsters gain 12% of maximum Life as Extra maximum Energy Shield",
+            "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield$",
+            "options": {
+                "name": "of Buffering",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -935484485,
+            "regex": "k, c",
+            "rawText": "Monsters have 10% increased Attack, Cast and Movement Speed",
+            "generalizedText": "^monsters have #% increased attack, cast and movement speed$",
+            "options": {
+                "name": "Fleeting",
+                "prefix": true,
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 258500777,
+            "regex": "ict b",
+            "rawText": "Monsters have (5-20)% chance to inflict Bleeding on Hit",
+            "generalizedText": "^monsters have #% chance to inflict bleeding on hit$",
+            "options": {
+                "name": "Puncturing",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 355009668,
+            "regex": "ance$",
+            "rawText": "Monsters have (80-260)% increased Critical Hit Chance|Monsters have +(120-300)% Critical Damage Bonus",
+            "generalizedText": "^monsters have #% increased critical hit chance$|^monsters have #% critical damage bonus$",
+            "options": {
+                "name": "Destructive",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 362137131,
+            "regex": "% mon",
+            "rawText": "+(20-35)% Monster Elemental Resistances",
+            "generalizedText": "^#% monster elemental resistances$",
+            "options": {
+                "name": "of the Prism",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 457744569,
+            "regex": "ased mon",
+            "rawText": "(5-20)% increased Monster Damage",
+            "generalizedText": "^#% increased monster damage$",
+            "options": {
+                "name": "Painful",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 472015170,
+            "regex": "ured$",
+            "rawText": "Monsters are Armoured",
+            "generalizedText": "^monsters are armoured$",
+            "options": {
+                "name": "of Enduring",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 525934570,
+            "regex": "f chi",
+            "rawText": "Area has patches of Chilled Ground",
+            "generalizedText": "^area has patches of chilled ground$",
+            "options": {
+                "name": "of Sleet",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 595280103,
+            "regex": "s coo",
+            "rawText": "Players have (20-30)% less Cooldown Recovery Rate",
+            "generalizedText": "^players have #% less cooldown recovery rate$",
+            "options": {
+                "name": "of Fatigue",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 632224647,
+            "regex": "s extra l",
+            "rawText": "Monsters deal (5-20)% of Damage as Extra Lightning",
+            "generalizedText": "^monsters deal #% of damage as extra lightning$",
+            "options": {
+                "name": "Thunderous",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 803825999,
+            "regex": "dup$",
+            "rawText": "Monsters have (50-100)% increased Stun Buildup",
+            "generalizedText": "^monsters have #% increased stun buildup$",
+            "options": {
+                "name": "Impacting",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 888732093,
+            "regex": "ble$",
+            "rawText": "Players are periodically Cursed with Enfeeble",
+            "generalizedText": "^players are periodically cursed with enfeeble$",
+            "options": {
+                "name": "of Enfeebling",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 897836482,
+            "regex": "sive$",
+            "rawText": "Monsters are Evasive",
+            "generalizedText": "^monsters are evasive$",
+            "options": {
+                "name": "of Evasion",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 962514212,
+            "regex": "ced f",
+            "rawText": "Players gain (24-35)% reduced Flask Charges",
+            "generalizedText": "^players gain #% reduced flask charges$",
+            "options": {
+                "name": "of Drought",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 990634028,
+            "regex": "s of sh",
+            "rawText": "Area has patches of Shocked Ground",
+            "generalizedText": "^area has patches of shocked ground$",
+            "options": {
+                "name": "of Shocking",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1208109589,
+            "regex": "d accu",
+            "rawText": "Monsters have (10-40)% increased Accuracy Rating",
+            "generalizedText": "^monsters have #% increased accuracy rating$",
+            "options": {
+                "name": "Precise",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1449881570,
+            "regex": "son o",
+            "rawText": "Monsters have (13-34)% chance to Poison on Hit",
+            "generalizedText": "^monsters have #% chance to poison on hit$",
+            "options": {
+                "name": "Venomous",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1498656041,
+            "regex": "ed el",
+            "rawText": "Monster have (60-120)% increased Elemental Ailment Application",
+            "generalizedText": "^monster have #% increased elemental ailment application$",
+            "options": {
+                "name": "of Overpowering",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1522418316,
+            "regex": "% ma",
+            "rawText": "-(4-10)% maximum Player Resistances",
+            "generalizedText": "^-#% maximum player resistances$",
+            "options": {
+                "name": "of Exposure",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1778319603,
+            "regex": "ore mo",
+            "rawText": "(10-26)% more Monster Life",
+            "generalizedText": "^#% more monster life$",
+            "options": {
+                "name": "Tough",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1985506203,
+            "regex": "rses o",
+            "rawText": "(30-50)% less effect of Curses on Monsters",
+            "generalizedText": "^#% less effect of curses on monsters$",
+            "options": {
+                "name": "of Hexwarding",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        }
+    ],
+    "optimizationTable": {
+        "-2138218511:-1922408793:888732093": {
+            "ids": [
+                -2138218511,
+                -1922408793,
+                888732093
+            ],
+            "regex": "ly cu",
+            "weight": 7,
+            "count": 3
+        },
+        "-2081659203:-1591163897:-1591080103:632224647": {
+            "ids": [
+                -2081659203,
+                -1591163897,
+                -1591080103,
+                632224647
+            ],
+            "regex": "rs de",
+            "weight": 7,
+            "count": 4
+        },
+        "-2081659203:-1591163897": {
+            "ids": [
+                -2081659203,
+                -1591163897
+            ],
+            "regex": "s extra c",
+            "weight": 11,
+            "count": 2
+        },
+        "-2044821837:525934570:990634028": {
+            "ids": [
+                -2044821837,
+                525934570,
+                990634028
+            ],
+            "regex": "patc",
+            "weight": 4,
+            "count": 3
+        },
+        "-1486983403:457744569": {
+            "ids": [
+                -1486983403,
+                457744569
+            ],
+            "regex": "ter da",
+            "weight": 8,
+            "count": 2
+        },
+        "-1315426303:595280103": {
+            "ids": [
+                -1315426303,
+                595280103
+            ],
+            "regex": "yers h",
+            "weight": 8,
+            "count": 2
+        }
+    }
+}

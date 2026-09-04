@@ -1,0 +1,807 @@
+{
+    "Abyss Scarab": {
+        "name": "Abyss Scarab",
+        "regex": "drag",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
+        "flavourText": "They search forever for more souls to drag to the dark.",
+        "description": "Area contains an additional [ContainsAbyss|Abyss]"
+    },
+    "Abyss Scarab of Crystals": {
+        "name": "Abyss Scarab of Crystals",
+        "regex": "bor",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQWJ5c3MiLCJzY2FsZSI6MX1d/84851bd122/GreaterScarabAbyss.png",
+        "flavourText": "Their borrowed power swirls within ghastly crystals.",
+        "description": "Non-final [ContainsAbyss|Abyss] Pits in Area create an [AbyssalCrystal|Abyssal Crystal] on closing"
+    },
+    "Abyss Scarab of Descending": {
+        "name": "Abyss Scarab of Descending",
+        "regex": "m;",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png",
+        "flavourText": "They invite you to meet them; to join them.",
+        "description": "Area contains an [AbyssalDepths|Abyssal Depths]"
+    },
+    "Abyss Scarab of Multitudes": {
+        "name": "Abyss Scarab of Multitudes",
+        "regex": "ssl",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/e28a53e1a0/NormalScarabAbyss.png",
+        "flavourText": "The Well hungers ceaselessly, even as it overflows.",
+        "description": "[ContainsAbyss|Abyss] Chasms in Area spawn 100% increased Monsters per fed [AbyssFedSoul|Soul]"
+    },
+    "Abyss Scarab of the Consort": {
+        "name": "Abyss Scarab of the Consort",
+        "regex": "ds'",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/b40fb2422b/AltTier4ScarabAbyss.png",
+        "flavourText": "They defend the depths at their Lords' command.",
+        "description": "An [ContainsAbyss|Abyss] Pit in Area will spawn an [AbyssalConsort|Abyssal Consort]"
+    },
+    "Ambush Scarab": {
+        "name": "Ambush Scarab",
+        "regex": "u'r",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/137917584a/LesserScarabStrongboxes.png",
+        "flavourText": "Is it still an ambush if you're expecting it?",
+        "description": "Area contains 4 additional Strongboxes"
+    },
+    "Ambush Scarab of Containment": {
+        "name": "Ambush Scarab of Containment",
+        "regex": "urk",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/da665a65ee/Tier4ScarabStrongboxes.png",
+        "flavourText": "The silence belies lurking doom.",
+        "description": "Area contains many additional Strongboxes|Area's inhabitants are lying in ambush"
+    },
+    "Ambush Scarab of Discernment": {
+        "name": "Ambush Scarab of Discernment",
+        "regex": "haf",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/72722370df/AltTier4ScarabStrongboxes.png",
+        "flavourText": "A keen eye sorts the worthy from the chaff.",
+        "description": "Strongboxes in Area are more likely to be rarer varieties"
+    },
+    "Ambush Scarab of Hidden Compartments": {
+        "name": "Ambush Scarab of Hidden Compartments",
+        "regex": "bv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/2654dacfee/NormalScarabStrongboxes.png",
+        "flavourText": "Beneath the obvious lies the real treasure...",
+        "description": "15% Chance for Strongboxes in Area to be openable again"
+    },
+    "Ambush Scarab of Potency": {
+        "name": "Ambush Scarab of Potency",
+        "regex": "ksm",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3Ryb25nYm94ZXMiLCJzY2FsZSI6MX1d/c2cb4efc18/GreaterScarabStrongboxes.png",
+        "flavourText": "The locksmith dreams of building a better box.",
+        "description": "75% Increased effect of Explicit Modifiers on Strongboxes in Area"
+    },
+    "Anarchy Scarab": {
+        "name": "Anarchy Scarab",
+        "regex": "it'",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/73d1ee9b23/LesserScarabAnarchy.png",
+        "flavourText": "On Wraeclast, it's kill or be killed.",
+        "description": "Area contains 5 additional Rogue Exiles"
+    },
+    "Anarchy Scarab of Gigantification": {
+        "name": "Anarchy Scarab of Gigantification",
+        "regex": "ump",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/d391e90e68/NormalScarabAnarchy.png",
+        "flavourText": "The consumption of sulphite can cause strange growth.",
+        "description": "Wild Rogue Exiles in Area have a 30% chance to be replaced with a Rogue Giant"
+    },
+    "Anarchy Scarab of Partnership": {
+        "name": "Anarchy Scarab of Partnership",
+        "regex": "hif",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQW5hcmNoeSIsInNjYWxlIjoxfV0/4697e57871/GreaterScarabAnarchy.png",
+        "flavourText": "Among exiles, alliances shift and change constantly.",
+        "description": "Wild Rogue Exiles in Area have a 50% chance to appear in pairs"
+    },
+    "Anarchy Scarab of the Exceptional": {
+        "name": "Anarchy Scarab of the Exceptional",
+        "regex": "ny,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFuYXJjaHkiLCJzY2FsZSI6MX1d/3f5f6a8671/Tier4ScarabAnarchy.png",
+        "flavourText": "Among many, one stands above the rest.",
+        "description": "Area contains an additional Exceptional Rogue Exile"
+    },
+    "Bestiary Scarab": {
+        "name": "Bestiary Scarab",
+        "regex": "stm",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
+        "flavourText": "The Beastmaster answers the call.",
+        "description": "Area contains Einhar"
+    },
+    "Bestiary Scarab of Duplicating": {
+        "name": "Bestiary Scarab of Duplicating",
+        "regex": "hat'",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
+        "flavourText": "\"What's better than one captured beast, exile?\"",
+        "description": "Create a copy of Beasts captured in Area"
+    },
+    "Bestiary Scarab of the Herd": {
+        "name": "Bestiary Scarab of the Herd",
+        "regex": "ampan",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
+        "flavourText": "The First Ones ran rampant and free in the forests of old.",
+        "description": "Area contains 5 additional Red Beasts if it contains Einhar"
+    },
+    "Betrayal Scarab": {
+        "name": "Betrayal Scarab",
+        "regex": "pay",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/d53970be47/LesserScarabBetrayal.png",
+        "flavourText": "The Syndicate must pay for what they have done.",
+        "description": "Area contains Jun"
+    },
+    "Betrayal Scarab of Reinforcements": {
+        "name": "Betrayal Scarab of Reinforcements",
+        "regex": "rmov",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmV0cmF5YWwiLCJzY2FsZSI6MX1d/7dd831f857/GreaterScarabBetrayal.png",
+        "flavourText": "Move and countermove.",
+        "description": "Immortal Syndicate Members in Area have 50% increased chance to be accompanied by reinforcements"
+    },
+    "Betrayal Scarab of Unbreaking": {
+        "name": "Betrayal Scarab of Unbreaking",
+        "regex": "dyi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJldHJheWFsIiwic2NhbGUiOjF9XQ/4290457e94/Tier4ScarabBetrayal.png",
+        "flavourText": "Dying over and over builds a tolerance to pain.",
+        "description": "Interrogated Immortal Syndicate targets in Area have a 50% chance to|not lose Rank upon completing Interrogation"
+    },
+    "Betrayal Scarab of the Allflame": {
+        "name": "Betrayal Scarab of the Allflame",
+        "regex": "fear",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/3e4a843098/NormalScarabBetrayal.png",
+        "flavourText": "Those that can never die fear only pain.",
+        "description": "75% Increased number of Monster Packs Substituted by Allflame Embers in Area"
+    },
+    "Beyond Scarab": {
+        "name": "Beyond Scarab",
+        "regex": "wal",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
+        "flavourText": "The silent wall and the raging storm oppose the endless swarm.",
+        "description": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
+    },
+    "Beyond Scarab of Haemophilia": {
+        "name": "Beyond Scarab of Haemophilia",
+        "regex": "aem",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
+        "flavourText": "Reality itself begins to bleed.",
+        "description": "Beyond Portals in Area have 50% increased Merging Radius|Characters that Kill Beyond Rare Monsters in Area have a 30% chance to gain their Modifiers for 20 seconds"
+    },
+    "Beyond Scarab of Resurgence": {
+        "name": "Beyond Scarab of Resurgence",
+        "regex": "y hu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
+        "flavourText": "They hunger.",
+        "description": "Beyond Bosses Spawned in Area are accompanied by Beyond Bosses of other Factions|Beyond Bosses in Area drop 20% increased Tainted Currency|Beyond Portals in Area have 30% increased chance to spawn a Unique Boss"
+    },
+    "Beyond Scarab of the Invasion": {
+        "name": "Beyond Scarab of the Invasion",
+        "regex": "lmo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJleW9uZCIsInNjYWxlIjoxfV0/a1d0b3e27b/Tier4ScarabBeyond.png",
+        "flavourText": "The fated hour is almost nigh.",
+        "description": "Rare and Unique Monsters slain in Area create 8 to 12 additional Beyond Portals"
+    },
+    "Blight Scarab": {
+        "name": "Blight Scarab",
+        "regex": "tend",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCbGlnaHQiLCJzY2FsZSI6MX1d/401222e4f4/LesserScarabBlight.png",
+        "flavourText": "The tendrils creep and grow...",
+        "description": "Area contains a Blight Encounter"
+    },
+    "Blight Scarab of Blooming": {
+        "name": "Blight Scarab of Blooming",
+        "regex": "ntu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
+        "flavourText": "Once a century, the Blight spills forth...",
+        "description": "Blight Encounters in Area have up to 3 additional Unique Bosses|Unique enemies in Blight Encounters have 100% increased life|Tier 14+ Blighted Maps found in Area drop as Blight-Ravaged Maps instead"
+    },
+    "Blight Scarab of Invigoration": {
+        "name": "Blight Scarab of Invigoration",
+        "regex": "ola",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/34e07da01c/AltTier4ScarabBlight.png",
+        "flavourText": "Reversing the polarity of the compression modulator seems to have intriguing effects...",
+        "description": "Each Empowering Tower in Areas grants Blighted Monsters in|range increased Difficulty and Reward"
+    },
+    "Blight Scarab of the Blightheart": {
+        "name": "Blight Scarab of the Blightheart",
+        "regex": "ycl",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmxpZ2h0Iiwic2NhbGUiOjF9XQ/d0aa6a6d55/GreaterScarabBlight.png",
+        "flavourText": "The core grows larger with each cycle, doomed to spill forth...",
+        "description": "Blight Encounters in Area have one Blighted Chest|Blight Encounters in Area spawn additional waves of Enemies|Blighted Chests in Area grow larger and more|rewarding the more Blighted Enemies are slain"
+    },
+    "Breach Scarab of Instability": {
+        "name": "Breach Scarab of Instability",
+        "regex": "arp",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
+        "flavourText": "Reality warps and bends.",
+        "description": "Area contains 2 additional Unstable Breaches"
+    },
+    "Breach Scarab of Resonant Cascade": {
+        "name": "Breach Scarab of Resonant Cascade",
+        "regex": "eake",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/d6fe5cdce6/AltTier4ScarabBreach.png",
+        "flavourText": "Reality weakens with each new wound.",
+        "description": "Unstable Breaches in Areas are 10% faster for each Unstable Breach already opened|Monsters from Unstable Breaches in Areas have increased Difficulty and Reward for|each Unstable Breach already opened"
+    },
+    "Breach Scarab of the Hive": {
+        "name": "Breach Scarab of the Hive",
+        "regex": "ngd",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/769139d13b/LesserScarabBreach.png",
+        "flavourText": "Their kingdoms always seek expansion.",
+        "description": "Area contains a Breach Hive"
+    },
+    "Breach Scarab of the Incensed Swarm": {
+        "name": "Breach Scarab of the Incensed Swarm",
+        "regex": "urt",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/2e4da41035/Tier4ScarabBreach.png",
+        "flavourText": "Their Domain expands further still.",
+        "description": "Ailith's skills in Area instead enrage the Hive, increasing the Difficulty|and Reward of subsequent waves"
+    },
+    "Breach Scarab of the Marshal": {
+        "name": "Breach Scarab of the Marshal",
+        "regex": "eer",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/864e785561/AltNormalScarabBreach.png",
+        "flavourText": "Engineered and Unwavering Loyalty.",
+        "description": "Unstable Breaches in Area contain a Boss|Breach Hives in Area lead to a Hive Fortress"
+    },
+    "Cartography Scarab of Corruption": {
+        "name": "Cartography Scarab of Corruption",
+        "regex": "liti",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWFwcyIsInNjYWxlIjoxfV0/7c589dbe02/GreaterScarabMaps.png",
+        "flavourText": "Corruption bleeds between realities.",
+        "description": "Non-Unique Maps found in Area are Corrupted with 8 Modifiers"
+    },
+    "Cartography Scarab of Escalation": {
+        "name": "Cartography Scarab of Escalation",
+        "regex": "rtu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/e7d11bcc5b/LesserScarabMaps.png",
+        "flavourText": "Opportunity thrives where dreams are most perilous.",
+        "description": "10% increased Maps found in Area for each Map Modifier affecting Area"
+    },
+    "Cartography Scarab of Risk": {
+        "name": "Cartography Scarab of Risk",
+        "regex": "isk",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/b41df1ff07/NormalScarabMaps.png",
+        "flavourText": "What we see in the mirror can only be our own reflection.",
+        "description": "Area has 2 additional random Modifiers"
+    },
+    "Cartography Scarab of the Multitude": {
+        "name": "Cartography Scarab of the Multitude",
+        "regex": "izo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/41c689bbef/AltNormalScarabMaps.png",
+        "flavourText": "There is no end, no horizon.",
+        "description": "Area contains 8 to 12 additional packs of|Difficult and Rewarding Monsters which drop 300% increased Maps"
+    },
+    "Delirium Scarab": {
+        "name": "Delirium Scarab",
+        "regex": "uo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/0b8b887e88/LesserScarabDelirium.png",
+        "flavourText": "A perfectly innocuous Scarab that does nothing at all.",
+        "description": "Area contains a Mirror of Delirium"
+    },
+    "Delirium Scarab of Delusions": {
+        "name": "Delirium Scarab of Delusions",
+        "regex": "alk",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
+        "flavourText": "What are you talking about?|The Atlas was always like this.",
+        "description": "Maps found in Area have layers of Delirium"
+    },
+    "Delirium Scarab of Mania": {
+        "name": "Delirium Scarab of Mania",
+        "regex": "d!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/9de6ce65c5/NormalScarabDelirium.png",
+        "flavourText": "They're so loud! Why are they so loud?!|All you can do is scream!",
+        "description": "Delirium Reward Meters fill 100% faster in Area|Delirium in Area increases 50% faster with distance from the mirror"
+    },
+    "Delirium Scarab of Neuroses": {
+        "name": "Delirium Scarab of Neuroses",
+        "regex": "eur",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
+        "flavourText": "Toothy grins shine in the dark.",
+        "description": "Delirium Encounters in Area contain all Unique Delirium Bosses|Delirium Reward Types in Area gain +1 to count on defeating a Unique Delirium Boss|Can only be used with Tier 11+ Maps"
+    },
+    "Delirium Scarab of Paranoia": {
+        "name": "Delirium Scarab of Paranoia",
+        "regex": "oia",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/e6730494ae/GreaterScarabDelirium.png",
+        "flavourText": "If it seems too good to be true...",
+        "description": "Delirium Encounters in Area generate 2 additional Reward types"
+    },
+    "Divination Scarab of Pilfering": {
+        "name": "Divination Scarab of Pilfering",
+        "regex": "sei",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGl2aW5hdGlvbiIsInNjYWxlIjoxfV0/73ab11f6bd/GreaterScarabDivination.png",
+        "flavourText": "If you do not seize your fate, someone else will.",
+        "description": "Divination Cards which drop in Area are stolen by a Final Map Boss|That Final Map Boss becomes more Difficult and deals|increased Damage the more Divination Cards they have stolen|That Final Map Boss duplicates all stolen Divination Cards when defeated"
+    },
+    "Divination Scarab of Plenty": {
+        "name": "Divination Scarab of Plenty",
+        "regex": "fut",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
+        "flavourText": "We create a thousand futures with every action.",
+        "description": "Area contains 6 to 10 additional Packs of Divination Touched Magic Monsters that|have 1000% increased chance to drop Divination Cards"
+    },
+    "Divination Scarab of The Cloister": {
+        "name": "Divination Scarab of The Cloister",
+        "regex": "loi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
+        "flavourText": "No disease can be contained forever.",
+        "description": "Area contains 8 to 12 additional packs of Doedre's Devoted|Doedre's Devoted have 1% additional chance to drop a Stacked Deck"
+    },
+    "Domination Scarab": {
+        "name": "Domination Scarab",
+        "regex": "simp",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/76cedf832c/LesserScarabDomination.png",
+        "flavourText": "A simple exchange. Blood for power.",
+        "description": "Area contains 3 additional Shrines"
+    },
+    "Domination Scarab of Apparitions": {
+        "name": "Domination Scarab of Apparitions",
+        "regex": "f ap",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/c907d44dec/NormalScarabDomination.png",
+        "flavourText": "Some paths to power lead only to madness.",
+        "description": "Area contains 2 additional Apparition Shrines"
+    },
+    "Domination Scarab of Evolution": {
+        "name": "Domination Scarab of Evolution",
+        "regex": "rrif",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRG9taW5hdGlvbiIsInNjYWxlIjoxfV0/8913234164/GreaterScarabDomination.png",
+        "flavourText": "The Atlas and Wraeclast share one terrifying secret.",
+        "description": "Area contains an additional Evolving Shrine"
+    },
+    "Domination Scarab of Terrors": {
+        "name": "Domination Scarab of Terrors",
+        "regex": "tev",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRvbWluYXRpb24iLCJzY2FsZSI6MX1d/0d55e72414/Tier4ScarabDomination.png",
+        "flavourText": "Whatever the prize, fight for it.",
+        "description": "Shrines in Area are guarded by an Atlas Boss|Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+    },
+    "Essence Scarab": {
+        "name": "Essence Scarab",
+        "regex": "ldn",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/4c99af0610/LesserScarabEssence.png",
+        "flavourText": "It is perfectly safe, the creatures trapped inside couldn't possibly still be living.",
+        "description": "Area contains 3 additional Imprisoned Monsters"
+    },
+    "Essence Scarab of Adaptation": {
+        "name": "Essence Scarab of Adaptation",
+        "regex": "latt",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/56560d691e/AltTier4ScarabEssence.png",
+        "flavourText": "The crystalline lattice expands in directions alien to the mortal mind.",
+        "description": "Imprisoned Monsters released in Areas grant a random Essence Modifier to another Imprisoned Monster in the Area|Imprisoned Monsters in Areas have increased Difficulty and Reward for|each Essence Modifier"
+    },
+    "Essence Scarab of Ascent": {
+        "name": "Essence Scarab of Ascent",
+        "regex": "iev",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/3a091b8052/NormalScarabEssence.png",
+        "flavourText": "A more perfect facet cannot be achieved.",
+        "description": "Essences found in Area are a tier higher"
+    },
+    "Essence Scarab of Calcification": {
+        "name": "Essence Scarab of Calcification",
+        "regex": "lci",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/d7e7534a07/Tier4ScarabEssence.png",
+        "flavourText": "The crystals... can spread?",
+        "description": "Rare monsters that are natural inhabitants of the Area are imprisoned by Essences"
+    },
+    "Essence Scarab of Stability": {
+        "name": "Essence Scarab of Stability",
+        "regex": "ols",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXNzZW5jZSIsInNjYWxlIjoxfV0/28e74041a5/GreaterScarabEssence.png",
+        "flavourText": "With the right tools and a precise hand, the manipulation of the crystals|can be made predictable.",
+        "description": "Corrupting an Essence in Area can only result in|upgrading or transforming Essences"
+    },
+    "Expedition Scarab": {
+        "name": "Expedition Scarab",
+        "regex": "cros",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/fa49f53ac8/LesserScarabExpedition.png",
+        "flavourText": "They come from across the sea in search of ancient truth.",
+        "description": "Area contains an Expedition Encounter"
+    },
+    "Expedition Scarab of Archaeology": {
+        "name": "Expedition Scarab of Archaeology",
+        "regex": "ios",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkV4cGVkaXRpb24iLCJzY2FsZSI6MX1d/6bd03eec75/Tier4ScarabExpedition.png",
+        "flavourText": "Curiosity leads to wisdom. Wisdom leads to power.",
+        "description": "Remnants in Expedition Encounters in Area have 2 additional Suffixes and Prefixes"
+    },
+    "Expedition Scarab of Infusion": {
+        "name": "Expedition Scarab of Infusion",
+        "regex": "tarl",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/cbeb3c974b/AltGreaterScarabExpedition.png",
+        "flavourText": "Starlight empowers even the dead if bathed long enough.",
+        "description": "Logbooks found in Area always have 4 Implicits|Expedition Monsters gain increased Difficulty and Reward for each Remnant detonated"
+    },
+    "Expedition Scarab of Runefinding": {
+        "name": "Expedition Scarab of Runefinding",
+        "regex": "h ca",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/a751f91a8e/NormalScarabExpedition.png",
+        "flavourText": "That which came from the stars longs to return.",
+        "description": "Expedition Encounters in Area have 100% increased|number of Runic Monster Markers"
+    },
+    "Expedition Scarab of Verisium Powder": {
+        "name": "Expedition Scarab of Verisium Powder",
+        "regex": "rly",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/1bf78dd20a/GreaterScarabExpedition.png",
+        "flavourText": "A properly refined pinch makes all the difference.",
+        "description": "Expedition Encounters in Area have 50% increased number of Explosives|80% increased Explosive Radius"
+    },
+    "Harvest Scarab": {
+        "name": "Harvest Scarab",
+        "regex": "rout",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
+        "flavourText": "Hidden routes lead to vales of shadow and light...",
+        "description": "Area contains the Sacred Grove"
+    },
+    "Harvest Scarab of Cornucopia": {
+        "name": "Harvest Scarab of Cornucopia",
+        "regex": "fru",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
+        "flavourText": "The taller the tree, the better the fruit.",
+        "description": "If Area contains the Sacred Grove, it will contain up to 1 additional Tier 4 seed of each type, if possible"
+    },
+    "Harvest Scarab of Doubling": {
+        "name": "Harvest Scarab of Doubling",
+        "regex": "brin",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
+        "flavourText": "A good season brings bounty.",
+        "description": "Lifeforce dropped by Harvest Monsters in Area is duplicated|Harvest Monsters in Area have 100% more Life"
+    },
+    "Horned Scarab of Awakening": {
+        "name": "Horned Scarab of Awakening",
+        "regex": "wan",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjQiLCJzY2FsZSI6MX1d/c939905663/SuperScarab4.png",
+        "flavourText": "The Atlas can be anything you want... and everything you want.",
+        "description": "Tier 16+ Areas contain the Bosses from a random Maven Invitation"
+    },
+    "Horned Scarab of Bloodlines": {
+        "name": "Horned Scarab of Bloodlines",
+        "regex": "urv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjEiLCJzY2FsZSI6MX1d/acc1b258a3/SuperScarab1.png",
+        "flavourText": "Only the hardiest survive. Only survivors perpetuate.",
+        "description": "Area has 150% increased Magic Monsters|Magic Monsters in area have an additional Modifier"
+    },
+    "Horned Scarab of Glittering": {
+        "name": "Horned Scarab of Glittering",
+        "regex": "gli",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjYiLCJzY2FsZSI6MX1d/f74c2fdd4f/SuperScarab6.png",
+        "flavourText": "Wealth flows to those that shine brightest.",
+        "description": "Players in Area gain increased Item Rarity for each Monster|slain, up to 400%, decaying over time"
+    },
+    "Horned Scarab of Nemeses": {
+        "name": "Horned Scarab of Nemeses",
+        "regex": "lory",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjIiLCJzY2FsZSI6MX1d/c4f92c444d/SuperScarab2.png",
+        "flavourText": "Glory draws ever tighter its own doom.",
+        "description": "Rare Monsters in Area have 2 additional Modifiers"
+    },
+    "Horned Scarab of Pandemonium": {
+        "name": "Horned Scarab of Pandemonium",
+        "regex": "punc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
+        "flavourText": "Punctured dreams bleed into the mind.",
+        "description": "Monster packs in Area have a 15% chance to be replaced by a random Atlas Boss|Modifiers to the Final Map Boss also apply to these Atlas Bosses"
+    },
+    "Horned Scarab of Preservation": {
+        "name": "Horned Scarab of Preservation",
+        "regex": "forg",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjMiLCJzY2FsZSI6MX1d/64d9f06e78/SuperScarab3.png",
+        "flavourText": "We must not forget those who came before.",
+        "description": "Other Scarabs are not consumed on use"
+    },
+    "Horned Scarab of Tradition": {
+        "name": "Horned Scarab of Tradition",
+        "regex": "osp",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjUiLCJzY2FsZSI6MX1d/cbdd57fa7e/SuperScarab5.png",
+        "flavourText": "To the strongest, prosperity be thine.",
+        "description": "All Rare and Unique Monsters in Area have dropped items|transformed by a Reward Modifier"
+    },
+    "Incursion Scarab": {
+        "name": "Incursion Scarab",
+        "regex": "unco",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/4afd758a13/LesserScarabIncursion.png",
+        "flavourText": "Uncover the secrets of the Vaal one incursion at a time.",
+        "description": "Area contains Alva"
+    },
+    "Incursion Scarab of Champions": {
+        "name": "Incursion Scarab of Champions",
+        "regex": "tzo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSW5jdXJzaW9uIiwic2NhbGUiOjF9XQ/ff92bda004/GreaterScarabIncursion.png",
+        "flavourText": "Only the best served in Atzoatl.",
+        "description": "Incursions in Area have a 35% chance for all Monsters to be at least Magic|Incursions in Area have 15% increased Pack Size"
+    },
+    "Incursion Scarab of Invasion": {
+        "name": "Incursion Scarab of Invasion",
+        "regex": "eit",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/a38b517f35/NormalScarabIncursion.png",
+        "flavourText": "A gate, once opened, may swing in either direction.",
+        "description": "Area contains 12 to 16 additional packs of Incursion Monsters"
+    },
+    "Incursion Scarab of Timelines": {
+        "name": "Incursion Scarab of Timelines",
+        "regex": "say",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkluY3Vyc2lvbiIsInNjYWxlIjoxfV0/748b10e2cf/Tier4ScarabIncursion.png",
+        "flavourText": "They say if you go far enough, you will meet yourself...",
+        "description": "Final Architect slain in Area will drop an Itemised Temple| Itemised Temples dropped in Area are generated based on current Temple layout, but with randomised room tiers"
+    },
+    "Influencing Scarab of Hordes": {
+        "name": "Influencing Scarab of Hordes",
+        "regex": "deas",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRWxkZXIiLCJzY2FsZSI6MX1d/660528eb40/GreaterScarabElder.png",
+        "flavourText": "Ideas cannot be contained.",
+        "description": "Influenced Monster Packs in Area have 40% increased Pack Size"
+    },
+    "Influencing Scarab of Interference": {
+        "name": "Influencing Scarab of Interference",
+        "regex": "mori",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNoYXBlciIsInNjYWxlIjoxfV0/320c05daeb/Tier4ScarabShaper.png",
+        "flavourText": "Memories resound in the Atlas, echoing forever.",
+        "description": "A Map Boss is accompanied by a random Shaper Guardian, Elder Guardian, Conqueror or Synthesis Boss|Can only be used with Tier 14+ Maps"
+    },
+    "Influencing Scarab of the Elder": {
+        "name": "Influencing Scarab of the Elder",
+        "regex": "ht l",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFbGRlciIsInNjYWxlIjoxfV0/8828d3f4eb/LesserScarabElder.png",
+        "flavourText": "Beyond the light lies only the void.",
+        "description": "Adds Elder Influence outcome to Area"
+    },
+    "Influencing Scarab of the Shaper": {
+        "name": "Influencing Scarab of the Shaper",
+        "regex": "awai",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTaGFwZXIiLCJzY2FsZSI6MX1d/caf0ac9307/LesserScarabShaper.png",
+        "flavourText": "A sea of stars awaits those who dare imagine.",
+        "description": "Adds Shaper Influence outcome to Area"
+    },
+    "Kalguuran Scarab": {
+        "name": "Kalguuran Scarab",
+        "regex": "deep",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/591426ae68/LesserScarabSettlers.png",
+        "flavourText": "Rich veins run deeper still.",
+        "description": "Area contains 2 additional Ore Deposits"
+    },
+    "Kalguuran Scarab of Enriching": {
+        "name": "Kalguuran Scarab of Enriching",
+        "regex": "es;",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNldHRsZXJzIiwic2NhbGUiOjF9XQ/62d3e05936/Tier4ScarabSettlers.png",
+        "flavourText": "The ore lives and breathes; and is not happy with your efforts.",
+        "description": "Monsters guarding Ore Deposits have increased Difficulty and|Reward and Ore Deposits contain 15% increased Ore|for each Ore Deposit completed in Area "
+    },
+    "Kalguuran Scarab of Guarded Riches": {
+        "name": "Kalguuran Scarab of Guarded Riches",
+        "regex": "ggi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
+        "flavourText": "Digging's the easy part. ",
+        "description": "Monsters guarding Ore Deposits in Area are at least Magic"
+    },
+    "Kalguuran Scarab of Refinement": {
+        "name": "Kalguuran Scarab of Refinement",
+        "regex": "ore'",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU2V0dGxlcnMiLCJzY2FsZSI6MX1d/24f57aa157/GreaterScarabSettlers.png",
+        "flavourText": "Ore's true worth lies not in stone, but in what it becomes.",
+        "description": "Ore Deposits in Area grant Smelted Bars instead of Marking Ore"
+    },
+    "Legion Scarab": {
+        "name": "Legion Scarab",
+        "regex": "peac",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/e7b6e5659c/LesserScarabLegion.png",
+        "flavourText": "What good is peace to a warrior?",
+        "description": "Area contains an additional Legion Encounter"
+    },
+    "Legion Scarab of Eternal Conflict": {
+        "name": "Legion Scarab of Eternal Conflict",
+        "regex": "erni",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkxlZ2lvbiIsInNjYWxlIjoxfV0/4a56211137/Tier4ScarabLegion.png",
+        "flavourText": "An eternity of blood. Glorious.",
+        "description": "Legion Monsters in Area can be broken out of Stasis multiple times|Legion Monsters in Area gain increased Difficulty and Reward for each time they are broken out"
+    },
+    "Legion Scarab of Officers": {
+        "name": "Legion Scarab of Officers",
+        "regex": "nag",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/986b842d3f/NormalScarabLegion.png",
+        "flavourText": "Even a battlefield has middle management.",
+        "description": "Legion Factions in Area have 5 additional Sergeants"
+    },
+    "Legion Scarab of Treasures": {
+        "name": "Legion Scarab of Treasures",
+        "regex": "imb",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/5d88c1f891/AltNormalScarabLegion.png",
+        "flavourText": "Ancient Hoards imbued with powerful Artifacts.",
+        "description": "Legion Chests in Area have a 20% chance to spread their Rewards| to Legion Monsters they release from stasis when they are broken out|Legion Monsters that have gained Rewards have increased Difficulty"
+    },
+    "Ritual Scarab of Abundance": {
+        "name": "Ritual Scarab of Abundance",
+        "regex": "bun",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiUml0dWFsIiwic2NhbGUiOjF9XQ/a990c91de5/GreaterScarabRitual.png",
+        "flavourText": "He draws ever closer...",
+        "description": "Rituals in Area offer 100% increased Favours"
+    },
+    "Ritual Scarab of Corpses": {
+        "name": "Ritual Scarab of Corpses",
+        "regex": "ts;",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlJpdHVhbCIsInNjYWxlIjoxfV0/323f689e68/Tier4ScarabRitual.png",
+        "flavourText": "Reduced to mere Puppets; they yearn for life once more.",
+        "description": "Rituals in Area contain an additional Rare Itemised Corpse Monster"
+    },
+    "Ritual Scarab of Selectiveness": {
+        "name": "Ritual Scarab of Selectiveness",
+        "regex": "pic",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/08f82dab28/LesserScarabRitual.png",
+        "flavourText": "Pick and choose which sacred tenets you prefer...",
+        "description": "Rerolling Favours at Ritual Altars in Area has no cost the first 2 times|Ritual Altars in Area allow rerolling Favours 2 additional times"
+    },
+    "Ritual Scarab of Wisps": {
+        "name": "Ritual Scarab of Wisps",
+        "regex": "ht,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/f2c3231213/NormalScarabRitual.png",
+        "flavourText": "Trust in the Draíocht, and you shall never be alone.",
+        "description": "Ritual Altars in Area spawn a Wildwood Wisp|Wildwood Wisps grant 100% increased Tribute Gained to nearby Players"
+    },
+    "Scarab of Adversaries": {
+        "name": "Scarab of Adversaries",
+        "regex": "enm",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/ab24a34cd1/AltLesserScarabMisc.png",
+        "flavourText": "They stand against you with equal enmity.",
+        "description": "Area contains 4 additional Packs with Mirrored Rare Monsters"
+    },
+    "Scarab of Divinity": {
+        "name": "Scarab of Divinity",
+        "regex": "fait",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
+        "flavourText": "Faith transforms.",
+        "description": "Up to 3 additional Rare Monsters in Area will be Pantheon-Touched|Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
+    },
+    "Scarab of Monstrous Lineage": {
+        "name": "Scarab of Monstrous Lineage",
+        "regex": "olve",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/9196715e8d/LesserScarabMisc.png",
+        "flavourText": "The bloodlines evolve faster than they can be culled.",
+        "description": "40% increased Magic Pack Size"
+    },
+    "Scarab of Radiant Storms": {
+        "name": "Scarab of Radiant Storms",
+        "regex": "hon",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MyIiwic2NhbGUiOjF9XQ/d19b59b6b8/Tier4ScarabMisc2.png",
+        "flavourText": "The great cacophony of life roars to a crescendo.",
+        "description": "Area contains a Resplendent Tempest"
+    },
+    "Scarab of Stability": {
+        "name": "Scarab of Stability",
+        "regex": "g!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MiLCJzY2FsZSI6MX1d/c80f553284/Tier4ScarabMisc.png",
+        "flavourText": "Astonishing! A means to sustain the connection...",
+        "description": "Portals to Area have a 50% chance to not be consumed on use"
+    },
+    "Scarab of Wisps": {
+        "name": "Scarab of Wisps",
+        "regex": "nects",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzEiLCJzY2FsZSI6MX1d/303001a475/GreaterScarabMisc1.png",
+        "flavourText": "The Draíocht connects everything that lives.",
+        "description": "Monsters in Area have a chance to be Empowered by 2000 Wildwood Wisps"
+    },
+    "Scarab of the Dextral": {
+        "name": "Scarab of the Dextral",
+        "regex": "ails",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiTWlzYyIsInNjYWxlIjoxfV0/4b55da6494/AltGreaterScarabMisc.png",
+        "flavourText": "Flip a coin, do you wish for Tails?",
+        "description": "100% increased effect of Area Suffix Modifiers|Area Prefix Modifiers have no effect"
+    },
+    "Scarab of the Sinistral": {
+        "name": "Scarab of the Sinistral",
+        "regex": "head",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzIiLCJzY2FsZSI6MX1d/6f752909bb/GreaterScarabMisc2.png",
+        "flavourText": "Flip a coin, do you wish for Heads?",
+        "description": "100% increased effect of Area Prefix Modifiers|Area Suffix Modifiers have no effect"
+    },
+    "Sulphite Scarab": {
+        "name": "Sulphite Scarab",
+        "regex": "elv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
+        "flavourText": "Delve into darkness in search of the truth...",
+        "description": "Area contains Niko"
+    },
+    "Sulphite Scarab of Fumes": {
+        "name": "Sulphite Scarab of Fumes",
+        "regex": "land",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
+        "flavourText": "When the land itself is sick, even the very ground rots and spills forth.",
+        "description": "Sulphite found in Map Area releases Enraging Fumes|Monsters affected by Enraging Fumes have 50% increased Item Quantity|Sulphite in your maps is guarded by Monsters from the Azurite Mine"
+    },
+    "Titanic Scarab": {
+        "name": "Titanic Scarab",
+        "regex": "nam",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/9ed658ddba/LesserScarabUnique.png",
+        "flavourText": "What power lies in a name?",
+        "description": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"
+    },
+    "Titanic Scarab of Legend": {
+        "name": "Titanic Scarab of Legend",
+        "regex": "umu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVW5pcXVlIiwic2NhbGUiOjF9XQ/0194f878a0/GreaterScarabUnique.png",
+        "flavourText": "Power accumulates.",
+        "description": "Unique Monsters in Area have 4 additional Monster Modifiers"
+    },
+    "Titanic Scarab of Treasures": {
+        "name": "Titanic Scarab of Treasures",
+        "regex": "p of",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
+        "flavourText": "Greed is a trap of the mind.",
+        "description": "Unique Monsters in Area have an additional Reward|Unique Monsters in Area have 30% increased Toughness"
+    },
+    "Torment Scarab": {
+        "name": "Torment Scarab",
+        "regex": "rime",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/8c43bf8c64/LesserScarabTorment.png",
+        "flavourText": "Their crimes in life haunt you in death.",
+        "description": "Area is haunted by 4 additional Tormented Spirits|Tormented Spirits in Area have a 10% chance to|be set free when Possessed Monsters are slain| and dig up a Possessed Monster"
+    },
+    "Torment Scarab of Peculiarity": {
+        "name": "Torment Scarab of Peculiarity",
+        "regex": "e!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/4c94a84fd8/NormalScarabTorment.png",
+        "flavourText": "Now there's a blood-curdling wail I haven't heard before!",
+        "description": "Tormented Spirits in Area are replaced with unusual variants"
+    },
+    "Torment Scarab of Possession": {
+        "name": "Torment Scarab of Possession",
+        "regex": "uly",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlRvcm1lbnQiLCJzY2FsZSI6MX1d/5b3bed9d3d/Tier4ScarabTorment.png",
+        "flavourText": "The strong are never truly alone.",
+        "description": "Rare Monsters in Area have a quarter chance to be Possessed by up to 3 Tormented Spirits"
+    },
+    "Trarthan Scarab": {
+        "name": "Trarthan Scarab",
+        "regex": "spoi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/2d075bbafc/LesserScarabMercenaries.png",
+        "flavourText": "To the victor go the spoils.",
+        "description": "Area is inhabited by a Mercenary"
+    },
+    "Trarthan Scarab of Infamy": {
+        "name": "Trarthan Scarab of Infamy",
+        "regex": "amy",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/f880a011d3/NormalScarabMercenaries.png",
+        "flavourText": "Some men must make their own way.",
+        "description": "Mercenaries found in Area are Infamous|Mercenaries found in Area are accompanied by two Wild Mercenaries"
+    },
+    "Trarthan Scarab of Renown": {
+        "name": "Trarthan Scarab of Renown",
+        "regex": "goe",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
+        "flavourText": "Who goes there, bedecked in legend?",
+        "description": "All Equipment Items on Mercenaries found in Area are Unique"
+    },
+    "Trarthan Scarab of Surprising Alliances": {
+        "name": "Trarthan Scarab of Surprising Alliances",
+        "regex": "urp",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1lcmNlbmFyaWVzIiwic2NhbGUiOjF9XQ/ec12948f39/Tier4ScarabMercenaries.png",
+        "flavourText": "\"Technically, historically... they're all exiles, really.\"",
+        "description": "Wild Rogue Exiles in Area have 50% chance to be accompanied by a Wild Mercenary|Wild Mercenaries have increased Difficulty for each Wild Mercenary in Area"
+    },
+    "Ultimatum Scarab": {
+        "name": "Ultimatum Scarab",
+        "regex": "chal",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/b1b423625d/LesserScarabUltimatum.png",
+        "flavourText": "A challenge may be requested at any time.",
+        "description": "Area contains an Ultimatum Encounter"
+    },
+    "Ultimatum Scarab of Bribing": {
+        "name": "Ultimatum Scarab of Bribing",
+        "regex": "tib",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
+        "flavourText": "A trial is only as incorruptible as its judge.",
+        "description": "Ultimatum Monsters grant 150% increased Experience|Ultimatum Encounters grant rewards as though you completed 2 additional Rounds"
+    },
+    "Ultimatum Scarab of Catalysing": {
+        "name": "Ultimatum Scarab of Catalysing",
+        "regex": "regr",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/abfc80cf45/Tier4ScarabUltimatum.png",
+        "flavourText": "Most regret finding out how the powder is made.",
+        "description": "Ultimatum Encounters in Area will only offer Catalysts|as Rewards to the Map Owner"
+    },
+    "Ultimatum Scarab of Dueling": {
+        "name": "Ultimatum Scarab of Dueling",
+        "regex": "ilu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVWx0aW1hdHVtIiwic2NhbGUiOjF9XQ/be3b513bfe/GreaterScarabUltimatum.png",
+        "flavourText": "Victory is meaningless, failure will be mocked.",
+        "description": "Ultimatum Encounters in Area will always lead to a Unique Boss if possible"
+    },
+    "Ultimatum Scarab of Inscription": {
+        "name": "Ultimatum Scarab of Inscription",
+        "regex": "wag",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/080e60e969/AltTier4ScarabUltimatum.png",
+        "flavourText": "There is always a wager to be made... if you can afford it.",
+        "description": "Ultimatum Encounter rewards in Area offering Catalysts|will offer Inscribed Ultimatums to the Map Owner instead"
+    }
+}

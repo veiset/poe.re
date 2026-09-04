@@ -1,6 +1,6 @@
-import {ItemBasetype} from "../types/generated/ItemBasetypesTypedef";
-import {ItemRegex} from "../types/generated/ItemTypedef";
-import {Token} from "../types/generated/RegexResult";
+import type {ItemBase, ItemRegex} from "@poe2/types/generated/item";
+import type {RelicRegex} from "@poe2/types/generated/relic";
+import type {Token} from "@poe2/types/generated/tablet";
 import {ParsedAffix, parseAffixToken} from "./parseAffixToken";
 
 export type WaystoneAffix = ParsedAffix & { prefix: boolean };
@@ -31,14 +31,14 @@ function lazy<T>(load: () => Promise<T>): () => Promise<T> {
 }
 
 const itemBasetypes = lazy(() =>
-  fetchJson<ItemBasetype[]>(`${basePath}/Generated.Basetypes.Item.json`),
+  fetchJson<ItemBase[]>(`${basePath}/item/Generated.Basetypes.Item.min.json`),
 );
 
 const itemRegex = lazy(() =>
-  fetchJson<ItemRegex[]>(`${basePath}/Generated.Item.json`),
+  fetchJson<ItemRegex[]>(`${basePath}/item/Generated.Item.min.json`),
 );
 
-export function loadItemBasetypes(): Promise<ItemBasetype[]> {
+export function loadItemBasetypes(): Promise<ItemBase[]> {
   return itemBasetypes();
 }
 
@@ -52,12 +52,12 @@ async function loadAffixTokens(file: string): Promise<Token<{prefix: boolean}>[]
 }
 
 const tabletAffixes = lazy(async () => {
-  const tokens = await loadAffixTokens(`${basePath}/Generated.Tablet.min.json`);
+  const tokens = await loadAffixTokens(`${basePath}/tablet/Generated.Tablet.min.json`);
   return tokens.map(parseAffixToken).sort((a, b) => a.name.localeCompare(b.name));
 });
 
 const waystoneAffixes = lazy(async () => {
-  const tokens = await loadAffixTokens(`${basePath}/Generated.Waystone.min.json`);
+  const tokens = await loadAffixTokens(`${basePath}/waystone/Generated.Waystone.min.json`);
   return tokens
     .map((token) => ({...parseAffixToken(token), prefix: token.options.prefix}))
     .sort((a, b) => a.name.localeCompare(b.name));
@@ -69,6 +69,14 @@ export function loadTabletAffixes(): Promise<TabletAffix[]> {
 
 export function loadWaystoneAffixes(): Promise<WaystoneAffix[]> {
   return waystoneAffixes();
+}
+
+const relicRegex = lazy(() =>
+  fetchJson<RelicRegex[]>(`${basePath}/relic/Generated.Relic.min.json`),
+);
+
+export function loadRelicRegex(): Promise<RelicRegex[]> {
+  return relicRegex();
 }
 
 async function loadTradeFile(file: string): Promise<TradeStatIdMap> {

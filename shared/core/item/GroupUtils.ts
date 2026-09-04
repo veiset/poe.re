@@ -1,4 +1,4 @@
-import {BaseType, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {BaseType, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
 import {countWords} from "@shared/core/utils";
 import {haveSameLastWord} from "@shared/core/regex/NumberOfWordsRegex";
 
@@ -40,12 +40,12 @@ export function groupedCategory(categories: CategoryRegex[]): Record<string, Cat
   }, {});
 }
 
-export function groupAffixes(itemRegex: Record<string, ItemRegex>): Record<string, ItemAffixRegex> {
-  return Object.entries(itemRegex)
-    .flatMap(([basetype, item]) =>
+export function groupAffixes(itemRegex: ItemRegex[]): Record<string, ItemAffixRegex> {
+  return itemRegex
+    .flatMap(item =>
       item.categoryRegex.flatMap(cat =>
         cat.modifiers.map(mod => ({
-          key: `${basetype}-${cat.category}-${mod.desc}`,
+          key: `${item.basetype}-${cat.category}-${mod.desc}`,
           value: mod
         }))
       )

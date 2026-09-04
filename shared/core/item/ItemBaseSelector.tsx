@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {ReactSearchAutocomplete} from 'react-search-autocomplete';
 import Dropdown from "@shared/components/dropdown/Dropdown";
 import "./ItemBaseSelector.css";
-import {BaseType} from "@shared/types/GeneratedItemMod.Types";
+import type {BaseType} from "@shared/generated/item";
 
 type Rarity = "Magic" | "Rare";
 

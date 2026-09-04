@@ -4,7 +4,7 @@ import {countWords} from "@shared/core/utils";
 import {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import {Itembase} from "@shared/core/item/ItemBaseSelector";
 import {wordRegex} from "@shared/core/regex/NumberOfWordsRegex";
-import {AffixStat, BaseType, ItemAffixRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {AffixStat, BaseType, ItemAffixRegex} from "@shared/generated/item";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
 type RareModSelectionEntry = {
@@ -98,7 +98,8 @@ export function generateRareItemRegex(
   if (!itemBase) return "";
 
   const mods: RareModSelectionEntry[] = Object.entries(selectedMods)
-    .map(([key, value]) => ({key, value, regex: affixMap[key]}));
+    .map(([key, value]) => ({key, value, regex: affixMap[key]}))
+    .filter((entry): entry is RareModSelectionEntry => entry.regex !== undefined);
 
   const result = mods
     .filter((e) => e.value.selected)

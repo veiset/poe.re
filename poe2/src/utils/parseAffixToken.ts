@@ -1,4 +1,4 @@
-import {Token} from "../types/generated/RegexResult";
+import type {Token} from "@poe2/types/generated/tablet";
 
 export interface ParsedAffix {
   id: number,

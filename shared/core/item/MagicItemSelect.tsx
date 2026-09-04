@@ -1,9 +1,8 @@
 import {Itembase} from "./ItemBaseSelector";
 import GroupedTokenList, {GroupedTokens} from "@poe/components/GroupedTokenList/GroupedTokenList";
 import React from "react";
-import {ItemAffixRegex} from "@poe/generated/GeneratedItemModsPOE1";
 import {categoryOrder, cleanCategoryName, groupedCategory} from "@shared/core/item/GroupUtils";
-import {Affix, CategoryRegex, ItemRegex} from "@shared/types/GeneratedItemMod.Types";
+import type {Affix, CategoryRegex, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
 
 interface MagicItemSelectProps {
   itemRegex: ItemRegex
@@ -40,7 +39,7 @@ const MagicItemSelect = (props: MagicItemSelectProps) => {
         const toggle = (key: string, category: string, affix: AffixType) => {
           const mod: SelectedMagicMod = {
             basetype: itemRegex.basetype,
-            category: category,
+            category,
             regex: affixes.find((a) => a.name === key)!!,
             affix: affix,
             desc: key
