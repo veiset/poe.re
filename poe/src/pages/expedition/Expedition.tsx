@@ -1,5 +1,6 @@
 import {useContext, useEffect, useState} from "react";
-import {BaseTypeRegex, baseTypeRegex, Item} from "@poe/generated/GeneratedExpedition";
+import type {BaseTypeRegex, Expedition as ExpeditionData, Item} from "@poe/types/generated/expedition";
+import {loadExpedition} from "@poe/utils/loadData";
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import ExpeditionRow, {ItemDisplay} from "./ExpeditionRow";
@@ -55,9 +56,14 @@ const Expedition = () => {
   const favoritePage = useFavoritePage("expedition", storedProfile.expedition);
   const profile = {...storedProfile, expedition: favoritePage.initialConfiguration};
   const {league} = usePoe1League();
+  const [expedition, setExpedition] = useState<ExpeditionData>();
+  const baseTypeRegex = expedition?.baseTypeRegex ?? {};
   const allBasesTypes = Array.from(Object.keys(baseTypeRegex));
-
   const allItems = allItemsFromGeneratedItems(baseTypeRegex);
+
+  useEffect(() => {
+    loadExpedition().then(setExpedition);
+  }, []);
 
   const [leaguePrices, setLeaguePrices] = useState<PoeNinjaItem[]>([]);
   const [fallbackPrices, setFallbackPrices] = useState<PoeNinjaItem[]>([]);
@@ -88,7 +94,7 @@ const Expedition = () => {
       fallbackPricing("Jewel"),
       fallbackPricing("Weapon"),
     ]).then((responses) => {
-      const valuedItems = cleanUpPoeNinjaItems(responses.flatMap((d) => d.lines));
+      const valuedItems = cleanUpPoeNinjaItems(responses.flatMap((d) => d.lines), baseTypeRegex);
       setFallbackPrices(valuedItems);
     });
     fetch(economyUrl("generated.txt"))
@@ -96,12 +102,13 @@ const Expedition = () => {
       .then((date) => {
         setLastUpdated(dateTextFromString(date));
       });
-  }, []);
+  }, [baseTypeRegex]);
 
   useEffect(() => {
-    const priceData = generateSortedPriceData(allItems, fallbackPrices, leaguePrices);
+    if (!expedition) return;
+    const priceData = generateSortedPriceData(allItems, fallbackPrices, leaguePrices, baseTypeRegex);
     setPriceData(priceData)
-  }, [fallbackPrices, leaguePrices]);
+  }, [expedition, fallbackPrices, leaguePrices]);
 
   useEffect(() => {
     Promise.all([
@@ -110,30 +117,30 @@ const Expedition = () => {
       fetchLeaguePricing(league, "Jewel"),
       fetchLeaguePricing(league, "Weapon"),
     ]).then((responses) => {
-      const pricedObtainableItems = cleanUpPoeNinjaItems(responses.flatMap((d) => d.lines));
+      const pricedObtainableItems = cleanUpPoeNinjaItems(responses.flatMap((d) => d.lines), baseTypeRegex);
       setLeaguePrices(pricedObtainableItems);
     }).catch(() => {
       console.warn("Fetching of real time data failed");
     });
-  }, [league]);
+  }, [league, baseTypeRegex]);
 
 
   useEffect(() => {
     if (priceData && addFillerItems) {
-      const fillerBases = generateFillerBases(selectedBaseTypes, priceData, minAddValue);
+      const fillerBases = generateFillerBases(selectedBaseTypes, priceData, minAddValue, baseTypeRegex);
       setFillerBases(fillerBases);
-      setResult(generateRegex(selectedBaseTypes, fillerBases.map((e) => e.baseType)));
+      setResult(generateRegex(selectedBaseTypes, fillerBases.map((e) => e.baseType), baseTypeRegex));
     } else {
       setFillerBases([]);
-      setResult(generateRegex(selectedBaseTypes, []));
+      setResult(generateRegex(selectedBaseTypes, [], baseTypeRegex));
     }
-  }, [priceData, addFillerItems, selectedBaseTypes, leaguePrices, minAddValue]);
+  }, [priceData, addFillerItems, selectedBaseTypes, leaguePrices, minAddValue, baseTypeRegex]);
 
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, expedition: settings}));
   }, [selectedBaseTypes, minValueToDisplay, addFillerItems, minAddValue]);
 
-  if (priceData === undefined) {
+  if (priceData === undefined || !expedition) {
     return <div>Loading...</div>;
   }
 
@@ -203,7 +210,7 @@ const Expedition = () => {
         </Collapsable>
       </div>
       <div className="row">
-        <ExpeditionHelp priceData={priceData} leaguePrices={leaguePrices} fallbackPrices={fallbackPrices}/>
+        <ExpeditionHelp priceData={priceData} leaguePrices={leaguePrices} fallbackPrices={fallbackPrices} expedition={expedition}/>
       </div>
       <div className="row">
         <div className="expedition-col-40">

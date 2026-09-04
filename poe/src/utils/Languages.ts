@@ -1,15 +1,3 @@
-import {regexMapModsCHINESE} from "@poe/generated/mapmods/Generated.MapModsV3.CHINESE";
-import {regexMapModsENGLISH} from "@poe/generated/mapmods/Generated.MapModsV3.ENGLISH";
-import {Regex} from "@poe/generated/GeneratedTypes";
-import {MapModsTokenOption} from "@poe/generated/mapmods/GeneratedTypes";
-import {regexMapModsFRENCH} from "@poe/generated/mapmods/Generated.MapModsV3.FRENCH";
-import {regexMapModsGERMAN} from "@poe/generated/mapmods/Generated.MapModsV3.GERMAN";
-import {regexMapModsJAPANESE} from "@poe/generated/mapmods/Generated.MapModsV3.JAPANESE";
-import {regexMapModsKOREAN} from "@poe/generated/mapmods/Generated.MapModsV3.KOREAN";
-import {regexMapModsPORTUGUESE} from "@poe/generated/mapmods/Generated.MapModsV3.PORTUGUESE";
-import {regexMapModsRUSSIAN} from "@poe/generated/mapmods/Generated.MapModsV3.RUSSIAN";
-import {regexMapModsSPANISH} from "@poe/generated/mapmods/Generated.MapModsV3.SPANISH";
-import {regexMapModsTHAI} from "@poe/generated/mapmods/Generated.MapModsV3.THAI";
 
 export type RepoeLanguageData = {
   readonly urlKey: string;
@@ -30,23 +18,6 @@ export const RepoeLanguage = {
   THAI: {urlKey: "Thai", short: "th", name: "Thai", flag: "🇹🇭"},
   CHINESE: {urlKey: "Traditional%20Chinese", short: "zh", name: "Chinese", flag: "🇨🇳"},
 } as const;
-
-export const LanguageFiles: {
-  mapmods: Record<RepoeLanguageKey, Regex<MapModsTokenOption>>
-} = {
-  mapmods: {
-    ENGLISH:    regexMapModsENGLISH,
-    FRENCH:     regexMapModsFRENCH,
-    GERMAN:     regexMapModsGERMAN,
-    JAPANESE:   regexMapModsJAPANESE,
-    KOREAN:     regexMapModsKOREAN,
-    PORTUGUESE: regexMapModsPORTUGUESE,
-    RUSSIAN:    regexMapModsRUSSIAN,
-    SPANISH:    regexMapModsSPANISH,
-    THAI:       regexMapModsTHAI,
-    CHINESE:    regexMapModsCHINESE,
-  }
-};
 
 export type RepoeLanguageKey = keyof typeof RepoeLanguage;
 

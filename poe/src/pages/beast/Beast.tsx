@@ -1,7 +1,8 @@
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import React, {useContext, useEffect, useState} from "react";
-import {beastRegex} from "@poe/generated/GeneratedBeastRegex";
+import {loadBeastRegex} from "@poe/utils/loadData";
+import type {BeastRegex} from "@poe/types/generated/beast";
 import "./Beast.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import {dateTextFromString} from "../expedition/ExpeditionUtils";
@@ -86,10 +87,15 @@ const Beast = () => {
   const [redBeastsOnly, setRedBeastsOnly] = useState(profile.beast.redBeastsOnly);
 
   const [beastPrices, setBeastPrices] = useState<BeastPriceRegex[]>([]);
+  const [beastRegex, setBeastRegex] = useState<BeastRegex>([]);
   const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
   const [result, setResult] = useState<string>("");
   const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
   const settings = {includeHarvest, minChaosValue, maxChaosValue, menagerieLimit, redBeastsOnly};
+
+  useEffect(() => {
+    loadBeastRegex().then(setBeastRegex);
+  }, []);
 
   useEffect(() => {
     if (!league) return;
@@ -119,7 +125,7 @@ const Beast = () => {
 
       setBeastPrices(pricedRegex);
     });
-  }, [league]);
+  }, [league, beastRegex]);
 
   useEffect(() => {
     if (priceRangeInitialized) return;

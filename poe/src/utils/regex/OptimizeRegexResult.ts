@@ -1,4 +1,4 @@
-import {Regex, Token} from "@poe/generated/GeneratedTypes";
+import type {RegexResult as Regex, Token} from "@poe/types/generated/mapmods";
 import {distinct} from "../ListUtils";
 
 export function idToRegex(id: number, regex: Regex<any>): string | undefined {

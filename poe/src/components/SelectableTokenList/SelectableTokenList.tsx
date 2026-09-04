@@ -1,4 +1,4 @@
-import {Token} from "@poe/generated/GeneratedTypes";
+import type {Token} from "@poe/types/generated/mapmods";
 import React, {Dispatch, ReactNode, SetStateAction} from "react";
 import SelectableSearch from "./SelectableSearch";
 import {regexSearch} from "../../utils/regex/ReverseRegexLookup";

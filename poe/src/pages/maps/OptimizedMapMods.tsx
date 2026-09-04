@@ -9,9 +9,9 @@ import {generateMapModRegex} from "./OptimizedMapOutput";
 import "./OptimizedMapMods.css";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import {TradeAsterisk} from "@shared/components/TradeAsterisk";
-import {LanguageFiles} from "@poe/utils/Languages";
 import {openTradeSearch, TradeSettings} from "@poe/core/TradeUrlBuilder";
-import {MapModsTokenOption, Token} from "@poe/generated/mapmods/GeneratedTypes";
+import type {MapModsRegex, MapOption as MapModsTokenOption, Token} from "@poe/types/generated/mapmods";
+import {loadMapMods} from "@poe/utils/loadData";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import IncludeExcludeToggle from "@poe/components/IncludeExcludeToggle/IncludeExcludeToggle";
 import NumberField from "@shared/components/NumberField/NumberField";
@@ -48,7 +48,7 @@ const OptimizedMapMods = () => {
   const [corrupted, setCorrupted] = useState(profile.map.corrupted);
   const [unidentified, setUnidentified] = useState(profile.map.unidentified);
   const [quality, setQuality] = useState(profile.map.quality);
-  const [regex, setRegex] = useState(LanguageFiles.mapmods[profile.language]);
+  const [regex, setRegex] = useState<MapModsRegex>();
   const [mapDropChance, setMapDropChance] = useState(profile.map.mapDropChance);
   const [displayNightmareMods, setDisplayNightmareMods] = useState(profile.map.displayNightmareMods);
   const [displayAffixBadges, setDisplayAffixBadges] = useState(profile.map.displayAffixBadges);
@@ -58,6 +58,10 @@ const OptimizedMapMods = () => {
   const [tradeExcludeShaperElder, setTradeExcludeShaperElder] = useState(profile.map.tradeExcludeShaperElder);
   const [asyncPriceRange, setAsyncPriceRange] = useState(profile.map.asyncPriceRange);
   const eightModDisabled = corrupted.enabled && !corrupted.include;
+
+  useEffect(() => {
+    loadMapMods(profile.language).then(setRegex);
+  }, [profile.language]);
 
   const [customTextStr, setCustomTextStr] = useState(profile.map.customText.value);
   const [enableCustomText, setEnableCustomText] = useState(profile.map.customText.enabled);
@@ -115,7 +119,7 @@ const OptimizedMapMods = () => {
 
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, map: {...settings}}));
-    setResult(generateMapModRegex(settings, regex, profile.language));
+    setResult(regex ? generateMapModRegex(settings, regex, profile.language) : "");
   }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, divination, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, tradeExcludeShaperElder, asyncPriceRange]);
 
   const renderAffixTag = displayAffixBadges
@@ -133,7 +137,7 @@ const OptimizedMapMods = () => {
           : {key: "suffix", label: "Suffix"}
     : undefined;
 
-  const visibleTokens = regex.tokens.filter((e) => displayNightmareMods ? true : !e.options.nm);
+  const visibleTokens = (regex?.tokens ?? []).filter((e) => displayNightmareMods ? true : !e.options.nm);
 
   return (
     <>

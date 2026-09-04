@@ -1,11 +1,10 @@
-import {JewelSettings, ScarabSettings} from "@poe/utils/SavedSettings";
-import {scarabs} from "@poe/generated/GeneratedScarabs";
-import {jewelAbyss, JewelRegex, jewelRegular} from "@poe/generated/GeneratedJewel";
+import {JewelSettings} from "@poe/utils/SavedSettings";
+import type {Jewel, JewelRegex} from "@poe/types/generated/jewel";
 
-const modLookupAbyss = new Map(jewelAbyss.map(i => [i.mod, i]));
-const modLookupRegular = new Map(jewelRegular.map(i => [i.mod, i]));
-
-export function generateJewelRegex(settings: JewelSettings): string {
+export function generateJewelRegex(settings: JewelSettings, jewel?: Jewel): string {
+  if (!jewel) return "";
+  const modLookupAbyss = new Map(jewel.abyss.map(i => [i.mod, i]));
+  const modLookupRegular = new Map(jewel.regular.map(i => [i.mod, i]));
   const selectedMods = settings.abyssJewel ? settings.selectedAbyss : settings.selectedRegular;
   const modLookup = settings.abyssJewel ? modLookupAbyss : modLookupRegular;
 

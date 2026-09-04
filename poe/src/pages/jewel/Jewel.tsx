@@ -5,7 +5,8 @@ import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import {defaultSettings, JewelSettings} from "@poe/utils/SavedSettings";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
-import {jewelAbyss, jewelRegular} from "@poe/generated/GeneratedJewel";
+import type {Jewel} from "@poe/types/generated/jewel";
+import {loadJewel} from "@poe/utils/loadData";
 import JewelMods from "./JewelMods";
 import {generateJewelRegex} from "./JewelOutput";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
@@ -18,9 +19,14 @@ const Jewel = () => {
   const storedProfile = loadSettings(globalProfile);
   const favoritePage = useFavoritePage("jewel", storedProfile.jewel);
   const profile = {...storedProfile, jewel: favoritePage.initialConfiguration};
+  const [jewel, setJewel] = useState<Jewel>();
 
-  const regularMods = jewelRegular;
-  const abyssMods = jewelAbyss;
+  useEffect(() => {
+    loadJewel().then(setJewel);
+  }, []);
+
+  const regularMods = jewel?.regular ?? [];
+  const abyssMods = jewel?.abyss ?? [];
   const regularModText = regularMods.map((e) => e.mod);
   const abyssModText = abyssMods.map((e) => e.mod);
 
@@ -37,8 +43,8 @@ const Jewel = () => {
 
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, jewel: {...settings}}));
-    setResult(generateJewelRegex(settings));
-  }, [allMatch, magicOnly, abyssJewel, selectedRegular, selectedAbyss, matchOpenPrefixSuffix, matchBothPrefixAndSuffix]);
+    setResult(generateJewelRegex(settings, jewel));
+  }, [allMatch, magicOnly, abyssJewel, selectedRegular, selectedAbyss, matchOpenPrefixSuffix, matchBothPrefixAndSuffix, jewel]);
 
   return (
     <>

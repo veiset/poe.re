@@ -4,7 +4,8 @@ import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/
 import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import "./Scarab.css";
-import {Scarab, scarabs} from "@poe/generated/GeneratedScarabs";
+import type {ScarabRegex, Scarabs as ScarabsData} from "@poe/types/generated/scarabs";
+import {loadScarabs} from "@poe/utils/loadData";
 import ScarabElement from "./ScarabElement";
 import {dateTextFromString} from "../expedition/ExpeditionUtils";
 import ModSearchBox from "@shared/components/ModSearchBox";
@@ -32,7 +33,7 @@ export interface PoeNinjaScarabData {
   items: PoeNinjaScarabItem[]
 }
 
-const sortByChaosValue = (prices: Map<string, number>, e1: Scarab, e2: Scarab) => {
+const sortByChaosValue = (prices: Map<string, number>, e1: ScarabRegex, e2: ScarabRegex) => {
   const chaosValue1 = prices.get(e1.name) ?? 0;
   const chaosValue2 = prices.get(e2.name) ?? 0;
   return chaosValue2 - chaosValue1;
@@ -49,6 +50,11 @@ const Scarabs = () => {
     valueFromKeyMap(savedProfile, "scarab.maxPrice") !== undefined
   );
   const {league} = usePoe1League();
+  const [scarabs, setScarabs] = useState<ScarabsData>({});
+
+  useEffect(() => {
+    loadScarabs().then(setScarabs);
+  }, []);
 
   const scarabNames = Array.from(Object.keys(scarabs));
   const scarabList = scarabNames.map((s) => ({...scarabs[s]}));
@@ -94,8 +100,8 @@ const Scarabs = () => {
   useEffect(() => {
     const settings: ScarabSettings = {minPrice, maxPrice, selected,};
     if (priceRangeInitialized && !favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, scarab: {...settings}}));
-    setResult(generateScarabRegex(settings));
-  }, [minPrice, maxPrice, selected, priceRangeInitialized]);
+    setResult(generateScarabRegex(settings, scarabs));
+  }, [minPrice, maxPrice, selected, priceRangeInitialized, scarabs]);
 
 
   return (

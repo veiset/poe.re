@@ -7,7 +7,7 @@
             "generalizedText": "^บอสประจำแผนที่ มาพร้อมกับ บอสสังเคราะห์ # ตัว$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^ผู้เล่น มีความเร็วในการ เติม พลังชีวิตและโล่พลังงาน ลดลง อีก #%$",
             "options": {
                 "scary": 650,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^ผู้เล่น มีค่าต้านทาน ทุกชนิด สูงสุด -#%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสบล็อคความเสียหาย โจมตี #%$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -55,7 +55,7 @@
             "generalizedText": "^ด่านมี สาวกคิทาวา อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -67,7 +67,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ ในด่าน ได้รับ สัมผัสจากเชปเปอร์$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -79,7 +79,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสหลีกเลี่ยง สถานะเจ็บป่วยธาตุ #%$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -91,7 +91,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ ทุกตัวมี ม็อด เพิ่มเติม # อย่าง$|^เพิ่มจำนวนของ มอนสเตอร์แรร์ #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -103,7 +103,7 @@
             "generalizedText": "^ด่านมี ปีศาจรยางค์ที่ไม่เสถียร$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -115,7 +115,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับ frenzy charge # ลูก เมื่อปะทะ$|^มอนสเตอร์ มีจำนวน frenzy charge สูงสุด #$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -127,7 +127,7 @@
             "generalizedText": "^มอนสเตอร์ นำ พลังชีวิตสูงสุด #% ไปเสริมเป็น โล่พลังงานสูงสุด$",
             "options": {
                 "scary": 240,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -139,7 +139,7 @@
             "generalizedText": "^ผู้เล่น มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง อีก #%$",
             "options": {
                 "scary": 94,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -151,7 +151,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ มีผิวหนามกายภาพ ที่สะท้อนความเสียหาย กายภาพ #$|^มอนสเตอร์แรร์ มีผิวหนามธาตุ ที่สะท้อนความเสียหาย ธาตุ #$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -163,7 +163,7 @@
             "generalizedText": "^มอนสเตอร์ ขโมย power, frenzy, endurance charge เมื่อปะทะ$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -175,7 +175,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสคริติคอล เพิ่มขึ้น #%$|^ตัวคูณคริติคอลของมอนสเตอร์ #%$",
             "options": {
                 "scary": 500,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -187,7 +187,7 @@
             "generalizedText": "^บัฟ ต่อตัวผู้เล่นหมดเวลา เร็วขึ้น #%$|^เพิ่ม สคารับ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -199,7 +199,7 @@
             "generalizedText": "^การโจมตีของมอนสเตอร์ มีโอกาสสร้างสถานะ ทิ่มแทง #% เมื่อปะทะ$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -211,7 +211,7 @@
             "generalizedText": "^ความเสียหายของมอนสเตอร์ เจาะต้านทาน ธาตุ #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -223,7 +223,7 @@
             "generalizedText": "^ด่านมี พื้นศักดิ์สิทธิ์ เป็นบางส่วน$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -235,7 +235,7 @@
             "generalizedText": "^ด่านมี โทเทม จำนวนมาก$",
             "options": {
                 "scary": 9,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -247,7 +247,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับ frenzy charge # ลูก เมื่อปะทะ$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -259,7 +259,7 @@
             "generalizedText": "^บอสยูนิค สร้างความเสียหาย เพิ่มขึ้น #%$|^บอสยูนิค มีความเร็วในการโจมตีและร่าย เพิ่มขึ้น #%$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -271,7 +271,7 @@
             "generalizedText": "^ด่านมี มอนสเตอร์ระยะไกล อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -283,7 +283,7 @@
             "generalizedText": "^ผู้เล่น มีโอกาสบล็อค ลดลง #%$|^ผู้เล่น มีค่าเกราะ ลดลง อีก #%$",
             "options": {
                 "scary": 295,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -295,7 +295,7 @@
             "generalizedText": "^สกิลของมอนสเตอร์ ชิ่ง เพิ่มเติม # ครั้ง$|^โพรเจกไทล์ของมอนสเตอร์ ชิ่ง เมื่อชนกับพื้นผิว$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -307,7 +307,7 @@
             "generalizedText": "^บัฟ ต่อตัวผู้เล่นหมดเวลา เร็วขึ้น #%$",
             "options": {
                 "scary": 96,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -319,7 +319,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสยับยั้งความเสียหาย เวท #%$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -331,7 +331,7 @@
             "generalizedText": "^เพิ่มความเร็วในการร่ายของ มอนสเตอร์ #%$|^เพิ่มความเร็วในการโจมตีของ มอนสเตอร์ #%$|^เพิ่มความเร็วในการเคลื่อนที่ของ มอนสเตอร์ #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -343,7 +343,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ เถาวัลย์เหนี่ยวรั้ง # ระดับ เมื่อปะทะ$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -355,7 +355,7 @@
             "generalizedText": "^ด่านมี ลูกแก้วจมน้ำ$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -367,7 +367,7 @@
             "generalizedText": "^เพิ่มพลังชีวิตของ มอนสเตอร์ อีก #%$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -379,7 +379,7 @@
             "generalizedText": "^ผู้เล่น ได้รับชาร์จขวดยา ลดลง #%$",
             "options": {
                 "scary": 210,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -391,7 +391,7 @@
             "generalizedText": "^ด่านมี สาวกลูนาริส อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -403,7 +403,7 @@
             "generalizedText": "^ค่าต้านทาน เคออส ของมอนสเตอร์ #%$|^ค่าต้านทาน ธาตุ ของมอนสเตอร์ #%$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -415,7 +415,7 @@
             "generalizedText": "^ด่านมี อันเดด อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -427,7 +427,7 @@
             "generalizedText": "^เพิ่มจำนวนของ มอนสเตอร์แรร์ #%$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -439,7 +439,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น ธาตุแบบสุ่ม$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -451,7 +451,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสหลีกเลี่ยงสถานะ พิษ, ทิ่มแทง, เลือดไหล #%$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -463,7 +463,7 @@
             "generalizedText": "^ด่านมี มนุษย์ อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -475,7 +475,7 @@
             "generalizedText": "^เพิ่มความเสียหายของ มอนสเตอร์ #%$",
             "options": {
                 "scary": 370,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -487,7 +487,7 @@
             "generalizedText": "^ลดผลของคำสาป ต่อมอนสเตอร์ อีก #%$",
             "options": {
                 "scary": 363,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -499,7 +499,7 @@
             "generalizedText": "^สกิลของมอนสเตอร์ ชิ่ง เพิ่มเติม # ครั้ง$",
             "options": {
                 "scary": 380,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -511,7 +511,7 @@
             "generalizedText": "^ผู้เล่น มีค่าต้านทาน ทุกชนิด สูงสุด -#%$",
             "options": {
                 "scary": 980,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -523,7 +523,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสยับยั้งความเสียหาย เวท #%$",
             "options": {
                 "scary": 290,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -535,7 +535,7 @@
             "generalizedText": "^ค่าป้องกันกายภาพ ของมอนสเตอร์ #%$|^ค่าต้านทาน ธาตุ ของมอนสเตอร์ #%$|^ค่าต้านทาน เคออส ของมอนสเตอร์ #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -547,7 +547,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ มีผิวหนามกายภาพ ที่สะท้อนความเสียหาย กายภาพ #$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -559,7 +559,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับ endurance charge # ลูก เมื่อปะทะ$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -571,7 +571,7 @@
             "generalizedText": "^ด่านมี มนุษย์แพะ อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -583,7 +583,7 @@
             "generalizedText": "^เพิ่มพลังชีวิตของ มอนสเตอร์ อีก #%$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -595,7 +595,7 @@
             "generalizedText": "^มอนสเตอร์ มีโอกาสสร้างสถานะ ลุกไหม้, แช่แข็ง, ช็อค #% เมื่อปะทะ$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -607,7 +607,7 @@
             "generalizedText": "^ด่านมี พื้นเสื่อมทราม เป็นบางส่วน$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -619,7 +619,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ ลุกไหม้, แช่แข็ง, ช็อค เมื่อปะทะ$|^ความเสียหายจากมอนสเตอร์ ทุกชนิด สร้างสถานะ ลุกไหม้, แช่แข็ง, ช็อค ได้$|^เพิ่ม สคารับ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -631,7 +631,7 @@
             "generalizedText": "^ผู้เล่น มีอัตราความแม่นยำ ลดลง อีก #%$",
             "options": {
                 "scary": 85,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -643,7 +643,7 @@
             "generalizedText": "^บอสยูนิค มีพลังชีวิต เพิ่มขึ้น #%$|^บอสยูนิค มีพื้นที่ส่งผล เพิ่มขึ้น #%$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -655,7 +655,7 @@
             "generalizedText": "^บอสยูนิค ถูกเข้าสิง$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^ผู้เล่น ได้รับผลจากขวดยา ลดลง อีก #%$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ ขาหัก เมื่อปะทะด้วยการโจมตี$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับความเสียหายเพิ่มเติมจากคริติคอล ลดลง #%$",
             "options": {
                 "scary": 250,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น ไฟ$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น เคออส$|^มอนสเตอร์ สร้างสถานะ เหี่ยวเฉา # วินาที เมื่อปะทะ$",
             "options": {
                 "scary": 455,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^เพิ่มความเร็วในการเคลื่อนที่ของ มอนสเตอร์ #%$|^เพิ่มความเร็วในการโจมตีของ มอนสเตอร์ #%$|^เพิ่มความเร็วในการร่ายของ มอนสเตอร์ #%$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^ด่านมี โครงกระดูก อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น เคออส$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^ผู้เล่น มีจำนวนความเสียหาย เวท ที่ถูกยับยั้ง ที่ถูกยกเว้น -#%$|^มอนสเตอร์ มีอัตราความแม่นยำ เพิ่มขึ้น #%$",
             "options": {
                 "scary": 365,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^ด่านมี ชนิดของมอนสเตอร์เพิ่มขึ้น$",
             "options": {
                 "scary": 8,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^ด่านมี สาวกโซลาริส อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^ตัวคูณคริติคอลของมอนสเตอร์ #%$|^มอนสเตอร์ มีโอกาสคริติคอล เพิ่มขึ้น #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^มอนสเตอร์ ไม่ถูกดูด พลังชีวิต, มานา หรือ โล่พลังงาน$",
             "options": {
                 "scary": 600,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^ผู้เล่น มีพื้นที่ส่งผล ลดลง อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -835,7 +835,7 @@
             "generalizedText": "^ผู้เล่น ถูกสาปด้วย หมดเรี่ยวแรง (enfeeble)$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -847,7 +847,7 @@
             "generalizedText": "^มอนสเตอร์ มีจำนวน endurance charge สูงสุด #$|^มอนสเตอร์ ได้รับ endurance charge # ลูก เมื่อปะทะ$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -859,7 +859,7 @@
             "generalizedText": "^ด่านมี พื้นช็อค เป็นบางส่วนซึ่งจะทำให้ได้รับความเสียหาย เพิ่มขึ้น #%$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -871,7 +871,7 @@
             "generalizedText": "^เพิ่ม มอนสเตอร์เมจิก #%$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -883,7 +883,7 @@
             "generalizedText": "^บอสยูนิค มีบัฟแท่นบูชาแบบสุ่ม # อย่าง$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -895,7 +895,7 @@
             "generalizedText": "^มอนสเตอร์ นำ พลังชีวิตสูงสุด #% ไปเสริมเป็น โล่พลังงานสูงสุด$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -907,7 +907,7 @@
             "generalizedText": "^ผู้เล่น ถูกสาปด้วย บอบบาง (vulnerability)$|^ผู้เล่น ถูกสาปด้วย โซ่กาลเวลา (temporal chains)$|^ผู้เล่น ถูกสาปด้วย แพ้ธาตุ (elemental weakness)$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -919,7 +919,7 @@
             "generalizedText": "^มอนสเตอร์ ไม่ติดสถานะ สตัน$|^ความเร็วในการกระทำของ มอนสเตอร์ ไม่สามารถเปลี่ยนแปลงให้ต่ำกว่าค่าพื้นฐานได้$|^ความเร็วในการเคลื่อนที่ของ มิเนียน ไม่สามารถเปลี่ยนแปลงให้ต่ำกว่าค่าพื้นฐานได้$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -931,7 +931,7 @@
             "generalizedText": "^ด่านมี อักขระของอุปราชอาบเพลิง$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -943,7 +943,7 @@
             "generalizedText": "^ด่านมี พรายทะเลและลูกหลานของพวกมัน อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -955,7 +955,7 @@
             "generalizedText": "^ค่าป้องกันกายภาพ ของมอนสเตอร์ #%$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -967,7 +967,7 @@
             "generalizedText": "^ผู้เล่น มีพื้นที่ส่งผล ลดลง อีก #%$",
             "options": {
                 "scary": 60,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -979,7 +979,7 @@
             "generalizedText": "^ด่านมี บอสยูนิค # ตัว$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -991,7 +991,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ ในด่าน ตายแล้วคืนชีพชั่วคราว$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1003,7 +1003,7 @@
             "generalizedText": "^ด่านมี ปีศาจ อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1015,7 +1015,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ พิษ เมื่อปะทะ$|^มอนสเตอร์ มีระยะเวลาของสถานะ พิษ เพิ่มขึ้น #%$|^ความเสียหาย ปะทะ ทุกชนิด ของมอนสเตอร์ สร้างสถานะ พิษ ต่อคุณ ได้$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1027,7 +1027,7 @@
             "generalizedText": "^ผู้เล่น ถูกจู่โจมโดย เลื่อยเปื้อนเลือด$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1039,7 +1039,7 @@
             "generalizedText": "^ด่านมี พื้นหนาวเย็น เป็นบางส่วน$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1051,7 +1051,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ มีผิวหนามธาตุ ที่สะท้อนความเสียหาย ธาตุ #$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1063,7 +1063,7 @@
             "generalizedText": "^ด่านมี abomination อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1075,7 +1075,7 @@
             "generalizedText": "^ผู้เล่น มีผลของ ออร่าที่ไม่ใช่คำสาป จากสกิล ลดลง #%$",
             "options": {
                 "scary": 990,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1087,7 +1087,7 @@
             "generalizedText": "^ดีบัฟ ต่อมอนสเตอร์ หมดเวลา เร็วขึ้น #%$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1099,7 +1099,7 @@
             "generalizedText": "^ผู้เล่น ถูกสาปด้วย บอบบาง (vulnerability)$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1111,7 +1111,7 @@
             "generalizedText": "^ผูัเล่น มีปริมาณการเติมพลังชีวิต, มานา, โล่พลังงานสูงสุด ต่อวินาทีของการดูด ลดลง #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1123,7 +1123,7 @@
             "generalizedText": "^ด่านมี พื้นลุกไหม้ เป็นบางส่วน$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1135,7 +1135,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับ power charge # ลูก เมื่อปะทะ$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1147,7 +1147,7 @@
             "generalizedText": "^ผู้เล่น ไม่สามารถ ฟื้นฟู พลังชีวิต, มานา หรือ โล่พลังงาน ได้$",
             "options": {
                 "scary": 700,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1159,7 +1159,7 @@
             "generalizedText": "^มอนสเตอร์แรร์ มีโอกาส แตกร้าว #% เมื่อตาย$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1171,7 +1171,7 @@
             "generalizedText": "^ผู้เล่น ถูกเล็งโดย อุกกาบาต # ลูก เมื่อเขาใช้ขวดยา$|^เพิ่ม เงินตรา ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1183,7 +1183,7 @@
             "generalizedText": "^ด่านมี สัตว์ อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1195,7 +1195,7 @@
             "generalizedText": "^ผู้เล่น ไม่สามารถสร้างสถานะ พ่ายแก่ธาตุ ได้$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^ผู้เล่น มีค่าป้องกัน ลดลง อีก #%$|^เพิ่ม สคารับ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1219,7 +1219,7 @@
             "generalizedText": "^มอนสเตอร์ ยิงโพรเจกไทล์ เพิ่มเติม # ลูก$|^มอนสเตอร์ มีพื้นที่ส่งผล เพิ่มขึ้น #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1231,7 +1231,7 @@
             "generalizedText": "^มอนสเตอร์ ได้รับ power charge # ลูก เมื่อปะทะ$|^มอนสเตอร์ มีจำนวน power charge สูงสุด #$|^เพิ่ม แผนที่ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1243,7 +1243,7 @@
             "generalizedText": "^ด่านมี กับดักจากเขาวงกต$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1255,7 +1255,7 @@
             "generalizedText": "^มอนสเตอร์ ไม่ติดสถานะ สตัน$|^เพิ่มพลังชีวิตของ มอนสเตอร์ อีก #%$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1267,7 +1267,7 @@
             "generalizedText": "^มอนสเตอร์มี ป้องกันสาปสะกด$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1279,7 +1279,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ พิษ เมื่อปะทะ$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1291,7 +1291,7 @@
             "generalizedText": "^ผู้เล่น ถูกสาปด้วย โซ่กาลเวลา (temporal chains)$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1303,7 +1303,7 @@
             "generalizedText": "^มอนสเตอร์ ยิงโพรเจกไทล์ เพิ่มเติม # ลูก$",
             "options": {
                 "scary": 440,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1315,7 +1315,7 @@
             "generalizedText": "^มอนสเตอร์แรร์มี แก่นไล่ระเบิด$|^เพิ่ม สคารับ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1327,7 +1327,7 @@
             "generalizedText": "^ด่านมี ผี อาศัยอยู่$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1339,7 +1339,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ ขัดขวาง เมื่อปะทะด้วยเวท$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1351,7 +1351,7 @@
             "generalizedText": "^เมเวน ทำการแทรกแซงผู้เล่น$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1363,7 +1363,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น น้ำแข็ง$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1375,7 +1375,7 @@
             "generalizedText": "^ออร่าจากสกิลของผู้เล่น ที่ส่งผลต่อเพื่อน จะส่งผลต่อศัตรูด้วย$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1387,7 +1387,7 @@
             "generalizedText": "^ผู้เล่น ถูกสาปด้วย แพ้ธาตุ (elemental weakness)$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1399,7 +1399,7 @@
             "generalizedText": "^มอนสเตอร์ มีพื้นที่ส่งผล เพิ่มขึ้น #%$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1411,7 +1411,7 @@
             "generalizedText": "^ด่านมี พื้นคำแช่ง ที่เคลื่อนที่และสร้าง สาปแช่งแบบสุ่ม$|^เพิ่ม สคารับ ที่พบในด่าน อีก #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1423,7 +1423,7 @@
             "generalizedText": "^ความเสียหาย ปะทะ ทุกชนิด ที่ได้รับจากมอนสเตอร์ สร้างสถานะ ลุกไหม้ เสมอ$",
             "options": {
                 "scary": 99,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1435,7 +1435,7 @@
             "generalizedText": "^ความเร็วในการกระทำของ มอนสเตอร์ ไม่สามารถเปลี่ยนแปลงให้ต่ำกว่าค่าพื้นฐานได้$|^ความเร็วในการเคลื่อนที่ของ มิเนียน ไม่สามารถเปลี่ยนแปลงให้ต่ำกว่าค่าพื้นฐานได้$|^มอนสเตอร์ ไม่ติดสถานะ ยั่วยุ$",
             "options": {
                 "scary": 89,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1447,7 +1447,7 @@
             "generalizedText": "^มอนสเตอร์ สร้างสถานะ ตาบอด เมื่อปะทะ$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1459,7 +1459,7 @@
             "generalizedText": "^มอนสเตอร์ นำความเสียหาย กายภาพ #% ไปเสริมเป็น สายฟ้า$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
