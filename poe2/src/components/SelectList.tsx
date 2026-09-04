@@ -11,7 +11,8 @@ interface SelectElementProps {
 
 export function SelectElement(props: SelectElementProps) {
   const {name, ranges, current, selected, setSelected} = props;
-  const hasRange = name.includes("#") && ranges[0]?.length >= 2;
+  // Numeric regex generation currently supports integer rolls only
+  const hasRange = name.includes("#") && ranges[0]?.length >= 2 && ranges[0].every(Number.isInteger);
   const displayName = name
     .replace(/\|/g, " • ");
 
