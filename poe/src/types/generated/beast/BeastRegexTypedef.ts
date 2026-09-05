@@ -1,4 +1,4 @@
-export interface BeastRegexItem {
+export interface BeastRegexEntry {
   beast: string;
   harvest: boolean;
   recipe: string;
@@ -6,4 +6,4 @@ export interface BeastRegexItem {
   regex: string;
 }
 
-export type BeastRegex = Array<BeastRegexItem>;
+export type BeastRegex = Array<BeastRegexEntry>;

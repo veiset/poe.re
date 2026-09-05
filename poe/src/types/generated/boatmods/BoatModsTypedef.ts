@@ -5,4 +5,4 @@ export interface MapOption {
   rewards: string[];
   scary: number;
 }
-export type MapModsRegex = RegexResult<MapOption>;
+export type BoatModsRegex = RegexResult<MapOption>;

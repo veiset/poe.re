@@ -1,8 +1,8 @@
 import {MapSettings} from "@poe/utils/SavedSettings";
-import {Regex} from "@poe/generated/GeneratedTypes";
+import type {RegexResult as Regex} from "@poe/types/generated/mapmods";
 import {idToRegex, optimizeRegexFromIds} from "@poe/utils/regex/OptimizeRegexResult";
 import {generateNumberRegex} from "@shared/core/regex/GenerateNumberRegex";
-import {LanguageFiles, MapStaticStatRegex, RepoeLanguageKey} from "@poe/utils/Languages";
+import {MapStaticStatRegex, RepoeLanguageKey} from "@poe/utils/Languages";
 import {generatePriceRangeRegex} from "@poe/utils/regex/GeneratePriceRangeRegex";
 
 export function generateMapModRegex(settings: MapSettings, regex: Regex<any>, language: RepoeLanguageKey): string {
@@ -88,7 +88,7 @@ function generateBadMods(settings: MapSettings, regex: Regex<any>, language: Rep
   if (settings.badIds.length === 0) {
     return "";
   }
-  const tokens = optimizeRegexFromIds(getSelectedIds(settings, settings.badIds, language), regex)
+  const tokens = optimizeRegexFromIds(getSelectedIds(settings, settings.badIds, regex), regex)
   return `"!${tokens.join("|")}"`;
 }
 
@@ -96,7 +96,7 @@ function generateGoodMods(settings: MapSettings, regex: Regex<any>, language: Re
   if (settings.goodIds.length === 0) {
     return "";
   }
-  const tokens = (getSelectedIds(settings, settings.goodIds, language)
+  const tokens = (getSelectedIds(settings, settings.goodIds, regex)
     .map((id) => idToRegex(id, regex))
     .filter((e) => e !== undefined) as string[])
     .filter(onlyUnique);
@@ -146,13 +146,13 @@ function optimize(string: string): string {
     .replaceAll("[9-9]", "9");
 }
 
-function getSelectedIds(settings: MapSettings, ids: number[], language: RepoeLanguageKey) {
+function getSelectedIds(settings: MapSettings, ids: number[], regex: Regex<any>) {
   return settings.displayNightmareMods
     ? ids
-    : ids.filter((id) => !isNightmareId(id, language));
+    : ids.filter((id) => !isNightmareId(id, regex));
 }
 
-function isNightmareId(id: number, language: RepoeLanguageKey): boolean {
-    const token = LanguageFiles.mapmods[language].tokens.find(t => t.id === id);
+function isNightmareId(id: number, regex: Regex<any>): boolean {
+    const token = regex.tokens.find(t => t.id === id);
     return token?.options.nm === true;
 }

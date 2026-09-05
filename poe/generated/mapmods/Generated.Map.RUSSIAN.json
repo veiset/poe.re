@@ -7,7 +7,7 @@
             "generalizedText": "^босса карты сопровождает босс синтеза$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^скорость восстановления здоровья и энергетического щита игроков на #% меньше$",
             "options": {
                 "scary": 650,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^-#% к максимуму всех сопротивлений игроков$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^монстры имеют #% к шансу блокировать урон от атак$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -55,7 +55,7 @@
             "generalizedText": "^область населена культистами китавы$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -67,7 +67,7 @@
             "generalizedText": "^редкие монстры в области находятся под влиянием касания создателя$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -79,7 +79,7 @@
             "generalizedText": "^монстры с #% шансом могут избежать стихийных состояний$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -91,7 +91,7 @@
             "generalizedText": "^редкие монстры обладают # дополнительным свойством$|^#% увеличение количества редких монстров$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -103,7 +103,7 @@
             "generalizedText": "^область содержит нестабильные исчадия с щупальцами$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -115,7 +115,7 @@
             "generalizedText": "^монстры получают заряд ярости при нанесении удара$|^# к максимуму зарядов ярости монстров$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -127,7 +127,7 @@
             "generalizedText": "^монстры получают #% от максимума здоровья в виде дополнительного энергетического щита$",
             "options": {
                 "scary": 240,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -139,7 +139,7 @@
             "generalizedText": "^игроки имеют на #% меньше скорости перезарядки умений$",
             "options": {
                 "scary": 94,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -151,7 +151,7 @@
             "generalizedText": "^редкие монстры обладают физическими шипами, отражая # физического урона$|^редкие монстры обладают стихийными шипами, отражая # урона от стихий$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -163,7 +163,7 @@
             "generalizedText": "^монстры похищают заряды энергии, ярости и выносливости при нанесении удара$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -175,7 +175,7 @@
             "generalizedText": "^монстры имеют #% повышение шанса критического удара$|^#% к множителю критического удара монстров$",
             "options": {
                 "scary": 500,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -187,7 +187,7 @@
             "generalizedText": "^положительные эффекты на игроках истекают на #% быстрее$|^на #% больше находимых в области скарабеев$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -199,7 +199,7 @@
             "generalizedText": "^атаки монстров с #% шансом могут наложить прокол при нанесении удара$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -211,7 +211,7 @@
             "generalizedText": "^урон монстров пробивает #% сопротивлений стихиям$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -223,7 +223,7 @@
             "generalizedText": "^область содержит участки освященной земли$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -235,7 +235,7 @@
             "generalizedText": "^в области много тотемов$",
             "options": {
                 "scary": 9,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -247,7 +247,7 @@
             "generalizedText": "^монстры получают заряд ярости при нанесении удара$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -259,7 +259,7 @@
             "generalizedText": "^урон уникального босса увеличен на #%$|^уникальный босс имеет увеличенную на #% скорость атаки и сотворения чар$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -271,7 +271,7 @@
             "generalizedText": "^область населена монстрами дальнего боя$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -283,7 +283,7 @@
             "generalizedText": "^у игроков шанс блока снижен на #%$|^у игроков на #% меньше брони$",
             "options": {
                 "scary": 295,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -295,7 +295,7 @@
             "generalizedText": "^монстры поражают целей по цепи: #$|^снаряды монстров наносят удар по цепи при столкновении с окружающей средой$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -307,7 +307,7 @@
             "generalizedText": "^положительные эффекты на игроках истекают на #% быстрее$",
             "options": {
                 "scary": 96,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -319,7 +319,7 @@
             "generalizedText": "^монстры с #% шансом могут подавить урон от чар$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -331,7 +331,7 @@
             "generalizedText": "^#% повышение скорости сотворения чар монстров$|^#% повышение скорости атаки монстров$|^#% повышение скорости передвижения монстров$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -343,7 +343,7 @@
             "generalizedText": "^монстры накладывают цепких лиан при нанесении удара: #$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -355,7 +355,7 @@
             "generalizedText": "^область содержит утопляющие сферы$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -367,7 +367,7 @@
             "generalizedText": "^на #% больше здоровья монстров$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -379,7 +379,7 @@
             "generalizedText": "^игроки получают уменьшение зарядов флакона на #%$",
             "options": {
                 "scary": 210,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -391,7 +391,7 @@
             "generalizedText": "^область населена фанатиками лунарис$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -403,7 +403,7 @@
             "generalizedText": "^#% к сопротивлению монстров хаосу$|^#% к сопротивлению монстров стихиям$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -415,7 +415,7 @@
             "generalizedText": "^область населена нежитью$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -427,7 +427,7 @@
             "generalizedText": "^#% увеличение количества редких монстров$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -439,7 +439,7 @@
             "generalizedText": "^монстры наносят #% от их физического урона в виде дополнительного урона от случайной стихии$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -451,7 +451,7 @@
             "generalizedText": "^монстры имеют #% шанс избежать отравления, прокола и кровотечения$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -463,7 +463,7 @@
             "generalizedText": "^область населена гуманоидами$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -475,7 +475,7 @@
             "generalizedText": "^#% увеличение урона монстров$",
             "options": {
                 "scary": 370,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -487,7 +487,7 @@
             "generalizedText": "^эффект от проклятий на монстрах на #% меньше$",
             "options": {
                 "scary": 363,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -499,7 +499,7 @@
             "generalizedText": "^монстры поражают целей по цепи: #$",
             "options": {
                 "scary": 380,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -511,7 +511,7 @@
             "generalizedText": "^-#% к максимуму всех сопротивлений игроков$",
             "options": {
                 "scary": 980,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -523,7 +523,7 @@
             "generalizedText": "^монстры с #% шансом могут подавить урон от чар$",
             "options": {
                 "scary": 290,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -535,7 +535,7 @@
             "generalizedText": "^#% к сопротивлению монстров физическому урону$|^#% к сопротивлению монстров стихиям$|^#% к сопротивлению монстров хаосу$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -547,7 +547,7 @@
             "generalizedText": "^редкие монстры обладают физическими шипами, отражая # физического урона$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -559,7 +559,7 @@
             "generalizedText": "^монстры получают заряд выносливости при нанесении удара$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -571,7 +571,7 @@
             "generalizedText": "^область населена козерогами$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -583,7 +583,7 @@
             "generalizedText": "^на #% больше здоровья монстров$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -595,7 +595,7 @@
             "generalizedText": "^монстры с #% шансом могут поджечь, заморозить и наложить шок при нанесении удара$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -607,7 +607,7 @@
             "generalizedText": "^область имеет участки осквернённой земли$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -619,7 +619,7 @@
             "generalizedText": "^монстры накладывают поджог, заморозку и шок при нанесении удара$|^весь урон монстром может поджечь, заморозить и наложить шок$|^на #% больше находимых в области скарабеев$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -631,7 +631,7 @@
             "generalizedText": "^игроки имеют на #% меньше меткости$",
             "options": {
                 "scary": 85,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -643,7 +643,7 @@
             "generalizedText": "^уникальный босс имеет #% увеличение здоровья$|^уникальный босс имеет #% увеличение области действия$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -655,7 +655,7 @@
             "generalizedText": "^уникальные боссы одержимы$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^на #% меньше накладываемого на игроков эффекта флакона$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^монстры накладывают увечье при нанесении удара атаками$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^монстры получают #% уменьшение дополнительного урона от критических ударов$",
             "options": {
                 "scary": 250,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^монстры наносят #% дополнительного физического урона в виде урона от огня$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^монстры наносят #% от их физического урона в виде дополнительного урона хаосом$|^монстры накладывают истощение на # секунды при нанесении удара$",
             "options": {
                 "scary": 455,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^#% повышение скорости передвижения монстров$|^#% повышение скорости атаки монстров$|^#% повышение скорости сотворения чар монстров$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^область населена скелетами$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^монстры наносят #% от их физического урона в виде дополнительного урона хаосом$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^-#% к количеству предотвращенного игроками подавленного урона от чар$|^меткость монстров повышена на #%$",
             "options": {
                 "scary": 365,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^область населяют разнообразные монстры$",
             "options": {
                 "scary": 8,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^область населена фанатиками солярис$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^#% к множителю критического удара монстров$|^монстры имеют #% повышение шанса критического удара$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^у монстров нельзя похищать ресурсы$",
             "options": {
                 "scary": 600,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^область действия у игроков на #% меньше$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -835,7 +835,7 @@
             "generalizedText": "^игроки прокляты слабостью$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -847,7 +847,7 @@
             "generalizedText": "^# к максимуму зарядов выносливости монстров$|^монстры получают заряд выносливости при получении удара$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -859,7 +859,7 @@
             "generalizedText": "^область содержит участки заряженной земли, повышающей получаемый урон на #%$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -871,7 +871,7 @@
             "generalizedText": "^#% увеличение количества волшебных монстров$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -883,7 +883,7 @@
             "generalizedText": "^на уникальных монстров действует случайный положительный эффект алтарей$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -895,7 +895,7 @@
             "generalizedText": "^монстры получают #% от максимума здоровья в виде дополнительного энергетического щита$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -907,7 +907,7 @@
             "generalizedText": "^игроки прокляты беззащитностью$|^игроки прокляты путами времени$|^игроки прокляты уязвимостью к стихиям$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -919,7 +919,7 @@
             "generalizedText": "^монстры не могут быть оглушены$|^скорость действий монстров не может быть изменена ниже базового значения$|^скорость передвижения монстров не может быть изменена ниже базового значения$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -931,7 +931,7 @@
             "generalizedText": "^область содержит руны пылающего экзарха$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -943,7 +943,7 @@
             "generalizedText": "^область населена сиренами и их порождениями$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -955,7 +955,7 @@
             "generalizedText": "^#% к сопротивлению монстров физическому урону$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -967,7 +967,7 @@
             "generalizedText": "^область действия у игроков на #% меньше$",
             "options": {
                 "scary": 60,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -979,7 +979,7 @@
             "generalizedText": "^в области можно встретить двух уникальных боссов$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -991,7 +991,7 @@
             "generalizedText": "^редкие монстры в области временно воскресают при смерти$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1003,7 +1003,7 @@
             "generalizedText": "^область населена демонами$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1015,7 +1015,7 @@
             "generalizedText": "^монстры отравляют при нанесении удара$|^монстры имеют #% увеличение длительности яда$|^весь урон от ударов монстров может отравить$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1027,7 +1027,7 @@
             "generalizedText": "^игроков атакуют окровавленные пилы$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1039,7 +1039,7 @@
             "generalizedText": "^область имеет участки замерзшей земли$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1051,7 +1051,7 @@
             "generalizedText": "^редкие монстры обладают стихийными шипами, отражая # урона от стихий$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1063,7 +1063,7 @@
             "generalizedText": "^в областях встречаются отродья$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1075,7 +1075,7 @@
             "generalizedText": "^игроки имеют #% ослабление эффекта аур не-проклятий от умений$",
             "options": {
                 "scary": 990,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1087,7 +1087,7 @@
             "generalizedText": "^отрицательные эффекты на монстрах истекают на #% быстрее$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1099,7 +1099,7 @@
             "generalizedText": "^игроки прокляты беззащитностью$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1111,7 +1111,7 @@
             "generalizedText": "^игроки имеют #% уменьшение восстановления здоровья, маны и энергетического щита в секунду от похищения$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1123,7 +1123,7 @@
             "generalizedText": "^область имеет участки горящей земли$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1135,7 +1135,7 @@
             "generalizedText": "^монстры получают заряд энергии при нанесении удара$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1147,7 +1147,7 @@
             "generalizedText": "^игроки не могут регенерировать здоровье, ману или энергетический щит$",
             "options": {
                 "scary": 700,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1159,7 +1159,7 @@
             "generalizedText": "^редкие монстры с #% шансом могут расколоться при смерти$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1171,7 +1171,7 @@
             "generalizedText": "^игроки становятся целью метеорита, когда используют флакон$|^на #% больше находимой в области валюты$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1183,7 +1183,7 @@
             "generalizedText": "^область населена животными$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1195,7 +1195,7 @@
             "generalizedText": "^игроки не могут накладывать восприимчивость$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^на #% меньше защиты игроков$|^на #% больше находимых в области скарабеев$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1219,7 +1219,7 @@
             "generalizedText": "^монстры выпускают дополнительных снарядов: #$|^монстры имеют #% увеличение области действия$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1231,7 +1231,7 @@
             "generalizedText": "^монстры получают заряд энергии при нанесении удара$|^# к максимуму зарядов энергии монстров$|^на #% больше находимых в области карт$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1243,7 +1243,7 @@
             "generalizedText": "^в области можно встретить опасности лабиринта$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1255,7 +1255,7 @@
             "generalizedText": "^монстры не могут быть оглушены$|^на #% больше здоровья монстров$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1267,7 +1267,7 @@
             "generalizedText": "^монстры имеют свойство заговоренный$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1279,7 +1279,7 @@
             "generalizedText": "^монстры отравляют при нанесении удара$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1291,7 +1291,7 @@
             "generalizedText": "^игроки прокляты путами времени$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1303,7 +1303,7 @@
             "generalizedText": "^монстры выпускают дополнительных снарядов: #$",
             "options": {
                 "scary": 440,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1315,7 +1315,7 @@
             "generalizedText": "^редкие монстры обладают нестабильным ядром$|^на #% больше находимых в области скарабеев$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1327,7 +1327,7 @@
             "generalizedText": "^область населена призраками$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1339,7 +1339,7 @@
             "generalizedText": "^монстры сковывают при нанесении удара чарами$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1351,7 +1351,7 @@
             "generalizedText": "^мейвен мешает игрокам$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1363,7 +1363,7 @@
             "generalizedText": "^монстры наносят #% дополнительного физического урона в виде урона от холода$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1375,7 +1375,7 @@
             "generalizedText": "^действующие на союзников ауры от умений игрока также действуют и на врагов$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1387,7 +1387,7 @@
             "generalizedText": "^игроки прокляты уязвимостью к стихиям$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1399,7 +1399,7 @@
             "generalizedText": "^монстры имеют #% увеличение области действия$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1411,7 +1411,7 @@
             "generalizedText": "^в области можно встретить движущуюся помеченную землю, накладывающую случайные метки$|^на #% больше находимых в области скарабеев$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1423,7 +1423,7 @@
             "generalizedText": "^весь урон от ударов монстров всегда поджигает$",
             "options": {
                 "scary": 99,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1435,7 +1435,7 @@
             "generalizedText": "^скорость действий монстров не может быть изменена ниже базового значения$|^скорость передвижения монстров не может быть изменена ниже базового значения$|^монстров нельзя спровоцировать$",
             "options": {
                 "scary": 89,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1447,7 +1447,7 @@
             "generalizedText": "^монстры ослепляют при нанесении удара$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1459,7 +1459,7 @@
             "generalizedText": "^монстры наносят #% дополнительного физического урона в виде урона от молнии$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }

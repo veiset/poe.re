@@ -1,7 +1,7 @@
 import {PoeNinjaItem, PricedBaseType, PricedItemWithFallback} from "./ExpeditionTypes";
-import {baseTypeRegex, BaseTypeRegex} from "@poe/generated/GeneratedExpedition";
+import type {BaseTypeRegex} from "@poe/types/generated/expedition";
 
-export const cleanUpPoeNinjaItems = (data: PoeNinjaItem[]): PoeNinjaItem[] => {
+export const cleanUpPoeNinjaItems = (data: PoeNinjaItem[], baseTypeRegex: Record<string, BaseTypeRegex>): PoeNinjaItem[] => {
     return data
         .filter((e) => e.links === undefined)
         .filter((e) => !e.detailsId?.endsWith("relic"))

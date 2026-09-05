@@ -1,4 +1,4 @@
-import {MapModsTokenOption, Token} from "@poe/generated/mapmods/GeneratedTypes";
+import type {MapOption as MapModsTokenOption, Token} from "@poe/types/generated/mapmods";
 import {getGradientColor} from "./ColorGradient";
 
 export const mapModTokenColor = (isSelected: boolean, token: Token<MapModsTokenOption>): string => {

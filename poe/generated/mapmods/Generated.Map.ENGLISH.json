@@ -7,7 +7,7 @@
             "generalizedText": "^map boss is accompanied by a synthesis boss$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^players have #% less recovery rate of life and energy shield$",
             "options": {
                 "scary": 650,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^players have -#% to all maximum resistances$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^monsters have #% chance to block attack damage$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Currency"
@@ -57,7 +57,7 @@
             "generalizedText": "^area is inhabited by cultists of kitava$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -69,7 +69,7 @@
             "generalizedText": "^rare monsters in area are shaper-touched$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -81,7 +81,7 @@
             "generalizedText": "^monsters have #% chance to avoid elemental ailments$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -93,7 +93,7 @@
             "generalizedText": "^rare monsters each have # additional modifier$|^#% increased number of rare monsters$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -105,7 +105,7 @@
             "generalizedText": "^area contains unstable tentacle fiends$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -117,7 +117,7 @@
             "generalizedText": "^monsters gain a frenzy charge on hit$|^monsters have # to maximum frenzy charges$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Maps"
@@ -131,7 +131,7 @@
             "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield$",
             "options": {
                 "scary": 240,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -143,7 +143,7 @@
             "generalizedText": "^players have #% less cooldown recovery rate$",
             "options": {
                 "scary": 94,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -155,7 +155,7 @@
             "generalizedText": "^rare monsters have physical thorns reflecting # physical damage$|^rare monsters have elemental thorns reflecting # elemental damage$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Currency"
@@ -169,7 +169,7 @@
             "generalizedText": "^monsters steal power, frenzy and endurance charges on hit$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -181,7 +181,7 @@
             "generalizedText": "^monsters have #% increased critical strike chance$|^#% to monster critical strike multiplier$",
             "options": {
                 "scary": 500,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -193,7 +193,7 @@
             "generalizedText": "^monsters' attacks have #% chance to impale on hit$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -205,7 +205,7 @@
             "generalizedText": "^monster damage penetrates #% elemental resistances$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -217,7 +217,7 @@
             "generalizedText": "^area has patches of consecrated ground$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -229,7 +229,7 @@
             "generalizedText": "^area contains many totems$",
             "options": {
                 "scary": 9,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -241,7 +241,7 @@
             "generalizedText": "^monsters gain a frenzy charge on hit$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -253,7 +253,7 @@
             "generalizedText": "^unique boss deals #% increased damage$|^unique boss has #% increased attack and cast speed$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -265,7 +265,7 @@
             "generalizedText": "^area is inhabited by ranged monsters$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -277,7 +277,7 @@
             "generalizedText": "^players have #% reduced chance to block$|^players have #% less armour$",
             "options": {
                 "scary": 295,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -289,7 +289,7 @@
             "generalizedText": "^monsters' skills chain # additional times$|^monsters' projectiles can chain when colliding with terrain$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -301,7 +301,7 @@
             "generalizedText": "^buffs on players expire #% faster$",
             "options": {
                 "scary": 96,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -313,7 +313,7 @@
             "generalizedText": "^#% increased monster cast speed$|^#% increased monster attack speed$|^#% increased monster movement speed$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -325,7 +325,7 @@
             "generalizedText": "^monsters inflict # grasping vines on hit$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Maps"
@@ -339,7 +339,7 @@
             "generalizedText": "^area contains drowning orbs$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -351,7 +351,7 @@
             "generalizedText": "^players gain #% reduced flask charges$",
             "options": {
                 "scary": 210,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -363,7 +363,7 @@
             "generalizedText": "^area is inhabited by lunaris fanatics$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -375,7 +375,7 @@
             "generalizedText": "^#% monster chaos resistance$|^#% monster elemental resistances$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -387,7 +387,7 @@
             "generalizedText": "^area is inhabited by undead$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -399,7 +399,7 @@
             "generalizedText": "^#% increased number of rare monsters$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -411,7 +411,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra damage of a random element$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -423,7 +423,7 @@
             "generalizedText": "^monsters have a #% chance to avoid poison, impale, and bleeding$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -435,7 +435,7 @@
             "generalizedText": "^area is inhabited by humanoids$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -447,7 +447,7 @@
             "generalizedText": "^#% increased monster damage$",
             "options": {
                 "scary": 370,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -459,7 +459,7 @@
             "generalizedText": "^#% less effect of curses on monsters$",
             "options": {
                 "scary": 363,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -471,7 +471,7 @@
             "generalizedText": "^monsters' skills chain # additional times$",
             "options": {
                 "scary": 380,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -483,7 +483,7 @@
             "generalizedText": "^players have -#% to all maximum resistances$",
             "options": {
                 "scary": 980,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -495,7 +495,7 @@
             "generalizedText": "^monsters have #% chance to suppress spell damage$",
             "options": {
                 "scary": 290,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -507,7 +507,7 @@
             "generalizedText": "^#% monster physical damage reduction$|^#% monster elemental resistances$|^#% monster chaos resistance$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -519,7 +519,7 @@
             "generalizedText": "^rare monsters have physical thorns reflecting # physical damage$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -531,7 +531,7 @@
             "generalizedText": "^monsters gain an endurance charge on hit$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -543,7 +543,7 @@
             "generalizedText": "^area is inhabited by goatmen$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -555,7 +555,7 @@
             "generalizedText": "^#% more monster life$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -567,7 +567,7 @@
             "generalizedText": "^monsters have a #% chance to ignite, freeze and shock on hit$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -579,7 +579,7 @@
             "generalizedText": "^area has patches of desecrated ground$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -591,7 +591,7 @@
             "generalizedText": "^monsters ignite, freeze and shock on hit$|^all monster damage can ignite, freeze and shock$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Scarabs"
@@ -605,7 +605,7 @@
             "generalizedText": "^players have #% less accuracy rating$",
             "options": {
                 "scary": 85,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -617,7 +617,7 @@
             "generalizedText": "^unique boss has #% increased life$|^unique boss has #% increased area of effect$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -629,7 +629,7 @@
             "generalizedText": "^unique bosses are possessed$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -641,7 +641,7 @@
             "generalizedText": "^players have #% less effect of flasks applied to them$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Currency"
@@ -655,7 +655,7 @@
             "generalizedText": "^monsters maim on hit with attacks$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^monsters take #% reduced extra damage from critical strikes$",
             "options": {
                 "scary": 250,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as fire$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra chaos damage$|^monsters inflict withered for # seconds on hit$",
             "options": {
                 "scary": 455,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^#% increased monster movement speed$|^#% increased monster attack speed$|^#% increased monster cast speed$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^area is inhabited by skeletons$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra chaos damage$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^players have -#% to amount of suppressed spell damage prevented$|^monsters have #% increased accuracy rating$",
             "options": {
                 "scary": 365,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^area has increased monster variety$",
             "options": {
                 "scary": 8,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^area is inhabited by solaris fanatics$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^#% to monster critical strike multiplier$|^monsters have #% increased critical strike chance$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^monsters cannot be leeched from$",
             "options": {
                 "scary": 600,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^players have #% less area of effect$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^players are cursed with enfeeble$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^monsters have # to maximum endurance charges$|^monsters gain an endurance charge when hit$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Maps"
@@ -837,7 +837,7 @@
             "generalizedText": "^area has patches of shocked ground which increase damage taken by #%$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -849,7 +849,7 @@
             "generalizedText": "^#% increased magic monsters$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -861,7 +861,7 @@
             "generalizedText": "^unique monsters have a random shrine buff$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Maps"
@@ -875,7 +875,7 @@
             "generalizedText": "^players are cursed with vulnerability$|^players are cursed with temporal chains$|^players are cursed with elemental weakness$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -887,7 +887,7 @@
             "generalizedText": "^monsters cannot be stunned$|^monsters' action speed cannot be modified to below base value$|^monsters' movement speed cannot be modified to below base value$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -899,7 +899,7 @@
             "generalizedText": "^area contains runes of the searing exarch$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -911,7 +911,7 @@
             "generalizedText": "^area is inhabited by sea witches and their spawn$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -923,7 +923,7 @@
             "generalizedText": "^#% monster physical damage reduction$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -935,7 +935,7 @@
             "generalizedText": "^players have #% less area of effect$",
             "options": {
                 "scary": 60,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -947,7 +947,7 @@
             "generalizedText": "^area contains two unique bosses$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -959,7 +959,7 @@
             "generalizedText": "^rare monsters in area temporarily revive on death$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -971,7 +971,7 @@
             "generalizedText": "^area is inhabited by demons$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -983,7 +983,7 @@
             "generalizedText": "^monsters poison on hit$|^monsters have #% increased poison duration$|^all damage from monsters' hits can poison$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -995,7 +995,7 @@
             "generalizedText": "^players are assaulted by bloodstained sawblades$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Currency"
@@ -1009,7 +1009,7 @@
             "generalizedText": "^area has patches of chilled ground$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1021,7 +1021,7 @@
             "generalizedText": "^rare monsters have elemental thorns reflecting # elemental damage$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1033,7 +1033,7 @@
             "generalizedText": "^area is inhabited by abominations$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1045,7 +1045,7 @@
             "generalizedText": "^players have #% reduced effect of non-curse auras from skills$",
             "options": {
                 "scary": 990,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1057,7 +1057,7 @@
             "generalizedText": "^debuffs on monsters expire #% faster$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Currency"
@@ -1071,7 +1071,7 @@
             "generalizedText": "^players are cursed with vulnerability$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1083,7 +1083,7 @@
             "generalizedText": "^players have #% reduced maximum total life, mana and energy shield recovery per second from leech$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1095,7 +1095,7 @@
             "generalizedText": "^area has patches of burning ground$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1107,7 +1107,7 @@
             "generalizedText": "^monsters gain a power charge on hit$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1119,7 +1119,7 @@
             "generalizedText": "^players cannot regenerate life, mana or energy shield$",
             "options": {
                 "scary": 700,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1131,7 +1131,7 @@
             "generalizedText": "^#% chance for rare monsters to fracture on death$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1143,7 +1143,7 @@
             "generalizedText": "^players are targeted by a meteor when they use a flask$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Currency"
@@ -1157,7 +1157,7 @@
             "generalizedText": "^area is inhabited by animals$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1169,7 +1169,7 @@
             "generalizedText": "^players cannot inflict exposure$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1181,7 +1181,7 @@
             "generalizedText": "^players have #% less defences$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Scarabs"
@@ -1195,7 +1195,7 @@
             "generalizedText": "^monsters fire # additional projectiles$|^monsters have #% increased area of effect$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^monsters gain a power charge on hit$|^monsters have # to maximum power charges$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Maps"
@@ -1221,7 +1221,7 @@
             "generalizedText": "^area contains labyrinth hazards$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1233,7 +1233,7 @@
             "generalizedText": "^monsters cannot be stunned$|^#% more monster life$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1245,7 +1245,7 @@
             "generalizedText": "^monsters are hexproof$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1257,7 +1257,7 @@
             "generalizedText": "^monsters poison on hit$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1269,7 +1269,7 @@
             "generalizedText": "^players are cursed with temporal chains$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1281,7 +1281,7 @@
             "generalizedText": "^monsters fire # additional projectiles$",
             "options": {
                 "scary": 440,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1293,7 +1293,7 @@
             "generalizedText": "^rare monsters have volatile cores$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": [
                     "Scarabs"
@@ -1307,7 +1307,7 @@
             "generalizedText": "^area is inhabited by ghosts$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1319,7 +1319,7 @@
             "generalizedText": "^monsters hinder on hit with spells$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1331,7 +1331,7 @@
             "generalizedText": "^the maven interferes with players$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1343,7 +1343,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as cold$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1355,7 +1355,7 @@
             "generalizedText": "^auras from player skills which affect allies also affect enemies$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": []
             }
@@ -1367,7 +1367,7 @@
             "generalizedText": "^players are cursed with elemental weakness$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1379,7 +1379,7 @@
             "generalizedText": "^monsters have #% increased area of effect$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1391,7 +1391,7 @@
             "generalizedText": "^area contains patches of moving marked ground, inflicting random marks$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": false,
                 "rewards": [
                     "Scarabs"
@@ -1405,7 +1405,7 @@
             "generalizedText": "^all monster damage from hits always ignites$",
             "options": {
                 "scary": 99,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1417,7 +1417,7 @@
             "generalizedText": "^monsters' action speed cannot be modified to below base value$|^monsters' movement speed cannot be modified to below base value$|^monsters cannot be taunted$",
             "options": {
                 "scary": 89,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1429,7 +1429,7 @@
             "generalizedText": "^monsters blind on hit$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1441,7 +1441,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as lightning$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }

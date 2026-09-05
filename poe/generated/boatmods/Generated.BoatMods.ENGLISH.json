@@ -7,7 +7,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra chaos damage $|^ monsters inflict withered for # seconds on hit $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^adjacent areas contain # additional imprisoned monsters $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^#% increased pack size in all voyage areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^adjacent areas contains # additional packs of octopi $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -55,7 +55,7 @@
             "generalizedText": "^monsters are hexproof $|^ #% increased dead man's sulphur found in adjacent areas caster curse$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -67,7 +67,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as fire $|^ #% increased rarity of items found in adjacent areas damage physical elemental fire$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -79,7 +79,7 @@
             "generalizedText": "^#% more monster life $|^ #% increased quantity of items found in adjacent areas life$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -91,7 +91,7 @@
             "generalizedText": "^#% increased number of rare monsters in adjacent areas $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -103,7 +103,7 @@
             "generalizedText": "^adjacent areas contain # additional diviner's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -115,7 +115,7 @@
             "generalizedText": "^belts dropped in adjacent areas have #% chance to instead drop as a unique belt $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -127,7 +127,7 @@
             "generalizedText": "^rare monsters that are natural inhabitants of all voyage areas are imprisoned by essences$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -139,7 +139,7 @@
             "generalizedText": "^voyage modifier will be revealed once charted$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -151,7 +151,7 @@
             "generalizedText": "^monsters have #% increased area of effect $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -163,7 +163,7 @@
             "generalizedText": "^#% monster chaos resistance $|^ #% monster elemental resistances $|^ #% increased quantity of items found in adjacent areas elemental chaos resistance$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -175,7 +175,7 @@
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -187,7 +187,7 @@
             "generalizedText": "^#% of equipment dropped by monsters in adjacent areas is converted to gold $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -199,7 +199,7 @@
             "generalizedText": "^#% increased dead man's sulphur found in all voyage areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -211,7 +211,7 @@
             "generalizedText": "^monsters have #% chance to suppress spell damage $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -223,7 +223,7 @@
             "generalizedText": "^+% monster chaos resistance $|^ #% monster elemental resistances $|^ #% increased quantity of items found in adjacent areas elemental chaos resistance$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -235,7 +235,7 @@
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -247,7 +247,7 @@
             "generalizedText": "^monsters have #% increased critical strike chance $|^ #% to monster critical strike multiplier $|^ #% increased pack size in adjacent areas damage critical$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -259,7 +259,7 @@
             "generalizedText": "^monsters fire # additional projectiles $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -271,7 +271,7 @@
             "generalizedText": "^#% more monster life $|^ #% increased quantity of items found in adjacent areas life$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -283,7 +283,7 @@
             "generalizedText": "^adjacent areas contain # additional messages in bottles $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -295,7 +295,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as cold $|^ #% increased rarity of items found in adjacent areas damage physical elemental cold$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -307,7 +307,7 @@
             "generalizedText": "^area has patches of shocked ground which increase damage taken by #% $|^ #% increased gold found in this area $|^ map ground effect patches per # tiles # $|^ map ground effect radius #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -319,7 +319,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -331,7 +331,7 @@
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -343,7 +343,7 @@
             "generalizedText": "^#% increased number of magic monsters in all voyage areas$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -355,7 +355,7 @@
             "generalizedText": "^monsters in all voyage areas are at least magic$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -367,7 +367,7 @@
             "generalizedText": "^#% more monster life $|^ #% increased quantity of items found in adjacent areas life$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -379,7 +379,7 @@
             "generalizedText": "^amulets dropped in adjacent areas have #% chance to instead drop as a unique amulet $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 47,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -391,7 +391,7 @@
             "generalizedText": "^adjacent areas contain # additional golden lanterns $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -403,7 +403,7 @@
             "generalizedText": "^#% monster physical damage reduction $|^ #% increased quantity of items found in adjacent areas physical$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -415,7 +415,7 @@
             "generalizedText": "^#% monster chaos resistance $|^ #% monster elemental resistances $|^ #% increased quantity of items found in adjacent areas elemental chaos resistance$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -427,7 +427,7 @@
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -439,7 +439,7 @@
             "generalizedText": "^#% chance for rare monsters in all voyage areas to be possessed$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -451,7 +451,7 @@
             "generalizedText": "^adjacent areas contain # additional strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -463,7 +463,7 @@
             "generalizedText": "^adjacent areas contain # additional strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -475,7 +475,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -487,7 +487,7 @@
             "generalizedText": "^area has patches of chilled ground $|^ #% increased gold found in this area $|^ map ground effect patches per # tiles # $|^ map ground effect radius #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -499,7 +499,7 @@
             "generalizedText": "^flasks found in all voyage areas have #% chance to have #% quality$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -511,7 +511,7 @@
             "generalizedText": "^#% increased rarity of items found in all voyage areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -523,7 +523,7 @@
             "generalizedText": "^monsters have #% chance to avoid elemental ailments $|^ #% increased quantity of items found in adjacent areas elemental fire cold lightning ailment$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -535,7 +535,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -547,7 +547,7 @@
             "generalizedText": "^#% increased monster movement speed $|^ #% increased monster attack speed $|^ #% increased monster cast speed $|^ #% increased pack size in adjacent areas attack caster speed$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -559,7 +559,7 @@
             "generalizedText": "^players have -#% to all maximum resistances $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -571,7 +571,7 @@
             "generalizedText": "^items dropped in adjacent areas have #% chance to be fractured $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -583,7 +583,7 @@
             "generalizedText": "^monsters steal power, frenzy and endurance charges on hit $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -595,7 +595,7 @@
             "generalizedText": "^monsters in all voyage areas cannot drop equipment, flasks or tinctures $|^ chart monsters drop no flask #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -607,7 +607,7 @@
             "generalizedText": "^#% increased dead man's sulphur found in all voyage areas$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -619,7 +619,7 @@
             "generalizedText": "^#% of equipment dropped by monsters in adjacent areas is converted to gold $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -631,7 +631,7 @@
             "generalizedText": "^monsters have #% increased area of effect $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -643,7 +643,7 @@
             "generalizedText": "^#% more monster life $|^ monsters cannot be stunned $|^ #% increased quantity of items found in adjacent areas life$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -655,7 +655,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra chaos damage $|^ monsters inflict withered for # seconds on hit $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^monsters gain an endurance charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as fire $|^ #% increased rarity of items found in adjacent areas damage physical elemental fire$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^adjacent areas contain # additional imprisoned monsters $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^monsters take #% reduced extra damage from critical strikes $|^ #% increased quantity of items found in adjacent areas damage critical$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^#% monster physical damage reduction $|^ #% increased quantity of items found in adjacent areas physical$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^players have -#% to all maximum resistances $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^amulets dropped in adjacent areas have #% chance to instead drop as a unique amulet $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^rare monsters in adjacent areas will have a pantheon modifier $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^adjacent areas contain # additional messages in bottles $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^adjacent areas contain # additional clusters of barrels $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^#% increased quantity of items found in all voyage areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^monsters fire # additional projectiles $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^monsters have #% chance to suppress spell damage $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^monsters have #% chance to avoid elemental ailments $|^ #% increased quantity of items found in adjacent areas elemental fire cold lightning ailment$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -835,7 +835,7 @@
             "generalizedText": "^rings dropped in adjacent areas have #% chance to instead drop as a unique ring $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 47,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -847,7 +847,7 @@
             "generalizedText": "^monsters have #% chance to gain an endurance charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -859,7 +859,7 @@
             "generalizedText": "^monsters blind on hit $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -871,7 +871,7 @@
             "generalizedText": "^#% increased number of rare monsters in all voyage areas$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -883,7 +883,7 @@
             "generalizedText": "^monsters maim on hit with attacks $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -895,7 +895,7 @@
             "generalizedText": "^adjacent areas contain # additional imprisoned monsters $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -907,7 +907,7 @@
             "generalizedText": "^adjacent areas contain # additional arcanist's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -919,7 +919,7 @@
             "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -931,7 +931,7 @@
             "generalizedText": "^#% increased rarity of items found in all voyage areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -943,7 +943,7 @@
             "generalizedText": "^#% increased monster movement speed $|^ #% increased monster attack speed $|^ #% increased monster cast speed $|^ #% increased pack size in adjacent areas attack caster speed$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -955,7 +955,7 @@
             "generalizedText": "^players in all voyage areas have soul eater$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -967,7 +967,7 @@
             "generalizedText": "^#% increased number of magic monsters in adjacent areas $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -979,7 +979,7 @@
             "generalizedText": "^#% less effect of curses on monsters $|^ #% increased quantity of items found in adjacent areas caster curse$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -991,7 +991,7 @@
             "generalizedText": "^#% increased dead man's sulphur found in all voyage areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1003,7 +1003,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as cold $|^ #% increased rarity of items found in adjacent areas damage physical elemental cold$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1015,7 +1015,7 @@
             "generalizedText": "^monsters gain #% of their physical damage as extra chaos damage $|^ monsters inflict withered for # seconds on hit $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1027,7 +1027,7 @@
             "generalizedText": "^atziri's influence $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1039,7 +1039,7 @@
             "generalizedText": "^rings dropped in adjacent areas have #% chance to instead drop as a unique ring $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1051,7 +1051,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as fire $|^ #% increased rarity of items found in adjacent areas damage physical elemental fire$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1063,7 +1063,7 @@
             "generalizedText": "^#% increased quantity of items found in all voyage areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1075,7 +1075,7 @@
             "generalizedText": "^adjacent areas contains # additional packs of octopi $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1087,7 +1087,7 @@
             "generalizedText": "^#% monster physical damage reduction $|^ #% increased quantity of items found in adjacent areas physical$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1099,7 +1099,7 @@
             "generalizedText": "^monsters gain a frenzy charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1111,7 +1111,7 @@
             "generalizedText": "^adjacent areas contain # additional diviner's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1123,7 +1123,7 @@
             "generalizedText": "^monsters cannot be taunted $|^ monsters' action speed cannot be modified to below base value $|^ monsters' movement speed cannot be modified to below base value $|^ #% increased quantity of items found in adjacent areas speed$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1135,7 +1135,7 @@
             "generalizedText": "^adjacent areas contain # additional operative's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 78,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1147,7 +1147,7 @@
             "generalizedText": "^all voyage areas contain friendly jellyfish$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1159,7 +1159,7 @@
             "generalizedText": "^adjacent areas contain # additional strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1171,7 +1171,7 @@
             "generalizedText": "^monsters take #% reduced extra damage from critical strikes $|^ #% increased quantity of items found in adjacent areas damage critical$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1183,7 +1183,7 @@
             "generalizedText": "^adjacent areas contain # additional packs of crabs $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1195,7 +1195,7 @@
             "generalizedText": "^monsters have #% chance to suppress spell damage $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^#% increased monster movement speed $|^ #% increased monster attack speed $|^ #% increased monster cast speed $|^ #% increased pack size in adjacent areas attack caster speed$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1219,7 +1219,7 @@
             "generalizedText": "^adjacent areas contain # additional clusters of barrels $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1231,7 +1231,7 @@
             "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1243,7 +1243,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as cold $|^ #% increased rarity of items found in adjacent areas damage physical elemental cold$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1255,7 +1255,7 @@
             "generalizedText": "^monsters have a #% chance to avoid poison, impale, and bleeding $|^ #% increased quantity of items found in adjacent areas physical chaos attack ailment$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1267,7 +1267,7 @@
             "generalizedText": "^#% increased number of rare monsters in adjacent areas $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1279,7 +1279,7 @@
             "generalizedText": "^monsters have #% chance to gain a power charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1291,7 +1291,7 @@
             "generalizedText": "^#% monster chaos resistance $|^ #% monster elemental resistances $|^ #% increased quantity of items found in adjacent areas elemental chaos resistance$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1303,7 +1303,7 @@
             "generalizedText": "^monsters have #% chance to gain a frenzy charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1315,7 +1315,7 @@
             "generalizedText": "^#% monster physical damage reduction $|^ #% increased quantity of items found in adjacent areas physical$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1327,7 +1327,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1339,7 +1339,7 @@
             "generalizedText": "^adjacent areas contain # additional operative's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1351,7 +1351,7 @@
             "generalizedText": "^monsters have #% increased area of effect $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1363,7 +1363,7 @@
             "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1375,7 +1375,7 @@
             "generalizedText": "^monsters' skills chain # additional times $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1387,7 +1387,7 @@
             "generalizedText": "^monsters gain a power charge on hit $|^ #% increased gold found in this area$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1399,7 +1399,7 @@
             "generalizedText": "^adjacent areas contain # additional cages of tormented spirits $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1411,7 +1411,7 @@
             "generalizedText": "^adjacent areas contains # additional giant starfish $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1423,7 +1423,7 @@
             "generalizedText": "^adjacent areas contain # additional cages of tormented spirits $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1435,7 +1435,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as fire $|^ #% increased rarity of items found in adjacent areas damage physical elemental fire$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1447,7 +1447,7 @@
             "generalizedText": "^players have -#% to all maximum resistances $|^ #% increased pack size in adjacent areas$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1459,7 +1459,7 @@
             "generalizedText": "^monsters gain #% of maximum life as extra maximum energy shield $|^ #% increased quantity of items found in adjacent areas$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1471,7 +1471,7 @@
             "generalizedText": "^monster damage penetrates #% elemental resistances $|^ #% increased pack size in adjacent areas damage elemental$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1483,7 +1483,7 @@
             "generalizedText": "^monsters have #% increased critical strike chance $|^ #% to monster critical strike multiplier $|^ #% increased pack size in adjacent areas damage critical$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1495,7 +1495,7 @@
             "generalizedText": "^adjacent areas contain # additional packs of crabs $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1507,7 +1507,7 @@
             "generalizedText": "^adjacent areas contain # additional arcanist's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1519,7 +1519,7 @@
             "generalizedText": "^rare monsters in all voyage areas have #% chance to fracture on death$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1531,7 +1531,7 @@
             "generalizedText": "^adjacent areas contains # additional giant starfish $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1543,7 +1543,7 @@
             "generalizedText": "^monsters poison on hit $|^ #% increased dead man's sulphur found in adjacent areas chaos ailment$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1555,7 +1555,7 @@
             "generalizedText": "^monsters have a chance to be empowered by # wildwood wisps $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1567,7 +1567,7 @@
             "generalizedText": "^#% increased number of magic monsters in adjacent areas $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 46,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1579,7 +1579,7 @@
             "generalizedText": "^monsters have a chance to be empowered by # wildwood wisps $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1591,7 +1591,7 @@
             "generalizedText": "^monsters have #% chance to avoid elemental ailments $|^ #% increased quantity of items found in adjacent areas elemental fire cold lightning ailment$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1603,7 +1603,7 @@
             "generalizedText": "^monster damage penetrates #% elemental resistances $|^ #% increased pack size in adjacent areas damage elemental$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1615,7 +1615,7 @@
             "generalizedText": "^monsters have #% increased critical strike chance $|^ #% to monster critical strike multiplier $|^ #% increased pack size in adjacent areas damage critical$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1627,7 +1627,7 @@
             "generalizedText": "^belts dropped in adjacent areas have #% chance to instead drop as a unique belt $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 47,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1639,7 +1639,7 @@
             "generalizedText": "^adjacent areas contain highly prized and exotic fish $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1651,7 +1651,7 @@
             "generalizedText": "^#% increased pack size in all voyage areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1663,7 +1663,7 @@
             "generalizedText": "^monsters have #% chance to avoid elemental ailments $|^ #% increased quantity of items found in adjacent areas elemental fire cold lightning ailment$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1675,7 +1675,7 @@
             "generalizedText": "^#% more monster life $|^ #% increased quantity of items found in adjacent areas life$",
             "options": {
                 "scary": 68,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1687,7 +1687,7 @@
             "generalizedText": "^monsters hinder on hit with spells $|^ #% increased dead man's sulphur found in adjacent areas$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": false,
                 "rewards": []
             }
@@ -1699,7 +1699,7 @@
             "generalizedText": "^monsters deal #% extra physical damage as cold $|^ #% increased rarity of items found in adjacent areas damage physical elemental cold$",
             "options": {
                 "scary": 83,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }

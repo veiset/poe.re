@@ -3,7 +3,8 @@ import {useContext} from "react";
 import {HeaderWithLanguage} from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import SelectableTokenList from "@poe/components/SelectableTokenList/SelectableTokenList";
-import {BoatModsTokenOption, regexBoatModsENGLISH, Token} from "@poe/generated/GeneratedBoatMods";
+import type {BoatModsRegex, MapOption, Token} from "@poe/types/generated/boatmods";
+import {loadBoatMods} from "@poe/utils/loadData";
 import {generateBoatModRegex} from "./BoatOutput";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
@@ -69,6 +70,7 @@ const Boat = () => {
   const profile = {...storedProfile, boat: favoritePage.initialConfiguration};
 
   const [result, setResult] = useState("");
+  const [regexBoatMods, setRegexBoatMods] = useState<BoatModsRegex>();
   const [selectedGoodIds, setSelectedGoodIds] = useState<number[]>(profile.boat.selectedGoodIds);
   const [allGoodMods, setAllGoodMods] = useState(profile.boat.allGoodMods);
   const [adjacentModifier, setAdjacentModifier] = useState(profile.boat.adjacentModifier);
@@ -82,25 +84,30 @@ const Boat = () => {
   };
 
   useEffect(() => {
+    loadBoatMods().then(setRegexBoatMods);
+  }, []);
+
+  useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, boat: {...settings}}));
 
+    if (!regexBoatMods) return;
     setResult(generateBoatModRegex(
       selectedGoodIds,
       allGoodMods,
-      regexBoatModsENGLISH,
+      regexBoatMods,
       adjacentModifier.enabled && adjacentModifier.include,
       adjacentModifier.enabled && !adjacentModifier.include,
       selectedAreaRegexes,
     ));
-  }, [selectedGoodIds, allGoodMods, adjacentModifier, selectedAreaRegexes, customTextStr, enableCustomText]);
+  }, [selectedGoodIds, allGoodMods, adjacentModifier, selectedAreaRegexes, customTextStr, enableCustomText, regexBoatMods]);
 
-  const renderAffixTag = (token: Token<BoatModsTokenOption>) => (
+  const renderAffixTag = (token: Token<MapOption>) => (
     <span className={`mod-affix-tag mod-affix-tag--${token.options.prefix ? "prefix" : "suffix"}`}>
       {token.options.prefix ? "P" : "S"}
     </span>
   );
 
-  const affixGroupFn = (token: Token<BoatModsTokenOption>) =>
+  const affixGroupFn = (token: Token<MapOption>) =>
     token.options.prefix
       ? {key: "prefix", label: "Prefix"}
       : {key: "suffix", label: "Suffix"};
@@ -176,7 +183,7 @@ const Boat = () => {
           </div>
           <SelectableTokenList
             sortFn={(a, b) => a.options.scary - b.options.scary}
-            elements={regexBoatModsENGLISH.tokens}
+        elements={regexBoatMods?.tokens ?? []}
             setSelected={setSelectedGoodIds}
             selected={selectedGoodIds}
             tagFn={renderAffixTag}

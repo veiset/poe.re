@@ -7,7 +7,7 @@
             "generalizedText": "^el jefe de mapa está acompañado por un jefe de synthesis$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperación de vida y escudo de energía$",
             "options": {
                 "scary": 650,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^los jugadores tienen -#% a todas las resistencias máximas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^los monstruos tienen #% de probabilidad de bloquear el daño de ataques$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -55,7 +55,7 @@
             "generalizedText": "^el área está habitada por cultistas de kitava$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -67,7 +67,7 @@
             "generalizedText": "^los monstruos raros del área están tocados por el creador$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -79,7 +79,7 @@
             "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar los estados alterados elementales$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -91,7 +91,7 @@
             "generalizedText": "^los monstruos raros tienen todos # modificador adicional$|^cantidad de monstruos raros aumentada un #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -103,7 +103,7 @@
             "generalizedText": "^el área contiene monstruos inestables de tentáculos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -115,7 +115,7 @@
             "generalizedText": "^los monstruos ganan una carga de frenesí con cada golpe$|^los monstruos tienen # al máximo de cargas de frenesí$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -127,7 +127,7 @@
             "generalizedText": "^los monstruos ganan el #% de la vida máxima como escudo de energía máximo extra$",
             "options": {
                 "scary": 240,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -139,7 +139,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperación del tiempo de recarga$",
             "options": {
                 "scary": 94,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -151,7 +151,7 @@
             "generalizedText": "^los monstruos raros tienen espinas físicas que reflejan # de daño físico$|^los monstruos raros tienen espinas elementales que reflejan # de daño elemental$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -163,7 +163,7 @@
             "generalizedText": "^los monstruos roban cargas de poder, frenesí y aguante con cada golpe$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -175,7 +175,7 @@
             "generalizedText": "^los monstruos tienen la probabilidad de golpe crítico aumentada un #%$|^#% al multiplicador de golpe crítico de los monstruos$",
             "options": {
                 "scary": 500,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -187,7 +187,7 @@
             "generalizedText": "^los efectos beneficiosos expiran un #% más rápido sobre los jugadores$|^en el área caen un #% más de escarabajos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -199,7 +199,7 @@
             "generalizedText": "^los ataques de los monstruos tienen un #% de probabilidad de empalar con cada golpe$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -211,7 +211,7 @@
             "generalizedText": "^el daño de los monstruos penetra el #% de las resistencias elementales$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -223,7 +223,7 @@
             "generalizedText": "^el área tiene zonas de suelo consagrado$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -235,7 +235,7 @@
             "generalizedText": "^el área contiene muchos tótems$",
             "options": {
                 "scary": 9,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -247,7 +247,7 @@
             "generalizedText": "^los monstruos ganan una carga de frenesí con cada golpe$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -259,7 +259,7 @@
             "generalizedText": "^el jefe único inflige el daño aumentado un #%$|^el jefe único tiene velocidades de ataque y de lanzamiento de hechizos aumentadas un #%$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -271,7 +271,7 @@
             "generalizedText": "^el área está habitada por monstruos con ataques a distancia$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -283,7 +283,7 @@
             "generalizedText": "^los jugadores tienen probabilidad de bloquear reducida un #%$|^los jugadores tienen un #% menos de armadura$",
             "options": {
                 "scary": 295,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -295,7 +295,7 @@
             "generalizedText": "^las habilidades de los monstruos se encadenan # veces adicionales$|^los proyectiles de los monstruos se pueden encadenar al colisionar con el terreno$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -307,7 +307,7 @@
             "generalizedText": "^los efectos beneficiosos expiran un #% más rápido sobre los jugadores$",
             "options": {
                 "scary": 96,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -319,7 +319,7 @@
             "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el daño de hechizos$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -331,7 +331,7 @@
             "generalizedText": "^velocidad de lanzamiento de hechizos de los monstruos aumentada un #%$|^velocidad de ataque de los monstruos aumentada un #%$|^velocidad de movimiento de los monstruos aumentada un #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -343,7 +343,7 @@
             "generalizedText": "^los monstruos aplican # enredaderas acechantes con cada golpe$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -355,7 +355,7 @@
             "generalizedText": "^el área contiene orbes de ahogamiento$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -367,7 +367,7 @@
             "generalizedText": "^los monstruos tienen un #% más de vida$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -379,7 +379,7 @@
             "generalizedText": "^los jugadores ganan cargas de frascos reducidas un #%$",
             "options": {
                 "scary": 210,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -391,7 +391,7 @@
             "generalizedText": "^el área está habitada por fanáticos de lunaris$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -403,7 +403,7 @@
             "generalizedText": "^#% a la resistencia al caos de los monstruos$|^#% a las resistencias elementales de los monstruos$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -415,7 +415,7 @@
             "generalizedText": "^el área está habitada por no-muertos$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -427,7 +427,7 @@
             "generalizedText": "^cantidad de monstruos raros aumentada un #%$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -439,7 +439,7 @@
             "generalizedText": "^los monstruos ganan el #% de su daño físico como daño extra de un elemento aleatorio$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -451,7 +451,7 @@
             "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar el veneno, el empalamiento y el sangrado$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -463,7 +463,7 @@
             "generalizedText": "^el área está habitada por humanoides$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -475,7 +475,7 @@
             "generalizedText": "^daño de los monstruos aumentado un #%$",
             "options": {
                 "scary": 370,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -487,7 +487,7 @@
             "generalizedText": "^#% menos de efecto de las maldiciones sobre los monstruos$",
             "options": {
                 "scary": 363,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -499,7 +499,7 @@
             "generalizedText": "^las habilidades de los monstruos se encadenan # veces adicionales$",
             "options": {
                 "scary": 380,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -511,7 +511,7 @@
             "generalizedText": "^los jugadores tienen -#% a todas las resistencias máximas$",
             "options": {
                 "scary": 980,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -523,7 +523,7 @@
             "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el daño de hechizos$",
             "options": {
                 "scary": 290,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -535,7 +535,7 @@
             "generalizedText": "^#% a la reducción de daño físico de los monstruos$|^#% a las resistencias elementales de los monstruos$|^#% a la resistencia al caos de los monstruos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -547,7 +547,7 @@
             "generalizedText": "^los monstruos raros tienen espinas físicas que reflejan # de daño físico$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -559,7 +559,7 @@
             "generalizedText": "^los monstruos ganan una carga de aguante con cada golpe$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -571,7 +571,7 @@
             "generalizedText": "^el área está habitada por hombres cabra$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -583,7 +583,7 @@
             "generalizedText": "^los monstruos tienen un #% más de vida$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -595,7 +595,7 @@
             "generalizedText": "^los monstruos tienen un #% de probabilidad de quemar, congelar y electrocutar con cada golpe$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -607,7 +607,7 @@
             "generalizedText": "^el área tiene zonas de suelo profanado$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -619,7 +619,7 @@
             "generalizedText": "^los monstruos queman, congelan y electrocutan con cada golpe$|^todo el daño de los monstruos puede quemar, congelar y electrocutar$|^en el área caen un #% más de escarabajos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -631,7 +631,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de precisión$",
             "options": {
                 "scary": 85,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -643,7 +643,7 @@
             "generalizedText": "^el jefe único tiene su vida aumentada un #%$|^el jefe único tiene su área de efecto aumentada un #%$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -655,7 +655,7 @@
             "generalizedText": "^los jefes únicos están poseídos$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de efecto de los frascos que se aplican a ellos$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^los monstruos lisian al golpear con ataques$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^los monstruos reciben el daño extra de los golpes críticos reducido un #%$",
             "options": {
                 "scary": 250,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^los monstruos infligen el #% de su daño físico extra como fuego$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^los monstruos ganan el #% de su daño físico como daño extra de caos$|^los monstruos aplican marchito durante # segundos con cada golpe$",
             "options": {
                 "scary": 455,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^velocidad de movimiento de los monstruos aumentada un #%$|^velocidad de ataque de los monstruos aumentada un #%$|^velocidad de lanzamiento de hechizos de los monstruos aumentada un #%$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^el área está habitada por esqueletos$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^los monstruos ganan el #% de su daño físico como daño extra de caos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^los jugadores tienen -#% a la cantidad de daño de hechizos atenuado neutralizado$|^los monstruos tienen precisión aumentada un #%$",
             "options": {
                 "scary": 365,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^el área tiene la variedad de monstruos aumentada$",
             "options": {
                 "scary": 8,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^el área está habitada por fanáticos de solaris$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^#% al multiplicador de golpe crítico de los monstruos$|^los monstruos tienen la probabilidad de golpe crítico aumentada un #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^no se puede absorber nada de los monstruos$",
             "options": {
                 "scary": 600,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de área de efecto$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -835,7 +835,7 @@
             "generalizedText": "^los jugadores tienen la maldición de debilitar$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -847,7 +847,7 @@
             "generalizedText": "^los monstruos tienen # al máximo de cargas de aguante$|^los monstruos ganan una carga de aguante cuando son golpeados$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -859,7 +859,7 @@
             "generalizedText": "^el área tiene zonas de suelo electrificado que aumentan el daño recibido en un #%$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -871,7 +871,7 @@
             "generalizedText": "^cantidad de monstruos mágicos aumentada un #%$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -883,7 +883,7 @@
             "generalizedText": "^los monstruos únicos tienen un efecto beneficioso de santuario aleatorio$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -895,7 +895,7 @@
             "generalizedText": "^los monstruos ganan el #% de la vida máxima como escudo de energía máximo extra$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -907,7 +907,7 @@
             "generalizedText": "^los jugadores tienen la maldición de vulnerabilidad$|^los jugadores tienen la maldición de cadenas temporales$|^los jugadores tienen la maldición de debilidad elemental$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -919,7 +919,7 @@
             "generalizedText": "^los monstruos no pueden ser aturdidos$|^la velocidad de acción de los monstruos no se puede modificar por debajo del valor base$|^la velocidad de movimiento de los monstruos no se puede modificar por debajo del valor base$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -931,7 +931,7 @@
             "generalizedText": "^el área contiene runas del exarca abrasador$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -943,7 +943,7 @@
             "generalizedText": "^el área está habitada por brujas del mar y sus engendros$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -955,7 +955,7 @@
             "generalizedText": "^#% a la reducción de daño físico de los monstruos$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -967,7 +967,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de área de efecto$",
             "options": {
                 "scary": 60,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -979,7 +979,7 @@
             "generalizedText": "^el área contiene dos jefes únicos$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -991,7 +991,7 @@
             "generalizedText": "^los monstruos raros del área reviven temporalmente al morir$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1003,7 +1003,7 @@
             "generalizedText": "^el área está habitada por demonios$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1015,7 +1015,7 @@
             "generalizedText": "^los monstruos envenenan con cada golpe$|^los monstruos tienen la duración del veneno aumentada un #%$|^todo el daño de los golpes de los monstruos puede envenenar$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1027,7 +1027,7 @@
             "generalizedText": "^los jugadores reciben ataques de sierras ensangrentadas$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1039,7 +1039,7 @@
             "generalizedText": "^el área tiene zonas de suelo escarchado$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1051,7 +1051,7 @@
             "generalizedText": "^los monstruos raros tienen espinas elementales que reflejan # de daño elemental$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1063,7 +1063,7 @@
             "generalizedText": "^el área está habitada por abominaciones$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1075,7 +1075,7 @@
             "generalizedText": "^los jugadores tienen el efecto de las auras que no son maldiciones de sus habilidades reducido un #%$",
             "options": {
                 "scary": 990,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1087,7 +1087,7 @@
             "generalizedText": "^los efectos nocivos expiran un #% más rápido sobre los monstruos$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1099,7 +1099,7 @@
             "generalizedText": "^los jugadores tienen la maldición de vulnerabilidad$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1111,7 +1111,7 @@
             "generalizedText": "^los jugadores tienen la recuperación de vida, maná y escudo de energía totales máximos de la absorción reducida un #% por segundo$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1123,7 +1123,7 @@
             "generalizedText": "^el área tiene zonas de suelo incendiado$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1135,7 +1135,7 @@
             "generalizedText": "^los monstruos ganan una carga de poder con cada golpe$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1147,7 +1147,7 @@
             "generalizedText": "^los jugadores no pueden regenerar vida, maná ni escudo de energía$",
             "options": {
                 "scary": 700,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1159,7 +1159,7 @@
             "generalizedText": "^#% de probabilidad de que los monstruos raros se fracturen al morir$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1171,7 +1171,7 @@
             "generalizedText": "^los jugadores son el objetivo de un meteorito cuando usan un frasco$|^en el área caen un #% menos de objetos monetarios$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1183,7 +1183,7 @@
             "generalizedText": "^el área está habitada por animales$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1195,7 +1195,7 @@
             "generalizedText": "^los jugadores no pueden aplicar exposición$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^los jugadores tienen un #% menos de defensas$|^en el área caen un #% más de escarabajos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1219,7 +1219,7 @@
             "generalizedText": "^los monstruos disparan # proyectiles adicionales$|^los monstruos tienen su área de efecto aumentada un #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1231,7 +1231,7 @@
             "generalizedText": "^los monstruos ganan una carga de poder con cada golpe$|^los monstruos tienen # al máximo de cargas de poder$|^en el área caen un #% más de mapas$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1243,7 +1243,7 @@
             "generalizedText": "^el área contiene peligros del laberinto$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1255,7 +1255,7 @@
             "generalizedText": "^los monstruos no pueden ser aturdidos$|^los monstruos tienen un #% más de vida$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1267,7 +1267,7 @@
             "generalizedText": "^los monstruos tienen antimaleficios$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1279,7 +1279,7 @@
             "generalizedText": "^los monstruos envenenan con cada golpe$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1291,7 +1291,7 @@
             "generalizedText": "^los jugadores tienen la maldición de cadenas temporales$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1303,7 +1303,7 @@
             "generalizedText": "^los monstruos disparan # proyectiles adicionales$",
             "options": {
                 "scary": 440,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1315,7 +1315,7 @@
             "generalizedText": "^los monstruos raros tienen núcleos volátiles$|^en el área caen un #% más de escarabajos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1327,7 +1327,7 @@
             "generalizedText": "^el área está habitada por fantasmas$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1339,7 +1339,7 @@
             "generalizedText": "^los monstruos entumecen al golpear con hechizos$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1351,7 +1351,7 @@
             "generalizedText": "^la especialista interfiere con los jugadores$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1363,7 +1363,7 @@
             "generalizedText": "^los monstruos infligen el #% de su daño físico extra como hielo$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1375,7 +1375,7 @@
             "generalizedText": "^las auras de las habilidades de los jugadores que afectan a los aliados también afectan a los enemigos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1387,7 +1387,7 @@
             "generalizedText": "^los jugadores tienen la maldición de debilidad elemental$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1399,7 +1399,7 @@
             "generalizedText": "^los monstruos tienen su área de efecto aumentada un #%$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1411,7 +1411,7 @@
             "generalizedText": "^el área contiene zonas de suelo señalado movedizo que aplica señales aleatorias$|^en el área caen un #% más de escarabajos$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1423,7 +1423,7 @@
             "generalizedText": "^todo el daño de los golpes de los monstruos siempre quema$",
             "options": {
                 "scary": 99,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1435,7 +1435,7 @@
             "generalizedText": "^la velocidad de acción de los monstruos no se puede modificar por debajo del valor base$|^la velocidad de movimiento de los monstruos no se puede modificar por debajo del valor base$|^los monstruos no pueden ser provocados$",
             "options": {
                 "scary": 89,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1447,7 +1447,7 @@
             "generalizedText": "^los monstruos ciegan con cada golpe$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1459,7 +1459,7 @@
             "generalizedText": "^los monstruos infligen el #% de su daño físico extra como rayo$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }

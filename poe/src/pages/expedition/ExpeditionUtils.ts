@@ -1,11 +1,11 @@
 import {distinct, groupBy} from "@poe/utils/ListUtils";
-import {baseTypeRegex, Item} from "@poe/generated/GeneratedExpedition";
+import type {BaseTypeRegex, Item} from "@poe/types/generated/expedition";
 import dayjs from "dayjs";
 import {PoeNinjaItem, PriceData, PricedBaseType, PricedItemWithFallback} from "./ExpeditionTypes";
 
 const sortByValue = (a: PricedItemWithFallback, b: PricedItemWithFallback): number => b.displayPrice - a.displayPrice
 
-export const generateRegex = (selectedBases: string[], fillerBases: string[]): string => {
+export const generateRegex = (selectedBases: string[], fillerBases: string[], baseTypeRegex: Record<string, BaseTypeRegex>): string => {
     const allBases = distinct(selectedBases.concat(fillerBases));
     if (allBases.length === 0) {
         return "";
@@ -18,8 +18,8 @@ export const generateRegex = (selectedBases: string[], fillerBases: string[]): s
     return `"${regex}"`;
 }
 
-export const generateFillerBases = (selectedBases: string[], priceData: PriceData, minValue: number): PricedBaseType[] => {
-    const currentRegexLength = generateRegex(selectedBases, []).length;
+export const generateFillerBases = (selectedBases: string[], priceData: PriceData, minValue: number, baseTypeRegex: Record<string, BaseTypeRegex>): PricedBaseType[] => {
+    const currentRegexLength = generateRegex(selectedBases, [], baseTypeRegex).length;
     let count = Math.max(currentRegexLength, 2);
 
     return priceData.pricedBaseTypes.reduce((acc: PricedBaseType[], el: PricedBaseType) => {
@@ -39,7 +39,7 @@ export const generateFillerBases = (selectedBases: string[], priceData: PriceDat
         }
     }, []);
 }
-export const generateSortedPriceData = (allItems: Item[], fallbackPrices: PoeNinjaItem[], leaguePrices: PoeNinjaItem[]): PriceData => {
+export const generateSortedPriceData = (allItems: Item[], fallbackPrices: PoeNinjaItem[], leaguePrices: PoeNinjaItem[], baseTypeRegex: Record<string, BaseTypeRegex>): PriceData => {
     const fallbackMap = new Map(fallbackPrices.map(i => [i.name, i.chaosValue]));
     const leagueMap = new Map(leaguePrices?.map(i => [i.name, i.chaosValue]));
 

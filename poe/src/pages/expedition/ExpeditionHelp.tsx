@@ -1,34 +1,35 @@
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import {PoeNinjaItem, PriceData, PricedItemWithFallback} from "./ExpeditionTypes";
-import {numberOfUniques, uniquesSeen, obtainableItems, baseTypeRegex} from "@poe/generated/GeneratedExpedition";
+import type {Expedition} from "@poe/types/generated/expedition";
 import {ItemDisplay} from "./ExpeditionRow";
 
 export interface ExpeditionHelpProps {
     priceData: PriceData
     leaguePrices: PoeNinjaItem[]
     fallbackPrices: PoeNinjaItem[]
+    expedition: Expedition
 }
 
 export const ExpeditionHelp = (props: ExpeditionHelpProps) => {
-    const {leaguePrices, fallbackPrices} = props;
+    const {leaguePrices, fallbackPrices, expedition} = props;
     const allEconomyItems = Array.from(new Set(leaguePrices.concat(fallbackPrices).map((e) => e.name)));
-    const newItems = allEconomyItems.filter((x) => !uniquesSeen.includes(x));
+    const newItems = allEconomyItems.filter((x) => !expedition.uniquesSeen.includes(x));
 
-    const bases = Object.keys(baseTypeRegex);
+    const bases = Object.keys(expedition.baseTypeRegex);
     const sampleItemFallback: PricedItemWithFallback = {
-        item: baseTypeRegex[bases[0]].items[0],
+        item: expedition.baseTypeRegex[bases[0]].items[0],
         fallbackPrice: 10,
         price: undefined,
         displayPrice: 10
     }
     const expensiveItem: PricedItemWithFallback = {
-        item: baseTypeRegex[bases[1]].items[0],
+        item: expedition.baseTypeRegex[bases[1]].items[0],
         fallbackPrice: 3200,
         price: 3800,
         displayPrice: 3800
     }
     const regularItem: PricedItemWithFallback = {
-        item: baseTypeRegex[bases[2]].items[0],
+        item: expedition.baseTypeRegex[bases[2]].items[0],
         fallbackPrice: 93,
         price: 120,
         displayPrice: 120
@@ -72,8 +73,8 @@ export const ExpeditionHelp = (props: ExpeditionHelpProps) => {
                 If you find any items missing, or items that shouldn't show up, such as an item that cannot be chanced please
                 report them at <a className="source-link" href="https://github.com/veiset/poe.re/issues">the issue tracker</a>.
                 <br/>
-                There are currently <span className="span-help-number">{numberOfUniques}</span> uniques known by the generator,
-                of which <span className="span-help-number">{obtainableItems}</span> are obtainable from Gwennen.
+                There are currently <span className="span-help-number">{expedition.numberOfUniques}</span> uniques known by the generator,
+                of which <span className="span-help-number">{expedition.obtainableItems}</span> are obtainable from Gwennen.
             </div>
             <div>
                 <br/>

@@ -1,9 +1,9 @@
 import {ScarabSettings} from "@poe/utils/SavedSettings";
-import {scarabs} from "@poe/generated/GeneratedScarabs";
+import type {Scarabs} from "@poe/types/generated/scarabs";
 
-export function generateScarabRegex(settings: ScarabSettings): string {
+export function generateScarabRegex(settings: ScarabSettings, scarabs: Scarabs): string {
   const regex = settings.selected.map((scarab) => {
-    return scarabs[scarab].regex
-  }).join("|");
+    return scarabs[scarab]?.regex;
+  }).filter((regex): regex is string => regex !== undefined).join("|");
   return (regex.length > 0) ? `"${regex}"` : "";
 }

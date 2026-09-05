@@ -1,6 +1,6 @@
 import JewelModList from "./JewelModList";
 import React from "react";
-import {JewelRegex} from "@poe/generated/GeneratedJewel";
+import type {JewelRegex} from "@poe/types/generated/jewel";
 
 export interface JewelModsProps {
   mods: JewelRegex[]

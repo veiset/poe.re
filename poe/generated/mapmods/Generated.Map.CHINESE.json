@@ -7,7 +7,7 @@
             "generalizedText": "^地圖頭目伴隨著 # 個追憶頭目$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -19,7 +19,7 @@
             "generalizedText": "^玩家有 #% 更少生命和能量護盾恢復率$",
             "options": {
                 "scary": 650,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -31,7 +31,7 @@
             "generalizedText": "^玩家 -#% 全部最大抗性$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -43,7 +43,7 @@
             "generalizedText": "^怪物 #% 攻擊傷害格擋率$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -55,7 +55,7 @@
             "generalizedText": "^區域內有許多奇塔弗的信徒$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -67,7 +67,7 @@
             "generalizedText": "^區域內的稀有怪物為塑界者之觸$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -79,7 +79,7 @@
             "generalizedText": "^怪物有 #% 機率避免元素異常狀態$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -91,7 +91,7 @@
             "generalizedText": "^每個稀有怪物有 # 個額外詞綴$|^增加 #% 稀有怪物的數量$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -103,7 +103,7 @@
             "generalizedText": "^區域內含有不穩定的惡魔觸手$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -115,7 +115,7 @@
             "generalizedText": "^怪物擊中時獲得 # 顆狂怒球$|^怪物狂怒球上限 #$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -127,7 +127,7 @@
             "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾$",
             "options": {
                 "scary": 240,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -139,7 +139,7 @@
             "generalizedText": "^玩家有 #% 更少冷卻時間恢復率$",
             "options": {
                 "scary": 94,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -151,7 +151,7 @@
             "generalizedText": "^稀有怪物擁有會反射 # 物理傷害的物理荊棘$|^稀有怪物擁有會反射 # 元素傷害的元素荊棘$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -163,7 +163,7 @@
             "generalizedText": "^怪物擊中時偷取暴擊、狂怒和耐力球$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -175,7 +175,7 @@
             "generalizedText": "^怪物增加 #% 暴擊率$|^#% 怪物暴擊加成$",
             "options": {
                 "scary": 500,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -187,7 +187,7 @@
             "generalizedText": "^玩家身上的增益效果加速 #% 失效$|^區域內掉落的聖甲蟲增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -199,7 +199,7 @@
             "generalizedText": "^怪物的攻擊擊中時有 #% 機率造成穿刺$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -211,7 +211,7 @@
             "generalizedText": "^怪物傷害穿透 #% 元素抗性$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -223,7 +223,7 @@
             "generalizedText": "^區域有數道奉獻地面$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -235,7 +235,7 @@
             "generalizedText": "^區域含有許多圖騰$",
             "options": {
                 "scary": 9,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -247,7 +247,7 @@
             "generalizedText": "^怪物擊中時獲得 # 顆狂怒球$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -259,7 +259,7 @@
             "generalizedText": "^傳奇頭目增加 #% 傷害$|^傳奇頭目增加 #% 攻擊速度及施放速度$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -271,7 +271,7 @@
             "generalizedText": "^區域含有許多遠程怪物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -283,7 +283,7 @@
             "generalizedText": "^玩家減少 #% 格擋率$|^玩家有 #% 更少護甲$",
             "options": {
                 "scary": 295,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -295,7 +295,7 @@
             "generalizedText": "^怪物的技能附加 # 次連鎖$|^當怪物的投射物撞擊地面時連鎖$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -307,7 +307,7 @@
             "generalizedText": "^玩家身上的增益效果加速 #% 失效$",
             "options": {
                 "scary": 96,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -319,7 +319,7 @@
             "generalizedText": "^怪物 #% 壓抑法術傷害率$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -331,7 +331,7 @@
             "generalizedText": "^增加 #% 怪物施放速度$|^增加 #% 怪物攻擊速度$|^增加 #% 怪物移動速度$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -343,7 +343,7 @@
             "generalizedText": "^怪物擊中時造成 # 層緩速藤蔓$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -355,7 +355,7 @@
             "generalizedText": "^區域內含有溺亡之球$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -367,7 +367,7 @@
             "generalizedText": "^#% 更多怪物生命$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -379,7 +379,7 @@
             "generalizedText": "^玩家獲得的藥劑充能減少 #%$",
             "options": {
                 "scary": 210,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -391,7 +391,7 @@
             "generalizedText": "^區域內有許多月影神信徒$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -403,7 +403,7 @@
             "generalizedText": "^#% 怪物的混沌抗性$|^#% 怪物的元素抗性$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -415,7 +415,7 @@
             "generalizedText": "^區域含有許多不死生物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -427,7 +427,7 @@
             "generalizedText": "^增加 #% 稀有怪物的數量$",
             "options": {
                 "scary": 1,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -439,7 +439,7 @@
             "generalizedText": "^怪物獲得 #% 物理傷害的額外 # 個隨機元素傷害$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -451,7 +451,7 @@
             "generalizedText": "^怪物有 #% 機率避免中毒、穿刺和流血$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -463,7 +463,7 @@
             "generalizedText": "^區域含有許多人型生物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -475,7 +475,7 @@
             "generalizedText": "^增加 #% 怪物傷害$",
             "options": {
                 "scary": 370,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -487,7 +487,7 @@
             "generalizedText": "^對怪物的詛咒有 #% 更少效果$",
             "options": {
                 "scary": 363,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -499,7 +499,7 @@
             "generalizedText": "^怪物的技能附加 # 次連鎖$",
             "options": {
                 "scary": 380,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -511,7 +511,7 @@
             "generalizedText": "^玩家 -#% 全部最大抗性$",
             "options": {
                 "scary": 980,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -523,7 +523,7 @@
             "generalizedText": "^怪物 #% 壓抑法術傷害率$",
             "options": {
                 "scary": 290,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -535,7 +535,7 @@
             "generalizedText": "^#% 怪物物理傷害減免$|^#% 怪物的元素抗性$|^#% 怪物的混沌抗性$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -547,7 +547,7 @@
             "generalizedText": "^稀有怪物擁有會反射 # 物理傷害的物理荊棘$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -559,7 +559,7 @@
             "generalizedText": "^怪物擊中時獲得 # 顆耐力球$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -571,7 +571,7 @@
             "generalizedText": "^區域含有許多羊男$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -583,7 +583,7 @@
             "generalizedText": "^#% 更多怪物生命$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -595,7 +595,7 @@
             "generalizedText": "^擊中時，怪物有 #% 機率點燃、冰凍和感電$",
             "options": {
                 "scary": 98,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -607,7 +607,7 @@
             "generalizedText": "^地圖含有腐化地面$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -619,7 +619,7 @@
             "generalizedText": "^擊中時，怪物點燃、冰凍和感電$|^全部怪物傷害可以點燃、冰凍和感電$|^區域內掉落的聖甲蟲增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -631,7 +631,7 @@
             "generalizedText": "^玩家有 #% 更少命中值$",
             "options": {
                 "scary": 85,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -643,7 +643,7 @@
             "generalizedText": "^傳奇頭目增加 #% 生命$|^傳奇頭目增加 #% 範圍技能$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -655,7 +655,7 @@
             "generalizedText": "^傳奇頭目被附身$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -667,7 +667,7 @@
             "generalizedText": "^#%更少施加於玩家的藥劑效果$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -679,7 +679,7 @@
             "generalizedText": "^怪物攻擊擊中時造成癱瘓$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -691,7 +691,7 @@
             "generalizedText": "^減少 #% 怪物承受的暴擊傷害$",
             "options": {
                 "scary": 250,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -703,7 +703,7 @@
             "generalizedText": "^怪物造成 #% 額外物理傷害視為火焰$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -715,7 +715,7 @@
             "generalizedText": "^怪物獲得等同它們 #% 物理傷害的額外混沌傷害$|^怪物擊中時造成凋零 # 秒$",
             "options": {
                 "scary": 455,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -727,7 +727,7 @@
             "generalizedText": "^增加 #% 怪物移動速度$|^增加 #% 怪物攻擊速度$|^增加 #% 怪物施放速度$",
             "options": {
                 "scary": 420,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -739,7 +739,7 @@
             "generalizedText": "^區域含有許多骷髏$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -751,7 +751,7 @@
             "generalizedText": "^怪物獲得等同它們 #% 物理傷害的額外混沌傷害$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -763,7 +763,7 @@
             "generalizedText": "^玩家 -#% 防止壓抑法術傷害的總量$|^怪物增加 #% 命中值$",
             "options": {
                 "scary": 365,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -775,7 +775,7 @@
             "generalizedText": "^地圖裡的怪物種類被增加了$",
             "options": {
                 "scary": 8,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -787,7 +787,7 @@
             "generalizedText": "^區域內有許多日耀神信徒$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -799,7 +799,7 @@
             "generalizedText": "^#% 怪物暴擊加成$|^怪物增加 #% 暴擊率$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -811,7 +811,7 @@
             "generalizedText": "^怪物無法被偷取$",
             "options": {
                 "scary": 600,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -823,7 +823,7 @@
             "generalizedText": "^玩家有 #% 更少的範圍效果$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -835,7 +835,7 @@
             "generalizedText": "^玩家被衰弱詛咒$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -847,7 +847,7 @@
             "generalizedText": "^怪物耐力球上限 #$|^怪物擊中時獲得 # 顆耐力球$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -859,7 +859,7 @@
             "generalizedText": "^區域內有數道增加 #% 承受傷害的感電地面$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -871,7 +871,7 @@
             "generalizedText": "^魔法怪物增加 #%$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -883,7 +883,7 @@
             "generalizedText": "^傳奇怪物有 # 個隨機神殿效果$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -895,7 +895,7 @@
             "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -907,7 +907,7 @@
             "generalizedText": "^玩家被脆弱詛咒$|^玩家被時空鎖鏈詛咒$|^玩家被元素要害詛咒$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -919,7 +919,7 @@
             "generalizedText": "^怪物不會被暈眩$|^怪物的行動速度不能被調整至低於基礎值$|^怪物的移動速度不能被調整至低於基礎值$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -931,7 +931,7 @@
             "generalizedText": "^區域內含有灼烙總督符文$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -943,7 +943,7 @@
             "generalizedText": "^區域含有許多海巫和它的召喚物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -955,7 +955,7 @@
             "generalizedText": "^#% 怪物物理傷害減免$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -967,7 +967,7 @@
             "generalizedText": "^玩家有 #% 更少的範圍效果$",
             "options": {
                 "scary": 60,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -979,7 +979,7 @@
             "generalizedText": "^地圖含有兩個傳奇頭目$",
             "options": {
                 "scary": 90,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -991,7 +991,7 @@
             "generalizedText": "^區域內的稀有怪物會暫時的從死亡中復甦$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1003,7 +1003,7 @@
             "generalizedText": "^區域含有許多惡魔$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1015,7 +1015,7 @@
             "generalizedText": "^被怪物擊中時中毒$|^怪物增加 #% 中毒持續時間$|^來自怪物擊中的所有傷害都可造成中毒$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1027,7 +1027,7 @@
             "generalizedText": "^玩家受到血漬鋸刃攻擊$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1039,7 +1039,7 @@
             "generalizedText": "^地圖含有冰緩地面$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1051,7 +1051,7 @@
             "generalizedText": "^稀有怪物擁有會反射 # 元素傷害的元素荊棘$",
             "options": {
                 "scary": 0,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1063,7 +1063,7 @@
             "generalizedText": "^區域含有大量被創造生物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1075,7 +1075,7 @@
             "generalizedText": "^玩家減少 #% 來自技能的非詛咒光環效果$",
             "options": {
                 "scary": 990,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1087,7 +1087,7 @@
             "generalizedText": "^怪物身上的減益效果消逝加速 #%$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1099,7 +1099,7 @@
             "generalizedText": "^玩家被脆弱詛咒$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1111,7 +1111,7 @@
             "generalizedText": "^玩家減少 #% 最大總生命、魔力和偷取每秒能量護盾恢復$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1123,7 +1123,7 @@
             "generalizedText": "^地圖含有燃燒地面$",
             "options": {
                 "scary": 310,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1135,7 +1135,7 @@
             "generalizedText": "^怪物擊中時獲得 # 顆暴擊球$",
             "options": {
                 "scary": 80,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1147,7 +1147,7 @@
             "generalizedText": "^玩家不能回復生命、魔力和能量護盾$",
             "options": {
                 "scary": 700,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1159,7 +1159,7 @@
             "generalizedText": "^稀有怪物死亡時有 #% 機率破裂$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1171,7 +1171,7 @@
             "generalizedText": "^玩家使用藥劑時被隕石瞄準$|^區域內掉落的通貨增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1183,7 +1183,7 @@
             "generalizedText": "^區域含有許多動物$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1195,7 +1195,7 @@
             "generalizedText": "^玩家不能造成曝曬$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1207,7 +1207,7 @@
             "generalizedText": "^玩家的防禦減少 #%$|^區域內掉落的聖甲蟲增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1219,7 +1219,7 @@
             "generalizedText": "^怪物發射 # 額外投射物$|^增加怪物 #% 範圍效果$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1231,7 +1231,7 @@
             "generalizedText": "^怪物擊中時獲得 # 顆暴擊球$|^怪物暴擊球上限 #$|^區域內掉落的地圖增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1243,7 +1243,7 @@
             "generalizedText": "^區域內含有昇華迷宮陷阱$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1255,7 +1255,7 @@
             "generalizedText": "^怪物不會被暈眩$|^#% 更多怪物生命$",
             "options": {
                 "scary": 100,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1267,7 +1267,7 @@
             "generalizedText": "^怪物不能受到詛咒$",
             "options": {
                 "scary": 150,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1279,7 +1279,7 @@
             "generalizedText": "^被怪物擊中時中毒$",
             "options": {
                 "scary": 390,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1291,7 +1291,7 @@
             "generalizedText": "^玩家被時空鎖鏈詛咒$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1303,7 +1303,7 @@
             "generalizedText": "^怪物發射 # 額外投射物$",
             "options": {
                 "scary": 440,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1315,7 +1315,7 @@
             "generalizedText": "^稀有怪物擁有核息$|^區域內掉落的聖甲蟲增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1327,7 +1327,7 @@
             "generalizedText": "^區域內有許多鬼魂$",
             "options": {
                 "scary": 4,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1339,7 +1339,7 @@
             "generalizedText": "^怪物法術擊中時造成阻礙$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1351,7 +1351,7 @@
             "generalizedText": "^釋界干擾玩家$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1363,7 +1363,7 @@
             "generalizedText": "^怪物造成 #% 額外物理傷害視為冰冷$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1375,7 +1375,7 @@
             "generalizedText": "^來自玩家技能、且可以影響友方的光環會同時影響敵人$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1387,7 +1387,7 @@
             "generalizedText": "^玩家被元素要害詛咒$",
             "options": {
                 "scary": 360,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1399,7 +1399,7 @@
             "generalizedText": "^增加怪物 #% 範圍效果$",
             "options": {
                 "scary": 400,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1411,7 +1411,7 @@
             "generalizedText": "^區域內含有數片會施加隨機印記的移動印記地面$|^區域內掉落的聖甲蟲增加 #%$",
             "options": {
                 "scary": 1001,
-                "nightmare": true,
+                "nm": true,
                 "prefix": true,
                 "rewards": []
             }
@@ -1423,7 +1423,7 @@
             "generalizedText": "^怪物傷害必定造成點燃$",
             "options": {
                 "scary": 99,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1435,7 +1435,7 @@
             "generalizedText": "^怪物的行動速度不能被調整至低於基礎值$|^怪物的移動速度不能被調整至低於基礎值$|^怪物不能被嘲諷$",
             "options": {
                 "scary": 89,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1447,7 +1447,7 @@
             "generalizedText": "^怪物擊中時致盲$",
             "options": {
                 "scary": 50,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }
@@ -1459,7 +1459,7 @@
             "generalizedText": "^怪物造成 #% 額外物理傷害視為閃電$",
             "options": {
                 "scary": 450,
-                "nightmare": false,
+                "nm": false,
                 "prefix": true,
                 "rewards": []
             }

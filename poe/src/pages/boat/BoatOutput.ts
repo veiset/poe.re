@@ -1,10 +1,10 @@
-import {Regex} from "@poe/generated/GeneratedBoatMods";
+import type {RegexResult} from "@poe/types/generated/boatmods";
 import {idToRegex} from "@poe/utils/regex/OptimizeRegexResult";
 
 export function generateBoatModRegex(
   selectedIds: number[],
   allSelectedMods: boolean,
-  regex: Regex<any>,
+  regex: RegexResult<any>,
   matchChartsWithAdjacentModifier: boolean,
   matchChartsWithoutAdjacentModifier: boolean,
   selectedAreaRegexes: string[],
