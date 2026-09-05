@@ -5,6 +5,7 @@ import type {Expedition} from "@poe/types/generated/expedition";
 import type {Jewel} from "@poe/types/generated/jewel";
 import type {MapModsRegex} from "@poe/types/generated/mapmods";
 import type {Scarabs} from "@poe/types/generated/scarabs";
+import type {GemsRegex} from "@poe/types/generated/gems";
 
 const basePath = "/generated";
 
@@ -52,6 +53,9 @@ function mapModsFor(language: string): () => Promise<MapModsRegex> {
   }
   return load;
 }
+const gems = lazy(() =>
+  fetchJson<GemsRegex>(`${basePath}/gems/Generated.Gems.ENGLISH.min.json`),
+);
 
 export function loadItemBasetypes(): Promise<ItemBase[]> {
   return itemBasetypes();
@@ -67,3 +71,6 @@ export const loadExpedition = (): Promise<Expedition> => expedition();
 export const loadJewel = (): Promise<Jewel> => jewel();
 export const loadScarabs = (): Promise<Scarabs> => scarabs();
 export const loadMapMods = (language: string): Promise<MapModsRegex> => mapModsFor(language)();
+export function loadGems(): Promise<GemsRegex> {
+  return gems();
+}

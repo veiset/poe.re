@@ -1,18 +1,17 @@
 import React, {Dispatch, SetStateAction, useEffect, useMemo} from "react";
-import {type GemRegex, gems} from "@poe/generated/GeneratedGems";
 import ModSearchBox from "@shared/components/ModSearchBox";
 import "./GemNameList.css";
-import {GemsTokenOption, Token} from "@poe/generated/gems/GeneratedTypes";
+import type {GemOption, Token} from "@poe/types/generated/gems";
 
 export interface GemNameListProps {
   id: string
-  gems: Token<GemsTokenOption>[]
+  gems: Token<GemOption>[]
   selected: number[]
   setSelected: Dispatch<SetStateAction<number[]>>
 }
 
 const gemColorOrder: Record<string, number> = {'r': 1, 'g': 2, 'b': 3, 'w': 4}
-const gemSortFn = (a: Token<GemsTokenOption>, b: Token<GemsTokenOption>) => {
+const gemSortFn = (a: Token<GemOption>, b: Token<GemOption>) => {
   const aSortKey = gemColorOrder[a.options.c] + a.rawText
   const bSortKey = gemColorOrder[b.options.c] + b.rawText
   return aSortKey.localeCompare(bSortKey)

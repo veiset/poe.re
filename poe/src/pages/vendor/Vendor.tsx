@@ -13,13 +13,13 @@ import Header from "@poe/components/Header";
 import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
 import {VendorSettings} from "@poe/utils/SavedSettings";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
-import {gems} from "@poe/generated/GeneratedGems";
 import GemNameList from './GemNameList';
 import Infobox from '@poe/components/infobox/Infobox';
-import {regexGems} from "@poe/generated/gems/Generated.Gems.English";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
+import type {GemsRegex} from "@poe/types/generated/gems";
+import {loadGems} from "@poe/utils/loadData";
 
 
 const Vendor = () => {
@@ -30,6 +30,11 @@ const Vendor = () => {
 
   const [result, setResult] = React.useState("");
   const [warning, setWarning] = React.useState<string | undefined>();
+  const [gems, setGems] = React.useState<GemsRegex>();
+
+  useEffect(() => {
+    loadGems().then(setGems);
+  }, []);
 
   const [rrr, setRrr] = React.useState(profile.vendor.colors.rrr);
   const [ggg, setGgg] = React.useState(profile.vendor.colors.ggg);
@@ -197,9 +202,9 @@ const Vendor = () => {
 
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, vendor: {...settings}}));
-    setResult(generateResultString(settings));
-    setWarning(generateWarnings(settings));
-  }, listOfvalues)
+    setResult(generateResultString(settings, gems));
+    setWarning(generateWarnings(settings, gems));
+  }, [...listOfvalues, gems])
 
   return (
     <>
@@ -315,7 +320,7 @@ const Vendor = () => {
         <div className="vendor-gems-card-header">
           <span className="vendor-gems-card-title">Gems</span>
         </div>
-        <GemNameList id="gemnamelist" gems={regexGems.tokens} selected={selectedGems} setSelected={setSelectedGems}/>
+        <GemNameList id="gemnamelist" gems={gems?.tokens ?? []} selected={selectedGems} setSelected={setSelectedGems}/>
       </div>
 
       <div className="break"/>
