@@ -28,7 +28,7 @@
             "id": -2038489408,
             "regex": "zu a",
             "rawText": "Spieler haben -20% zu allen maximalen Widerständen",
-            "generalizedText": "^spieler haben -#% zu allen maximalen widerständen$",
+            "generalizedText": "^spieler haben -#% zu allen maximalen widerstanden$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -40,7 +40,7 @@
             "id": -1940135977,
             "regex": "fss",
             "rawText": "Monster haben +50% Chance, Angriffsschaden zu blocken|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^monster haben #% chance, angriffsschaden zu blocken$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^monster haben #% chance, angriffsschaden zu blocken$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -62,9 +62,9 @@
         },
         {
             "id": -1818595967,
-            "regex": "öp",
+            "regex": "hop",
             "rawText": "Seltene Monster im Gebiet sind Schöpfer-berührt",
-            "generalizedText": "^seltene monster im gebiet sind schöpfer-berührt$",
+            "generalizedText": "^seltene monster im gebiet sind schopfer-beruhrt$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -76,7 +76,7 @@
             "id": -1772662453,
             "regex": "igu",
             "rawText": "Monster haben (30-70)% Chance, elementare Beeinträchtigungen zu vermeiden",
-            "generalizedText": "^monster haben #% chance, elementare beeinträchtigungen zu vermeiden$",
+            "generalizedText": "^monster haben #% chance, elementare beeintrachtigungen zu vermeiden$",
             "options": {
                 "scary": 150,
                 "nm": false,
@@ -88,7 +88,7 @@
             "id": -1647756153,
             "regex": "eil",
             "rawText": "Seltene Monster haben jeweils 1 zusätzlichen Modifikator|(35-45)% erhöhte Anzahl von seltenen Monstern",
-            "generalizedText": "^seltene monster haben jeweils # zusätzlichen modifikator$|^#% erhöhte anzahl von seltenen monstern$",
+            "generalizedText": "^seltene monster haben jeweils # zusatzlichen modifikator$|^#% erhohte anzahl von seltenen monstern$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -100,7 +100,7 @@
             "id": -1629200695,
             "regex": "stab",
             "rawText": "Gebiet enthält Instabile Tentakelunholde",
-            "generalizedText": "^gebiet enthält instabile tentakelunholde$",
+            "generalizedText": "^gebiet enthalt instabile tentakelunholde$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -146,9 +146,9 @@
         },
         {
             "id": -1430865583,
-            "regex": "wäh",
+            "regex": "wah",
             "rawText": "Seltene Monster haben [PhysicalThorns|physische Dornen], die 1500 physischen Schaden reflektieren|Seltene Monster haben [ElementalThorns|elementare Dornen], die 2500 Elementarschaden reflektieren|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^seltene monster haben physische dornen, die # physischen schaden reflektieren$|^seltene monster haben elementare dornen, die # elementarschaden reflektieren$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^seltene monster haben physische dornen, die # physischen schaden reflektieren$|^seltene monster haben elementare dornen, die # elementarschaden reflektieren$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -172,7 +172,7 @@
             "id": -1344829253,
             "regex": "lik",
             "rawText": "Monster haben (160-400)% erhöhte kritische Trefferchance|Monster haben +(30-45)% zu Multiplikator für kritische Treffer",
-            "generalizedText": "^monster haben #% erhöhte kritische trefferchance$|^monster haben #% zu multiplikator für kritische treffer$",
+            "generalizedText": "^monster haben #% erhohte kritische trefferchance$|^monster haben #% zu multiplikator fur kritische treffer$",
             "options": {
                 "scary": 500,
                 "nm": false,
@@ -182,9 +182,9 @@
         },
         {
             "id": -1298230190,
-            "regex": "bä",
+            "regex": "ska",
             "rawText": "Stärkungen auf Spielern klingen 100% schneller ab|35% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^stärkungen auf spielern klingen #% schneller ab$|^#% mehr gefundene skarabäen im gebiet$",
+            "generalizedText": "^starkungen auf spielern klingen #% schneller ab$|^#% mehr gefundene skarabaen im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -208,7 +208,7 @@
             "id": -1158025910,
             "regex": "ingt",
             "rawText": "Monsterschaden durchdringt 15% Elementarwiderstände",
-            "generalizedText": "^monsterschaden durchdringt #% elementarwiderstände$",
+            "generalizedText": "^monsterschaden durchdringt #% elementarwiderstande$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -232,7 +232,7 @@
             "id": -1099682289,
             "regex": "ms$",
             "rawText": "Gebiet enthält viele Totems",
-            "generalizedText": "^gebiet enthält viele totems$",
+            "generalizedText": "^gebiet enthalt viele totems$",
             "options": {
                 "scary": 9,
                 "nm": false,
@@ -254,9 +254,9 @@
         },
         {
             "id": -1088873049,
-            "regex": "acht",
+            "regex": "sacht",
             "rawText": "Einzigartiger Boss verursacht (15-25)% erhöhten Schaden|Einzigartiger Boss hat (20-30)% erhöhte Angriffs- und Zaubergeschwindigkeit",
-            "generalizedText": "^einzigartiger boss verursacht #% erhöhten schaden$|^einzigartiger boss hat #% erhöhte angriffs- und zaubergeschwindigkeit$",
+            "generalizedText": "^einzigartiger boss verursacht #% erhohten schaden$|^einzigartiger boss hat #% erhohte angriffs- und zaubergeschwindigkeit$",
             "options": {
                 "scary": 420,
                 "nm": false,
@@ -280,7 +280,7 @@
             "id": -999805715,
             "regex": "kc",
             "rawText": "Spieler haben (20-40)% verringerte Blockchance|Spieler haben (20-30)% weniger Rüstung",
-            "generalizedText": "^spieler haben #% verringerte blockchance$|^spieler haben #% weniger rüstung$",
+            "generalizedText": "^spieler haben #% verringerte blockchance$|^spieler haben #% weniger rustung$",
             "options": {
                 "scary": 295,
                 "nm": false,
@@ -290,9 +290,9 @@
         },
         {
             "id": -949334443,
-            "regex": "elä",
+            "regex": "koll",
             "rawText": "Fertigkeiten von Monstern verketten sich 3 zusätzliche Male|Projektile von Monstern verketten sich bei Kollision mit Gelände",
-            "generalizedText": "^fertigkeiten von monstern verketten sich # zusätzliche male$|^projektile von monstern verketten sich bei kollision mit gelände$",
+            "generalizedText": "^fertigkeiten von monstern verketten sich # zusatzliche male$|^projektile von monstern verketten sich bei kollision mit gelande$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -302,9 +302,9 @@
         },
         {
             "id": -946283701,
-            "regex": "^stä",
+            "regex": "lern",
             "rawText": "Stärkungen auf Spielern klingen (30-70)% schneller ab",
-            "generalizedText": "^stärkungen auf spielern klingen #% schneller ab$",
+            "generalizedText": "^starkungen auf spielern klingen #% schneller ab$",
             "options": {
                 "scary": 96,
                 "nm": false,
@@ -316,7 +316,7 @@
             "id": -938285245,
             "regex": ", z",
             "rawText": "Monster haben +100% Chance, Zauberschaden zu unterdrücken|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrücken$|^#% mehr gefundene karten im gebiet$",
+            "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrucken$|^#% mehr gefundene karten im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -328,7 +328,7 @@
             "id": -933231182,
             "regex": "fsg",
             "rawText": "(35-45)% erhöhte Monster-Zaubergeschwindigkeit|(35-45)% erhöhte Monster-Angriffsgeschwindigkeit|(25-30)% erhöhte Monster-Bewegungsgeschwindigkeit",
-            "generalizedText": "^#% erhöhte monster-zaubergeschwindigkeit$|^#% erhöhte monster-angriffsgeschwindigkeit$|^#% erhöhte monster-bewegungsgeschwindigkeit$",
+            "generalizedText": "^#% erhohte monster-zaubergeschwindigkeit$|^#% erhohte monster-angriffsgeschwindigkeit$|^#% erhohte monster-bewegungsgeschwindigkeit$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -338,7 +338,7 @@
         },
         {
             "id": -931745379,
-            "regex": "ank",
+            "regex": "wenden",
             "rawText": "Monster wenden bei Treffer 2 Greifende Ranken an|40% mehr gefundene Karten im Gebiet",
             "generalizedText": "^monster wenden bei treffer # greifende ranken an$|^#% mehr gefundene karten im gebiet$",
             "options": {
@@ -350,9 +350,9 @@
         },
         {
             "id": -887278806,
-            "regex": "rän",
+            "regex": "sph",
             "rawText": "Gebiet enthält Ertränkende Sphären",
-            "generalizedText": "^gebiet enthält ertränkende sphären$",
+            "generalizedText": "^gebiet enthalt ertrankende spharen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -362,9 +362,9 @@
         },
         {
             "id": -875993462,
-            "regex": "wäh",
+            "regex": "wah",
             "rawText": "(90-100)% mehr Monsterleben|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^#% mehr monsterleben$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^#% mehr monsterleben$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -374,9 +374,9 @@
         },
         {
             "id": -763914456,
-            "regex": "nfü",
+            "regex": "nfu",
             "rawText": "Spieler erhalten (30-50)% verringerte Fläschchenfüllungen",
-            "generalizedText": "^spieler erhalten #% verringerte fläschchenfüllungen$",
+            "generalizedText": "^spieler erhalten #% verringerte flaschchenfullungen$",
             "options": {
                 "scary": 210,
                 "nm": false,
@@ -400,7 +400,7 @@
             "id": -694214737,
             "regex": "osw",
             "rawText": "+(15-25)% zu Monster-Chaoswiderstand|+(20-40)% zu Monster-Elementarwiderständen",
-            "generalizedText": "^#% zu monster-chaoswiderstand$|^#% zu monster-elementarwiderständen$",
+            "generalizedText": "^#% zu monster-chaoswiderstand$|^#% zu monster-elementarwiderstanden$",
             "options": {
                 "scary": 100,
                 "nm": false,
@@ -424,7 +424,7 @@
             "id": -683043845,
             "regex": "tern$",
             "rawText": "(20-30)% erhöhte Anzahl von seltenen Monstern",
-            "generalizedText": "^#% erhöhte anzahl von seltenen monstern$",
+            "generalizedText": "^#% erhohte anzahl von seltenen monstern$",
             "options": {
                 "scary": 1,
                 "nm": false,
@@ -436,7 +436,7 @@
             "id": -645418310,
             "regex": "nts$",
             "rawText": "Monster verursachen (180-200)% ihres physischen Schadens als extra Schaden eines zufälligen Elements",
-            "generalizedText": "^monster verursachen #% ihres physischen schadens als extra schaden eines zufälligen elements$",
+            "generalizedText": "^monster verursachen #% ihres physischen schadens als extra schaden eines zufalligen elements$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -470,9 +470,9 @@
         },
         {
             "id": -580302769,
-            "regex": "öhter",
+            "regex": "ohter",
             "rawText": "(14-40)% erhöhter Monsterschaden",
-            "generalizedText": "^#% erhöhter monsterschaden$",
+            "generalizedText": "^#% erhohter monsterschaden$",
             "options": {
                 "scary": 370,
                 "nm": false,
@@ -482,9 +482,9 @@
         },
         {
             "id": -539026720,
-            "regex": "üchen",
+            "regex": "luchen",
             "rawText": "(25-60)% weniger Wirkung von Flüchen auf Monster",
-            "generalizedText": "^#% weniger wirkung von flüchen auf monster$",
+            "generalizedText": "^#% weniger wirkung von fluchen auf monster$",
             "options": {
                 "scary": 363,
                 "nm": false,
@@ -496,7 +496,7 @@
             "id": -481946502,
             "regex": "^fer",
             "rawText": "Fertigkeiten von Monstern verketten sich 2 zusätzliche Male",
-            "generalizedText": "^fertigkeiten von monstern verketten sich # zusätzliche male$",
+            "generalizedText": "^fertigkeiten von monstern verketten sich # zusatzliche male$",
             "options": {
                 "scary": 380,
                 "nm": false,
@@ -508,7 +508,7 @@
             "id": -477049138,
             "regex": "zu a",
             "rawText": "Spieler haben -(5-12)% zu allen maximalen Widerständen",
-            "generalizedText": "^spieler haben -#% zu allen maximalen widerständen$",
+            "generalizedText": "^spieler haben -#% zu allen maximalen widerstanden$",
             "options": {
                 "scary": 980,
                 "nm": false,
@@ -520,7 +520,7 @@
             "id": -268547495,
             "regex": ", z",
             "rawText": "Monster haben +(30-60)% Chance, Zauberschaden zu unterdrücken",
-            "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrücken$",
+            "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrucken$",
             "options": {
                 "scary": 290,
                 "nm": false,
@@ -532,7 +532,7 @@
             "id": -258709095,
             "regex": "nsm",
             "rawText": "Monster mit +50% physischer Schadensminderung|+55% zu Monster-Elementarwiderständen|+35% zu Monster-Chaoswiderstand",
-            "generalizedText": "^monster mit #% physischer schadensminderung$|^#% zu monster-elementarwiderständen$|^#% zu monster-chaoswiderstand$",
+            "generalizedText": "^monster mit #% physischer schadensminderung$|^#% zu monster-elementarwiderstanden$|^#% zu monster-chaoswiderstand$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -592,7 +592,7 @@
             "id": -166549521,
             "regex": "nzu",
             "rawText": "Monster haben (15-20)% Chance, bei Treffer zu entzünden, einzufrieren und zu schocken",
-            "generalizedText": "^monster haben #% chance, bei treffer zu entzünden, einzufrieren und zu schocken$",
+            "generalizedText": "^monster haben #% chance, bei treffer zu entzunden, einzufrieren und zu schocken$",
             "options": {
                 "scary": 98,
                 "nm": false,
@@ -616,7 +616,7 @@
             "id": -126908257,
             "regex": "nn e",
             "rawText": "Monster entzünden, frieren ein und schocken bei Treffer|Sämtlicher Monsterschaden kann entzünden, einfrieren und schocken|60% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^monster entzünden, frieren ein und schocken bei treffer$|^sämtlicher monsterschaden kann entzünden, einfrieren und schocken$|^#% mehr gefundene skarabäen im gebiet$",
+            "generalizedText": "^monster entzunden, frieren ein und schocken bei treffer$|^samtlicher monsterschaden kann entzunden, einfrieren und schocken$|^#% mehr gefundene skarabaen im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -638,9 +638,9 @@
         },
         {
             "id": -106750911,
-            "regex": "öhtes",
+            "regex": "ohtes",
             "rawText": "Einzigartiger Boss hat (25-35)% erhöhtes Leben|Einzigartiger Boss hat (45-70)% vergrößerten Wirkungsbereich",
-            "generalizedText": "^einzigartiger boss hat #% erhöhtes leben$|^einzigartiger boss hat #% vergrößerten wirkungsbereich$",
+            "generalizedText": "^einzigartiger boss hat #% erhohtes leben$|^einzigartiger boss hat #% vergroßerten wirkungsbereich$",
             "options": {
                 "scary": 400,
                 "nm": false,
@@ -664,7 +664,7 @@
             "id": -105914721,
             "regex": "ngew",
             "rawText": "Spieler haben 40% weniger Wirkung von auf sie angewendete Fläschchen|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler haben #% weniger wirkung von auf sie angewendete fläschchen$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^spieler haben #% weniger wirkung von auf sie angewendete flaschchen$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -674,9 +674,9 @@
         },
         {
             "id": -80588106,
-            "regex": "stü",
+            "regex": "rstu",
             "rawText": "Monster verstümmeln immer bei Treffer mit Angriffen",
-            "generalizedText": "^monster verstümmeln immer bei treffer mit angriffen$",
+            "generalizedText": "^monster verstummeln immer bei treffer mit angriffen$",
             "options": {
                 "scary": 50,
                 "nm": false,
@@ -700,7 +700,7 @@
             "id": -26777606,
             "regex": "uers",
             "rawText": "Monster verursachen (50-110)% zusätzlichen physischen Schaden als Feuerschaden",
-            "generalizedText": "^monster verursachen #% zusätzlichen physischen schaden als feuerschaden$",
+            "generalizedText": "^monster verursachen #% zusatzlichen physischen schaden als feuerschaden$",
             "options": {
                 "scary": 450,
                 "nm": false,
@@ -710,9 +710,9 @@
         },
         {
             "id": 10729340,
-            "regex": "küm",
+            "regex": "kum",
             "rawText": "Monster verursachen (21-35)% ihres physischen Schadens als extra Chaosschaden|Monster verursachen bei Treffer für 2 Sekunden Verkümmerung",
-            "generalizedText": "^monster verursachen #% ihres physischen schadens als extra chaosschaden$|^monster verursachen bei treffer für # sekunden verkümmerung$",
+            "generalizedText": "^monster verursachen #% ihres physischen schadens als extra chaosschaden$|^monster verursachen bei treffer fur # sekunden verkummerung$",
             "options": {
                 "scary": 455,
                 "nm": false,
@@ -724,7 +724,7 @@
             "id": 17483843,
             "regex": "fsg",
             "rawText": "(15-30)% erhöhte Monster-Bewegungsgeschwindigkeit|(20-45)% erhöhte Monster-Angriffsgeschwindigkeit|(20-45)% erhöhte Monster-Zaubergeschwindigkeit",
-            "generalizedText": "^#% erhöhte monster-bewegungsgeschwindigkeit$|^#% erhöhte monster-angriffsgeschwindigkeit$|^#% erhöhte monster-zaubergeschwindigkeit$",
+            "generalizedText": "^#% erhohte monster-bewegungsgeschwindigkeit$|^#% erhohte monster-angriffsgeschwindigkeit$|^#% erhohte monster-zaubergeschwindigkeit$",
             "options": {
                 "scary": 420,
                 "nm": false,
@@ -760,7 +760,7 @@
             "id": 151806012,
             "regex": "zur",
             "rawText": "Spieler haben -(10-20)% zur Menge des verhinderten unterdrückten Zauberschadens|Monster haben (30-50)% erhöhte Treffgenauigkeit",
-            "generalizedText": "^spieler haben -#% zur menge des verhinderten unterdrückten zauberschadens$|^monster haben #% erhöhte treffgenauigkeit$",
+            "generalizedText": "^spieler haben -#% zur menge des verhinderten unterdruckten zauberschadens$|^monster haben #% erhohte treffgenauigkeit$",
             "options": {
                 "scary": 365,
                 "nm": false,
@@ -770,9 +770,9 @@
         },
         {
             "id": 156744008,
-            "regex": "lfa",
+            "regex": "ßere",
             "rawText": "Gebiet hat eine größere Monstervielfalt",
-            "generalizedText": "^gebiet hat eine größere monstervielfalt$",
+            "generalizedText": "^gebiet hat eine großere monstervielfalt$",
             "options": {
                 "scary": 8,
                 "nm": false,
@@ -796,7 +796,7 @@
             "id": 246480838,
             "regex": "lik",
             "rawText": "Monster haben +(70-75)% zu Multiplikator für kritische Treffer|Monster haben (650-700)% erhöhte kritische Trefferchance",
-            "generalizedText": "^monster haben #% zu multiplikator für kritische treffer$|^monster haben #% erhöhte kritische trefferchance$",
+            "generalizedText": "^monster haben #% zu multiplikator fur kritische treffer$|^monster haben #% erhohte kritische trefferchance$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -832,7 +832,7 @@
             "id": 339937661,
             "regex": "'sc",
             "rawText": "Spieler sind verflucht mit 'Schwächen'",
-            "generalizedText": "^spieler sind verflucht mit 'schwächen'$",
+            "generalizedText": "^spieler sind verflucht mit 'schwachen'$",
             "options": {
                 "scary": 360,
                 "nm": false,
@@ -856,7 +856,7 @@
             "id": 472035128,
             "regex": "ht$",
             "rawText": "Gebiet hat stellenweise schockenden Boden, der den erlittenen Schaden um (20-50)% erhöht",
-            "generalizedText": "^gebiet hat stellenweise schockenden boden, der den erlittenen schaden um #% erhöht$",
+            "generalizedText": "^gebiet hat stellenweise schockenden boden, der den erlittenen schaden um #% erhoht$",
             "options": {
                 "scary": 310,
                 "nm": false,
@@ -868,7 +868,7 @@
             "id": 583869527,
             "regex": "agis",
             "rawText": "(20-30)% erhöhte Anzahl magischer Monster",
-            "generalizedText": "^#% erhöhte anzahl magischer monster$",
+            "generalizedText": "^#% erhohte anzahl magischer monster$",
             "options": {
                 "scary": 0,
                 "nm": false,
@@ -880,7 +880,7 @@
             "id": 639399394,
             "regex": "schr",
             "rawText": "Einzigartige Monster haben eine zufällige Schrein-Stärkung|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^einzigartige monster haben eine zufällige schrein-stärkung$|^#% mehr gefundene karten im gebiet$",
+            "generalizedText": "^einzigartige monster haben eine zufallige schrein-starkung$|^#% mehr gefundene karten im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -914,9 +914,9 @@
         },
         {
             "id": 670500310,
-            "regex": "äu",
+            "regex": "^ak",
             "rawText": "Monster können nicht betäubt werden|Aktionsgeschwindigkeit von Monstern kann nicht unter den Basiswert modifiziert werden|Bewegungsgeschwindigkeit von Monstern kann nicht unter den Basiswert modifiziert werden",
-            "generalizedText": "^monster können nicht betäubt werden$|^aktionsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^bewegungsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$",
+            "generalizedText": "^monster konnen nicht betaubt werden$|^aktionsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^bewegungsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -928,7 +928,7 @@
             "id": 707446389,
             "regex": "runen",
             "rawText": "Gebiet enthält Runen des Brennenden Exarchen",
-            "generalizedText": "^gebiet enthält runen des brennenden exarchen$",
+            "generalizedText": "^gebiet enthalt runen des brennenden exarchen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -976,7 +976,7 @@
             "id": 955801458,
             "regex": "sse$",
             "rawText": "Gebiet enthält zwei einzigartige Bosse",
-            "generalizedText": "^gebiet enthält zwei einzigartige bosse$",
+            "generalizedText": "^gebiet enthalt zwei einzigartige bosse$",
             "options": {
                 "scary": 90,
                 "nm": false,
@@ -986,9 +986,9 @@
         },
         {
             "id": 972998450,
-            "regex": "orä",
+            "regex": "rbe",
             "rawText": "Seltene Monster im Gebiet werden bei Tod temporär wiederbelebt",
-            "generalizedText": "^seltene monster im gebiet werden bei tod temporär wiederbelebt$",
+            "generalizedText": "^seltene monster im gebiet werden bei tod temporar wiederbelebt$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1000,7 +1000,7 @@
             "id": 980061401,
             "regex": "onen",
             "rawText": "Gebiet ist von Dämonen bewohnt",
-            "generalizedText": "^gebiet ist von dämonen bewohnt$",
+            "generalizedText": "^gebiet ist von damonen bewohnt$",
             "options": {
                 "scary": 4,
                 "nm": false,
@@ -1010,9 +1010,9 @@
         },
         {
             "id": 1014295028,
-            "regex": "rlä",
+            "regex": "ftd",
             "rawText": "Monster vergiften bei Treffer|Monster haben 100% verlängerte Giftdauer|Sämtlicher Schaden von Monstertreffern kann vergiften",
-            "generalizedText": "^monster vergiften bei treffer$|^monster haben #% verlängerte giftdauer$|^sämtlicher schaden von monstertreffern kann vergiften$",
+            "generalizedText": "^monster vergiften bei treffer$|^monster haben #% verlangerte giftdauer$|^samtlicher schaden von monstertreffern kann vergiften$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1022,9 +1022,9 @@
         },
         {
             "id": 1061710360,
-            "regex": "äg",
+            "regex": "utb",
             "rawText": "Spieler werden von blutbeschmierten Sägeblättern angegriffen|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler werden von blutbeschmierten sägeblättern angegriffen$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^spieler werden von blutbeschmierten sageblattern angegriffen$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1034,9 +1034,9 @@
         },
         {
             "id": 1062763755,
-            "regex": "küh",
+            "regex": "kuh",
             "rawText": "Gebiet hat stellenweise unterkühlenden Boden",
-            "generalizedText": "^gebiet hat stellenweise unterkühlenden boden$",
+            "generalizedText": "^gebiet hat stellenweise unterkuhlenden boden$",
             "options": {
                 "scary": 310,
                 "nm": false,
@@ -1084,7 +1084,7 @@
             "id": 1117764869,
             "regex": "^sch",
             "rawText": "Schwächungen auf Monstern klingen 100% schneller ab|64% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^schwächungen auf monstern klingen #% schneller ab$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^schwachungen auf monstern klingen #% schneller ab$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1106,7 +1106,7 @@
         },
         {
             "id": 1205583947,
-            "regex": "amt",
+            "regex": "mtw",
             "rawText": "Spieler haben (60-50)% verringerte maximale Gesamtwiederherstellung des Lebens, Manas und Energieschilds pro Sekunde durch Raub",
             "generalizedText": "^spieler haben #% verringerte maximale gesamtwiederherstellung des lebens, manas und energieschilds pro sekunde durch raub$",
             "options": {
@@ -1144,7 +1144,7 @@
             "id": 1305115176,
             "regex": "ben,",
             "rawText": "Spieler können kein Leben, Mana oder Energieschild regenerieren",
-            "generalizedText": "^spieler können kein leben, mana oder energieschild regenerieren$",
+            "generalizedText": "^spieler konnen kein leben, mana oder energieschild regenerieren$",
             "options": {
                 "scary": 700,
                 "nm": false,
@@ -1168,7 +1168,7 @@
             "id": 1333860371,
             "regex": "teo",
             "rawText": "Spieler werden von einem Meteor ins Ziel genommen, wenn sie ein Fläschchen benutzen|45% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler werden von einem meteor ins ziel genommen, wenn sie ein fläschchen benutzen$|^#% mehr gefundene währung im gebiet$",
+            "generalizedText": "^spieler werden von einem meteor ins ziel genommen, wenn sie ein flaschchen benutzen$|^#% mehr gefundene wahrung im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1192,7 +1192,7 @@
             "id": 1428847539,
             "regex": "keine",
             "rawText": "Spieler können keine Anfälligkeit verursachen",
-            "generalizedText": "^spieler können keine anfälligkeit verursachen$",
+            "generalizedText": "^spieler konnen keine anfalligkeit verursachen$",
             "options": {
                 "scary": 150,
                 "nm": false,
@@ -1204,7 +1204,7 @@
             "id": 1464066514,
             "regex": "iven",
             "rawText": "Spieler haben (30-25)% weniger Defensiven|35% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^spieler haben #% weniger defensiven$|^#% mehr gefundene skarabäen im gebiet$",
+            "generalizedText": "^spieler haben #% weniger defensiven$|^#% mehr gefundene skarabaen im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1216,7 +1216,7 @@
             "id": 1469490158,
             "regex": "uern",
             "rawText": "Monster feuern 2 zusätzliche Projektile|Monster haben 100% vergrößerten Wirkungsbereich",
-            "generalizedText": "^monster feuern # zusätzliche projektile$|^monster haben #% vergrößerten wirkungsbereich$",
+            "generalizedText": "^monster feuern # zusatzliche projektile$|^monster haben #% vergroßerten wirkungsbereich$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1238,9 +1238,9 @@
         },
         {
             "id": 1538178254,
-            "regex": "fah",
+            "regex": "gefa",
             "rawText": "Gebiet enthält Labyrinth-Gefahren",
-            "generalizedText": "^gebiet enthält labyrinth-gefahren$",
+            "generalizedText": "^gebiet enthalt labyrinth-gefahren$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1250,9 +1250,9 @@
         },
         {
             "id": 1541760497,
-            "regex": "äu",
+            "regex": "beta",
             "rawText": "Monster können nicht betäubt werden|(15-30)% mehr Monsterleben",
-            "generalizedText": "^monster können nicht betäubt werden$|^#% mehr monsterleben$",
+            "generalizedText": "^monster konnen nicht betaubt werden$|^#% mehr monsterleben$",
             "options": {
                 "scary": 100,
                 "nm": false,
@@ -1264,7 +1264,7 @@
             "id": 1551446200,
             "regex": "zt$",
             "rawText": "Monster sind hexgeschützt",
-            "generalizedText": "^monster sind hexgeschützt$",
+            "generalizedText": "^monster sind hexgeschutzt$",
             "options": {
                 "scary": 150,
                 "nm": false,
@@ -1300,7 +1300,7 @@
             "id": 1634487773,
             "regex": "uern",
             "rawText": "Monster feuern 2 zusätzliche Projektile",
-            "generalizedText": "^monster feuern # zusätzliche projektile$",
+            "generalizedText": "^monster feuern # zusatzliche projektile$",
             "options": {
                 "scary": 440,
                 "nm": false,
@@ -1312,7 +1312,7 @@
             "id": 1665221611,
             "regex": "erne",
             "rawText": "Seltene Monster haben Explosive Kerne|53% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^seltene monster haben explosive kerne$|^#% mehr gefundene skarabäen im gebiet$",
+            "generalizedText": "^seltene monster haben explosive kerne$|^#% mehr gefundene skarabaen im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1334,9 +1334,9 @@
         },
         {
             "id": 1743546402,
-            "regex": "läh",
+            "regex": "lah",
             "rawText": "Monster lähmen bei Treffer mit Zaubern",
-            "generalizedText": "^monster lähmen bei treffer mit zaubern$",
+            "generalizedText": "^monster lahmen bei treffer mit zaubern$",
             "options": {
                 "scary": 50,
                 "nm": false,
@@ -1348,7 +1348,7 @@
             "id": 1756122717,
             "regex": "seh",
             "rawText": "Die Seherin beeinträchtigt Spieler",
-            "generalizedText": "^die seherin beeinträchtigt spieler$",
+            "generalizedText": "^die seherin beeintrachtigt spieler$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1358,9 +1358,9 @@
         },
         {
             "id": 1799781772,
-            "regex": "kä",
+            "regex": "kalt",
             "rawText": "Monster verursachen (50-110)% zusätzlichen physischen Schaden als Kälteschaden",
-            "generalizedText": "^monster verursachen #% zusätzlichen physischen schaden als kälteschaden$",
+            "generalizedText": "^monster verursachen #% zusatzlichen physischen schaden als kalteschaden$",
             "options": {
                 "scary": 450,
                 "nm": false,
@@ -1370,9 +1370,9 @@
         },
         {
             "id": 1861748274,
-            "regex": "bü",
+            "regex": "^au",
             "rawText": "Auren von Spieler-Fertigkeiten, die auf Verbündete wirken, wirken auch auf Gegner",
-            "generalizedText": "^auren von spieler-fertigkeiten, die auf verbündete wirken, wirken auch auf gegner$",
+            "generalizedText": "^auren von spieler-fertigkeiten, die auf verbundete wirken, wirken auch auf gegner$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1396,7 +1396,7 @@
             "id": 1899039946,
             "regex": "n \\d+% verg",
             "rawText": "Monster haben (45-100)% vergrößerten Wirkungsbereich",
-            "generalizedText": "^monster haben #% vergrößerten wirkungsbereich$",
+            "generalizedText": "^monster haben #% vergroßerten wirkungsbereich$",
             "options": {
                 "scary": 400,
                 "nm": false,
@@ -1408,7 +1408,7 @@
             "id": 1932675161,
             "regex": "ltr",
             "rawText": "Gebiet enthält stellenweise bewegenden Maltragenden Boden, der zufällige Male anwendet|36% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^gebiet enthält stellenweise bewegenden maltragenden boden, der zufällige male anwendet$|^#% mehr gefundene skarabäen im gebiet$",
+            "generalizedText": "^gebiet enthalt stellenweise bewegenden maltragenden boden, der zufallige male anwendet$|^#% mehr gefundene skarabaen im gebiet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
@@ -1420,7 +1420,7 @@
             "id": 2080363489,
             "regex": "mmer$",
             "rawText": "Sämtlicher Monsterschaden von Treffern entzündet immer",
-            "generalizedText": "^sämtlicher monsterschaden von treffern entzündet immer$",
+            "generalizedText": "^samtlicher monsterschaden von treffern entzundet immer$",
             "options": {
                 "scary": 99,
                 "nm": false,
@@ -1432,7 +1432,7 @@
             "id": 2105788016,
             "regex": "rsp",
             "rawText": "Aktionsgeschwindigkeit von Monstern kann nicht unter den Basiswert modifiziert werden|Bewegungsgeschwindigkeit von Monstern kann nicht unter den Basiswert modifiziert werden|Monster können nicht verspottet werden",
-            "generalizedText": "^aktionsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^bewegungsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^monster können nicht verspottet werden$",
+            "generalizedText": "^aktionsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^bewegungsgeschwindigkeit von monstern kann nicht unter den basiswert modifiziert werden$|^monster konnen nicht verspottet werden$",
             "options": {
                 "scary": 89,
                 "nm": false,
@@ -1456,7 +1456,7 @@
             "id": 2132856290,
             "regex": "zs",
             "rawText": "Monster verursachen (50-110)% zusätzlichen physischen Schaden als Blitzschaden",
-            "generalizedText": "^monster verursachen #% zusätzlichen physischen schaden als blitzschaden$",
+            "generalizedText": "^monster verursachen #% zusatzlichen physischen schaden als blitzschaden$",
             "options": {
                 "scary": 450,
                 "nm": false,
@@ -1599,82 +1599,6 @@
             "weight": 11,
             "count": 7
         },
-        "-2038489408:-1158025910:-694214737:-477049138:-258709095": {
-            "ids": [
-                -2038489408,
-                -1158025910,
-                -694214737,
-                -477049138,
-                -258709095
-            ],
-            "regex": "tän",
-            "weight": 3,
-            "count": 5
-        },
-        "-2038489408:-1158025910:-949334443:-694214737:-477049138:-258709095": {
-            "ids": [
-                -2038489408,
-                -1158025910,
-                -949334443,
-                -694214737,
-                -477049138,
-                -258709095
-            ],
-            "regex": "änd",
-            "weight": 3,
-            "count": 6
-        },
-        "-2038489408:-1158025910:-694214737:-258709095": {
-            "ids": [
-                -2038489408,
-                -1158025910,
-                -694214737,
-                -258709095
-            ],
-            "regex": "tän",
-            "weight": 3,
-            "count": 4
-        },
-        "-2038489408:-1158025910:-949334443:-694214737:-258709095": {
-            "ids": [
-                -2038489408,
-                -1158025910,
-                -949334443,
-                -694214737,
-                -258709095
-            ],
-            "regex": "änd",
-            "weight": 3,
-            "count": 5
-        },
-        "-2038489408:-1298230190:-1158025910:-946283701:-694214737:-258709095:639399394": {
-            "ids": [
-                -2038489408,
-                -1298230190,
-                -1158025910,
-                -946283701,
-                -694214737,
-                -258709095,
-                639399394
-            ],
-            "regex": "stä",
-            "weight": 3,
-            "count": 7
-        },
-        "-2038489408:-1298230190:-1158025910:-694214737:-477049138:-258709095:639399394": {
-            "ids": [
-                -2038489408,
-                -1298230190,
-                -1158025910,
-                -694214737,
-                -477049138,
-                -258709095,
-                639399394
-            ],
-            "regex": "stä",
-            "weight": 3,
-            "count": 7
-        },
         "-2038489408:-1621497665:-1616686189:-477049138:357242916:646965355:1494523238": {
             "ids": [
                 -2038489408,
@@ -1750,9 +1674,21 @@
                 -477049138,
                 -258709095
             ],
-            "regex": "änden",
+            "regex": "anden",
             "weight": 5,
             "count": 4
+        },
+        "-2038489408:-1158025910:-694214737:-477049138:-258709095": {
+            "ids": [
+                -2038489408,
+                -1158025910,
+                -694214737,
+                -477049138,
+                -258709095
+            ],
+            "regex": "tande",
+            "weight": 5,
+            "count": 5
         },
         "-2038489408:-694214737:-258709095": {
             "ids": [
@@ -1760,9 +1696,20 @@
                 -694214737,
                 -258709095
             ],
-            "regex": "änden",
+            "regex": "anden",
             "weight": 5,
             "count": 3
+        },
+        "-2038489408:-1158025910:-694214737:-258709095": {
+            "ids": [
+                -2038489408,
+                -1158025910,
+                -694214737,
+                -258709095
+            ],
+            "regex": "tande",
+            "weight": 5,
+            "count": 4
         },
         "-2038489408:-477049138:357242916": {
             "ids": [
@@ -1807,7 +1754,7 @@
                 1117764869,
                 1333860371
             ],
-            "regex": "wäh",
+            "regex": "wah",
             "weight": 3,
             "count": 7
         },
@@ -2013,7 +1960,7 @@
                 -1818595967,
                 1062763755
             ],
-            "regex": "üh",
+            "regex": "uh",
             "weight": 2,
             "count": 2
         },
@@ -2105,25 +2052,6 @@
             "weight": 3,
             "count": 3
         },
-        "-1772662453:1756122717": {
-            "ids": [
-                -1772662453,
-                1756122717
-            ],
-            "regex": "räc",
-            "weight": 3,
-            "count": 2
-        },
-        "-1772662453:-887278806:1756122717": {
-            "ids": [
-                -1772662453,
-                -887278806,
-                1756122717
-            ],
-            "regex": "trä",
-            "weight": 3,
-            "count": 3
-        },
         "-1772662453:-1430865583:647925005:1078205993:1882321261": {
             "ids": [
                 -1772662453,
@@ -2135,6 +2063,15 @@
             "regex": "tare",
             "weight": 4,
             "count": 5
+        },
+        "-1772662453:1756122717": {
+            "ids": [
+                -1772662453,
+                1756122717
+            ],
+            "regex": "beei",
+            "weight": 4,
+            "count": 2
         },
         "-1772662453:-1430865583:647925005:1882321261": {
             "ids": [
@@ -2486,8 +2423,8 @@
                 1538178254,
                 1932675161
             ],
-            "regex": "hä",
-            "weight": 2,
+            "regex": "ntha",
+            "weight": 4,
             "count": 7
         },
         "-1621497665:-1358177810:-1094717370:-225071089:357242916:1283094925:1494523238": {
@@ -3212,8 +3149,8 @@
                 10729340,
                 246480838
             ],
-            "regex": "für",
-            "weight": 3,
+            "regex": "r fur",
+            "weight": 7,
             "count": 3
         },
         "-1344829253:-694214737:-258709095:246480838": {
@@ -3249,18 +3186,6 @@
             "weight": 11,
             "count": 5
         },
-        "-1298230190:-946283701:-887278806:639399394:972998450": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                -887278806,
-                639399394,
-                972998450
-            ],
-            "regex": "är",
-            "weight": 2,
-            "count": 5
-        },
         "-1298230190:-126908257:1464066514:1665221611:1932675161": {
             "ids": [
                 -1298230190,
@@ -3269,53 +3194,9 @@
                 1665221611,
                 1932675161
             ],
-            "regex": "bä",
-            "weight": 2,
+            "regex": "ska",
+            "weight": 3,
             "count": 5
-        },
-        "-1298230190:-887278806:639399394:972998450": {
-            "ids": [
-                -1298230190,
-                -887278806,
-                639399394,
-                972998450
-            ],
-            "regex": "är",
-            "weight": 2,
-            "count": 4
-        },
-        "-1298230190:-946283701:639399394": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                639399394
-            ],
-            "regex": "tär",
-            "weight": 3,
-            "count": 3
-        },
-        "-1298230190:-1158025910:-946283701:-694214737:-477049138:-258709095:639399394": {
-            "ids": [
-                -1298230190,
-                -1158025910,
-                -946283701,
-                -694214737,
-                -477049138,
-                -258709095,
-                639399394
-            ],
-            "regex": "stä",
-            "weight": 3,
-            "count": 7
-        },
-        "-1298230190:639399394": {
-            "ids": [
-                -1298230190,
-                639399394
-            ],
-            "regex": "tär",
-            "weight": 3,
-            "count": 2
         },
         "-1298230190:-946283701": {
             "ids": [
@@ -3326,6 +3207,16 @@
             "weight": 4,
             "count": 2
         },
+        "-1298230190:-946283701:639399394": {
+            "ids": [
+                -1298230190,
+                -946283701,
+                639399394
+            ],
+            "regex": "tark",
+            "weight": 4,
+            "count": 3
+        },
         "-1298230190:-946283701:1117764869": {
             "ids": [
                 -1298230190,
@@ -3335,6 +3226,15 @@
             "regex": "schn",
             "weight": 4,
             "count": 3
+        },
+        "-1298230190:639399394": {
+            "ids": [
+                -1298230190,
+                639399394
+            ],
+            "regex": "tark",
+            "weight": 4,
+            "count": 2
         },
         "-1298230190:1117764869": {
             "ids": [
@@ -3479,6 +3379,15 @@
             "weight": 7,
             "count": 2
         },
+        "-1204380788:-80588106": {
+            "ids": [
+                -1204380788,
+                -80588106
+            ],
+            "regex": "ngriffe",
+            "weight": 7,
+            "count": 2
+        },
         "-1158025910:-694214737:-258709095": {
             "ids": [
                 -1158025910,
@@ -3489,29 +3398,6 @@
             "weight": 3,
             "count": 3
         },
-        "-1158025910:-694214737:-477049138:-258709095": {
-            "ids": [
-                -1158025910,
-                -694214737,
-                -477049138,
-                -258709095
-            ],
-            "regex": "tän",
-            "weight": 3,
-            "count": 4
-        },
-        "-1158025910:-949334443:-694214737:-477049138:-258709095": {
-            "ids": [
-                -1158025910,
-                -949334443,
-                -694214737,
-                -477049138,
-                -258709095
-            ],
-            "regex": "änd",
-            "weight": 3,
-            "count": 5
-        },
         "-1158025910:-580302769:-126908257:2080363489": {
             "ids": [
                 -1158025910,
@@ -3520,6 +3406,17 @@
                 2080363489
             ],
             "regex": "tersc",
+            "weight": 5,
+            "count": 4
+        },
+        "-1158025910:-694214737:-477049138:-258709095": {
+            "ids": [
+                -1158025910,
+                -694214737,
+                -477049138,
+                -258709095
+            ],
+            "regex": "tande",
             "weight": 5,
             "count": 4
         },
@@ -3855,20 +3752,6 @@
             "weight": 13,
             "count": 5
         },
-        "-949334443:-763914456:-105914721:1014295028:1061710360:1333860371:1743546402": {
-            "ids": [
-                -949334443,
-                -763914456,
-                -105914721,
-                1014295028,
-                1061710360,
-                1333860371,
-                1743546402
-            ],
-            "regex": "lä",
-            "weight": 2,
-            "count": 7
-        },
         "-949334443:1469490158:1634487773": {
             "ids": [
                 -949334443,
@@ -3878,15 +3761,6 @@
             "regex": "jek",
             "weight": 3,
             "count": 3
-        },
-        "-949334443:1014295028": {
-            "ids": [
-                -949334443,
-                1014295028
-            ],
-            "regex": "län",
-            "weight": 3,
-            "count": 2
         },
         "-949334443:1469490158": {
             "ids": [
@@ -4049,6 +3923,15 @@
             "weight": 9,
             "count": 3
         },
+        "-949334443:1014295028": {
+            "ids": [
+                -949334443,
+                1014295028
+            ],
+            "regex": "n von m",
+            "weight": 9,
+            "count": 2
+        },
         "-949334443:-481946502:252096506:670500310:2105788016": {
             "ids": [
                 -949334443,
@@ -4143,6 +4026,15 @@
             "regex": "sge",
             "weight": 3,
             "count": 5
+        },
+        "-931745379:-887278806": {
+            "ids": [
+                -931745379,
+                -887278806
+            ],
+            "regex": "ank",
+            "weight": 3,
+            "count": 2
         },
         "-931745379:-105914721:1932675161": {
             "ids": [
@@ -4268,8 +4160,8 @@
                 -105914721,
                 1333860371
             ],
-            "regex": "äs",
-            "weight": 2,
+            "regex": "chc",
+            "weight": 3,
             "count": 3
         },
         "-763914456:-105914721": {
@@ -4334,7 +4226,7 @@
                 -477049138,
                 -258709095
             ],
-            "regex": "änden",
+            "regex": "anden",
             "weight": 5,
             "count": 3
         },
@@ -4376,7 +4268,7 @@
                 639399394,
                 1932675161
             ],
-            "regex": "ufä",
+            "regex": "ufa",
             "weight": 3,
             "count": 3
         },
@@ -4440,6 +4332,20 @@
             "regex": "sache",
             "weight": 5,
             "count": 6
+        },
+        "-645418310:-26777606:10729340:339937661:1428847539:1799781772:2132856290": {
+            "ids": [
+                -645418310,
+                -26777606,
+                10729340,
+                339937661,
+                1428847539,
+                1799781772,
+                2132856290
+            ],
+            "regex": "achen",
+            "weight": 5,
+            "count": 7
         },
         "-645418310:10729340:127168403": {
             "ids": [
@@ -4669,6 +4575,15 @@
             "weight": 7,
             "count": 3
         },
+        "-539026720:-105914721": {
+            "ids": [
+                -539026720,
+                -105914721
+            ],
+            "regex": "r wirkung v",
+            "weight": 13,
+            "count": 2
+        },
         "-477049138:357242916": {
             "ids": [
                 -477049138,
@@ -4792,20 +4707,9 @@
                 -126908257,
                 2080363489
             ],
-            "regex": "zü",
-            "weight": 2,
-            "count": 3
-        },
-        "-166549521:-126908257:1861748274:2080363489": {
-            "ids": [
-                -166549521,
-                -126908257,
-                1861748274,
-                2080363489
-            ],
-            "regex": "ünd",
+            "regex": "ntz",
             "weight": 3,
-            "count": 4
+            "count": 3
         },
         "-166549521:-126908257:472035128:1932675161": {
             "ids": [
@@ -4823,7 +4727,7 @@
                 -166549521,
                 -126908257
             ],
-            "regex": "ünden",
+            "regex": "nden,",
             "weight": 5,
             "count": 2
         },
@@ -4854,9 +4758,20 @@
                 1014295028,
                 2080363489
             ],
-            "regex": "säm",
+            "regex": "mtl",
             "weight": 3,
             "count": 3
+        },
+        "-126908257:1014295028:1205583947:2080363489": {
+            "ids": [
+                -126908257,
+                1014295028,
+                1205583947,
+                2080363489
+            ],
+            "regex": "amt",
+            "weight": 3,
+            "count": 4
         },
         "-126908257:2080363489": {
             "ids": [
@@ -5041,15 +4956,6 @@
             "weight": 7,
             "count": 2
         },
-        "-80588106:10729340": {
-            "ids": [
-                -80588106,
-                10729340
-            ],
-            "regex": "üm",
-            "weight": 2,
-            "count": 2
-        },
         "-80588106:2080363489": {
             "ids": [
                 -80588106,
@@ -5068,6 +4974,15 @@
             "regex": "mmer",
             "weight": 4,
             "count": 3
+        },
+        "-80588106:10729340": {
+            "ids": [
+                -80588106,
+                10729340
+            ],
+            "regex": "umme",
+            "weight": 4,
+            "count": 2
         },
         "-80588106:1061710360": {
             "ids": [
@@ -5166,15 +5081,6 @@
             "weight": 6,
             "count": 3
         },
-        "10729340:1062763755": {
-            "ids": [
-                10729340,
-                1062763755
-            ],
-            "regex": "kü",
-            "weight": 2,
-            "count": 2
-        },
         "10729340:1205583947": {
             "ids": [
                 10729340,
@@ -5182,6 +5088,15 @@
             ],
             "regex": "eku",
             "weight": 3,
+            "count": 2
+        },
+        "10729340:1062763755": {
+            "ids": [
+                10729340,
+                1062763755
+            ],
+            "regex": "erku",
+            "weight": 4,
             "count": 2
         },
         "10729340:127168403": {
@@ -5201,6 +5116,16 @@
             ],
             "regex": "t von s",
             "weight": 9,
+            "count": 3
+        },
+        "252096506:670500310:1541760497": {
+            "ids": [
+                252096506,
+                670500310,
+                1541760497
+            ],
+            "regex": "aubt",
+            "weight": 4,
             "count": 3
         },
         "252096506:670500310:1541760497:2105788016": {
@@ -5236,16 +5161,6 @@
             "regex": "raub",
             "weight": 4,
             "count": 2
-        },
-        "252096506:670500310:1541760497": {
-            "ids": [
-                252096506,
-                670500310,
-                1541760497
-            ],
-            "regex": "bt w",
-            "weight": 6,
-            "count": 3
         },
         "252096506:670500310:2105788016": {
             "ids": [
@@ -5467,15 +5382,6 @@
             "weight": 5,
             "count": 3
         },
-        "670500310:1541760497": {
-            "ids": [
-                670500310,
-                1541760497
-            ],
-            "regex": "äu",
-            "weight": 2,
-            "count": 2
-        },
         "670500310:1305115176:1428847539:1541760497:2105788016": {
             "ids": [
                 670500310,
@@ -5484,8 +5390,8 @@
                 1541760497,
                 2105788016
             ],
-            "regex": "kö",
-            "weight": 2,
+            "regex": "kon",
+            "weight": 3,
             "count": 5
         },
         "670500310:2105788016": {
@@ -5495,6 +5401,15 @@
             ],
             "regex": "akt",
             "weight": 3,
+            "count": 2
+        },
+        "670500310:1541760497": {
+            "ids": [
+                670500310,
+                1541760497
+            ],
+            "regex": "beta",
+            "weight": 4,
             "count": 2
         },
         "670500310:1061710360:2105788016": {
@@ -5541,8 +5456,8 @@
                 972998450,
                 1313044496
             ],
-            "regex": "tod",
-            "weight": 3,
+            "regex": "i to",
+            "weight": 6,
             "count": 2
         },
         "972998450:2105788016": {
@@ -5694,7 +5609,7 @@
                 1861748274,
                 2080363489
             ],
-            "regex": "ündet",
+            "regex": "undet",
             "weight": 5,
             "count": 2
         }
