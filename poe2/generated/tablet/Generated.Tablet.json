@@ -734,7 +734,7 @@
         },
         {
             "id": 567767661,
-            "regex": "n \\\\d+%",
+            "regex": "n \\d+%",
             "rawText": "Abysses in Map spawn (20-30)% increased Monsters",
             "generalizedText": "^abysses in map spawn #% increased monsters$",
             "options": {
@@ -1282,7 +1282,7 @@
                 -1960297919,
                 -1453707734
             ],
-            "regex": "r \\\\d+",
+            "regex": "r \\d+",
             "weight": 8,
             "count": 2
         },
@@ -1399,7 +1399,7 @@
                 -1044838087,
                 489458160
             ],
-            "regex": "ns \\\\d+%",
+            "regex": "ns \\d+%",
             "weight": 10,
             "count": 3
         },
@@ -1860,7 +1860,7 @@
                 -316849395,
                 1405778173
             ],
-            "regex": "ts \\\\d+",
+            "regex": "ts \\d+",
             "weight": 9,
             "count": 3
         },
@@ -1923,6 +1923,15 @@
             ],
             "regex": "pli",
             "weight": 3,
+            "count": 2
+        },
+        "-1098842492:-75847069": {
+            "ids": [
+                -1098842492,
+                -75847069
+            ],
+            "regex": "es \\d+",
+            "weight": 9,
             "count": 2
         },
         "-1044838087:489458160": {
@@ -2183,7 +2192,7 @@
                 568500439,
                 1562350787
             ],
-            "regex": "s have \\\\d+%",
+            "regex": "s have \\d+%",
             "weight": 14,
             "count": 3
         },
@@ -2336,7 +2345,7 @@
                 138089255,
                 567767661
             ],
-            "regex": "n \\\\d+",
+            "regex": "n \\d+",
             "weight": 8,
             "count": 2
         },
