@@ -1,4 +1,3 @@
-
 export type RepoeLanguageData = {
   readonly urlKey: string;
   readonly short: string;
@@ -7,43 +6,56 @@ export type RepoeLanguageData = {
 };
 
 export const RepoeLanguage = {
-  ENGLISH: {urlKey: "", short: "en", name: "English", flag: "🇺🇸"},
-  FRENCH: {urlKey: "French", short: "fr", name: "French", flag: "🇫🇷"},
-  GERMAN: {urlKey: "German", short: "de", name: "German", flag: "🇩🇪"},
-  JAPANESE: {urlKey: "Japanese", short: "ja", name: "Japanese", flag: "🇯🇵"},
-  KOREAN: {urlKey: "Korean", short: "ko", name: "Korean", flag: "🇰🇷"},
-  PORTUGUESE: {urlKey: "Portuguese", short: "pt", name: "Portuguese", flag: "🇵🇹"},
-  RUSSIAN: {urlKey: "Russian", short: "ru", name: "Russian", flag: "🇷🇺"},
-  SPANISH: {urlKey: "Spanish", short: "es", name: "Spanish", flag: "🇪🇸"},
-  THAI: {urlKey: "Thai", short: "th", name: "Thai", flag: "🇹🇭"},
-  CHINESE: {urlKey: "Traditional%20Chinese", short: "zh", name: "Chinese", flag: "🇨🇳"},
+  ENGLISH: { urlKey: "", short: "en", name: "English", flag: "🇺🇸" },
+  FRENCH: { urlKey: "French", short: "fr", name: "French", flag: "🇫🇷" },
+  GERMAN: { urlKey: "German", short: "de", name: "German", flag: "🇩🇪" },
+  JAPANESE: { urlKey: "Japanese", short: "ja", name: "Japanese", flag: "🇯🇵" },
+  KOREAN: { urlKey: "Korean", short: "ko", name: "Korean", flag: "🇰🇷" },
+  PORTUGUESE: {
+    urlKey: "Portuguese",
+    short: "pt",
+    name: "Portuguese",
+    flag: "🇵🇹",
+  },
+  RUSSIAN: { urlKey: "Russian", short: "ru", name: "Russian", flag: "🇷🇺" },
+  SPANISH: { urlKey: "Spanish", short: "es", name: "Spanish", flag: "🇪🇸" },
+  THAI: { urlKey: "Thai", short: "th", name: "Thai", flag: "🇹🇭" },
+  CHINESE: {
+    urlKey: "Traditional%20Chinese",
+    short: "zh",
+    name: "Chinese",
+    flag: "🇨🇳",
+  },
 } as const;
 
 export type RepoeLanguageKey = keyof typeof RepoeLanguage;
 
 export const TRANSLATION_NEED = "TRANSLATION_NEEDED";
 
-export const MapStaticStatRegex: Record<RepoeLanguageKey, {
-  quantity: string,
-  packsize: string,
-  mapdrop: string,
-  itemrarity: string,
-  currency: string,
-  scarab: string,
-  divination: string,
-  quality_regular: string,
-  quality_currency: string,
-  quality_divination: string,
-  quality_rarity: string,
-  quality_packsize: string,
-  quality_scarab: string,
-  rarity_prefix: string,
-  rarity_normal: string,
-  rarity_magic: string,
-  rarity_rare: string,
-  corrupted: string,
-  unidentified: string,
-}> = {
+export const MapStaticStatRegex: Record<
+  RepoeLanguageKey,
+  {
+    quantity: string;
+    packsize: string;
+    mapdrop: string;
+    itemrarity: string;
+    currency: string;
+    scarab: string;
+    divination: string;
+    quality_regular: string;
+    quality_currency: string;
+    quality_divination: string;
+    quality_rarity: string;
+    quality_packsize: string;
+    quality_scarab: string;
+    rarity_prefix: string;
+    rarity_normal: string;
+    rarity_magic: string;
+    rarity_rare: string;
+    corrupted: string;
+    unidentified: string;
+  }
+> = {
   ENGLISH: {
     quantity: "m q.*",
     packsize: "iz.*",
@@ -66,25 +78,25 @@ export const MapStaticStatRegex: Record<RepoeLanguageKey, {
     unidentified: "tified",
   },
   FRENCH: {
-    quantity: TRANSLATION_NEED,
-    packsize: TRANSLATION_NEED,
-    mapdrop: TRANSLATION_NEED,
-    itemrarity: TRANSLATION_NEED,
-    currency: TRANSLATION_NEED,
-    scarab: TRANSLATION_NEED,
-    divination: TRANSLATION_NEED,
+    quantity: "uanti.*",
+    packsize: "pes d.*",
+    mapdrop: "age.*car.*",
+    itemrarity: "ete d.*",
+    currency: "etair.*",
+    scarab: "sca.*",
+    divination: "vin.*",
     quality_regular: TRANSLATION_NEED,
-    quality_currency: TRANSLATION_NEED,
-    quality_divination: TRANSLATION_NEED,
-    quality_rarity: TRANSLATION_NEED,
-    quality_packsize: TRANSLATION_NEED,
-    quality_scarab: TRANSLATION_NEED,
-    rarity_prefix: TRANSLATION_NEED,
-    rarity_normal: TRANSLATION_NEED,
-    rarity_magic: TRANSLATION_NEED,
-    rarity_rare: TRANSLATION_NEED,
-    corrupted: TRANSLATION_NEED,
-    unidentified: TRANSLATION_NEED,
+    quality_currency: "\\(ob.*",
+    quality_divination: "\\(car.*",
+    quality_rarity: "\\(ra.*",
+    quality_packsize: "\\(tai.*",
+    quality_scarab: "\\(sca.*",
+    rarity_prefix: "e: ",
+    rarity_normal: "n",
+    rarity_magic: "m",
+    rarity_rare: "r",
+    corrupted: "mpu",
+    unidentified: "on id",
   },
   GERMAN: {
     quantity: TRANSLATION_NEED,
