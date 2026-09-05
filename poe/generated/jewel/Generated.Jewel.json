@@ -520,7 +520,7 @@
         },
         {
             "mod": "(5—7)% increased maximum Life",
-            "regex": "^\\\\d+% increased maximum l",
+            "regex": "^\\d+% increased maximum l",
             "regexAffix": "viv",
             "isPrefix": true,
             "isAbyss": false
@@ -646,7 +646,7 @@
         },
         {
             "mod": "(8—10)% increased Damage",
-            "regex": "^\\\\d+% increased damage$",
+            "regex": "^\\d+% increased damage$",
             "regexAffix": "wou",
             "isPrefix": false,
             "isAbyss": false
@@ -940,7 +940,7 @@
         },
         {
             "mod": "+(8—10)% to all Elemental Resistances",
-            "regex": "^\\\\+\\\\d+% to a",
+            "regex": "^\\+\\d+% to a",
             "regexAffix": "f resis",
             "isPrefix": false,
             "isAbyss": false
@@ -982,7 +982,7 @@
         },
         {
             "mod": "Gain (2—3) Life per Enemy Hit with Attacks",
-            "regex": "\\\\d+ l",
+            "regex": "\\d+ l",
             "regexAffix": "ej",
             "isPrefix": false,
             "isAbyss": false
@@ -996,14 +996,14 @@
         },
         {
             "mod": "Minions have (8—12)% increased maximum Life",
-            "regex": "e \\\\d+% increased maximum life$",
+            "regex": "e \\d+% increased maximum life$",
             "regexAffix": "^(S.+)?ma",
             "isPrefix": true,
             "isAbyss": false
         },
         {
             "mod": "Minions have +(11—15)% to all Elemental Resistances",
-            "regex": "e \\\\+",
+            "regex": "e \\+",
             "regexAffix": "sil",
             "isPrefix": false,
             "isAbyss": false
@@ -1348,7 +1348,7 @@
         },
         {
             "mod": "(2—4)% increased Cast Speed",
-            "regex": "^\\\\d+% increased cast speed$",
+            "regex": "^\\d+% increased cast speed$",
             "regexAffix": "nch",
             "isPrefix": false,
             "isAbyss": true
@@ -1425,7 +1425,7 @@
         },
         {
             "mod": "(3—5)% increased Attack Speed",
-            "regex": "^\\\\d+% increased attack speed$",
+            "regex": "^\\d+% increased attack speed$",
             "regexAffix": "ser",
             "isPrefix": false,
             "isAbyss": true
@@ -1495,7 +1495,7 @@
         },
         {
             "mod": "(6—8)% chance to Hinder Enemies on Hit with Spells",
-            "regex": "^\\\\d+% chance to h",
+            "regex": "^\\d+% chance to h",
             "regexAffix": "deri",
             "isPrefix": false,
             "isAbyss": true
@@ -1726,7 +1726,7 @@
         },
         {
             "mod": "+(7—13)% to Chaos Resistance",
-            "regex": "^\\\\+\\\\d+% to ch",
+            "regex": "^\\+\\d+% to ch",
             "regexAffix": "orde",
             "isPrefix": false,
             "isAbyss": true
@@ -1754,7 +1754,7 @@
         },
         {
             "mod": "+(8—10)% to all Elemental Resistances",
-            "regex": "^\\\\+\\\\d+% to a",
+            "regex": "^\\+\\d+% to a",
             "regexAffix": "f res",
             "isPrefix": false,
             "isAbyss": true
@@ -1908,14 +1908,14 @@
         },
         {
             "mod": "Minions Regenerate (0.4—0.8)% of Life per second",
-            "regex": "s regenerate \\\\d+%",
+            "regex": "s regenerate \\d+%",
             "regexAffix": "lon",
             "isPrefix": false,
             "isAbyss": true
         },
         {
             "mod": "Minions Regenerate (42—60) Life per second",
-            "regex": "s regenerate \\\\d+ l",
+            "regex": "s regenerate \\d+ l",
             "regexAffix": "xu",
             "isPrefix": true,
             "isAbyss": true
@@ -1992,7 +1992,7 @@
         },
         {
             "mod": "Minions have (4—6)% increased Attack Speed|Minions have (4—6)% increased Cast Speed",
-            "regex": "e \\\\d+% increased a",
+            "regex": "e \\d+% increased a",
             "regexAffix": "trai",
             "isPrefix": false,
             "isAbyss": true
@@ -2006,7 +2006,7 @@
         },
         {
             "mod": "Minions have (6—8)% chance to Hinder Enemies on Hit with Spells",
-            "regex": "e \\\\d+% chance to h",
+            "regex": "e \\d+% chance to h",
             "regexAffix": "yi",
             "isPrefix": false,
             "isAbyss": true
@@ -2027,14 +2027,14 @@
         },
         {
             "mod": "Minions have +(6—10)% to all Elemental Resistances",
-            "regex": "e \\\\+\\\\d+% to a",
+            "regex": "e \\+\\d+% to a",
             "regexAffix": "ccl",
             "isPrefix": false,
             "isAbyss": true
         },
         {
             "mod": "Minions have +(7—11)% to Chaos Resistance",
-            "regex": "e \\\\+\\\\d+% to c",
+            "regex": "e \\+\\d+% to c",
             "regexAffix": "eo",
             "isPrefix": false,
             "isAbyss": true
@@ -2055,7 +2055,7 @@
         },
         {
             "mod": "Regenerate (17—20) Life per second",
-            "regex": "^regenerate \\\\d+ l",
+            "regex": "^regenerate \\d+ l",
             "regexAffix": "^(S.+)?viv",
             "isPrefix": true,
             "isAbyss": true

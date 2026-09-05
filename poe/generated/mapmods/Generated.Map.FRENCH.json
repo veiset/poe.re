@@ -1394,7 +1394,7 @@
         },
         {
             "id": 1899039946,
-            "regex": "t \\\\d+% d'augmentation de z",
+            "regex": "t \\d+% d'augmentation de z",
             "rawText": "Les Monstres ont (45-100)% d'Augmentation de Zone d'effet",
             "generalizedText": "^les monstres ont #% d'augmentation de zone d'effet$",
             "options": {
@@ -1814,7 +1814,7 @@
                 829751875,
                 1464066514
             ],
-            "regex": "t \\\\d+% de pe",
+            "regex": "t \\d+% de pe",
             "weight": 15,
             "count": 7
         },
@@ -1828,7 +1828,7 @@
                 284489036,
                 1464066514
             ],
-            "regex": "t \\\\d+% de pe",
+            "regex": "t \\d+% de pe",
             "weight": 15,
             "count": 7
         },
@@ -3187,9 +3187,18 @@
                 10729340,
                 1078205993
             ],
-            "regex": "ant \\\\d+",
+            "regex": "ant \\d+",
             "weight": 10,
             "count": 4
+        },
+        "-1430865583:10729340": {
+            "ids": [
+                -1430865583,
+                10729340
+            ],
+            "regex": "ant \\d+",
+            "weight": 10,
+            "count": 2
         },
         "-1358177810:-694214737:-258709095:-225071089": {
             "ids": [
@@ -3398,7 +3407,7 @@
                 1469490158,
                 1899039946
             ],
-            "regex": "t \\\\d+% d'",
+            "regex": "t \\d+% d'",
             "weight": 12,
             "count": 6
         },
@@ -3410,7 +3419,7 @@
                 1014295028,
                 1469490158
             ],
-            "regex": "t \\\\d+% d'",
+            "regex": "t \\d+% d'",
             "weight": 12,
             "count": 5
         },
@@ -4935,7 +4944,7 @@
                 472035128,
                 823410479
             ],
-            "regex": "de \\\\d+",
+            "regex": "de \\d+",
             "weight": 9,
             "count": 3
         },
@@ -4944,7 +4953,7 @@
                 -258709095,
                 472035128
             ],
-            "regex": "de \\\\d+",
+            "regex": "de \\d+",
             "weight": 9,
             "count": 2
         },

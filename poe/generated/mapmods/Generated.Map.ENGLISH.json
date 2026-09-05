@@ -600,7 +600,7 @@
         },
         {
             "id": -114660370,
-            "regex": "e \\\\d+% less ac",
+            "regex": "e \\d+% less ac",
             "rawText": "Players have (15-25)% less Accuracy Rating",
             "generalizedText": "^players have #% less accuracy rating$",
             "options": {
@@ -1016,7 +1016,7 @@
         },
         {
             "id": 1078205993,
-            "regex": "\\\\d+ e",
+            "regex": "\\d+ e",
             "rawText": "Rare Monsters have [ElementalThorns|Elemental Thorns] reflecting (900-1500) Elemental Damage",
             "generalizedText": "^rare monsters have elemental thorns reflecting # elemental damage$",
             "options": {
@@ -1374,7 +1374,7 @@
         },
         {
             "id": 1899039946,
-            "regex": "e \\\\d+% increased ar",
+            "regex": "e \\d+% increased ar",
             "rawText": "Monsters have (45-100)% increased Area of Effect",
             "generalizedText": "^monsters have #% increased area of effect$",
             "options": {
@@ -1481,7 +1481,7 @@
                 1469490158,
                 1634487773
             ],
-            "regex": "e \\\\d+ a",
+            "regex": "e \\d+ a",
             "weight": 10,
             "count": 3
         },
@@ -1490,7 +1490,7 @@
                 -1647756153,
                 1469490158
             ],
-            "regex": "e \\\\d+ a",
+            "regex": "e \\d+ a",
             "weight": 10,
             "count": 2
         },
@@ -1509,7 +1509,7 @@
                 357242916,
                 1494523238
             ],
-            "regex": "e \\\\d+ t",
+            "regex": "e \\d+ t",
             "weight": 10,
             "count": 3
         },
@@ -1558,7 +1558,7 @@
                 10729340,
                 127168403
             ],
-            "regex": "s gain \\\\d+",
+            "regex": "s gain \\d+",
             "weight": 13,
             "count": 5
         },
@@ -1569,7 +1569,7 @@
                 -645418310,
                 10729340
             ],
-            "regex": "s gain \\\\d+",
+            "regex": "s gain \\d+",
             "weight": 13,
             "count": 4
         },
@@ -1617,7 +1617,7 @@
                 -1430865583,
                 1078205993
             ],
-            "regex": "\\\\d+ e",
+            "regex": "\\d+ e",
             "weight": 8,
             "count": 2
         },
