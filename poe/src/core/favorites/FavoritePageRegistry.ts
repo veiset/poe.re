@@ -11,18 +11,18 @@ import scarabIcon from "@shared/img/scarab.png";
 import jewelIcon from "@shared/img/linkicons/cobalt.png";
 import {Poe1FavoritePageKey} from "./FavoriteTypes";
 
-export interface FavoritePageDefinition { key: Poe1FavoritePageKey; label: string; route: string; icon: string }
+export interface FavoritePageDefinition { key: Poe1FavoritePageKey; label: string; route: string; icon: string; languageDependent: boolean }
 
 export const FAVORITE_PAGE_REGISTRY: Record<Poe1FavoritePageKey, FavoritePageDefinition> = {
-  vendor: {key: "vendor", label: "Vendor", route: "/vendor", icon: vendorIcon},
-  maps: {key: "maps", label: "Map mods", route: "/maps", icon: mapIcon},
-  boat: {key: "boat", label: "Boat", route: "/boat", icon: boatIcon},
-  items: {key: "items", label: "Items", route: "/items", icon: itemIcon},
-  expedition: {key: "expedition", label: "Expedition", route: "/expedition", icon: expeditionIcon},
-  heist: {key: "heist", label: "Heist", route: "/heist", icon: heistIcon},
-  beast: {key: "beast", label: "Bestiary", route: "/beast", icon: beastIcon},
-  tattoo: {key: "tattoo", label: "Tattoo", route: "/tattoo", icon: tattooIcon},
-  runegraft: {key: "runegraft", label: "Runegraft", route: "/runegraft", icon: runegraftIcon},
-  scarab: {key: "scarab", label: "Scarab", route: "/scarab", icon: scarabIcon},
-  jewel: {key: "jewel", label: "Jewel", route: "/jewel", icon: jewelIcon},
+  vendor: {key: "vendor", label: "Vendor", route: "/vendor", icon: vendorIcon, languageDependent: false},
+  maps: {key: "maps", label: "Map mods", route: "/maps", icon: mapIcon, languageDependent: true},
+  boat: {key: "boat", label: "Boat", route: "/boat", icon: boatIcon, languageDependent: false},
+  items: {key: "items", label: "Items", route: "/items", icon: itemIcon, languageDependent: false},
+  expedition: {key: "expedition", label: "Expedition", route: "/expedition", icon: expeditionIcon, languageDependent: false},
+  heist: {key: "heist", label: "Heist", route: "/heist", icon: heistIcon, languageDependent: false},
+  beast: {key: "beast", label: "Bestiary", route: "/beast", icon: beastIcon, languageDependent: false},
+  tattoo: {key: "tattoo", label: "Tattoo", route: "/tattoo", icon: tattooIcon, languageDependent: false},
+  runegraft: {key: "runegraft", label: "Runegraft", route: "/runegraft", icon: runegraftIcon, languageDependent: false},
+  scarab: {key: "scarab", label: "Scarab", route: "/scarab", icon: scarabIcon, languageDependent: false},
+  jewel: {key: "jewel", label: "Jewel", route: "/jewel", icon: jewelIcon, languageDependent: false},
 };

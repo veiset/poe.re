@@ -32,6 +32,7 @@ describe("profile transfer", () => {
       regex: "quant",
       configuration: {...defaultSettings.map, quantity: "80"},
       context: {language: "ENGLISH", league: "Standard"},
+      languageDependent: true,
       createdAt: "2026-08-27T00:00:00.000Z",
       updatedAt: "2026-08-27T00:00:00.000Z",
     };
@@ -40,6 +41,26 @@ describe("profile transfer", () => {
 
     const invalidPayload = btoa(JSON.stringify({game: "poe", settings: {name: "invalid", favorites: [{...favorite, pageKey: "unknown"}]}}));
     expect(decodeProfile(invalidPayload).favorites).toEqual([]);
+  });
+
+  it("treats imported favorites that predate the flag as language-dependent when they captured a language", () => {
+    const legacyFavorite = {
+      schemaVersion: 1,
+      id: "favorite-legacy",
+      pageKey: "maps",
+      name: "Legacy maps",
+      description: "",
+      color: "#c6930a",
+      tags: [],
+      regex: "quant",
+      configuration: defaultSettings.map,
+      context: {language: "ENGLISH"},
+      createdAt: "2026-08-27T00:00:00.000Z",
+      updatedAt: "2026-08-27T00:00:00.000Z",
+    };
+    const payload = btoa(JSON.stringify({game: "poe", settings: {name: "legacy-favorite", favorites: [legacyFavorite]}}));
+
+    expect(decodeProfile(payload).favorites[0]?.languageDependent).toBe(true);
   });
 
   it("imports legacy default exports that omitted the name", () => {
