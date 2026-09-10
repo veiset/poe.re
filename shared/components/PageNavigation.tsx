@@ -1,5 +1,5 @@
 import {useLocation} from "react-router-dom";
-import coffeeIcon from "@shared/img/bmc-logo-no-background.png";
+import coffeeIcon from "@shared/img/bmc-logo.svg";
 import githubIcon from "@shared/img/github-mark-white.png";
 import plausibleIcon from "@shared/img/plausible_logo_sm.png";
 import "@shared/styles/PageLinks.css";
@@ -20,9 +20,9 @@ interface PageNavigationProps {
   items: NavigationItem[];
 }
 
-const SupportLink = ({href, icon, text}: {href: string; icon: string; text: string}) => (
+const SupportLink = ({href, icon, text, className = ""}: {href: string; icon: string; text: string; className?: string}) => (
   <p className="support-link">
-    <img src={icon} alt="" className="support-icon"/>
+    <img src={icon} alt="" className={`support-icon ${className}`} decoding="async" loading="lazy"/>
     <a className="source-link" href={href} rel="noreferrer">{text}</a>
   </p>
 );
@@ -40,7 +40,7 @@ export const PageNavigation = ({title, otherGameLabel, otherGameUrl, statsUrl, i
         {items.map((item) => <PageLink key={item.route} {...item} currentPage={currentPage}/>)}
         <p/>
         <SupportLink href={getBugReportUrl()} icon={githubIcon} text="Report issue"/>
-        <SupportLink href="https://www.buymeacoffee.com/veiset" icon={coffeeIcon} text="Buy me a coffee"/>
+        <SupportLink href="https://www.buymeacoffee.com/veiset" icon={coffeeIcon} text="Buy me a coffee" className="support-icon-coffee"/>
         <SupportLink href={statsUrl} icon={plausibleIcon} text="Website stats"/>
       </div>
     </div>

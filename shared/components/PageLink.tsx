@@ -17,7 +17,7 @@ export const PageLink = ({text, icon, route, currentPage}: PageLinkProps) => {
           event.preventDefault();
         }
       }}>
-        <img alt={`${text}-icon`} className="page-link-icon" src={icon}/>
+        <img alt={`${text}-icon`} className="page-link-icon" src={icon} width="20" height="20" decoding="async" loading="lazy"/>
         {text}
       </Link>
     </div>
