@@ -122,6 +122,7 @@ export interface SavedSettings {
   boat: BoatSettings;
   item: ItemSettings;
   vendor: VendorSettings;
+  gems: GemsSettings;
   scarab: ScarabSettings;
   jewel: JewelSettings;
   itemCrafting: ItemCraftingSettings;
@@ -353,6 +354,18 @@ export interface VendorSettings {
   gems: number[];
 }
 
+export interface GemsSettings {
+  levelEnabled: boolean;
+  levelMin: string;
+  levelMax: string;
+  qualityEnabled: boolean;
+  qualityMin: string;
+  qualityMax: string;
+  showSkills: boolean;
+  showSupports: boolean;
+  selected: number[];
+}
+
 export const defaultSettings: SavedSettings = {
   language: "ENGLISH",
   name: "default",
@@ -546,6 +559,17 @@ export const defaultSettings: SavedSettings = {
       shield: false,
     },
     gems: [],
+  },
+  gems: {
+    levelEnabled: false,
+    levelMin: "1",
+    levelMax: "21",
+    qualityEnabled: false,
+    qualityMin: "0",
+    qualityMax: "23",
+    showSkills: true,
+    showSupports: true,
+    selected: [],
   },
   scarab: {
     selected: [],

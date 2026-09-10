@@ -1,4 +1,4 @@
-import React, {Dispatch, SetStateAction, useEffect, useMemo} from "react";
+import React, {Dispatch, SetStateAction} from "react";
 import ModSearchBox from "@shared/components/ModSearchBox";
 import "./GemNameList.css";
 import type {GemOption, Token} from "@poe/types/generated/gems";
@@ -8,6 +8,7 @@ export interface GemNameListProps {
   gems: Token<GemOption>[]
   selected: number[]
   setSelected: Dispatch<SetStateAction<number[]>>
+  filter?: (gem: Token<GemOption>) => boolean
 }
 
 const gemColorOrder: Record<string, number> = {'r': 1, 'g': 2, 'b': 3, 'w': 4}
@@ -18,13 +19,9 @@ const gemSortFn = (a: Token<GemOption>, b: Token<GemOption>) => {
 }
 
 const GemNameList = (props: GemNameListProps) => {
-  const {id, gems, selected, setSelected} = props;
+  const {id, gems, selected, setSelected, filter} = props;
   const [search, setSearch] = React.useState("");
-
-  useEffect(() => {
-  }, [selected]);
-
-  const sortedGemList = gems.sort(gemSortFn);
+  const sortedGemList = [...gems].sort(gemSortFn);
 
   return (
     <>
@@ -33,7 +30,7 @@ const GemNameList = (props: GemNameListProps) => {
       </div>
       <div className="gem-name-list">
         {sortedGemList
-          .filter((gem) => !search || gem.rawText.toLowerCase().includes(search.toLowerCase()))
+          .filter((gem) => (!filter || filter(gem)) && (!search || gem.rawText.toLowerCase().includes(search.toLowerCase())))
           .map((v) => {
             const isSelected = selected.includes(v.id);
             let className = `selectable-item gem-${v.options.c}`;

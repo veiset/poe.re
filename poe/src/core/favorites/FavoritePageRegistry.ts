@@ -9,6 +9,7 @@ import tattooIcon from "@shared/img/tattoo.png";
 import runegraftIcon from "@shared/img/runegraft.png";
 import scarabIcon from "@shared/img/scarab.png";
 import jewelIcon from "@shared/img/linkicons/cobalt.png";
+import gemIcon from "@shared/img/gem.png";
 import {Poe1FavoritePageKey} from "./FavoriteTypes";
 
 export interface FavoritePageDefinition { key: Poe1FavoritePageKey; label: string; route: string; icon: string; languageDependent: boolean }
@@ -25,4 +26,5 @@ export const FAVORITE_PAGE_REGISTRY: Record<Poe1FavoritePageKey, FavoritePageDef
   runegraft: {key: "runegraft", label: "Runegraft", route: "/runegraft", icon: runegraftIcon, languageDependent: false},
   scarab: {key: "scarab", label: "Scarab", route: "/scarab", icon: scarabIcon, languageDependent: false},
   jewel: {key: "jewel", label: "Jewel", route: "/jewel", icon: jewelIcon, languageDependent: false},
+  gems: {key: "gems", label: "Gems", route: "/gems", icon: gemIcon, languageDependent: true},
 };

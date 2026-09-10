@@ -15,6 +15,7 @@ const Tattoo = lazy(() => import("../pages/tattoo/Tattoo"));
 const Runegraft = lazy(() => import("../pages/runegraft/Runegraft"));
 const Jewel = lazy(() => import("../pages/jewel/Jewel"));
 const Favorites = lazy(() => import("../pages/favorites/Favorites"));
+const Gems = lazy(() => import("../pages/gems/Gems"));
 
 export const Poe1Routes = () => (
   <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading…</div>}>
@@ -23,6 +24,7 @@ export const Poe1Routes = () => (
       <Route index element={<Favorites/>}/>
       <Route path="favorites" element={<Favorites/>}/>
       <Route path="vendor" element={<Vendor/>}/>
+      <Route path="gems" element={<Gems/>}/>
       <Route path="maps" element={<OptimizedMapMods/>}/>
       <Route path="boat" element={<Boat/>}/>
       <Route path="items" element={<Item/>}/>

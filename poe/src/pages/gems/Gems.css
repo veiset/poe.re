@@ -1,0 +1,24 @@
+.gems-card {
+    background-color: var(--color-card-bg);
+    border: 1px solid var(--color-border-strong);
+    border-radius: 4px;
+    padding: 14px 12px 10px;
+    margin: 8px 12px 14px;
+    width: calc(100% - 24px);
+    box-sizing: border-box;
+}
+
+.gems-card-header {
+    display: flex;
+    align-items: center;
+    padding: 0 4px 12px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid var(--color-border-soft);
+}
+
+.gems-card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-deep-text);
+    letter-spacing: -0.01em;
+}
