@@ -56,16 +56,17 @@ const Gems = () => {
   const [qualityMax, setQualityMax] = useState(profile.gems.qualityMax);
   const [showSkills, setShowSkills] = useState(profile.gems.showSkills);
   const [showSupports, setShowSupports] = useState(profile.gems.showSupports);
+  const [supportType, setSupportType] = useState(profile.gems.supportType);
   const [selected, setSelected] = useState(profile.gems.selected);
 
   useEffect(() => { loadGems().then(setGems); }, []);
 
-  const settings: GemsSettings = {levelEnabled, levelMin, levelMax, qualityEnabled, qualityMin, qualityMax, showSkills, showSupports, selected};
+  const settings: GemsSettings = {levelEnabled, levelMin, levelMax, qualityEnabled, qualityMin, qualityMax, showSkills, showSupports, supportType, selected};
   const result = useMemo(() => generateGemsRegex(settings, gems), [settings, gems]);
 
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, gems: settings}));
-  }, [levelEnabled, levelMin, levelMax, qualityEnabled, qualityMin, qualityMax, showSkills, showSupports, selected]);
+  }, [levelEnabled, levelMin, levelMax, qualityEnabled, qualityMin, qualityMax, showSkills, showSupports, supportType, selected]);
 
   return <>
     <Header text="Gems"/>
@@ -78,6 +79,7 @@ const Gems = () => {
                       setQualityEnabled(defaults.qualityEnabled);
                       setQualityMin(defaults.qualityMin); setQualityMax(defaults.qualityMax);
                       setShowSkills(defaults.showSkills); setShowSupports(defaults.showSupports);
+                      setSupportType(defaults.supportType);
                       setSelected(defaults.selected);
                     }}/>
     <div className="filter-card-grid">
@@ -95,13 +97,25 @@ const Gems = () => {
       </FilterCard>
       <FilterCard title="Gem type">
         <Checkbox label="Skills" value={showSkills} onChange={setShowSkills}/>
-        <Checkbox label="Supports" value={showSupports} onChange={setShowSupports}/>
+        <div className="gems-support-filter">
+          <Checkbox label="Supports" value={showSupports} onChange={setShowSupports}/>
+          <div className="radio-button-modgroup radio-button-modgroup-sm">
+            <input type="radio" id="gem-support-all" name="gem-support-type" value="all"
+                   checked={supportType === "all"} onChange={() => setSupportType("all")}/>
+            <label htmlFor="gem-support-all" className="radio-button-map">All</label>
+            <input type="radio" id="gem-support-awakened" name="gem-support-type" value="awakened"
+                   checked={supportType === "awakened"} onChange={() => setSupportType("awakened")}/>
+            <label htmlFor="gem-support-awakened" className="radio-button-map">Awakened</label>
+          </div>
+        </div>
       </FilterCard>
     </div>
     <div className="gems-card">
       <div className="gems-card-header"><span className="gems-card-title">Gems</span></div>
       <GemNameList id="gems-name-list" gems={gems?.tokens ?? []} selected={selected} setSelected={setSelected}
-                   filter={(gem) => gem.options.support ? showSupports : showSkills}/>
+                   filter={(gem) => gem.options.support
+                     ? showSupports && (supportType === "all" || gem.rawText.startsWith("Awakened"))
+                     : showSkills}/>
     </div>
   </>;
 };

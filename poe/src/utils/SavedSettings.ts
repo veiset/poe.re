@@ -363,6 +363,7 @@ export interface GemsSettings {
   qualityMax: string;
   showSkills: boolean;
   showSupports: boolean;
+  supportType: "all" | "awakened";
   selected: number[];
 }
 
@@ -569,6 +570,7 @@ export const defaultSettings: SavedSettings = {
     qualityMax: "23",
     showSkills: true,
     showSupports: true,
+    supportType: "all",
     selected: [],
   },
   scarab: {
