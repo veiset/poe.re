@@ -2,14 +2,17 @@ import React, {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import CoffeeBanner from "@shared/components/banner/CoffeeBanner";
 import PageLinks from "./PageLinks";
-import {loadSettings, selectedProfile} from "@poe/utils/LocalStorage";
+import {ensureDefaultProfile, loadSettings, selectedProfile} from "@poe/utils/LocalStorage";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {LeagueProvider} from "@shared/core/LeagueContext";
 import {FavoritesProvider} from "@poe/core/favorites/FavoritesContext";
 
 export const Poe1Layout = () => {
-  const [globalProfile, setGlobalProfile] = useState(selectedProfile());
+  const [globalProfile, setGlobalProfile] = useState(() => {
+    ensureDefaultProfile();
+    return selectedProfile();
+  });
   const [profile, setProfile] = useState(loadSettings(globalProfile));
   const [lang, setLang] = useState(profile.language);
 
