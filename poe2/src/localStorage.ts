@@ -25,6 +25,14 @@ export const loadProfileNames = (): string[] => {
   return Object.keys(loadProfiles());
 }
 
+export const ensureDefaultProfile = (): void => {
+  const profiles = loadProfiles();
+  if (!profiles.default) {
+    profiles.default = defaultSettings;
+    localStorage.setItem(PROFILE_KEY, JSON.stringify(profiles));
+  }
+}
+
 export const deleteProfile = (profile: string): void => {
   const profiles = loadProfiles();
   delete profiles[profile];
