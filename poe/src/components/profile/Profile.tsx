@@ -33,6 +33,7 @@ const Profile = (props: ProfileProps) => {
   const [showExport, setShowExport] = useState(false);
   const [showImport, setShowImport] = useState(false);
   const [editName, setEditName] = useState("");
+  const [copyCurrentProfile, setCopyCurrentProfile] = useState(false);
   const [warning, setWarning] = useState<string | undefined>(undefined);
   const location = useLocation();
   const navigate = useNavigate();
@@ -92,7 +93,7 @@ const Profile = (props: ProfileProps) => {
     console.log(`Adding new profile: ${editName}`)
     setProfiles(profiles.concat(editName));
     setProfile(editName);
-    const newProfile = {...defaultSettings};
+    const newProfile = copyCurrentProfile ? loadSettings(profile) : {...defaultSettings};
     newProfile.name = editName;
     saveSettings(newProfile);
     setShowNew(false);
@@ -145,6 +146,7 @@ const Profile = (props: ProfileProps) => {
           setShowEdit(false);
           setShowDelete(false);
           setEditName("");
+          setCopyCurrentProfile(false);
           setShowNew(true);
         }}>+
         </div>
@@ -170,6 +172,8 @@ const Profile = (props: ProfileProps) => {
             show={setShowNew}
             confirm={confirmAdd}
             warning={warning}
+            copyCurrentProfile={copyCurrentProfile}
+            setCopyCurrentProfile={setCopyCurrentProfile}
           />
         }
         {showEdit &&

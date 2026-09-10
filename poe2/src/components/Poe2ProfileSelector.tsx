@@ -4,7 +4,7 @@ import "@shared/components/profile/Profile.css";
 import ProfileEditBox from "@shared/components/profile/ProfileEditBox";
 import {deleteProfile, loadProfileNames, loadSettings, saveSettings, setSelectedProfile} from "../localStorage";
 import {Poe2ProfileContext} from "../layout/Poe2ProfileContext";
-import {Settings} from "../settings";
+import {defaultSettings, Settings} from "../settings";
 import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
 import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
 import {decodeProfile, encodeProfile} from "./ProfileTransfer";
@@ -17,6 +17,7 @@ const Poe2ProfileSelector = () => {
   const [showExport, setShowExport] = useState(false);
   const [showImport, setShowImport] = useState(false);
   const [editName, setEditName] = useState("");
+  const [copyCurrentProfile, setCopyCurrentProfile] = useState(false);
   const [warning, setWarning] = useState<string | undefined>(undefined);
 
   const changeProfile = (profile: string) => {
@@ -38,7 +39,10 @@ const Poe2ProfileSelector = () => {
       setWarning(err);
       return;
     }
-    const newSettings = {...loadSettings(currentProfile), name: editName};
+    const newSettings = {
+      ...(copyCurrentProfile ? loadSettings(currentProfile) : defaultSettings),
+      name: editName,
+    };
     saveSettings(newSettings);
     setProfiles(loadProfileNames());
     changeProfile(editName);
@@ -88,6 +92,7 @@ const Poe2ProfileSelector = () => {
         <div className="profile-icon profile-icon-large" onClick={() => {
           setShowEdit(false);
           setEditName("");
+          setCopyCurrentProfile(false);
           setWarning(undefined);
           setShowNew(true);
         }}>+
@@ -112,6 +117,8 @@ const Poe2ProfileSelector = () => {
             show={setShowNew}
             confirm={confirmAdd}
             warning={warning}
+            copyCurrentProfile={copyCurrentProfile}
+            setCopyCurrentProfile={setCopyCurrentProfile}
           />
         }
         {showEdit &&

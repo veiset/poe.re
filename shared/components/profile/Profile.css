@@ -74,6 +74,20 @@
     padding-left: 8px;
 }
 
+.profile-copy-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 6px;
+    margin: 4px 8px 12px;
+    color: var(--color-text);
+    cursor: pointer;
+    line-height: 1.3;
+}
+
+.profile-copy-option input {
+    margin: 2px 0 0;
+}
+
 .new-profile-box input[type=text] {
     background-color: var(--color-area-2);
     color: var(--color-text);

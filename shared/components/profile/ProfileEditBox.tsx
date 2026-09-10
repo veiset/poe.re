@@ -8,10 +8,22 @@ interface ProfileEditBoxProps {
   confirm: () => void
   warning: string | undefined
   saveText?: string | undefined
+  copyCurrentProfile?: boolean
+  setCopyCurrentProfile?: (copy: boolean) => void
 }
 
 const ProfileEditBox = (props: ProfileEditBoxProps) => {
-  const {header, editValue, setEditValue, show, confirm, warning, saveText} = props;
+  const {
+    header,
+    editValue,
+    setEditValue,
+    show,
+    confirm,
+    warning,
+    saveText,
+    copyCurrentProfile,
+    setCopyCurrentProfile,
+  } = props;
 
   return (
     <div className="new-profile-box">
@@ -27,6 +39,14 @@ const ProfileEditBox = (props: ProfileEditBoxProps) => {
           </form>
       </div>
       }
+      {setCopyCurrentProfile && <label className="profile-copy-option">
+        <input
+          type="checkbox"
+          checked={copyCurrentProfile ?? false}
+          onChange={(e) => setCopyCurrentProfile(e.target.checked)}
+        />
+        Duplicate current settings
+      </label>}
       <div className="profile-button-area">
         <button className="copy-button" disabled={!!warning} onClick={() => {
           confirm()
