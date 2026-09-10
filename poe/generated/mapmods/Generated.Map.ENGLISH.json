@@ -76,7 +76,7 @@
         },
         {
             "id": -1772662453,
-            "regex": "ents$",
+            "regex": "id el",
             "rawText": "Monsters have (30-70)% chance to Avoid Elemental Ailments",
             "generalizedText": "^monsters have #% chance to avoid elemental ailments$",
             "options": {
@@ -334,7 +334,7 @@
         },
         {
             "id": -887278806,
-            "regex": "drow",
+            "regex": "g or",
             "rawText": "Area contains Drowning Orbs",
             "generalizedText": "^area contains drowning orbs$",
             "options": {
@@ -710,7 +710,7 @@
         },
         {
             "id": 58884108,
-            "regex": "leto",
+            "regex": "tons$",
             "rawText": "Area is inhabited by Skeletons",
             "generalizedText": "^area is inhabited by skeletons$",
             "options": {
@@ -818,7 +818,7 @@
         },
         {
             "id": 357242916,
-            "regex": "m end",
+            "regex": "arge w",
             "rawText": "Monsters have +1 to Maximum Endurance Charges|Monsters gain an Endurance Charge when hit",
             "generalizedText": "^monsters have # to maximum endurance charges$|^monsters gain an endurance charge when hit$",
             "options": {
@@ -954,7 +954,7 @@
         },
         {
             "id": 972998450,
-            "regex": "ril",
+            "regex": "viv",
             "rawText": "Rare monsters in area Temporarily Revive on death",
             "generalizedText": "^rare monsters in area temporarily revive on death$",
             "options": {
@@ -1004,7 +1004,7 @@
         },
         {
             "id": 1062763755,
-            "regex": "f chi",
+            "regex": "s of ch",
             "rawText": "Area has patches of Chilled Ground",
             "generalizedText": "^area has patches of chilled ground$",
             "options": {
@@ -1264,7 +1264,7 @@
         },
         {
             "id": 1598599541,
-            "regex": "h tem",
+            "regex": "th tem",
             "rawText": "Players are Cursed with Temporal Chains",
             "generalizedText": "^players are cursed with temporal chains$",
             "options": {
@@ -1475,25 +1475,6 @@
             "weight": 8,
             "count": 2
         },
-        "-1647756153:1469490158:1634487773": {
-            "ids": [
-                -1647756153,
-                1469490158,
-                1634487773
-            ],
-            "regex": "e \\d+ a",
-            "weight": 10,
-            "count": 3
-        },
-        "-1647756153:1469490158": {
-            "ids": [
-                -1647756153,
-                1469490158
-            ],
-            "regex": "e \\d+ a",
-            "weight": 10,
-            "count": 2
-        },
         "-1621497665:-1094717370": {
             "ids": [
                 -1621497665,
@@ -1558,8 +1539,8 @@
                 10729340,
                 127168403
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 5
         },
         "-1616686189:-763914456:-645418310:10729340": {
@@ -1569,8 +1550,8 @@
                 -645418310,
                 10729340
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 4
         },
         "-1430865583:-235013251:1078205993": {
@@ -1579,8 +1560,8 @@
                 -235013251,
                 1078205993
             ],
-            "regex": "thor",
-            "weight": 4,
+            "regex": "flecti",
+            "weight": 6,
             "count": 3
         },
         "-1430865583:-235013251:707446389:1078205993": {
@@ -1673,15 +1654,6 @@
             "weight": 9,
             "count": 2
         },
-        "-1358177810:357242916": {
-            "ids": [
-                -1358177810,
-                357242916
-            ],
-            "regex": "e charges",
-            "weight": 11,
-            "count": 2
-        },
         "-1344829253:246480838": {
             "ids": [
                 -1344829253,
@@ -1736,20 +1708,6 @@
             "regex": "ster d",
             "weight": 8,
             "count": 4
-        },
-        "-1139261923:-128171261:472035128:775962019:1062763755:1211148661:1932675161": {
-            "ids": [
-                -1139261923,
-                -128171261,
-                472035128,
-                775962019,
-                1062763755,
-                1211148661,
-                1932675161
-            ],
-            "regex": "tche",
-            "weight": 4,
-            "count": 7
         },
         "-1139261923:-128171261:472035128:1062763755:1211148661:1932675161": {
             "ids": [
@@ -2080,7 +2038,7 @@
                 -80588106,
                 1743546402
             ],
-            "regex": "hit wi",
+            "regex": "it wit",
             "weight": 8,
             "count": 2
         },
@@ -2203,8 +2161,8 @@
                 647925005,
                 1598599541
             ],
-            "regex": "h tem",
-            "weight": 7,
+            "regex": "th tem",
+            "weight": 8,
             "count": 2
         },
         "670500310:2105788016": {

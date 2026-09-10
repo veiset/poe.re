@@ -296,9 +296,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -1954,9 +1954,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -2467,9 +2467,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -3815,9 +3815,9 @@
                     },
                     {
                         "desc": "Damage Penetrates #% Fire Resistance",
-                        "regex": "% fi",
+                        "regex": "% fire r",
                         "start": 19,
-                        "end": 23,
+                        "end": 27,
                         "disabled": [],
                         "before": [
                             0
@@ -4935,9 +4935,9 @@
                     },
                     {
                         "desc": "+# to Maximum Endurance Charges",
-                        "regex": "m end",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "e charges$",
+                        "start": 22,
+                        "end": 32,
                         "disabled": [],
                         "before": [
                             0
@@ -6325,9 +6325,9 @@
                     },
                     {
                         "desc": "Gain #% of Damage as Extra Cold Damage",
-                        "regex": "a col",
+                        "regex": "a cold damage$",
                         "start": 25,
-                        "end": 30,
+                        "end": 39,
                         "disabled": [],
                         "before": [
                             0
@@ -7345,16 +7345,17 @@
                     },
                     {
                         "desc": "# to # Physical Thorns damage",
-                        "regex": "cal t",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "^\\d+ t",
+                        "start": 0,
+                        "end": 4,
                         "disabled": [],
-                        "before": [
-                            0,
+                        "before": [],
+                        "on": [
+                            0
+                        ],
+                        "after": [
                             1
                         ],
-                        "on": [],
-                        "after": [],
                         "affixtype": "PREFIX",
                         "stats": [
                             {
@@ -9104,8 +9105,8 @@
                     },
                     {
                         "desc": "Adds # to # Physical Damage to Attacks",
-                        "regex": "l damage to a",
-                        "start": 19,
+                        "regex": "al damage to a",
+                        "start": 18,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -10909,9 +10910,9 @@
                     },
                     {
                         "desc": "+# to Level of all Projectile Skills",
-                        "regex": "l pro",
-                        "start": 17,
-                        "end": 22,
+                        "regex": "le sk",
+                        "start": 27,
+                        "end": 32,
                         "disabled": [],
                         "before": [
                             0
@@ -12506,9 +12507,9 @@
                     },
                     {
                         "desc": "+# to Level of all Trap Skill Gems",
-                        "regex": "gem",
+                        "regex": "gems$",
                         "start": 30,
-                        "end": 33,
+                        "end": 35,
                         "disabled": [],
                         "before": [
                             0
@@ -12782,9 +12783,9 @@
                     },
                     {
                         "desc": "#% reduced Duration of Bleeding on You",
-                        "regex": "of b",
-                        "start": 20,
-                        "end": 24,
+                        "regex": "f bl",
+                        "start": 21,
+                        "end": 25,
                         "disabled": [],
                         "before": [
                             0
@@ -13419,9 +13420,9 @@
                     },
                     {
                         "desc": "#% reduced Shock duration on you",
-                        "regex": "d sh",
-                        "start": 9,
-                        "end": 13,
+                        "regex": "k du",
+                        "start": 15,
+                        "end": 19,
                         "disabled": [],
                         "before": [
                             0
@@ -13763,9 +13764,9 @@
                     },
                     {
                         "desc": "+# to Level of all Projectile Skills",
-                        "regex": "l pro",
-                        "start": 17,
-                        "end": 22,
+                        "regex": "le sk",
+                        "start": 27,
+                        "end": 32,
                         "disabled": [],
                         "before": [
                             0
@@ -14743,9 +14744,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -16291,9 +16292,9 @@
                     },
                     {
                         "desc": "Damage Penetrates #% Fire Resistance",
-                        "regex": "% fi",
+                        "regex": "% fire r",
                         "start": 19,
-                        "end": 23,
+                        "end": 27,
                         "disabled": [],
                         "before": [
                             0
@@ -17243,9 +17244,9 @@
                     },
                     {
                         "desc": "+# to Maximum Endurance Charges",
-                        "regex": "m end",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "e charges$",
+                        "start": 22,
+                        "end": 32,
                         "disabled": [],
                         "before": [
                             0
@@ -17639,9 +17640,9 @@
                     },
                     {
                         "desc": "Totemic Wood Lure",
-                        "regex": "^to",
+                        "regex": "^t",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -18468,9 +18469,9 @@
                     },
                     {
                         "desc": "+# to Strength",
-                        "regex": "o st",
+                        "regex": "o str",
                         "start": 4,
-                        "end": 8,
+                        "end": 9,
                         "disabled": [],
                         "before": [
                             0
@@ -23266,9 +23267,9 @@
                     },
                     {
                         "desc": "+# to Level of all Trap Skill Gems",
-                        "regex": "gem",
-                        "start": 30,
-                        "end": 33,
+                        "regex": "ms$",
+                        "start": 32,
+                        "end": 35,
                         "disabled": [],
                         "before": [
                             0
@@ -23939,9 +23940,9 @@
                     },
                     {
                         "desc": "Damage Penetrates #% Fire Resistance",
-                        "regex": "% fi",
+                        "regex": "% fire r",
                         "start": 19,
-                        "end": 23,
+                        "end": 27,
                         "disabled": [],
                         "before": [
                             0
@@ -24219,8 +24220,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -25307,8 +25308,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -25359,9 +25360,9 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion|+# to maximum Life",
-                        "regex": "on$",
+                        "regex": "n$",
                         "start": 50,
-                        "end": 53,
+                        "end": 52,
                         "disabled": [
                             1
                         ],
@@ -26760,9 +26761,9 @@
                     },
                     {
                         "desc": "Damage Penetrates #% Fire Resistance",
-                        "regex": "% fi",
+                        "regex": "% fire r",
                         "start": 19,
-                        "end": 23,
+                        "end": 27,
                         "disabled": [],
                         "before": [
                             0
@@ -27236,8 +27237,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -28020,9 +28021,9 @@
                     },
                     {
                         "desc": "Gain #% of Damage as Extra Cold Damage",
-                        "regex": "a col",
+                        "regex": "a cold damage$",
                         "start": 25,
-                        "end": 30,
+                        "end": 39,
                         "disabled": [],
                         "before": [
                             0
@@ -34573,9 +34574,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -36259,9 +36260,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -37188,16 +37189,17 @@
                     },
                     {
                         "desc": "# to # Physical Thorns damage",
-                        "regex": "cal t",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "^\\d+ t",
+                        "start": 0,
+                        "end": 4,
                         "disabled": [],
-                        "before": [
-                            0,
+                        "before": [],
+                        "on": [
+                            0
+                        ],
+                        "after": [
                             1
                         ],
-                        "on": [],
-                        "after": [],
                         "affixtype": "PREFIX",
                         "stats": [
                             {
@@ -39422,8 +39424,8 @@
                 "modifiers": [
                     {
                         "desc": "#% increased Duration",
-                        "regex": "on$",
-                        "start": 19,
+                        "regex": "n$",
+                        "start": 20,
                         "end": 22,
                         "disabled": [],
                         "before": [
@@ -40147,9 +40149,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -41845,9 +41847,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -42853,9 +42855,9 @@
                     },
                     {
                         "desc": "Gain #% of Damage as Extra Cold Damage",
-                        "regex": "a col",
+                        "regex": "a cold damage$",
                         "start": 25,
-                        "end": 30,
+                        "end": 39,
                         "disabled": [],
                         "before": [
                             0
@@ -44853,8 +44855,8 @@
                     },
                     {
                         "desc": "Projectiles have #% chance to Chain an additional time from terrain",
-                        "regex": "in$",
-                        "start": 65,
+                        "regex": "n$",
+                        "start": 66,
                         "end": 68,
                         "disabled": [],
                         "before": [
@@ -45943,8 +45945,8 @@
                     },
                     {
                         "desc": "Projectiles have #% chance to Chain an additional time from terrain",
-                        "regex": "in$",
-                        "start": 65,
+                        "regex": "n$",
+                        "start": 66,
                         "end": 68,
                         "disabled": [],
                         "before": [
@@ -48843,9 +48845,9 @@
                     },
                     {
                         "desc": "The Ring's Cut reduced by #%",
-                        "regex": "^th",
-                        "start": 0,
-                        "end": 3,
+                        "regex": "g'",
+                        "start": 7,
+                        "end": 9,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -49059,9 +49061,9 @@
                     },
                     {
                         "desc": "#% chance to not Activate Lockdown in Grand Heists",
-                        "regex": "ists",
-                        "start": 46,
-                        "end": 50,
+                        "regex": "grand",
+                        "start": 38,
+                        "end": 43,
                         "disabled": [],
                         "before": [
                             0
@@ -51629,9 +51631,9 @@
                     },
                     {
                         "desc": "#% reduced Slowing Potency of Debuffs on You",
-                        "regex": "pot",
-                        "start": 19,
-                        "end": 22,
+                        "regex": "u$",
+                        "start": 43,
+                        "end": 45,
                         "disabled": [],
                         "before": [
                             0
@@ -52168,9 +52170,9 @@
                 "modifiers": [
                     {
                         "desc": "Sacrifice up to [] to receive double on Trial completion",
-                        "regex": "^sa",
-                        "start": 0,
-                        "end": 3,
+                        "regex": "n$",
+                        "start": 55,
+                        "end": 57,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -54031,8 +54033,8 @@
                     },
                     {
                         "desc": "#% increased Stun Duration",
-                        "regex": "on$",
-                        "start": 24,
+                        "regex": "n$",
+                        "start": 25,
                         "end": 27,
                         "disabled": [],
                         "before": [
@@ -54916,9 +54918,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -56602,9 +56604,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -60562,9 +60564,9 @@
                     },
                     {
                         "desc": "You cannot be Hindered",
-                        "regex": "^yo",
+                        "regex": "^y",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -61542,9 +61544,9 @@
                     },
                     {
                         "desc": "Damage Penetrates #% Fire Resistance",
-                        "regex": "% fi",
+                        "regex": "% fire r",
                         "start": 19,
-                        "end": 23,
+                        "end": 27,
                         "disabled": [],
                         "before": [
                             0
@@ -61894,9 +61896,9 @@
                     },
                     {
                         "desc": "Minions deal #% increased Damage",
-                        "regex": "inions d",
-                        "start": 1,
-                        "end": 9,
+                        "regex": "^minions d",
+                        "start": 0,
+                        "end": 10,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -62310,8 +62312,8 @@
                     },
                     {
                         "desc": "#% increased Magnitude of Bleeding you inflict",
-                        "regex": "e of b",
-                        "start": 21,
+                        "regex": "de of b",
+                        "start": 20,
                         "end": 27,
                         "disabled": [],
                         "before": [
@@ -62342,9 +62344,9 @@
                     },
                     {
                         "desc": "#% increased Thorns damage",
-                        "regex": "orn",
-                        "start": 15,
-                        "end": 18,
+                        "regex": "sed th",
+                        "start": 9,
+                        "end": 15,
                         "disabled": [],
                         "before": [
                             0
@@ -62694,9 +62696,9 @@
                     },
                     {
                         "desc": "#% increased Hazard Damage",
-                        "regex": "za",
-                        "start": 15,
-                        "end": 17,
+                        "regex": "haz",
+                        "start": 13,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -62854,8 +62856,8 @@
                     },
                     {
                         "desc": "#% increased Damage with Plant Skills",
-                        "regex": "lan",
-                        "start": 26,
+                        "regex": "plan",
+                        "start": 25,
                         "end": 29,
                         "disabled": [],
                         "before": [
@@ -65820,8 +65822,8 @@
                     },
                     {
                         "desc": "#% increased Effect of Notable Passive Skills in Radius",
-                        "regex": "f not",
-                        "start": 21,
+                        "regex": "of not",
+                        "start": 20,
                         "end": 26,
                         "disabled": [],
                         "before": [
@@ -66196,9 +66198,9 @@
                     },
                     {
                         "desc": "Minions deal #% increased Damage",
-                        "regex": "inions d",
-                        "start": 1,
-                        "end": 9,
+                        "regex": "^minions d",
+                        "start": 0,
+                        "end": 10,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -67969,9 +67971,9 @@
                     },
                     {
                         "desc": "+#% to Fire and Cold Resistances",
-                        "regex": "nd col",
-                        "start": 13,
-                        "end": 19,
+                        "regex": "re and c",
+                        "start": 9,
+                        "end": 17,
                         "disabled": [],
                         "before": [
                             0
@@ -68025,8 +68027,8 @@
                     },
                     {
                         "desc": "+#% to Cold and Lightning Resistances",
-                        "regex": "o cold a",
-                        "start": 5,
+                        "regex": "% to cold a",
+                        "start": 2,
                         "end": 13,
                         "disabled": [],
                         "before": [
@@ -68361,9 +68363,9 @@
                     },
                     {
                         "desc": "#% reduced Effect of Chill on you",
-                        "regex": "f ch",
-                        "start": 19,
-                        "end": 23,
+                        "regex": "l on y",
+                        "start": 25,
+                        "end": 31,
                         "disabled": [],
                         "before": [
                             0
@@ -69263,9 +69265,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -70921,9 +70923,9 @@
                     },
                     {
                         "desc": "#% increased Melee Strike Range with this weapon",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -74389,8 +74391,8 @@
                     },
                     {
                         "desc": "Area has patches of Chilled Ground",
-                        "regex": "f ch",
-                        "start": 18,
+                        "regex": "s of ch",
+                        "start": 15,
                         "end": 22,
                         "disabled": [],
                         "before": [],
@@ -76232,9 +76234,9 @@
                     },
                     {
                         "desc": "The Ring takes no Cut",
-                        "regex": "^th",
+                        "regex": "^t",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -76293,9 +76295,9 @@
                     },
                     {
                         "desc": "No Travel Cost",
-                        "regex": "^no",
+                        "regex": "^n",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -83446,16 +83448,17 @@
                     },
                     {
                         "desc": "# to # Physical Thorns damage",
-                        "regex": "cal t",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "^\\d+ t",
+                        "start": 0,
+                        "end": 4,
                         "disabled": [],
-                        "before": [
-                            0,
+                        "before": [],
+                        "on": [
+                            0
+                        ],
+                        "after": [
                             1
                         ],
-                        "on": [],
-                        "after": [],
                         "affixtype": "PREFIX",
                         "stats": [
                             {
@@ -85172,9 +85175,9 @@
                     },
                     {
                         "desc": "#% reduced Duration of Bleeding on You",
-                        "regex": "of b",
-                        "start": 20,
-                        "end": 24,
+                        "regex": "f bl",
+                        "start": 21,
+                        "end": 25,
                         "disabled": [],
                         "before": [
                             0
@@ -90463,8 +90466,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -90745,16 +90748,17 @@
                     },
                     {
                         "desc": "# to # Physical Thorns damage",
-                        "regex": "cal t",
-                        "start": 12,
-                        "end": 17,
+                        "regex": "^\\d+ t",
+                        "start": 0,
+                        "end": 4,
                         "disabled": [],
-                        "before": [
-                            0,
+                        "before": [],
+                        "on": [
+                            0
+                        ],
+                        "after": [
                             1
                         ],
-                        "on": [],
-                        "after": [],
                         "affixtype": "PREFIX",
                         "stats": [
                             {
@@ -90902,8 +90906,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -90958,14 +90962,14 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion|+# to Stun Threshold",
-                        "regex": "d$",
-                        "start": 51,
-                        "end": 53,
+                        "regex": "n$",
+                        "start": 52,
+                        "end": 54,
                         "disabled": [
-                            0
+                            1
                         ],
                         "before": [
-                            1
+                            0
                         ],
                         "on": [],
                         "after": [],
@@ -92171,8 +92175,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -92586,8 +92590,8 @@
                     },
                     {
                         "desc": "Map contains an additional Summoning Circle",
-                        "regex": "l su",
-                        "start": 25,
+                        "regex": "al su",
+                        "start": 24,
                         "end": 29,
                         "disabled": [],
                         "before": [],
@@ -92866,9 +92870,9 @@
                     },
                     {
                         "desc": "Map has #% increased chance to contain a Summoning Circle",
-                        "regex": "a su",
+                        "regex": "a sum",
                         "start": 39,
-                        "end": 43,
+                        "end": 44,
                         "disabled": [],
                         "before": [
                             0
@@ -93314,9 +93318,9 @@
                     },
                     {
                         "desc": "#% increased Effect of Expedition Remnants in Map",
-                        "regex": "on re",
-                        "start": 31,
-                        "end": 36,
+                        "regex": "n rem",
+                        "start": 32,
+                        "end": 37,
                         "disabled": [],
                         "before": [
                             0
@@ -97738,8 +97742,8 @@
                     },
                     {
                         "desc": "Area has patches of Chilled Ground",
-                        "regex": "f ch",
-                        "start": 18,
+                        "regex": "s of ch",
+                        "start": 15,
                         "end": 22,
                         "disabled": [],
                         "before": [],
@@ -99277,9 +99281,9 @@
                     },
                     {
                         "desc": "Buffs on Players expire #% faster",
-                        "regex": "^bu",
+                        "regex": "^b",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -99581,9 +99585,9 @@
                     },
                     {
                         "desc": "The Ring takes no Cut",
-                        "regex": "^th",
+                        "regex": "^t",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -99642,9 +99646,9 @@
                     },
                     {
                         "desc": "No Travel Cost",
-                        "regex": "^no",
+                        "regex": "^n",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -100901,9 +100905,9 @@
                     },
                     {
                         "desc": "The Ring's Cut reduced by #%",
-                        "regex": "^th",
+                        "regex": "^t",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -101117,8 +101121,8 @@
                     },
                     {
                         "desc": "Heist Chests have a #% chance to Duplicate contained Maps",
-                        "regex": "aps$",
-                        "start": 54,
+                        "regex": "ps$",
+                        "start": 55,
                         "end": 58,
                         "disabled": [],
                         "before": [
@@ -102000,9 +102004,9 @@
                     },
                     {
                         "desc": "#% increased Melee Damage",
-                        "regex": "d me",
+                        "regex": "d mel",
                         "start": 11,
-                        "end": 15,
+                        "end": 16,
                         "disabled": [],
                         "before": [
                             0
@@ -102194,9 +102198,9 @@
                     },
                     {
                         "desc": "The Ring's Cut reduced by #%",
-                        "regex": "^th",
+                        "regex": "^t",
                         "start": 0,
-                        "end": 3,
+                        "end": 2,
                         "disabled": [],
                         "before": [],
                         "on": [],
@@ -102446,8 +102450,8 @@
                     },
                     {
                         "desc": "Grants Level # Determination Skill",
-                        "regex": "mina",
-                        "start": 20,
+                        "regex": "rmina",
+                        "start": 19,
                         "end": 24,
                         "disabled": [],
                         "before": [
@@ -104014,9 +104018,9 @@
                     },
                     {
                         "desc": "+# to Perception Level for Heists",
-                        "regex": "o pe",
+                        "regex": "o perc",
                         "start": 4,
-                        "end": 8,
+                        "end": 10,
                         "disabled": [],
                         "before": [
                             0
@@ -104844,8 +104848,8 @@
                     },
                     {
                         "desc": "The Ring's Cut reduced by #%",
-                        "regex": "ng'",
-                        "start": 6,
+                        "regex": "g'",
+                        "start": 7,
                         "end": 9,
                         "disabled": [],
                         "before": [],
@@ -104980,9 +104984,9 @@
                     },
                     {
                         "desc": "#% chance on completing a Heist to generate an additional Reveal with Whakano",
-                        "regex": "vea",
-                        "start": 60,
-                        "end": 63,
+                        "regex": "o$",
+                        "start": 76,
+                        "end": 78,
                         "disabled": [],
                         "before": [
                             0
@@ -105272,9 +105276,9 @@
                     },
                     {
                         "desc": "#% reduced Hiring Fee for Perception Jobs",
-                        "regex": "or p",
-                        "start": 23,
-                        "end": 27,
+                        "regex": "r pe",
+                        "start": 24,
+                        "end": 28,
                         "disabled": [],
                         "before": [
                             0
@@ -108426,8 +108430,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -109226,8 +109230,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -109278,9 +109282,9 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion|+# to Stun Threshold",
-                        "regex": "on$",
+                        "regex": "n$",
                         "start": 52,
-                        "end": 55,
+                        "end": 54,
                         "disabled": [
                             1
                         ],
@@ -111015,8 +111019,8 @@
                     },
                     {
                         "desc": "#% increased Armour and Evasion",
-                        "regex": "on$",
-                        "start": 29,
+                        "regex": "n$",
+                        "start": 30,
                         "end": 32,
                         "disabled": [],
                         "before": [
@@ -111138,8 +111142,8 @@
                     },
                     {
                         "desc": "#% increased Armour",
-                        "regex": "d arm",
-                        "start": 11,
+                        "regex": "sed arm",
+                        "start": 9,
                         "end": 16,
                         "disabled": [],
                         "before": [
@@ -111640,9 +111644,9 @@
                     },
                     {
                         "desc": "# to # Physical Thorns damage",
-                        "regex": "rns",
-                        "start": 19,
-                        "end": 22,
+                        "regex": "ge$",
+                        "start": 27,
+                        "end": 30,
                         "disabled": [],
                         "before": [
                             0,
@@ -111796,8 +111800,8 @@
                     },
                     {
                         "desc": "#% increased Charm Effect Duration",
-                        "regex": "on$",
-                        "start": 32,
+                        "regex": "n$",
+                        "start": 33,
                         "end": 35,
                         "disabled": [],
                         "before": [
@@ -112390,9 +112394,9 @@
                     },
                     {
                         "desc": "#% reduced Charm Charges used",
-                        "regex": "ced ch",
+                        "regex": "ced c",
                         "start": 7,
-                        "end": 13,
+                        "end": 12,
                         "disabled": [],
                         "before": [
                             0
@@ -112472,8 +112476,8 @@
                     },
                     {
                         "desc": "#% increased Armour",
-                        "regex": "d arm",
-                        "start": 11,
+                        "regex": "sed arm",
+                        "start": 9,
                         "end": 16,
                         "disabled": [],
                         "before": [
@@ -117675,14 +117679,15 @@
                     },
                     {
                         "desc": "#% increased Quantity of Items found in this Area|#% increased Rarity of Items found in this Area|Area has patches of Chilled Ground",
-                        "regex": "f ch",
-                        "start": 116,
-                        "end": 120,
+                        "regex": "sed r",
+                        "start": 59,
+                        "end": 64,
                         "disabled": [
-                            0,
+                            0
+                        ],
+                        "before": [
                             1
                         ],
-                        "before": [],
                         "on": [],
                         "after": [],
                         "affixtype": "SUFFIX",
@@ -119578,9 +119583,9 @@
                     },
                     {
                         "desc": "#% increased Quantity of Items found in this Area|#% increased Rarity of Items found in this Area|Buffs on Players expire #% faster",
-                        "regex": "^bu",
+                        "regex": "^b",
                         "start": 131,
-                        "end": 134,
+                        "end": 133,
                         "disabled": [
                             0,
                             1
@@ -119923,9 +119928,9 @@
                     },
                     {
                         "desc": "Area contains # additional Azmeri Spirits",
-                        "regex": "az",
+                        "regex": "azm",
                         "start": 27,
-                        "end": 29,
+                        "end": 30,
                         "disabled": [],
                         "before": [
                             0
@@ -120224,9 +120229,9 @@
                     },
                     {
                         "desc": "Area contains an additional Legion Encounter",
-                        "regex": "l le",
-                        "start": 26,
-                        "end": 30,
+                        "regex": "nal l",
+                        "start": 24,
+                        "end": 29,
                         "disabled": [],
                         "before": [],
                         "on": [],

@@ -1,0 +1,2202 @@
+[
+    {
+        "id": 475,
+        "beast": "Abberarach อันสดใส",
+        "recipe": "สร้างไอเทม - แผนที่ องครักษ์เชปเปอร์, องครักษ์เอลเดอร์ หรือ ผู้พิชิต",
+        "regex": "rar",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 105,
+        "beast": "Acid Slitherer",
+        "recipe": "",
+        "regex": "aci",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 262,
+        "beast": "Adolescent Rhex",
+        "recipe": "",
+        "regex": "ado",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 16,
+        "beast": "Alpine Devil",
+        "recipe": "",
+        "regex": "e d",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 23,
+        "beast": "Alpine Shaman",
+        "recipe": "",
+        "regex": "e sh",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 121,
+        "beast": "Arakaali's Daughter",
+        "recipe": "",
+        "regex": "i'",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 27,
+        "beast": "Arctic Wolf",
+        "recipe": "",
+        "regex": "rct",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 10,
+        "beast": "Armour Cruncher",
+        "recipe": "",
+        "regex": "rmo",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 226,
+        "beast": "Avalanche Rider",
+        "recipe": "",
+        "regex": "ala",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 164,
+        "beast": "Avian Retch",
+        "recipe": "",
+        "regex": "n r",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 172,
+        "beast": "Barb Serpent",
+        "recipe": "",
+        "regex": "arb",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 55,
+        "beast": "Barrow Ape",
+        "recipe": "",
+        "regex": "arro",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 15,
+        "beast": "Bearded Devil",
+        "recipe": "",
+        "regex": "d d",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 21,
+        "beast": "Bearded Shaman",
+        "recipe": "",
+        "regex": "d sh",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 22,
+        "beast": "Bearded Skycaller",
+        "recipe": "",
+        "regex": "ky",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 264,
+        "beast": "Black Scorpion",
+        "recipe": "",
+        "regex": "k sc",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 240,
+        "beast": "Bleached Crawler",
+        "recipe": "",
+        "regex": "eac",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 43,
+        "beast": "Blood Ape",
+        "recipe": "",
+        "regex": "od a",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 49,
+        "beast": "Blood Chieftain",
+        "recipe": "",
+        "regex": "od c",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 3,
+        "beast": "Bone Cruncher",
+        "recipe": "",
+        "regex": "ne c",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 61,
+        "beast": "Bone Rhoa",
+        "recipe": "",
+        "regex": "ne r",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 101,
+        "beast": "Bramble Cobra",
+        "recipe": "",
+        "regex": "le c",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 472,
+        "beast": "Brambleback อันเกรี้ยวกราด",
+        "recipe": "แปรสภาพไอเทม - เพิ่ม ค่าประสบการณ์ 500 ล้าน ให้กับ หินเสริมดีเด่น",
+        "regex": "leb",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 268,
+        "beast": "Brine Vassal",
+        "recipe": "",
+        "regex": " va",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 470,
+        "beast": "Bristle Matron อันเกรี้ยวกราด",
+        "recipe": "เปลี่ยนแปลงม็อดของไอเทม - ใส่ ม็อดคราฟท์เมต้า 1 อย่าง ให้กับ ไอเทมที่ไม่ใช่ยูนิค",
+        "regex": "stl",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 136,
+        "beast": "Brooding Tarantula",
+        "recipe": "",
+        "regex": "bro",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 54,
+        "beast": "Carnage Ape",
+        "recipe": "",
+        "regex": "e ap",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 50,
+        "beast": "Carnage Chieftain",
+        "recipe": "",
+        "regex": "e ch",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 161,
+        "beast": "Carrion Burrower",
+        "recipe": "",
+        "regex": "n b",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 157,
+        "beast": "Carrion Queen",
+        "recipe": "",
+        "regex": " q",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 159,
+        "beast": "Carrion Swarmer",
+        "recipe": "",
+        "regex": " sw",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 0,
+        "beast": "Cave Beast",
+        "recipe": "",
+        "regex": "ve b",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 132,
+        "beast": "Cave Skitterer",
+        "recipe": "",
+        "regex": "ve s",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 187,
+        "beast": "Cavern Drifter",
+        "recipe": "",
+        "regex": "rn ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 151,
+        "beast": "Chimeric Croaker",
+        "recipe": "",
+        "regex": "^chi",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 150,
+        "beast": "Chrome-infused Chimeral",
+        "recipe": "",
+        "regex": "sed ch",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 155,
+        "beast": "Chrome-infused Croaker",
+        "recipe": "",
+        "regex": "sed cr",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 177,
+        "beast": "Chrome-infused Goliath",
+        "recipe": "",
+        "regex": "sed g",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 149,
+        "beast": "Chrome-touched Chimeral",
+        "recipe": "",
+        "regex": "hed ch",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 154,
+        "beast": "Chrome-touched Croaker",
+        "recipe": "",
+        "regex": "hed cro",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 176,
+        "beast": "Chrome-touched Goliath",
+        "recipe": "",
+        "regex": "hed g",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 26,
+        "beast": "Colossus Crusher",
+        "recipe": "",
+        "regex": "olo",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 127,
+        "beast": "Corrupted Arach",
+        "recipe": "",
+        "regex": "pted a",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 8,
+        "beast": "Corrupted Beast",
+        "recipe": "",
+        "regex": "pted b",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 62,
+        "beast": "Corrupted Rhoa",
+        "recipe": "",
+        "regex": "pted r",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 131,
+        "beast": "Corrupted Spitter",
+        "recipe": "",
+        "regex": "pted s",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 477,
+        "beast": "Crushclaw อันเก่าแก่",
+        "recipe": "สร้างไอเทม - สคารับล้ำค่า",
+        "regex": "hc",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 71,
+        "beast": "Crustacean Sniper",
+        "recipe": "",
+        "regex": " sn",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 130,
+        "beast": "Crypt Ambusher",
+        "recipe": "",
+        "regex": " am",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 128,
+        "beast": "Crypt Weaver",
+        "recipe": "",
+        "regex": "t w",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 107,
+        "beast": "Cursed Spawn",
+        "recipe": "",
+        "regex": "urse",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 478,
+        "beast": "Cystcaller อันเก่าแก่",
+        "recipe": "สร้างไอเทม - แผนที่ฝันร้าย",
+        "regex": "^cy",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 180,
+        "beast": "Devourer",
+        "recipe": "",
+        "regex": "^dev",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 212,
+        "beast": "Dirt Scrabbler",
+        "recipe": "",
+        "regex": "^di",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 44,
+        "beast": "Dread Primate",
+        "recipe": "",
+        "regex": "^dr",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 33,
+        "beast": "Dune Hellion",
+        "recipe": "",
+        "regex": "dun",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 210,
+        "beast": "Dust Scrabbler",
+        "recipe": "",
+        "regex": "dus",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 140,
+        "beast": "Enraptured Arachnid",
+        "recipe": "",
+        "regex": "red a",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 1,
+        "beast": "Enraptured Beast",
+        "recipe": "",
+        "regex": "red b",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 232,
+        "beast": "Enraptured Crab",
+        "recipe": "",
+        "regex": "red c",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 37,
+        "beast": "Enslaved Hellion",
+        "recipe": "",
+        "regex": "ens",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 263,
+        "beast": "Escaped Rhex",
+        "recipe": "",
+        "regex": "cap",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 148,
+        "beast": "Feral Chimeral",
+        "recipe": "",
+        "regex": "al c",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 224,
+        "beast": "Feral Fowl",
+        "recipe": "",
+        "regex": "l f",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 142,
+        "beast": "Fetid Maw",
+        "recipe": "",
+        "regex": "fet",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 225,
+        "beast": "Fighting Bull",
+        "recipe": "",
+        "regex": "hti",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 143,
+        "beast": "Filth Maw",
+        "recipe": "",
+        "regex": "fil",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 32,
+        "beast": "Flame Hellion",
+        "recipe": "",
+        "regex": "me ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 11,
+        "beast": "Forest Beast",
+        "recipe": "",
+        "regex": "^fo",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 29,
+        "beast": "Freezing Wolf",
+        "recipe": "",
+        "regex": "g wo",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 217,
+        "beast": "Fury Hound",
+        "recipe": "",
+        "regex": "^fu",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 106,
+        "beast": "Glade Mamba",
+        "recipe": "",
+        "regex": "gla",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 166,
+        "beast": "Gluttonous Gull",
+        "recipe": "",
+        "regex": "glu",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 12,
+        "beast": "Goatman",
+        "recipe": "",
+        "regex": "tman$",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 20,
+        "beast": "Goatman Fire-raiser",
+        "recipe": "",
+        "regex": "n f",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 19,
+        "beast": "Goatman Shaman",
+        "recipe": "",
+        "regex": "n sh",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 14,
+        "beast": "Goatman Stomper",
+        "recipe": "",
+        "regex": "tom",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 69,
+        "beast": "Granite Eater",
+        "recipe": "",
+        "regex": "gran",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 67,
+        "beast": "Gravel Eater",
+        "recipe": "",
+        "regex": "vel",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 227,
+        "beast": "Grazing Taurus",
+        "recipe": "",
+        "regex": "az",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 4,
+        "beast": "Hairy Bonecruncher",
+        "recipe": "",
+        "regex": "air",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 134,
+        "beast": "Hatchling",
+        "recipe": "",
+        "regex": "hl",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 471,
+        "beast": "Hellion Alpha อันเกรี้ยวกราด",
+        "recipe": "เปลี่ยนแปลงม็อดของไอเทม - สุ่ม ม็อด 1 อย่างของ Watcher's Eye",
+        "regex": "ha ",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 25,
+        "beast": "Hill Devil",
+        "recipe": "",
+        "regex": "^hi",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 99,
+        "beast": "Host Adder",
+        "recipe": "",
+        "regex": "st a",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 52,
+        "beast": "Host Chieftain",
+        "recipe": "",
+        "regex": "t ch",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 103,
+        "beast": "Host Cobra",
+        "recipe": "",
+        "regex": "st co",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 256,
+        "beast": "Hybrid Arachnid",
+        "recipe": "",
+        "regex": "yb",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 47,
+        "beast": "Infested Ape",
+        "recipe": "",
+        "regex": "ed ap",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 231,
+        "beast": "Infested Crab",
+        "recipe": "",
+        "regex": "ted crab",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 233,
+        "beast": "Infested Crawler",
+        "recipe": "",
+        "regex": "ted craw",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 144,
+        "beast": "Infested Maw",
+        "recipe": "",
+        "regex": "ed m",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 65,
+        "beast": "Infested Rhoa",
+        "recipe": "",
+        "regex": "sted r",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 171,
+        "beast": "Infested Serpent",
+        "recipe": "",
+        "regex": "ed se",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 213,
+        "beast": "Infested Skitterer",
+        "recipe": "",
+        "regex": "ted sk",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 193,
+        "beast": "Infested Tunnelfiend",
+        "recipe": "",
+        "regex": " tu",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 199,
+        "beast": "Infested Ursa",
+        "recipe": "",
+        "regex": "d u",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 209,
+        "beast": "Infested Vulture",
+        "recipe": "",
+        "regex": "d v",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 396,
+        "beast": "Ink Spinner",
+        "recipe": "",
+        "regex": "ink",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 119,
+        "beast": "Leaping Spider",
+        "recipe": "",
+        "regex": "^le",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 214,
+        "beast": "Lowlands Hopper",
+        "recipe": "",
+        "regex": "wla",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 115,
+        "beast": "Lurking Venom",
+        "recipe": "",
+        "regex": "^lur",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 261,
+        "beast": "Maternal Rhex",
+        "recipe": "",
+        "regex": "nal",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 84,
+        "beast": "Merveil's Attendant",
+        "recipe": "",
+        "regex": "ten",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 88,
+        "beast": "Merveil's Blessed",
+        "recipe": "",
+        "regex": "s b",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 85,
+        "beast": "Merveil's Chosen",
+        "recipe": "",
+        "regex": "ose",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 83,
+        "beast": "Merveil's Daughter",
+        "recipe": "",
+        "regex": "l's d",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 81,
+        "beast": "Merveil's Favoured",
+        "recipe": "",
+        "regex": "s f",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 86,
+        "beast": "Merveil's Retainer",
+        "recipe": "",
+        "regex": "s r",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 205,
+        "beast": "Mindless Scavenger",
+        "recipe": "",
+        "regex": "^min",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 35,
+        "beast": "Mountain Hellion",
+        "recipe": "",
+        "regex": "n hellion$",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 36,
+        "beast": "Mountain Hellion Alpha",
+        "recipe": "",
+        "regex": "ha$",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 270,
+        "beast": "Mountain Lynx",
+        "recipe": "",
+        "regex": "yn",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 60,
+        "beast": "Murk Runner",
+        "recipe": "",
+        "regex": "mur",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 129,
+        "beast": "Mutant Arach",
+        "recipe": "",
+        "regex": "uta",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 98,
+        "beast": "Night Adder",
+        "recipe": "",
+        "regex": "^ni",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 117,
+        "beast": "Noxious Tarantula",
+        "recipe": "",
+        "regex": "nox",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 76,
+        "beast": "Obsidian Eater",
+        "recipe": "",
+        "regex": "bs",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 243,
+        "beast": "Parasite",
+        "recipe": "",
+        "regex": "^pa",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 219,
+        "beast": "Pitbull Demon",
+        "recipe": "",
+        "regex": "tb",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 252,
+        "beast": "Plagued Arachnid",
+        "recipe": "",
+        "regex": "lag",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 247,
+        "beast": "Plated Parasite",
+        "recipe": "",
+        "regex": "ed p",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 146,
+        "beast": "Plumed Chimeral",
+        "recipe": "",
+        "regex": "ume",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 189,
+        "beast": "Plummeting Ursa",
+        "recipe": "",
+        "regex": "umm",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 174,
+        "beast": "Porcupine Goliath",
+        "recipe": "",
+        "regex": "^po",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 267,
+        "beast": "Predatory Scorpion",
+        "recipe": "",
+        "regex": "eda",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 250,
+        "beast": "Purge Hound",
+        "recipe": "",
+        "regex": "^pu",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 244,
+        "beast": "Ravenous Parasite",
+        "recipe": "",
+        "regex": "^rav",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 476,
+        "beast": "Rhex Matriarch อันเก่าแก่",
+        "recipe": "สร้างไอเทม - แผนที่ยูนิคสังเคราะห์",
+        "regex": "x ",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 56,
+        "beast": "Rhoa Mare",
+        "recipe": "",
+        "regex": "oa ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 70,
+        "beast": "Rock Spitter",
+        "recipe": "",
+        "regex": "roc",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 221,
+        "beast": "Rooster Fiend",
+        "recipe": "",
+        "regex": "oos",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 207,
+        "beast": "Rotting Vulture",
+        "recipe": "",
+        "regex": "ott",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 34,
+        "beast": "Ruins Hellion",
+        "recipe": "",
+        "regex": "^ru",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 216,
+        "beast": "Sand Leaper",
+        "recipe": "",
+        "regex": "d l",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 266,
+        "beast": "Sand Scorpion",
+        "recipe": "",
+        "regex": "d sc",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 173,
+        "beast": "Sand Serpent",
+        "recipe": "",
+        "regex": "nd se",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 215,
+        "beast": "Sand Skitterer",
+        "recipe": "",
+        "regex": "nd sk",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 230,
+        "beast": "Savage Crab",
+        "recipe": "",
+        "regex": "vage ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 257,
+        "beast": "Scalding Arachnid",
+        "recipe": "",
+        "regex": "g a",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 206,
+        "beast": "Scavenging Vulture",
+        "recipe": "",
+        "regex": "engi",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 162,
+        "beast": "Scum Crawler",
+        "recipe": "",
+        "regex": "scu",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 168,
+        "beast": "Sewage Crawler",
+        "recipe": "",
+        "regex": "ewa",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 188,
+        "beast": "Sewer Drifter",
+        "recipe": "",
+        "regex": "r d",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 39,
+        "beast": "Shackled Hellion",
+        "recipe": "",
+        "regex": "kl",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 5,
+        "beast": "Shaggy Monstrosity",
+        "recipe": "",
+        "regex": "gg",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 87,
+        "beast": "Singing Siren",
+        "recipe": "",
+        "regex": "^sin",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 7,
+        "beast": "Skeletal Beast",
+        "recipe": "",
+        "regex": "^sk",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 113,
+        "beast": "Slimy Nemesis",
+        "recipe": "",
+        "regex": "my",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 28,
+        "beast": "Snow Wolf",
+        "recipe": "",
+        "regex": "^sn",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 185,
+        "beast": "Soulless Watcher",
+        "recipe": "",
+        "regex": "s w",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 133,
+        "beast": "Spindle Spider",
+        "recipe": "",
+        "regex": "pind",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 170,
+        "beast": "Spine Serpent",
+        "recipe": "",
+        "regex": "e se",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 248,
+        "beast": "Spitting Parasite",
+        "recipe": "",
+        "regex": "g p",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 46,
+        "beast": "Stygian Ape",
+        "recipe": "",
+        "regex": "yg",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 265,
+        "beast": "Sulphuric Scorpion",
+        "recipe": "",
+        "regex": "^su",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 269,
+        "beast": "Swarthy Mollusc",
+        "recipe": "",
+        "regex": "rth",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 223,
+        "beast": "Talon Archer",
+        "recipe": "",
+        "regex": "^tal",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 59,
+        "beast": "Tarcel Rhoa",
+        "recipe": "",
+        "regex": "rce",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 6,
+        "beast": "Thicket Hulk",
+        "recipe": "",
+        "regex": "hic",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 169,
+        "beast": "Toxic Crawler",
+        "recipe": "",
+        "regex": "xic ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 191,
+        "beast": "Tunnelfiend",
+        "recipe": "",
+        "regex": "^tun",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 116,
+        "beast": "Vaal Recluse",
+        "recipe": "",
+        "regex": "vaa",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 153,
+        "beast": "Vaulting Croaker",
+        "recipe": "",
+        "regex": "vau",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 114,
+        "beast": "Venomous Spawn",
+        "recipe": "",
+        "regex": "us s",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 220,
+        "beast": "Vicious Hound",
+        "recipe": "",
+        "regex": "us h",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 249,
+        "beast": "Vicious Parasite",
+        "recipe": "",
+        "regex": "ious p",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 125,
+        "beast": "Virulent Spider",
+        "recipe": "",
+        "regex": "vir",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 474,
+        "beast": "Vulture อันสดใส",
+        "recipe": "แปรสภาพไอเทม - สุ่ม ม็อดแฝงสังเคราะห์ 1 อย่าง ของ ไอเทมยูนิค",
+        "regex": "^vu",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 218,
+        "beast": "War Hound",
+        "recipe": "",
+        "regex": "r h",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 258,
+        "beast": "Waste Lurcher",
+        "recipe": "",
+        "regex": "was",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 473,
+        "beast": "Watcher อันสดใส",
+        "recipe": "สังเวยหินเสริมดีเด่น - แลกกับ หินเสริม ที่มีเลเวลสูงและค่าคุณภาพสูง 3 เม็ด",
+        "regex": "^wat",
+        "harvest": true,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 124,
+        "beast": "Webbed Spider",
+        "recipe": "",
+        "regex": "web",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 260,
+        "beast": "Wild Rhex",
+        "recipe": "",
+        "regex": "^wi",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 197,
+        "beast": "Woods Ursa",
+        "recipe": "",
+        "regex": "ods",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 299,
+        "beast": "ข้ารับใช้ วงศ์เครเชียนน์",
+        "recipe": "ใส่มลทินให้กับแผนที่ - ให้มี ม็อดแฝง 1 อย่าง; ใส่มลทินให้กับแผนที่ - สองครั้ง",
+        "regex": "^ข",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 94,
+        "beast": "ครัสเตเชียนเบื้องลึก",
+        "recipe": "",
+        "regex": "เต",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 290,
+        "beast": "งูพิษโลหิต วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทมยูนิค - ดาบหรือขวาน; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมเอลเดอร์",
+        "regex": "ูพ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 289,
+        "beast": "งูเห่า วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทมยูนิค - กระบองหรือคทา; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ แผนที่แรร์",
+        "regex": "งูเ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    },
+    {
+        "id": 274,
+        "beast": "จ่าฝูงหมานรกน้ำแข็ง วงศ์ฟาร์รุล",
+        "recipe": "ใส่ความแตกร้าวให้กับม็อด 1 อย่าง - ของสร้อยเครื่องรางแรร์ ที่มีม็อดอย่างน้อย 4 อย่าง; สร้างไอเทมเงินตรา - Orb of Unmaking 3 ชิ้น",
+        "regex": "รกน",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 273,
+        "beast": "จ่าฝูงหมานรกเพลิง วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - แหวน",
+        "regex": "รกเ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 279,
+        "beast": "จ่าฝูงหมาป่า วงศ์ฟาร์รุล",
+        "recipe": "เปลี่ยนแปลงม็อดของไอเทม - ใส่ ม็อดพรีฟิกซ์ 1 อย่าง แต่สุ่มลบ ม็อดซัฟฟิกซ์ 1 อย่าง",
+        "regex": "มาป",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 272,
+        "beast": "จ่าฝูงเสือ วงศ์ฟาร์รุล",
+        "recipe": "เปิดวาร์ป - ไปยัง ถ้ำสัตว์ของฟาร์รุล",
+        "regex": "ูงเ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 275,
+        "beast": "จ่าฝูงแมวป่า วงศ์ฟาร์รุล",
+        "recipe": "เปลี่ยนแปลงม็อดของไอเทม - ใส่ ม็อดซัฟฟิกซ์ 1 อย่าง แต่สุ่มลบ ม็อดพรีฟิกซ์ 1 อย่าง",
+        "regex": "มวป",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 309,
+        "beast": "ซาคาวอล ผู้บุกเบิกนภา",
+        "recipe": "คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณนก (Aspect of the Avian); คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณนก (Aspect of the Avian) เลเวล 30",
+        "regex": "^ซ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 294,
+        "beast": "ตัวกลืนกิน วงศ์เฟนูมัส",
+        "recipe": "สร้างไอเทมยูนิค - โล่หรือซองธนู; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมเชปเปอร์",
+        "regex": "ัวก",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 293,
+        "beast": "ตัวตะกุย วงศ์เฟนูมัส",
+        "recipe": "สร้างไอเทมยูนิค - ไม้กายสิทธิ์; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตศึก",
+        "regex": "วต",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 302,
+        "beast": "ตัวพ่นทราย วงศ์เครเชียนน์",
+        "recipe": "สร้างไอเทมเงินตรา - Orb of Fusing; สร้างไอเทมเงินตรา - Orb of Binding 2 ชิ้น; เปลี่ยนแปลงไอเทม - ให้มี จำนวนเชื่อม สูงสุดเท่าที่จะเป็นไปได้",
+        "regex": "วพ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 282,
+        "beast": "ตัวมหึมา วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - หมวก; สร้างไอเทมเงินตรา - Orb of Unmaking 3 ชิ้น",
+        "regex": "หึ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 286,
+        "beast": "ตัวสำรอก วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทมยูนิค - รองเท้า",
+        "regex": "วส",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 301,
+        "beast": "ตัวเฝ้ามอง วงศ์เครเชียนน์",
+        "recipe": "สร้างไอเทมยูนิค - กรงเล็บหรือมีด; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตเหยื่อ",
+        "regex": "เฝ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 287,
+        "beast": "นกแร้ง วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทม - แรร์ 6 รู 6 เชื่อม",
+        "regex": "^นก",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 292,
+        "beast": "นางพญา วงศ์เฟนูมัส",
+        "recipe": "สร้างไอเทมยูนิค - ไม้พลอง; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตบาป",
+        "regex": "พญ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Insect"
+    },
+    {
+        "id": 300,
+        "beast": "ปลาหมึก วงศ์เครเชียนน์",
+        "recipe": "แปรสภาพไอเทม - สุ่มเบสไอเทมของ สร้อยเครื่องราง",
+        "regex": "มึ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Cephalopod"
+    },
+    {
+        "id": 306,
+        "beast": "ปากสัตว์ วงศ์เครเชียนน์",
+        "recipe": "เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมเชปเปอร์; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมเอลเดอร์; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตบาป; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตเหยื่อ; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตอธรรม; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตศึก",
+        "regex": "ปา",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 304,
+        "beast": "ปูเหี้ยม วงศ์เครเชียนน์",
+        "recipe": "สร้างไอเทมยูนิค - ไอเทม; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ แผนที่แรร์",
+        "regex": "หี",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 305,
+        "beast": "ปูแมงมุม วงศ์เครเชียนน์",
+        "recipe": "เปิดวาร์ป - ไปยัง ถ้ำริมน้ำของเครเชียนน์",
+        "regex": "ปูแ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 303,
+        "beast": "ปูโล่ วงศ์เครเชียนน์",
+        "recipe": "สร้างไอเทมเงินตรา - Jeweller's Orb 4 ชิ้น; สร้างไอเทมเงินตรา - Orb of Binding 2 ชิ้น; เปลี่ยนแปลงไอเทม - ให้มี จำนวนรู สูงสุดเท่าที่จะเป็นไปได้",
+        "regex": "ูโ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 308,
+        "beast": "ฟาร์รุล ผู้บุกเบิกที่ราบ",
+        "recipe": "คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมว (Aspect of the Cat); คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมว (Aspect of the Cat) เลเวล 30",
+        "regex": "^ฟ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Feline"
+    },
+    {
+        "id": 278,
+        "beast": "มนุษย์แพะ วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - ขวดยา",
+        "regex": "ะ ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 479,
+        "beast": "มอร์ริแกนมืดดำ",
+        "recipe": "คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมว (Aspect of the Cat) เลเวล 30; คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณนก (Aspect of the Avian) เลเวล 30; คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมงมุม (Aspect of the Spider) เลเวล 30; คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณปู (Aspect of the Crab) เลเวล 30; ใส่ปอยผมของฮิเนโครา - ให้เป็นไอเทมเมจิก; ใส่ความแตกร้าวให้กับม็อด 2 อย่าง - ของสร้อยเครื่องรางแรร์ ที่มีม็อดอย่างน้อย 6 อย่าง; เปลี่ยนแปลงไอเทม - ให้มี จำนวนเชื่อม สูงสุดเท่าที่จะเป็นไปได้; เปลี่ยนแปลงไอเทม - ให้มี จำนวนรู สูงสุดเท่าที่จะเป็นไปได้; สร้างไอเทมยูนิค - สร้อยเครื่องราง",
+        "regex": "ดำ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 285,
+        "beast": "ยักษ์ วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - ธนู; เปลี่ยนแปลงม็อดของไอเทม - เพิ่มม็อด 1 อย่าง ให้กับ ไอเทมผู้พิชิตอธรรม",
+        "regex": "^ย",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 259,
+        "beast": "ลูกหลานซัลเฟอร์",
+        "recipe": "",
+        "regex": "นซ",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 284,
+        "beast": "วัว วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - แผนที่",
+        "regex": "^วั",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Unnatural"
+    },
+    {
+        "id": 277,
+        "beast": "วานร วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - เข็มขัด",
+        "regex": "^วาน",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 51,
+        "beast": "สไตเจียน ซิลเวอร์แบ็ค",
+        "recipe": "",
+        "regex": "ไต",
+        "harvest": false,
+        "red": false,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 281,
+        "beast": "หมาหลุม วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทม - หินที่มีมลทินเลเวล 21",
+        "regex": "าหล",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 280,
+        "beast": "หมาหินหลอม วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทม - หินที่มีมลทินและมีค่าคุณภาพ 23%",
+        "regex": "าหิ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Canine"
+    },
+    {
+        "id": 283,
+        "beast": "หมี วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - เสื้อเกราะ",
+        "regex": "หมี",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Ursa"
+    },
+    {
+        "id": 276,
+        "beast": "หัวหน้าเผ่าวานร วงศ์ฟาร์รุล",
+        "recipe": "สร้างไอเทมยูนิค - สร้อย",
+        "regex": "วห",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ป่า",
+        "group": "Primate"
+    },
+    {
+        "id": 307,
+        "beast": "เขียดยักษ์ วงศ์เครเชียนน์",
+        "recipe": "สร้างอิมพรินท์ - ของไอเทมเมจิก; ใส่ปอยผมของฮิเนโครา - ให้เป็นไอเทมเมจิก",
+        "regex": "ขี",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Amphibian"
+    },
+    {
+        "id": 311,
+        "beast": "เครเชียนน์ ผู้บุกเบิกเบื้องลึก",
+        "recipe": "คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณปู (Aspect of the Crab); คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณปู (Aspect of the Crab) เลเวล 30",
+        "regex": "^เค",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทะเลลึก",
+        "group": "Crustacean"
+    },
+    {
+        "id": 310,
+        "beast": "เฟนูมัส ผู้บุกเบิกราตรี",
+        "recipe": "คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมงมุม (Aspect of the Spider); คราฟท์สกิล จิตวิญญาณ ใส่ไอเทม - สกิล จิตวิญญาณแมงมุม (Aspect of the Spider) เลเวล 30",
+        "regex": "ส ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 288,
+        "beast": "เร็กซ์ วงศ์ซาคาวอล",
+        "recipe": "เปิดวาร์ป - ไปยัง คอนของซาคาวาล",
+        "regex": "ร็",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 298,
+        "beast": "แมงป่อง วงศ์เฟนูมัส",
+        "recipe": "แปลงไอเทมยูนิคชิ้นนี้ - เป็นไอเทมยูนิคแบบสุ่ม; ใส่มลทินให้กับแผนที่ - สองครั้ง",
+        "regex": "มงป",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 296,
+        "beast": "แมงมุมพันธุ์ผสม วงศ์เฟนูมัส",
+        "recipe": "เปิดวาร์ป - ไปยัง ถ้ำมืดของเฟนูมัส",
+        "regex": "ผส",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 295,
+        "beast": "แมงมุมอาบโรค วงศ์เฟนูมัส",
+        "recipe": "สร้างอิมพรินท์ - ของสร้อยเครื่องรางแรร์; ใส่ความแตกร้าวให้กับม็อด 2 อย่าง - ของสร้อยเครื่องรางแรร์ ที่มีม็อดอย่างน้อย 6 อย่าง",
+        "regex": "บโ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 297,
+        "beast": "แม่ม่าย วงศ์เฟนูมัส",
+        "recipe": "สร้างไอเทมยูนิค - ถุงมือ",
+        "regex": "แม่",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ถ้ำ",
+        "group": "Arachnid"
+    },
+    {
+        "id": 271,
+        "beast": "โรอ์ วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทมแรร์ - หมวก 4 เชื่อม",
+        "regex": "อ์",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Avian"
+    },
+    {
+        "id": 291,
+        "beast": "ไคมีรัล วงศ์ซาคาวอล",
+        "recipe": "สร้างไอเทมเงินตรา - เงินตราแบบสุ่ม 10 ชิ้น",
+        "regex": "^ไ",
+        "harvest": false,
+        "red": true,
+        "family": "สัตว์ทราย",
+        "group": "Reptile"
+    }
+]

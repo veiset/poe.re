@@ -3541,7 +3541,7 @@
             "regex": "\"ot g\"",
             "items": [
                 {
-                    "id": "4775",
+                    "id": "2252",
                     "name": "Volkuur's Guidance",
                     "baseType": "Zealot Gloves",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvUGFsZUNvdW5jaWxHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/3271f5441a/PaleCouncilGloves.png",
@@ -4435,7 +4435,7 @@
                     "links": null
                 },
                 {
-                    "id": "1373",
+                    "id": "103407",
                     "name": "Storm Prison",
                     "baseType": "Spiraled Wand",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9TdG9ybVByaXNvbiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/0fc4811c94/StormPrison.png",
@@ -6513,7 +6513,7 @@
                     "links": null
                 },
                 {
-                    "id": "666",
+                    "id": "669",
                     "name": "Infernal Mantle",
                     "baseType": "Widowsilk Robe",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9JbmZlcm5hbG1hbnRsZSIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/ea1b86d7f9/Infernalmantle.png",
@@ -7706,7 +7706,7 @@
                     "id": "167518",
                     "name": "Dread Captain's Cutlass",
                     "baseType": "Ghostflame Blade",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0NhcHRhaW5zQ3V0bGFzc1ZhcmlhbnQwMyIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/6303c819c1/CaptainsCutlassVariant03.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0NhcHRhaW5zQ3V0bGFzc1ZhcmlhbnQwNiIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/afa2a85fa3/CaptainsCutlassVariant06.png",
                     "detailsId": null,
                     "links": null
                 }

@@ -148,7 +148,7 @@
     },
     "Beyond Scarab": {
         "name": "Beyond Scarab",
-        "regex": "wal",
+        "regex": "ndl",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
         "flavourText": "The silent wall and the raging storm oppose the endless swarm.",
         "description": "Slaying enemies close together in Area can attract monsters from Beyond this realm"
@@ -218,7 +218,7 @@
     },
     "Breach Scarab of the Hive": {
         "name": "Breach Scarab of the Hive",
-        "regex": "ngd",
+        "regex": "gd",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/769139d13b/LesserScarabBreach.png",
         "flavourText": "Their kingdoms always seek expansion.",
         "description": "Area contains a Breach Hive"
@@ -274,7 +274,7 @@
     },
     "Delirium Scarab of Delusions": {
         "name": "Delirium Scarab of Delusions",
-        "regex": "alk",
+        "regex": "lki",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
         "flavourText": "What are you talking about?|The Atlas was always like this.",
         "description": "Maps found in Area have layers of Delirium"
@@ -435,7 +435,7 @@
     },
     "Harvest Scarab of Doubling": {
         "name": "Harvest Scarab of Doubling",
-        "regex": "brin",
+        "regex": "ubli",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
         "flavourText": "A good season brings bounty.",
         "description": "Lifeforce dropped by Harvest Monsters in Area is duplicated|Harvest Monsters in Area have 100% more Life"
@@ -505,7 +505,7 @@
     },
     "Incursion Scarab of Invasion": {
         "name": "Incursion Scarab of Invasion",
-        "regex": "eit",
+        "regex": "ned,",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/a38b517f35/NormalScarabIncursion.png",
         "flavourText": "A gate, once opened, may swing in either direction.",
         "description": "Area contains 12 to 16 additional packs of Incursion Monsters"
@@ -561,7 +561,7 @@
     },
     "Kalguuran Scarab of Guarded Riches": {
         "name": "Kalguuran Scarab of Guarded Riches",
-        "regex": "ggi",
+        "regex": "g'",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
         "flavourText": "Digging's the easy part. ",
         "description": "Monsters guarding Ore Deposits in Area are at least Magic"
@@ -638,14 +638,14 @@
     },
     "Scarab of Divinity": {
         "name": "Scarab of Divinity",
-        "regex": "fait",
+        "regex": "vini",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
         "flavourText": "Faith transforms.",
         "description": "Up to 3 additional Rare Monsters in Area will be Pantheon-Touched|Apparitions spawned by Pantheon-Touched Monsters deal 100% increased damage"
     },
     "Scarab of Monstrous Lineage": {
         "name": "Scarab of Monstrous Lineage",
-        "regex": "olve",
+        "regex": "ulle",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/9196715e8d/LesserScarabMisc.png",
         "flavourText": "The bloodlines evolve faster than they can be culled.",
         "description": "40% increased Magic Pack Size"
@@ -694,14 +694,14 @@
     },
     "Sulphite Scarab of Fumes": {
         "name": "Sulphite Scarab of Fumes",
-        "regex": "land",
+        "regex": "sick",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
         "flavourText": "When the land itself is sick, even the very ground rots and spills forth.",
         "description": "Sulphite found in Map Area releases Enraging Fumes|Monsters affected by Enraging Fumes have 50% increased Item Quantity|Sulphite in your maps is guarded by Monsters from the Azurite Mine"
     },
     "Titanic Scarab": {
         "name": "Titanic Scarab",
-        "regex": "nam",
+        "regex": "a na",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/9ed658ddba/LesserScarabUnique.png",
         "flavourText": "What power lies in a name?",
         "description": "Unique Monsters have 1% increased Toughness, Damage, Rarity and Quantity of items dropped per 1% increased Pack Size of Area"

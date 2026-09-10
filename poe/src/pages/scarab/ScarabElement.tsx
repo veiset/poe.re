@@ -19,8 +19,8 @@ const ScarabElement = (props: ScarabElementProps) => {
       className={isSelected ? "scarab-element scarab-element-selected" : "scarab-element"}
       onClick={() => {
         isSelected
-          ? setSelected(selected.filter(e => e !== scarab.name))
-          : setSelected(selected.concat(scarab.name));
+          ? setSelected(selected.filter((icon) => icon !== scarab.icon))
+          : setSelected(selected.concat(scarab.icon));
       }}
     >
       <span className="scarab-item-tooltip">

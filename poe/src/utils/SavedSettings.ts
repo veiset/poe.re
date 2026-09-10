@@ -131,11 +131,12 @@ export interface SavedSettings {
 }
 
 export interface BeastSettings {
+  beastOffset: number;
   includeHarvest: boolean;
   minChaosValue: string;
   maxChaosValue: string;
-  menagerieLimit: boolean;
-  redBeastsOnly: boolean;
+  showRedBeasts: boolean;
+  showYellowBeasts: boolean;
 }
 
 export interface HeistSettings {
@@ -373,11 +374,12 @@ export const defaultSettings: SavedSettings = {
   version: 2,
   favorites: [],
   beast: {
+    beastOffset: 0,
     includeHarvest: true,
     minChaosValue: "",
     maxChaosValue: "",
-    menagerieLimit: true,
-    redBeastsOnly: true,
+    showRedBeasts: true,
+    showYellowBeasts: false,
   },
   heist: {
     targetValue: 0,

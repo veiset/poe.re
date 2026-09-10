@@ -66,6 +66,41 @@
     background-color: var(--color-border-soft);
     margin: 8px 0;
 }
+
+.beast-price-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.beast-price-controls .price-range-slider {
+    flex: 0 1 520px;
+}
+
+.beast-next-button {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    border: 1px solid var(--color-accent);
+    border-radius: 3px;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.beast-next-button:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+.beast-next-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
 .hidden-beast {
     color: #1b1e22;
 }
