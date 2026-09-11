@@ -26,5 +26,5 @@ export const FAVORITE_PAGE_REGISTRY: Record<Poe1FavoritePageKey, FavoritePageDef
   runegraft: {key: "runegraft", label: "Runegraft", route: "/runegraft", icon: runegraftIcon, languageDependent: false},
   scarab: {key: "scarab", label: "Scarab", route: "/scarab", icon: scarabIcon, languageDependent: false},
   jewel: {key: "jewel", label: "Jewel", route: "/jewel", icon: jewelIcon, languageDependent: false},
-  gems: {key: "gems", label: "Gems", route: "/gems", icon: gemIcon, languageDependent: true},
+  gems: {key: "gems", label: "Gems", route: "/gems", icon: gemIcon, languageDependent: false},
 };
