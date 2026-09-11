@@ -10,9 +10,10 @@
     color: #d5d5d5;
 }
 .beast-name-cell {
-    width: 22%;
+    width: 18%;
 }
-.beast-regex-cell {
+.beast-group-cell,
+.beast-family-cell {
     width: 8%;
 }
 .beast-value-cell {
@@ -66,6 +67,59 @@
     background-color: var(--color-border-soft);
     margin: 8px 0;
 }
+
+.beast-price-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.beast-price-controls .price-range-slider {
+    flex: 0 1 520px;
+}
+
+.beast-attribute-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.beast-attribute-filters label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.beast-attribute-filters select {
+    min-width: 150px;
+}
+
+.beast-next-button {
+    flex-shrink: 0;
+    padding: 7px 12px;
+    border: 1px solid var(--color-accent);
+    border-radius: 3px;
+    background: var(--color-accent);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.beast-next-button:hover:not(:disabled) {
+    background: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+.beast-next-button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+}
+
 .hidden-beast {
     color: #1b1e22;
 }

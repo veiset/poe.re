@@ -1,0 +1,807 @@
+{
+    "Escaravelho Atormentado": {
+        "name": "Escaravelho Atormentado",
+        "regex": "crime",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/8c43bf8c64/LesserScarabTorment.png",
+        "flavourText": "Os crimes deles em vida assombram você na morte.",
+        "description": "Área assombrada por 4 Espíritos Atormentados adicionais|Espíritos Atormentados na área têm 10% de chance de|serem libertados quando o monstro possuído for morto|e um monstro possuído é desenterrado"
+    },
+    "Escaravelho Atormentado da Peculiaridade": {
+        "name": "Escaravelho Atormentado da Peculiaridade",
+        "regex": "es!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/4c94a84fd8/NormalScarabTorment.png",
+        "flavourText": "Isso é um lamento de gelar o sangue que eu nunca ouvi antes!",
+        "description": "Espíritos Atormentados na Área são substituídos por variações estranhas"
+    },
+    "Escaravelho Atormentado da Possessão": {
+        "name": "Escaravelho Atormentado da Possessão",
+        "regex": "oz",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlRvcm1lbnQiLCJzY2FsZSI6MX1d/5b3bed9d3d/Tier4ScarabTorment.png",
+        "flavourText": "Os fortes nunca estão, de fato, sozinhos.",
+        "description": "Monstros raros na área têm um quarto de chance de serem possuídos por até 3 Espíritos Atormentados"
+    },
+    "Escaravelho Chifrudo da Preservação": {
+        "name": "Escaravelho Chifrudo da Preservação",
+        "regex": "vie",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjMiLCJzY2FsZSI6MX1d/64d9f06e78/SuperScarab3.png",
+        "flavourText": "Não devemos esquecer aqueles que vieram antes.",
+        "description": "Outros Escaravelhos não são consumidos ao serem utilizados"
+    },
+    "Escaravelho Chifrudo da Tradição": {
+        "name": "Escaravelho Chifrudo da Tradição",
+        "regex": "rtes,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjUiLCJzY2FsZSI6MX1d/cbdd57fa7e/SuperScarab5.png",
+        "flavourText": "Aos mais fortes, a prosperidade seja tua.",
+        "description": "Todos os itens derrubados por Monstros Raros na Área são|transformados por um Modificador de Recompensas"
+    },
+    "Escaravelho Chifrudo das Linhagens": {
+        "name": "Escaravelho Chifrudo das Linhagens",
+        "regex": "rpe",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjEiLCJzY2FsZSI6MX1d/acc1b258a3/SuperScarab1.png",
+        "flavourText": "Somente os mais resistentes sobrevivem. Somente os sobreviventes perpetuam.",
+        "description": "Área tem a quantidade de monstros mágicos aumentada em 150%|Monstros mágicos na área têm um modificador adicional"
+    },
+    "Escaravelho Chifrudo do Brilho": {
+        "name": "Escaravelho Chifrudo do Brilho",
+        "regex": "flui",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjYiLCJzY2FsZSI6MX1d/f74c2fdd4f/SuperScarab6.png",
+        "flavourText": "A riqueza flui para aqueles que brilham mais.",
+        "description": "Jogadores na área ganham mais raridade de itens para cada monstro|abatido (até 400%), que diminui gradualmente"
+    },
+    "Escaravelho Chifrudo do Despertar": {
+        "name": "Escaravelho Chifrudo do Despertar",
+        "regex": "uise",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjQiLCJzY2FsZSI6MX1d/c939905663/SuperScarab4.png",
+        "flavourText": "O Atlas pode ser qualquer coisa.. e tudo o que você quiser.",
+        "description": "Áreas de nível 16+ contêm chefes de um Convite da Conhecedora aleatório"
+    },
+    "Escaravelho Chifrudo do Nêmesis": {
+        "name": "Escaravelho Chifrudo do Nêmesis",
+        "regex": "mesi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjIiLCJzY2FsZSI6MX1d/c4f92c444d/SuperScarab2.png",
+        "flavourText": "A glória atrai cada vez mais sua própria destruição.",
+        "description": "Monstros Raros na Área têm 2 Modificadores adicionais"
+    },
+    "Escaravelho Chifrudo do Pandemônio": {
+        "name": "Escaravelho Chifrudo do Pandemônio",
+        "regex": "dila",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
+        "flavourText": "Sonhos dilacerados sangram na mente.",
+        "description": "Grupos de Monstros na Área têm 15% de chance de serem substituídos por um Chefe do Atlas aleatório|Modificadores do Chefe Final do Mapa também se aplicam a esses Chefes do Atlas"
+    },
+    "Escaravelho Influenciador da Interferência": {
+        "name": "Escaravelho Influenciador da Interferência",
+        "regex": "oan",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNoYXBlciIsInNjYWxlIjoxfV0/320c05daeb/Tier4ScarabShaper.png",
+        "flavourText": "As memórias ressoam no Atlas, ecoando para sempre.",
+        "description": "Um chefe de mapa é acompanhado por um Guardião do Criador, Guardião do Ancião, Conquistador ou Chefe de Síntese aleatório| Só pode ser usado com mapas de nível 14+"
+    },
+    "Escaravelho Kalguuran das Riquezas Protegidas": {
+        "name": "Escaravelho Kalguuran das Riquezas Protegidas",
+        "regex": "cava",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
+        "flavourText": "A parte fácil é cavar.",
+        "description": "Monstros vigiando Encontros de Minério na Área têm uma chance de 30% de serem pelo menos Mágicos"
+    },
+    "Escaravelho Kalguuran do Refinamento": {
+        "name": "Escaravelho Kalguuran do Refinamento",
+        "regex": "dra,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU2V0dGxlcnMiLCJzY2FsZSI6MX1d/24f57aa157/GreaterScarabSettlers.png",
+        "flavourText": "O valor real do minério não está na pedra, mas no que ele se torna.",
+        "description": "Depósitos de minério na área dão Barras Derretidas em vez de marcar minérios"
+    },
+    "Escaravelho Kalguurano": {
+        "name": "Escaravelho Kalguurano",
+        "regex": "veios",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/591426ae68/LesserScarabSettlers.png",
+        "flavourText": "Os veios ricos vão ainda mais fundo.",
+        "description": "Área contém 2 depósitos de minério adicionais"
+    },
+    "Escaravelho Kalguurano do Enriquecimento": {
+        "name": "Escaravelho Kalguurano do Enriquecimento",
+        "regex": "lsa",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNldHRsZXJzIiwic2NhbGUiOjF9XQ/62d3e05936/Tier4ScarabSettlers.png",
+        "flavourText": "O minério está vivo e pulsa, e não está feliz com os seus esforços.",
+        "description": "Monstros que protegem depósitos de minério têm a dificuldade aumentada, e|os depósitos de minério e recompensas contêm minério aumentado em 15%|para cada depósito de minério concluído na área"
+    },
+    "Escaravelho Titânico": {
+        "name": "Escaravelho Titânico",
+        "regex": "er h",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/9ed658ddba/LesserScarabUnique.png",
+        "flavourText": "Que poder há em um nome?",
+        "description": "Monstros únicos têm dureza, dano, raridade e quantidade de itens largados aumentados em 2% por 1% de aumento do tamanho dos grupos na área"
+    },
+    "Escaravelho Titânico da Lenda": {
+        "name": "Escaravelho Titânico da Lenda",
+        "regex": "a len",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVW5pcXVlIiwic2NhbGUiOjF9XQ/0194f878a0/GreaterScarabUnique.png",
+        "flavourText": "O poder se acumula.",
+        "description": "Monstros únicos na área têm 4 modificadores de monstros adicionais"
+    },
+    "Escaravelho Titânico dos Tesouros": {
+        "name": "Escaravelho Titânico dos Tesouros",
+        "regex": "gana",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
+        "flavourText": "A ganância é uma armadilha da mente.",
+        "description": "Monstros únicos na área largam uma recompensa adicional|Monstros únicos na área têm mais 30% de dureza"
+    },
+    "Escaravelho Trarthano": {
+        "name": "Escaravelho Trarthano",
+        "regex": "vence",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/2d075bbafc/LesserScarabMercenaries.png",
+        "flavourText": "O prêmio fica com o vencedor.",
+        "description": "Área é habitada por um Mercenário"
+    },
+    "Escaravelho Trarthano da Infâmia": {
+        "name": "Escaravelho Trarthano da Infâmia",
+        "regex": "hom",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/f880a011d3/NormalScarabMercenaries.png",
+        "flavourText": "Alguns homens devem andar com as próprias pernas.",
+        "description": "Mercenários encontrados na área são Infames|Mercenários encontrados na área são acompanhados por dois Mercenários Selvagens"
+    },
+    "Escaravelho Trarthano das Alianças Surpreendentes": {
+        "name": "Escaravelho Trarthano das Alianças Surpreendentes",
+        "regex": "cn",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1lcmNlbmFyaWVzIiwic2NhbGUiOjF9XQ/ec12948f39/Tier4ScarabMercenaries.png",
+        "flavourText": "\"Técnica e historicamente... na verdade, todos eles são exilados.\"",
+        "description": "Exilados Renegados Selvagens na área têm 50% de chance de estarem acompanhados por um Mercenário Selvagem|Mercenários Selvagens têm a dificuldade aumentada para cada Mercenário Selvagem na área"
+    },
+    "Escaravelho Trarthano do Renome": {
+        "name": "Escaravelho Trarthano do Renome",
+        "regex": "olto",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
+        "flavourText": "Quem vem lá, envolto em lendas?",
+        "description": "Todos os itens de equipamento dos mercenários encontrados na área são únicos"
+    },
+    "Escaravelho da Adivinhação da Abundância": {
+        "name": "Escaravelho da Adivinhação da Abundância",
+        "regex": "mil",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
+        "flavourText": "Criamos mil futuros com cada ação.",
+        "description": "Área contém de 6 a 10 grupos de monstros mágicos tocados pela adivinhação adicionais|com chance de largar Cartas de Adivinhação aumentada em 1.000%"
+    },
+    "Escaravelho da Adivinhação do Cláustro": {
+        "name": "Escaravelho da Adivinhação do Cláustro",
+        "regex": "oenc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
+        "flavourText": "Nenhuma doença pode ser contida para sempre.",
+        "description": "Área contém de 8 a 12 grupos de Devotos de Doedre|Devotos de Doedre têm 1% de chance adicional de derrubar um Baralho Fechado."
+    },
+    "Escaravelho da Adivinhação do Furto": {
+        "name": "Escaravelho da Adivinhação do Furto",
+        "regex": "cui",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGl2aW5hdGlvbiIsInNjYWxlIjoxfV0/73ab11f6bd/GreaterScarabDivination.png",
+        "flavourText": "Se você não cuidar do teu destino, alguém cuidará.",
+        "description": "Cartas de Adivinhação derrubadas na Área são roubadas pelo Chefe Final do Mapa|Chefe Final do Mapa se torna mais Difícil e causa Dano aumentado|de acordo com a quantidade de Cartas de Adivinhação roubadas|Chefe Final do Mapa duplica todas as Cartas de Adivinhação roubadas quando derrotado"
+    },
+    "Escaravelho da Anarquia": {
+        "name": "Escaravelho da Anarquia",
+        "regex": "t,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/73d1ee9b23/LesserScarabAnarchy.png",
+        "flavourText": "Em Wraeclast, é matar ou morrer.",
+        "description": "Área contém 5 Exilados Renegados adicionais"
+    },
+    "Escaravelho da Anarquia da Gigantificação": {
+        "name": "Escaravelho da Anarquia da Gigantificação",
+        "regex": "umo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/d391e90e68/NormalScarabAnarchy.png",
+        "flavourText": "O consumo de sulfito pode desenvolver algo esquisito. ",
+        "description": "Exilados Renegados Selvagens na Área têm 30% de chance de serem substituídos por um Gigante Renegado"
+    },
+    "Escaravelho da Anarquia da Parceria": {
+        "name": "Escaravelho da Anarquia da Parceria",
+        "regex": "udam",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQW5hcmNoeSIsInNjYWxlIjoxfV0/4697e57871/GreaterScarabAnarchy.png",
+        "flavourText": "Entre os exilados, as alianças mudam constantemente.",
+        "description": "Exilados Renegados Selvagens na Área têm 50% de chance de aparecerem em pares"
+    },
+    "Escaravelho da Anarquia do Excepcional": {
+        "name": "Escaravelho da Anarquia do Excepcional",
+        "regex": "antos",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFuYXJjaHkiLCJzY2FsZSI6MX1d/3f5f6a8671/Tier4ScarabAnarchy.png",
+        "flavourText": "Entre tantos, um se destaca.",
+        "description": "Área contém um Exilado Renegado Excepcional adicional"
+    },
+    "Escaravelho da Brasa da Omnichama da Traição": {
+        "name": "Escaravelho da Brasa da Omnichama da Traição",
+        "regex": "emem",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/3e4a843098/NormalScarabBetrayal.png",
+        "flavourText": "Aqueles que nunca podem morrer temem apenas a dor.",
+        "description": "75% mais grupos de monstros substituídos por Brasas da Omnichama na área"
+    },
+    "Escaravelho da Cartografia da Multidão": {
+        "name": "Escaravelho da Cartografia da Multidão",
+        "regex": "im,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/41c689bbef/AltNormalScarabMaps.png",
+        "flavourText": "Não há fim, não há horizonte.",
+        "description": "Área contém de 8 a 12 grupos adicionais de|Monstros Difíceis e Recompensadores que derrubam uma quantidade de Mapas aumentada em 300%"
+    },
+    "Escaravelho da Cartografia do Corrompimento": {
+        "name": "Escaravelho da Cartografia do Corrompimento",
+        "regex": "upc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWFwcyIsInNjYWxlIjoxfV0/7c589dbe02/GreaterScarabMaps.png",
+        "flavourText": "A Corrupção sangra entre as realidades.",
+        "description": "Mapas não Únicos encontrados na Área são Corrompidos com 8 Modificadores"
+    },
+    "Escaravelho da Cartografia do Escalonamento": {
+        "name": "Escaravelho da Cartografia do Escalonamento",
+        "regex": "rtun",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/e7d11bcc5b/LesserScarabMaps.png",
+        "flavourText": "A oportunidade prospera onde os sonhos são mais perigosos.",
+        "description": "Mapas encontrados na Área aumentados em 10% por cada Modificador de Mapa afetando a Área"
+    },
+    "Escaravelho da Cartografia do Risco": {
+        "name": "Escaravelho da Cartografia do Risco",
+        "regex": "exo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/b41df1ff07/NormalScarabMaps.png",
+        "flavourText": "O que vemos no espelho só pode ser o nosso próprio reflexo.",
+        "description": "Área tem 2 modificadores adicionais aleatórios"
+    },
+    "Escaravelho da Colheita": {
+        "name": "Escaravelho da Colheita",
+        "regex": "otas",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
+        "flavourText": "Rotas ocultas levam a vales de sombra e luz...",
+        "description": "Área contém o Bosque Sagrado"
+    },
+    "Escaravelho da Colheita da Cornucópia": {
+        "name": "Escaravelho da Colheita da Cornucópia",
+        "regex": "arv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
+        "flavourText": "Quanto mais alta a árvore, melhores serão os frutos.",
+        "description": "Se a Área contiver o Bosque Sagrado, ela também vai conter 1 semente de Tier 4 adicional de cada tipo, se possível"
+    },
+    "Escaravelho da Colheita da Duplicação": {
+        "name": "Escaravelho da Colheita da Duplicação",
+        "regex": "boa",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
+        "flavourText": "Uma boa estação traz fartura.",
+        "description": "Força Vital derrubada por Monstros em Colheitas na Área é Duplicada|Monstros de Colheitas na Área têm 100% mais Vida"
+    },
+    "Escaravelho da Divindade": {
+        "name": "Escaravelho da Divindade",
+        "regex": "fe t",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
+        "flavourText": "A fé transforma.",
+        "description": "Até 3 monstros raros adicionais na área serão Tocados pelo Panteão|Aparições Criadas por monstros Tocados pelo Panteão causam dano aumentado em 100%"
+    },
+    "Escaravelho da Emboscada": {
+        "name": "Escaravelho da Emboscada",
+        "regex": "ma em",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/137917584a/LesserScarabStrongboxes.png",
+        "flavourText": "Ainda é uma emboscada se você está esperando por ela?",
+        "description": "Área contém 4 caixas-forte adicionais"
+    },
+    "Escaravelho da Emboscada da Contenção": {
+        "name": "Escaravelho da Emboscada da Contenção",
+        "regex": "sme",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/da665a65ee/Tier4ScarabStrongboxes.png",
+        "flavourText": "O silêncio desmente a desgraça que fica à espreita.",
+        "description": "Área contém vários Cofres adicionais|Habitantes da Área estão à espreita"
+    },
+    "Escaravelho da Emboscada da Potência": {
+        "name": "Escaravelho da Emboscada da Potência",
+        "regex": "serr",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3Ryb25nYm94ZXMiLCJzY2FsZSI6MX1d/c2cb4efc18/GreaterScarabStrongboxes.png",
+        "flavourText": "O serralheiro sonha em construir uma caixa melhor.",
+        "description": "Efeito dos Modificadores Explícitos em Cofres na Área aumentado em 75%"
+    },
+    "Escaravelho da Emboscada do Discernimento": {
+        "name": "Escaravelho da Emboscada do Discernimento",
+        "regex": "oio",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/72722370df/AltTier4ScarabStrongboxes.png",
+        "flavourText": "Um olhar atento sabe separar o trigo do joio. ",
+        "description": "Cofres na Área são mais propensos a serem de variedades mais raras"
+    },
+    "Escaravelho da Emboscada dos Compartimentos Escondidos": {
+        "name": "Escaravelho da Emboscada dos Compartimentos Escondidos",
+        "regex": "bv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/2654dacfee/NormalScarabStrongboxes.png",
+        "flavourText": "O verdadeiro tesouro está por trás do óbvio...",
+        "description": "15% de Chance de Cofres na Área poderem ser abertos novamente"
+    },
+    "Escaravelho da Essência": {
+        "name": "Escaravelho da Essência",
+        "regex": "guro",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/4c99af0610/LesserScarabEssence.png",
+        "flavourText": "É perfeitamente seguro, é impossível que as criaturas presas lá dentro ainda estão vivas.",
+        "description": "Área contém 3 monstros aprisionados adicionais"
+    },
+    "Escaravelho da Essência da Adaptação": {
+        "name": "Escaravelho da Essência da Adaptação",
+        "regex": "ecoe",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/56560d691e/AltTier4ScarabEssence.png",
+        "flavourText": "A rede cristalina se expande em direções estranhas à mente mortal.",
+        "description": "Monstros aprisionados liberados nas áreas concedem um Modificador de Essência aleatório para outros Monstros Aprisionados na Área|Monstros Aprisionados nas Áreas têm Dificuldade e Recompensa aumentadas|por cada Modificador de Essências"
+    },
+    "Escaravelho da Essência da Ascensão": {
+        "name": "Escaravelho da Essência da Ascensão",
+        "regex": "eic",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/3a091b8052/NormalScarabEssence.png",
+        "flavourText": "Não tem como alcançar maior perfeição que essa.",
+        "description": "Essências encontradas na Área são de um tier superior"
+    },
+    "Escaravelho da Essência da Calcificação": {
+        "name": "Escaravelho da Essência da Calcificação",
+        "regex": "lci",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/d7e7534a07/Tier4ScarabEssence.png",
+        "flavourText": "Os cristais... podem se espalhar?",
+        "description": "Monstros Raros que são habitantes naturais da Área são aprisionados por Essências"
+    },
+    "Escaravelho da Essência da Estabilidade": {
+        "name": "Escaravelho da Essência da Estabilidade",
+        "regex": "nip",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXNzZW5jZSIsInNjYWxlIjoxfV0/28e74041a5/GreaterScarabEssence.png",
+        "flavourText": "Com as ferramentas certas e uma mão precisa, a manipulação dos cristais|pode ser previsível.",
+        "description": "Corromper uma essência na área só pode resultar em|atualizar ou transformar essências"
+    },
+    "Escaravelho da Estabilidade": {
+        "name": "Escaravelho da Estabilidade",
+        "regex": "e!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MiLCJzY2FsZSI6MX1d/c80f553284/Tier4ScarabMisc.png",
+        "flavourText": "Surpreendente! Um meio de sustentar a conexão...",
+        "description": "Portais para a Área têm 40% de chance de não serem consumidos ao serem usados"
+    },
+    "Escaravelho da Expedição": {
+        "name": "Escaravelho da Expedição",
+        "regex": "les v",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/fa49f53ac8/LesserScarabExpedition.png",
+        "flavourText": "Eles vêm do outro lado do mar em busca da verdade antiga.",
+        "description": "Área contém um Encontro Expedition"
+    },
+    "Escaravelho da Expedição da Arqueologia": {
+        "name": "Escaravelho da Expedição da Arqueologia",
+        "regex": "bed",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkV4cGVkaXRpb24iLCJzY2FsZSI6MX1d/6bd03eec75/Tier4ScarabExpedition.png",
+        "flavourText": "A curiosidade leva à sabedoria. A sabedoria leva ao poder.",
+        "description": "Restos em Encontros Expedition na Área têm 2 Sufixos e Prefixos adicionais"
+    },
+    "Escaravelho da Expedição da Infusão": {
+        "name": "Escaravelho da Expedição da Infusão",
+        "regex": "uz d",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/cbeb3c974b/AltGreaterScarabExpedition.png",
+        "flavourText": "A luz das estrelas concede poder até mesmo aos mortos, se banhados por tempo suficiente.",
+        "description": "Diários encontrados na área sempre têm 4 implícitos|A dificuldade e a recompensa dos monstros da Expedição aumentam para cada vestígio detonado"
+    },
+    "Escaravelho da Expedição da Runificação": {
+        "name": "Escaravelho da Expedição da Runificação",
+        "regex": "uilo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/a751f91a8e/NormalScarabExpedition.png",
+        "flavourText": "Aquilo que veio das estrelas anseia por retornar.",
+        "description": "Encontros Expedition na Área têm quantidade de|Marcadores de Monstros Rúnicos aumentada em 100%"
+    },
+    "Escaravelho da Expedição do Pó de Verisium": {
+        "name": "Escaravelho da Expedição do Pó de Verisium",
+        "regex": "pit",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/1bf78dd20a/GreaterScarabExpedition.png",
+        "flavourText": "Uma pitada devidamente refinada faz toda a diferença.",
+        "description": "Encontros da Expedição na área têm quantidade de Explosivos aumentada em 50%|e raio dos explosivos aumentado em 80%"
+    },
+    "Escaravelho da Fenda da Cascata Ressonadora": {
+        "name": "Escaravelho da Fenda da Cascata Ressonadora",
+        "regex": "va f",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/d6fe5cdce6/AltTier4ScarabBreach.png",
+        "flavourText": "A realidade é enfraquecida com cada nova ferida.",
+        "description": "Fendas Instáveis nas áreas são 10% mais rápidas para cada Fenda Instável já aberta|Monstros de Fendas Instáveis nas áreas têm dificuldade e recompensa aumentadas para|cada Fenda Instável já aberta"
+    },
+    "Escaravelho da Fenda da Colmeia": {
+        "name": "Escaravelho da Fenda da Colmeia",
+        "regex": "inos",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/769139d13b/LesserScarabBreach.png",
+        "flavourText": "Seus reinos sempre buscam expansão.",
+        "description": "Área contém 1 Colmeia da Fenda"
+    },
+    "Escaravelho da Fenda da Instabilidade": {
+        "name": "Escaravelho da Fenda da Instabilidade",
+        "regex": "torc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
+        "flavourText": "A realidade se distorce e cede.",
+        "description": "Área contém 2 Fendas Instáveis adicionais"
+    },
+    "Escaravelho da Fenda do Enxame Inflamado": {
+        "name": "Escaravelho da Fenda do Enxame Inflamado",
+        "regex": "u do",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/2e4da41035/Tier4ScarabBreach.png",
+        "flavourText": "Seu domínio se expande ainda mais.",
+        "description": "As habilidades de Ailith na área passam a enfurecer a Colmeia, aumentando a dificuldade|e a recompensa das levas subsequentes"
+    },
+    "Escaravelho da Fenda do Marechal": {
+        "name": "Escaravelho da Fenda do Marechal",
+        "regex": "nej",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/864e785561/AltNormalScarabBreach.png",
+        "flavourText": "Lealdade planejada e inabalável.",
+        "description": "Fendas Instáveis na área contêm um chefe| Colmeias da Fenda na área levam a uma Fortaleza da Colmeia"
+    },
+    "Escaravelho da Incursão": {
+        "name": "Escaravelho da Incursão",
+        "regex": "cub",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/4afd758a13/LesserScarabIncursion.png",
+        "flavourText": "Descubra os segredos dos Vaal, uma incursão de cada vez.",
+        "description": "Área contém Alva"
+    },
+    "Escaravelho da Incursão da Invasão": {
+        "name": "Escaravelho da Incursão da Invasão",
+        "regex": "rtao",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/a38b517f35/NormalScarabIncursion.png",
+        "flavourText": "Uma vez aberto, um portão pode girar para qualquer direção.",
+        "description": "Área contém 12 a 16 grupos adicionais de Monstros em Incursões"
+    },
+    "Escaravelho da Incursão das Linhas Temporais": {
+        "name": "Escaravelho da Incursão das Linhas Temporais",
+        "regex": "diz",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkluY3Vyc2lvbiIsInNjYWxlIjoxfV0/748b10e2cf/Tier4ScarabIncursion.png",
+        "flavourText": "Dizem que se você for longe o suficiente, você se encontrará...",
+        "description": "Arquiteto Final morto na Área derrubará um Templo Itemizado| Templos Itemizados derrubados na Área são gerados baseado no layout atual do Templo, mas com tiers aleatórios de salões"
+    },
+    "Escaravelho da Incursão dos Campeões": {
+        "name": "Escaravelho da Incursão dos Campeões",
+        "regex": "tzo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSW5jdXJzaW9uIiwic2NhbGUiOjF9XQ/ff92bda004/GreaterScarabIncursion.png",
+        "flavourText": "Apenas o melhor serviram em Atzoatl.",
+        "description": "Incursões na Área têm 35% de chance de todos os Monstros serem ao menos Mágicos|Incursões na Área têm Tamanho do Grupo de Monstros aumentado em 15%"
+    },
+    "Escaravelho da Infestação": {
+        "name": "Escaravelho da Infestação",
+        "regex": "gavi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCbGlnaHQiLCJzY2FsZSI6MX1d/401222e4f4/LesserScarabBlight.png",
+        "flavourText": "As gavinhas rastejam e crescem...",
+        "description": "Área contém um Encontro Blight"
+    },
+    "Escaravelho da Infestação Revigorante": {
+        "name": "Escaravelho da Infestação Revigorante",
+        "regex": "…",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/34e07da01c/AltTier4ScarabBlight.png",
+        "flavourText": "Reverter a polaridade do modulador de compreensão parece ter efeitos intrigantes…",
+        "description": "Cada Torre Empoderadora nas Áreas concedem Dificuldade e Recompensa aumentadas|aos Monstros Infestados no alcance "
+    },
+    "Escaravelho da Infestação do Coração Infestado": {
+        "name": "Escaravelho da Infestação do Coração Infestado",
+        "regex": "ucl",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmxpZ2h0Iiwic2NhbGUiOjF9XQ/d0aa6a6d55/GreaterScarabBlight.png",
+        "flavourText": "O núcleo cresce a cada ciclo, fadado a se espalhar...",
+        "description": "Encontros de Infestação na área têm um Baú da Infestação|Encontros de Infestação na área geram levas adicionais de inimigos|Baús da Infestação na área ficam maiores e mais recompensadores|quanto mais inimigos da Infestação forem derrotados"
+    },
+    "Escaravelho da Infestação do Florescer": {
+        "name": "Escaravelho da Infestação do Florescer",
+        "regex": "pra",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
+        "flavourText": "Uma vez a cada século, a Praga se espalha...",
+        "description": "Encontros Infestados na Área têm até 3 Chefes Únicos adicionais|Inimigos Únicos em Encontros Infestados têm vida aumentada em 100%|Mapas Infestados Tier 14+ encontrados na Área caem como Mapas Infestados Arruinados ao invés"
+    },
+    "Escaravelho da Influência das Hordas": {
+        "name": "Escaravelho da Influência das Hordas",
+        "regex": "idei",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRWxkZXIiLCJzY2FsZSI6MX1d/660528eb40/GreaterScarabElder.png",
+        "flavourText": "Ideias não podem ser contidas.",
+        "description": "Grupos de Monstros Influenciados na Área têm Tamanho do Grupo aumentado em 40%"
+    },
+    "Escaravelho da Influência do Ancião": {
+        "name": "Escaravelho da Influência do Ancião",
+        "regex": "z v",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFbGRlciIsInNjYWxlIjoxfV0/8828d3f4eb/LesserScarabElder.png",
+        "flavourText": "Além da luz vive apenas o vazio.",
+        "description": "Adiciona o resultado da Influência do Ancião à Área"
+    },
+    "Escaravelho da Influência do Criador": {
+        "name": "Escaravelho da Influência do Criador",
+        "regex": "ousa",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTaGFwZXIiLCJzY2FsZSI6MX1d/caf0ac9307/LesserScarabShaper.png",
+        "flavourText": "Um mar de estrelas aguarda os que ousam imaginar.",
+        "description": "Adiciona o resultado da Influência do Criador à Área"
+    },
+    "Escaravelho da Legião": {
+        "name": "Escaravelho da Legião",
+        "regex": "paz",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/e7b6e5659c/LesserScarabLegion.png",
+        "flavourText": "Para que serve a paz para um guerreiro?",
+        "description": "Área contém um Encontro Legion adicional"
+    },
+    "Escaravelho da Legião do Conflito Eterno": {
+        "name": "Escaravelho da Legião do Conflito Eterno",
+        "regex": "rnid",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkxlZ2lvbiIsInNjYWxlIjoxfV0/4a56211137/Tier4ScarabLegion.png",
+        "flavourText": "Uma eternidade de sangue. Glorioso.",
+        "description": "Monstros Legionários na Área podem ser tirados da Estase várias vezes|Monstros Legionários na Área ganham Dificuldade e Recompensa aumentadas por cada vez que foram tirados"
+    },
+    "Escaravelho da Legião dos Oficiais": {
+        "name": "Escaravelho da Legião dos Oficiais",
+        "regex": "iai",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/986b842d3f/NormalScarabLegion.png",
+        "flavourText": "Até mesmo um campo de batalha tem gerenciamento intermediário.",
+        "description": "Facções Legionárias na Área têm 5 Sargentos adicionais"
+    },
+    "Escaravelho da Legião dos Tesouros": {
+        "name": "Escaravelho da Legião dos Tesouros",
+        "regex": "epl",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/5d88c1f891/AltNormalScarabLegion.png",
+        "flavourText": "Tesouros antigos repletos de artefatos poderosos.",
+        "description": "Baús da Legião na área têm 20% de chance de distribuir recompensas|aos monstros da Legião que eles libertam da estase ao serem quebrados|Monstros da Legião que receberam recompensas têm sua dificuldade aumentada"
+    },
+    "Escaravelho da Linhagem Monstruosa": {
+        "name": "Escaravelho da Linhagem Monstruosa",
+        "regex": "ruo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/9196715e8d/LesserScarabMisc.png",
+        "flavourText": "As linhagens evoluem com mais rapidez do que podem ser eliminadas.",
+        "description": "Tamanho dos Grupos Mágicos aumentado em 40%"
+    },
+    "Escaravelho da Traição": {
+        "name": "Escaravelho da Traição",
+        "regex": "fez",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/d53970be47/LesserScarabBetrayal.png",
+        "flavourText": "O Sindicato deve pagar pelo que fez.",
+        "description": "Área contém Jun"
+    },
+    "Escaravelho da Traição do Inquebrável": {
+        "name": "Escaravelho da Traição do Inquebrável",
+        "regex": "inq",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJldHJheWFsIiwic2NhbGUiOjF9XQ/4290457e94/Tier4ScarabBetrayal.png",
+        "flavourText": "Morrer repetidamente cria tolerância à dor.",
+        "description": "Alvos interrogados do Sindicato Imortal na área têm 50% de chance de não perderem a patente ao concluir o interrogatório"
+    },
+    "Escaravelho da Traição dos Reforços": {
+        "name": "Escaravelho da Traição dos Reforços",
+        "regex": "mova",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmV0cmF5YWwiLCJzY2FsZSI6MX1d/7dd831f857/GreaterScarabBetrayal.png",
+        "flavourText": "Mova-se e contra-ataque.",
+        "description": "Membros do Sindicato Imortal na Área têm chance de serem acompanhados por reforços aumentada em 50%"
+    },
+    "Escaravelho das Tempestades Radiantes": {
+        "name": "Escaravelho das Tempestades Radiantes",
+        "regex": "ofo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MyIiwic2NhbGUiOjF9XQ/d19b59b6b8/Tier4ScarabMisc2.png",
+        "flavourText": "A maior cacofonia da vida ruge em um crescendo.",
+        "description": "Área contém uma Tempestade Resplandescênte"
+    },
+    "Escaravelho de Sulfito": {
+        "name": "Escaravelho de Sulfito",
+        "regex": "rgul",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
+        "flavourText": "Mergulhe na escuridão em busca da verdade...",
+        "description": "Área contém Niko"
+    },
+    "Escaravelho de Sulfito dos Gases": {
+        "name": "Escaravelho de Sulfito dos Gases",
+        "regex": "oent",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
+        "flavourText": "Quando a própria terra está doente, até o solo apodrece e transborda.",
+        "description": "Sulfito encontrado na Área do Mapa libera Gazes Enfurecedores|Monstros afetados por Gazes Enfurecedores têm Quantidade de Itens aumentada em 50%|Sulfito em seus mapas é guardado por Monstros da Mina de Azurita"
+    },
+    "Escaravelho do Abismo": {
+        "name": "Escaravelho do Abismo",
+        "regex": "proc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
+        "flavourText": "Eles procuram eternamente por mais almas para arrastar para a escuridão.",
+        "description": "Área contém um [ContainsAbyss|Abismo] adicional"
+    },
+    "Escaravelho do Abismo da Consorte": {
+        "name": "Escaravelho do Abismo da Consorte",
+        "regex": "endem",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/b40fb2422b/AltTier4ScarabAbyss.png",
+        "flavourText": "Eles defendem as profundezas sob o comando de seus senhores.",
+        "description": "Um Fosso [ContainsAbyss|Abissal] na área gerará uma [AbyssalConsort|Consorte Abissal]"
+    },
+    "Escaravelho do Abismo da Descida": {
+        "name": "Escaravelho do Abismo da Descida",
+        "regex": "nvid",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png",
+        "flavourText": "Eles te convidam a conhecê-los e a se juntar a eles.",
+        "description": "Área contém uma [AbyssalDepths|Profundeza Abissal]"
+    },
+    "Escaravelho do Abismo das Multidões": {
+        "name": "Escaravelho do Abismo das Multidões",
+        "regex": "poc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/e28a53e1a0/NormalScarabAbyss.png",
+        "flavourText": "O poço está sempre com fome, mesmo quando transborda.",
+        "description": "Desfiladeiros [ContainsAbyss|Abissais] na área têm a geração de monstros por [AbyssFedSoul|alma] alimentada aumentada em 100%"
+    },
+    "Escaravelho do Abismo dos Cristais": {
+        "name": "Escaravelho do Abismo dos Cristais",
+        "regex": "pav",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQWJ5c3MiLCJzY2FsZSI6MX1d/84851bd122/GreaterScarabAbyss.png",
+        "flavourText": "Seu poder emprestado gira dentro de cristais pavorosos.",
+        "description": "Fossos [ContainsAbyss|Abissais] não finais na área criam um [AbyssalCrystal|Cristal Abissal] ao fechar"
+    },
+    "Escaravelho do Além": {
+        "name": "Escaravelho do Além",
+        "regex": "iol",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
+        "flavourText": "A parede silenciosa e a tempestade violenta se opõem ao enxame sem fim.",
+        "description": "Matar inimigos próximos na Área pode atrair monstros do Além deste reino"
+    },
+    "Escaravelho do Além da Hemofilia": {
+        "name": "Escaravelho do Além da Hemofilia",
+        "regex": "mof",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
+        "flavourText": "A própria realidade começa a sangrar.",
+        "description": "Portais do Além na área têm o raio de fusão aumentado em 50%|Personagens que matam monstros raros do Além da área têm 30% de chance de ganhar seus modificadores por 20 segundos"
+    },
+    "Escaravelho do Além da Invasão": {
+        "name": "Escaravelho do Além da Invasão",
+        "regex": "pred",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJleW9uZCIsInNjYWxlIjoxfV0/a1d0b3e27b/Tier4ScarabBeyond.png",
+        "flavourText": "A hora predestinada está quase próxima.",
+        "description": "Monstros Raros e Únicos mortos na Área criam 8 a 12 Portais do Além adicionais"
+    },
+    "Escaravelho do Além do Ressurgimento": {
+        "name": "Escaravelho do Além do Ressurgimento",
+        "regex": "gim",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
+        "flavourText": "Eles têm fome.",
+        "description": "Chefes do Além gerados na área estão acompanhados por Chefes do Além de outras facções|Chefes do Além na área largam 20% mais moedas maculadas|Portais do Além na área têm uma chance de gerar um chefe único aumentada em 30%"
+    },
+    "Escaravelho do Bestiário": {
+        "name": "Escaravelho do Bestiário",
+        "regex": "atend",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
+        "flavourText": "O Mestre das Bestas atende ao chamado.",
+        "description": "Área contém Einhar"
+    },
+    "Escaravelho do Bestiário da Duplicação": {
+        "name": "Escaravelho do Bestiário da Duplicação",
+        "regex": "urada,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
+        "flavourText": "\"O que é melhor do que uma besta capturada, exilado?\"",
+        "description": "Cria uma cópia das Bestas capturadas na Área"
+    },
+    "Escaravelho do Bestiário do Rebanho": {
+        "name": "Escaravelho do Bestiário do Rebanho",
+        "regex": "vr",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
+        "flavourText": "Os Primeiros correram desenfreados e livres nas florestas de antigamente.",
+        "description": "Área contém 5 Bestas Vermelhas adicionais se contiver Einhar"
+    },
+    "Escaravelho do Delírio": {
+        "name": "Escaravelho do Delírio",
+        "regex": "cuo",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/0b8b887e88/LesserScarabDelirium.png",
+        "flavourText": "Um Escaravelho perfeitamente inócuo que não faz absolutamente nada.",
+        "description": "Área contém um Espelho do Delírio"
+    },
+    "Escaravelho do Delírio da Mania": {
+        "name": "Escaravelho do Delírio da Mania",
+        "regex": "r!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/9de6ce65c5/NormalScarabDelirium.png",
+        "flavourText": "Eles são tão barulhentos! Por que eles estão tão barulhentos?!|Tudo que você faz é gritar!",
+        "description": "Medidor de Recompensas do Delírio é preenchido 100% mais rápido na Área|Delírio na Área aumenta 50% mais rápido de acordo com a distância do espelho"
+    },
+    "Escaravelho do Delírio da Neurose": {
+        "name": "Escaravelho do Delírio da Neurose",
+        "regex": "eur",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
+        "flavourText": "Sorrisos cheios de dentes brilham no escuro.",
+        "description": "Encontros de Delírio na área contêm todos os chefes do Delírio únicos|A contagem de tipos de recompensa do Delírio na área aumenta em 1 ao derrotar um chefe do Delírio único|Só pode ser usado com mapas de nível 11+"
+    },
+    "Escaravelho do Delírio da Paranóia": {
+        "name": "Escaravelho do Delírio da Paranóia",
+        "regex": "bom",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/e6730494ae/GreaterScarabDelirium.png",
+        "flavourText": "Se parece bom demais para ser verdade...",
+        "description": "Encontros Delirantes na Área geram 2 tipos de Recompensas adicionais"
+    },
+    "Escaravelho do Delírio das Alucinações": {
+        "name": "Escaravelho do Delírio das Alucinações",
+        "regex": "alu",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
+        "flavourText": "Do que você está falando?|O Atlas sempre foi assim.",
+        "description": "Mapas encontrados na Área têm camadas de Delírio"
+    },
+    "Escaravelho do Destro": {
+        "name": "Escaravelho do Destro",
+        "regex": "coro",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiTWlzYyIsInNjYWxlIjoxfV0/4b55da6494/AltGreaterScarabMisc.png",
+        "flavourText": "Vamos jogar. Você escolhe coroa?",
+        "description": "Modificadores de sufixo de área têm o efeito aumentado em 100%|Modificadores de prefixo de área não têm efeito"
+    },
+    "Escaravelho do Domínio": {
+        "name": "Escaravelho do Domínio",
+        "regex": "simp",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/76cedf832c/LesserScarabDomination.png",
+        "flavourText": "Uma simples troca. Sangue pelo poder.",
+        "description": "Área contém 3 altares adicionais"
+    },
+    "Escaravelho do Domínio da Evolução": {
+        "name": "Escaravelho do Domínio da Evolução",
+        "regex": "riv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRG9taW5hdGlvbiIsInNjYWxlIjoxfV0/8913234164/GreaterScarabDomination.png",
+        "flavourText": "O Atlas e Wraeclast compartilham um segredo terrível.",
+        "description": "Área contém um Altar Evolutivo"
+    },
+    "Escaravelho do Domínio das Aparições": {
+        "name": "Escaravelho do Domínio das Aparições",
+        "regex": "r le",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/c907d44dec/NormalScarabDomination.png",
+        "flavourText": "Alguns caminhos para o poder levam apenas à loucura.",
+        "description": "Área contém 2 Altares de Aparição adicionais"
+    },
+    "Escaravelho do Domínio dos Terrores": {
+        "name": "Escaravelho do Domínio dos Terrores",
+        "regex": "mio,",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRvbWluYXRpb24iLCJzY2FsZSI6MX1d/0d55e72414/Tier4ScarabDomination.png",
+        "flavourText": "Seja qual for o prêmio, lute por ele.",
+        "description": "Altares na Área são guardados por um Chefe do Atlas|Modificadores do Chefe Final do mapa também são aplicados a estes Chefes do Atlas"
+    },
+    "Escaravelho do Ritual da Abundância": {
+        "name": "Escaravelho do Ritual da Abundância",
+        "regex": "apro",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiUml0dWFsIiwic2NhbGUiOjF9XQ/a990c91de5/GreaterScarabRitual.png",
+        "flavourText": "Ele se aproxima cada vez mais...",
+        "description": "Rituais na Área oferecem Favores aumentados em 100%"
+    },
+    "Escaravelho do Ritual da Seletividade": {
+        "name": "Escaravelho do Ritual da Seletividade",
+        "regex": "ipi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/08f82dab28/LesserScarabRitual.png",
+        "flavourText": "Escolha quais princípios sagrados você prefere...",
+        "description": "Recriar favores em Altares Ritualísticos na área não tem custo nas primeiras duas vezes|Altares Ritualísticos na área permitem recriar favores mais duas vezes"
+    },
+    "Escaravelho do Ritual dos Cadáveres": {
+        "name": "Escaravelho do Ritual dos Cadáveres",
+        "regex": "ntoc",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlJpdHVhbCIsInNjYWxlIjoxfV0/323f689e68/Tier4ScarabRitual.png",
+        "flavourText": "Reduzidos a meros fantoches, eles anseiam por voltar a viver.",
+        "description": "Rituais na área contêm um monstro cadáver itemizado raro adicional"
+    },
+    "Escaravelho do Ritual dos Espíritos": {
+        "name": "Escaravelho do Ritual dos Espíritos",
+        "regex": "onfi",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/f2c3231213/NormalScarabRitual.png",
+        "flavourText": "Confie nas Draíocht e você nunca estará a sós.",
+        "description": "Altares de Ritual na área geram um Lúmen Selvagem|Lúmens Selvagens concedem mais 100% de tributo recebido aos jogadores próximos"
+    },
+    "Escaravelho do Sinistro": {
+        "name": "Escaravelho do Sinistro",
+        "regex": "sini",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzIiLCJzY2FsZSI6MX1d/6f752909bb/GreaterScarabMisc2.png",
+        "flavourText": "Vamos jogar. Você escolhe cara?",
+        "description": "Modificadores de prefixo de área têm o efeito aumentado em 100%|Modificadores de sufixo de área não têm efeito"
+    },
+    "Escaravelho do Ultimato": {
+        "name": "Escaravelho do Ultimato",
+        "regex": "mom",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/b1b423625d/LesserScarabUltimatum.png",
+        "flavourText": "Um desafio pode ser solicitado a qualquer momento.",
+        "description": "Área contém um Encontro do Ultimato"
+    },
+    "Escaravelho do Ultimato da Catalização": {
+        "name": "Escaravelho do Ultimato da Catalização",
+        "regex": "rrep",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/abfc80cf45/Tier4ScarabUltimatum.png",
+        "flavourText": "A maioria se arrepende de descobrir como o pó é feito.",
+        "description": "Encontros do Ultimato na Área só podem oferecer Catalisadores como Recompensa"
+    },
+    "Escaravelho do Ultimato da Inscrição": {
+        "name": "Escaravelho do Ultimato da Inscrição",
+        "regex": "pud",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/080e60e969/AltTier4ScarabUltimatum.png",
+        "flavourText": "Sempre há uma aposta a ser feita... se você puder pagar.",
+        "description": "Encontros do Ultimato na Área que oferecem Catalisadores|vão oferecer Ultimatos Talhados ao invés"
+    },
+    "Escaravelho do Ultimato do Duelo": {
+        "name": "Escaravelho do Ultimato do Duelo",
+        "regex": "vito",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVWx0aW1hdHVtIiwic2NhbGUiOjF9XQ/be3b513bfe/GreaterScarabUltimatum.png",
+        "flavourText": "A vitória não significa nada, o fracasso será ridicularizado.",
+        "description": "Encontros do Ultimato na Área sempre levam até um Chefe Único, se possível"
+    },
+    "Escaravelho do Ultimato do Suborno": {
+        "name": "Escaravelho do Ultimato do Suborno",
+        "regex": "jul",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
+        "flavourText": "Um julgamento é tão incorruptível quanto seu juiz.",
+        "description": "Monstros do Ultimato concedem Experiência aumentada em 150%|Encontros do Ultimato concedem recompensas como se você tivesse completado 2 Rodadas adicionais"
+    },
+    "Escaravelho dos Adversários": {
+        "name": "Escaravelho dos Adversários",
+        "regex": "adv",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/ab24a34cd1/AltLesserScarabMisc.png",
+        "flavourText": "Eles estão contra você com a mesma inimizade.",
+        "description": "Área contém 4 Grupos adicionais com Monstros Raros Espelhados"
+    },
+    "Escaravelho dos Espíritos": {
+        "name": "Escaravelho dos Espíritos",
+        "regex": "ctam",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzEiLCJzY2FsZSI6MX1d/303001a475/GreaterScarabMisc1.png",
+        "flavourText": "Os Draíocht conectam tudo que vive.",
+        "description": "Monstros na Área têm chance de serem Empoderados por 2000 Espíritos Selvagens"
+    }
+}

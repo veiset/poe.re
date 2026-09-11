@@ -14,7 +14,7 @@
         },
         {
             "id": -2050206104,
-            "regex": "cup",
+            "regex": "t \\d+% de perte de r",
             "rawText": "Les joueurs ont (20-60)% de Perte de Récupération de Vie et de Bouclier d'énergie",
             "generalizedText": "^les joueurs ont #% de perte de recuperation de vie et de bouclier d'energie$",
             "options": {
@@ -26,7 +26,7 @@
         },
         {
             "id": -2038489408,
-            "regex": "tout",
+            "regex": "ales$",
             "rawText": "Les Joueurs ont -20% à toutes les Résistances maximales",
             "generalizedText": "^les joueurs ont -#% a toutes les resistances maximales$",
             "options": {
@@ -50,7 +50,7 @@
         },
         {
             "id": -1934587276,
-            "regex": "ctat",
+            "regex": "sect",
             "rawText": "La Zone est habitée par des Sectateurs de Kitava",
             "generalizedText": "^la zone est habitee par des sectateurs de kitava$",
             "options": {
@@ -74,7 +74,7 @@
         },
         {
             "id": -1772662453,
-            "regex": "'al",
+            "regex": "ir d'a",
             "rawText": "Les Monstres ont (30-70)% de chances de ne pas subir d'Altérations élémentaires",
             "generalizedText": "^les monstres ont #% de chances de ne pas subir d'alterations elementaires$",
             "options": {
@@ -86,7 +86,7 @@
         },
         {
             "id": -1647756153,
-            "regex": "dific",
+            "regex": "aire$",
             "rawText": "Tous les Monstres Rares ont 1 Modificateur supplémentaire|(35-45)% d'Augmentation du nombre de Monstres Rares",
             "generalizedText": "^tous les monstres rares ont # modificateur supplementaire$|^#% d'augmentation du nombre de monstres rares$",
             "options": {
@@ -98,7 +98,7 @@
         },
         {
             "id": -1629200695,
-            "regex": "ntac",
+            "regex": "tacu",
             "rawText": "La Zone contient des Monstres tentaculaires instables",
             "generalizedText": "^la zone contient des monstres tentaculaires instables$",
             "options": {
@@ -110,7 +110,7 @@
         },
         {
             "id": -1621497665,
-            "regex": "es de fr",
+            "regex": "e frenesie$",
             "rawText": "Les Monstres gagnent une Charge de frénésie au Toucher|Les Monstres ont +1 au nombre maximum de Charges de frénésie|35% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres gagnent une charge de frenesie au toucher$|^les monstres ont # au nombre maximum de charges de frenesie$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -122,7 +122,7 @@
         },
         {
             "id": -1616686189,
-            "regex": "eur v",
+            "regex": "tent \\d+% de leur v",
             "rawText": "Les Monstres Rajoutent (20-49)% de leur Vie Maximale sous forme de Bouclier d'énergie",
             "generalizedText": "^les monstres rajoutent #% de leur vie maximale sous forme de bouclier d'energie$",
             "options": {
@@ -146,7 +146,7 @@
         },
         {
             "id": -1430865583,
-            "regex": "'o",
+            "regex": "res, r",
             "rawText": "Les Monstres Rares ont des Épines physiques, renvoyant 1500 Dégâts physiques|Les Monstres Rares ont des Épines élémentaires, renvoyant 2500 Dégâts élémentaires|47% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^les monstres rares ont des epines physiques, renvoyant # degats physiques$|^les monstres rares ont des epines elementaires, renvoyant # degats elementaires$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -158,7 +158,7 @@
         },
         {
             "id": -1358177810,
-            "regex": "ir,",
+            "regex": "voir,",
             "rawText": "Les Monstres volent des Charges de pouvoir, frénésie et endurance au Toucher",
             "generalizedText": "^les monstres volent des charges de pouvoir, frenesie et endurance au toucher$",
             "options": {
@@ -170,7 +170,7 @@
         },
         {
             "id": -1344829253,
-            "regex": "p c",
+            "regex": "tique$",
             "rawText": "Les Monstres ont (160-400)% d'Augmentation des Chances de Coup critique|+(30-45)% au Multiplicateur de coup critique des Monstres",
             "generalizedText": "^les monstres ont #% d'augmentation des chances de coup critique$|^#% au multiplicateur de coup critique des monstres$",
             "options": {
@@ -182,7 +182,7 @@
         },
         {
             "id": -1298230190,
-            "regex": "abe",
+            "regex": "ees t",
             "rawText": "Les Effets bénéfiques expirent 100% plus rapidement sur les Joueurs|35% Davantage de Scarabées trouvés dans la Zone",
             "generalizedText": "^les effets benefiques expirent #% plus rapidement sur les joueurs$|^#% davantage de scarabees trouves dans la zone$",
             "options": {
@@ -206,7 +206,7 @@
         },
         {
             "id": -1158025910,
-            "regex": "e pen",
+            "regex": "de pen",
             "rawText": "Les Monstres ont 15% de Pénétration des Résistances élémentaires",
             "generalizedText": "^les monstres ont #% de penetration des resistances elementaires$",
             "options": {
@@ -218,7 +218,7 @@
         },
         {
             "id": -1139261923,
-            "regex": "onsa",
+            "regex": "nsacre$",
             "rawText": "La Zone a des parcelles de Sol consacré",
             "generalizedText": "^la zone a des parcelles de sol consacre$",
             "options": {
@@ -230,7 +230,7 @@
         },
         {
             "id": -1099682289,
-            "regex": "reu",
+            "regex": "ms$",
             "rawText": "La Zone contient de nombreux Totems",
             "generalizedText": "^la zone contient de nombreux totems$",
             "options": {
@@ -242,7 +242,7 @@
         },
         {
             "id": -1094717370,
-            "regex": "e fre",
+            "regex": "sie a",
             "rawText": "Les Monstres gagnent une Charge de frénésie au Toucher",
             "generalizedText": "^les monstres gagnent une charge de frenesie au toucher$",
             "options": {
@@ -266,7 +266,7 @@
         },
         {
             "id": -1047451686,
-            "regex": "mba",
+            "regex": "batt",
             "rawText": "La Zone est habitée par des Monstres combattant à distance",
             "generalizedText": "^la zone est habitee par des monstres combattant a distance$",
             "options": {
@@ -278,7 +278,7 @@
         },
         {
             "id": -999805715,
-            "regex": "'ar",
+            "regex": "uer$",
             "rawText": "Les joueurs ont (20-40)% de Réduction des chances de Bloquer|Les joueurs ont (20-30)% de Perte d'Armure",
             "generalizedText": "^les joueurs ont #% de reduction des chances de bloquer$|^les joueurs ont #% de perte d'armure$",
             "options": {
@@ -290,7 +290,7 @@
         },
         {
             "id": -949334443,
-            "regex": "heu",
+            "regex": "'env",
             "rawText": "Les Aptitudes des Monstres Ricochent 3 fois de plus|Les Projectiles des Monstres Ricochent lorsqu'ils heurtent l'environnement",
             "generalizedText": "^les aptitudes des monstres ricochent # fois de plus$|^les projectiles des monstres ricochent lorsqu'ils heurtent l'environnement$",
             "options": {
@@ -302,7 +302,7 @@
         },
         {
             "id": -946283701,
-            "regex": "t su",
+            "regex": "fiques e",
             "rawText": "Les Effets bénéfiques expirent (30-70)% plus rapidement sur les Joueurs",
             "generalizedText": "^les effets benefiques expirent #% plus rapidement sur les joueurs$",
             "options": {
@@ -314,7 +314,7 @@
         },
         {
             "id": -938285245,
-            "regex": "vee",
+            "regex": "rtes t",
             "rawText": "Les Monstres ont +100% de chances de Réprimer les Dégâts des Sorts|35% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres ont #% de chances de reprimer les degats des sorts$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -326,7 +326,7 @@
         },
         {
             "id": -933231182,
-            "regex": "e d'i",
+            "regex": "aque des",
             "rawText": "(35-45)% d'Augmentation de la Vitesse d'incantation des Monstres|(35-45)% d'Augmentation de la Vitesse d'Attaque des Monstres|(25-30)% d'Augmentation de la Vitesse de déplacement des Monstres",
             "generalizedText": "^#% d'augmentation de la vitesse d'incantation des monstres$|^#% d'augmentation de la vitesse d'attaque des monstres$|^#% d'augmentation de la vitesse de deplacement des monstres$",
             "options": {
@@ -338,7 +338,7 @@
         },
         {
             "id": -931745379,
-            "regex": "lian",
+            "regex": "pantes a",
             "rawText": "Les Monstres infligent 2 Lianes agrippantes au Toucher|40% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres infligent # lianes agrippantes au toucher$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -350,7 +350,7 @@
         },
         {
             "id": -887278806,
-            "regex": "rbe",
+            "regex": "yad",
             "rawText": "La Zone contient des Orbes de noyade",
             "generalizedText": "^la zone contient des orbes de noyade$",
             "options": {
@@ -362,7 +362,7 @@
         },
         {
             "id": -875993462,
-            "regex": "'o",
+            "regex": "ge d'o",
             "rawText": "(90-100)% Davantage de Vie des Monstres|47% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^#% davantage de vie des monstres$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -374,7 +374,7 @@
         },
         {
             "id": -763914456,
-            "regex": "agnee",
+            "regex": "agnees$",
             "rawText": "Les joueurs ont (30-50)% de Réduction des charges de Flacon gagnées",
             "generalizedText": "^les joueurs ont #% de reduction des charges de flacon gagnees$",
             "options": {
@@ -386,7 +386,7 @@
         },
         {
             "id": -737013402,
-            "regex": "lunar",
+            "regex": "unar",
             "rawText": "La Zone est habitée par des fanatiques de Lunaris",
             "generalizedText": "^la zone est habitee par des fanatiques de lunaris$",
             "options": {
@@ -398,7 +398,7 @@
         },
         {
             "id": -694214737,
-            "regex": "au c",
+            "regex": "os des m",
             "rawText": "+(15-25)% à la Résistance au chaos des Monstres|+(20-40)% à la Résistance élémentaire des Monstres",
             "generalizedText": "^#% a la resistance au chaos des monstres$|^#% a la resistance elementaire des monstres$",
             "options": {
@@ -434,7 +434,7 @@
         },
         {
             "id": -645418310,
-            "regex": "s d'u",
+            "regex": "s d'un el",
             "rawText": "Les Monstres Rajoutent (180-200)% de leurs Dégâts physiques sous forme de Dégâts d'un élément aléatoire",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats d'un element aleatoire$",
             "options": {
@@ -446,7 +446,7 @@
         },
         {
             "id": -627831782,
-            "regex": "aig",
+            "regex": "son,",
             "rawText": "Les Monstres ont (20-50)% de chances de ne pas subir le Poison, l'Empalement et le Saignement",
             "generalizedText": "^les monstres ont #% de chances de ne pas subir le poison, l'empalement et le saignement$",
             "options": {
@@ -470,7 +470,7 @@
         },
         {
             "id": -580302769,
-            "regex": "ation des d",
+            "regex": "des degats des m",
             "rawText": "(14-40)% d'Augmentation des Dégâts des Monstres",
             "generalizedText": "^#% d'augmentation des degats des monstres$",
             "options": {
@@ -482,7 +482,7 @@
         },
         {
             "id": -539026720,
-            "regex": "ns su",
+            "regex": "ns sur",
             "rawText": "(25-60)% de Perte d'Effet des Malédictions sur les Monstres",
             "generalizedText": "^#% de perte d'effet des maledictions sur les monstres$",
             "options": {
@@ -494,7 +494,7 @@
         },
         {
             "id": -481946502,
-            "regex": "foi",
+            "regex": "lus$",
             "rawText": "Les Aptitudes des Monstres Ricochent 2 fois de plus",
             "generalizedText": "^les aptitudes des monstres ricochent # fois de plus$",
             "options": {
@@ -506,7 +506,7 @@
         },
         {
             "id": -477049138,
-            "regex": "tout",
+            "regex": "ales$",
             "rawText": "Les Joueurs ont -(5-12)% à toutes les Résistances maximales",
             "generalizedText": "^les joueurs ont -#% a toutes les resistances maximales$",
             "options": {
@@ -518,7 +518,7 @@
         },
         {
             "id": -268547495,
-            "regex": "epri",
+            "regex": "s des sorts$",
             "rawText": "Les Monstres ont +(30-60)% de chances de Réprimer les Dégâts des Sorts",
             "generalizedText": "^les monstres ont #% de chances de reprimer les degats des sorts$",
             "options": {
@@ -530,7 +530,7 @@
         },
         {
             "id": -258709095,
-            "regex": "au c",
+            "regex": "nt une r",
             "rawText": "Les Monstres gagnent une Réduction des Dégâts physiques de +50%|+55% à la Résistance élémentaire des Monstres|+35% à la Résistance au chaos des Monstres",
             "generalizedText": "^les monstres gagnent une reduction des degats physiques de #%$|^#% a la resistance elementaire des monstres$|^#% a la resistance au chaos des monstres$",
             "options": {
@@ -542,7 +542,7 @@
         },
         {
             "id": -235013251,
-            "regex": "ues,",
+            "regex": "siques$",
             "rawText": "Les Monstres Rares ont des Épines physiques, renvoyant (400-800) Dégâts physiques",
             "generalizedText": "^les monstres rares ont des epines physiques, renvoyant # degats physiques$",
             "options": {
@@ -578,7 +578,7 @@
         },
         {
             "id": -172005981,
-            "regex": "vie d",
+            "regex": "e de vie",
             "rawText": "(20-49)% Davantage de Vie des Monstres",
             "generalizedText": "^#% davantage de vie des monstres$",
             "options": {
@@ -590,7 +590,7 @@
         },
         {
             "id": -166549521,
-            "regex": "'emb",
+            "regex": "uter a",
             "rawText": "Les Monstres ont (15-20)% de chances d'Embraser, Geler et Électrocuter au Toucher",
             "generalizedText": "^les monstres ont #% de chances d'embraser, geler et electrocuter au toucher$",
             "options": {
@@ -602,7 +602,7 @@
         },
         {
             "id": -128171261,
-            "regex": "sol p",
+            "regex": "de sol p",
             "rawText": "La Zone a des parcelles de Sol profané",
             "generalizedText": "^la zone a des parcelles de sol profane$",
             "options": {
@@ -626,7 +626,7 @@
         },
         {
             "id": -114660370,
-            "regex": "de sco",
+            "regex": "t \\d+% de perte de s",
             "rawText": "Les Joueurs ont (15-25)% de Perte de Score de Précision",
             "generalizedText": "^les joueurs ont #% de perte de score de precision$",
             "options": {
@@ -662,7 +662,7 @@
         },
         {
             "id": -105914721,
-            "regex": "liq",
+            "regex": "ns ap",
             "rawText": "Les Flacons appliqués aux Joueurs ont 40% de Perte d'effet|47% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^les flacons appliques aux joueurs ont #% de perte d'effet$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -674,7 +674,7 @@
         },
         {
             "id": -80588106,
-            "regex": "mut",
+            "regex": "tilen",
             "rawText": "Les Attaques des Monstres Mutilent au Toucher",
             "generalizedText": "^les attaques des monstres mutilent au toucher$",
             "options": {
@@ -698,7 +698,7 @@
         },
         {
             "id": -26777606,
-            "regex": "feu",
+            "regex": "eu$",
             "rawText": "Les Monstres Rajoutent (50-110)% de leurs Dégâts physiques sous forme de Dégâts de feu",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats de feu$",
             "options": {
@@ -710,7 +710,7 @@
         },
         {
             "id": 10729340,
-            "regex": "letr",
+            "regex": "ndes$",
             "rawText": "Les Monstres Rajoutent (21-35)% de leurs Dégâts physiques sous forme de Dégâts de chaos|Les Monstres infligent Flétrissement au Toucher pendant 2 secondes",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats de chaos$|^les monstres infligent fletrissement au toucher pendant # secondes$",
             "options": {
@@ -722,7 +722,7 @@
         },
         {
             "id": 17483843,
-            "regex": "e d'i",
+            "regex": "aque des",
             "rawText": "(15-30)% d'Augmentation de la Vitesse de déplacement des Monstres|(20-45)% d'Augmentation de la Vitesse d'Attaque des Monstres|(20-45)% d'Augmentation de la Vitesse d'incantation des Monstres",
             "generalizedText": "^#% d'augmentation de la vitesse de deplacement des monstres$|^#% d'augmentation de la vitesse d'attaque des monstres$|^#% d'augmentation de la vitesse d'incantation des monstres$",
             "options": {
@@ -734,7 +734,7 @@
         },
         {
             "id": 58884108,
-            "regex": "ette",
+            "regex": "ttes$",
             "rawText": "La Zone est habitée par des Squelettes",
             "generalizedText": "^la zone est habitee par des squelettes$",
             "options": {
@@ -746,7 +746,7 @@
         },
         {
             "id": 127168403,
-            "regex": "ts de c",
+            "regex": "e chaos$",
             "rawText": "Les Monstres Rajoutent (80-100)% de leurs Dégâts physiques sous forme de Dégâts de chaos",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats de chaos$",
             "options": {
@@ -758,7 +758,7 @@
         },
         {
             "id": 151806012,
-            "regex": "mont",
+            "regex": "s neu",
             "rawText": "Les Joueurs ont -(10-20)% au montant de Dégâts Neutralisés par la Répression des Sorts|Les Monstres ont (30-50)% d'Augmentation du Score de Précision",
             "generalizedText": "^les joueurs ont -#% au montant de degats neutralises par la repression des sorts$|^les monstres ont #% d'augmentation du score de precision$",
             "options": {
@@ -770,7 +770,7 @@
         },
         {
             "id": 156744008,
-            "regex": "iete",
+            "regex": "ariete",
             "rawText": "La Zone a une Augmentation de la variété des Monstres",
             "generalizedText": "^la zone a une augmentation de la variete des monstres$",
             "options": {
@@ -794,7 +794,7 @@
         },
         {
             "id": 246480838,
-            "regex": "p c",
+            "regex": "tique$",
             "rawText": "+(70-75)% au Multiplicateur de coup critique des Monstres|Les Monstres ont (650-700)% d'Augmentation des Chances de Coup critique",
             "generalizedText": "^#% au multiplicateur de coup critique des monstres$|^les monstres ont #% d'augmentation des chances de coup critique$",
             "options": {
@@ -806,7 +806,7 @@
         },
         {
             "id": 252096506,
-            "regex": "raine",
+            "regex": "ainer",
             "rawText": "Vous ne pouvez pas Drainer les Monstres",
             "generalizedText": "^vous ne pouvez pas drainer les monstres$",
             "options": {
@@ -818,7 +818,7 @@
         },
         {
             "id": 284489036,
-            "regex": "e de z",
+            "regex": "te de z",
             "rawText": "Les joueurs ont (30-25)% de Perte de Zone d'effet",
             "generalizedText": "^les joueurs ont #% de perte de zone d'effet$",
             "options": {
@@ -830,7 +830,7 @@
         },
         {
             "id": 339937661,
-            "regex": "par a",
+            "regex": "r af",
             "rawText": "Les Joueurs sont Maudits par Affaiblissement",
             "generalizedText": "^les joueurs sont maudits par affaiblissement$",
             "options": {
@@ -842,7 +842,7 @@
         },
         {
             "id": 357242916,
-            "regex": "uches",
+            "regex": "uches$",
             "rawText": "Les Monstres ont +1 au nombre maximum de Charges d'endurance|Les Monstres gagnent une Charge d'endurance lorsqu'ils sont Touchés|35% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres ont # au nombre maximum de charges d'endurance$|^les monstres gagnent une charge d'endurance lorsqu'ils sont touches$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -854,7 +854,7 @@
         },
         {
             "id": 472035128,
-            "regex": "enten",
+            "regex": "sol e",
             "rawText": "La Zone a des parcelles de Sol électrocutant qui augmentent les Dégâts subis de (20-50)%",
             "generalizedText": "^la zone a des parcelles de sol electrocutant qui augmentent les degats subis de #%$",
             "options": {
@@ -866,7 +866,7 @@
         },
         {
             "id": 583869527,
-            "regex": "giq",
+            "regex": "giques$",
             "rawText": "(20-30)% d'Augmentation des Monstres Magiques",
             "generalizedText": "^#% d'augmentation des monstres magiques$",
             "options": {
@@ -878,7 +878,7 @@
         },
         {
             "id": 639399394,
-            "regex": "es u",
+            "regex": "tres u",
             "rawText": "Les Monstres Uniques ont un Effet bénéfique aléatoire|35% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres uniques ont un effet benefique aleatoire$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -890,7 +890,7 @@
         },
         {
             "id": 646965355,
-            "regex": "vee",
+            "regex": "rtes t",
             "rawText": "Les Monstres Rajoutent (70-80)% de leur Vie Maximale sous forme de Bouclier d'énergie|35% Davantage de Cartes trouvées dans la Zone",
             "generalizedText": "^les monstres rajoutent #% de leur vie maximale sous forme de bouclier d'energie$|^#% davantage de cartes trouvees dans la zone$",
             "options": {
@@ -914,7 +914,7 @@
         },
         {
             "id": 670500310,
-            "regex": "eut p",
+            "regex": "ut pas e",
             "rawText": "Les Monstres ne peuvent pas être Étourdis|La Vitesse d'action des Monstres ne peut pas être modifiée en deçà de sa valeur de base|La Vitesse de déplacement des Monstres ne peut pas être modifiée en deçà de sa valeur de base",
             "generalizedText": "^les monstres ne peuvent pas etre etourdis$|^la vitesse d'action des monstres ne peut pas etre modifiee en deca de sa valeur de base$|^la vitesse de deplacement des monstres ne peut pas etre modifiee en deca de sa valeur de base$",
             "options": {
@@ -926,7 +926,7 @@
         },
         {
             "id": 707446389,
-            "regex": "'exa",
+            "regex": "runes",
             "rawText": "La Zone contient des Runes de l'Exarque ardent",
             "generalizedText": "^la zone contient des runes de l'exarque ardent$",
             "options": {
@@ -950,7 +950,7 @@
         },
         {
             "id": 823410479,
-            "regex": "ne red",
+            "regex": "nt une r",
             "rawText": "Les Monstres gagnent une Réduction des Dégâts physiques de +(20-40)%",
             "generalizedText": "^les monstres gagnent une reduction des degats physiques de #%$",
             "options": {
@@ -962,7 +962,7 @@
         },
         {
             "id": 829751875,
-            "regex": "e de z",
+            "regex": "te de z",
             "rawText": "Les joueurs ont (15-25)% de Perte de Zone d'effet",
             "generalizedText": "^les joueurs ont #% de perte de zone d'effet$",
             "options": {
@@ -974,7 +974,7 @@
         },
         {
             "id": 955801458,
-            "regex": "deu",
+            "regex": "x bo",
             "rawText": "La Zone contient deux Boss Uniques",
             "generalizedText": "^la zone contient deux boss uniques$",
             "options": {
@@ -986,7 +986,7 @@
         },
         {
             "id": 972998450,
-            "regex": "ssu",
+            "regex": "usc",
             "rawText": "Les Monstres Rares de la zone Ressuscitent temporairement en mourant",
             "generalizedText": "^les monstres rares de la zone ressuscitent temporairement en mourant$",
             "options": {
@@ -1022,7 +1022,7 @@
         },
         {
             "id": 1061710360,
-            "regex": "ssai",
+            "regex": "sail",
             "rawText": "Les Joueurs sont assaillis par des Scies maculées de sang|47% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^les joueurs sont assaillis par des scies maculees de sang$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -1034,7 +1034,7 @@
         },
         {
             "id": 1062763755,
-            "regex": "fri",
+            "regex": "iant$",
             "rawText": "La Zone a des parcelles de Sol frigorifiant",
             "generalizedText": "^la zone a des parcelles de sol frigorifiant$",
             "options": {
@@ -1046,7 +1046,7 @@
         },
         {
             "id": 1078205993,
-            "regex": "res,",
+            "regex": "res, r",
             "rawText": "Les Monstres Rares ont des Épines élémentaires, renvoyant (900-1500) Dégâts élémentaires",
             "generalizedText": "^les monstres rares ont des epines elementaires, renvoyant # degats elementaires$",
             "options": {
@@ -1058,7 +1058,7 @@
         },
         {
             "id": 1082020744,
-            "regex": "es ab",
+            "regex": "s abo",
             "rawText": "La Zone est habitée par des Abominations",
             "generalizedText": "^la zone est habitee par des abominations$",
             "options": {
@@ -1070,7 +1070,7 @@
         },
         {
             "id": 1101434369,
-            "regex": "cep",
+            "regex": "eptee",
             "rawText": "Les Joueurs ont (25-60)% de Réduction de l'Effet des Auras (Malédictions exceptées) générées par des Aptitudes",
             "generalizedText": "^les joueurs ont #% de reduction de l'effet des auras (maledictions exceptees) generees par des aptitudes$",
             "options": {
@@ -1082,7 +1082,7 @@
         },
         {
             "id": 1117764869,
-            "regex": "nefa",
+            "regex": "dement$",
             "rawText": "Les Effets néfastes affectant les monstres expirent 100% plus rapidement|64% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^les effets nefastes affectant les monstres expirent #% plus rapidement$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -1130,7 +1130,7 @@
         },
         {
             "id": 1283094925,
-            "regex": "ir a",
+            "regex": "ir au t",
             "rawText": "Les Monstres gagnent une Charge de pouvoir au Toucher",
             "generalizedText": "^les monstres gagnent une charge de pouvoir au toucher$",
             "options": {
@@ -1142,7 +1142,7 @@
         },
         {
             "id": 1305115176,
-            "regex": "erer",
+            "regex": "rs n",
             "rawText": "Les joueurs ne peuvent Régénérer de Vie, de Mana ou de Bouclier d'énergie",
             "generalizedText": "^les joueurs ne peuvent regenerer de vie, de mana ou de bouclier d'energie$",
             "options": {
@@ -1154,7 +1154,7 @@
         },
         {
             "id": 1313044496,
-            "regex": "frac",
+            "regex": "ctur",
             "rawText": "Les Monstres Rares ont 25% de chances de se Fracturer en mourant",
             "generalizedText": "^les monstres rares ont #% de chances de se fracturer en mourant$",
             "options": {
@@ -1166,7 +1166,7 @@
         },
         {
             "id": 1333860371,
-            "regex": "cib",
+            "regex": "teo",
             "rawText": "Les Joueurs sont ciblés par un Météore lorsqu'ils utilisent un Flacon|45% Davantage d'Objets monétaires trouvés dans la Zone",
             "generalizedText": "^les joueurs sont cibles par un meteore lorsqu'ils utilisent un flacon$|^#% davantage d'objets monetaires trouves dans la zone$",
             "options": {
@@ -1190,7 +1190,7 @@
         },
         {
             "id": 1428847539,
-            "regex": "d'ex",
+            "regex": "d'expo",
             "rawText": "Vous ne pouvez pas infliger d'Expositions",
             "generalizedText": "^vous ne pouvez pas infliger d'expositions$",
             "options": {
@@ -1202,7 +1202,7 @@
         },
         {
             "id": 1464066514,
-            "regex": "ense",
+            "regex": "nses$",
             "rawText": "Les Joueurs ont (30-25)% de Perte de Défenses|35% Davantage de Scarabées trouvés dans la Zone",
             "generalizedText": "^les joueurs ont #% de perte de defenses$|^#% davantage de scarabees trouves dans la zone$",
             "options": {
@@ -1214,7 +1214,7 @@
         },
         {
             "id": 1469490158,
-            "regex": "tir",
+            "regex": "es ti",
             "rawText": "Les Monstres tirent 2 Projectiles supplémentaires|Les Monstres ont 100% d'Augmentation de Zone d'effet",
             "generalizedText": "^les monstres tirent # projectiles supplementaires$|^les monstres ont #% d'augmentation de zone d'effet$",
             "options": {
@@ -1238,7 +1238,7 @@
         },
         {
             "id": 1538178254,
-            "regex": "ril",
+            "regex": "eril",
             "rawText": "La Zone contient des Périls du Labyrinthe",
             "generalizedText": "^la zone contient des perils du labyrinthe$",
             "options": {
@@ -1250,7 +1250,7 @@
         },
         {
             "id": 1541760497,
-            "regex": "tour",
+            "regex": "dis$",
             "rawText": "Les Monstres ne peuvent pas être Étourdis|(15-30)% Davantage de Vie des Monstres",
             "generalizedText": "^les monstres ne peuvent pas etre etourdis$|^#% davantage de vie des monstres$",
             "options": {
@@ -1262,7 +1262,7 @@
         },
         {
             "id": 1551446200,
-            "regex": "ntre",
+            "regex": "ites$",
             "rawText": "Les Monstres ont Protection contre les Calamités",
             "generalizedText": "^les monstres ont protection contre les calamites$",
             "options": {
@@ -1286,7 +1286,7 @@
         },
         {
             "id": 1598599541,
-            "regex": "par c",
+            "regex": "r chai",
             "rawText": "Les Joueurs sont Maudits par Chaînes temporelles",
             "generalizedText": "^les joueurs sont maudits par chaines temporelles$",
             "options": {
@@ -1298,7 +1298,7 @@
         },
         {
             "id": 1634487773,
-            "regex": "tir",
+            "regex": "es ti",
             "rawText": "Les Monstres tirent 2 Projectiles supplémentaires",
             "generalizedText": "^les monstres tirent # projectiles supplementaires$",
             "options": {
@@ -1310,7 +1310,7 @@
         },
         {
             "id": 1665221611,
-            "regex": "yau",
+            "regex": "ble$",
             "rawText": "Les Monstres Rares ont un Noyau instable|53% Davantage de Scarabées trouvés dans la Zone",
             "generalizedText": "^les monstres rares ont un noyau instable$|^#% davantage de scarabees trouves dans la zone$",
             "options": {
@@ -1322,7 +1322,7 @@
         },
         {
             "id": 1723792253,
-            "regex": "fant",
+            "regex": "omes",
             "rawText": "La Zone est habitée par des Fantômes",
             "generalizedText": "^la zone est habitee par des fantomes$",
             "options": {
@@ -1334,7 +1334,7 @@
         },
         {
             "id": 1743546402,
-            "regex": "entra",
+            "regex": "avent",
             "rawText": "Les Sorts des Monstres Entravent au Toucher",
             "generalizedText": "^les sorts des monstres entravent au toucher$",
             "options": {
@@ -1346,7 +1346,7 @@
         },
         {
             "id": 1756122717,
-            "regex": "rod",
+            "regex": "erf",
             "rawText": "La Prodige interfère avec les Joueurs",
             "generalizedText": "^la prodige interfere avec les joueurs$",
             "options": {
@@ -1358,7 +1358,7 @@
         },
         {
             "id": 1799781772,
-            "regex": "roi",
+            "regex": "roid$",
             "rawText": "Les Monstres Rajoutent (50-110)% de leurs Dégâts physiques sous forme de Dégâts de froid",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats de froid$",
             "options": {
@@ -1370,7 +1370,7 @@
         },
         {
             "id": 1861748274,
-            "regex": "enn",
+            "regex": "mis$",
             "rawText": "Les Auras émanant des Aptitudes des Joueurs qui affectent les Alliés affectent également les Ennemis",
             "generalizedText": "^les auras emanant des aptitudes des joueurs qui affectent les allies affectent egalement les ennemis$",
             "options": {
@@ -1394,7 +1394,7 @@
         },
         {
             "id": 1899039946,
-            "regex": "t \\d+% d'augmentation de z",
+            "regex": "nt \\d+% d'augmentation de z",
             "rawText": "Les Monstres ont (45-100)% d'Augmentation de Zone d'effet",
             "generalizedText": "^les monstres ont #% d'augmentation de zone d'effet$",
             "options": {
@@ -1418,7 +1418,7 @@
         },
         {
             "id": 2080363489,
-            "regex": "ouj",
+            "regex": "ours$",
             "rawText": "Tous les Dégâts au Toucher des Monstres Embrasent toujours",
             "generalizedText": "^tous les degats au toucher des monstres embrasent toujours$",
             "options": {
@@ -1430,7 +1430,7 @@
         },
         {
             "id": 2105788016,
-            "regex": "voq",
+            "regex": "oques$",
             "rawText": "La Vitesse d'action des Monstres ne peut être modifiée en deçà de sa valeur de base|La Vitesse de déplacement des Monstres ne peut être modifiée en deçà de sa valeur de base|Les Monstres ne peuvent être Provoqués",
             "generalizedText": "^la vitesse d'action des monstres ne peut etre modifiee en deca de sa valeur de base$|^la vitesse de deplacement des monstres ne peut etre modifiee en deca de sa valeur de base$|^les monstres ne peuvent etre provoques$",
             "options": {
@@ -1442,7 +1442,7 @@
         },
         {
             "id": 2122294281,
-            "regex": "veu",
+            "regex": "glen",
             "rawText": "Les Monstres Aveuglent au Toucher",
             "generalizedText": "^les monstres aveuglent au toucher$",
             "options": {
@@ -1454,7 +1454,7 @@
         },
         {
             "id": 2132856290,
-            "regex": "e foud",
+            "regex": "e foudre$",
             "rawText": "Les Monstres Rajoutent (50-110)% de leurs Dégâts physiques sous forme de Dégâts de foudre",
             "generalizedText": "^les monstres rajoutent #% de leurs degats physiques sous forme de degats de foudre$",
             "options": {
@@ -1466,475 +1466,6 @@
         }
     ],
     "optimizationTable": {
-        "-2064669900:-645418310": {
-            "ids": [
-                -2064669900,
-                -645418310
-            ],
-            "regex": "'u",
-            "weight": 2,
-            "count": 2
-        },
-        "-2064669900:-106750911:284489036:829751875:1469490158:1899039946": {
-            "ids": [
-                -2064669900,
-                -106750911,
-                284489036,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "ne d'",
-            "weight": 7,
-            "count": 6
-        },
-        "-2064669900:-106750911:829751875:1469490158:1899039946": {
-            "ids": [
-                -2064669900,
-                -106750911,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "ne d'",
-            "weight": 7,
-            "count": 5
-        },
-        "-2064669900:-106750911:284489036:829751875:1469490158": {
-            "ids": [
-                -2064669900,
-                -106750911,
-                284489036,
-                829751875,
-                1469490158
-            ],
-            "regex": "ne d'",
-            "weight": 7,
-            "count": 5
-        },
-        "-2064669900:-106750911:284489036:1469490158:1899039946": {
-            "ids": [
-                -2064669900,
-                -106750911,
-                284489036,
-                1469490158,
-                1899039946
-            ],
-            "regex": "ne d'",
-            "weight": 7,
-            "count": 5
-        },
-        "-2064669900:-737013402:707446389:972998450": {
-            "ids": [
-                -2064669900,
-                -737013402,
-                707446389,
-                972998450
-            ],
-            "regex": "s de l",
-            "weight": 8,
-            "count": 4
-        },
-        "-2064669900:-1088873049:-106750911": {
-            "ids": [
-                -2064669900,
-                -1088873049,
-                -106750911
-            ],
-            "regex": "le bos",
-            "weight": 8,
-            "count": 3
-        },
-        "-2064669900:972998450": {
-            "ids": [
-                -2064669900,
-                972998450
-            ],
-            "regex": "s de la",
-            "weight": 9,
-            "count": 2
-        },
-        "-2050206104:-1616686189:646965355:1205583947:1305115176": {
-            "ids": [
-                -2050206104,
-                -1616686189,
-                646965355,
-                1205583947,
-                1305115176
-            ],
-            "regex": "ucl",
-            "weight": 3,
-            "count": 5
-        },
-        "-2050206104:646965355:1205583947:1305115176": {
-            "ids": [
-                -2050206104,
-                646965355,
-                1205583947,
-                1305115176
-            ],
-            "regex": "ucl",
-            "weight": 3,
-            "count": 4
-        },
-        "-2050206104:-1616686189:-225071089:357242916:646965355:1205583947:1305115176": {
-            "ids": [
-                -2050206104,
-                -1616686189,
-                -225071089,
-                357242916,
-                646965355,
-                1205583947,
-                1305115176
-            ],
-            "regex": "d'en",
-            "weight": 4,
-            "count": 7
-        },
-        "-2050206104:-225071089:357242916:646965355:1205583947:1305115176": {
-            "ids": [
-                -2050206104,
-                -225071089,
-                357242916,
-                646965355,
-                1205583947,
-                1305115176
-            ],
-            "regex": "d'en",
-            "weight": 4,
-            "count": 6
-        },
-        "-2050206104:-1358177810:-1088873049:670500310:1541760497": {
-            "ids": [
-                -2050206104,
-                -1358177810,
-                -1088873049,
-                670500310,
-                1541760497
-            ],
-            "regex": "e et",
-            "weight": 6,
-            "count": 5
-        },
-        "-2050206104:-1088873049:-539026720:1101434369": {
-            "ids": [
-                -2050206104,
-                -1088873049,
-                -539026720,
-                1101434369
-            ],
-            "regex": "et d",
-            "weight": 6,
-            "count": 4
-        },
-        "-2050206104:-1772662453:-1616686189:646965355:1205583947:1305115176:1428847539": {
-            "ids": [
-                -2050206104,
-                -1772662453,
-                -1616686189,
-                646965355,
-                1205583947,
-                1305115176,
-                1428847539
-            ],
-            "regex": "r d'",
-            "weight": 6,
-            "count": 7
-        },
-        "-2050206104:-1772662453:646965355:1205583947:1305115176:1428847539": {
-            "ids": [
-                -2050206104,
-                -1772662453,
-                646965355,
-                1205583947,
-                1305115176,
-                1428847539
-            ],
-            "regex": "r d'",
-            "weight": 6,
-            "count": 6
-        },
-        "-2050206104:-875993462:-106750911:1205583947:1305115176:1541760497": {
-            "ids": [
-                -2050206104,
-                -875993462,
-                -106750911,
-                1205583947,
-                1305115176,
-                1541760497
-            ],
-            "regex": "e vie",
-            "weight": 7,
-            "count": 6
-        },
-        "-2050206104:-875993462:-172005981:-106750911:1205583947:1305115176:1541760497": {
-            "ids": [
-                -2050206104,
-                -875993462,
-                -172005981,
-                -106750911,
-                1205583947,
-                1305115176,
-                1541760497
-            ],
-            "regex": "e vie",
-            "weight": 7,
-            "count": 7
-        },
-        "-2050206104:-539026720:1101434369": {
-            "ids": [
-                -2050206104,
-                -539026720,
-                1101434369
-            ],
-            "regex": "et de",
-            "weight": 7,
-            "count": 3
-        },
-        "-2050206104:-1616686189:646965355:1305115176": {
-            "ids": [
-                -2050206104,
-                -1616686189,
-                646965355,
-                1305115176
-            ],
-            "regex": "de bo",
-            "weight": 7,
-            "count": 4
-        },
-        "-2050206104:-1616686189:646965355:1205583947:1305115176:1428847539": {
-            "ids": [
-                -2050206104,
-                -1616686189,
-                646965355,
-                1205583947,
-                1305115176,
-                1428847539
-            ],
-            "regex": "er d'",
-            "weight": 7,
-            "count": 6
-        },
-        "-2050206104:-1358177810": {
-            "ids": [
-                -2050206104,
-                -1358177810
-            ],
-            "regex": "ie et",
-            "weight": 7,
-            "count": 2
-        },
-        "-2050206104:646965355:1305115176": {
-            "ids": [
-                -2050206104,
-                646965355,
-                1305115176
-            ],
-            "regex": "de bo",
-            "weight": 7,
-            "count": 3
-        },
-        "-2050206104:646965355:1205583947:1305115176:1428847539": {
-            "ids": [
-                -2050206104,
-                646965355,
-                1205583947,
-                1305115176,
-                1428847539
-            ],
-            "regex": "er d'",
-            "weight": 7,
-            "count": 5
-        },
-        "-2050206104:-1088873049": {
-            "ids": [
-                -2050206104,
-                -1088873049
-            ],
-            "regex": "e et d",
-            "weight": 8,
-            "count": 2
-        },
-        "-2050206104:-1088873049:-106750911:1205583947": {
-            "ids": [
-                -2050206104,
-                -1088873049,
-                -106750911,
-                1205583947
-            ],
-            "regex": "n de v",
-            "weight": 8,
-            "count": 4
-        },
-        "-2050206104:-1473394034": {
-            "ids": [
-                -2050206104,
-                -1473394034
-            ],
-            "regex": "e de r",
-            "weight": 8,
-            "count": 2
-        },
-        "-2050206104:-1473394034:-114660370:284489036:829751875:1464066514": {
-            "ids": [
-                -2050206104,
-                -1473394034,
-                -114660370,
-                284489036,
-                829751875,
-                1464066514
-            ],
-            "regex": "rte de",
-            "weight": 8,
-            "count": 6
-        },
-        "-2050206104:-1473394034:-114660370:829751875:1464066514": {
-            "ids": [
-                -2050206104,
-                -1473394034,
-                -114660370,
-                829751875,
-                1464066514
-            ],
-            "regex": "rte de",
-            "weight": 8,
-            "count": 5
-        },
-        "-2050206104:-1473394034:-114660370:284489036:1464066514": {
-            "ids": [
-                -2050206104,
-                -1473394034,
-                -114660370,
-                284489036,
-                1464066514
-            ],
-            "regex": "rte de",
-            "weight": 8,
-            "count": 5
-        },
-        "-2050206104:-1088873049:-106750911": {
-            "ids": [
-                -2050206104,
-                -1088873049,
-                -106750911
-            ],
-            "regex": "on de v",
-            "weight": 9,
-            "count": 3
-        },
-        "-2050206104:-106750911:1205583947": {
-            "ids": [
-                -2050206104,
-                -106750911,
-                1205583947
-            ],
-            "regex": "n de vie",
-            "weight": 10,
-            "count": 3
-        },
-        "-2050206104:-1158025910": {
-            "ids": [
-                -2050206104,
-                -1158025910
-            ],
-            "regex": "ration d",
-            "weight": 10,
-            "count": 2
-        },
-        "-2038489408:-1616686189:-477049138:646965355:1205583947": {
-            "ids": [
-                -2038489408,
-                -1616686189,
-                -477049138,
-                646965355,
-                1205583947
-            ],
-            "regex": "xima",
-            "weight": 4,
-            "count": 5
-        },
-        "-2038489408:-477049138:646965355:1205583947": {
-            "ids": [
-                -2038489408,
-                -477049138,
-                646965355,
-                1205583947
-            ],
-            "regex": "xima",
-            "weight": 4,
-            "count": 4
-        },
-        "-2038489408:-1616686189:646965355:1205583947": {
-            "ids": [
-                -2038489408,
-                -1616686189,
-                646965355,
-                1205583947
-            ],
-            "regex": "xima",
-            "weight": 4,
-            "count": 4
-        },
-        "-2038489408:-1616686189:-477049138:646965355": {
-            "ids": [
-                -2038489408,
-                -1616686189,
-                -477049138,
-                646965355
-            ],
-            "regex": "imale",
-            "weight": 5,
-            "count": 4
-        },
-        "-2038489408:-477049138:646965355": {
-            "ids": [
-                -2038489408,
-                -477049138,
-                646965355
-            ],
-            "regex": "imale",
-            "weight": 5,
-            "count": 3
-        },
-        "-2038489408:-1616686189:646965355": {
-            "ids": [
-                -2038489408,
-                -1616686189,
-                646965355
-            ],
-            "regex": "imale",
-            "weight": 5,
-            "count": 3
-        },
-        "-2038489408:-1158025910": {
-            "ids": [
-                -2038489408,
-                -1158025910
-            ],
-            "regex": "es res",
-            "weight": 8,
-            "count": 2
-        },
-        "-2038489408:-1158025910:-477049138": {
-            "ids": [
-                -2038489408,
-                -1158025910,
-                -477049138
-            ],
-            "regex": "es res",
-            "weight": 8,
-            "count": 3
-        },
-        "-1940135977:-999805715:2105788016": {
-            "ids": [
-                -1940135977,
-                -999805715,
-                2105788016
-            ],
-            "regex": "oq",
-            "weight": 2,
-            "count": 3
-        },
         "-1940135977:-1430865583:-875993462:-105914721:1061710360:1117764869:1333860371": {
             "ids": [
                 -1940135977,
@@ -1945,275 +1476,9 @@
                 1117764869,
                 1333860371
             ],
-            "regex": "'o",
-            "weight": 2,
-            "count": 7
-        },
-        "-1940135977:-1088873049:-933231182:17483843": {
-            "ids": [
-                -1940135977,
-                -1088873049,
-                -933231182,
-                17483843
-            ],
-            "regex": "'at",
-            "weight": 3,
-            "count": 4
-        },
-        "-1940135977:-1204380788:-1088873049:-933231182:-80588106:17483843": {
-            "ids": [
-                -1940135977,
-                -1204380788,
-                -1088873049,
-                -933231182,
-                -80588106,
-                17483843
-            ],
-            "regex": "taq",
-            "weight": 3,
-            "count": 6
-        },
-        "-1940135977:-999805715": {
-            "ids": [
-                -1940135977,
-                -999805715
-            ],
-            "regex": "loq",
-            "weight": 3,
-            "count": 2
-        },
-        "-1940135977:-1204380788:-645418310:-166549521:357242916": {
-            "ids": [
-                -1940135977,
-                -1204380788,
-                -645418310,
-                -166549521,
-                357242916
-            ],
-            "regex": "s d'",
-            "weight": 6,
-            "count": 5
-        },
-        "-1940135977:-645418310": {
-            "ids": [
-                -1940135977,
-                -645418310
-            ],
-            "regex": "ts d'",
-            "weight": 7,
-            "count": 2
-        },
-        "-1940135977:-938285245:-268547495:252096506": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -268547495,
-                252096506
-            ],
-            "regex": "er les",
-            "weight": 8,
-            "count": 4
-        },
-        "-1940135977:-938285245:252096506": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                252096506
-            ],
-            "regex": "er les",
-            "weight": 8,
-            "count": 3
-        },
-        "-1940135977:-1772662453:-1204380788:-938285245:-627831782:-166549521:1313044496": {
-            "ids": [
-                -1940135977,
-                -1772662453,
-                -1204380788,
-                -938285245,
-                -627831782,
-                -166549521,
-                1313044496
-            ],
-            "regex": "% de c",
+            "regex": "ge d'o",
             "weight": 8,
             "count": 7
-        },
-        "-1940135977:-938285245:-268547495:-126908257:472035128:1014295028:2080363489": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -268547495,
-                -126908257,
-                472035128,
-                1014295028,
-                2080363489
-            ],
-            "regex": "les deg",
-            "weight": 9,
-            "count": 7
-        },
-        "-1940135977:-938285245:-268547495": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -268547495
-            ],
-            "regex": "r les d",
-            "weight": 9,
-            "count": 3
-        },
-        "-1940135977:-938285245": {
-            "ids": [
-                -1940135977,
-                -938285245
-            ],
-            "regex": "r les d",
-            "weight": 9,
-            "count": 2
-        },
-        "-1940135977:-938285245:-126908257:472035128:1014295028:2080363489": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -126908257,
-                472035128,
-                1014295028,
-                2080363489
-            ],
-            "regex": "les deg",
-            "weight": 9,
-            "count": 6
-        },
-        "-1940135977:-938285245:-580302769:-268547495:-126908257": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -580302769,
-                -268547495,
-                -126908257
-            ],
-            "regex": "s degats d",
-            "weight": 12,
-            "count": 5
-        },
-        "-1940135977:-938285245:-580302769:-126908257": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -580302769,
-                -126908257
-            ],
-            "regex": "s degats d",
-            "weight": 12,
-            "count": 4
-        },
-        "-1940135977:-1772662453:-938285245:-627831782:-268547495:1313044496": {
-            "ids": [
-                -1940135977,
-                -1772662453,
-                -938285245,
-                -627831782,
-                -268547495,
-                1313044496
-            ],
-            "regex": "e chances de",
-            "weight": 14,
-            "count": 6
-        },
-        "-1940135977:-938285245:-268547495:-126908257": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -268547495,
-                -126908257
-            ],
-            "regex": "les degats d",
-            "weight": 14,
-            "count": 4
-        },
-        "-1940135977:-938285245:-126908257": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                -126908257
-            ],
-            "regex": "les degats d",
-            "weight": 14,
-            "count": 3
-        },
-        "-1940135977:-1772662453:-938285245:-627831782:1313044496": {
-            "ids": [
-                -1940135977,
-                -1772662453,
-                -938285245,
-                -627831782,
-                1313044496
-            ],
-            "regex": "e chances de",
-            "weight": 14,
-            "count": 5
-        },
-        "-1934587276:1117764869": {
-            "ids": [
-                -1934587276,
-                1117764869
-            ],
-            "regex": "cta",
-            "weight": 3,
-            "count": 2
-        },
-        "-1934587276:-645418310:-26777606:10729340:127168403:1799781772:2132856290": {
-            "ids": [
-                -1934587276,
-                -645418310,
-                -26777606,
-                10729340,
-                127168403,
-                1799781772,
-                2132856290
-            ],
-            "regex": "urs d",
-            "weight": 7,
-            "count": 7
-        },
-        "-1934587276:-645418310:-26777606:10729340:1799781772:2132856290": {
-            "ids": [
-                -1934587276,
-                -645418310,
-                -26777606,
-                10729340,
-                1799781772,
-                2132856290
-            ],
-            "regex": "urs d",
-            "weight": 7,
-            "count": 6
-        },
-        "-1934587276:-938285245:-210607554:58884108:151806012:775962019:1061710360": {
-            "ids": [
-                -1934587276,
-                -938285245,
-                -210607554,
-                58884108,
-                151806012,
-                775962019,
-                1061710360
-            ],
-            "regex": "des s",
-            "weight": 7,
-            "count": 7
-        },
-        "-1934587276:-210607554:58884108:775962019:1061710360": {
-            "ids": [
-                -1934587276,
-                -210607554,
-                58884108,
-                775962019,
-                1061710360
-            ],
-            "regex": "r des s",
-            "weight": 9,
-            "count": 5
         },
         "-1934587276:-210607554:58884108:775962019": {
             "ids": [
@@ -2226,45 +1491,6 @@
             "weight": 13,
             "count": 4
         },
-        "-1818595967:-763914456:-105914721:1333860371": {
-            "ids": [
-                -1818595967,
-                -763914456,
-                -105914721,
-                1333860371
-            ],
-            "regex": "aco",
-            "weight": 3,
-            "count": 4
-        },
-        "-1818595967:-106071007:339937661:357242916:647925005:1061710360:1333860371": {
-            "ids": [
-                -1818595967,
-                -106071007,
-                339937661,
-                357242916,
-                647925005,
-                1061710360,
-                1333860371
-            ],
-            "regex": "sont",
-            "weight": 4,
-            "count": 7
-        },
-        "-1818595967:-1647756153:-1430865583:-683043845:972998450:1313044496:1665221611": {
-            "ids": [
-                -1818595967,
-                -1647756153,
-                -1430865583,
-                -683043845,
-                972998450,
-                1313044496,
-                1665221611
-            ],
-            "regex": "rares",
-            "weight": 5,
-            "count": 7
-        },
         "-1818595967:-1430865583:-235013251:1078205993": {
             "ids": [
                 -1818595967,
@@ -2272,8 +1498,8 @@
                 -235013251,
                 1078205993
             ],
-            "regex": "ont d",
-            "weight": 7,
+            "regex": "ont des e",
+            "weight": 11,
             "count": 4
         },
         "-1818595967:-1430865583": {
@@ -2281,232 +1507,18 @@
                 -1818595967,
                 -1430865583
             ],
-            "regex": "ont d",
-            "weight": 7,
+            "regex": "ont des e",
+            "weight": 11,
             "count": 2
-        },
-        "-1818595967:-106071007": {
-            "ids": [
-                -1818595967,
-                -106071007
-            ],
-            "regex": "es son",
-            "weight": 8,
-            "count": 2
-        },
-        "-1772662453:-627831782": {
-            "ids": [
-                -1772662453,
-                -627831782
-            ],
-            "regex": "bir",
-            "weight": 3,
-            "count": 2
-        },
-        "-1772662453:-627831782:-54649013:472035128": {
-            "ids": [
-                -1772662453,
-                -627831782,
-                -54649013,
-                472035128
-            ],
-            "regex": "ubi",
-            "weight": 3,
-            "count": 4
-        },
-        "-1772662453:-1430865583:-1158025910:-54649013:1078205993:1469490158:1634487773": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                -54649013,
-                1078205993,
-                1469490158,
-                1634487773
-            ],
-            "regex": "ntaires",
-            "weight": 7,
-            "count": 7
-        },
-        "-1772662453:-1430865583:-1158025910:-54649013:1078205993:1469490158": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                -54649013,
-                1078205993,
-                1469490158
-            ],
-            "regex": "ntaires",
-            "weight": 7,
-            "count": 6
-        },
-        "-1772662453:-1430865583:-1158025910:-54649013:1469490158:1634487773": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                -54649013,
-                1469490158,
-                1634487773
-            ],
-            "regex": "ntaires",
-            "weight": 7,
-            "count": 6
-        },
-        "-1772662453:-887278806:-627831782": {
-            "ids": [
-                -1772662453,
-                -887278806,
-                -627831782
-            ],
-            "regex": "s de n",
-            "weight": 8,
-            "count": 3
-        },
-        "-1772662453:-1430865583:-1158025910:-694214737:-258709095:1078205993": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                -694214737,
-                -258709095,
-                1078205993
-            ],
-            "regex": "elementai",
-            "weight": 9,
-            "count": 6
-        },
-        "-1772662453:1101434369": {
-            "ids": [
-                -1772662453,
-                1101434369
-            ],
-            "regex": "tions e",
-            "weight": 9,
-            "count": 2
-        },
-        "-1772662453:-1430865583:-1158025910:-694214737:-258709095": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                -694214737,
-                -258709095
-            ],
-            "regex": "elementai",
-            "weight": 9,
-            "count": 5
-        },
-        "-1772662453:-1430865583:-1158025910:1078205993": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910,
-                1078205993
-            ],
-            "regex": "elementaires",
-            "weight": 12,
-            "count": 4
-        },
-        "-1772662453:-1430865583:-1158025910": {
-            "ids": [
-                -1772662453,
-                -1430865583,
-                -1158025910
-            ],
-            "regex": "elementaires",
-            "weight": 12,
-            "count": 3
-        },
-        "-1647756153:-1621497665:-1099682289:-683043845:357242916:1494523238": {
-            "ids": [
-                -1647756153,
-                -1621497665,
-                -1099682289,
-                -683043845,
-                357242916,
-                1494523238
-            ],
-            "regex": "nom",
-            "weight": 3,
-            "count": 6
-        },
-        "-1647756153:-1621497665:-1099682289:357242916:1494523238": {
-            "ids": [
-                -1647756153,
-                -1621497665,
-                -1099682289,
-                357242916,
-                1494523238
-            ],
-            "regex": "nom",
-            "weight": 3,
-            "count": 5
-        },
-        "-1647756153:-54649013:1469490158:1634487773": {
-            "ids": [
-                -1647756153,
-                -54649013,
-                1469490158,
-                1634487773
-            ],
-            "regex": "uppl",
-            "weight": 4,
-            "count": 4
-        },
-        "-1647756153:-54649013:1469490158": {
-            "ids": [
-                -1647756153,
-                -54649013,
-                1469490158
-            ],
-            "regex": "uppl",
-            "weight": 4,
-            "count": 3
-        },
-        "-1647756153:-1621497665:-683043845:357242916:1494523238": {
-            "ids": [
-                -1647756153,
-                -1621497665,
-                -683043845,
-                357242916,
-                1494523238
-            ],
-            "regex": "u n",
-            "weight": 5,
-            "count": 5
-        },
-        "-1647756153:-1621497665:357242916:1494523238": {
-            "ids": [
-                -1647756153,
-                -1621497665,
-                357242916,
-                1494523238
-            ],
-            "regex": "u n",
-            "weight": 5,
-            "count": 4
         },
         "-1647756153:-683043845": {
             "ids": [
                 -1647756153,
                 -683043845
             ],
-            "regex": "du n",
-            "weight": 6,
+            "regex": "e de mo",
+            "weight": 9,
             "count": 2
-        },
-        "-1647756153:-126908257:1014295028:2080363489": {
-            "ids": [
-                -1647756153,
-                -126908257,
-                1014295028,
-                2080363489
-            ],
-            "regex": "us le",
-            "weight": 7,
-            "count": 4
         },
         "-1647756153:-1430865583:-235013251:1078205993:1313044496:1665221611": {
             "ids": [
@@ -2517,8 +1529,8 @@
                 1313044496,
                 1665221611
             ],
-            "regex": "ares o",
-            "weight": 8,
+            "regex": "ares on",
+            "weight": 9,
             "count": 6
         },
         "-1647756153:-1430865583:1313044496:1665221611": {
@@ -2528,37 +1540,9 @@
                 1313044496,
                 1665221611
             ],
-            "regex": "ares o",
-            "weight": 8,
+            "regex": "ares on",
+            "weight": 9,
             "count": 4
-        },
-        "-1647756153:-683043845:151806012": {
-            "ids": [
-                -1647756153,
-                -683043845,
-                151806012
-            ],
-            "regex": "tation du",
-            "weight": 11,
-            "count": 3
-        },
-        "-1647756153:151806012": {
-            "ids": [
-                -1647756153,
-                151806012
-            ],
-            "regex": "tation du",
-            "weight": 11,
-            "count": 2
-        },
-        "-1629200695:1061710360": {
-            "ids": [
-                -1629200695,
-                1061710360
-            ],
-            "regex": "acu",
-            "weight": 3,
-            "count": 2
         },
         "-1629200695:-1099682289:-887278806:707446389:955801458:1538178254:1932675161": {
             "ids": [
@@ -2570,54 +1554,9 @@
                 1538178254,
                 1932675161
             ],
-            "regex": "conti",
-            "weight": 5,
+            "regex": "ntient",
+            "weight": 6,
             "count": 7
-        },
-        "-1629200695:1469490158:1634487773": {
-            "ids": [
-                -1629200695,
-                1469490158,
-                1634487773
-            ],
-            "regex": "tres t",
-            "weight": 8,
-            "count": 3
-        },
-        "-1629200695:1469490158": {
-            "ids": [
-                -1629200695,
-                1469490158
-            ],
-            "regex": "tres t",
-            "weight": 8,
-            "count": 2
-        },
-        "-1629200695:-933231182:-539026720:17483843:670500310:1932675161:2105788016": {
-            "ids": [
-                -1629200695,
-                -933231182,
-                -539026720,
-                17483843,
-                670500310,
-                1932675161,
-                2105788016
-            ],
-            "regex": "t des m",
-            "weight": 9,
-            "count": 7
-        },
-        "-1629200695:-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -1629200695,
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "t des mo",
-            "weight": 10,
-            "count": 5
         },
         "-1629200695:-933231182:17483843:670500310:1932675161:2105788016": {
             "ids": [
@@ -2628,8 +1567,8 @@
                 1932675161,
                 2105788016
             ],
-            "regex": "nt des m",
-            "weight": 10,
+            "regex": "ent des m",
+            "weight": 11,
             "count": 6
         },
         "-1629200695:-887278806:707446389:1538178254:1932675161": {
@@ -2644,6 +1583,27 @@
             "weight": 11,
             "count": 5
         },
+        "-1629200695:-933231182:17483843:670500310:2105788016": {
+            "ids": [
+                -1629200695,
+                -933231182,
+                17483843,
+                670500310,
+                2105788016
+            ],
+            "regex": "ent des mo",
+            "weight": 12,
+            "count": 5
+        },
+        "-1621497665:-1094717370": {
+            "ids": [
+                -1621497665,
+                -1094717370
+            ],
+            "regex": "sie a",
+            "weight": 7,
+            "count": 2
+        },
         "-1621497665:-938285245:-931745379:357242916:639399394:646965355:1494523238": {
             "ids": [
                 -1621497665,
@@ -2654,8 +1614,8 @@
                 646965355,
                 1494523238
             ],
-            "regex": "vee",
-            "weight": 3,
+            "regex": "rtes t",
+            "weight": 8,
             "count": 7
         },
         "-1621497665:-1094717370:-258709095:-225071089:357242916:1283094925:1494523238": {
@@ -2668,8 +1628,8 @@
                 1283094925,
                 1494523238
             ],
-            "regex": "gnen",
-            "weight": 4,
+            "regex": "res ga",
+            "weight": 8,
             "count": 7
         },
         "-1621497665:-1094717370:-258709095:-225071089:357242916:823410479:1494523238": {
@@ -2682,8 +1642,8 @@
                 823410479,
                 1494523238
             ],
-            "regex": "gnen",
-            "weight": 4,
+            "regex": "res ga",
+            "weight": 8,
             "count": 7
         },
         "-1621497665:-258709095:-225071089:357242916:823410479:1283094925:1494523238": {
@@ -2696,40 +1656,9 @@
                 1283094925,
                 1494523238
             ],
-            "regex": "gnen",
-            "weight": 4,
+            "regex": "res ga",
+            "weight": 8,
             "count": 7
-        },
-        "-1621497665:357242916:1494523238": {
-            "ids": [
-                -1621497665,
-                357242916,
-                1494523238
-            ],
-            "regex": "au n",
-            "weight": 6,
-            "count": 3
-        },
-        "-1621497665:-1358177810:-763914456:357242916:1494523238": {
-            "ids": [
-                -1621497665,
-                -1358177810,
-                -763914456,
-                357242916,
-                1494523238
-            ],
-            "regex": "ges d",
-            "weight": 7,
-            "count": 5
-        },
-        "-1621497665:-1094717370": {
-            "ids": [
-                -1621497665,
-                -1094717370
-            ],
-            "regex": "e fre",
-            "weight": 7,
-            "count": 2
         },
         "-1621497665:-1094717370:-225071089:357242916:1283094925:1494523238": {
             "ids": [
@@ -2740,9 +1669,19 @@
                 1283094925,
                 1494523238
             ],
-            "regex": "rge d",
-            "weight": 7,
+            "regex": "nt une ch",
+            "weight": 11,
             "count": 6
+        },
+        "-1621497665:357242916:1494523238": {
+            "ids": [
+                -1621497665,
+                357242916,
+                1494523238
+            ],
+            "regex": "t \\d+ au",
+            "weight": 11,
+            "count": 3
         },
         "-1621497665:-1094717370:-225071089:357242916:1494523238": {
             "ids": [
@@ -2752,8 +1691,8 @@
                 357242916,
                 1494523238
             ],
-            "regex": "rge d",
-            "weight": 7,
+            "regex": "nt une ch",
+            "weight": 11,
             "count": 5
         },
         "-1621497665:-225071089:357242916:1283094925:1494523238": {
@@ -2764,111 +1703,9 @@
                 1283094925,
                 1494523238
             ],
-            "regex": "rge d",
-            "weight": 7,
+            "regex": "nt une ch",
+            "weight": 11,
             "count": 5
-        },
-        "-1621497665:-763914456:-26777606:1799781772:2132856290": {
-            "ids": [
-                -1621497665,
-                -763914456,
-                -26777606,
-                1799781772,
-                2132856290
-            ],
-            "regex": "s de f",
-            "weight": 8,
-            "count": 5
-        },
-        "-1621497665:-1358177810:-763914456:1494523238": {
-            "ids": [
-                -1621497665,
-                -1358177810,
-                -763914456,
-                1494523238
-            ],
-            "regex": "ges de",
-            "weight": 8,
-            "count": 4
-        },
-        "-1621497665:-1094717370:1283094925:1494523238": {
-            "ids": [
-                -1621497665,
-                -1094717370,
-                1283094925,
-                1494523238
-            ],
-            "regex": "rge de",
-            "weight": 8,
-            "count": 4
-        },
-        "-1621497665:-1358177810:-1094717370:-225071089": {
-            "ids": [
-                -1621497665,
-                -1358177810,
-                -1094717370,
-                -225071089
-            ],
-            "regex": "e au t",
-            "weight": 8,
-            "count": 4
-        },
-        "-1621497665:-1094717370:1494523238": {
-            "ids": [
-                -1621497665,
-                -1094717370,
-                1494523238
-            ],
-            "regex": "rge de",
-            "weight": 8,
-            "count": 3
-        },
-        "-1621497665:1283094925:1494523238": {
-            "ids": [
-                -1621497665,
-                1283094925,
-                1494523238
-            ],
-            "regex": "rge de",
-            "weight": 8,
-            "count": 3
-        },
-        "-1621497665:-1358177810:-225071089": {
-            "ids": [
-                -1621497665,
-                -1358177810,
-                -225071089
-            ],
-            "regex": "e au t",
-            "weight": 8,
-            "count": 3
-        },
-        "-1621497665:1799781772": {
-            "ids": [
-                -1621497665,
-                1799781772
-            ],
-            "regex": "s de fr",
-            "weight": 9,
-            "count": 2
-        },
-        "-1621497665:-763914456": {
-            "ids": [
-                -1621497665,
-                -763914456
-            ],
-            "regex": "es de f",
-            "weight": 9,
-            "count": 2
-        },
-        "-1621497665:1494523238": {
-            "ids": [
-                -1621497665,
-                1494523238
-            ],
-            "regex": "e charges de",
-            "weight": 14,
-            "count": 2
         },
         "-1616686189:-645418310:-26777606:10729340:646965355:1799781772:2132856290": {
             "ids": [
@@ -2880,133 +1717,9 @@
                 1799781772,
                 2132856290
             ],
-            "regex": "ajo",
-            "weight": 3,
+            "regex": "es raj",
+            "weight": 8,
             "count": 7
-        },
-        "-1616686189:-477049138:646965355:1205583947": {
-            "ids": [
-                -1616686189,
-                -477049138,
-                646965355,
-                1205583947
-            ],
-            "regex": "xima",
-            "weight": 4,
-            "count": 4
-        },
-        "-1616686189:-477049138:646965355": {
-            "ids": [
-                -1616686189,
-                -477049138,
-                646965355
-            ],
-            "regex": "imale",
-            "weight": 5,
-            "count": 3
-        },
-        "-1616686189:646965355": {
-            "ids": [
-                -1616686189,
-                646965355
-            ],
-            "regex": "eur v",
-            "weight": 7,
-            "count": 2
-        },
-        "-1616686189:646965355:1205583947": {
-            "ids": [
-                -1616686189,
-                646965355,
-                1205583947
-            ],
-            "regex": "ie max",
-            "weight": 8,
-            "count": 3
-        },
-        "-1473394034:-1088873049:-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -1473394034,
-                -1088873049,
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "vite",
-            "weight": 4,
-            "count": 6
-        },
-        "-1473394034:-1088873049": {
-            "ids": [
-                -1473394034,
-                -1088873049
-            ],
-            "regex": "e vit",
-            "weight": 7,
-            "count": 2
-        },
-        "-1473394034:-875993462:1541760497": {
-            "ids": [
-                -1473394034,
-                -875993462,
-                1541760497
-            ],
-            "regex": "e de v",
-            "weight": 8,
-            "count": 3
-        },
-        "-1473394034:-875993462:-172005981:1541760497": {
-            "ids": [
-                -1473394034,
-                -875993462,
-                -172005981,
-                1541760497
-            ],
-            "regex": "e de v",
-            "weight": 8,
-            "count": 4
-        },
-        "-1473394034:-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -1473394034,
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "sse de",
-            "weight": 8,
-            "count": 5
-        },
-        "-1430865583:-949334443:-235013251:1078205993": {
-            "ids": [
-                -1430865583,
-                -949334443,
-                -235013251,
-                1078205993
-            ],
-            "regex": "env",
-            "weight": 3,
-            "count": 4
-        },
-        "-1430865583:-949334443": {
-            "ids": [
-                -1430865583,
-                -949334443
-            ],
-            "regex": "env",
-            "weight": 3,
-            "count": 2
-        },
-        "-1430865583:-235013251": {
-            "ids": [
-                -1430865583,
-                -235013251
-            ],
-            "regex": "ues,",
-            "weight": 4,
-            "count": 2
         },
         "-1430865583:-235013251:1078205993": {
             "ids": [
@@ -3014,148 +1727,25 @@
                 -235013251,
                 1078205993
             ],
-            "regex": "pine",
-            "weight": 4,
+            "regex": "nvoya",
+            "weight": 5,
             "count": 3
+        },
+        "-1430865583:-235013251": {
+            "ids": [
+                -1430865583,
+                -235013251
+            ],
+            "regex": "ues, r",
+            "weight": 8,
+            "count": 2
         },
         "-1430865583:1078205993": {
             "ids": [
                 -1430865583,
                 1078205993
             ],
-            "regex": "res,",
-            "weight": 4,
-            "count": 2
-        },
-        "-1430865583:775962019:1078205993": {
-            "ids": [
-                -1430865583,
-                775962019,
-                1078205993
-            ],
-            "regex": "nes e",
-            "weight": 7,
-            "count": 3
-        },
-        "-1430865583:775962019": {
-            "ids": [
-                -1430865583,
-                775962019
-            ],
-            "regex": "nes e",
-            "weight": 7,
-            "count": 2
-        },
-        "-1430865583:-235013251:10729340:1078205993": {
-            "ids": [
-                -1430865583,
-                -235013251,
-                10729340,
-                1078205993
-            ],
-            "regex": "ant \\d+",
-            "weight": 10,
-            "count": 4
-        },
-        "-1430865583:10729340": {
-            "ids": [
-                -1430865583,
-                10729340
-            ],
-            "regex": "ant \\d+",
-            "weight": 10,
-            "count": 2
-        },
-        "-1430865583:-1158025910:1078205993": {
-            "ids": [
-                -1430865583,
-                -1158025910,
-                1078205993
-            ],
-            "regex": "es elementai",
-            "weight": 14,
-            "count": 3
-        },
-        "-1358177810:-694214737:-258709095:-225071089": {
-            "ids": [
-                -1358177810,
-                -694214737,
-                -258709095,
-                -225071089
-            ],
-            "regex": "ce au",
-            "weight": 7,
-            "count": 4
-        },
-        "-1358177810:252096506:1283094925:1428847539:1494523238": {
-            "ids": [
-                -1358177810,
-                252096506,
-                1283094925,
-                1428847539,
-                1494523238
-            ],
-            "regex": "e pou",
-            "weight": 7,
-            "count": 5
-        },
-        "-1358177810:252096506:1428847539:1494523238": {
-            "ids": [
-                -1358177810,
-                252096506,
-                1428847539,
-                1494523238
-            ],
-            "regex": "e pou",
-            "weight": 7,
-            "count": 4
-        },
-        "-1358177810:-949334443:-481946502:1494523238": {
-            "ids": [
-                -1358177810,
-                -949334443,
-                -481946502,
-                1494523238
-            ],
-            "regex": "s de p",
-            "weight": 8,
-            "count": 4
-        },
-        "-1358177810:-763914456": {
-            "ids": [
-                -1358177810,
-                -763914456
-            ],
-            "regex": "s char",
-            "weight": 8,
-            "count": 2
-        },
-        "-1358177810:1283094925:1494523238": {
-            "ids": [
-                -1358177810,
-                1283094925,
-                1494523238
-            ],
-            "regex": "de pou",
-            "weight": 8,
-            "count": 3
-        },
-        "-1358177810:-949334443:1494523238": {
-            "ids": [
-                -1358177810,
-                -949334443,
-                1494523238
-            ],
-            "regex": "s de p",
-            "weight": 8,
-            "count": 3
-        },
-        "-1358177810:1494523238": {
-            "ids": [
-                -1358177810,
-                1494523238
-            ],
-            "regex": "de pou",
+            "regex": "res, r",
             "weight": 8,
             "count": 2
         },
@@ -3168,23 +1758,13 @@
             "weight": 9,
             "count": 2
         },
-        "-1344829253:-54649013:246480838": {
-            "ids": [
-                -1344829253,
-                -54649013,
-                246480838
-            ],
-            "regex": "itiq",
-            "weight": 4,
-            "count": 3
-        },
         "-1344829253:246480838": {
             "ids": [
                 -1344829253,
                 246480838
             ],
-            "regex": "p c",
-            "weight": 5,
+            "regex": "tique des",
+            "weight": 11,
             "count": 2
         },
         "-1344829253:-933231182:17483843:246480838": {
@@ -3194,143 +1774,9 @@
                 17483843,
                 246480838
             ],
-            "regex": "ue d",
-            "weight": 6,
-            "count": 4
-        },
-        "-1344829253:151806012:246480838": {
-            "ids": [
-                -1344829253,
-                151806012,
-                246480838
-            ],
-            "regex": "% au",
-            "weight": 6,
-            "count": 3
-        },
-        "-1344829253:246480838:670500310:2105788016": {
-            "ids": [
-                -1344829253,
-                246480838,
-                670500310,
-                2105788016
-            ],
-            "regex": "eur d",
-            "weight": 7,
-            "count": 4
-        },
-        "-1344829253:10729340:127168403:246480838": {
-            "ids": [
-                -1344829253,
-                10729340,
-                127168403,
-                246480838
-            ],
-            "regex": "s de c",
-            "weight": 8,
-            "count": 4
-        },
-        "-1344829253:10729340:246480838": {
-            "ids": [
-                -1344829253,
-                10729340,
-                246480838
-            ],
-            "regex": "s de c",
-            "weight": 8,
-            "count": 3
-        },
-        "-1344829253:-999805715:246480838": {
-            "ids": [
-                -1344829253,
-                -999805715,
-                246480838
-            ],
-            "regex": "es chan",
-            "weight": 9,
-            "count": 3
-        },
-        "-1344829253:-999805715:-763914456:246480838": {
-            "ids": [
-                -1344829253,
-                -999805715,
-                -763914456,
-                246480838
-            ],
-            "regex": "n des c",
-            "weight": 9,
-            "count": 4
-        },
-        "-1344829253:-933231182:-580302769:17483843:246480838:583869527": {
-            "ids": [
-                -1344829253,
-                -933231182,
-                -580302769,
-                17483843,
-                246480838,
-                583869527
-            ],
-            "regex": "tation des",
+            "regex": "ue des mon",
             "weight": 12,
-            "count": 6
-        },
-        "-1344829253:151806012:246480838:1014295028:1469490158:1899039946": {
-            "ids": [
-                -1344829253,
-                151806012,
-                246480838,
-                1014295028,
-                1469490158,
-                1899039946
-            ],
-            "regex": "t \\d+% d'",
-            "weight": 12,
-            "count": 6
-        },
-        "-1344829253:151806012:246480838:1014295028:1469490158": {
-            "ids": [
-                -1344829253,
-                151806012,
-                246480838,
-                1014295028,
-                1469490158
-            ],
-            "regex": "t \\d+% d'",
-            "weight": 12,
-            "count": 5
-        },
-        "-1344829253:-580302769:246480838:583869527": {
-            "ids": [
-                -1344829253,
-                -580302769,
-                246480838,
-                583869527
-            ],
-            "regex": "entation des",
-            "weight": 14,
             "count": 4
-        },
-        "-1298230190:-949334443:-946283701:-481946502:1117764869": {
-            "ids": [
-                -1298230190,
-                -949334443,
-                -946283701,
-                -481946502,
-                1117764869
-            ],
-            "regex": "plu",
-            "weight": 3,
-            "count": 5
-        },
-        "-1298230190:-946283701:639399394": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                639399394
-            ],
-            "regex": "fiq",
-            "weight": 3,
-            "count": 3
         },
         "-1298230190:-946283701:1117764869": {
             "ids": [
@@ -3338,20 +1784,18 @@
                 -946283701,
                 1117764869
             ],
-            "regex": "rap",
-            "weight": 3,
+            "regex": "idem",
+            "weight": 4,
             "count": 3
         },
-        "-1298230190:-949334443:-946283701:1117764869": {
+        "-1298230190:1117764869": {
             "ids": [
                 -1298230190,
-                -949334443,
-                -946283701,
                 1117764869
             ],
-            "regex": "plu",
-            "weight": 3,
-            "count": 4
+            "regex": "idem",
+            "weight": 4,
+            "count": 2
         },
         "-1298230190:-126908257:1464066514:1665221611:1932675161": {
             "ids": [
@@ -3361,245 +1805,27 @@
                 1665221611,
                 1932675161
             ],
-            "regex": "abe",
-            "weight": 3,
+            "regex": "ees t",
+            "weight": 7,
             "count": 5
-        },
-        "-1298230190:639399394": {
-            "ids": [
-                -1298230190,
-                639399394
-            ],
-            "regex": "fiq",
-            "weight": 3,
-            "count": 2
-        },
-        "-1298230190:1117764869": {
-            "ids": [
-                -1298230190,
-                1117764869
-            ],
-            "regex": "rap",
-            "weight": 3,
-            "count": 2
-        },
-        "-1298230190:-949334443:-481946502:1117764869": {
-            "ids": [
-                -1298230190,
-                -949334443,
-                -481946502,
-                1117764869
-            ],
-            "regex": "plu",
-            "weight": 3,
-            "count": 4
-        },
-        "-1298230190:-946283701:775962019:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                775962019,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "iren",
-            "weight": 4,
-            "count": 6
-        },
-        "-1298230190:-946283701:775962019:1117764869:1469490158": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                775962019,
-                1117764869,
-                1469490158
-            ],
-            "regex": "iren",
-            "weight": 4,
-            "count": 5
-        },
-        "-1298230190:775962019:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                775962019,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "iren",
-            "weight": 4,
-            "count": 5
-        },
-        "-1298230190:-946283701:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "irent",
-            "weight": 5,
-            "count": 5
-        },
-        "-1298230190:-946283701:1117764869:1469490158": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869,
-                1469490158
-            ],
-            "regex": "irent",
-            "weight": 5,
-            "count": 4
-        },
-        "-1298230190:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "irent",
-            "weight": 5,
-            "count": 4
         },
         "-1298230190:-946283701": {
             "ids": [
                 -1298230190,
                 -946283701
             ],
-            "regex": "t su",
-            "weight": 6,
+            "regex": "fiques e",
+            "weight": 10,
             "count": 2
-        },
-        "-1298230190:-946283701:-539026720": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                -539026720
-            ],
-            "regex": "sur l",
-            "weight": 7,
-            "count": 3
-        },
-        "-1298230190:-946283701:1117764869:1861748274": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869,
-                1861748274
-            ],
-            "regex": "les e",
-            "weight": 7,
-            "count": 4
-        },
-        "-1298230190:-126908257:-114660370:1464066514:1665221611:1932675161": {
-            "ids": [
-                -1298230190,
-                -126908257,
-                -114660370,
-                1464066514,
-                1665221611,
-                1932675161
-            ],
-            "regex": "de sc",
-            "weight": 7,
-            "count": 6
-        },
-        "-1298230190:-539026720": {
-            "ids": [
-                -1298230190,
-                -539026720
-            ],
-            "regex": "sur l",
-            "weight": 7,
-            "count": 2
-        },
-        "-1298230190:1117764869:1861748274": {
-            "ids": [
-                -1298230190,
-                1117764869,
-                1861748274
-            ],
-            "regex": "les e",
-            "weight": 7,
-            "count": 3
         },
         "-1204380788:-166549521": {
             "ids": [
                 -1204380788,
                 -166549521
             ],
-            "regex": "d'em",
-            "weight": 4,
-            "count": 2
-        },
-        "-1204380788:-627831782": {
-            "ids": [
-                -1204380788,
-                -627831782
-            ],
-            "regex": "'empa",
-            "weight": 5,
-            "count": 2
-        },
-        "-1204380788:-80588106": {
-            "ids": [
-                -1204380788,
-                -80588106
-            ],
-            "regex": "taques",
-            "weight": 6,
-            "count": 2
-        },
-        "-1204380788:-737013402:-258709095:-80588106:194321329:823410479": {
-            "ids": [
-                -1204380788,
-                -737013402,
-                -258709095,
-                -80588106,
-                194321329,
-                823410479
-            ],
-            "regex": "ues d",
+            "regex": "er au",
             "weight": 7,
-            "count": 6
-        },
-        "-1204380788:-166549521:357242916": {
-            "ids": [
-                -1204380788,
-                -166549521,
-                357242916
-            ],
-            "regex": "es d'",
-            "weight": 7,
-            "count": 3
-        },
-        "-1204380788:-737013402:-258709095:-80588106:194321329": {
-            "ids": [
-                -1204380788,
-                -737013402,
-                -258709095,
-                -80588106,
-                194321329
-            ],
-            "regex": "ues d",
-            "weight": 7,
-            "count": 5
-        },
-        "-1204380788:-949334443:-481946502:-80588106:1861748274": {
-            "ids": [
-                -1204380788,
-                -949334443,
-                -481946502,
-                -80588106,
-                1861748274
-            ],
-            "regex": "es des",
-            "weight": 8,
-            "count": 5
+            "count": 2
         },
         "-1204380788:-166549521:1283094925:1494523238": {
             "ids": [
@@ -3609,17 +1835,6 @@
                 1494523238
             ],
             "regex": "r au t",
-            "weight": 8,
-            "count": 4
-        },
-        "-1204380788:-949334443:-80588106:1861748274": {
-            "ids": [
-                -1204380788,
-                -949334443,
-                -80588106,
-                1861748274
-            ],
-            "regex": "es des",
             "weight": 8,
             "count": 4
         },
@@ -3633,34 +1848,13 @@
             "weight": 8,
             "count": 3
         },
-        "-1204380788:-949334443:-481946502:-80588106": {
+        "-1204380788:-80588106": {
             "ids": [
                 -1204380788,
-                -949334443,
-                -481946502,
                 -80588106
             ],
-            "regex": "es des m",
-            "weight": 10,
-            "count": 4
-        },
-        "-1204380788:-949334443:-80588106": {
-            "ids": [
-                -1204380788,
-                -949334443,
-                -80588106
-            ],
-            "regex": "es des m",
-            "weight": 10,
-            "count": 3
-        },
-        "-1158025910:-477049138": {
-            "ids": [
-                -1158025910,
-                -477049138
-            ],
-            "regex": "es res",
-            "weight": 8,
+            "regex": "aques des",
+            "weight": 11,
             "count": 2
         },
         "-1139261923:-128171261:472035128:1062763755:1211148661:1932675161": {
@@ -3684,36 +1878,9 @@
                 1062763755,
                 1211148661
             ],
-            "regex": "a des",
-            "weight": 7,
-            "count": 5
-        },
-        "-1139261923:-128171261:472035128:1062763755:1211148661:1538178254:1932675161": {
-            "ids": [
-                -1139261923,
-                -128171261,
-                472035128,
-                1062763755,
-                1211148661,
-                1538178254,
-                1932675161
-            ],
-            "regex": "des p",
-            "weight": 7,
-            "count": 7
-        },
-        "-1139261923:-128171261:156744008:472035128:1062763755:1211148661": {
-            "ids": [
-                -1139261923,
-                -128171261,
-                156744008,
-                472035128,
-                1062763755,
-                1211148661
-            ],
-            "regex": "zone a",
+            "regex": "ne a d",
             "weight": 8,
-            "count": 6
+            "count": 5
         },
         "-1139261923:-128171261:194321329:472035128:1062763755:1211148661:1932675161": {
             "ids": [
@@ -3725,37 +1892,22 @@
                 1211148661,
                 1932675161
             ],
-            "regex": "s de so",
-            "weight": 9,
+            "regex": "es de so",
+            "weight": 10,
             "count": 7
         },
-        "-1099682289:955801458": {
+        "-1139261923:-128171261:156744008:472035128:1062763755:1211148661": {
             "ids": [
-                -1099682289,
-                955801458
+                -1139261923,
+                -128171261,
+                156744008,
+                472035128,
+                1062763755,
+                1211148661
             ],
-            "regex": "eux",
-            "weight": 3,
-            "count": 2
-        },
-        "-1099682289:-887278806": {
-            "ids": [
-                -1099682289,
-                -887278806
-            ],
-            "regex": "de no",
-            "weight": 7,
-            "count": 2
-        },
-        "-1088873049:-933231182:17483843": {
-            "ids": [
-                -1088873049,
-                -933231182,
-                17483843
-            ],
-            "regex": "d'i",
-            "weight": 3,
-            "count": 3
+            "regex": "a zone a",
+            "weight": 10,
+            "count": 6
         },
         "-1088873049:-106750911:-106071007:955801458": {
             "ids": [
@@ -3768,88 +1920,6 @@
             "weight": 6,
             "count": 4
         },
-        "-1088873049:-106750911:-106071007:639399394:955801458": {
-            "ids": [
-                -1088873049,
-                -106750911,
-                -106071007,
-                639399394,
-                955801458
-            ],
-            "regex": "s uni",
-            "weight": 7,
-            "count": 5
-        },
-        "-1088873049:-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -1088873049,
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "se d'",
-            "weight": 7,
-            "count": 5
-        },
-        "-1088873049:-999805715:-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -1088873049,
-                -999805715,
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "e d'a",
-            "weight": 7,
-            "count": 6
-        },
-        "-1088873049:-106750911:639399394:707446389": {
-            "ids": [
-                -1088873049,
-                -106750911,
-                639399394,
-                707446389
-            ],
-            "regex": "que a",
-            "weight": 7,
-            "count": 4
-        },
-        "-1088873049:-645418310:-26777606:10729340:151806012:1799781772:2132856290": {
-            "ids": [
-                -1088873049,
-                -645418310,
-                -26777606,
-                10729340,
-                151806012,
-                1799781772,
-                2132856290
-            ],
-            "regex": "e deg",
-            "weight": 7,
-            "count": 7
-        },
-        "-1088873049:-106750911:639399394": {
-            "ids": [
-                -1088873049,
-                -106750911,
-                639399394
-            ],
-            "regex": "ique a",
-            "weight": 8,
-            "count": 3
-        },
-        "-1088873049:1014295028:1205583947": {
-            "ids": [
-                -1088873049,
-                1014295028,
-                1205583947
-            ],
-            "regex": "n de d",
-            "weight": 8,
-            "count": 3
-        },
         "-1088873049:-106750911": {
             "ids": [
                 -1088873049,
@@ -3858,17 +1928,6 @@
             "regex": "nique a",
             "weight": 9,
             "count": 2
-        },
-        "-1047451686:-688435205:1014295028:2080363489": {
-            "ids": [
-                -1047451686,
-                -688435205,
-                1014295028,
-                2080363489
-            ],
-            "regex": "r des m",
-            "weight": 9,
-            "count": 4
         },
         "-1047451686:-688435205": {
             "ids": [
@@ -3889,184 +1948,23 @@
             "weight": 11,
             "count": 3
         },
-        "-999805715:-539026720:-105914721": {
+        "-999805715:-763914456": {
             "ids": [
                 -999805715,
-                -539026720,
-                -105914721
+                -763914456
             ],
-            "regex": "te d'",
-            "weight": 7,
-            "count": 3
-        },
-        "-999805715:-763914456:-54649013:1101434369:1205583947": {
-            "ids": [
-                -999805715,
-                -763914456,
-                -54649013,
-                1101434369,
-                1205583947
-            ],
-            "regex": "% de r",
-            "weight": 8,
-            "count": 5
-        },
-        "-999805715:-763914456:-258709095:-54649013:823410479:1101434369:1205583947": {
-            "ids": [
-                -999805715,
-                -763914456,
-                -258709095,
-                -54649013,
-                823410479,
-                1101434369,
-                1205583947
-            ],
-            "regex": "uction d",
-            "weight": 10,
-            "count": 7
-        },
-        "-999805715:-763914456:-258709095:-54649013:1101434369:1205583947": {
-            "ids": [
-                -999805715,
-                -763914456,
-                -258709095,
-                -54649013,
-                1101434369,
-                1205583947
-            ],
-            "regex": "uction d",
-            "weight": 10,
-            "count": 6
-        },
-        "-999805715:-763914456:-258709095:-54649013:823410479": {
-            "ids": [
-                -999805715,
-                -763914456,
-                -258709095,
-                -54649013,
-                823410479
-            ],
-            "regex": "uction des",
-            "weight": 12,
-            "count": 5
-        },
-        "-999805715:-763914456:-258709095:-54649013": {
-            "ids": [
-                -999805715,
-                -763914456,
-                -258709095,
-                -54649013
-            ],
-            "regex": "uction des",
-            "weight": 12,
-            "count": 4
+            "regex": "uction des c",
+            "weight": 14,
+            "count": 2
         },
         "-949334443:-481946502": {
             "ids": [
                 -949334443,
                 -481946502
             ],
-            "regex": "foi",
-            "weight": 3,
+            "regex": "ochen",
+            "weight": 5,
             "count": 2
-        },
-        "-949334443:-481946502:1101434369:1861748274": {
-            "ids": [
-                -949334443,
-                -481946502,
-                1101434369,
-                1861748274
-            ],
-            "regex": "apt",
-            "weight": 3,
-            "count": 4
-        },
-        "-949334443:-54649013:357242916:1333860371": {
-            "ids": [
-                -949334443,
-                -54649013,
-                357242916,
-                1333860371
-            ],
-            "regex": "qu'",
-            "weight": 3,
-            "count": 4
-        },
-        "-949334443:1101434369:1861748274": {
-            "ids": [
-                -949334443,
-                1101434369,
-                1861748274
-            ],
-            "regex": "apt",
-            "weight": 3,
-            "count": 3
-        },
-        "-949334443:357242916:1333860371": {
-            "ids": [
-                -949334443,
-                357242916,
-                1333860371
-            ],
-            "regex": "rsq",
-            "weight": 3,
-            "count": 3
-        },
-        "-949334443:-627831782": {
-            "ids": [
-                -949334443,
-                -627831782
-            ],
-            "regex": "neme",
-            "weight": 4,
-            "count": 2
-        },
-        "-949334443:1861748274": {
-            "ids": [
-                -949334443,
-                1861748274
-            ],
-            "regex": "nnem",
-            "weight": 4,
-            "count": 2
-        },
-        "-949334443:1014295028:1333860371": {
-            "ids": [
-                -949334443,
-                1014295028,
-                1333860371
-            ],
-            "regex": "les p",
-            "weight": 7,
-            "count": 3
-        },
-        "-949334443:-580302769:-258709095:-54649013:823410479:980061401:1861748274": {
-            "ids": [
-                -949334443,
-                -580302769,
-                -258709095,
-                -54649013,
-                823410479,
-                980061401,
-                1861748274
-            ],
-            "regex": "des d",
-            "weight": 7,
-            "count": 7
-        },
-        "-949334443:-580302769:-481946502:-258709095:-54649013:980061401:1861748274": {
-            "ids": [
-                -949334443,
-                -580302769,
-                -481946502,
-                -258709095,
-                -54649013,
-                980061401,
-                1861748274
-            ],
-            "regex": "des d",
-            "weight": 7,
-            "count": 7
         },
         "-949334443:-481946502:1861748274": {
             "ids": [
@@ -4074,130 +1972,18 @@
                 -481946502,
                 1861748274
             ],
-            "regex": "udes d",
-            "weight": 8,
-            "count": 3
-        },
-        "-938285245:-268547495": {
-            "ids": [
-                -938285245,
-                -268547495
-            ],
-            "regex": "epri",
-            "weight": 4,
-            "count": 2
-        },
-        "-938285245:-268547495:151806012:1743546402": {
-            "ids": [
-                -938285245,
-                -268547495,
-                151806012,
-                1743546402
-            ],
-            "regex": "sort",
-            "weight": 4,
-            "count": 4
-        },
-        "-938285245:151806012:1743546402": {
-            "ids": [
-                -938285245,
-                151806012,
-                1743546402
-            ],
-            "regex": "sort",
-            "weight": 4,
-            "count": 3
-        },
-        "-938285245:-268547495:151806012": {
-            "ids": [
-                -938285245,
-                -268547495,
-                151806012
-            ],
-            "regex": "des so",
-            "weight": 8,
-            "count": 3
-        },
-        "-938285245:151806012": {
-            "ids": [
-                -938285245,
-                151806012
-            ],
-            "regex": "des so",
-            "weight": 8,
-            "count": 2
-        },
-        "-938285245:-580302769:-268547495:-126908257": {
-            "ids": [
-                -938285245,
-                -580302769,
-                -268547495,
-                -126908257
-            ],
-            "regex": "ats des",
-            "weight": 9,
-            "count": 4
-        },
-        "-938285245:-580302769:-126908257": {
-            "ids": [
-                -938285245,
-                -580302769,
-                -126908257
-            ],
-            "regex": "ats des",
+            "regex": "des des",
             "weight": 9,
             "count": 3
         },
-        "-938285245:-268547495:-126908257": {
+        "-949334443:1861748274": {
             "ids": [
-                -938285245,
-                -268547495,
-                -126908257
+                -949334443,
+                1861748274
             ],
-            "regex": "les degats de",
-            "weight": 15,
-            "count": 3
-        },
-        "-933231182:17483843:670500310:2105788016": {
-            "ids": [
-                -933231182,
-                17483843,
-                670500310,
-                2105788016
-            ],
-            "regex": "epla",
-            "weight": 4,
-            "count": 4
-        },
-        "-933231182:17483843": {
-            "ids": [
-                -933231182,
-                17483843
-            ],
-            "regex": "e d'i",
-            "weight": 7,
-            "count": 2
-        },
-        "-933231182:17483843:156744008:1101434369": {
-            "ids": [
-                -933231182,
-                17483843,
-                156744008,
-                1101434369
-            ],
-            "regex": "n de l",
-            "weight": 8,
-            "count": 4
-        },
-        "-933231182:17483843:156744008": {
-            "ids": [
-                -933231182,
-                17483843,
-                156744008
-            ],
-            "regex": "n de la",
+            "regex": "des des",
             "weight": 9,
-            "count": 3
+            "count": 2
         },
         "-933231182:17483843:583869527:670500310:2105788016": {
             "ids": [
@@ -4211,6 +1997,26 @@
             "weight": 9,
             "count": 5
         },
+        "-933231182:17483843": {
+            "ids": [
+                -933231182,
+                17483843
+            ],
+            "regex": "aque des",
+            "weight": 10,
+            "count": 2
+        },
+        "-933231182:17483843:670500310:2105788016": {
+            "ids": [
+                -933231182,
+                17483843,
+                670500310,
+                2105788016
+            ],
+            "regex": "ment des m",
+            "weight": 12,
+            "count": 4
+        },
         "-933231182:17483843:583869527": {
             "ids": [
                 -933231182,
@@ -4221,48 +2027,6 @@
             "weight": 13,
             "count": 3
         },
-        "-931745379:10729340:1932675161": {
-            "ids": [
-                -931745379,
-                10729340,
-                1932675161
-            ],
-            "regex": "gent",
-            "weight": 4,
-            "count": 3
-        },
-        "-931745379:10729340:1428847539:1932675161": {
-            "ids": [
-                -931745379,
-                10729340,
-                1428847539,
-                1932675161
-            ],
-            "regex": "nflig",
-            "weight": 5,
-            "count": 4
-        },
-        "-931745379:-105914721:1101434369:1861748274": {
-            "ids": [
-                -931745379,
-                -105914721,
-                1101434369,
-                1861748274
-            ],
-            "regex": "es au",
-            "weight": 7,
-            "count": 4
-        },
-        "-931745379:1014295028:2080363489": {
-            "ids": [
-                -931745379,
-                1014295028,
-                2080363489
-            ],
-            "regex": "s au t",
-            "weight": 8,
-            "count": 3
-        },
         "-931745379:10729340": {
             "ids": [
                 -931745379,
@@ -4271,16 +2035,6 @@
             "regex": "tres i",
             "weight": 8,
             "count": 2
-        },
-        "-931745379:10729340:1428847539": {
-            "ids": [
-                -931745379,
-                10729340,
-                1428847539
-            ],
-            "regex": "s inflig",
-            "weight": 10,
-            "count": 3
         },
         "-887278806:1665221611": {
             "ids": [
@@ -4296,8 +2050,8 @@
                 -875993462,
                 1541760497
             ],
-            "regex": "vie d",
-            "weight": 7,
+            "regex": "e de vie",
+            "weight": 10,
             "count": 2
         },
         "-875993462:-172005981:1541760497": {
@@ -4306,18 +2060,8 @@
                 -172005981,
                 1541760497
             ],
-            "regex": "vie d",
-            "weight": 7,
-            "count": 3
-        },
-        "-763914456:-105914721:1333860371": {
-            "ids": [
-                -763914456,
-                -105914721,
-                1333860371
-            ],
-            "regex": "flac",
-            "weight": 4,
+            "regex": "e de vie",
+            "weight": 10,
             "count": 3
         },
         "-737013402:194321329": {
@@ -4335,39 +2079,8 @@
                 194321329,
                 1723792253
             ],
-            "regex": "es fa",
+            "regex": "s fan",
             "weight": 7,
-            "count": 3
-        },
-        "-737013402:-258709095:194321329:823410479": {
-            "ids": [
-                -737013402,
-                -258709095,
-                194321329,
-                823410479
-            ],
-            "regex": "iques d",
-            "weight": 9,
-            "count": 4
-        },
-        "-737013402:707446389:972998450": {
-            "ids": [
-                -737013402,
-                707446389,
-                972998450
-            ],
-            "regex": "es de l",
-            "weight": 9,
-            "count": 3
-        },
-        "-737013402:-258709095:194321329": {
-            "ids": [
-                -737013402,
-                -258709095,
-                194321329
-            ],
-            "regex": "iques d",
-            "weight": 9,
             "count": 3
         },
         "-694214737:-258709095": {
@@ -4375,8 +2088,8 @@
                 -694214737,
                 -258709095
             ],
-            "regex": "au c",
-            "weight": 6,
+            "regex": "os des m",
+            "weight": 10,
             "count": 2
         },
         "-645418310:-26777606:10729340:127168403:646965355:1799781772:2132856290": {
@@ -4389,166 +2102,9 @@
                 1799781772,
                 2132856290
             ],
-            "regex": "ajo",
-            "weight": 3,
-            "count": 7
-        },
-        "-645418310:639399394:1932675161": {
-            "ids": [
-                -645418310,
-                639399394,
-                1932675161
-            ],
-            "regex": "alea",
-            "weight": 4,
-            "count": 3
-        },
-        "-645418310:639399394": {
-            "ids": [
-                -645418310,
-                639399394
-            ],
-            "regex": "un e",
-            "weight": 6,
-            "count": 2
-        },
-        "-645418310:-106071007:-26777606:10729340:127168403:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -106071007,
-                -26777606,
-                10729340,
-                127168403,
-                1799781772,
-                2132856290
-            ],
-            "regex": "ues s",
-            "weight": 7,
-            "count": 7
-        },
-        "-645418310:-106071007:-26777606:10729340:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -106071007,
-                -26777606,
-                10729340,
-                1799781772,
-                2132856290
-            ],
-            "regex": "ues s",
-            "weight": 7,
-            "count": 6
-        },
-        "-645418310:-26777606:10729340:127168403:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -26777606,
-                10729340,
-                127168403,
-                1799781772,
-                2132856290
-            ],
-            "regex": "rs deg",
+            "regex": "es raj",
             "weight": 8,
-            "count": 6
-        },
-        "-645418310:-26777606:10729340:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -26777606,
-                10729340,
-                1799781772,
-                2132856290
-            ],
-            "regex": "rs deg",
-            "weight": 8,
-            "count": 5
-        },
-        "-645418310:-258709095:-26777606:10729340:823410479:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -258709095,
-                -26777606,
-                10729340,
-                823410479,
-                1799781772,
-                2132856290
-            ],
-            "regex": "s degats p",
-            "weight": 12,
             "count": 7
-        },
-        "-645418310:-258709095:-26777606:10729340:127168403:1799781772:2132856290": {
-            "ids": [
-                -645418310,
-                -258709095,
-                -26777606,
-                10729340,
-                127168403,
-                1799781772,
-                2132856290
-            ],
-            "regex": "s degats p",
-            "weight": 12,
-            "count": 7
-        },
-        "-627831782:1061710360": {
-            "ids": [
-                -627831782,
-                1061710360
-            ],
-            "regex": "sai",
-            "weight": 3,
-            "count": 2
-        },
-        "-627831782:1861748274": {
-            "ids": [
-                -627831782,
-                1861748274
-            ],
-            "regex": "alem",
-            "weight": 4,
-            "count": 2
-        },
-        "-627831782:775962019": {
-            "ids": [
-                -627831782,
-                775962019
-            ],
-            "regex": "et l",
-            "weight": 6,
-            "count": 2
-        },
-        "-627831782:-126908257:2105788016": {
-            "ids": [
-                -627831782,
-                -126908257,
-                2105788016
-            ],
-            "regex": "t et",
-            "weight": 6,
-            "count": 3
-        },
-        "-580302769:-258709095:-54649013:823410479": {
-            "ids": [
-                -580302769,
-                -258709095,
-                -54649013,
-                823410479
-            ],
-            "regex": "n des d",
-            "weight": 9,
-            "count": 4
-        },
-        "-580302769:-258709095:-54649013": {
-            "ids": [
-                -580302769,
-                -258709095,
-                -54649013
-            ],
-            "regex": "n des d",
-            "weight": 9,
-            "count": 3
         },
         "-580302769:-126908257:1743546402": {
             "ids": [
@@ -4569,409 +2125,40 @@
             "weight": 11,
             "count": 2
         },
-        "-539026720:-106750911:-105914721:829751875:1101434369:1469490158:1899039946": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                829751875,
-                1101434369,
-                1469490158,
-                1899039946
-            ],
-            "regex": "'ef",
-            "weight": 3,
-            "count": 7
-        },
-        "-539026720:-106750911:-105914721:284489036:829751875:1101434369:1469490158": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                284489036,
-                829751875,
-                1101434369,
-                1469490158
-            ],
-            "regex": "'ef",
-            "weight": 3,
-            "count": 7
-        },
-        "-539026720:-106750911:-105914721:284489036:1101434369:1469490158:1899039946": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                284489036,
-                1101434369,
-                1469490158,
-                1899039946
-            ],
-            "regex": "'ef",
-            "weight": 3,
-            "count": 7
-        },
-        "-539026720:-106750911:-105914721:284489036:829751875:1469490158:1899039946": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                284489036,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "d'ef",
-            "weight": 4,
-            "count": 7
-        },
-        "-539026720:-106750911:-105914721:829751875:1469490158:1899039946": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "d'ef",
-            "weight": 4,
-            "count": 6
-        },
-        "-539026720:-106750911:-105914721:284489036:829751875:1469490158": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                284489036,
-                829751875,
-                1469490158
-            ],
-            "regex": "d'ef",
-            "weight": 4,
-            "count": 6
-        },
-        "-539026720:-106750911:-105914721:284489036:1469490158:1899039946": {
-            "ids": [
-                -539026720,
-                -106750911,
-                -105914721,
-                284489036,
-                1469490158,
-                1899039946
-            ],
-            "regex": "d'ef",
-            "weight": 4,
-            "count": 6
-        },
-        "-539026720:1101434369": {
-            "ids": [
-                -539026720,
-                1101434369
-            ],
-            "regex": "fet d",
-            "weight": 7,
-            "count": 2
-        },
-        "-539026720:-105914721": {
-            "ids": [
-                -539026720,
-                -105914721
-            ],
-            "regex": "te d'e",
-            "weight": 8,
-            "count": 2
-        },
-        "-539026720:252096506": {
-            "ids": [
-                -539026720,
-                252096506
-            ],
-            "regex": "r les m",
-            "weight": 9,
-            "count": 2
-        },
-        "-539026720:1932675161": {
-            "ids": [
-                -539026720,
-                1932675161
-            ],
-            "regex": "t des ma",
-            "weight": 10,
-            "count": 2
-        },
         "-258709095:823410479": {
             "ids": [
                 -258709095,
                 823410479
             ],
-            "regex": "ne red",
-            "weight": 8,
+            "regex": "nt une r",
+            "weight": 10,
             "count": 2
-        },
-        "-258709095:472035128:823410479": {
-            "ids": [
-                -258709095,
-                472035128,
-                823410479
-            ],
-            "regex": "de \\d+",
-            "weight": 9,
-            "count": 3
-        },
-        "-258709095:472035128": {
-            "ids": [
-                -258709095,
-                472035128
-            ],
-            "regex": "de \\d+",
-            "weight": 9,
-            "count": 2
-        },
-        "-258709095:-54649013:823410479": {
-            "ids": [
-                -258709095,
-                -54649013,
-                823410479
-            ],
-            "regex": "ction des d",
-            "weight": 13,
-            "count": 3
-        },
-        "-225071089:357242916": {
-            "ids": [
-                -225071089,
-                357242916
-            ],
-            "regex": "d'end",
-            "weight": 5,
-            "count": 2
-        },
-        "-166549521:-126908257:2080363489": {
-            "ids": [
-                -166549521,
-                -126908257,
-                2080363489
-            ],
-            "regex": "bras",
-            "weight": 4,
-            "count": 3
         },
         "-166549521:-126908257": {
             "ids": [
                 -166549521,
                 -126908257
             ],
-            "regex": "aser",
-            "weight": 4,
+            "regex": "ler e",
+            "weight": 7,
             "count": 2
-        },
-        "-126908257:670500310:1014295028:1305115176:1541760497:2105788016": {
-            "ids": [
-                -126908257,
-                670500310,
-                1014295028,
-                1305115176,
-                1541760497,
-                2105788016
-            ],
-            "regex": "peu",
-            "weight": 3,
-            "count": 6
         },
         "-126908257:2080363489": {
             "ids": [
                 -126908257,
                 2080363489
             ],
-            "regex": "asen",
-            "weight": 4,
+            "regex": "rasen",
+            "weight": 5,
             "count": 2
-        },
-        "-126908257:1014295028:1578069823:2080363489": {
-            "ids": [
-                -126908257,
-                1014295028,
-                1578069823,
-                2080363489
-            ],
-            "regex": "es em",
-            "weight": 7,
-            "count": 4
-        },
-        "-126908257:1014295028:1117764869:1578069823:1743546402:2080363489": {
-            "ids": [
-                -126908257,
-                1014295028,
-                1117764869,
-                1578069823,
-                1743546402,
-                2080363489
-            ],
-            "regex": "res e",
-            "weight": 7,
-            "count": 6
         },
         "-126908257:1014295028": {
             "ids": [
                 -126908257,
                 1014295028
             ],
-            "regex": "s peu",
-            "weight": 7,
-            "count": 2
-        },
-        "-126908257:1014295028:2080363489": {
-            "ids": [
-                -126908257,
-                1014295028,
-                2080363489
-            ],
-            "regex": "es em",
-            "weight": 7,
-            "count": 3
-        },
-        "-126908257:1014295028:1117764869:1743546402:2080363489": {
-            "ids": [
-                -126908257,
-                1014295028,
-                1117764869,
-                1743546402,
-                2080363489
-            ],
-            "regex": "res e",
-            "weight": 7,
-            "count": 5
-        },
-        "-126908257:1014295028:2105788016": {
-            "ids": [
-                -126908257,
-                1014295028,
-                2105788016
-            ],
-            "regex": "vent e",
-            "weight": 8,
-            "count": 3
-        },
-        "-126908257:-80588106:10729340:1014295028:1578069823:1743546402:2122294281": {
-            "ids": [
-                -126908257,
-                -80588106,
-                10729340,
-                1014295028,
-                1578069823,
-                1743546402,
-                2122294281
-            ],
-            "regex": "t au t",
-            "weight": 8,
-            "count": 7
-        },
-        "-126908257:-80588106:10729340:1014295028:1743546402:2122294281": {
-            "ids": [
-                -126908257,
-                -80588106,
-                10729340,
-                1014295028,
-                1743546402,
-                2122294281
-            ],
-            "regex": "t au t",
-            "weight": 8,
-            "count": 6
-        },
-        "-114660370:151806012": {
-            "ids": [
-                -114660370,
-                151806012
-            ],
-            "regex": "score",
-            "weight": 5,
-            "count": 2
-        },
-        "-114660370:151806012:1283094925:1494523238": {
-            "ids": [
-                -114660370,
-                151806012,
-                1283094925,
-                1494523238
-            ],
-            "regex": "e de p",
-            "weight": 8,
-            "count": 4
-        },
-        "-114660370:151806012:1494523238": {
-            "ids": [
-                -114660370,
-                151806012,
-                1494523238
-            ],
-            "regex": "e de p",
-            "weight": 8,
-            "count": 3
-        },
-        "-106750911:284489036:829751875:1469490158:1899039946": {
-            "ids": [
-                -106750911,
-                284489036,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "e z",
-            "weight": 5,
-            "count": 5
-        },
-        "-106750911:829751875:1469490158:1899039946": {
-            "ids": [
-                -106750911,
-                829751875,
-                1469490158,
-                1899039946
-            ],
-            "regex": "e z",
-            "weight": 5,
-            "count": 4
-        },
-        "-106750911:284489036:829751875:1469490158": {
-            "ids": [
-                -106750911,
-                284489036,
-                829751875,
-                1469490158
-            ],
-            "regex": "e z",
-            "weight": 5,
-            "count": 4
-        },
-        "-106750911:284489036:1469490158:1899039946": {
-            "ids": [
-                -106750911,
-                284489036,
-                1469490158,
-                1899039946
-            ],
-            "regex": "e z",
-            "weight": 5,
-            "count": 4
-        },
-        "-106750911:1469490158:1899039946": {
-            "ids": [
-                -106750911,
-                1469490158,
-                1899039946
-            ],
-            "regex": "n de z",
-            "weight": 8,
-            "count": 3
-        },
-        "-106750911:1469490158": {
-            "ids": [
-                -106750911,
-                1469490158
-            ],
-            "regex": "n de z",
-            "weight": 8,
+            "regex": "vent em",
+            "weight": 9,
             "count": 2
         },
         "-106071007:639399394:955801458": {
@@ -4980,44 +2167,17 @@
                 639399394,
                 955801458
             ],
-            "regex": "niques",
-            "weight": 6,
+            "regex": "s uniques",
+            "weight": 11,
             "count": 3
         },
-        "-106071007:1551446200": {
+        "-106071007:955801458": {
             "ids": [
                 -106071007,
-                1551446200
+                955801458
             ],
-            "regex": "ont p",
-            "weight": 7,
-            "count": 2
-        },
-        "-105914721:1932675161": {
-            "ids": [
-                -105914721,
-                1932675161
-            ],
-            "regex": "ques a",
-            "weight": 8,
-            "count": 2
-        },
-        "-80588106:1333860371": {
-            "ids": [
-                -80588106,
-                1333860371
-            ],
-            "regex": "util",
-            "weight": 4,
-            "count": 2
-        },
-        "-80588106:583869527": {
-            "ids": [
-                -80588106,
-                583869527
-            ],
-            "regex": "res m",
-            "weight": 7,
+            "regex": "ss uniques",
+            "weight": 12,
             "count": 2
         },
         "-80588106:2122294281": {
@@ -5029,145 +2189,6 @@
             "weight": 9,
             "count": 2
         },
-        "-54649013:472035128": {
-            "ids": [
-                -54649013,
-                472035128
-            ],
-            "regex": "ubis",
-            "weight": 4,
-            "count": 2
-        },
-        "-54649013:357242916": {
-            "ids": [
-                -54649013,
-                357242916
-            ],
-            "regex": "ils s",
-            "weight": 7,
-            "count": 2
-        },
-        "-54649013:1469490158:1634487773": {
-            "ids": [
-                -54649013,
-                1469490158,
-                1634487773
-            ],
-            "regex": "s suppl",
-            "weight": 9,
-            "count": 3
-        },
-        "-54649013:1469490158": {
-            "ids": [
-                -54649013,
-                1469490158
-            ],
-            "regex": "s suppl",
-            "weight": 9,
-            "count": 2
-        },
-        "-26777606:1799781772:2132856290": {
-            "ids": [
-                -26777606,
-                1799781772,
-                2132856290
-            ],
-            "regex": "ts de f",
-            "weight": 9,
-            "count": 3
-        },
-        "-26777606:10729340:127168403:1799781772:2132856290": {
-            "ids": [
-                -26777606,
-                10729340,
-                127168403,
-                1799781772,
-                2132856290
-            ],
-            "regex": "e degats de",
-            "weight": 13,
-            "count": 5
-        },
-        "-26777606:10729340:1799781772:2132856290": {
-            "ids": [
-                -26777606,
-                10729340,
-                1799781772,
-                2132856290
-            ],
-            "regex": "e degats de",
-            "weight": 13,
-            "count": 4
-        },
-        "10729340:1205583947": {
-            "ids": [
-                10729340,
-                1205583947
-            ],
-            "regex": "seconde",
-            "weight": 7,
-            "count": 2
-        },
-        "10729340:127168403": {
-            "ids": [
-                10729340,
-                127168403
-            ],
-            "regex": "ts de c",
-            "weight": 9,
-            "count": 2
-        },
-        "151806012:670500310:2105788016": {
-            "ids": [
-                151806012,
-                670500310,
-                2105788016
-            ],
-            "regex": "eut",
-            "weight": 3,
-            "count": 3
-        },
-        "156744008:670500310:2105788016": {
-            "ids": [
-                156744008,
-                670500310,
-                2105788016
-            ],
-            "regex": "a va",
-            "weight": 6,
-            "count": 3
-        },
-        "252096506:1428847539": {
-            "ids": [
-                252096506,
-                1428847539
-            ],
-            "regex": "vou",
-            "weight": 3,
-            "count": 2
-        },
-        "252096506:1205583947": {
-            "ids": [
-                252096506,
-                1205583947
-            ],
-            "regex": "drai",
-            "weight": 4,
-            "count": 2
-        },
-        "252096506:670500310:1305115176:1428847539:1541760497:2105788016": {
-            "ids": [
-                252096506,
-                670500310,
-                1305115176,
-                1428847539,
-                1541760497,
-                2105788016
-            ],
-            "regex": "s ne p",
-            "weight": 8,
-            "count": 6
-        },
         "339937661:647925005:1202132179:1598599541:1882321261": {
             "ids": [
                 339937661,
@@ -5176,7 +2197,7 @@
                 1598599541,
                 1882321261
             ],
-            "regex": "maud",
+            "regex": "dits",
             "weight": 4,
             "count": 5
         },
@@ -5185,7 +2206,7 @@
                 339937661,
                 647925005
             ],
-            "regex": "maud",
+            "regex": "dits",
             "weight": 4,
             "count": 2
         },
@@ -5199,8 +2220,8 @@
                 1598599541,
                 1882321261
             ],
-            "regex": "urs s",
-            "weight": 7,
+            "regex": "urs so",
+            "weight": 8,
             "count": 7
         },
         "339937661:647925005:1061710360:1333860371": {
@@ -5210,64 +2231,9 @@
                 1061710360,
                 1333860371
             ],
-            "regex": "urs s",
-            "weight": 7,
-            "count": 4
-        },
-        "357242916:2080363489": {
-            "ids": [
-                357242916,
-                2080363489
-            ],
-            "regex": "t tou",
-            "weight": 7,
-            "count": 2
-        },
-        "357242916:1333860371": {
-            "ids": [
-                357242916,
-                1333860371
-            ],
-            "regex": "e lor",
-            "weight": 7,
-            "count": 2
-        },
-        "472035128:1861748274": {
-            "ids": [
-                472035128,
-                1861748274
-            ],
-            "regex": "ui a",
-            "weight": 6,
-            "count": 2
-        },
-        "472035128:1117764869:1861748274": {
-            "ids": [
-                472035128,
-                1117764869,
-                1861748274
-            ],
-            "regex": "nt le",
-            "weight": 7,
-            "count": 3
-        },
-        "639399394:1665221611": {
-            "ids": [
-                639399394,
-                1665221611
-            ],
-            "regex": "ont u",
-            "weight": 7,
-            "count": 2
-        },
-        "646965355:1205583947": {
-            "ids": [
-                646965355,
-                1205583947
-            ],
-            "regex": "ie max",
+            "regex": "urs so",
             "weight": 8,
-            "count": 2
+            "count": 4
         },
         "647925005:1202132179": {
             "ids": [
@@ -5287,41 +2253,13 @@
             "weight": 7,
             "count": 2
         },
-        "647925005:1205583947:1882321261": {
-            "ids": [
-                647925005,
-                1205583947,
-                1882321261
-            ],
-            "regex": "par s",
-            "weight": 7,
-            "count": 3
-        },
         "647925005:1598599541": {
             "ids": [
                 647925005,
                 1598599541
             ],
-            "regex": "par c",
-            "weight": 7,
-            "count": 2
-        },
-        "647925005:1205583947": {
-            "ids": [
-                647925005,
-                1205583947
-            ],
-            "regex": "par s",
-            "weight": 7,
-            "count": 2
-        },
-        "670500310:2105788016": {
-            "ids": [
-                670500310,
-                2105788016
-            ],
-            "regex": "'ac",
-            "weight": 3,
+            "regex": "r chai",
+            "weight": 8,
             "count": 2
         },
         "670500310:1541760497": {
@@ -5329,48 +2267,17 @@
                 670500310,
                 1541760497
             ],
-            "regex": "tour",
-            "weight": 4,
+            "regex": "e etourdis",
+            "weight": 12,
             "count": 2
         },
-        "670500310:775962019:1541760497": {
+        "670500310:2105788016": {
             "ids": [
                 670500310,
-                775962019,
-                1541760497
-            ],
-            "regex": "s et",
-            "weight": 6,
-            "count": 3
-        },
-        "670500310:1541760497:2105788016": {
-            "ids": [
-                670500310,
-                1541760497,
                 2105788016
             ],
-            "regex": "res n",
-            "weight": 7,
-            "count": 3
-        },
-        "670500310:1305115176:1541760497:2105788016": {
-            "ids": [
-                670500310,
-                1305115176,
-                1541760497,
-                2105788016
-            ],
-            "regex": "e peu",
-            "weight": 7,
-            "count": 4
-        },
-        "707446389:1932675161": {
-            "ids": [
-                707446389,
-                1932675161
-            ],
-            "regex": "rque",
-            "weight": 4,
+            "regex": "ction des m",
+            "weight": 13,
             "count": 2
         },
         "972998450:1313044496": {
@@ -5396,45 +2303,8 @@
                 1014295028,
                 2080363489
             ],
-            "regex": "ats a",
+            "regex": "her d",
             "weight": 7,
-            "count": 2
-        },
-        "1061710360:1101434369": {
-            "ids": [
-                1061710360,
-                1101434369
-            ],
-            "regex": "s par d",
-            "weight": 9,
-            "count": 2
-        },
-        "1082020744:1101434369:1424047266": {
-            "ids": [
-                1082020744,
-                1101434369,
-                1424047266
-            ],
-            "regex": "r des a",
-            "weight": 9,
-            "count": 3
-        },
-        "1101434369:1305115176": {
-            "ids": [
-                1101434369,
-                1305115176
-            ],
-            "regex": "nere",
-            "weight": 4,
-            "count": 2
-        },
-        "1101434369:1861748274": {
-            "ids": [
-                1101434369,
-                1861748274
-            ],
-            "regex": "es aur",
-            "weight": 8,
             "count": 2
         },
         "1205583947:1305115176": {
@@ -5442,8 +2312,8 @@
                 1205583947,
                 1305115176
             ],
-            "regex": "vie,",
-            "weight": 4,
+            "regex": "de vie,",
+            "weight": 9,
             "count": 2
         },
         "1283094925:1494523238": {
@@ -5451,17 +2321,8 @@
                 1283094925,
                 1494523238
             ],
-            "regex": "ir a",
-            "weight": 6,
-            "count": 2
-        },
-        "1305115176:1313044496": {
-            "ids": [
-                1305115176,
-                1313044496
-            ],
-            "regex": "rer",
-            "weight": 3,
+            "regex": "ir au t",
+            "weight": 9,
             "count": 2
         },
         "1469490158:1634487773": {
@@ -5469,26 +2330,7 @@
                 1469490158,
                 1634487773
             ],
-            "regex": "tir",
-            "weight": 3,
-            "count": 2
-        },
-        "1469490158:1634487773:1743546402": {
-            "ids": [
-                1469490158,
-                1634487773,
-                1743546402
-            ],
-            "regex": "les s",
-            "weight": 7,
-            "count": 3
-        },
-        "1469490158:1743546402": {
-            "ids": [
-                1469490158,
-                1743546402
-            ],
-            "regex": "les s",
+            "regex": "es ti",
             "weight": 7,
             "count": 2
         },
@@ -5497,8 +2339,8 @@
                 1538178254,
                 1932675161
             ],
-            "regex": "t des p",
-            "weight": 9,
+            "regex": "ent des p",
+            "weight": 11,
             "count": 2
         }
     }

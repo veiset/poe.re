@@ -1,0 +1,2202 @@
+[
+    {
+        "id": 121,
+        "beast": "アラカーリの娘",
+        "recipe": "",
+        "regex": "リの娘",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 23,
+        "beast": "アルペンシャーマン",
+        "recipe": "",
+        "regex": "ルヘンシ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 16,
+        "beast": "アルペンデビル",
+        "recipe": "",
+        "regex": "ヘンテ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 226,
+        "beast": "アヴァランチ・ライダー",
+        "recipe": "",
+        "regex": "アウ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 27,
+        "beast": "アークティックウルフ",
+        "recipe": "",
+        "regex": "クテ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 10,
+        "beast": "アーマークランチャー",
+        "recipe": "",
+        "regex": "アーマ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 396,
+        "beast": "インク・スピナー",
+        "recipe": "",
+        "regex": "ク・",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 258,
+        "beast": "ウェイストラーチャー",
+        "recipe": "",
+        "regex": "^ウェ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 164,
+        "beast": "エイヴィアン・レッチ",
+        "recipe": "",
+        "regex": "イウ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 37,
+        "beast": "エンスレイブドヘリオン",
+        "recipe": "",
+        "regex": "エン",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 76,
+        "beast": "オブシディアン・イーター",
+        "recipe": "",
+        "regex": "オフ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 54,
+        "beast": "カーネイジエイプ",
+        "recipe": "",
+        "regex": "シエ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 50,
+        "beast": "カーネイジチーフテン",
+        "recipe": "",
+        "regex": "シチ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 151,
+        "beast": "キメリッククローカー",
+        "recipe": "",
+        "regex": "メリ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 157,
+        "beast": "キャリオンクイーン",
+        "recipe": "",
+        "regex": "クイ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 159,
+        "beast": "キャリオンスウォーマー",
+        "recipe": "",
+        "regex": "スウ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 161,
+        "beast": "キャリオンバーロワー",
+        "recipe": "",
+        "regex": "ロワ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 130,
+        "beast": "クリプト・アンブッシャー",
+        "recipe": "",
+        "regex": "フッ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 128,
+        "beast": "クリプト・ウィーバー",
+        "recipe": "",
+        "regex": "・ウィ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 300,
+        "beast": "クレイシアンのイカ",
+        "recipe": "アイテムを変換 - タリスマンのベースタイプをリロール",
+        "regex": "のイ",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 301,
+        "beast": "クレイシアンのウォッチャー",
+        "recipe": "ユニークアイテムを作成 - 鉤爪または短剣; アイテムのモッドを変化 - ハンターアイテムにモッドを追加",
+        "regex": "ンのウ",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 307,
+        "beast": "クレイシアンのクローカー",
+        "recipe": "インプリントを作成 - マジックアイテム; ヒネコラの髪束を適用 - マジックアイテム",
+        "regex": "ンのク",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 304,
+        "beast": "クレイシアンのサベージクラブ",
+        "recipe": "ユニークアイテムを作成 - アイテム; アイテムのモッドを変化 - レアマップにモッドを追加",
+        "regex": "ンのサ",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 303,
+        "beast": "クレイシアンのシールドクラブ",
+        "recipe": "カレンシーアイテムを作成 - 宝飾職人のオーブ4個; カレンシーアイテムを作成 - 連結のオーブ2個; アイテムを変化 - 可能な最大ソケット数",
+        "regex": "ンのシ",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 305,
+        "beast": "クレイシアンのタカアシガニ",
+        "recipe": "ポータルを開く - クレイシアンの入り江",
+        "regex": "タカ",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 306,
+        "beast": "クレイシアンの口",
+        "recipe": "アイテムのモッドを変化 - シェイパーアイテムにモッドを追加; アイテムのモッドを変化 - エルダーアイテムにモッドを追加; アイテムのモッドを変化 - レディーマーアイテムにモッドを追加; アイテムのモッドを変化 - ハンターアイテムにモッドを追加; アイテムのモッドを変化 - クルセイダーアイテムにモッドを追加; アイテムのモッドを変化 - ウォーロードアイテムにモッドを追加",
+        "regex": "の口",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 302,
+        "beast": "クレイシアンの砂のスピッター",
+        "recipe": "カレンシーアイテムを作成 - 結合のオーブ; カレンシーアイテムを作成 - 連結のオーブ2個; アイテムを変化 - 可能な最大リンク数",
+        "regex": "の砂",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 299,
+        "beast": "クレイシアンの臣下",
+        "recipe": "マップをコラプト - 暗黙モッドを1個付与; マップをコラプト - ダブルコラプト",
+        "regex": "ンの臣",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 150,
+        "beast": "クロームインヒューズドキメラル",
+        "recipe": "",
+        "regex": "ストキ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 177,
+        "beast": "クロームインヒューズドゴライアス",
+        "recipe": "",
+        "regex": "ーストコ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 155,
+        "beast": "クロームインフューズドクローカー",
+        "recipe": "",
+        "regex": "フュ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 149,
+        "beast": "クロームタッチトキメラル",
+        "recipe": "",
+        "regex": "チトキ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 154,
+        "beast": "クロームタッチトクローカー",
+        "recipe": "",
+        "regex": "チトク",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 176,
+        "beast": "クロームタッチトゴライアス",
+        "recipe": "",
+        "regex": "チトコ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 166,
+        "beast": "グラトナスガル",
+        "recipe": "",
+        "regex": "ラト",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 69,
+        "beast": "グラナイト・イーター",
+        "recipe": "",
+        "regex": "ラナ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 67,
+        "beast": "グラヴェル・イーター",
+        "recipe": "",
+        "regex": "ラウ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 227,
+        "beast": "グレイジングタウロス",
+        "recipe": "",
+        "regex": "クタ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 106,
+        "beast": "グレード・マンバ",
+        "recipe": "",
+        "regex": "ハ$",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 26,
+        "beast": "コロッサスクラッシャー",
+        "recipe": "",
+        "regex": "コロ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 12,
+        "beast": "ゴートマン",
+        "recipe": "",
+        "regex": "^コートマン$",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 20,
+        "beast": "ゴートマンの放火魔",
+        "recipe": "",
+        "regex": "の放",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 19,
+        "beast": "ゴートマン・シャーマン",
+        "recipe": "",
+        "regex": "・シ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 14,
+        "beast": "ゴートマン・スタンパー",
+        "recipe": "",
+        "regex": "タン",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 291,
+        "beast": "サカワルのキメラル",
+        "recipe": "カレンシーアイテムを作成 - ランダムなカレンシー10個",
+        "regex": "のキ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 289,
+        "beast": "サカワルのコブラ",
+        "recipe": "ユニークアイテムを作成 - メイスまたはセプター; アイテムのモッドを変化 - レアマップにモッドを追加",
+        "regex": "のコフ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 290,
+        "beast": "サカワルのブラッドヴァイパー",
+        "recipe": "ユニークアイテムを作成 - 剣または斧; アイテムのモッドを変化 - エルダーアイテムにモッドを追加",
+        "regex": "ァイ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 288,
+        "beast": "サカワルのレックス",
+        "recipe": "ポータルを開く - サカワルのねぐら",
+        "regex": "ルのレック",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 286,
+        "beast": "サカワルのレッチ",
+        "recipe": "ユニークアイテムを作成 - 靴",
+        "regex": "のレッチ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 271,
+        "beast": "サカワルのロア",
+        "recipe": "レアアイテムを作成 - 4リンクヘルメット",
+        "regex": "ルのロ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 287,
+        "beast": "サカワルのヴァルチャー",
+        "recipe": "アイテムを作成 - 6リンクソケットレアアイテム",
+        "regex": "のウァ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 230,
+        "beast": "サベージクラブ",
+        "recipe": "",
+        "regex": "^サヘ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 259,
+        "beast": "サルファースポーン",
+        "recipe": "",
+        "regex": "サル",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 87,
+        "beast": "シンギングセイレーン",
+        "recipe": "",
+        "regex": "クセ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 206,
+        "beast": "スカベンジングヴァルチャー",
+        "recipe": "",
+        "regex": "ンシン",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 162,
+        "beast": "スカム・クローラー",
+        "recipe": "",
+        "regex": "カム",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 46,
+        "beast": "スティギアンエイプ",
+        "recipe": "",
+        "regex": "ンエ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 51,
+        "beast": "スティギアンシルバーバック",
+        "recipe": "",
+        "regex": "アンシ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 28,
+        "beast": "スノーウルフ",
+        "recipe": "",
+        "regex": "ノーウ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 170,
+        "beast": "スパイン・サーペント",
+        "recipe": "",
+        "regex": "ン・サ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 113,
+        "beast": "スライミーネメシス",
+        "recipe": "",
+        "regex": "スラ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 223,
+        "beast": "タロン・アーチャー",
+        "recipe": "",
+        "regex": "タロ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 59,
+        "beast": "ターセル・ロア",
+        "recipe": "",
+        "regex": "ーセ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 210,
+        "beast": "ダスト・スクラブラー",
+        "recipe": "",
+        "regex": "タス",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 212,
+        "beast": "ダート・スクラブラー",
+        "recipe": "",
+        "regex": "タート",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 180,
+        "beast": "デヴァワラー",
+        "recipe": "",
+        "regex": "^テ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 169,
+        "beast": "トキシッククローラー",
+        "recipe": "",
+        "regex": "キシ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 191,
+        "beast": "トンネルフィーンド",
+        "recipe": "",
+        "regex": "^トン",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 33,
+        "beast": "ドゥーン・ヘリオン",
+        "recipe": "",
+        "regex": "ゥー",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 44,
+        "beast": "ドレッドプリメイト",
+        "recipe": "",
+        "regex": "リメ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 256,
+        "beast": "ハイブリッドアラクニド",
+        "recipe": "",
+        "regex": "^ハイ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 55,
+        "beast": "バローエイプ",
+        "recipe": "",
+        "regex": "ハロ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 172,
+        "beast": "バーブ・サーペント",
+        "recipe": "",
+        "regex": "ハーフ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 25,
+        "beast": "ヒルデビル",
+        "recipe": "",
+        "regex": "^ヒル",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 21,
+        "beast": "ビアデッドシャーマン",
+        "recipe": "",
+        "regex": "ットシ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 22,
+        "beast": "ビアデッドスカイコーラー",
+        "recipe": "",
+        "regex": "カイ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 15,
+        "beast": "ビアデッドデビル",
+        "recipe": "",
+        "regex": "トテ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 475,
+        "beast": "ビビッド・アブバララック",
+        "recipe": "アイテムを作成 - シェイパーの守護者、エルダーの守護者または征服者のマップ",
+        "regex": "アフ",
+        "harvest": true,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 473,
+        "beast": "ビビッド・ウォッチャー",
+        "recipe": "希少サポートジェムを捧げる - 高レベル、高品質のサポートジェム3個",
+        "regex": "・ウォ",
+        "harvest": true,
+        "red": true,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 474,
+        "beast": "ビビッド・ヴァルチャー",
+        "recipe": "アイテムを変換 - ユニークアイテムのシンセシス暗黙モッドを1個リロール",
+        "regex": "・ウァ",
+        "harvest": true,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 219,
+        "beast": "ピットブル・デーモン",
+        "recipe": "",
+        "regex": "・テ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 283,
+        "beast": "ファルウルのウルサ",
+        "recipe": "ユニークアイテムを作成 - 鎧",
+        "regex": "ルのウルサ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 279,
+        "beast": "ファルウルのウルフ・アルファ",
+        "recipe": "アイテムのモッドを変化 - プレフィックスを1つ追加し、ランダムなサフィックスを1つ削除",
+        "regex": "ルフ・",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 277,
+        "beast": "ファルウルのエイプ",
+        "recipe": "ユニークアイテムを作成 - ベルト",
+        "regex": "ルのエ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 282,
+        "beast": "ファルウルのガルガンチュア",
+        "recipe": "ユニークアイテムを作成 - 兜; カレンシーアイテムを作成 - 解除のオーブ3個",
+        "regex": "のカ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 285,
+        "beast": "ファルウルのゴライアス",
+        "recipe": "ユニークアイテムを作成 - 弓; アイテムのモッドを変化 - クルセイダーアイテムにモッドを追加",
+        "regex": "のコラ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 278,
+        "beast": "ファルウルのゴートマン",
+        "recipe": "ユニークアイテムを作成 - フラスコ",
+        "regex": "のコー",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 272,
+        "beast": "ファルウルのタイガー・アルファ",
+        "recipe": "ポータルを開く - ファルウルの巣穴",
+        "regex": "のタイ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 284,
+        "beast": "ファルウルのタウロス",
+        "recipe": "ユニークアイテムを作成 - マップ",
+        "regex": "のタウ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 276,
+        "beast": "ファルウルのチーフテン",
+        "recipe": "ユニークアイテムを作成 - アミュレット",
+        "regex": "のチ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 281,
+        "beast": "ファルウルのピット・ハウンド",
+        "recipe": "アイテムを作成 - レベル21コラプト状態ジェム",
+        "regex": "のヒ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 273,
+        "beast": "ファルウルのフレイムヘリオン・アルファ",
+        "recipe": "ユニークアイテムを作成 - 指輪",
+        "regex": "ムヘ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 274,
+        "beast": "ファルウルのフロストヘリオン・アルファ",
+        "recipe": "1個のモッドをフラクチャーする - 最低4個のモッドを持つレアのタリスマン; カレンシーアイテムを作成 - 解除のオーブ3個",
+        "regex": "フロ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 280,
+        "beast": "ファルウルのマグマ・ハウンド",
+        "recipe": "アイテムを作成 - 品質23%コラプト状態ジェム",
+        "regex": "マ・",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 275,
+        "beast": "ファルウルのリンクス・アルファ",
+        "recipe": "アイテムのモッドを変化 - サフィックスを1つ追加し、ランダムなプレフィックスを1つ削除",
+        "regex": "ルのリ",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 297,
+        "beast": "フィヌムスのウィドウ",
+        "recipe": "ユニークアイテムを作成 - 手袋",
+        "regex": "ィト",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 293,
+        "beast": "フィヌムスのスクラブラー",
+        "recipe": "ユニークアイテムを作成 - ワンド; アイテムのモッドを変化 - ウォーロードアイテムにモッドを追加",
+        "regex": "のスク",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 298,
+        "beast": "フィヌムスのスコーピオン",
+        "recipe": "ユニークアイテムを変換 - 他のユニークアイテムに変換; マップをコラプト - ダブルコラプト",
+        "regex": "スのスコ",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 294,
+        "beast": "フィヌムスのデヴァワラー",
+        "recipe": "ユニークアイテムを作成 - 盾または矢筒; アイテムのモッドを変化 - シェイパーアイテムにモッドを追加",
+        "regex": "のテ",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 296,
+        "beast": "フィヌムスのハイブリッドアラクニド",
+        "recipe": "ポータルを開く - フィヌムスの巣",
+        "regex": "のハ",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 295,
+        "beast": "フィヌムスのプレイグドアラクニド",
+        "recipe": "インプリントを作成 - レアタリスマン; 2個のモッドをフラクチャーする - 最低6個のモッドを持つレアのタリスマン",
+        "regex": "イク",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 292,
+        "beast": "フィヌムスの女王",
+        "recipe": "ユニークアイテムを作成 - スタッフ; アイテムのモッドを変化 - レディーマーアイテムにモッドを追加",
+        "regex": "王",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 148,
+        "beast": "フェラルキメラル",
+        "recipe": "",
+        "regex": "ルキ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 224,
+        "beast": "フェラルファウル",
+        "recipe": "",
+        "regex": "ァウ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 29,
+        "beast": "フリージングウルフ",
+        "recipe": "",
+        "regex": "^フリ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 32,
+        "beast": "フレイム・ヘリオン",
+        "recipe": "",
+        "regex": "イム・",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 264,
+        "beast": "ブラックスコーピオン",
+        "recipe": "",
+        "regex": "クスコ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 43,
+        "beast": "ブラッドエイプ",
+        "recipe": "",
+        "regex": "トエ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 49,
+        "beast": "ブラッドチーフテン",
+        "recipe": "",
+        "regex": "ットチ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 101,
+        "beast": "ブランブル・コブラ",
+        "recipe": "",
+        "regex": "ル・コ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 477,
+        "beast": "プライマル・クラッシュクロー",
+        "recipe": "アイテムを作成 - 貴重なスカラベ",
+        "regex": "ュク",
+        "harvest": true,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 478,
+        "beast": "プライマル・クリストコーラー",
+        "recipe": "アイテムを作成 - ナイトメアマップ",
+        "regex": "・クリ",
+        "harvest": true,
+        "red": true,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 476,
+        "beast": "プライマル・レックス・メイトリアーク",
+        "recipe": "アイテムを作成 - シンセシスユニークマップ",
+        "regex": "トリ",
+        "harvest": true,
+        "red": true,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 189,
+        "beast": "プラメティングウルサ",
+        "recipe": "",
+        "regex": "ラメ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 146,
+        "beast": "プルームドキメラル",
+        "recipe": "",
+        "regex": "ムト",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 103,
+        "beast": "ホストコブラ",
+        "recipe": "",
+        "regex": "トコフ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 52,
+        "beast": "ホストチーフテン",
+        "recipe": "",
+        "regex": "ストチ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 3,
+        "beast": "ボーンクランチャー",
+        "recipe": "",
+        "regex": "^ホーン",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 174,
+        "beast": "ポーキュパイン・ゴライアス",
+        "recipe": "",
+        "regex": "ーキ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 35,
+        "beast": "マウンテンヘリオン",
+        "recipe": "",
+        "regex": "ンヘリオン$",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 36,
+        "beast": "マウンテンヘリオン・アルファ",
+        "recipe": "",
+        "regex": "ンヘリオン・",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 270,
+        "beast": "マウンテンリンクス",
+        "recipe": "",
+        "regex": "ンリ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 60,
+        "beast": "マークランナー",
+        "recipe": "",
+        "regex": "ンナ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 88,
+        "beast": "マーヴェイルに祝福されし者",
+        "recipe": "",
+        "regex": "に祝",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 85,
+        "beast": "マーヴェイルに選ばれし者",
+        "recipe": "",
+        "regex": "選",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 83,
+        "beast": "マーヴェイルの娘",
+        "recipe": "",
+        "regex": "ルの娘",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 86,
+        "beast": "マーヴェイルの家臣",
+        "recipe": "",
+        "regex": "家",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 81,
+        "beast": "マーヴェイルの寵児",
+        "recipe": "",
+        "regex": "寵",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 84,
+        "beast": "マーヴェイルの従者",
+        "recipe": "",
+        "regex": "従",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 34,
+        "beast": "ルインズ・ヘリオン",
+        "recipe": "",
+        "regex": "^ルイ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 221,
+        "beast": "ルースター・フィーンド",
+        "recipe": "",
+        "regex": "^ルー",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 56,
+        "beast": "ロア・メア",
+        "recipe": "",
+        "regex": "ア・",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 214,
+        "beast": "ロウランド・ホッパー",
+        "recipe": "",
+        "regex": "ウラ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 472,
+        "beast": "ワイルド・ブランブルバック",
+        "recipe": "アイテムを変換 - 希少サポートジェムに500m経験値追加する",
+        "regex": "・フラ",
+        "harvest": true,
+        "red": true,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 470,
+        "beast": "ワイルド・ブリスル・マトロン",
+        "recipe": "アイテムのモッドを変化 - 非ユニークアイテムにクラフトメタモッドを追加",
+        "regex": "スル",
+        "harvest": true,
+        "red": true,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 471,
+        "beast": "ワイルド・ヘリオン・アルファ",
+        "recipe": "アイテムのモッドを変化 - ウォッチャーズアイのモッドをリロール",
+        "regex": "ト・ヘ",
+        "harvest": true,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 116,
+        "beast": "ヴァール・レクルース",
+        "recipe": "",
+        "regex": "レク",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 153,
+        "beast": "ヴォルティングクローカー",
+        "recipe": "",
+        "regex": "ォル",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 168,
+        "beast": "下水のクローラー",
+        "recipe": "",
+        "regex": "水のク",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 188,
+        "beast": "下水の彷徨う者",
+        "recipe": "",
+        "regex": "水の彷",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 136,
+        "beast": "不気味なタランチュラ",
+        "recipe": "",
+        "regex": "味",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 107,
+        "beast": "呪われたスポーン",
+        "recipe": "",
+        "regex": "呪わ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 127,
+        "beast": "堕落したアラク",
+        "recipe": "",
+        "regex": "落したア",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 131,
+        "beast": "堕落したスピッター",
+        "recipe": "",
+        "regex": "したス",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 62,
+        "beast": "堕落したロア",
+        "recipe": "",
+        "regex": "したロ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 8,
+        "beast": "堕落した獣",
+        "recipe": "",
+        "regex": "た獣",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 129,
+        "beast": "変異したアラク",
+        "recipe": "",
+        "regex": "^変",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 98,
+        "beast": "夜のクサリヘビ",
+        "recipe": "",
+        "regex": "夜のク",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 310,
+        "beast": "夜の始祖、フィヌムス",
+        "recipe": "アイテムにアスペクトスキルを追加 - 蜘蛛のアスペクト; アイテムにアスペクトスキルを追加 - レベル30蜘蛛のアスペクトスキル",
+        "regex": "夜の始",
+        "harvest": false,
+        "red": true,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 187,
+        "beast": "大洞窟の彷徨う者",
+        "recipe": "",
+        "regex": "大洞",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 134,
+        "beast": "孵化した幼虫",
+        "recipe": "",
+        "regex": "孵",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 99,
+        "beast": "宿主のクサリヘビ",
+        "recipe": "",
+        "regex": "宿",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 199,
+        "beast": "寄生されたウルサ",
+        "recipe": "",
+        "regex": "たウル",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 47,
+        "beast": "寄生されたエイプ",
+        "recipe": "",
+        "regex": "たエ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "霊長類"
+    },
+    {
+        "id": 231,
+        "beast": "寄生されたクラブ",
+        "recipe": "",
+        "regex": "たクラ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 233,
+        "beast": "寄生されたクローラー",
+        "recipe": "",
+        "regex": "たクロ",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 171,
+        "beast": "寄生されたサーペント",
+        "recipe": "",
+        "regex": "たサ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 213,
+        "beast": "寄生されたスキッタラー",
+        "recipe": "",
+        "regex": "たスキ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 193,
+        "beast": "寄生されたトンネルフィーンド",
+        "recipe": "",
+        "regex": "たト",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 65,
+        "beast": "寄生されたロア",
+        "recipe": "",
+        "regex": "れたロ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 209,
+        "beast": "寄生されたヴァルチャー",
+        "recipe": "",
+        "regex": "れたウァ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 144,
+        "beast": "寄生された口",
+        "recipe": "",
+        "regex": "た口",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 247,
+        "beast": "寄生甲虫",
+        "recipe": "",
+        "regex": "生甲",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 243,
+        "beast": "寄生虫",
+        "recipe": "",
+        "regex": "^寄生虫",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 6,
+        "beast": "密林の巨獣",
+        "recipe": "",
+        "regex": "密林",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 70,
+        "beast": "岩のスピッター",
+        "recipe": "",
+        "regex": "岩",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 124,
+        "beast": "巣を張る蜘蛛",
+        "recipe": "",
+        "regex": "^巣",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 308,
+        "beast": "平原の始祖、ファルウル",
+        "recipe": "アイテムにアスペクトスキルを追加 - 猫のアスペクト; アイテムにアスペクトスキルを追加 - レベル30猫のアスペクトスキル",
+        "regex": "平原",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 205,
+        "beast": "心無きスカベンジャー",
+        "recipe": "",
+        "regex": "^心",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 217,
+        "beast": "怒りの猟犬",
+        "recipe": "",
+        "regex": "りの猟",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 140,
+        "beast": "恍惚のアラクニド",
+        "recipe": "",
+        "regex": "惚のア",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 232,
+        "beast": "恍惚のクラブ",
+        "recipe": "",
+        "regex": "惚のク",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 1,
+        "beast": "恍惚の獣",
+        "recipe": "",
+        "regex": "惚の獣",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 142,
+        "beast": "悪臭を放つ口",
+        "recipe": "",
+        "regex": "臭",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 218,
+        "beast": "戦の猟犬",
+        "recipe": "",
+        "regex": "戦の",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 267,
+        "beast": "捕食するスコーピオン",
+        "recipe": "",
+        "regex": "^捕",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 269,
+        "beast": "日焼けした軟体動物",
+        "recipe": "",
+        "regex": "日",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 117,
+        "beast": "有害タランチュラ",
+        "recipe": "",
+        "regex": "有害",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 114,
+        "beast": "有毒なスポーン",
+        "recipe": "",
+        "regex": "毒なス",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 197,
+        "beast": "林のウルサ",
+        "recipe": "",
+        "regex": "^林",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 11,
+        "beast": "森の獣",
+        "recipe": "",
+        "regex": "森の",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 261,
+        "beast": "母親のレックス",
+        "recipe": "",
+        "regex": "母",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 248,
+        "beast": "毒を吐く寄生虫",
+        "recipe": "",
+        "regex": "吐",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 125,
+        "beast": "毒蜘蛛",
+        "recipe": "",
+        "regex": "毒蜘",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 4,
+        "beast": "毛深いボーンクランチャー",
+        "recipe": "",
+        "regex": "いホ",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 5,
+        "beast": "毛深い怪物",
+        "recipe": "",
+        "regex": "い怪",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 143,
+        "beast": "汚い口",
+        "recipe": "",
+        "regex": "汚い",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "両生類"
+    },
+    {
+        "id": 132,
+        "beast": "洞窟のスキッタラー",
+        "recipe": "",
+        "regex": "窟のス",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 0,
+        "beast": "洞窟の獣",
+        "recipe": "",
+        "regex": "窟の獣",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 268,
+        "beast": "海水の臣下",
+        "recipe": "",
+        "regex": "海水",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 311,
+        "beast": "深海の始祖、クレイシアン",
+        "recipe": "アイテムにアスペクトスキルを追加 - 蟹のアスペクト; アイテムにアスペクトスキルを追加 - レベル30蟹のアスペクトスキル",
+        "regex": "海の",
+        "harvest": false,
+        "red": true,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 94,
+        "beast": "深淵の甲殻類",
+        "recipe": "",
+        "regex": "淵",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 115,
+        "beast": "潜みし毒",
+        "recipe": "",
+        "regex": "潜み",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 257,
+        "beast": "燃え盛るアラクニド",
+        "recipe": "",
+        "regex": "るア",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 249,
+        "beast": "獰猛な寄生虫",
+        "recipe": "",
+        "regex": "な寄",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 220,
+        "beast": "獰猛な猟犬",
+        "recipe": "",
+        "regex": "な猟",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 71,
+        "beast": "甲殻類のスナイパー",
+        "recipe": "",
+        "regex": "類の",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 252,
+        "beast": "疫病のアラクニド",
+        "recipe": "",
+        "regex": "疫",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 240,
+        "beast": "白いクローラー",
+        "recipe": "",
+        "regex": "白",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "甲殻類"
+    },
+    {
+        "id": 173,
+        "beast": "砂のサーペント",
+        "recipe": "",
+        "regex": "砂のサ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 215,
+        "beast": "砂のスキッター",
+        "recipe": "",
+        "regex": "砂のスキ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 266,
+        "beast": "砂のスコーピオン",
+        "recipe": "",
+        "regex": "砂のスコ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 216,
+        "beast": "砂のリーパー",
+        "recipe": "",
+        "regex": "砂のリ",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 265,
+        "beast": "硫黄のスコーピオン",
+        "recipe": "",
+        "regex": "硫",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 309,
+        "beast": "空の始祖、サカワル",
+        "recipe": "アイテムにアスペクトスキルを追加 - 鳥のアスペクト; アイテムにアスペクトスキルを追加 - レベル30鳥のアスペクトスキル",
+        "regex": "、サ",
+        "harvest": false,
+        "red": true,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 250,
+        "beast": "粛清の猟犬",
+        "recipe": "",
+        "regex": "粛",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "イヌ類"
+    },
+    {
+        "id": 133,
+        "beast": "紡ぎし蜘蛛",
+        "recipe": "",
+        "regex": "紡",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 39,
+        "beast": "縛られたヘリオン",
+        "recipe": "",
+        "regex": "^縛",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "ネコ類"
+    },
+    {
+        "id": 207,
+        "beast": "腐ったヴァルチャー",
+        "recipe": "",
+        "regex": "腐っ",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 262,
+        "beast": "若いレックス",
+        "recipe": "",
+        "regex": "若",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 119,
+        "beast": "跳ねる蜘蛛",
+        "recipe": "",
+        "regex": "^跳",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "クモ類"
+    },
+    {
+        "id": 263,
+        "beast": "逃げ出したレックス",
+        "recipe": "",
+        "regex": "逃け",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 105,
+        "beast": "酸のスリザラー",
+        "recipe": "",
+        "regex": "酸",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "爬虫類"
+    },
+    {
+        "id": 260,
+        "beast": "野生のレックス",
+        "recipe": "",
+        "regex": "^野",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 225,
+        "beast": "闘牛",
+        "recipe": "",
+        "regex": "闘",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "不自然な者"
+    },
+    {
+        "id": 244,
+        "beast": "餓えた寄生虫",
+        "recipe": "",
+        "regex": "餓",
+        "harvest": false,
+        "red": false,
+        "family": "洞窟",
+        "group": "昆虫類"
+    },
+    {
+        "id": 61,
+        "beast": "骨のロア",
+        "recipe": "",
+        "regex": "^骨の",
+        "harvest": false,
+        "red": false,
+        "family": "砂漠",
+        "group": "鳥類"
+    },
+    {
+        "id": 7,
+        "beast": "骸骨の獣",
+        "recipe": "",
+        "regex": "骸",
+        "harvest": false,
+        "red": false,
+        "family": "原生林",
+        "group": "クマ類"
+    },
+    {
+        "id": 185,
+        "beast": "魂無きウォッチャー",
+        "recipe": "",
+        "regex": "魂無",
+        "harvest": false,
+        "red": false,
+        "family": "深海",
+        "group": "頭足類"
+    },
+    {
+        "id": 479,
+        "beast": "黒のモリガン",
+        "recipe": "アイテムにアスペクトスキルを追加 - レベル30猫のアスペクトスキル; アイテムにアスペクトスキルを追加 - レベル30鳥のアスペクトスキル; アイテムにアスペクトスキルを追加 - レベル30蜘蛛のアスペクトスキル; アイテムにアスペクトスキルを追加 - レベル30蟹のアスペクトスキル; ヒネコラの髪束を適用 - マジックアイテム; 2個のモッドをフラクチャーする - 最低6個のモッドを持つレアのタリスマン; アイテムを変化 - 可能な最大リンク数; アイテムを変化 - 可能な最大ソケット数; ユニークアイテムを作成 - タリスマン",
+        "regex": "黒の",
+        "harvest": false,
+        "red": true,
+        "family": "原生林",
+        "group": "不自然な者"
+    }
+]

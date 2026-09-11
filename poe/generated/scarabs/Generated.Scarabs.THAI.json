@@ -1,0 +1,807 @@
+{
+    "สคารับ นิยมขวา": {
+        "name": "สคารับ นิยมขวา",
+        "regex": "ยมข",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiTWlzYyIsInNjYWxlIjoxfV0/4b55da6494/AltGreaterScarabMisc.png",
+        "flavourText": "ทอยเหรียญ​เถิด เจ้า​อยาก​ได้​ก้อย​ไหม?",
+        "description": "เพิ่มผลของ ม็อดซัฟฟิกซ์ของด่าน 100%|ม็อดพรีฟิกซ์ของด่าน ไม่มีผล"
+    },
+    "สคารับ นิยมซ้าย": {
+        "name": "สคารับ นิยมซ้าย",
+        "regex": "ยมซ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzIiLCJzY2FsZSI6MX1d/6f752909bb/GreaterScarabMisc2.png",
+        "flavourText": "ทอยเหรียญ​เถิด เจ้า​อยาก​ได้​หัว​ไหม?",
+        "description": "เพิ่มผลของ ม็อดพรีฟิกซ์ของด่าน 100%|ม็อดซัฟฟิกซ์ของด่าน ไม่มีผล"
+    },
+    "สคารับ ปรปักษ์": {
+        "name": "สคารับ ปรปักษ์",
+        "regex": "​ยน",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/ab24a34cd1/AltLesserScarabMisc.png",
+        "flavourText": "พวก​มัน​ยืน​หยัด​ต่อ​ต้าน​เจ้า​ด้วย​ความ​เกลียด​ชัง​ทัด​เทียม​กัน",
+        "description": "ด่านมี กองมอนสเตอร์แรร์ที่ถูกสะท้อน เพิ่มเติม 4 กอง"
+    },
+    "สคารับ พลังเทวา": {
+        "name": "สคารับ พลังเทวา",
+        "regex": "โฉ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
+        "flavourText": "ศรัทธา​เปลี่ยนโฉม​ได้",
+        "description": "มอนสเตอร์แรร์ ในด่าน เพิ่มเติมสูงสุด 3 ตัว จะได้รับสัมผัสกลุ่มทวยเทพ|ร่างเงา ที่เรียกมาจาก มอนสเตอร์แรร์ที่ได้รับสัมผัสกลุ่มทวยเทพ สร้างความเสียหาย เพิ่มขึ้น 100%"
+    },
+    "สคารับ พายุสว่างไสว": {
+        "name": "สคารับ พายุสว่างไสว",
+        "regex": "กทก",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MyIiwic2NhbGUiOjF9XQ/d19b59b6b8/Tier4ScarabMisc2.png",
+        "flavourText": "เสียง​อึกทึก​แห่ง​ชีวิต​ดัง​ขึ้น​ไป​ไม่รู้​จบ",
+        "description": "ด่านมี วายุพลังงามอร่าม 1 ลูก"
+    },
+    "สคารับ วิสป์": {
+        "name": "สคารับ วิสป์",
+        "regex": "กต​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzEiLCJzY2FsZSI6MX1d/303001a475/GreaterScarabMisc1.png",
+        "flavourText": "ดรีออกต์​ยึด​โยง​กับ​ทุก​สิ่ง​ที่​มี​ชีวิต",
+        "description": "มอนสเตอร์ ในด่าน มีโอกาสได้รับการเพิ่มพลังโดย วิสป์ป่าวิเศษ 2000 ดวง"
+    },
+    "สคารับ เชื้อสายสัตว์ประหลาด": {
+        "name": "สคารับ เชื้อสายสัตว์ประหลาด",
+        "regex": "​ฆ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/9196715e8d/LesserScarabMisc.png",
+        "flavourText": "สาย​เลือด​พวก​มัน​วิวัฒนาการ​เร็ว​กว่า​ที่​จะ​ฆ่า​ทิ้ง​ได้",
+        "description": "เพิ่มขนาดกอง มอนสเตอร์เมจิก 40%"
+    },
+    "สคารับ เสถียร": {
+        "name": "สคารับ เสถียร",
+        "regex": "ก!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MiLCJzY2FsZSI6MX1d/c80f553284/Tier4ScarabMisc.png",
+        "flavourText": "น่า​ทึ่ง​นัก! วิธี​ที่​สามารถ​รักษา​การ​เชื่อม​ต่อ​ไว้​ได้...",
+        "description": "วาร์ปสู่ด่าน มีโอกาสไม่หมดไป 50% เมื่อถูกใช้งาน"
+    },
+    "สคารับกล่องนิรภัย": {
+        "name": "สคารับกล่องนิรภัย",
+        "regex": "ว​ล",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/137917584a/LesserScarabStrongboxes.png",
+        "flavourText": "ถ้า​รู้​ตัว​ล่วง​หน้า จะ​ยัง​เรียก​ว่า​เป็น​การ​ดัก​โจมตี​อยู่​ได้​ไหม?",
+        "description": "ด่านมี กล่องนิรภัย เพิ่มเติม 4 ใบ"
+    },
+    "สคารับกล่องนิรภัย กักเก็บ": {
+        "name": "สคารับกล่องนิรภัย กักเก็บ",
+        "regex": "ท​ร",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/da665a65ee/Tier4ScarabStrongboxes.png",
+        "flavourText": "ความ​เงียบงัน​เร้น​ไว้​ซึ่ง​หายนะ​ที่​ร่ำรอ",
+        "description": "ด่านมี กล่องนิรภัย เพิ่มเติม จำนวนมาก|เจ้าถิ่นของด่าน กำลังดักซุ่มอยู่"
+    },
+    "สคารับกล่องนิรภัย ช่องเร้นลับ": {
+        "name": "สคารับกล่องนิรภัย ช่องเร้นลับ",
+        "regex": "ภาย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/2654dacfee/NormalScarabStrongboxes.png",
+        "flavourText": "ภาย​ใต้​ภาย​นอก​ที่​เด่นชัด แฝง​ไว้​ซึ่ง​สมบัติ​ที่แท้​จริง",
+        "description": "กล่องนิรภัย ในด่าน มีโอกาสเปิดได้อีกครั้ง 15%"
+    },
+    "สคารับกล่องนิรภัย ศักยภาพ": {
+        "name": "สคารับกล่องนิรภัย ศักยภาพ",
+        "regex": "กญ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3Ryb25nYm94ZXMiLCJzY2FsZSI6MX1d/c2cb4efc18/GreaterScarabStrongboxes.png",
+        "flavourText": "ช่าง​ทำ​แม่กุญแจ​ใฝ่ฝัน​ว่า​จะ​ได้​ทำ​กล่อง​ที่​ดี​กว่า​นี้",
+        "description": "เพิ่มผลของ ม็อดหลัก ในกล่องนิรภัย ในด่าน 75%"
+    },
+    "สคารับกล่องนิรภัย แยกแยะ": {
+        "name": "สคารับกล่องนิรภัย แยกแยะ",
+        "regex": "ฉย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/72722370df/AltTier4ScarabStrongboxes.png",
+        "flavourText": "ดวงตา​เฉียบแหลม​ย่อม​แยกแยะ​สิ่ง​มี​ค่า​ออก​จาก​สิ่ง​ไร้​ค่า​ได้",
+        "description": "กล่องนิรภัย ในด่าน มีโอกาสเป็น ลักษณะที่พบได้ยากกว่าเดิม มากขึ้น"
+    },
+    "สคารับกองพัน": {
+        "name": "สคารับกองพัน",
+        "regex": "สนต",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/e7b6e5659c/LesserScarabLegion.png",
+        "flavourText": "สันติ​จะ​มี​ค่า​อะไร​กับ​นักรบ​เล่า?",
+        "description": "ด่านมี การเผชิญหน้ากองพัน เพิ่มเติม 1 แห่ง"
+    },
+    "สคารับกองพัน ขัดแย้งชั่วนิรันดร์": {
+        "name": "สคารับกองพัน ขัดแย้งชั่วนิรันดร์",
+        "regex": "ล​ร",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkxlZ2lvbiIsInNjYWxlIjoxfV0/4a56211137/Tier4ScarabLegion.png",
+        "flavourText": "เลือด​ไหล​ริน​ชั่วนิรันดร์ น่า​สรรเสริญ​นัก",
+        "description": "มอนสเตอร์กองพัน ในด่าน สามารถถูกปลดปล่อยจากความแน่นิ่งได้หลายครั้ง|มอนสเตอร์กองพัน ในด่าน มีระดับความยากและของรางวัล เพิ่มขึ้น ต่อจำนวนครั้งที่ถูกปลดปล่อยออกมา"
+    },
+    "สคารับกองพัน นายทหาร": {
+        "name": "สคารับกองพัน นายทหาร",
+        "regex": "ภม",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/986b842d3f/NormalScarabLegion.png",
+        "flavourText": "กระทั่ง​สมรภูมิ​ก็​ยัง​มี​คนกลาง",
+        "description": "ฝ่ายกองพัน ในด่านมี หัวหน้า เพิ่มเติม 5 คน"
+    },
+    "สคารับกองพัน สมบัติ": {
+        "name": "สคารับกองพัน สมบัติ",
+        "regex": "ต​โ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/5d88c1f891/AltNormalScarabLegion.png",
+        "flavourText": "สมบัติ​โบราณ​ที่​ประดับ​ไป​ด้วย​โบราณ​วัตถุ​ทรงพลัง",
+        "description": "หีบกองพัน ในด่าน มีโอกาสกระจายของรางวัลให้กับ มอนสเตอร์กองพัน 20% เมื่อถูกปลดปล่อยจากความแน่นิ่ง|มอนสเตอร์กองพัน ที่ได้รับของรางวัล มีระดับความยาก เพิ่มขึ้น"
+    },
+    "สคารับกองสำรวจ": {
+        "name": "สคารับกองสำรวจ",
+        "regex": "​ขา",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/fa49f53ac8/LesserScarabExpedition.png",
+        "flavourText": "พวก​เขา​เดินทาง​ข้าม​น้ำ​ข้าม​ทะเล​เพื่อ​ตาม​หา​สัจธรรม​โบราณ",
+        "description": "ด่านมี การเผชิญหน้ากองสำรวจ 1 แห่ง"
+    },
+    "สคารับกองสำรวจ ผงเวรีเซียม": {
+        "name": "สคารับกองสำรวจ ผงเวรีเซียม",
+        "regex": "ซย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/1bf78dd20a/GreaterScarabExpedition.png",
+        "flavourText": "ผงสกัด​ดีๆ เพียง​หยิบ​มือ ก็​สร้าง​ความ​แตกต่าง​โดย​สิ้นเชิง",
+        "description": "การเผชิญหน้ากองสำรวจ ในด่าน มีจำนวนของ วัตถุระเบิด เพิ่มขึ้น 50%|เพิ่มรัศมีของ วัตถุระเบิด 80%"
+    },
+    "สคารับกองสำรวจ อาบพลัง": {
+        "name": "สคารับกองสำรวจ อาบพลัง",
+        "regex": "คนต",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/cbeb3c974b/AltGreaterScarabExpedition.png",
+        "flavourText": "กระทั่ง​คนตาย​ก็ได้​รับ​พลัง​จาก​แสงดารา หาก​พวก​เขา​อาบ​แสง​มา​นาน​พอ",
+        "description": "สมุดปูมเดินทาง ที่พบในด่านมี ม็อดแฝง 4 อย่าง เสมอ|มอนสเตอร์กองสำรวจ มีระดับความยากและของรางวัล เพิ่มขึ้น ตามจำนวนซากอารยธรรมที่ระเบิด"
+    },
+    "สคารับกองสำรวจ แสวงอักขระ": {
+        "name": "สคารับกองสำรวจ แสวงอักขระ",
+        "regex": "​คอ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/a751f91a8e/NormalScarabExpedition.png",
+        "flavourText": "สิ่ง​ที่มา​จาก​ดวง​ดารา​รอ​คอย​วัน​คืน​ถิ่น",
+        "description": "การเผชิญหน้ากองสำรวจ ในด่าน มีจำนวนของ เครื่องหมายมอนสเตอร์อักขระ เพิ่มขึ้น 100%"
+    },
+    "สคารับกองสำรวจ โบราณคดี": {
+        "name": "สคารับกองสำรวจ โบราณคดี",
+        "regex": "ปญ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkV4cGVkaXRpb24iLCJzY2FsZSI6MX1d/6bd03eec75/Tier4ScarabExpedition.png",
+        "flavourText": "ความ​สงสัย​นำ​มา​ซึ่ง​ปัญญา ปัญญา​นำ​มา​ซึ่ง​พลัง",
+        "description": "ซากอารยธรรม ในการเผชิญหน้ากองสำรวจ ในด่าน มีซัฟฟิกซ์และพรีฟิกซ์ เพิ่มเติม 2 อย่าง"
+    },
+    "สคารับคาลเกอร์": {
+        "name": "สคารับคาลเกอร์",
+        "regex": "ร​อ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/591426ae68/LesserScarabSettlers.png",
+        "flavourText": "แหล่งแร่​อุดมสมบูรณ์​ยัง​อยู่​ลึก​กว่า​นั้น",
+        "description": "ด่าน มีแหล่งแร่ เพิ่มเติม 2 แห่ง"
+    },
+    "สคารับคาลเกอร์ ทรัพย์ที่ถูกพิทักษ์": {
+        "name": "สคารับคาลเกอร์ ทรัพย์ที่ถูกพิทักษ์",
+        "regex": "​ขด",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
+        "flavourText": "การ​ขุด​ไม่​ใช่​เรื่อง​ยาก​อะไร​หรอก",
+        "description": "มอนสเตอร์ที่พิทักษ์ แหล่งแร่ ในด่าน มีระดับอย่างน้อย เมจิก"
+    },
+    "สคารับคาลเกอร์ หลอม": {
+        "name": "สคารับคาลเกอร์ หลอม",
+        "regex": "ณคา",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU2V0dGxlcnMiLCJzY2FsZSI6MX1d/24f57aa157/GreaterScarabSettlers.png",
+        "flavourText": "คุณค่า​ที่​แท้จริง​​ของ​แร่​หา​ได้​อยู่​ใน​หิน|แต่​อยู่​ใน​สิ่ง​ที่​มัน​จะ​เป็น",
+        "description": "แหล่งแร่ ในด่าน ให้แท่งแร่ที่ถูกถลุง แทน การยึดครองแร่"
+    },
+    "สคารับคาลเกอร์ เพิ่มพูน": {
+        "name": "สคารับคาลเกอร์ เพิ่มพูน",
+        "regex": "ำซ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNldHRsZXJzIiwic2NhbGUiOjF9XQ/62d3e05936/Tier4ScarabSettlers.png",
+        "flavourText": "แร่​มี​ชีวิต​และ​หายใจ​ได้ มิหนำซ้ำ​ยัง​ไม่​พอใจ​กับ​ความ​พยายาม​ของ​เจ้า​อีก​ด้วย",
+        "description": "มอนสเตอร์ที่พิทักษ์แหล่งแร่ มีระดับความยากและของรางวัล เพิ่มขึ้น และแหล่งแร่มี แร่ เพิ่มขึ้น 15% ต่อจำนวนของ แหล่งแร่ ที่ผ่านในด่าน"
+    },
+    "สคารับคำขาด": {
+        "name": "สคารับคำขาด",
+        "regex": "คำ​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/b1b423625d/LesserScarabUltimatum.png",
+        "flavourText": "เชิญ​เรียก​ขอ​คำ​ท้า​ได้​ทุก​เมื่อ",
+        "description": "ด่านมี การเผชิญหน้าคำขาด 1 แห่ง"
+    },
+    "สคารับคำขาด จารึก": {
+        "name": "สคารับคำขาด จารึก",
+        "regex": "ดมพ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/080e60e969/AltTier4ScarabUltimatum.png",
+        "flavourText": "มัน​มี​อะไร​ให้​เดิมพัน​อยู่​เสมอ... หาก​เจ้า​จ่าย​ไหว",
+        "description": "ของรางวัลการเผชิญหน้าคำขาด ในด่านที่เสนอ ตัวเร่งปฏิกิริยา|จะเสนอ คำขาดจารึก ให้กับเจ้าของแผนที่แทน"
+    },
+    "สคารับคำขาด ประลอง": {
+        "name": "สคารับคำขาด ประลอง",
+        "regex": "ชยช",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVWx0aW1hdHVtIiwic2NhbGUiOjF9XQ/be3b513bfe/GreaterScarabUltimatum.png",
+        "flavourText": "ชัยชนะ​ไร้​ค่า ปราชัย​ก็​น่า​ขัน",
+        "description": "การเผชิญหน้าคำขาด ในด่าน จะนำไปสู่ บอสยูนิค 1 ตัวเสมอ หากเป็นไปได้"
+    },
+    "สคารับคำขาด สินบน": {
+        "name": "สคารับคำขาด สินบน",
+        "regex": "โป",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
+        "flavourText": "การ​พิจารณา​คดี​จะ​โปร่ง​ใส​ได้​เท่ากับ​ผู้พิพากษา​เพียง​เท่านั้น",
+        "description": "มอนสเตอร์คำขาด ให้ค่าประสบการณ์ เพิ่มขึ้น 150%|การเผชิญหน้าคำขาด ให้ของรางวัลราวกับว่าคุณผ่านรอบได้ เพิ่มเติม 2 รอบ"
+    },
+    "สคารับคำขาด เร่งปฏิกิริยา": {
+        "name": "สคารับคำขาด เร่งปฏิกิริยา",
+        "regex": "วนใ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/abfc80cf45/Tier4ScarabUltimatum.png",
+        "flavourText": "คน​ส่วนใหญ่​มัก​สลดใจ​เมื่อ​ได้​รู้​วิธี​การ​ทำ​ผง​นี้",
+        "description": "การเผชิญหน้าคำขาด ในด่านจะเสนอ ตัวเร่งปฏิกิริยา|เป็นของรางวัลให้กับเจ้าของแผนที่เท่านั้น"
+    },
+    "สคารับซัลไฟต์": {
+        "name": "สคารับซัลไฟต์",
+        "regex": "คนห",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
+        "flavourText": "ค้นหา​สัจธรรม ถลำ​ลึก​สู่​ความ​มืดมิด...",
+        "description": "ด่านมี นิโค้"
+    },
+    "สคารับซัลไฟต์ ไอเดือดดาล": {
+        "name": "สคารับซัลไฟต์ ไอเดือดดาล",
+        "regex": "​า",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
+        "flavourText": "แผ่นดิน​เจ็บป่วย​เสีย​จน​กระทั่ง​ผืน​ดิน​ยัง​เน่าเปื่อย​ปล่อย​ของ​เสีย​ออกม​า",
+        "description": "ซัลไฟต์ ที่พบในด่านแผนที่ ปลดปล่อย ไอเดือดดาล|มอนสเตอร์ ที่ได้รับผลจาก ไอเดือดดาล มีจำนวนของ ไอเทม เพิ่มขึ้น 50%|ซัลไฟต์ ในแผนที่ของคุณ ถูกพิทักษ์โดย มอนสเตอร์เหมืองอะซูไรต์"
+    },
+    "สคารับต่างมิติ": {
+        "name": "สคารับต่างมิติ",
+        "regex": "กำแ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
+        "flavourText": "กำแพง​อัน​เงียบงัน​และ​พายุ​ที่​เดือดดาล​ต่อกร​กับ​ฝูง​ที่​ไร้​ที่​สิ้น",
+        "description": "การสังหารศัตรูที่อยู่ใกล้กัน ดึงดูด มอนสเตอร์ต่างมิติ"
+    },
+    "สคารับต่างมิติ ฟื้นคืน": {
+        "name": "สคารับต่างมิติ ฟื้นคืน",
+        "regex": "ว​โ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
+        "flavourText": "พวก​มัน​หิว​โหย",
+        "description": "บอสต่างมิติ ที่ถูกเรียกในด่านมาพร้อมกับ บอสต่างมิติฝ่ายอื่น|บอสต่างมิติ ในด่าน ดรอป เงินตราที่แปดเปื้อน เพิ่มขึ้น 20%|ประตูต่างมิติ ในด่าน มีโอกาสเรียก บอสยูนิค 1 ตน เพิ่มขึ้น 30%"
+    },
+    "สคารับต่างมิติ รุกราน": {
+        "name": "สคารับต่างมิติ รุกราน",
+        "regex": "ล​ถ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJleW9uZCIsInNjYWxlIjoxfV0/a1d0b3e27b/Tier4ScarabBeyond.png",
+        "flavourText": "ใกล้​ถึง​กาล​ของ​พวก​มัน​เต็มที",
+        "description": "มอนสเตอร์แรร์และยูนิค ที่ถูกสังหารในด่าน สร้าง ประตูต่างมิติ เพิ่มเติม 8 ถึง 12 แห่ง"
+    },
+    "สคารับต่างมิติ ฮีโมฟิเลีย": {
+        "name": "สคารับต่างมิติ ฮีโมฟิเลีย",
+        "regex": "ฮโ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
+        "flavourText": "กระทั่ง​ความ​เป็น​จริง​ก็​ยัง​หลั่ง​โลหิต",
+        "description": "ประตูต่างมิติ ในด่าน มีรัศมีที่เชื่อม เพิ่มขึ้น 50%|ตัวละครที่สังหาร มอนสเตอร์แรร์ต่างมิติ ในด่าน มีโอกาสได้รับม็อดของมัน 20 วินาที 30%"
+    },
+    "สคารับทาร์ทาน": {
+        "name": "สคารับทาร์ทาน",
+        "regex": "ผชน",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/2d075bbafc/LesserScarabMercenaries.png",
+        "flavourText": "ผู้ชนะ​ย่อม​ได้​ทรัพย์",
+        "description": "ด่านมี ทหารรับจ้าง อาศัยอยู่ 1 คน"
+    },
+    "สคารับทาร์ทาน กิตติศัพท์": {
+        "name": "สคารับทาร์ทาน กิตติศัพท์",
+        "regex": "ใค",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
+        "flavourText": "เขา​เป็น​ใคร​ถึง​มี​ตำนาน​ตั้งแต่​หัว​จรด​เท้า?",
+        "description": "ไอเทมสวมใส่ทุกชิ้นของ ทหารรับจ้าง ที่พบในด่านเป็น ไอเทมยูนิค"
+    },
+    "สคารับทาร์ทาน ชื่อกระฉ่อน": {
+        "name": "สคารับทาร์ทาน ชื่อกระฉ่อน",
+        "regex": "น​บ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/f880a011d3/NormalScarabMercenaries.png",
+        "flavourText": "คน​บางคน​ต้อง​แสวงหา​ทาง​ของ​ตัวเอง",
+        "description": "ทหารรับจ้าง ที่พบในด่านมี ชื่อกระฉ่อน|ทหารรับจ้าง ที่พบในด่าน มาพร้อมกับ ทหารรับจ้างเถื่อน 2 คน"
+    },
+    "สคารับทาร์ทาน พันธมิตรพิศวง": {
+        "name": "สคารับทาร์ทาน พันธมิตรพิศวง",
+        "regex": "พศ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1lcmNlbmFyaWVzIiwic2NhbGUiOjF9XQ/ec12948f39/Tier4ScarabMercenaries.png",
+        "flavourText": "\"ว่า​กัน​ทาง​เทคนิค ว่า​กัน​ตาม​ประวัติศาสตร์...|พวก​เขา​ก็​เป็น​เอ็กไซล์​กัน​ทุกคน​นั่นแหละ\"",
+        "description": "เอ็กไซล์อันธพาลเถื่อน ในด่าน มีโอกาส มาพร้อมกับ ทหารรับจ้างเถื่อน 50%|ทหารรับจ้างเถื่อน มีระดับความยาก เพิ่มขึ้น ต่อจำนวน ทหารรับจ้างเถื่อนในด่าน"
+    },
+    "สคารับบรีช จอมทัพ": {
+        "name": "สคารับบรีช จอมทัพ",
+        "regex": "ดษ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/864e785561/AltNormalScarabBreach.png",
+        "flavourText": "ความภักดี​ที่​ประดิษฐ์​ไว้​ไม่​ให้​ผันแปร",
+        "description": "บรีชที่ไม่เสถียร ในด่านมี บอส 1 ตัว|รวงรังบรีช ในด่าน นำไปยัง ปราการรวงรัง"
+    },
+    "สคารับบรีช ฝูงโกรธเกรี้ยว": {
+        "name": "สคารับบรีช ฝูงโกรธเกรี้ยว",
+        "regex": "แดน",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/2e4da41035/Tier4ScarabBreach.png",
+        "flavourText": "แดน​ของ​พวก​มัน​แผ่ขยายอยู่เสมอมา",
+        "description": "สกิลของเอลิธ ในด่านจะทำให้รวงรัง เดือดดาล แทน ซึ่งจะเพิ่มระดับความยากและของรางวัลในรอบต่อๆ ไปหลังจากนั้น"
+    },
+    "สคารับบรีช พลังแหวกมิติ": {
+        "name": "สคารับบรีช พลังแหวกมิติ",
+        "regex": "หวก",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/d6fe5cdce6/AltTier4ScarabBreach.png",
+        "flavourText": "ยิ่ง​มี​แผล​ใหม่​มาก​เท่าไร ความ​เป็น​จริง​ก็​ยิ่ง​อ่อน​แรง",
+        "description": "บรีชที่ไม่เสถียร ในด่าน เร็วขึ้น 10% ต่อจำนวน บรีชที่ไม่เสถียรที่เปิดแล้ว|มอนสเตอร์จาก บรีชที่ไม่เสถียร ในด่าน มีระดับความยากและของรางวัล เพิ่มขึ้น ต่อจำนวน บรีชที่ไม่เสถียรที่เปิดแล้ว"
+    },
+    "สคารับบรีช รวงรัง": {
+        "name": "สคารับบรีช รวงรัง",
+        "regex": "อาณ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/769139d13b/LesserScarabBreach.png",
+        "flavourText": "อาณาจักร​ของ​พวก​มัน​แผ่ขยายออก​ไป​ทุกที",
+        "description": "ด่านมี รวงรังบรีช 1 แห่ง"
+    },
+    "สคารับบรีช ไม่เสถียร": {
+        "name": "สคารับบรีช ไม่เสถียร",
+        "regex": "​ผด",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
+        "flavourText": "ความ​เป็น​จริง​ผิดเพี้ยน​เปลี่ยน​รูป",
+        "description": "ด่านมี บรีชที่ไม่เสถียร เพิ่มเติม 2 แห่ง"
+    },
+    "สคารับผีตายโหง": {
+        "name": "สคารับผีตายโหง",
+        "regex": "อาช",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/8c43bf8c64/LesserScarabTorment.png",
+        "flavourText": "อาชญากรรม​ของ​พวกมัน​ใน​ยาม​เป็น​​ตาม​หลอก​หลอน​เจ้า​ใน​ยาม​ตาย",
+        "description": "ด่าน ถูก​หลอกหลอน​โดย ผีตายโหง เพิ่มเติม 4 ตน|ผีตายโหง ในด่าน มีโอกาสถูกปลดปล่อยแล้วขุด มอนสเตอร์ที่ถูกเข้าสิง|ขึ้นมาบนดิน 10% เมื่อ มอนสเตอร์ที่ถูกเข้าสิง ถูกสังหาร"
+    },
+    "สคารับผีตายโหง ประหลาด": {
+        "name": "สคารับผีตายโหง ประหลาด",
+        "regex": "ย!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/4c94a84fd8/NormalScarabTorment.png",
+        "flavourText": "ข้า​ไม่​เคย​ได้ยิน​เสียง​กรีดร้อง​พองขน​แบบ​นั้น​มา​ก่อน​เลย!",
+        "description": "ผีตายโหง ในด่าน ถูกแทนที่ด้วย รูปแบบแปลกประหลาด"
+    },
+    "สคารับผีตายโหง เข้าสิง": {
+        "name": "สคารับผีตายโหง เข้าสิง",
+        "regex": "จ​อ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlRvcm1lbnQiLCJzY2FsZSI6MX1d/5b3bed9d3d/Tier4ScarabTorment.png",
+        "flavourText": "ผู้​แข็งแกร่ง​ไม่​อาจ​อยู่​อย่าง​เดียว​ดาย​เป็น​แน่",
+        "description": "มอนสเตอร์แรร์ ในด่าน มีโอกาสถูกเข้าสิงโดย ผีตายโหง สูงสุด 3 ตน 25%"
+    },
+    "สคารับพิธีกรรม ซากศพ": {
+        "name": "สคารับพิธีกรรม ซากศพ",
+        "regex": "ถว",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlJpdHVhbCIsInNjYWxlIjoxfV0/323f689e68/Tier4ScarabRitual.png",
+        "flavourText": "พวก​มัน​กลาย​เป็น​เพียง​หุ่นเชิด​ที่​กลับ​ถวิลหา​ชีวิต​อีก​ครา",
+        "description": "พิธีกรรม ในด่านมี มอนสเตอร์แรร์ที่มาจากไอเทมศพ เพิ่มเติม 1 ตัว"
+    },
+    "สคารับพิธีกรรม ล้นเหลือ": {
+        "name": "สคารับพิธีกรรม ล้นเหลือ",
+        "regex": "า​เข",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiUml0dWFsIiwic2NhbGUiOjF9XQ/a990c91de5/GreaterScarabRitual.png",
+        "flavourText": "เขา​เข้า​ใกล้​มา​ทุกที...​",
+        "description": "พิธีกรรม ในด่านเสนอ ของสนองบรรณาการ เพิ่มขึ้น 100%"
+    },
+    "สคารับพิธีกรรม วิสป์": {
+        "name": "สคารับพิธีกรรม วิสป์",
+        "regex": "​ใจ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/f2c3231213/NormalScarabRitual.png",
+        "flavourText": "จง​เชื่อ​ใจ​ใน​ดรีออกต์ แล้ว​เจ้า​จะ​ไม่มี​วัน​เดียว​ดาย",
+        "description": "แท่นพิธีกรรม ในด่าน เรียก วิสป์ป่าวิเศษ 1 ดวง|วิสป์ป่าวิเศษ มอบม็อด: เพิ่มบรรณาการที่ได้รับ 100% ให้กับผู้เล่นที่อยู่ใกล้"
+    },
+    "สคารับพิธีกรรม เลือกสรร": {
+        "name": "สคารับพิธีกรรม เลือกสรร",
+        "regex": "ถด​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/08f82dab28/LesserScarabRitual.png",
+        "flavourText": "เจ้า​จง​เลือก​เถิด​ว่า​ประสงค์​ความ​เชื่อ​ศักดิ์สิทธิ์​แบบ​ใด...",
+        "description": "การสุ่มของสนองบรรณาการที่ แท่นพิธีกรรม สุ่มได้ฟรีใน 2 ครั้งแรก|แท่นพิธีกรรม ในด่าน สามารถ สุ่มของสนองบรรณาการ ได้ เพิ่มเติม 2 ครั้ง"
+    },
+    "สคารับมหึมา": {
+        "name": "สคารับมหึมา",
+        "regex": "ชน​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/9ed658ddba/LesserScarabUnique.png",
+        "flavourText": "ชื่อ​หนึ่ง​มี​พลัง​เช่น​ไร​เล่า?",
+        "description": "มอนสเตอร์ยูนิค มีความทรหด, ความเสียหาย, ระดับความหายากและจำนวนของ ไอเทม ที่ดรอป เพิ่มขึ้น 1% ต่อการเพิ่ม ขนาดกองมอนสเตอร์ 1% ของด่าน"
+    },
+    "สคารับมหึมา ตำนาน": {
+        "name": "สคารับมหึมา ตำนาน",
+        "regex": "ลง​ล",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVW5pcXVlIiwic2NhbGUiOjF9XQ/0194f878a0/GreaterScarabUnique.png",
+        "flavourText": "พลัง​ล้วน​เพิ่มพูน",
+        "description": "มอนสเตอร์ยูนิค ในด่าน มีม็อดมอนสเตอร์ เพิ่มเติม 4 อย่าง"
+    },
+    "สคารับมหึมา สมบัติ": {
+        "name": "สคารับมหึมา สมบัติ",
+        "regex": "ลภ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
+        "flavourText": "ความโลภ​เป็น​กับดัก​ของ​จิตใจ",
+        "description": "มอนสเตอร์ยูนิค ในด่าน มีของรางวัล เพิ่มเติม 1 ชิ้น|มอนสเตอร์ยูนิค ในด่าน มีความทรหด เพิ่มขึ้น 30%"
+    },
+    "สคารับมีเขา จุติ": {
+        "name": "สคารับมีเขา จุติ",
+        "regex": "ร​กไ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjQiLCJzY2FsZSI6MX1d/c939905663/SuperScarab4.png",
+        "flavourText": "แอตลาส​เป็น​อะไร​ก็ได้​ที่​เจ้า​ต้องการ... และ​เป็น​ได้​ทุกอย่าง​ที่​เจ้า​ต้องการ",
+        "description": "ด่านระดับ 16+ มีบอสที่มาจาก คำเชิญของเมเวนแบบสุ่ม"
+    },
+    "สคารับมีเขา ประเพณี": {
+        "name": "สคารับมีเขา ประเพณี",
+        "regex": "พณ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjUiLCJzY2FsZSI6MX1d/cbdd57fa7e/SuperScarab5.png",
+        "flavourText": "ขอ​ให้​ผู้​แข็งแกร่ง​ที่สุด​จง​เจริญ​รุ่งเรือง",
+        "description": "มอนสเตอร์แรร์และยูนิค ทุกตัวในด่านมี ไอเทมที่ดรอป|ที่ถูกแปลงโดย ม็อดของรางวัล"
+    },
+    "สคารับมีเขา สายเลือด": {
+        "name": "สคารับมีเขา สายเลือด",
+        "regex": "อ​ร",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjEiLCJzY2FsZSI6MX1d/acc1b258a3/SuperScarab1.png",
+        "flavourText": "มี​เพียง​ผู้​แข็งแกร่ง​ที่​เหลือ​รอด มี​เพียง​ผู้​เหลือ​รอด​ที่​อยู่​สืบ​ต่อ​ไป",
+        "description": "ด่านมี มอนสเตอร์เมจิก เพิ่มขึ้น 150%|มอนสเตอร์เมจิก ในด่าน มีม็อด เพิ่มเติม 1 อย่าง"
+    },
+    "สคารับมีเขา อนุรักษ์": {
+        "name": "สคารับมีเขา อนุรักษ์",
+        "regex": "​ลม",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjMiLCJzY2FsZSI6MX1d/64d9f06e78/SuperScarab3.png",
+        "flavourText": "เรา​ต้อง​ไม่​ลืม​ทุก​ผู้​ที่มา​ก่อน​เรา",
+        "description": "สคารับ อื่นๆ ไม่หมดไปเมื่อถูกใช้งาน"
+    },
+    "สคารับมีเขา เนเมซิส": {
+        "name": "สคารับมีเขา เนเมซิส",
+        "regex": "ำพ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjIiLCJzY2FsZSI6MX1d/c4f92c444d/SuperScarab2.png",
+        "flavourText": "ความ​รุ่งโรจน์​นำพา​หายนะ​เข้า​ใกล้​มา​ทุกที",
+        "description": "มอนสเตอร์แรร์ ในด่านมี ม็อด เพิ่มเติม 2 อย่าง"
+    },
+    "สคารับมีเขา แวววาว": {
+        "name": "สคารับมีเขา แวววาว",
+        "regex": "​มง",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjYiLCJzY2FsZSI6MX1d/f74c2fdd4f/SuperScarab6.png",
+        "flavourText": "ความ​มั่งคั่ง​ย่อม​ไหล​เวียน​ไป​สู่​ผู้​ที่​เจิด​จ้า​เป็นที่สุ​ด",
+        "description": "ผู้เล่น ในด่าน ได้รับ ระดับความหายากของ ไอเทม|ตามจำนวนของ มอนสเตอร์ที่ถูกสังหาร สูงสุด 400%"
+    },
+    "สคารับมีเขา โกลาหล": {
+        "name": "สคารับมีเขา โกลาหล",
+        "regex": "าะ​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
+        "flavourText": "ฝัน​ที่​ถูก​เจาะ​ย่อม​รั่ว​ไหล​เข้า​จิตใจ",
+        "description": "กองมอนสเตอร์ ในด่าน มีโอกาสถูกแทนที่ด้วย บอสแบบสุ่ม 1 ตัว 15%|ม็อดที่ส่งผลต่อ บอสสุดท้ายประจำแผนที่ ส่งผลต่อ บอส เหล่านี้เช่นกัน"
+    },
+    "สคารับย้อนเวลา": {
+        "name": "สคารับย้อนเวลา",
+        "regex": "ผย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/4afd758a13/LesserScarabIncursion.png",
+        "flavourText": "เผย​ความ​ลับ​ของ​ชาว​วาล์ใน​การ​บุกรุก​แต่ละ​ครั้ง",
+        "description": "ด่านมี อัลวา"
+    },
+    "สคารับย้อนเวลา รุกราน": {
+        "name": "สคารับย้อนเวลา รุกราน",
+        "regex": "ะต​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/a38b517f35/NormalScarabIncursion.png",
+        "flavourText": "ประตู​ที่​เปิด​ย่อม​เข้า​หรือ​ออก​ก็​เป็น​ได้",
+        "description": "ด่านมี กองมอนสเตอร์ย้อนเวลา เพิ่มเติม 12 ถึง 16 กอง"
+    },
+    "สคารับย้อนเวลา วีรชน": {
+        "name": "สคารับย้อนเวลา วีรชน",
+        "regex": "เกง",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSW5jdXJzaW9uIiwic2NhbGUiOjF9XQ/ff92bda004/GreaterScarabIncursion.png",
+        "flavourText": "มี​เพียง​ผู้​ที่​เก่ง​ที่สุด​ที่​ได้​รับใช้​ใน​แอ็ทโซแอทล์",
+        "description": "การย้อนเวลา มีโอกาสที่มอนสเตอร์ทุกตัวมีระดับอย่างน้อย เมจิก 35%|การย้อนเวลา ในด่าน มีขนาดกองมอนสเตอร์ เพิ่มขึ้น 15%"
+    },
+    "สคารับย้อนเวลา เส้นเวลา": {
+        "name": "สคารับย้อนเวลา เส้นเวลา",
+        "regex": "​ไก",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkluY3Vyc2lvbiIsInNjYWxlIjoxfV0/748b10e2cf/Tier4ScarabIncursion.png",
+        "flavourText": "ว่า​กัน​ว่า​หาก​ออก​ไป​ไกล​พอ เจ้า​จะ​ได้​พบ​กับ​ตัว​เจ้า​เอง...",
+        "description": "สถาปนิก คนสุดท้ายที่ถูกสังหารในด่าน จะดรอป วิหารที่เป็นไอเทม 1 ชิ้น|วิหารที่เป็นไอเทม ที่ดรอปในด่าน จะถูกสร้างตามโครงสร้างวิหารปัจจุบัน แต่มีการสุ่มระดับของห้องต่างๆ ขึ้นมาใหม่"
+    },
+    "สคารับรวมสัตว์": {
+        "name": "สคารับรวมสัตว์",
+        "regex": "จาว",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
+        "flavourText": "จ้าว​แห่ง​สรรพสัตว์​พร้อม​รับหน้าที่",
+        "description": "ด่านมี ไอนาร์"
+    },
+    "สคารับรวมสัตว์ ฝูงสัตว์": {
+        "name": "สคารับรวมสัตว์ ฝูงสัตว์",
+        "regex": "ทพ​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
+        "flavourText": "เหล่า​เทพ​ผู้บุกเบิก​ออก​อาละวาด​โดย​เสรี​ใน​ป่า​ยุค​เก่า​ก่อน",
+        "description": "ด่านมี สัตว์ร้ายแดง เพิ่มเติม 5 ตัว หากมี ไอนาร์"
+    },
+    "สคารับรวมสัตว์ สร้างซ้ำ": {
+        "name": "สคารับรวมสัตว์ สร้างซ้ำ",
+        "regex": "จบ​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
+        "flavourText": "\"มี​อะไร​ดี​กว่า​การ​จับ​สัตว์ร้าย​ตัว​เดียว​เล่า เอ็กไซล์?\"",
+        "description": "สร้างร่างจำลองของ สัตว์ร้าย ที่ถูกจับในด่าน"
+    },
+    "สคารับองค์กรทรยศ": {
+        "name": "สคารับองค์กรทรยศ",
+        "regex": "​อง",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/d53970be47/LesserScarabBetrayal.png",
+        "flavourText": "พวก​องค์กร​จะ​ต้อง​ชดใช้​ใน​สิ่ง​ที่​พวก​มัน​ทำ",
+        "description": "ด่านมี จุน"
+    },
+    "สคารับองค์กรทรยศ กำลังเสริม": {
+        "name": "สคารับองค์กรทรยศ กำลังเสริม",
+        "regex": "โตต",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmV0cmF5YWwiLCJzY2FsZSI6MX1d/7dd831f857/GreaterScarabBetrayal.png",
+        "flavourText": "โต้ตอบ​แล้ว​ตอบโต้",
+        "description": "สมาชิกองค์กรอิมมอร์ทัล ในด่าน มีโอกาสมาพร้อมกับ กำลังเสริม เพิ่มขึ้น 50%"
+    },
+    "สคารับองค์กรทรยศ รักษายศ": {
+        "name": "สคารับองค์กรทรยศ รักษายศ",
+        "regex": "กฝ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJldHJheWFsIiwic2NhbGUiOjF9XQ/4290457e94/Tier4ScarabBetrayal.png",
+        "flavourText": "การ​ตาย​หลาย​ต่อ​หลาย​หน​ช่วย​ปลูกฝังการ​ทน​ความ​เจ็บปวด​ได้​ชะงัด",
+        "description": "เป้าหมายองค์กรอิมมอร์ทัล ที่ถูกสอบสวน มีโอกาสไม่สูญเสีย ยศ 50% เมื่อสอบสวนสำเร็จ"
+    },
+    "สคารับองค์กรทรยศ ออลเฟลม": {
+        "name": "สคารับองค์กรทรยศ ออลเฟลม",
+        "regex": "ศ อ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/3e4a843098/NormalScarabBetrayal.png",
+        "flavourText": "พวก​ที่​ไร้​วัน​ตาย​ย่อม​กลัว​ความ​เจ็บปวด​เพียง​เท่านั้น",
+        "description": "เพิ่มจำนวนของ กองมอนสเตอร์ ที่ถูกแทนที่ด้วย ถ่านไฟออลเฟลม ในด่าน 75%"
+    },
+    "สคารับอะบิส": {
+        "name": "สคารับอะบิส",
+        "regex": "​วญ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
+        "flavourText": "พวก​มัน​แสวงหา​วิญญาณ​อื่น​ที่​จะ​ลาก​สู่​ความ​มืดมิด​ไป​ตลอดกาล",
+        "description": "ด่านมี [ContainsAbyss|อะบิส] เพิ่มเติม 1 แห่ง"
+    },
+    "สคารับอะบิส คริสตัล": {
+        "name": "สคารับอะบิส คริสตัล",
+        "regex": "บ​ย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQWJ5c3MiLCJzY2FsZSI6MX1d/84851bd122/GreaterScarabAbyss.png",
+        "flavourText": "พลัง​ที่​พวกมัน​หยิบ​ยืม​ยัง​วนเวียน​อยู่​ใน​คริสตัล​ผีสาง",
+        "description": "หลุม[ContainsAbyss|อะบิส] ในด่าน ที่ไม่ใช่หลุมสุดท้ายจะสร้าง [AbyssalCrystal|คริสตัลอะบิส] 1 ชิ้น เมื่อถูกปิดหลุม"
+    },
+    "สคารับอะบิส คู่ครอง": {
+        "name": "สคารับอะบิส คู่ครอง",
+        "regex": "​ปก",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/b40fb2422b/AltTier4ScarabAbyss.png",
+        "flavourText": "พวกมัน​ปกป้อง​เบื้องลึก​ตาม​บัญชา​ของ​ลอร์ด​ทั้งหลาย",
+        "description": "หลุม[ContainsAbyss|อะบิส]หลุมหนึ่ง ในด่านจะเรียก [AbyssalConsort|คู่ครองอะบิส] 1 ตน"
+    },
+    "สคารับอะบิส มากมาย": {
+        "name": "สคารับอะบิส มากมาย",
+        "regex": "บอว",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/e28a53e1a0/NormalScarabAbyss.png",
+        "flavourText": "บ่อวิญญาณ​ยัง​หิวโหย​อยู่​ร่ำไป แม้​ใน​ยาม​ที่​มัน​ไหล​ล้น​ออกมา​ก็​ตาม",
+        "description": "ปล่อง[ContainsAbyss|อะบิส] ในด่าน เรียกมอนสเตอร์ เพิ่มขึ้น 100% ต่อจำนวน[AbyssFedSoul|วิญญาณ]ที่กิน"
+    },
+    "สคารับอะบิส ลงล่าง": {
+        "name": "สคารับอะบิส ลงล่าง",
+        "regex": "า​ม",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png",
+        "flavourText": "พวก​มัน​เชิญ​เจ้า​มา​พบ​เจอ ชวน​เจ้า​มา​ร่วม​กัน",
+        "description": "ด่านมี [AbyssalDepths|เบื้องลึกอะบิส] 1 แห่ง"
+    },
+    "สคารับอิทธิพล เชปเปอร์": {
+        "name": "สคารับอิทธิพล เชปเปอร์",
+        "regex": "เฝ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTaGFwZXIiLCJzY2FsZSI6MX1d/caf0ac9307/LesserScarabShaper.png",
+        "flavourText": "ทะเล​ดวงดารา​เฝ้า​รอ​ผู้​ที่​กล้า​ครุ่น​คะนึง",
+        "description": "เพิ่ม อิทธิพล​เชปเปอร์ ให้กับ​ด่าน​"
+    },
+    "สคารับอิทธิพล เอลเดอร์": {
+        "name": "สคารับอิทธิพล เอลเดอร์",
+        "regex": "ป​จ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFbGRlciIsInNjYWxlIjoxfV0/8828d3f4eb/LesserScarabElder.png",
+        "flavourText": "ไกล​ออก​ไป​จาก​แสง​มี​เหลือ​เพียง​ห้วง​ว่าง",
+        "description": "เพิ่ม อิทธิพล​เอลเดอร์ ให้กับด่าน​"
+    },
+    "สคารับอิทธิพล แทรกแซง": {
+        "name": "สคารับอิทธิพล แทรกแซง",
+        "regex": "จำ​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNoYXBlciIsInNjYWxlIjoxfV0/320c05daeb/Tier4ScarabShaper.png",
+        "flavourText": "ความทรงจำ​ส่ง​เสียง​กังวาน​ไป​ใน​แอตลาส|ก้องสะท้อน​ไป​ชั่ว​นิรันดร์",
+        "description": "บอสประจำแผนที่ตัวหนึ่ง มาพร้อมกับ องครักษ์เชปเปอร์, องครักษ์เอลเดอร์, ผู้พิชิต หรือบอสสังเคราะห์ แบบสุ่ม|ใช้ร่วมกับแผนที่ระดับ 14+ ได้เพียงเท่านั้น"
+    },
+    "สคารับอิทธิพล โขยง": {
+        "name": "สคารับอิทธิพล โขยง",
+        "regex": "โข",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRWxkZXIiLCJzY2FsZSI6MX1d/660528eb40/GreaterScarabElder.png",
+        "flavourText": "ความ​คิด​ไม่​สามารถ​จำกัด​ได้",
+        "description": "กองมอนสเตอร์ที่มีอิทธิพล ในด่าน มีขนาดกองมอนสเตอร์ เพิ่มขึ้น 40%"
+    },
+    "สคารับฮาร์เวสต์": {
+        "name": "สคารับฮาร์เวสต์",
+        "regex": "ส​ห",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
+        "flavourText": "เส้น​ทาง​ลับ​เร้น​นำ​สู่​หุบเขา​แห่งเงา​และ​แสง...",
+        "description": "ด่านมี สวนศักดิ์สิทธิ์"
+    },
+    "สคารับฮาร์เวสต์ สองเท่า": {
+        "name": "สคารับฮาร์เวสต์ สองเท่า",
+        "regex": "ฤด",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
+        "flavourText": "ฤดู​ที่​ดี​นำ​มา​ซึ่ง​ความ​อุดมสมบูรณ์",
+        "description": "พลังแห่งชีวิต ที่ดรอปจาก มอนสเตอร์ฮาร์เวสต์ ในด่าน ถูกสร้างซ้ำ|มอนสเตอร์ฮาร์เวสต์ ในด่าน มีพลังชีวิต เพิ่มขึ้น อีก 100%"
+    },
+    "สคารับฮาร์เวสต์ อุดมสมบูรณ์": {
+        "name": "สคารับฮาร์เวสต์ อุดมสมบูรณ์",
+        "regex": "​ตน",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
+        "flavourText": "ยิ่ง​ต้น​สูง ยิ่ง​ให้​ผล​ดี",
+        "description": "หากด่านมี สวนศักดิ์สิทธิ์ สวนนี้จะมีเมล็ดพันธุ์ระดับ 4 แต่ละชนิด เพิ่มเติมสูงสุด 1 เมล็ด หากเป็นไปได้"
+    },
+    "สคารับเดลิเรียม": {
+        "name": "สคารับเดลิเรียม",
+        "regex": "​พษ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/0b8b887e88/LesserScarabDelirium.png",
+        "flavourText": "สคารับ​ไร้​พิษสง​ที่​ไม่​ทำ​อะไร​แม้แต่​น้อย",
+        "description": "ด่านมี กระจกเดลิเรียม"
+    },
+    "สคารับเดลิเรียม คลุ้มคลั่ง": {
+        "name": "สคารับเดลิเรียม คลุ้มคลั่ง",
+        "regex": "ๆ!",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/9de6ce65c5/NormalScarabDelirium.png",
+        "flavourText": "พวก​มัน​เสียง​ดัง​จริงๆ! ทำไม​พวก​มัน​เสียง​ดัง​แบบ​นี้?! ข้า​ได้​แต่​ตะโกน​​เท่า​นั้น!",
+        "description": "หลอดของรางวัลเดลิเรียม ในด่าน เติม เร็วขึ้น 100%|เดลิเรียม ในด่าน เพิ่มขึ้น เร็วขึ้น 50% ตามระยะห่างจากกระจก"
+    },
+    "สคารับเดลิเรียม จิตหลงผิด": {
+        "name": "สคารับเดลิเรียม จิตหลงผิด",
+        "regex": "ไง",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
+        "flavourText": "เจ้า​หมายความ​ว่า​ยังไง? แอตลาส​เป็น​แบบ​นี้​มา​ตลอด​นะ",
+        "description": "แผนที่ ที่พบในด่าน มีชั้นของ เดลิเรียม"
+    },
+    "สคารับเดลิเรียม หวาดระแวง": {
+        "name": "สคารับเดลิเรียม หวาดระแวง",
+        "regex": "าดร",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/e6730494ae/GreaterScarabDelirium.png",
+        "flavourText": "หาก​มัน​ดู​ดี​เกิน​จริง...",
+        "description": "การเผชิญหน้าเดลิเรียม ในด่าน สร้าง ของรางวัล เพิ่มเติม 2 ชนิด"
+    },
+    "สคารับเดลิเรียม โรคประสาท": {
+        "name": "สคารับเดลิเรียม โรคประสาท",
+        "regex": "คป",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
+        "flavourText": "รอย​ยิ้ม​แสยะ​สว่าง​ชัด​ใน​ความ​มืด",
+        "description": "การเผชิญหน้าเดลิเรียม ในด่านมี บอสยูนิคเดลิเรียม ทุกตัว|ชนิดของรางวัลเดลิเรียม ในด่าน มีจำนวน +1 เมื่อสยบ บอสยูนิคเดลิเรียม|สามารถใช้กับ แผนที่ระดับ 11+ เท่านั้น"
+    },
+    "สคารับเอสเซนส์": {
+        "name": "สคารับเอสเซนส์",
+        "regex": "ดภ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/4c99af0610/LesserScarabEssence.png",
+        "flavourText": "มัน​ปลอดภัย​แน่ๆ สิ่ง​มี​ชีวิต​ที่​ติด​อยู่​ใน​นั้น​ไม่มี​ทาง​มี​ชีวิต​อยู่​ได้​หรอก",
+        "description": "ด่านมี มอนสเตอร์ที่ถูกจองจำ เพิ่มเติม 3 ตัว"
+    },
+    "สคารับเอสเซนส์ ขึ้นสูง": {
+        "name": "สคารับเอสเซนส์ ขึ้นสูง",
+        "regex": "หลย",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/3a091b8052/NormalScarabEssence.png",
+        "flavourText": "ไม่มี​เหลี่ยม​มุม​ไหน​ที่​สมบูรณ์​แบบ​ไป​กว่า​นี้​แล้ว",
+        "description": "เอสเซนส์ ที่พบในด่าน มีระดับสูงขึ้น 1 ระดับ"
+    },
+    "สคารับเอสเซนส์ ปรับตัว": {
+        "name": "สคารับเอสเซนส์ ปรับตัว",
+        "regex": "ศท",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/56560d691e/AltTier4ScarabEssence.png",
+        "flavourText": "โครง​ตาข่าย​ของ​ผลึก​คริสตัล​แผ่​กระจาย​ไป​ยัง​ทิศทาง​พิกล|เกิน​กว่า​ที่​จิต​มนุษย์​จะ​หยั่ง​ถึง",
+        "description": "มอนสเตอร์ที่ถูกจองจำ ที่ถูกปลดปล่อยในด่าน มอบม็อด เอสเซนส์แบบสุ่ม 1 อย่าง ให้กับมอนสเตอร์ที่ถูกจองจำตัวอื่นในด่าน 1 ตัว|มอนสเตอร์ที่ถูกจองจำ ในด่าน มีระดับความยากและของรางวัล เพิ่มขึ้น ต่อจำนวน ม็อดเอสเซนส์ที่มี"
+    },
+    "สคารับเอสเซนส์ เกิดผลึก": {
+        "name": "สคารับเอสเซนส์ เกิดผลึก",
+        "regex": "ลกล",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/d7e7534a07/Tier4ScarabEssence.png",
+        "flavourText": "ผลึก​พวก​นี้... ลุกลาม​ได้​ด้วย​รึ?",
+        "description": "มอนสเตอร์แรร์ ที่เป็นเจ้าถิ่นตามธรรมชาติของด่าน ถูกจองจำด้วย เอสเซนส์"
+    },
+    "สคารับเอสเซนส์ เสถียรภาพ": {
+        "name": "สคารับเอสเซนส์ เสถียรภาพ",
+        "regex": "ก​ใ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXNzZW5jZSIsInNjYWxlIjoxfV0/28e74041a5/GreaterScarabEssence.png",
+        "flavourText": "หาก​ใช้​อุปกรณ์​ที่​ถูก​และ​ใช้​มือ​ที่​แม่นยำ การ​เปลี่ยนแปลง​ของ​ผลึก​ก็​ให้​ผล​ที่​คาดเดา​ได้",
+        "description": "การใส่มลทินให้กับ เอสเซนส์ ในด่าน จะส่งผลให้|เอสเซนส์ถูกอัพเกรดหรือแปรสภาพเสมอ"
+    },
+    "สคารับเอ็กไซล์อันธพาล": {
+        "name": "สคารับเอ็กไซล์อันธพาล",
+        "regex": "มฆ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/73d1ee9b23/LesserScarabAnarchy.png",
+        "flavourText": "ในเวร์แคลส์ท ถ้า​ไม่ฆ่าก็ถูกฆ่า",
+        "description": "ด่านมี เอ็กไซล์อันธพาล เพิ่มเติม 5 คน"
+    },
+    "สคารับเอ็กไซล์อันธพาล คู่หู": {
+        "name": "สคารับเอ็กไซล์อันธพาล คู่หู",
+        "regex": "คห",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQW5hcmNoeSIsInNjYWxlIjoxfV0/4697e57871/GreaterScarabAnarchy.png",
+        "flavourText": "มิตร​ย่อม​ผัน​เปลี่ยน​ทุก​เมื่อ​เชื่อ​วัน​ใน​หมู่​เอ็กไซล์",
+        "description": "เอ็กไซล์อันธพาลเถื่อน ในด่าน มีโอกาสปรากฏตัวเป็นคู่ 50%"
+    },
+    "สคารับเอ็กไซล์อันธพาล ดีเด่น": {
+        "name": "สคารับเอ็กไซล์อันธพาล ดีเด่น",
+        "regex": "ผ​ห",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFuYXJjaHkiLCJzY2FsZSI6MX1d/3f5f6a8671/Tier4ScarabAnarchy.png",
+        "flavourText": "มี​ผู้​หนึ่ง​ที่​เด่น​กว่า​ผู้​ใด​ใน​หมู่​ทรชน",
+        "description": "ด่านมี เอ็กไซล์อันธพาลดีเด่น เพิ่มเติม 1 คน"
+    },
+    "สคารับเอ็กไซล์อันธพาล มหึมา": {
+        "name": "สคารับเอ็กไซล์อันธพาล มหึมา",
+        "regex": "ช​ซ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/d391e90e68/NormalScarabAnarchy.png",
+        "flavourText": "การ​ใช้​ซัลไฟต์​อาจ​เป็น​ผล​ให้​มี​การเติบโต​อย่าง​ประหลาด​ก็​เป็น​ได้",
+        "description": "เอ็กไซล์อันธพาลเถื่อน ในด่าน มีโอกาสถูกแทนที่ด้วย ยักษ์อันธพาล 30%"
+    },
+    "สคารับแท่นบูชา": {
+        "name": "สคารับแท่นบูชา",
+        "regex": "แลก",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/76cedf832c/LesserScarabDomination.png",
+        "flavourText": "เป็น​การ​แลก​เปลี่ยน​ง่ายๆ แลก​เลือด​มา​กับ​อำนาจ",
+        "description": "ด่านมี แท่นบูชา เพิ่มเติม 3 แท่น"
+    },
+    "สคารับแท่นบูชา ภัยสยอง": {
+        "name": "สคารับแท่นบูชา ภัยสยอง",
+        "regex": "วล​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRvbWluYXRpb24iLCJzY2FsZSI6MX1d/0d55e72414/Tier4ScarabDomination.png",
+        "flavourText": "ไม่​ว่า​รางวัล​จะ​เป็น​อะไร จง​ต่อสู้​เพื่อ​ชิง​มัน",
+        "description": "แท่นบูชา ในด่าน ถูกพิทักษ์โดย บอส 1 ตัว|ม็อดที่ส่งผลต่อ บอสสุดท้ายประจำแผนที่ ส่งผลต่อ บอส เหล่านี้เช่นกัน"
+    },
+    "สคารับแท่นบูชา ร่างเงา": {
+        "name": "สคารับแท่นบูชา ร่างเงา",
+        "regex": "ส​พ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/c907d44dec/NormalScarabDomination.png",
+        "flavourText": "เส้น​ทาง​สู่​พลัง​บาง​อย่าง​นำไป​สู่​ความ​บ้า​คลั่ง​เท่านั้น",
+        "description": "ด่านมี แท่นบูชาร่างเงา เพิ่มเติม 2 แท่น"
+    },
+    "สคารับแท่นบูชา วิวัฒนาการ": {
+        "name": "สคารับแท่นบูชา วิวัฒนาการ",
+        "regex": "ส​แ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRG9taW5hdGlvbiIsInNjYWxlIjoxfV0/8913234164/GreaterScarabDomination.png",
+        "flavourText": "แอตลาส​และ​เวร์แคลส์ท​มี​ความ​ลับ​สยองขวัญ​อย่าง​หนึ่ง​เหมือน​กัน",
+        "description": "ด่านมี แท่นบูชาวิวัฒนาการ เพิ่มเติม 1 แท่น"
+    },
+    "สคารับแผนที่ ความเสี่ยง": {
+        "name": "สคารับแผนที่ ความเสี่ยง",
+        "regex": "จก​",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/b41df1ff07/NormalScarabMaps.png",
+        "flavourText": "สิ่ง​ที่​เห็น​ใน​กระจก​ย่อม​เป็น​ภาพ​สะท้อน​ของ​เรา​เพียง​เท่านั้น",
+        "description": "ด่านมี ม็อดแบบสุ่ม เพิ่มเติม 2 อย่าง"
+    },
+    "สคารับแผนที่ มลทิน": {
+        "name": "สคารับแผนที่ มลทิน",
+        "regex": "​มล",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWFwcyIsInNjYWxlIjoxfV0/7c589dbe02/GreaterScarabMaps.png",
+        "flavourText": "พลัง​มลทิน​ไหล​ผ่าน​ระหว่าง​โลก​ความจริง​ทั้ง​หลาย",
+        "description": "แผนที่ที่ไม่ใช่ยูนิค ที่พบในด่าน มีมลทิน และมีม็อด 8 อย่าง"
+    },
+    "สคารับแผนที่ มากมาย": {
+        "name": "สคารับแผนที่ มากมาย",
+        "regex": "​ฟ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/41c689bbef/AltNormalScarabMaps.png",
+        "flavourText": "ไร้​ที่​สิ้น ไร้​ขอบ​ฟ้า",
+        "description": "ด่านมี กองมอนสเตอร์ที่ยากและให้รางวัลสูง|ที่ดรอป แผนที่ เพิ่มขึ้น 300% เพิ่มเติม 8 ถึง 12 กอง"
+    },
+    "สคารับแผนที่ ยกระดับ": {
+        "name": "สคารับแผนที่ ยกระดับ",
+        "regex": "ส​ง",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/e7d11bcc5b/LesserScarabMaps.png",
+        "flavourText": "โอกาส​งอกงาม​ใน​ถิ่น​ที่​ความ​ฝัน​อันตราย​ยิ่ง",
+        "description": "เพิ่ม แผนที่ ที่พบในด่าน 10% ต่อจำนวนของ ม็อดแผนที่ ที่ส่งผลต่อด่าน"
+    },
+    "สคารับไบล์ท": {
+        "name": "สคารับไบล์ท",
+        "regex": "กาน",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCbGlnaHQiLCJzY2FsZSI6MX1d/401222e4f4/LesserScarabBlight.png",
+        "flavourText": "กิ่ง​ก้าน​เลื้อย​ไป​ให้​เติบโต...",
+        "description": "ด่านมี การเผชิญหน้าไบล์ท 1 แห่ง"
+    },
+    "สคารับไบล์ท หล่อเลี้ยงชีวิต": {
+        "name": "สคารับไบล์ท หล่อเลี้ยงชีวิต",
+        "regex": "วบ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/34e07da01c/AltTier4ScarabBlight.png",
+        "flavourText": "การ​สลับ​ขั้ว​ของ​ตัว​ควบคุม​การ​บีบอัด|ให้​ผล​ที่​น่า​สนใจ​ไม่​น้อย...",
+        "description": "ป้อมเพิ่มพลัง แต่ละป้อมในด่านทำให้ มอนสเตอร์ไบล์ท ที่อยู่ในระยะ|มีระดับความยากและของรางวัล เพิ่มขึ้น"
+    },
+    "สคารับไบล์ท หัวใจไบล์ท": {
+        "name": "สคารับไบล์ท หัวใจไบล์ท",
+        "regex": "วฏ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmxpZ2h0Iiwic2NhbGUiOjF9XQ/d0aa6a6d55/GreaterScarabBlight.png",
+        "flavourText": "แกน​เติบใหญ่​ขึ้น​ใน​แต่ละ​วัฏจักร ย่อม​ท่วม​ทะลัก​ออก​มา​วัน​ยัง​ค่ำ...",
+        "description": "การเผชิญหน้าไบล์ท ในด่านมี หีบไบล์ท 1 ใบ|การเผชิญหน้าไบล์ท ในด่านเรียก ระลอกศัตรู เพิ่มเติม|หีบไบล์ท ในด่านจะขยายใหญ่ขึ้นและให้ของรางวัลเพิ่มขึ้นตามจำนวนศัตรูไบล์ทที่ถูกสังหาร"
+    },
+    "สคารับไบล์ท เบ่งบาน": {
+        "name": "สคารับไบล์ท เบ่งบาน",
+        "regex": "รษ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
+        "flavourText": "โรค​รา​ร้าย​จะ​หลั่ง​ไหล​ออก​มา​ศตวรรษ​ละ​ครั้ง...",
+        "description": "การเผชิญหน้าไบล์ท ในด่าน มีบอสยูนิค เพิ่มเติมสูงสุด 3 ตัว|ศัตรูยูนิค ในการเผชิญหน้าไบล์ท มีพลังชีวิต เพิ่มขึ้น 100%|แผนที่ไบล์ทระดับ 14+ ที่พบในด่าน ดรอปเป็น แผนที่ไบล์ทล้างผลาญ แทน"
+    },
+    "สคารับไพ่พยากรณ์ ฉกฉวย": {
+        "name": "สคารับไพ่พยากรณ์ ฉกฉวย",
+        "regex": "กฉ",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGl2aW5hdGlvbiIsInNjYWxlIjoxfV0/73ab11f6bd/GreaterScarabDivination.png",
+        "flavourText": "หาก​เจ้า​ไม่​ยึด​ชะตา​ตัวเอง​เอา​ไว้ คน​อื่น​จะ​ยึด​ไป​แทน",
+        "description": "ไพ่พยากรณ์ ที่ดรอปในด่าน ถูกขโมยไปโดย บอสสุดท้ายประจำแผนที่|บอสสุดท้ายประจำแผนที่ตัวนั้น ยากขึ้น และสร้างความเสียหาย เพิ่มขึ้น ต่อจำนวนของ ไพ่พยากรณ์ ที่มันขโมย|บอสสุดท้ายประจำแผนที่ตัวนั้น สร้างซ้ำ ไพ่พยากรณ์ทุกใบที่ขโมยไป เมื่อถูกสยบ"
+    },
+    "สคารับไพ่พยากรณ์ อาศรม": {
+        "name": "สคารับไพ่พยากรณ์ อาศรม",
+        "regex": "​โร",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
+        "flavourText": "ไม่มี​โรค​ใด​สะ​กัด​กั้น​ได้​ตลอด​กาล",
+        "description": "ด่านมี กองมอนสเตอร์ลูกศิษย์โดเอดรี เพิ่มเติม 8 ถึง 12 กอง|ลูกศิษย์โดเอดรี มีโอกาสดรอป สำรับไพ่ปริศนา เพิ่มเติม 1 ใบ 1%"
+    },
+    "สคารับไพ่พยากรณ์ เหลือเฟือ": {
+        "name": "สคารับไพ่พยากรณ์ เหลือเฟือ",
+        "regex": "าคต",
+        "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
+        "flavourText": "เรา​สร้าง​อนาคต​นับ​พัน​ใน​การ​กระ​ทำ​แต่ละ​ครั้ง",
+        "description": "ด่านมี กองมอนสเตอร์เมจิกสัมผัสพยากรณ์ เพิ่มเติม 6 ถึง 10 กอง|ซึ่งมีโอกาสดรอป ไพ่พยากรณ์ เพิ่มขึ้น 1000%"
+    }
+}

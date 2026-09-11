@@ -38,7 +38,7 @@ export const Poe1Layout = () => {
               <div className="content-main">
                 <div className="content-left-gfx"/>
                 <div className="content-main-area">
-                  <div className="page-content" key={`poe1-${profile.name}-${profile.language}`}>
+                  <div className="page-content" key={`poe1-${profile.name}`}>
                     <Outlet/>
                   </div>
                 </div>

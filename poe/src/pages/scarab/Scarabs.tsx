@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {loadProfiles, loadSettings, updateSettings, valueFromKeyMap} from "@poe/utils/LocalStorage";
-import Header from "@poe/components/Header";
+import {HeaderWithLanguage} from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import "./Scarab.css";
 import type {ScarabRegex, Scarabs as ScarabsData} from "@poe/types/generated/scarabs";
@@ -25,6 +25,7 @@ export interface PoeNinjaScarabLine {
 
 export interface PoeNinjaScarabItem {
   id: string
+  image: string
   name: string
 }
 
@@ -34,8 +35,8 @@ export interface PoeNinjaScarabData {
 }
 
 const sortByChaosValue = (prices: Map<string, number>, e1: ScarabRegex, e2: ScarabRegex) => {
-  const chaosValue1 = prices.get(e1.name) ?? 0;
-  const chaosValue2 = prices.get(e2.name) ?? 0;
+  const chaosValue1 = prices.get(e1.icon) ?? 0;
+  const chaosValue2 = prices.get(e2.icon) ?? 0;
   return chaosValue2 - chaosValue1;
 }
 
@@ -53,8 +54,14 @@ const Scarabs = () => {
   const [scarabs, setScarabs] = useState<ScarabsData>({});
 
   useEffect(() => {
-    loadScarabs().then(setScarabs);
-  }, []);
+    let isCurrentLanguage = true;
+    loadScarabs(profile.language).then((data) => {
+      if (isCurrentLanguage) setScarabs(data);
+    });
+    return () => {
+      isCurrentLanguage = false;
+    };
+  }, [profile.language]);
 
   const scarabNames = Array.from(Object.keys(scarabs));
   const scarabList = scarabNames.map((s) => ({...scarabs[s]}));
@@ -63,7 +70,7 @@ const Scarabs = () => {
   const [lastUpdated, setLastUpdated] = useState("Outdated prices. Check back in a few mins...");
   const [priceLookup, setPriceLookup] = useState(new Map<string, number>());
   const [search, setSearch] = useState("");
-  const [selected, setSelected] = useState<string[]>(profile.scarab.selected.filter((e) => scarabNames.includes(e)));
+  const [selected, setSelected] = useState<string[]>(profile.scarab.selected);
 
   const [result, setResult] = useState("");
   const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
@@ -79,14 +86,23 @@ const Scarabs = () => {
     const data = fetchEconomyFile<PoeNinjaScarabData>("scarab", league, "Scarab");
 
     data.then((d) => {
-      const idToName = new Map(d.items.map((i) => [i.id, i.name]));
+      const idToIcon = new Map(d.items.map((i) => [i.id, i.image]));
       const idToPrice = new Map(d.lines.map((l) => [l.id, l.primaryValue]));
 
       setPriceLookup(
-        new Map(d.lines.map((b) => [idToName.get(b.id) || "unknown", idToPrice.get(b.id) ?? 0]))
+        new Map(d.lines.map((b) => [idToIcon.get(b.id) || "unknown", idToPrice.get(b.id) ?? 0]))
       );
     })
   }, [league]);
+
+  useEffect(() => {
+    if (scarabList.length === 0) return;
+    const icons = new Set(scarabList.map((scarab) => scarab.icon));
+    setSelected((current) => current
+      .map((selection) => scarabs[selection]?.icon ?? selection)
+      .filter((selection) => icons.has(selection))
+    );
+  }, [scarabs]);
 
   useEffect(() => {
     if (priceRangeInitialized) return;
@@ -106,7 +122,7 @@ const Scarabs = () => {
 
   return (
     <>
-      <Header text={"Scarab"}/>
+      <HeaderWithLanguage text={"Scarab"}/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action({minPrice, maxPrice, selected}, {language: storedProfile.language, league}, !priceRangeInitialized || priceLookup.size === 0 ? "Economy data is still loading." : undefined)}
@@ -127,13 +143,13 @@ const Scarabs = () => {
             <button className="scarab-action-button" onClick={() => {
               const matchingScarabs = scarabList
                 .filter((scarab) => {
-                  const priceOfScarab = priceLookup.get(scarab.name);
+                  const priceOfScarab = priceLookup.get(scarab.icon);
                   if (priceOfScarab === undefined) return false;
                   const withinMaxPrice = Number(maxPrice) >= priceOfScarab;
                   const withinMinPrice = Number(minPrice) <= priceOfScarab;
                   return withinMinPrice && withinMaxPrice;
                 })
-                .map((e) => e.name);
+                .map((e) => e.icon);
               setSelected(matchingScarabs);
             }}>
               Auto select scarabs between:
@@ -159,8 +175,8 @@ const Scarabs = () => {
             .filter((e) => search.length < 2 || e.name.toLowerCase().includes(search.toLowerCase()))
             .sort((e1, e2) => sortByChaosValue(priceLookup, e1, e2))
             .map((scarab) => {
-              const isSelected = selected.includes(scarab.name);
-              const price = priceLookup.get(scarab.name) ?? 0;
+              const isSelected = selected.includes(scarab.icon);
+              const price = priceLookup.get(scarab.icon) ?? 0;
               return (
                 <ScarabElement
                   key={scarab.name}

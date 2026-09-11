@@ -98,7 +98,7 @@
         },
         {
             "id": -1846391668,
-            "regex": "iner",
+            "regex": "viner",
             "rawText": "Adjacent Areas contain 3 additional Diviner's Strongboxes | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^adjacent areas contain # additional diviner's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -110,7 +110,7 @@
         },
         {
             "id": -1825750741,
-            "regex": "^be",
+            "regex": "^b",
             "rawText": "Belts dropped in adjacent Areas have 10% chance to instead drop as a Unique Belt | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^belts dropped in adjacent areas have #% chance to instead drop as a unique belt $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -170,7 +170,7 @@
         },
         {
             "id": -1653505960,
-            "regex": "ge$",
+            "regex": "s damage$",
             "rawText": "(15—20)% increased Monster Damage | 30% increased Dead Man's Sulphur found in adjacent Areas Damage",
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
@@ -230,7 +230,7 @@
         },
         {
             "id": -1540950736,
-            "regex": "ge$",
+            "regex": "s damage$",
             "rawText": "(26—35)% increased Monster Damage | 45% increased Dead Man's Sulphur found in adjacent Areas Damage",
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
@@ -314,7 +314,7 @@
         },
         {
             "id": -1278474868,
-            "regex": "g$",
+            "regex": "ning$",
             "rawText": "Monsters deal (21—35)% extra Physical Damage as Lightning | 30% increased Rarity of Items found in adjacent Areas Damage Physical Elemental Lightning",
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
@@ -326,7 +326,7 @@
         },
         {
             "id": -1266352498,
-            "regex": "ge$",
+            "regex": "s damage$",
             "rawText": "(21—25)% increased Monster Damage | 30% increased Dead Man's Sulphur found in adjacent Areas Damage",
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
@@ -386,7 +386,7 @@
         },
         {
             "id": -1067068614,
-            "regex": "rns",
+            "regex": "lden",
             "rawText": "Adjacent Areas contain 4 additional Golden Lanterns | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^adjacent areas contain # additional golden lanterns $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -422,7 +422,7 @@
         },
         {
             "id": -979891570,
-            "regex": "ge$",
+            "regex": "s damage$",
             "rawText": "(10—14)% increased Monster Damage | 30% increased Dead Man's Sulphur found in adjacent Areas Damage",
             "generalizedText": "^#% increased monster damage $|^ #% increased dead man's sulphur found in adjacent areas damage$",
             "options": {
@@ -470,7 +470,7 @@
         },
         {
             "id": -772918892,
-            "regex": "g$",
+            "regex": "ning$",
             "rawText": "Monsters deal (15—20)% extra Physical Damage as Lightning | 20% increased Rarity of Items found in adjacent Areas Damage Physical Elemental Lightning",
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
@@ -530,7 +530,7 @@
         },
         {
             "id": -613560827,
-            "regex": "g$",
+            "regex": "ning$",
             "rawText": "Monsters deal (9—14)% extra Physical Damage as Lightning | 18% increased Rarity of Items found in adjacent Areas Damage Physical Elemental Lightning",
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
@@ -770,7 +770,7 @@
         },
         {
             "id": -163682589,
-            "regex": "ust",
+            "regex": "clus",
             "rawText": "Adjacent Areas contain (16—20) additional Clusters of Barrels | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^adjacent areas contain # additional clusters of barrels $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1106,7 +1106,7 @@
         },
         {
             "id": 594230091,
-            "regex": "iner",
+            "regex": "viner",
             "rawText": "Adjacent Areas contain 2 additional Diviner's Strongboxes | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^adjacent areas contain # additional diviner's strongboxes $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1214,7 +1214,7 @@
         },
         {
             "id": 1069452985,
-            "regex": "ust",
+            "regex": "clus",
             "rawText": "Adjacent Areas contain (12—15) additional Clusters of Barrels | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^adjacent areas contain # additional clusters of barrels $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1322,7 +1322,7 @@
         },
         {
             "id": 1236031878,
-            "regex": "g$",
+            "regex": "ning$",
             "rawText": "Monsters deal (5—8)% extra Physical Damage as Lightning | 12% increased Rarity of Items found in adjacent Areas Damage Physical Elemental Lightning",
             "generalizedText": "^monsters deal #% extra physical damage as lightning $|^ #% increased rarity of items found in adjacent areas damage physical elemental lightning$",
             "options": {
@@ -1550,7 +1550,7 @@
         },
         {
             "id": 1785378505,
-            "regex": "e em",
+            "regex": "ps $",
             "rawText": "Monsters have a chance to be Empowered by 2000 Wildwood Wisps | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^monsters have a chance to be empowered by # wildwood wisps $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1574,7 +1574,7 @@
         },
         {
             "id": 1862279303,
-            "regex": "e em",
+            "regex": "ps $",
             "rawText": "Monsters have a chance to be Empowered by 4000 Wildwood Wisps | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^monsters have a chance to be empowered by # wildwood wisps $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1622,7 +1622,7 @@
         },
         {
             "id": 1940850954,
-            "regex": "^be",
+            "regex": "^b",
             "rawText": "Belts dropped in adjacent Areas have 20% chance to instead drop as a Unique Belt | local deepwater mod applies to adjacent charts [1]",
             "generalizedText": "^belts dropped in adjacent areas have #% chance to instead drop as a unique belt $|^ local deepwater mod applies to adjacent charts #$",
             "options": {
@@ -1845,8 +1845,8 @@
                 366447942,
                 1440565235
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 4
         },
         "-2137148656:-313561882:366447942:1519905944": {
@@ -1856,8 +1856,8 @@
                 366447942,
                 1519905944
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 4
         },
         "-2137148656:-313561882:134585959:366447942": {
@@ -1867,8 +1867,8 @@
                 134585959,
                 366447942
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 4
         },
         "-2137148656:-313561882:366447942:1090437481": {
@@ -1878,8 +1878,8 @@
                 366447942,
                 1090437481
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 4
         },
         "-2137148656:134585959:1090437481:1440565235:1519905944": {
@@ -1890,8 +1890,8 @@
                 1440565235,
                 1519905944
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 5
         },
         "-2026342316:-1540950736:-605940901:-248194722:60243265:223097822:1052136545": {
@@ -3027,36 +3027,6 @@
             "weight": 7,
             "count": 6
         },
-        "-1379935402:1488206232:1502456377": {
-            "ids": [
-                -1379935402,
-                1488206232,
-                1502456377
-            ],
-            "regex": "ages",
-            "weight": 4,
-            "count": 3
-        },
-        "-1379935402:-170693163:1502456377": {
-            "ids": [
-                -1379935402,
-                -170693163,
-                1502456377
-            ],
-            "regex": "ages",
-            "weight": 4,
-            "count": 3
-        },
-        "-1379935402:-170693163:1488206232": {
-            "ids": [
-                -1379935402,
-                -170693163,
-                1488206232
-            ],
-            "regex": "ages",
-            "weight": 4,
-            "count": 3
-        },
         "-1297170162:-768730396": {
             "ids": [
                 -1297170162,
@@ -3595,8 +3565,8 @@
                 1440565235,
                 1519905944
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 5
         },
         "-259518424:-61288403": {
@@ -3646,16 +3616,6 @@
             "regex": "as ph",
             "weight": 7,
             "count": 2
-        },
-        "-170693163:1488206232:1502456377": {
-            "ids": [
-                -170693163,
-                1488206232,
-                1502456377
-            ],
-            "regex": "ages",
-            "weight": 4,
-            "count": 3
         },
         "-163682589:1069452985:1502456377": {
             "ids": [
@@ -3711,7 +3671,7 @@
                 59580266,
                 2107276732
             ],
-            "regex": "hit wi",
+            "regex": "it wit",
             "weight": 8,
             "count": 2
         },
@@ -3723,8 +3683,8 @@
                 1440565235,
                 1519905944
             ],
-            "regex": "s gain \\d+",
-            "weight": 13,
+            "regex": "rs gain \\d+",
+            "weight": 14,
             "count": 5
         },
         "540214578:1490652708:1757670824": {
