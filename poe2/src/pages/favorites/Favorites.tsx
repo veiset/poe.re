@@ -1,4 +1,4 @@
-import React, {lazy, Suspense, useMemo, useRef, useState} from "react";
+import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
 import Poe2Header from "@poe2/components/Poe2Header";
 import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
