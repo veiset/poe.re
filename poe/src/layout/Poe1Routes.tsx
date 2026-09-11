@@ -1,23 +1,24 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Poe1Layout} from "./Poe1Layout";
 
-import Vendor from "../pages/vendor/Vendor";
-import OptimizedMapMods from "../pages/maps/OptimizedMapMods";
-import Boat from "../pages/boat/Boat";
-import Item from "../pages/item/Item";
-import MovedContent from "../pages/moved/MovedContent";
-import Heist from "../pages/heist/Heist";
-import Expedition from "../pages/expedition/Expedition";
-import Beast from "../pages/beast/Beast";
-import Scarabs from "../pages/scarab/Scarabs";
-import Tattoo from "../pages/tattoo/Tattoo";
-import Runegraft from "../pages/runegraft/Runegraft";
-import Jewel from "../pages/jewel/Jewel";
-import Favorites from "../pages/favorites/Favorites";
+const Vendor = lazy(() => import("../pages/vendor/Vendor"));
+const OptimizedMapMods = lazy(() => import("../pages/maps/OptimizedMapMods"));
+const Boat = lazy(() => import("../pages/boat/Boat"));
+const Item = lazy(() => import("../pages/item/Item"));
+const MovedContent = lazy(() => import("../pages/moved/MovedContent"));
+const Heist = lazy(() => import("../pages/heist/Heist"));
+const Expedition = lazy(() => import("../pages/expedition/Expedition"));
+const Beast = lazy(() => import("../pages/beast/Beast"));
+const Scarabs = lazy(() => import("../pages/scarab/Scarabs"));
+const Tattoo = lazy(() => import("../pages/tattoo/Tattoo"));
+const Runegraft = lazy(() => import("../pages/runegraft/Runegraft"));
+const Jewel = lazy(() => import("../pages/jewel/Jewel"));
+const Favorites = lazy(() => import("../pages/favorites/Favorites"));
 
 export const Poe1Routes = () => (
-  <Routes>
+  <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading…</div>}>
+    <Routes>
     <Route element={<Poe1Layout/>}>
       <Route index element={<Favorites/>}/>
       <Route path="favorites" element={<Favorites/>}/>
@@ -39,7 +40,8 @@ export const Poe1Routes = () => (
     </Route>
 
     <Route path="*" element={<Navigate to="/vendor" replace/>}/>
-  </Routes>
+    </Routes>
+  </Suspense>
 );
 
 export default Poe1Routes;

@@ -4,6 +4,9 @@ import path from 'path';
 
 export const baseConfig = defineConfig({
   plugins: [react()],
+  build: {
+    assetsInlineLimit: 0,
+  },
   resolve: {
     alias: {
       '@shared': path.resolve(__dirname, 'shared'),

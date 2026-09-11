@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useMemo, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
@@ -30,7 +30,7 @@ const Item = () => {
   const [basetypes, setBasetypes] = useState<BaseType[]>([]);
   const [itemRegex, setItemRegex] = useState<ItemRegex[]>([]);
 
-  const affixMap: Record<string, ItemAffixRegex> = groupAffixes(itemRegex);
+  const affixMap: Record<string, ItemAffixRegex> = useMemo(() => groupAffixes(itemRegex), [itemRegex]);
 
   const [itembase, setItembase] = useState<Itembase | undefined>(profile.itemCrafting.itembase);
   const [matchSimilarBases, setMatchSimilarBases] = useState(profile.itemCrafting.matchSimilarBases);
@@ -53,11 +53,12 @@ const Item = () => {
   const onlyMagicBases = ["utility flasks"];
 
   useEffect(() => {
-    Promise.all([loadItemBasetypes(), loadItemRegex()]).then(([bases, regex]) => {
-      setBasetypes(bases);
-      setItemRegex(regex);
-    });
+    loadItemBasetypes().then(setBasetypes);
   }, []);
+
+  useEffect(() => {
+    if (itembase) loadItemRegex().then(setItemRegex);
+  }, [itembase]);
 
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
