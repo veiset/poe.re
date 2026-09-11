@@ -1,11 +1,13 @@
 import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
 import {Link, useNavigate, useSearchParams} from "react-router-dom";
-import Header from "@poe/components/Header";
+import {HeaderWithLanguage} from "@poe/components/Header";
 import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
 import {FavoriteTagFilter} from "@shared/components/favorites/FavoriteTagFilter";
 import {useFavorites} from "@poe/core/favorites/FavoritesContext";
+import {useRenderedFavorites} from "@poe/core/favorites/useRenderedFavorites";
 import {FAVORITE_PAGE_REGISTRY} from "@poe/core/favorites/FavoritePageRegistry";
 import {FavoriteMetadata, FavoriteRecord} from "@poe/core/favorites/FavoriteTypes";
+import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import "./Favorites.css";
 const SortableFavoritesGrid = lazy(() => import("./SortableFavoritesGrid"));
 
@@ -68,6 +70,8 @@ const DetailsDialog = ({favorite, onClose, onCustomize, onEdit}: DetailsDialogPr
 
 const Favorites = () => {
   const {favorites, storageError, updateMetadata, remove, reorder} = useFavorites();
+  const {lang} = useContext(ProfileContext);
+  const renderedFavorites = useRenderedFavorites(favorites, lang);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [detailsId, setDetailsId] = useState<string>();
   const [customizeId, setCustomizeId] = useState<string>();
@@ -76,6 +80,7 @@ const Favorites = () => {
   const navigate = useNavigate();
   const allTags = useMemo(() => [...new Set(favorites.flatMap((favorite) => favorite.tags))].sort((a, b) => a.localeCompare(b)), [favorites]);
   const visible = selectedTags.length ? favorites.filter((favorite) => favorite.tags.some((tag) => selectedTags.includes(tag))) : favorites;
+  const renderedVisible = renderedFavorites.filter((favorite) => visible.some((candidate) => candidate.id === favorite.id));
 
   useEffect(() => {
     const focus = searchParams.get("focus");
@@ -93,16 +98,16 @@ const Favorites = () => {
     }
   };
   const customize = favorites.find((favorite) => favorite.id === customizeId);
-  const details = favorites.find((favorite) => favorite.id === detailsId);
+  const details = renderedFavorites.find((favorite) => favorite.id === detailsId);
 
   return <>
-    <Header text="Favorites"/>
+    <HeaderWithLanguage text="Favorites"/>
     <main className={`favorites-page${favorites.length === 0 ? " favorites-page-empty" : ""}`}>
       {storageError && <div className="favorites-storage-error" role="alert">{storageError}</div>}
       <FavoriteTagFilter tags={allTags} selectedTags={selectedTags} onChange={setSelectedTags}/>
       {favorites.length === 0 ? <div className="favorites-empty"><div className="favorites-empty-icon">★</div><h2>No favorites yet</h2><p>Open a generator, configure a regex, then choose <strong>Favorite</strong> in the result bar.</p><Link to="/vendor">Create a vendor regex</Link></div>
         : visible.length === 0 ? <div className="favorites-empty"><p>No favorites match the selected tags.</p><button type="button" onClick={() => setSelectedTags([])}>Clear filters</button></div>
-        : <Suspense fallback={<div className="favorites-grid-loading" role="status">Loading favorites…</div>}><SortableFavoritesGrid favorites={favorites} visible={visible} copiedFavoriteId={copiedFavoriteId}
+        : <Suspense fallback={<div className="favorites-grid-loading" role="status">Loading favorites…</div>}><SortableFavoritesGrid favorites={favorites} visible={renderedVisible} copiedFavoriteId={copiedFavoriteId}
           onCopied={setCopiedFavoriteId} onDetails={setDetailsId} onCustomize={setCustomizeId}
           onEdit={(favorite) => navigate(`${FAVORITE_PAGE_REGISTRY[favorite.pageKey].route}?favorite=${encodeURIComponent(favorite.id)}`)} onMove={move}
           onDelete={(favorite) => { if (window.confirm(`Delete favorite “${favorite.name}”?`)) remove(favorite.id); }} onReorder={reorder}/></Suspense>}

@@ -67,7 +67,7 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
       successMessage: !isEditingFavorite && lastCreationSuccess?.pageKey === pageKey && lastCreationSuccess.configuration === JSON.stringify(configuration) ? "Successfully added as a favorite." : undefined,
       disabledReason: disabledReason ?? (requestedId && !favorite ? "This favorite does not exist in the active profile or belongs to another page." : undefined),
       onSave: async (finalResult) => {
-        const snapshot: FavoriteSnapshot = {pageKey, regex: finalResult, configuration, context};
+        const snapshot: FavoriteSnapshot = {pageKey, regex: finalResult, configuration, context, languageDependent: FAVORITE_PAGE_REGISTRY[pageKey].languageDependent === true};
         if (favorite) {
           updateSnapshot(favorite.id, snapshot, globalProfile);
           navigate("/favorites");

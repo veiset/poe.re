@@ -9,6 +9,7 @@ const snapshot = {
   regex: "r-g-b",
   configuration: {...defaultSettings.vendor, anyThreeColorLink: true},
   context: {language: "ENGLISH"},
+  languageDependent: false,
 };
 
 describe("favorite storage", () => {

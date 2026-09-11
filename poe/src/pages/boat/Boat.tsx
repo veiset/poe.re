@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useContext} from "react";
-import {HeaderWithLanguage} from "@poe/components/Header";
+import Header from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import SelectableTokenList from "@poe/components/SelectableTokenList/SelectableTokenList";
 import type {BoatModsRegex, MapOption, Token} from "@poe/types/generated/boatmods";
@@ -114,7 +114,7 @@ const Boat = () => {
 
   return (
     <>
-      <HeaderWithLanguage text={"Boat Modifiers"}/>
+      <Header text={"Boat Modifiers"}/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action(settings, {language: storedProfile.language})}

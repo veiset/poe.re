@@ -19,6 +19,7 @@ export interface FavoriteRecord {
   regex: string;
   configuration: unknown;
   context: FavoriteContextData;
+  languageDependent: boolean;
   createdAt: string;
   updatedAt: string;
 }
@@ -36,6 +37,7 @@ export interface FavoriteSnapshot {
   regex: string;
   configuration: unknown;
   context: FavoriteContextData;
+  languageDependent: boolean;
 }
 
 export const FAVORITE_COLORS = ["#c6930a", "#5fa8d6", "#69b578", "#d67575", "#a986d6", "#d68cb8"] as const;
@@ -95,6 +97,10 @@ export const parseFavoriteRecord = (value: unknown): FavoriteRecord | undefined 
       language: typeof context.language === "string" ? context.language : undefined,
       league: typeof context.league === "string" ? context.league : undefined,
     },
+    // Favorites created before this flag was introduced
+    languageDependent: typeof value.languageDependent === "boolean"
+      ? value.languageDependent
+      : typeof context.language === "string",
     createdAt,
     updatedAt,
   };

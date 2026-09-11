@@ -10,7 +10,7 @@ export const createFavorite = (profileName: string, snapshot: FavoriteSnapshot, 
     schemaVersion: 1, id: createFavoriteId(), pageKey: snapshot.pageKey,
     name: metadata.name.trim().slice(0, 80), description: metadata.description.trim().slice(0, 1000),
     color: sanitizeFavoriteColor(metadata.color), icon: sanitizeFavoriteIcon(metadata.icon), tags: normalizeFavoriteTags(metadata.tags),
-    regex: snapshot.regex, configuration: cloneFavoriteConfiguration(snapshot.configuration), context: {...snapshot.context},
+    regex: snapshot.regex, configuration: cloneFavoriteConfiguration(snapshot.configuration), context: {...snapshot.context}, languageDependent: snapshot.languageDependent,
     createdAt: now, updatedAt: now,
   };
   if (!record.name || !record.regex.trim()) throw new Error("A favorite needs a name and a non-empty regex");
@@ -34,7 +34,7 @@ export const updateFavoriteSnapshot = (profileName: string, id: string, snapshot
   let updated: FavoriteRecord | undefined;
   updateSettings(profileName, (settings) => ({...settings, favorites: parseFavoriteRecords(settings.favorites).map((favorite) => {
     if (favorite.id !== id || favorite.pageKey !== snapshot.pageKey) return favorite;
-    updated = {...favorite, regex: snapshot.regex, configuration: cloneFavoriteConfiguration(snapshot.configuration), context: {...snapshot.context}, updatedAt: new Date().toISOString()};
+    updated = {...favorite, regex: snapshot.regex, configuration: cloneFavoriteConfiguration(snapshot.configuration), context: {...snapshot.context}, languageDependent: snapshot.languageDependent, updatedAt: new Date().toISOString()};
     return updated;
   })}));
   if (!updated) throw new Error("Favorite not found for this page");
