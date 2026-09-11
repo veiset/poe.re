@@ -7,6 +7,7 @@ import alterationIcon from "@shared/img/linkicons/alteration.png";
 import heistIcon from "@shared/img/linkicons/blueprint.png";
 import expeditionIcon from "@shared/img/linkicons/expeidition_reroll.png";
 import jewelIcon from "@shared/img/linkicons/cobalt.png";
+import gemIcon from "@shared/img/gem.png";
 import beastIcon from "@shared/img/BestiaryOrbFull.png";
 import scarabIcon from "@shared/img/scarab.png";
 import tattooIcon from "@shared/img/tattoo.png";
@@ -16,6 +17,7 @@ import favoriteIcon from "@shared/img/linkicons/favorite.svg";
 const items: NavigationItem[] = [
   {text: "Favorites", icon: favoriteIcon, route: "/favorites"},
   {text: "Vendor", icon: vendorIcon, route: "/vendor"},
+  {text: "Gems", icon: gemIcon, route: "/gems"},
   {text: "Map mods", icon: mapIcon, route: "/maps"},
   {text: "Boat", icon: boatIcon, route: "/boat"},
   {text: "Items", icon: alterationIcon, route: "/items"},

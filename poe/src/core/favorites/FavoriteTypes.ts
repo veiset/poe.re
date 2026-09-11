@@ -1,6 +1,6 @@
 export const POE1_FAVORITE_PAGE_KEYS = [
   "vendor", "maps", "boat", "items", "expedition", "heist",
-  "beast", "tattoo", "runegraft", "scarab", "jewel",
+  "beast", "tattoo", "runegraft", "scarab", "jewel", "gems",
 ] as const;
 
 export type Poe1FavoritePageKey = typeof POE1_FAVORITE_PAGE_KEYS[number];
