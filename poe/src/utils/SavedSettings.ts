@@ -137,6 +137,8 @@ export interface BeastSettings {
   maxChaosValue: string;
   showRedBeasts: boolean;
   showYellowBeasts: boolean;
+  selectedGroup: string;
+  selectedFamily: string;
 }
 
 export interface HeistSettings {
@@ -380,6 +382,8 @@ export const defaultSettings: SavedSettings = {
     maxChaosValue: "",
     showRedBeasts: true,
     showYellowBeasts: false,
+    selectedGroup: "",
+    selectedFamily: "",
   },
   heist: {
     targetValue: 0,

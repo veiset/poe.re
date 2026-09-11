@@ -4,6 +4,7 @@ import React, {useContext, useEffect, useState} from "react";
 import {loadBeastRegex} from "@poe/utils/loadData";
 import type {BeastRegex} from "@poe/types/generated/beast";
 import "./Beast.css";
+import "@shared/components/dropdown/Dropdown.css";
 import Collapsable from "@poe/components/collapsable/Collapsable";
 import {dateTextFromString} from "../expedition/ExpeditionUtils";
 import {Checkbox} from "@shared/components/Checkbox/Checkbox";
@@ -35,6 +36,8 @@ interface BeastPriceRegex {
   numberOfBeasts: number
   harvest: boolean
   redBeast: boolean
+  group: string
+  family: string
 }
 
 const sortByChaosValue = (e1: BeastPriceRegex, e2: BeastPriceRegex) => e2.chaosValue - e1.chaosValue;
@@ -52,10 +55,14 @@ const generateRegexBatch = (
   maxValue: number | undefined,
   showRedBeasts: boolean,
   showYellowBeasts: boolean,
+  selectedGroup: string,
+  selectedFamily: string,
   offset: number,
 ): RegexBatch => {
   const matchingPrices = prices
     .filter((e) => e.redBeast ? showRedBeasts : showYellowBeasts)
+    .filter((e) => !selectedGroup || e.group === selectedGroup)
+    .filter((e) => !selectedFamily || e.family === selectedFamily)
     .filter((e) => e.chaosValue > 0)
     .filter((e) => includeHarvest || !e.harvest)
     .filter((e) => e.chaosValue <= (maxValue ?? Infinity))
@@ -90,6 +97,8 @@ const Beast = () => {
   const [includeHarvest, setIncludeHarvest] = React.useState(profile.beast.includeHarvest);
   const [showRedBeasts, setShowRedBeasts] = useState(legacyRedBeastsOnly === undefined ? profile.beast.showRedBeasts : true);
   const [showYellowBeasts, setShowYellowBeasts] = useState(legacyRedBeastsOnly === undefined ? profile.beast.showYellowBeasts : !legacyRedBeastsOnly);
+  const [selectedGroup, setSelectedGroup] = useState(profile.beast.selectedGroup);
+  const [selectedFamily, setSelectedFamily] = useState(profile.beast.selectedFamily);
   const [beastOffset, setBeastOffset] = useState(profile.beast.beastOffset);
 
   const [beastPrices, setBeastPrices] = useState<BeastPriceRegex[]>([]);
@@ -100,12 +109,14 @@ const Beast = () => {
   const [result, setResult] = useState<string>("");
   const [priceRangeInitialized, setPriceRangeInitialized] = useState(hasSavedPriceRange.current);
   const previousFilterKey = React.useRef<string | undefined>(undefined);
-  const settings = {beastOffset, includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts};
+  const settings = {beastOffset, includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts, selectedGroup, selectedFamily};
   const minChaosN = minChaosValue ? minChaosValue as unknown as number : undefined;
   const maxChaosN = maxChaosValue ? maxChaosValue as unknown as number : undefined;
   const regexBatch = generateRegexBatch(
-    beastPrices, includeHarvest, minChaosN, maxChaosN, showRedBeasts, showYellowBeasts, beastOffset,
+    beastPrices, includeHarvest, minChaosN, maxChaosN, showRedBeasts, showYellowBeasts, selectedGroup, selectedFamily, beastOffset,
   );
+  const groups = Array.from(new Set(beastRegex.map((beast) => beast.group))).sort();
+  const families = Array.from(new Set(beastRegex.map((beast) => beast.family))).sort();
 
   useEffect(() => {
     let isCurrentLanguage = true;
@@ -146,6 +157,8 @@ const Beast = () => {
         numberOfBeasts: lookup.get(englishBeastNames.get(b.id) ?? "")?.listingCount ?? 0,
         harvest: b.harvest,
         redBeast: b.red,
+        group: b.group,
+        family: b.family,
       })
     )
       .filter((e) => e.numberOfBeasts > 5); // filter price fixing, or very low amount of beasts
@@ -164,7 +177,7 @@ const Beast = () => {
   }, [beastPrices, priceRangeInitialized]);
 
   useEffect(() => {
-    const filterKey = JSON.stringify({includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts});
+    const filterKey = JSON.stringify({includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts, selectedGroup, selectedFamily});
     if (previousFilterKey.current === undefined) {
       previousFilterKey.current = filterKey;
       return;
@@ -173,13 +186,13 @@ const Beast = () => {
       previousFilterKey.current = filterKey;
       setBeastOffset(0);
     }
-  }, [includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts]);
+  }, [includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts, selectedGroup, selectedFamily]);
 
   useEffect(() => {
     if (priceRangeInitialized) {
       if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, beast: settings}));
     }
-  }, [beastOffset, includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts, priceRangeInitialized]);
+  }, [beastOffset, includeHarvest, minChaosValue, maxChaosValue, showRedBeasts, showYellowBeasts, selectedGroup, selectedFamily, priceRangeInitialized]);
 
   useEffect(() => {
     setResult(regexBatch.regex);
@@ -196,6 +209,8 @@ const Beast = () => {
         setMaxChaosValue(range?.max ?? "");
         setShowRedBeasts(defaultSettings.beast.showRedBeasts);
         setShowYellowBeasts(defaultSettings.beast.showYellowBeasts);
+        setSelectedGroup(defaultSettings.beast.selectedGroup);
+        setSelectedFamily(defaultSettings.beast.selectedFamily);
         setBeastOffset(0);
       }}/>
       <p className="beast-price-info">Using price data from the {league} League. Last updated: {lastUpdated}</p>
@@ -215,24 +230,42 @@ const Beast = () => {
           <Checkbox label="Include harvest beasts" value={includeHarvest} onChange={setIncludeHarvest}/>
           <Checkbox label="Show red beasts" value={showRedBeasts} onChange={setShowRedBeasts}/>
           <Checkbox label="Show yellow beasts" value={showYellowBeasts} onChange={setShowYellowBeasts}/>
+          <div className="beast-attribute-filters">
+            <label>
+              Group
+              <select className="dropdown-select" value={selectedGroup} onChange={(event) => setSelectedGroup(event.target.value)}>
+                <option value="">All groups</option>
+                {groups.map((group) => <option key={group} value={group}>{group}</option>)}
+              </select>
+            </label>
+            <label>
+              Family
+              <select className="dropdown-select" value={selectedFamily} onChange={(event) => setSelectedFamily(event.target.value)}>
+                <option value="">All families</option>
+                {families.map((family) => <option key={family} value={family}>{family}</option>)}
+              </select>
+            </label>
+          </div>
         </FilterCard>
       </div>
       <div className="row">
         <Collapsable header={"Price data"} isOpenByDefault={true}>
           <div className="beast-row beast-header">
             <div className="beast-name-cell">Beast name</div>
-            <div className="beast-regex-cell">Regex</div>
+            <div className="beast-group-cell">Group</div>
+            <div className="beast-family-cell">Family</div>
             <div className="beast-value-cell">Chaos</div>
             <div className="beast-recipe-cell">Recipe</div>
           </div>
-          {beastPrices.filter((e) => e.redBeast ? showRedBeasts : showYellowBeasts).sort(sortByChaosValue).map((e) => {
+          {beastPrices.filter((e) => (e.redBeast ? showRedBeasts : showYellowBeasts) && (!selectedGroup || e.group === selectedGroup) && (!selectedFamily || e.family === selectedFamily)).sort(sortByChaosValue).map((e) => {
             const highlighted = result.includes(e.regex);
             const hiddenHarvest = !includeHarvest && e.harvest ? "hidden-beast" : "";
             const highlightedCss = highlighted && !hiddenHarvest ? "beast-highlighted" : "";
             return (
               <div className={`beast-row ${highlightedCss} ${hiddenHarvest}`} key={e.name}>
                 <div className="beast-name-cell" key={e.name}>{e.name}</div>
-                <div className="beast-regex-cell">{e.regex}</div>
+                <div className="beast-group-cell">{e.group}</div>
+                <div className="beast-family-cell">{e.family}</div>
                 <div className="beast-value-cell">{e.chaosValue}</div>
                 <div className="beast-recipe-cell">{e.recipe}</div>
               </div>

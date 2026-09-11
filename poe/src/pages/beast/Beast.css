@@ -10,9 +10,10 @@
     color: #d5d5d5;
 }
 .beast-name-cell {
-    width: 22%;
+    width: 18%;
 }
-.beast-regex-cell {
+.beast-group-cell,
+.beast-family-cell {
     width: 8%;
 }
 .beast-value-cell {
@@ -76,6 +77,24 @@
 
 .beast-price-controls .price-range-slider {
     flex: 0 1 520px;
+}
+
+.beast-attribute-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.beast-attribute-filters label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+}
+
+.beast-attribute-filters select {
+    min-width: 150px;
 }
 
 .beast-next-button {
