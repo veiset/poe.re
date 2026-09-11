@@ -7,9 +7,11 @@ import {BrowserRouter} from "react-router-dom";
 import {Poe2Routes} from "./layout/Poe2Routes";
 import {migrateHashRoute} from "@shared/core/migrateHashRoute";
 import {reportWebVitals} from "@shared/core/reportWebVitals";
+import {recoverFromDynamicImportFailure} from "@shared/core/recoverFromDynamicImportFailure";
 
 migrateHashRoute();
 reportWebVitals("poe2");
+recoverFromDynamicImportFailure();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
