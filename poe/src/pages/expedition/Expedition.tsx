@@ -102,7 +102,7 @@ const Expedition = () => {
       .then((date) => {
         setLastUpdated(dateTextFromString(date));
       });
-  }, [baseTypeRegex]);
+  }, [league, expedition]);
 
   useEffect(() => {
     if (!expedition) return;
@@ -122,7 +122,7 @@ const Expedition = () => {
     }).catch(() => {
       console.warn("Fetching of real time data failed");
     });
-  }, [league, baseTypeRegex]);
+  }, [league, expedition]);
 
 
   useEffect(() => {
