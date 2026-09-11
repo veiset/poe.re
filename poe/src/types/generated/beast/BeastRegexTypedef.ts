@@ -1,12 +1,12 @@
 export interface BeastRegexEntry {
-  id: number;
   beast: string;
+  family: string;
+  group: string;
   harvest: boolean;
+  id: number;
   recipe: string;
   red: boolean;
   regex: string;
-  family: string;
-  group: string;
 }
 
 export type BeastRegex = Array<BeastRegexEntry>;

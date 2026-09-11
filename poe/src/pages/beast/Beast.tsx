@@ -221,8 +221,8 @@ const Beast = () => {
                               onMinChange={(value) => { setPriceRangeInitialized(true); setMinChaosValue(value); }}
                               onMaxChange={(value) => { setPriceRangeInitialized(true); setMaxChaosValue(value); }}
                               availablePrices={beastPrices.map((beast) => beast.chaosValue)} allowZero/>
-            <button className="beast-next-button" disabled={!regexBatch.hasMore}
-                    onClick={() => setBeastOffset(regexBatch.nextOffset)}>
+            <button className="beast-next-button" disabled={!regexBatch.regex}
+                    onClick={() => setBeastOffset(regexBatch.hasMore ? regexBatch.nextOffset : 0)}>
               Next batch
             </button>
           </div>
