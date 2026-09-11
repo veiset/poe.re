@@ -1,14 +1,17 @@
-import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
+import React, {useEffect, useMemo, useRef, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
+import {DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors} from "@dnd-kit/core";
+import {SortableContext, arrayMove, rectSortingStrategy, sortableKeyboardCoordinates} from "@dnd-kit/sortable";
 import Poe2Header from "@poe2/components/Poe2Header";
 import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
+import {FavoriteCard} from "@shared/components/favorites/FavoriteCard";
 import {FavoriteTagFilter} from "@shared/components/favorites/FavoriteTagFilter";
 import {FavoriteMetadata} from "@shared/core/favorites/FavoriteTypes";
+import {restrictToViewportEdges} from "@shared/core/favorites/restrictToViewportEdges";
 import {useFavorites} from "../../FavoritesContext";
 import {FAVORITE_PAGE_REGISTRY} from "../../FavoritePageRegistry";
 import {Poe2FavoriteRecord} from "../../settings";
 import "./Favorites.css";
-const SortableFavoritesGrid = lazy(() => import("./SortableFavoritesGrid"));
 
 interface DetailsDialogProps {
   favorite: Poe2FavoriteRecord;
@@ -91,19 +94,31 @@ const Favorites = () => {
   const visibleFavorites = tags.length > 0
     ? favorites.filter((favorite) => favorite.tags.some((tag) => tags.includes(tag)))
     : favorites;
+  const sensors = useSensors(
+    useSensor(PointerSensor, {activationConstraint: {distance: 8}}),
+    useSensor(TouchSensor, {activationConstraint: {delay: 180, tolerance: 5}}),
+    useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}),
+  );
 
   const move = (id: string, offset: number) => {
     const from = favorites.findIndex((favorite) => favorite.id === id);
     const to = from + offset;
 
     if (from >= 0 && to >= 0 && to < favorites.length) {
-      const next = [...favorites];
-      const [favorite] = next.splice(from, 1);
-      next.splice(to, 0, favorite);
-      reorder(next.map((entry) => entry.id));
+      reorder(arrayMove(favorites, from, to).map((favorite) => favorite.id));
     }
   };
 
+  const dragEnd = ({active, over}: DragEndEvent) => {
+    if (!over || active.id === over.id) return;
+
+    const from = favorites.findIndex((favorite) => favorite.id === active.id);
+    const to = favorites.findIndex((favorite) => favorite.id === over.id);
+
+    if (from >= 0 && to >= 0) {
+      reorder(arrayMove(favorites, from, to).map((favorite) => favorite.id));
+    }
+  };
 
   const deleteFavorite = (favorite: Poe2FavoriteRecord) => {
     if (window.confirm(`Delete favorite “${favorite.name}”?`)) {
@@ -124,9 +139,32 @@ const Favorites = () => {
             <Link to="/vendor">Create a vendor regex</Link>
           </div>
         ) : (
-          <Suspense fallback={<div className="favorites-grid-loading" role="status">Loading favorites…</div>}><SortableFavoritesGrid favorites={favorites} visible={visibleFavorites} copiedFavoriteId={copiedFavoriteId}
-            onCopied={setCopiedFavoriteId} onDetails={setDetails} onCustomize={setEditing} onEdit={(favorite) => navigate(`${FAVORITE_PAGE_REGISTRY[favorite.pageKey].route}?favorite=${encodeURIComponent(favorite.id)}`)}
-            onMove={move} onDelete={deleteFavorite} onReorder={reorder}/></Suspense>
+          <DndContext sensors={sensors} collisionDetection={closestCenter} modifiers={[restrictToViewportEdges]} onDragEnd={dragEnd}>
+            <SortableContext items={visibleFavorites.map((favorite) => favorite.id)} strategy={rectSortingStrategy}>
+              <div className="favorites-grid">
+                {visibleFavorites.map((favorite) => {
+                  const index = favorites.findIndex((entry) => entry.id === favorite.id);
+                  const page = FAVORITE_PAGE_REGISTRY[favorite.pageKey];
+
+                  return (
+                    <FavoriteCard
+                      key={favorite.id}
+                      favorite={{...favorite, sourceLabel: page.label, sourceIcon: page.icon}}
+                      canMoveEarlier={index > 0}
+                      canMoveLater={index < favorites.length - 1}
+                      copiedFavoriteId={copiedFavoriteId}
+                      onCopied={() => setCopiedFavoriteId(favorite.id)}
+                      onDetails={() => setDetails(favorite)}
+                      onCustomize={() => setEditing(favorite)}
+                      onEdit={() => navigate(`${page.route}?favorite=${encodeURIComponent(favorite.id)}`)}
+                      onMove={(offset) => move(favorite.id, offset)}
+                      onDelete={() => deleteFavorite(favorite)}
+                    />
+                  );
+                })}
+              </div>
+            </SortableContext>
+          </DndContext>
         )}
       </main>
       {details && <DetailsDialog

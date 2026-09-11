@@ -1,17 +1,16 @@
-import React, {lazy, Suspense} from "react";
+import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Poe2Layout} from "./Poe2Layout";
 
-const Poe2Vendor = lazy(async () => ({default: (await import("../pages/vendor/Vendor")).Vendor}));
-const Poe2Waystone = lazy(async () => ({default: (await import("../pages/waystone/Waystone")).Waystone}));
-const Poe2Tablet = lazy(async () => ({default: (await import("../pages/tablet/Tablet")).Tablet}));
-const Poe2Relic = lazy(async () => ({default: (await import("../pages/relic/Relic")).Relic}));
-const Poe2Item = lazy(async () => ({default: (await import("../pages/item/Item")).Item}));
-const Favorites = lazy(() => import("../pages/favorites/Favorites"));
+import {Vendor as Poe2Vendor} from "../pages/vendor/Vendor";
+import {Waystone as Poe2Waystone} from "../pages/waystone/Waystone";
+import {Tablet as Poe2Tablet} from "../pages/tablet/Tablet";
+import {Relic as Poe2Relic} from "../pages/relic/Relic";
+import {Item as Poe2Item} from "../pages/item/Item";
+import Favorites from "../pages/favorites/Favorites";
 
 export const Poe2Routes = () => (
-  <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading…</div>}>
-    <Routes>
+  <Routes>
     <Route element={<Poe2Layout/>}>
       <Route index element={<Favorites/>}/>
       <Route path="favorites" element={<Favorites/>}/>
@@ -23,8 +22,7 @@ export const Poe2Routes = () => (
     </Route>
 
     <Route path="*" element={<Navigate to="/favorites" replace/>}/>
-    </Routes>
-  </Suspense>
+  </Routes>
 );
 
 export default Poe2Routes;

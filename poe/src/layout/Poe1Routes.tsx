@@ -1,30 +1,28 @@
-import React, {lazy, Suspense} from "react";
+import React from "react";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Poe1Layout} from "./Poe1Layout";
 
-const Vendor = lazy(() => import("../pages/vendor/Vendor"));
-const OptimizedMapMods = lazy(() => import("../pages/maps/OptimizedMapMods"));
-const Boat = lazy(() => import("../pages/boat/Boat"));
-const Item = lazy(() => import("../pages/item/Item"));
-const MovedContent = lazy(() => import("../pages/moved/MovedContent"));
-const Heist = lazy(() => import("../pages/heist/Heist"));
-const Expedition = lazy(() => import("../pages/expedition/Expedition"));
-const Beast = lazy(() => import("../pages/beast/Beast"));
-const Scarabs = lazy(() => import("../pages/scarab/Scarabs"));
-const Tattoo = lazy(() => import("../pages/tattoo/Tattoo"));
-const Runegraft = lazy(() => import("../pages/runegraft/Runegraft"));
-const Jewel = lazy(() => import("../pages/jewel/Jewel"));
-const Favorites = lazy(() => import("../pages/favorites/Favorites"));
-const Gems = lazy(() => import("../pages/gems/Gems"));
+import Vendor from "../pages/vendor/Vendor";
+import OptimizedMapMods from "../pages/maps/OptimizedMapMods";
+import Boat from "../pages/boat/Boat";
+import Item from "../pages/item/Item";
+import MovedContent from "../pages/moved/MovedContent";
+import Heist from "../pages/heist/Heist";
+import Expedition from "../pages/expedition/Expedition";
+import Beast from "../pages/beast/Beast";
+import Scarabs from "../pages/scarab/Scarabs";
+import Tattoo from "../pages/tattoo/Tattoo";
+import Runegraft from "../pages/runegraft/Runegraft";
+import Jewel from "../pages/jewel/Jewel";
+import Favorites from "../pages/favorites/Favorites";
+import Gems from "../pages/gems/Gems";
 
 export const Poe1Routes = () => (
-  <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading…</div>}>
-    <Routes>
+  <Routes>
     <Route element={<Poe1Layout/>}>
       <Route index element={<Favorites/>}/>
       <Route path="favorites" element={<Favorites/>}/>
       <Route path="vendor" element={<Vendor/>}/>
-      <Route path="gems" element={<Gems/>}/>
       <Route path="maps" element={<OptimizedMapMods/>}/>
       <Route path="boat" element={<Boat/>}/>
       <Route path="items" element={<Item/>}/>
@@ -39,11 +37,11 @@ export const Poe1Routes = () => (
       <Route path="tattoo" element={<Tattoo/>}/>
       <Route path="runegraft" element={<Runegraft/>}/>
       <Route path="jewel" element={<Jewel/>}/>
+      <Route path="gems" element={<Gems/>}/>
     </Route>
 
     <Route path="*" element={<Navigate to="/vendor" replace/>}/>
-    </Routes>
-  </Suspense>
+  </Routes>
 );
 
 export default Poe1Routes;

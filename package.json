@@ -15,6 +15,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.0",
+    "react-search-autocomplete": "^8.5.2",
     "typescript": "^5.7.0",
     "web-vitals": "^2.1.4"
   },
