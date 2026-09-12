@@ -1,7 +1,7 @@
 {
     "Abgrund-Skarabäus": {
         "name": "Abgrund-Skarabäus",
-        "regex": "mud",
+        "regex": "üd",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
         "flavourText": "Sie suchen unermüdlich Seelen, um sie in die Dunkelheit zu zerren.",
         "description": "Gebiet enthält einen zusätzlichen [ContainsAbyss|Abgrund]"
@@ -57,7 +57,7 @@
     },
     "Anarchie-Skarabäus des Außergewöhnlichen": {
         "name": "Anarchie-Skarabäus des Außergewöhnlichen",
-        "regex": "s auß",
+        "regex": "agt",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFuYXJjaHkiLCJzY2FsZSI6MX1d/3f5f6a8671/Tier4ScarabAnarchy.png",
         "flavourText": "Einer ragt aus den vielen heraus.",
         "description": "Gebiet enthält einen zusätzlichen außergewöhnlichen Abtrünnigen Verbannten"
@@ -99,7 +99,7 @@
     },
     "Befall-Skarabäus der Blüte": {
         "name": "Befall-Skarabäus der Blüte",
-        "regex": "hund",
+        "regex": "lüt",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
         "flavourText": "Einmal in hundert Jahren bricht der Befall aus...",
         "description": "Befall-Begegnungen im Gebiet haben bis zu 3 zusätzliche einzigartige Bosse|Einzigartige Gegner in Befall-Begegnungen haben 100% erhöhtes Leben|Gefundene Level 14+ befallene Karten werden stattdessen als extrem befallene Karten fallen gelassen"
@@ -127,14 +127,14 @@
     },
     "Bestien-Skarabäus der Herde": {
         "name": "Bestien-Skarabäus der Herde",
-        "regex": "alder",
+        "regex": "äld",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
         "flavourText": "Die Ersten sind wild und frei durch die alten Wälder gelaufen.",
         "description": "Gebiet enthält 5 zusätzliche Bestien, wenn es Einhar enthält"
     },
     "Bestien-Skarabäus der Vervielfältigung": {
         "name": "Bestien-Skarabäus der Vervielfältigung",
-        "regex": "tie,",
+        "regex": "lfä",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
         "flavourText": "\"Was gibt es Besseres als eine gefangene Bestie, Verbannter?\"",
         "description": "Erschafft eine Kopie von in diesem Gebiet gefangenen Bestien"
@@ -148,7 +148,7 @@
     },
     "Delirium-Skarabäus der Neurose": {
         "name": "Delirium-Skarabäus der Neurose",
-        "regex": "leu",
+        "regex": "ähn",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
         "flavourText": "Gebleckte Zähne leuchten grinsend im Dunkeln.",
         "description": "Delirium-Begegnungen im Gebiet enthalten alle einzigartigen Delirium-Bosse|Delirium-Belohnungstypen im Gebiet erhalten +1 bei Tötung eines einzigartigen Delirium-Bosses|Kann nur mit Karten des Levels 11+ verwendeten werden"
@@ -176,7 +176,7 @@
     },
     "Ernte-Skarabäus": {
         "name": "Ernte-Skarabäus",
-        "regex": "alern",
+        "regex": "täl",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
         "flavourText": "Verborgene Wege führen zu Tälern aus Schatten und Licht ...",
         "description": "Gebiet enthält den Heiligen Hain"
@@ -239,7 +239,7 @@
     },
     "Expedition-Skarabäus der Archäologie": {
         "name": "Expedition-Skarabäus der Archäologie",
-        "regex": "ugi",
+        "regex": "äo",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkV4cGVkaXRpb24iLCJzY2FsZSI6MX1d/6bd03eec75/Tier4ScarabExpedition.png",
         "flavourText": "Neugier führt zur Weisheit. Weisheit führt zur Macht.",
         "description": "Relikte im Expedition-Begegnungen in Gebiet haben 2 zusätzliche Suffix- und Präfix-Modifikatoren"
@@ -267,7 +267,7 @@
     },
     "Gehörnter Skarabäus der Bewahrung": {
         "name": "Gehörnter Skarabäus der Bewahrung",
-        "regex": "durf",
+        "regex": "gä",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjMiLCJzY2FsZSI6MX1d/64d9f06e78/SuperScarab3.png",
         "flavourText": "Wir dürfen unsere Vorgänger nicht vergessen.",
         "description": "Andere Skarabäen werden bei Nutzung nicht verbraucht"
@@ -337,7 +337,7 @@
     },
     "Hinterhalt-Skarabäus": {
         "name": "Hinterhalt-Skarabäus",
-        "regex": "an i",
+        "regex": "alt,",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/137917584a/LesserScarabStrongboxes.png",
         "flavourText": "Ist es immer noch ein Hinterhalt, wenn man ihn erwartet?",
         "description": "Gebiet enthält 4 zusätzliche Tresore"
@@ -365,7 +365,7 @@
     },
     "Hinterhalt-Skarabäus des Scharfsinns": {
         "name": "Hinterhalt-Skarabäus des Scharfsinns",
-        "regex": "geu",
+        "regex": "eü",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/72722370df/AltTier4ScarabStrongboxes.png",
         "flavourText": "Ein geübtes Auge trennt die Spreu vom Weizen.",
         "description": "Tresore gehören mit größerer Wahrscheinlichkeit selteneren Typen an"
@@ -400,14 +400,14 @@
     },
     "Jenseits-Skarabäus": {
         "name": "Jenseits-Skarabäus",
-        "regex": "tob",
+        "regex": "mau",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
         "flavourText": "Die stille Mauer und der tobende Sturm stehen dem endlosen Schwarm gegenüber.",
         "description": "Das Töten von dicht beieinanderstehenden Gegnern im Gebiet kann Monster aus dem Jenseits hervorlocken"
     },
     "Jenseits-Skarabäus der Hämophilie": {
         "name": "Jenseits-Skarabäus der Hämophilie",
-        "regex": "mop",
+        "regex": "häm",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
         "flavourText": "Die Realität selbst beginnt zu bluten.",
         "description": "Jenseits-Portale im Gebiet haben 50% erhöhten Überlappungsradius|Charaktere, die seltene Jenseits-Monster im Gebiet töten, haben 30% Chance, für 20 Sekunden einen ihrer Modifikatoren zu erhalten"
@@ -421,7 +421,7 @@
     },
     "Jenseits-Skarabäus der Wiederauferstehung": {
         "name": "Jenseits-Skarabäus der Wiederauferstehung",
-        "regex": "tehu",
+        "regex": "ehu",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
         "flavourText": "Sie haben Hunger.",
         "description": "Bosse aus dem Jenseits im Gebiet werden von Bossen aus dem Jenseits anderer Fraktionen begleitet|Bosse aus dem Jenseits im Gebiet lassen 20% erhöhte korrosive Währung fallen|Jenseits-Portale im Gebiet haben 30% erhöhte Chance, einen einzigartigen Boss zu beschwören"
@@ -449,7 +449,7 @@
     },
     "Kalguurischer Skarabäus des bewachten Reichtums": {
         "name": "Kalguurischer Skarabäus des bewachten Reichtums",
-        "regex": "raben",
+        "regex": "grab",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
         "flavourText": "Das Graben ist der einfache Teil.",
         "description": "Monster, die Erzvorkommen im Gebiet bewachen, sind mindestens magisch"
@@ -463,7 +463,7 @@
     },
     "Kartographie-Skarabäus der Verderbtheit": {
         "name": "Kartographie-Skarabäus der Verderbtheit",
-        "regex": "t br",
+        "regex": "äte",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWFwcyIsInNjYWxlIjoxfV0/7c589dbe02/GreaterScarabMaps.png",
         "flavourText": "Die Verderbtheit breitet sich zwischen den Realitäten aus.",
         "description": "In diesem Gebiet gefundene, nicht einzigartige Karten sind verderbt und haben 8 Modifikatoren"
@@ -484,7 +484,7 @@
     },
     "Legion-Skarabäus": {
         "name": "Legion-Skarabäus",
-        "regex": "s nu",
+        "regex": "nüt",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/e7b6e5659c/LesserScarabLegion.png",
         "flavourText": "Was nützt einem Krieger der Frieden?",
         "description": "Gebiet enthält eine zusätzliche Legion-Begegnung"
@@ -547,7 +547,7 @@
     },
     "Ritual-Skarabäus der Irrlichter": {
         "name": "Ritual-Skarabäus der Irrlichter",
-        "regex": "raut",
+        "regex": "trau",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/f2c3231213/NormalScarabRitual.png",
         "flavourText": "Vertraut auf den Draíocht, und ihr werdet niemals allein sein.",
         "description": "Ritual-Altäre im Gebiet beschwören ein Finsterwald-Irrlicht|Finsterwald-Irrlichter gewähren Spielern im Umkreis 100% erhöhten Tribut"
@@ -603,7 +603,7 @@
     },
     "Skarabäus der Göttlichkeit": {
         "name": "Skarabäus der Göttlichkeit",
-        "regex": "ottl",
+        "regex": "glau",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
         "flavourText": "Glaube verändert.",
         "description": "Bis zu 3 zusätzliche seltene Monster im Gebiet sind Pantheon-berührt|Erscheinungen, die von Pantheon-berührten Monster beschworen werden, verursachen 100% erhöhten Schaden"
@@ -673,14 +673,14 @@
     },
     "Syndikat-Skarabäus": {
         "name": "Syndikat-Skarabäus",
-        "regex": "beza",
+        "regex": "muss",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/d53970be47/LesserScarabBetrayal.png",
         "flavourText": "Das Syndikat muss für seine Taten bezahlen.",
         "description": "Gebiet enthält Jun"
     },
     "Syndikat-Skarabäus der Allflamme": {
         "name": "Syndikat-Skarabäus der Allflamme",
-        "regex": "rcht",
+        "regex": "ürc",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/3e4a843098/NormalScarabBetrayal.png",
         "flavourText": "Die, die nicht sterben können, fürchten nur den Schmerz.",
         "description": "75% erhöhte Anzahl von Monstergruppen, die im Gebiet durch Allflamme-Gluten ersetzt werden"
@@ -715,21 +715,21 @@
     },
     "Titanischer Skarabäus der Schätze": {
         "name": "Titanischer Skarabäus der Schätze",
-        "regex": "andes",
+        "regex": "tande",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
         "flavourText": "Gier ist eine Falle des Verstandes.",
         "description": "Einzigartige Monster im Gebiet haben eine zusätzliche Belohnung|Einzigartige Monster im Gebiet haben 30% erhöhte Widerstandsfähigkeit"
     },
     "Trarthanischer Skarabäus": {
         "name": "Trarthanischer Skarabäus",
-        "regex": "buh",
+        "regex": "ebü",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/2d075bbafc/LesserScarabMercenaries.png",
         "flavourText": "Dem Sieger gebührt die Beute.",
         "description": "Gebiet ist von einem Söldner bewohnt"
     },
     "Trarthanischer Skarabäus der Schande": {
         "name": "Trarthanischer Skarabäus der Schande",
-        "regex": "mann",
+        "regex": "män",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/f880a011d3/NormalScarabMercenaries.png",
         "flavourText": "Manche Männer müssen ihren eigenen Weg einschlagen.",
         "description": "Gefundene Söldner im Gebiet sind berüchtigt|Gefundene Söldner im Gebiet werden von zwei Wilden Söldnern begleitet"
@@ -743,7 +743,7 @@
     },
     "Trarthanischer Skarabäus des Ruhms": {
         "name": "Trarthanischer Skarabäus des Ruhms",
-        "regex": "hul",
+        "regex": "ehü",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
         "flavourText": "Wer ist dort, gehüllt in Legenden?",
         "description": "Alle Ausrüstungsgegenstände der im Gebiet gefundenen Söldner sind einzigartig"
@@ -764,7 +764,7 @@
     },
     "Ultimatum-Skarabäus des Bestechens": {
         "name": "Ultimatum-Skarabäus des Bestechens",
-        "regex": "o u",
+        "regex": "üfer",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
         "flavourText": "Eine Prüfung ist nur so unbestechlich wie ihr Prüfer.",
         "description": "Ultimatum-Monster gewähren 150% erhöhte Erfahrung|Ultimatum-Begegnungen gewähren Belohnungen, als ob 2 zusätzliche Runden abgeschlossen worden wären"
@@ -799,7 +799,7 @@
     },
     "Weissagungs-Skarabäus des Überflusses": {
         "name": "Weissagungs-Skarabäus des Überflusses",
-        "regex": "usen",
+        "regex": "ukü",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
         "flavourText": "Mit jeder Handlung schaffen wir tausend Zukünfte.",
         "description": "Gebiet enthält 6 bis 10 zusätzliche Gruppen von weissagungsberührten magischen Monstern, die|1000% erhöhte Chance haben, Weissagungskarten fallen zu lassen"
