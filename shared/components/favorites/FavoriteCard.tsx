@@ -35,8 +35,6 @@ interface FavoriteCardProps {
   onDelete: () => void;
 }
 
-const VisibilityIcon = ({hidden}: {hidden: boolean}) => hidden ? <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3l18 18M10.6 10.7a2 2 0 002.7 2.7M9.9 4.2A10.7 10.7 0 0112 4c5.5 0 9 5 9 5a16 16 0 01-2.2 2.7M6.2 6.2C4.1 7.5 3 9 3 9s3.5 5 9 5c1 0 2-.2 2.8-.5"/></svg> : <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12s3.5-5 9-5 9 5 9 5-3.5 5-9 5-9-5-9-5z"/><circle cx="12" cy="12" r="2.5"/></svg>;
-
 export const FavoriteCard = ({
   favorite,
   canMoveEarlier,
@@ -115,7 +113,7 @@ export const FavoriteCard = ({
         {favorite.error && <span className="favorite-card-warning">⚠ {favorite.error}</span>}
         {visibilityMode && <span className="favorite-card-visibility-state">{hidden ? "Hidden" : "Visible"}</span>}
       </button>
-      {visibilityMode ? <button className="favorite-card-menu-button favorite-card-visibility-button" type="button" title={hidden ? `Show ${favorite.name}` : `Hide ${favorite.name}`} aria-label={hidden ? `Show ${favorite.name}` : `Hide ${favorite.name}`} aria-pressed={!hidden} onClick={onToggleVisibility}><VisibilityIcon hidden={hidden}/></button> : <button ref={menuButtonRef} className="favorite-card-menu-button" type="button" title={`Actions for ${favorite.name}`} aria-label={`Actions for ${favorite.name}`} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>⋮</button>}
+      {visibilityMode ? <button className={`favorite-card-menu-button favorite-card-visibility-button${hidden ? " favorite-card-visibility-hidden" : ""}`} type="button" title={hidden ? `Show ${favorite.name}` : `Hide ${favorite.name}`} aria-label={hidden ? `Show ${favorite.name}` : `Hide ${favorite.name}`} aria-pressed={!hidden} onClick={onToggleVisibility}/> : <button ref={menuButtonRef} className="favorite-card-menu-button" type="button" title={`Actions for ${favorite.name}`} aria-label={`Actions for ${favorite.name}`} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}>⋮</button>}
       {(copyStatus === "error" || copiedFavoriteId === favorite.id) && <span className={`favorite-card-copy-state${copyStatus === "error" ? " error" : ""}`} aria-hidden="true">{copyStatus === "error" ? "⚠" : "✓"}</span>}
       <span className="visually-hidden" aria-live="polite">{copyStatus === "error" ? "Copy failed" : copiedFavoriteId === favorite.id ? "Copied" : ""}</span>
       {menuOpen && <div ref={menuRef} className="favorite-card-menu" role="menu" onClick={() => setMenuOpen(false)}>

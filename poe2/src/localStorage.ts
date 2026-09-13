@@ -5,6 +5,14 @@ const PROFILE_KEY = "poe2.profiles";
 const SELECTED_PROFILE_KEY = "poe2.selectedProfile";
 const WEB_SETTINGS_KEY = "poe2.webSettings";
 
+export const PROFILE_SETTINGS_CHANGED_EVENT = "poe2:profile-settings-changed";
+
+const notifyProfileSettingsChanged = (profile: string): void => {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent<string>(PROFILE_SETTINGS_CHANGED_EVENT, {detail: profile}));
+  }
+};
+
 interface SavedProfiles {
   [key: string]: Settings
 }
@@ -56,6 +64,7 @@ export const saveSettings = (settings: Settings): void => {
   const profiles = loadProfiles();
   profiles[settings.name] = settings;
   localStorage.setItem(PROFILE_KEY, JSON.stringify(profiles));
+  notifyProfileSettingsChanged(settings.name);
 }
 
 export const updateSettings = (profile: string, updater: (settings: Settings) => Settings): Settings => {

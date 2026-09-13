@@ -5,6 +5,7 @@ import {Poe2ProfileContext} from "./layout/Poe2ProfileContext";
 import {createFavorite, createFavoriteGroup, createStaticFavorite, duplicateFavorite, FavoriteSnapshot, listFavorites, removeFavorite, reorderFavorites, setFavoriteHidden, updateFavorite, updateFavoriteGroup, updateFavoriteMetadata, updateStaticFavorite} from "./favorites";
 import {FavoriteGroupOperator} from "@shared/core/favorites/FavoriteTypes";
 import {Poe2FavoritePageKey, Poe2FavoriteRecord} from "./settings";
+import {PROFILE_SETTINGS_CHANGED_EVENT} from "./localStorage";
 
 interface CreationSuccess {
   pageKey: Poe2FavoritePageKey;
@@ -36,6 +37,13 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
   const [lastCreationSuccess, setLastCreationSuccess] = useState<CreationSuccess>();
   const reload = useCallback(() => setFavorites(listFavorites(currentProfile)), [currentProfile]);
   useEffect(() => { reload(); setPending(undefined); }, [reload]);
+  useEffect(() => {
+    const onProfileSettingsChanged = (event: Event) => {
+      if ((event as CustomEvent<string>).detail === currentProfile) reload();
+    };
+    window.addEventListener(PROFILE_SETTINGS_CHANGED_EVENT, onProfileSettingsChanged);
+    return () => window.removeEventListener(PROFILE_SETTINGS_CHANGED_EVENT, onProfileSettingsChanged);
+  }, [currentProfile, reload]);
   const value = useMemo<FavoritesValue>(() => ({
     favorites,
     lastCreationSuccess,

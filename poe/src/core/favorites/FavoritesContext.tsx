@@ -5,6 +5,7 @@ import {createFavorite, createFavoriteGroup, createStaticFavorite, duplicateFavo
 import {FavoriteGroupOperator} from "@shared/core/favorites/FavoriteTypes";
 import {FavoriteMetadata, FavoriteRecord, FavoriteSnapshot, Poe1FavoritePageKey} from "./FavoriteTypes";
 import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
+import {PROFILE_SETTINGS_CHANGED_EVENT} from "@poe/utils/LocalStorage";
 
 interface PendingFavorite { snapshot: FavoriteSnapshot; suggestedName: string }
 interface CreationSuccess { pageKey: Poe1FavoritePageKey; configuration: string }
@@ -56,9 +57,16 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
   useEffect(() => { reload(); setPending(undefined); }, [reload]);
   useEffect(() => {
     const onStorage = (event: StorageEvent) => { if (event.key === "profiles") reload(); };
+    const onProfileSettingsChanged = (event: Event) => {
+      if ((event as CustomEvent<string>).detail === globalProfile) reload();
+    };
     window.addEventListener("storage", onStorage);
-    return () => window.removeEventListener("storage", onStorage);
-  }, [reload]);
+    window.addEventListener(PROFILE_SETTINGS_CHANGED_EVENT, onProfileSettingsChanged);
+    return () => {
+      window.removeEventListener("storage", onStorage);
+      window.removeEventListener(PROFILE_SETTINGS_CHANGED_EVENT, onProfileSettingsChanged);
+    };
+  }, [globalProfile, reload]);
 
   const value = useMemo<FavoritesValue>(() => ({
     favorites,
