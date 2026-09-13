@@ -3,13 +3,13 @@ import {useNavigate, useSearchParams} from "react-router-dom";
 import {RegexFavoriteAction} from "@shared/components/RegexResultBox/RegexResultBox";
 import {Poe2ProfileContext} from "./layout/Poe2ProfileContext";
 import {useFavorites} from "./FavoritesContext";
-import {FavoriteSnapshot} from "./favorites";
+import {FavoriteSnapshot, isPoe2RegexFavorite} from "./favorites";
 import {Poe2FavoritePageKey} from "./settings";
 import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
 
 export const useFavoritePage = <T extends object>(pageKey: Poe2FavoritePageKey, normal: T) => {
   const [params] = useSearchParams(); const navigate = useNavigate(); const {currentProfile} = useContext(Poe2ProfileContext); const {favorites, requestCreate, update, lastCreationSuccess, clearCreationSuccess} = useFavorites();
-  const requestedId = params.get("favorite"); const favorite = requestedId ? favorites.find((entry) => entry.id === requestedId && entry.pageKey === pageKey) : undefined;
+  const requestedId = params.get("favorite"); const requested = requestedId ? favorites.find((entry) => entry.id === requestedId) : undefined; const favorite = requested && isPoe2RegexFavorite(requested) && requested.pageKey === pageKey ? requested : undefined;
   const initialConfiguration = useMemo(() => favorite?.configuration && typeof favorite.configuration === "object" && !Array.isArray(favorite.configuration) ? {...normal, ...((typeof structuredClone === "function" ? structuredClone(favorite.configuration) : JSON.parse(JSON.stringify(favorite.configuration))) as Partial<T>)} : normal, [favorite?.id]);
   useEffect(() => () => clearCreationSuccess(), [pageKey]);
   useEffect(() => { if (requestedId) clearCreationSuccess(); }, [requestedId]);

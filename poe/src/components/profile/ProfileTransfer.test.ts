@@ -2,6 +2,7 @@ import {describe, expect, it} from "vitest";
 import {defaultSettings} from "../../utils/SavedSettings";
 import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 import {detectProfileGame} from "@shared/components/profile/ProfileGame";
+import {isRegexFavorite} from "../../core/favorites/FavoriteTypes";
 
 describe("profile transfer", () => {
   it("round-trips the default profile", () => {
@@ -23,6 +24,7 @@ describe("profile transfer", () => {
   it("round-trips favorites in their stored order and filters invalid records", () => {
     const favorite = {
       schemaVersion: 1 as const,
+      kind: "favorite" as const,
       id: "favorite-1",
       pageKey: "maps" as const,
       name: "Juicy maps",
@@ -60,7 +62,8 @@ describe("profile transfer", () => {
     };
     const payload = btoa(JSON.stringify({game: "poe", settings: {name: "legacy-favorite", favorites: [legacyFavorite]}}));
 
-    expect(decodeProfile(payload).favorites[0]?.languageDependent).toBe(true);
+    const imported = decodeProfile(payload).favorites[0];
+    expect(imported && isRegexFavorite(imported) ? imported.languageDependent : undefined).toBe(true);
   });
 
   it("imports legacy default exports that omitted the name", () => {

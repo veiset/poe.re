@@ -7,22 +7,44 @@ export type Poe1FavoritePageKey = typeof POE1_FAVORITE_PAGE_KEYS[number];
 
 export interface FavoriteContextData { language?: string; league?: string }
 
-export interface FavoriteRecord {
+interface FavoriteBaseRecord {
   schemaVersion: 1;
   id: string;
-  pageKey: Poe1FavoritePageKey;
   name: string;
   description: string;
   color: string;
   icon?: string;
   tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  hidden?: boolean;
+}
+
+export interface RegexFavoriteRecord extends FavoriteBaseRecord {
+  kind: "favorite";
+  pageKey: Poe1FavoritePageKey;
   regex: string;
   configuration: unknown;
   context: FavoriteContextData;
   languageDependent: boolean;
-  createdAt: string;
-  updatedAt: string;
 }
+
+export interface StaticFavoriteRecord extends FavoriteBaseRecord {
+  kind: "static";
+  regex: string;
+}
+
+export interface FavoriteGroupRecord extends FavoriteBaseRecord {
+  kind: "group";
+  memberIds: string[];
+  operator: "and" | "or";
+}
+
+export type FavoriteRecord = RegexFavoriteRecord | StaticFavoriteRecord | FavoriteGroupRecord;
+export const isRegexFavorite = (favorite: FavoriteRecord): favorite is RegexFavoriteRecord => favorite.kind === "favorite";
+export const isGroupableFavorite = (favorite: FavoriteRecord): favorite is RegexFavoriteRecord | StaticFavoriteRecord => favorite.kind !== "group";
+export const isStaticFavorite = (favorite: FavoriteRecord): favorite is StaticFavoriteRecord => favorite.kind === "static";
+export const isFavoriteGroup = (favorite: FavoriteRecord): favorite is FavoriteGroupRecord => favorite.kind === "group";
 
 export interface FavoriteMetadata {
   name: string;
@@ -75,35 +97,37 @@ export const sanitizeFavoriteIcon = (value: unknown): string | undefined => {
 };
 
 export const parseFavoriteRecord = (value: unknown): FavoriteRecord | undefined => {
-  if (!isObject(value) || value.schemaVersion !== 1 || !isFavoritePageKey(value.pageKey)) return undefined;
+  if (!isObject(value) || value.schemaVersion !== 1) return undefined;
   if (typeof value.id !== "string" || !value.id.trim()) return undefined;
   if (typeof value.name !== "string" || !value.name.trim()) return undefined;
-  if (typeof value.regex !== "string" || !value.regex.trim() || !("configuration" in value)) return undefined;
-  const context = isObject(value.context) ? value.context : {};
   const createdAt = typeof value.createdAt === "string" && !Number.isNaN(Date.parse(value.createdAt)) ? value.createdAt : new Date(0).toISOString();
   const updatedAt = typeof value.updatedAt === "string" && !Number.isNaN(Date.parse(value.updatedAt)) ? value.updatedAt : createdAt;
-  return {
-    schemaVersion: 1,
+  const base = {
+    schemaVersion: 1 as const,
     id: value.id.trim(),
-    pageKey: value.pageKey,
     name: value.name.trim().slice(0, 80),
     description: typeof value.description === "string" ? value.description.slice(0, 1000) : "",
     color: sanitizeFavoriteColor(value.color),
     icon: sanitizeFavoriteIcon(value.icon),
     tags: normalizeFavoriteTags(Array.isArray(value.tags) ? value.tags.filter((tag): tag is string => typeof tag === "string") : []),
-    regex: value.regex,
-    configuration: value.configuration,
-    context: {
-      language: typeof context.language === "string" ? context.language : undefined,
-      league: typeof context.league === "string" ? context.league : undefined,
-    },
-    // Favorites created before this flag was introduced
-    languageDependent: typeof value.languageDependent === "boolean"
-      ? value.languageDependent
-      : typeof context.language === "string",
     createdAt,
     updatedAt,
+    hidden: value.hidden === true ? true : undefined,
   };
+  if (value.kind === "group") {
+    const memberIds = Array.isArray(value.memberIds)
+      ? value.memberIds.flatMap((id) => typeof id === "string" && id.trim() ? [id.trim()] : [])
+      : [];
+    if (memberIds.length < 2 || new Set(memberIds).size !== memberIds.length || (value.operator !== "and" && value.operator !== "or")) return undefined;
+    return {...base, kind: "group", memberIds, operator: value.operator};
+  }
+  if (value.kind === "static") {
+    if (typeof value.regex !== "string" || !value.regex.trim()) return undefined;
+    return {...base, kind: "static", regex: value.regex};
+  }
+  if ((value.kind !== undefined && value.kind !== "favorite") || !isFavoritePageKey(value.pageKey) || typeof value.regex !== "string" || !value.regex.trim() || !("configuration" in value)) return undefined;
+  const context = isObject(value.context) ? value.context : {};
+  return {...base, kind: "favorite", pageKey: value.pageKey, regex: value.regex, configuration: value.configuration, context: {language: typeof context.language === "string" ? context.language : undefined, league: typeof context.league === "string" ? context.league : undefined}, languageDependent: typeof value.languageDependent === "boolean" ? value.languageDependent : typeof context.language === "string"};
 };
 
 export const parseFavoriteRecords = (value: unknown): FavoriteRecord[] => {

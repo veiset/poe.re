@@ -4,7 +4,8 @@
     min-height: calc(100vh - 180px);
     box-sizing: border-box;
     display: grid;
-    place-items: center;
+    grid-template-rows: auto 1fr;
+    place-items: stretch;
 }
 .favorites-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
 .favorites-heading h1 { padding-left: 0; }
@@ -60,7 +61,7 @@
 .favorite-card-menu button:disabled { color: var(--color-text-dim); cursor: not-allowed; }
 .favorite-card-menu .danger { color: var(--color-text-error); }
 .favorites-empty { width: min(570px, 100%); box-sizing: border-box; margin: 44px auto; padding: 30px; border: 1px dashed var(--color-border-strong); border-radius: 7px; color: var(--color-text-muted); text-align: center; background: var(--color-card-bg); }
-.favorites-page-empty .favorites-empty { margin: 0; }
+.favorites-page-empty .favorites-empty { align-self: center; justify-self: center; margin: 0; }
 .favorites-empty-icon { font-size: 38px; color: #c6930a; }
 .favorites-empty a { color: var(--color-text-link); }
 .favorite-details-regex { max-height: 180px; overflow: auto; padding: 12px; border-radius: 4px; color: var(--color-text); background: var(--color-bg); font-family: ui-monospace, monospace; font-size: 13px; word-break: break-all; white-space: pre-wrap; }
