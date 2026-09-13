@@ -6,6 +6,7 @@ import {
   normalizeFavoriteTags,
 } from "@shared/core/favorites/FavoriteTypes";
 import "./FavoriteDialog.css";
+import {FavoriteGroupCandidates} from "./FavoriteGroupCandidates";
 
 interface FavoriteGroupDialogProps {
   favorites: FavoriteResolvableEntry[];
@@ -64,30 +65,7 @@ export const FavoriteGroupDialog = ({favorites, initial, duplicateNames = [], on
       <p className="favorite-dialog-help">Groups contain at least two individual favorites, not other groups. Combined member regex length may be at most {MAX_FAVORITE_GROUP_REGEX_LENGTH} characters.</p>
       <div className="favorite-group-summary"><strong>{length} / {MAX_FAVORITE_GROUP_REGEX_LENGTH}</strong> characters</div>
       <div className="favorite-group-operator" role="radiogroup" aria-label="Group operator"><label><input type="radio" checked={operator === "and"} onChange={() => setOperator("and")}/> AND</label><label><input type="radio" checked={operator === "or"} onChange={() => setOperator("or")}/> OR</label></div>
-      <div className="favorite-group-list">
-        {missingSelected.map((id) => <label key={id} className="favorite-group-incompatible">
-          <input type="checkbox" checked onChange={() => toggle(id)}/>
-          <span className="favorite-group-candidate"><span>Missing favorite</span><small>This reference no longer exists. Deselect it to repair the group.</small></span>
-          <span>{id}</span>
-        </label>)}
-        {candidates.map((favorite) => {
-          const checked = selected.includes(favorite.id);
-          const nextLength = length + (checked ? -favorite.regex.length : favorite.regex.length);
-          const incompatibility = operator === "or" ? favoriteOrIncompatibility(favorite) : undefined;
-          const sizeIncompatibility = !checked && nextLength > MAX_FAVORITE_GROUP_REGEX_LENGTH
-            ? `Adding this favorite would exceed the ${MAX_FAVORITE_GROUP_REGEX_LENGTH}-character limit.`
-            : undefined;
-          const blockedReason = incompatibility ?? sizeIncompatibility;
-          return <label key={favorite.id} className={blockedReason ? "favorite-group-incompatible" : ""}>
-            <input type="checkbox" checked={checked} disabled={!checked && Boolean(blockedReason)} onChange={() => toggle(favorite.id)}/>
-            <span className="favorite-group-candidate">
-              <span>{favorite.name}</span>
-              {blockedReason && <small><span className="favorite-group-blocked-marker" aria-hidden="true">⚠</span>{blockedReason}</small>}
-            </span>
-            <span>{favorite.regex.length} chars</span>
-          </label>;
-        })}
-      </div>
+      <FavoriteGroupCandidates candidates={candidates} missingSelected={missingSelected} selectedIds={selected} operator={operator} selectedRegexLength={length} onToggle={toggle}/>
       {length > MAX_FAVORITE_GROUP_REGEX_LENGTH && <div className="favorite-dialog-error">The selected favorites are over the character limit. Deselect one or more favorites.</div>}
       {missingSelected.length > 0 && <div className="favorite-dialog-error">Remove the missing references before saving this group.</div>}
       {selectedFavorites.length < 2 && <div className="favorite-dialog-error">Select at least two favorites.</div>}

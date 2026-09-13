@@ -4,6 +4,7 @@ import {
   composeFavoriteGroupRegex,
   favoriteGroupRegexLength,
   favoriteOrIncompatibility,
+  getFavoriteGroupIssue,
   resolveFavoriteGroups,
   selectValidFavoriteGroupMembers,
 } from "./FavoriteTypes";
@@ -56,6 +57,16 @@ describe("favorite groups", () => {
     expect(() => selectValidFavoriteGroupMembers(candidates, ["one"], "and")).toThrow();
     expect(() => selectValidFavoriteGroupMembers(candidates, ["one", "one"], "and")).toThrow();
     expect(() => selectValidFavoriteGroupMembers(candidates, ["one", "missing"], "and")).toThrow();
+  });
+
+  it("reports the highest-priority group issue", () => {
+    const validMembers = [favorite("one", '"one"'), favorite("two", '"two"')];
+
+    expect(getFavoriteGroupIssue(["missing"], validMembers, "and", 10)).toBe("missing-members");
+    expect(getFavoriteGroupIssue([], [validMembers[0]], "and", 5)).toBe("empty");
+    expect(getFavoriteGroupIssue([], [favorite("one", "x".repeat(249)), favorite("two", "xx")], "and", 251)).toBe("too-long");
+    expect(getFavoriteGroupIssue([], [favorite("one", '"one"'), favorite("two", '"!two"')], "or", 10)).toBe("incompatible");
+    expect(getFavoriteGroupIssue([], validMembers, "and", 10)).toBeUndefined();
   });
 
   it("resolves live regex, inherited tags and modification time from referenced favorites", () => {

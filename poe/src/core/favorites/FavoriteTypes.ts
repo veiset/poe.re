@@ -105,8 +105,8 @@ export const parseFavoriteRecord = (value: unknown): FavoriteRecord | undefined 
   const base = {
     schemaVersion: 1 as const,
     id: value.id.trim(),
-    name: value.name.trim().slice(0, 80),
-    description: typeof value.description === "string" ? value.description.slice(0, 1000) : "",
+    name: value.name.trim(),
+    description: typeof value.description === "string" ? value.description : "",
     color: sanitizeFavoriteColor(value.color),
     icon: sanitizeFavoriteIcon(value.icon),
     tags: normalizeFavoriteTags(Array.isArray(value.tags) ? value.tags.filter((tag): tag is string => typeof tag === "string") : []),

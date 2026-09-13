@@ -118,6 +118,19 @@ export const selectValidFavoriteGroupMembers = <T extends FavoriteGroupCandidate
 export const composeFavoriteGroupRegex = (favorites: readonly FavoriteGroupCandidate[], operator: FavoriteGroupOperator): string =>
   operator === "and" ? favoriteGroupRegex(favorites) : `"${favorites.map((favorite) => singleSearchTerm(favorite.regex)!).join("|")}"`;
 
+export const getFavoriteGroupIssue = (
+  missingIds: readonly string[],
+  members: readonly FavoriteGroupCandidate[],
+  operator: FavoriteGroupOperator,
+  regexLength: number,
+): FavoriteGroupIssue | undefined => {
+  if (missingIds.length) return "missing-members";
+  if (members.length < 2) return "empty";
+  if (regexLength > MAX_FAVORITE_GROUP_REGEX_LENGTH) return "too-long";
+  if (!canGroupFavorites(members, operator)) return "incompatible";
+  return undefined;
+};
+
 export const resolveFavoriteGroups = <T extends FavoriteResolvableEntry>(favorites: readonly T[]): ResolvedFavoriteGroup<T>[] => {
   const byId = new Map(favorites.map((favorite) => [favorite.id, favorite]));
   return favorites.map((favorite) => {
@@ -131,15 +144,7 @@ export const resolveFavoriteGroups = <T extends FavoriteResolvableEntry>(favorit
     });
     const operator = favorite.operator;
     const regexLength = favoriteGroupRegexLength(members);
-    const issue: FavoriteGroupIssue | undefined = missingIds.length
-      ? "missing-members"
-      : members.length < 2
-        ? "empty"
-        : regexLength > MAX_FAVORITE_GROUP_REGEX_LENGTH
-          ? "too-long"
-          : !canGroupFavorites(members, operator)
-            ? "incompatible"
-            : undefined;
+    const issue = getFavoriteGroupIssue(missingIds, members, operator, regexLength);
     const inheritedTags = normalizeFavoriteTags([...favorite.tags, ...members.flatMap((member) => member.tags ?? [])]);
     const memberUpdates = members.map((member) => member.updatedAt).filter((value): value is string => Boolean(value));
     const latestUpdate = [favorite.updatedAt, ...memberUpdates].sort().at(-1) ?? favorite.updatedAt;
