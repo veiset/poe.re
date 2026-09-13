@@ -34,7 +34,7 @@ const generateGemsRegex = (settings: GemsSettings, gems?: GemsRegex) => {
   const names = gems?.tokens
     .filter((gem) => settings.selected.includes(gem.id))
     .map((gem) => gem.regex) ?? [];
-  const nameRegex = names.length === 0 ? "" : names.length === 1 ? names[0] : `(${names.join("|")})`;
+  const nameRegex = names.length === 0 ? "" : names.length === 1 ? names[0] : `"${names.join("|")}"`;
   const levelValueRegex = rangeRegex(settings.levelMin, settings.levelMax, 1, 21, "level: ");
   const qualityValueRegex = rangeRegex(settings.qualityMin, settings.qualityMax, 0, 23, "quality: \\+", "%");
   const levelRegex = settings.levelEnabled && levelValueRegex ? `"${levelValueRegex}"` : "";
