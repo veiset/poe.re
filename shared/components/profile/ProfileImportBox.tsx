@@ -1,6 +1,7 @@
-import React, {ReactNode, useMemo, useState} from "react";
+import React, {ReactNode, useMemo, useRef, useState} from "react";
 import {NamedProfile} from "./ProfileExportBox";
 import {detectProfileGame, ProfileGame, profileGameLabel} from "./ProfileGame";
+import {ProfileImportFailureReason} from "@shared/core/tracking/UsageEvent";
 
 export interface ProfileMetadata {
   label: string;
@@ -15,15 +16,22 @@ export interface ProfileImportBoxProps<T extends NamedProfile> {
   profileType?: string;
   metadata?: (profile: T) => ProfileMetadata[];
   expectedGame: ProfileGame;
+  onImportError?: (reason: ProfileImportFailureReason) => void;
 }
 
 export default function ProfileImportBox<T extends NamedProfile>({
-  existingProfiles, setShow, onImport, decode, expectedGame, profileType = "profile", metadata,
+  existingProfiles, setShow, onImport, decode, expectedGame, profileType = "profile", metadata, onImportError,
 }: ProfileImportBoxProps<T>) {
   const [importString, setImportString] = useState("");
   const [error, setError] = useState<string>();
   const [pending, setPending] = useState<T>();
   const [name, setName] = useState("");
+  const reportedFailures = useRef(new Set<ProfileImportFailureReason>());
+  const reportFailure = (reason: ProfileImportFailureReason) => {
+    if (reportedFailures.current.has(reason)) return;
+    reportedFailures.current.add(reason);
+    onImportError?.(reason);
+  };
   const preview = useMemo(() => {
     if (!importString.trim()) return undefined;
     try { return decode(importString); } catch { return undefined; }
@@ -36,9 +44,11 @@ export default function ProfileImportBox<T extends NamedProfile>({
     setError(undefined);
     if (gameMismatch) {
       setError(`This ${profileGameLabel(detectedGame)} profile cannot be imported into ${profileGameLabel(expectedGame)}.`);
+      reportFailure("wrong_game");
       return;
     }
     if (!preview) {
+      reportFailure(importString.trim() ? "invalid_format" : "empty_input");
       setError(importString.trim()
         ? `Invalid or corrupted ${profileType} import string.`
         : "Please paste an export string.");

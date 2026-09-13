@@ -6,6 +6,8 @@ import {FavoriteGroupOperator} from "@shared/core/favorites/FavoriteTypes";
 import {FavoriteMetadata, FavoriteRecord, FavoriteSnapshot, Poe1FavoritePageKey} from "./FavoriteTypes";
 import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
 import {PROFILE_SETTINGS_CHANGED_EVENT} from "@poe/utils/LocalStorage";
+import {poe1UsageTracking} from "@poe/core/tracking/Poe1UsageTracking";
+import {favoriteAgeBucket} from "@shared/core/tracking/UsageEvent";
 
 interface PendingFavorite { snapshot: FavoriteSnapshot; suggestedName: string }
 interface CreationSuccess { pageKey: Poe1FavoritePageKey; configuration: string }
@@ -87,7 +89,13 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
       catch (error) { throw mutationError(error, "Could not update the favorite regex."); }
     },
     remove: (id) => {
-      try { removeFavorite(globalProfile, id); reload(); }
+      try {
+        const deleted = favorites.find((favorite) => favorite.id === id);
+        removeFavorite(globalProfile, id);
+        const remainingCount = listFavorites(globalProfile).length;
+        if (deleted) poe1UsageTracking.favoriteDeleted(globalProfile, remainingCount, deleted.kind, favoriteAgeBucket(deleted.createdAt), deleted.kind === "favorite" ? deleted.pageKey : undefined);
+        reload();
+      }
       catch (error) { setStorageError(mutationError(error, "Could not delete the favorite.").message); }
     },
     reorder: (orderedIds) => {
@@ -95,11 +103,19 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
       catch (error) { setStorageError(mutationError(error, "Could not reorder favorites.").message); }
     },
     createGroup: (ids, operator, metadata) => {
-      try { createFavoriteGroup(globalProfile, ids, operator, metadata); reload(); }
+      try {
+        createFavoriteGroup(globalProfile, ids, operator, metadata);
+        poe1UsageTracking.favoriteGroup(globalProfile, listFavorites(globalProfile).length, operator, ids.length);
+        reload();
+      }
       catch (error) { throw mutationError(error, "Could not save the favorite group."); }
     },
     createStatic: (regex, metadata) => {
-      try { createStaticFavorite(globalProfile, regex, metadata); reload(); }
+      try {
+        createStaticFavorite(globalProfile, regex, metadata);
+        poe1UsageTracking.staticFavorite(globalProfile, listFavorites(globalProfile).length);
+        reload();
+      }
       catch (error) { throw mutationError(error, "Could not save the static favorite."); }
     },
     updateStatic: (id, regex, metadata) => {
@@ -131,6 +147,7 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
       onSave={(metadata) => {
         try {
           createFavorite(globalProfile, pending.snapshot, metadata);
+          poe1UsageTracking.favorite(globalProfile, listFavorites(globalProfile).length, pending.snapshot.pageKey);
           setPending(undefined);
           reload();
           setLastCreationSuccess({pageKey: pending.snapshot.pageKey, configuration: JSON.stringify(pending.snapshot.configuration)});

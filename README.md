@@ -128,6 +128,35 @@ and publish directories above. Set `VITE_POE1_URL`, `VITE_POE2_URL`, and
 `VITE_ECONOMY_URL` in each Pages project's environment when overriding the
 defaults.
 
+### Pseudonymous usage events
+
+Both Pages projects deploy `functions/api/usage-event.ts` as the same-origin
+`POST /api/usage-event` endpoint. The `_routes.json` emitted by each Vite build
+limits Functions invocations to that route, leaving all site and asset requests
+static. The endpoint accepts only a small, allow-listed JSON schema from its own
+origin and forwards it through the `USAGE_TRACKER` service binding to the
+non-public `poe-re-usage-tracker` Worker. Deploy that Worker and configure both
+bindings as described in [`workers/usage-tracker/README.md`](workers/usage-tracker/README.md).
+
+The Worker enables persisted Observability logs at full sampling and logs one
+flat structured object per event. In its Observability Query Builder, filter on
+`logType = "usage_event"`, use
+Count as the visualization, and group by `country`, `event`, `game`, or any of
+the event fields (`action`, `profileName`, `profileCount`, `favoriteType`,
+`favoriteCount`, `ageBucket`, `page`, `language`, `previousLanguage`, `reason`,
+`operator`, and `memberCount`). `country` is populated by
+Cloudflare from the request metadata; the Function does not store or derive an
+IP address. Logs are retained according to the Cloudflare Workers plan's
+Workers Logs retention period.
+
+The Pages endpoint is necessarily public because browsers call it; the logging
+Worker itself has no public route. Same-origin,
+method, content-type, size, and schema validation prevent ordinary cross-site
+and log-injection abuse, but headers can be forged by non-browser clients. Add
+a Cloudflare rate-limiting rule for `POST /api/usage-event` on both hostnames if
+abuse becomes visible; Turnstile is the stronger follow-up if rate limiting is
+not sufficient.
+
 ### Cloudflare Workers
 
 Deploy the scheduled economy refresher:
