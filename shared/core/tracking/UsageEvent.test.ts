@@ -65,4 +65,21 @@ describe("parseUsageEventEnvelope", () => {
     expect(parseUsageEventEnvelope({...base, event: "favorite_deleted", favoriteType: "static", profileName: "mapping", favoriteCount: 2, ageBucket: "1_7_days"})?.event).toBe("favorite_deleted");
     expect(parseUsageEventEnvelope({...base, event: "trade_clicked", profileName: "mapping", page: "maps"})?.event).toBe("trade_clicked");
   });
+
+  it("parses a queryable daily usage snapshot", () => {
+    expect(parseUsageEventEnvelope({
+      ...base,
+      event: "usage_snapshot",
+      profileCount: 3,
+      favoriteCount: 17,
+      language: "FRENCH",
+      profileName: "injected",
+    })).toEqual({
+      ...base,
+      event: "usage_snapshot",
+      profileCount: 3,
+      favoriteCount: 17,
+      language: "FRENCH",
+    });
+  });
 });

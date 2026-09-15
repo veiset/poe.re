@@ -37,6 +37,10 @@ class Poe1UsageTrackingService extends UsageTrackingService<Poe1UsageEvent> {
   language(profileName: string, language: RepoeLanguageKey, previousLanguage: RepoeLanguageKey): void {
     this.track({event: "language_selected", profileName, language, previousLanguage});
   }
+
+  snapshot(profileCount: number, favoriteCount: number, language: RepoeLanguageKey): void {
+    this.trackDailySnapshot({event: "usage_snapshot", profileCount, favoriteCount, language});
+  }
 }
 
 export const poe1UsageTracking = new Poe1UsageTrackingService();

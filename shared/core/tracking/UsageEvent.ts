@@ -56,8 +56,16 @@ export interface LanguageSelectedUsageEvent {
   previousLanguage: string;
 }
 
+export interface UsageSnapshotEvent {
+  event: "usage_snapshot";
+  profileCount: number;
+  favoriteCount: number;
+  language: string;
+}
+
 export type UsageEvent = ProfileUsageEvent | FavoriteCreatedUsageEvent | FavoriteDeletedUsageEvent
-  | ProfileExportedUsageEvent | ProfileImportFailedUsageEvent | TradeClickedUsageEvent | LanguageSelectedUsageEvent;
+  | ProfileExportedUsageEvent | ProfileImportFailedUsageEvent | TradeClickedUsageEvent | LanguageSelectedUsageEvent
+  | UsageSnapshotEvent;
 
 export type UsageEventEnvelope = UsageEvent & {
   schemaVersion: typeof USAGE_EVENT_SCHEMA_VERSION;
@@ -173,6 +181,14 @@ export const parseUsageEventEnvelope = (value: unknown): UsageEventEnvelope | un
     const previousLanguage = boundedString(value.previousLanguage, 40);
     if (!profileName || !language || !previousLanguage) return undefined;
     return {...base, event: "language_selected", profileName, language, previousLanguage};
+  }
+
+  if (value.event === "usage_snapshot") {
+    const profileCount = boundedInteger(value.profileCount, 1, 1000);
+    const favoriteCount = boundedInteger(value.favoriteCount, 0, 10_000_000);
+    const language = boundedString(value.language, 40);
+    if (profileCount === undefined || favoriteCount === undefined || !language) return undefined;
+    return {...base, event: "usage_snapshot", profileCount, favoriteCount, language};
   }
 
   return undefined;

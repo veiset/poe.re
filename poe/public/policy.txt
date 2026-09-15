@@ -9,7 +9,9 @@ Google AdSense is used to display ads and may collect data as described by Googl
 Pseudonymous usage analytics
 
 When you select, create, rename, import, export, or delete a profile; create or
-delete a favorite; select a language; or click the Trade button, the site records a usage event. A
+delete a favorite; select a language; or click the Trade button, the site records a usage event. At
+most once per 24 hours while the site is used, it also records the current
+language and the total number of profiles and favorites stored in the browser. A
 failed profile import records only a general failure category, not the imported
 content. Events can include the profile name, profile and favorite counts,
 game, favorite type and page, selected language, and country.

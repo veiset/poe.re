@@ -32,6 +32,10 @@ class Poe2UsageTrackingService extends UsageTrackingService<Poe2UsageEvent> {
   profileExported(profileName: string): void { this.track({event: "profile_exported", profileName}); }
   profileImportFailed(reason: ProfileImportFailureReason): void { this.track({event: "profile_import_failed", reason}); }
   tradeClicked(profileName: string, page: Poe2FavoritePageKey): void { this.track({event: "trade_clicked", profileName, page}); }
+
+  snapshot(profileCount: number, favoriteCount: number): void {
+    this.trackDailySnapshot({event: "usage_snapshot", profileCount, favoriteCount, language: "ENGLISH"});
+  }
 }
 
 export const poe2UsageTracking = new Poe2UsageTrackingService();

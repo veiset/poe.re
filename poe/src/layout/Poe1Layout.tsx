@@ -2,11 +2,13 @@ import React, {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import CoffeeBanner from "@shared/components/banner/CoffeeBanner";
 import PageLinks from "./PageLinks";
-import {ensureDefaultProfile, loadSettings, selectedProfile} from "@poe/utils/LocalStorage";
+import {ensureDefaultProfile, loadProfileNames, loadSettings, selectedProfile} from "@poe/utils/LocalStorage";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {LeagueProvider} from "@shared/core/LeagueContext";
 import {FavoritesProvider} from "@poe/core/favorites/FavoritesContext";
+import {listFavorites} from "@poe/core/favorites/FavoriteStorage";
+import {poe1UsageTracking} from "@poe/core/tracking/Poe1UsageTracking";
 
 export const Poe1Layout = () => {
   const [globalProfile, setGlobalProfile] = useState(() => {
@@ -18,6 +20,12 @@ export const Poe1Layout = () => {
 
   useRefreshFromInitialLoad();
   useRefreshOnFocus();
+
+  useEffect(() => {
+    const profileNames = loadProfileNames();
+    const favoriteCount = profileNames.reduce((total, name) => total + listFavorites(name).length, 0);
+    poe1UsageTracking.snapshot(profileNames.length, favoriteCount, loadSettings(globalProfile).language);
+  }, []);
 
   useEffect(() => {
     console.log(`Loading profile: ${globalProfile}, lang: ${lang}`)

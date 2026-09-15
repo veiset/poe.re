@@ -1,6 +1,8 @@
 import {Game, UsageEvent, UsageEventEnvelope, USAGE_EVENT_SCHEMA_VERSION} from "./UsageEvent";
 
 const STORAGE_KEY = "poe-re.anonymous-usage-id";
+const SNAPSHOT_STORAGE_KEY = "poe-re.usage-snapshot.last-sent-at";
+const SNAPSHOT_INTERVAL_MS = 24 * 60 * 60 * 1000;
 const VALID_ANONYMOUS_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 
 const createAnonymousId = (): string => {
@@ -15,6 +17,7 @@ const createAnonymousId = (): string => {
 };
 
 let memoryId: string | undefined;
+const memorySnapshotTimes = new Map<Game, number>();
 
 const anonymousId = (): string => {
   if (memoryId) return memoryId;
@@ -34,6 +37,27 @@ export abstract class UsageTrackingService<TEvent extends UsageEvent> {
   protected constructor(private readonly game: Game) {}
 
   protected track(event: TEvent): void {
+    this.send(event);
+  }
+
+  protected trackDailySnapshot(event: TEvent): void {
+    const now = Date.now();
+    const storageKey = `${SNAPSHOT_STORAGE_KEY}.${this.game}`;
+    let previous = memorySnapshotTimes.get(this.game);
+
+    try {
+      const stored = Number(localStorage.getItem(storageKey));
+      if (Number.isFinite(stored) && stored > 0) previous = Math.max(previous ?? 0, stored);
+    } catch {
+      // The in-memory timestamp still prevents duplicate sends in this page load.
+    }
+
+    if (previous !== undefined && previous <= now && now - previous < SNAPSHOT_INTERVAL_MS) return;
+
+    // Reserve the interval before dispatch so concurrent mounts cannot send duplicates.
+    memorySnapshotTimes.set(this.game, now);
+    try { localStorage.setItem(storageKey, String(now)); }
+    catch { /* Tracking remains best-effort when storage is unavailable. */ }
     this.send(event);
   }
 
