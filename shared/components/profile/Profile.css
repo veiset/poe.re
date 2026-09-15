@@ -118,6 +118,31 @@
     max-width: 100%;
 }
 
+@media (max-width: 700px) {
+    .export-profile-box {
+        position: fixed;
+        top: 12px;
+        right: 12px;
+        bottom: auto;
+        left: 12px;
+        width: auto;
+        max-height: calc(100vh - 24px);
+        max-height: calc(100dvh - 24px);
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background-color: var(--color-bg);
+    }
+
+    .export-profile-box .profile-input-area {
+        padding: 0;
+    }
+
+    .export-profile-box textarea {
+        width: 100% !important;
+    }
+}
+
 .profile-metadata {
     margin-top: 12px;
     padding: 10px 12px;

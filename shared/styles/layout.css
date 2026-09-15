@@ -133,6 +133,24 @@ html, body {
     }
 }
 
+@media (max-width: 700px) {
+    .content-links {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        min-height: 0;
+        border-bottom: 1px solid var(--color-border-strong);
+    }
+
+    .content-main-area {
+        padding: 0;
+    }
+
+    .page-content {
+        min-width: 0;
+    }
+}
+
 .row {
     width: 100%;
     display: flex;
