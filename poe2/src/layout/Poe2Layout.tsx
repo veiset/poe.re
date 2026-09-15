@@ -1,12 +1,14 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Outlet} from "react-router-dom";
 import {Poe2ProfileContext} from "./Poe2ProfileContext";
 import Poe2PageLinks from "./Poe2PageLinks";
-import {ensureDefaultProfile, selectedProfile} from "../localStorage";
+import {ensureDefaultProfile, loadProfileNames, selectedProfile} from "../localStorage";
 import CoffeeBanner from "@shared/components/banner/CoffeeBanner";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {Poe2LeagueProvider} from "./Poe2LeagueContext";
 import {FavoritesProvider} from "../FavoritesContext";
+import {listFavorites} from "../favorites";
+import {poe2UsageTracking} from "../tracking/Poe2UsageTracking";
 import "../poe2.css";
 
 export const Poe2Layout = () => {
@@ -17,6 +19,12 @@ export const Poe2Layout = () => {
 
   useRefreshFromInitialLoad();
   useRefreshOnFocus();
+
+  useEffect(() => {
+    const profileNames = loadProfileNames();
+    const favoriteCount = profileNames.reduce((total, name) => total + listFavorites(name).length, 0);
+    poe2UsageTracking.snapshot(profileNames.length, favoriteCount);
+  }, []);
 
   return (
     <Poe2ProfileContext.Provider value={{currentProfile, setCurrentProfile}}>

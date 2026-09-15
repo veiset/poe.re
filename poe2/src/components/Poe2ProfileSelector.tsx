@@ -8,6 +8,7 @@ import {defaultSettings, Settings} from "../settings";
 import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
 import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
 import {decodeProfile, encodeProfile} from "./ProfileTransfer";
+import {poe2UsageTracking} from "../tracking/Poe2UsageTracking";
 
 const Poe2ProfileSelector = () => {
   const {currentProfile, setCurrentProfile} = useContext(Poe2ProfileContext);
@@ -20,9 +21,10 @@ const Poe2ProfileSelector = () => {
   const [copyCurrentProfile, setCopyCurrentProfile] = useState(false);
   const [warning, setWarning] = useState<string | undefined>(undefined);
 
-  const changeProfile = (profile: string) => {
+  const changeProfile = (profile: string, trackSelection = false) => {
     setSelectedProfile(profile);
     setCurrentProfile(profile);
+    if (trackSelection) poe2UsageTracking.profile("selected", profile);
   };
 
   const validate = (name: string, creating: boolean): string | undefined => {
@@ -44,7 +46,9 @@ const Poe2ProfileSelector = () => {
       name: editName,
     };
     saveSettings(newSettings);
-    setProfiles(loadProfileNames());
+    const names = loadProfileNames();
+    poe2UsageTracking.profile("created", editName, names.length);
+    setProfiles(names);
     changeProfile(editName);
     setShowNew(false);
   };
@@ -58,7 +62,9 @@ const Poe2ProfileSelector = () => {
     const newSettings = {...loadSettings(currentProfile), name: editName};
     saveSettings(newSettings);
     deleteProfile(currentProfile);
-    setProfiles(loadProfileNames());
+    const names = loadProfileNames();
+    poe2UsageTracking.profile("renamed", editName, names.length, currentProfile);
+    setProfiles(names);
     changeProfile(editName);
     setShowEdit(false);
   };
@@ -67,6 +73,7 @@ const Poe2ProfileSelector = () => {
     if (currentProfile === "default" || !window.confirm(`Delete profile '${currentProfile}'?`)) return;
     deleteProfile(currentProfile);
     const names = loadProfileNames();
+    poe2UsageTracking.profile("deleted", currentProfile, names.length);
     setProfiles(names);
     const next = names.includes("default") ? "default" : (names[0] ?? "default");
     changeProfile(next);
@@ -74,7 +81,9 @@ const Poe2ProfileSelector = () => {
 
   const importProfile = (settings: Settings) => {
     saveSettings(settings);
-    setProfiles(loadProfileNames());
+    const names = loadProfileNames();
+    poe2UsageTracking.profile("imported", settings.name, names.length);
+    setProfiles(names);
     changeProfile(settings.name);
     setShowImport(false);
   };
@@ -83,7 +92,7 @@ const Poe2ProfileSelector = () => {
     <div className="profile-container">
       <div>Profile:</div>
       <select name="profile" className="dropdown-select dropdown-md" value={currentProfile}
-              onChange={(e) => changeProfile(e.target.value)}>
+              onChange={(e) => changeProfile(e.target.value, true)}>
         {profiles.map((profile) => (
           <option className="option-league" key={profile} value={profile}>{profile}</option>
         ))}
@@ -150,9 +159,11 @@ const Poe2ProfileSelector = () => {
         }}>Import</button>
 
         {showExport && <ProfileExportBox settings={loadSettings(currentProfile)} setShow={setShowExport}
-                                                encode={encodeProfile} />}
+                                                encode={encodeProfile}
+                                                onExport={() => poe2UsageTracking.profileExported(currentProfile)} />}
         {showImport && <ProfileImportBox existingProfiles={profiles} setShow={setShowImport}
                                                  onImport={importProfile} decode={decodeProfile}
+                                                 onImportError={(reason) => poe2UsageTracking.profileImportFailed(reason)}
                                                  expectedGame="poe2" profileType="PoE2 profile" />}
       </div>
     </div>

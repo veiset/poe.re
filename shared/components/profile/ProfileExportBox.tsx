@@ -1,4 +1,4 @@
-import React, {useMemo, useState} from "react";
+import React, {useMemo, useRef, useState} from "react";
 
 export interface NamedProfile {
   name: string;
@@ -8,10 +8,12 @@ export interface ProfileExportBoxProps<T extends NamedProfile> {
   settings: T;
   setShow: (show: boolean) => void;
   encode: (settings: T) => string;
+  onExport?: () => void;
 }
 
-export default function ProfileExportBox<T extends NamedProfile>({settings, setShow, encode}: ProfileExportBoxProps<T>) {
+export default function ProfileExportBox<T extends NamedProfile>({settings, setShow, encode, onExport}: ProfileExportBoxProps<T>) {
   const [copied, setCopied] = useState(false);
+  const exportTracked = useRef(false);
   const exportString = useMemo(() => {
     try {
       return encode(settings);
@@ -22,6 +24,10 @@ export default function ProfileExportBox<T extends NamedProfile>({settings, setS
   }, [encode, settings]);
 
   const copy = () => navigator.clipboard.writeText(exportString).then(() => {
+    if (!exportTracked.current) {
+      exportTracked.current = true;
+      onExport?.();
+    }
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   });

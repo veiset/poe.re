@@ -1,0 +1,23 @@
+Privacy Policy
+
+Your privacy is important to us.
+
+It is poe2.re's policy to respect your privacy regarding any information we may collect while operating our website.
+
+Pseudonymous usage analytics
+
+When you select, create, rename, import, export, or delete a profile or create
+or delete a favorite or click the Trade button, the site records a usage event. At most once per 24
+hours while the site is used, it also records the current language and the total
+number of profiles and favorites stored in the browser. A failed profile import
+records only a general failure category, not the imported content. Events can
+include the profile name, profile and favorite counts, game, favorite type and
+page, and country.
+
+The site generates a random identifier and stores it in your browser's local
+storage so events from that browser can be counted together. It is not linked
+to an account or email address; profile names are free-form text chosen by the
+user. The custom usage event does not contain your IP address. Cloudflare
+processes the request and supplies the country code under Cloudflare's
+applicable privacy terms. Usage events are retained for the period configured
+in Cloudflare Workers Observability.

@@ -14,6 +14,7 @@ import NumberField from "@shared/components/NumberField/NumberField";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {poe2UsageTracking} from "@poe2/tracking/Poe2UsageTracking";
 
 export function Waystone() {
   const {currentProfile} = useContext(Poe2ProfileContext);
@@ -85,7 +86,10 @@ export function Waystone() {
         result={result}
         favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.waystone)}
-        onTradeSearch={() => openWaystoneTradeSearch({...loadSettings(currentProfile), waystone: settings}, tradeStatIds).catch(() => {})}
+        onTradeSearch={() => {
+          poe2UsageTracking.tradeClicked(currentProfile, "waystone");
+          void openWaystoneTradeSearch({...loadSettings(currentProfile), waystone: settings}, tradeStatIds).catch(() => {});
+        }}
         customText={settings.resultSettings.customText}
         enableCustomText={settings.resultSettings.customTextEnabled}
         autoCopy={settings.resultSettings.autoCopy}

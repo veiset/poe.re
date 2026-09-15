@@ -22,6 +22,7 @@ import {usePoe1League} from "@shared/core/LeagueContext";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
+import {poe1UsageTracking} from "@poe/core/tracking/Poe1UsageTracking";
 
 const OptimizedMapMods = () => {
   const {globalProfile} = useContext(ProfileContext);
@@ -76,6 +77,7 @@ const OptimizedMapMods = () => {
   };
 
   const handleTradeSearch = async () => {
+    poe1UsageTracking.tradeClicked(globalProfile, "maps");
     if (!league) {
       setTradeMessage("League data is still loading. Please try again shortly.");
       return;

@@ -6,6 +6,8 @@ import {createFavorite, createFavoriteGroup, createStaticFavorite, duplicateFavo
 import {FavoriteGroupOperator} from "@shared/core/favorites/FavoriteTypes";
 import {Poe2FavoritePageKey, Poe2FavoriteRecord} from "./settings";
 import {PROFILE_SETTINGS_CHANGED_EVENT} from "./localStorage";
+import {poe2UsageTracking} from "./tracking/Poe2UsageTracking";
+import {favoriteAgeBucket} from "@shared/core/tracking/UsageEvent";
 
 interface CreationSuccess {
   pageKey: Poe2FavoritePageKey;
@@ -51,10 +53,24 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
     requestCreate: (snapshot, name) => setPending({snapshot, name}),
     update: (id, snapshot) => { updateFavorite(currentProfile, id, snapshot); reload(); },
     customize: (id, metadata) => { updateFavoriteMetadata(currentProfile, id, metadata); reload(); },
-    remove: (id) => { removeFavorite(currentProfile, id); reload(); },
+    remove: (id) => {
+      const deleted = favorites.find((favorite) => favorite.id === id);
+      removeFavorite(currentProfile, id);
+      const remainingCount = listFavorites(currentProfile).length;
+      if (deleted) poe2UsageTracking.favoriteDeleted(currentProfile, remainingCount, deleted.kind, favoriteAgeBucket(deleted.createdAt), deleted.kind === "favorite" ? deleted.pageKey : undefined);
+      reload();
+    },
     reorder: (ids) => { reorderFavorites(currentProfile, ids); reload(); },
-    createGroup: (ids, operator, metadata) => { createFavoriteGroup(currentProfile, ids, operator, metadata); reload(); },
-    createStatic: (regex, metadata) => { createStaticFavorite(currentProfile, regex, metadata); reload(); },
+    createGroup: (ids, operator, metadata) => {
+      createFavoriteGroup(currentProfile, ids, operator, metadata);
+      poe2UsageTracking.favoriteGroup(currentProfile, listFavorites(currentProfile).length, operator, ids.length);
+      reload();
+    },
+    createStatic: (regex, metadata) => {
+      createStaticFavorite(currentProfile, regex, metadata);
+      poe2UsageTracking.staticFavorite(currentProfile, listFavorites(currentProfile).length);
+      reload();
+    },
     updateStatic: (id, regex, metadata) => { updateStaticFavorite(currentProfile, id, regex, metadata); reload(); },
     duplicate: (id) => { duplicateFavorite(currentProfile, id); reload(); },
     setHidden: (id, hidden) => { setFavoriteHidden(currentProfile, id, hidden); reload(); },
@@ -70,6 +86,7 @@ export const FavoritesProvider = ({children}: {children: ReactNode}) => {
       onCancel={() => setPending(undefined)}
       onSave={(metadata) => {
         createFavorite(currentProfile, pending.snapshot, metadata);
+        poe2UsageTracking.favorite(currentProfile, listFavorites(currentProfile).length, pending.snapshot.pageKey);
         setPending(undefined);
         reload();
         setLastCreationSuccess({pageKey: pending.snapshot.pageKey, configuration: JSON.stringify(pending.snapshot.configuration)});

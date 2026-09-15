@@ -14,6 +14,7 @@ import NumberField from "@shared/components/NumberField/NumberField";
 import ModSearchBox from "@shared/components/ModSearchBox";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {poe2UsageTracking} from "@poe2/tracking/Poe2UsageTracking";
 
 export function Tablet() {
   const {currentProfile} = useContext(Poe2ProfileContext);
@@ -67,7 +68,10 @@ export function Tablet() {
         result={result}
         favorite={favoritePage.action(settings)}
         reset={() => setSettings(defaultSettings.tablet)}
-        onTradeSearch={() => openTabletTradeSearch({...loadSettings(currentProfile), tablet: settings}, tradeStatIds).catch(() => {})}
+        onTradeSearch={() => {
+          poe2UsageTracking.tradeClicked(currentProfile, "tablet");
+          void openTabletTradeSearch({...loadSettings(currentProfile), tablet: settings}, tradeStatIds).catch(() => {});
+        }}
         customText={settings.resultSettings.customText}
         enableCustomText={settings.resultSettings.customTextEnabled}
         autoCopy={settings.resultSettings.autoCopy}

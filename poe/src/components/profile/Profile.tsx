@@ -16,6 +16,7 @@ import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
 import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 import LeagueSelect from "@shared/components/LeagueSelect";
 import {useLocation, useNavigate} from "react-router-dom";
+import {poe1UsageTracking} from "@poe/core/tracking/Poe1UsageTracking";
 
 interface ProfileProps {
   languageSelect?: boolean
@@ -42,6 +43,7 @@ const Profile = (props: ProfileProps) => {
     if (location.search.includes("favorite=") && !window.confirm("Discard changes to this favorite and switch profiles?")) return;
     if (location.search.includes("favorite=")) navigate("/favorites");
     setProfile(nextProfile);
+    poe1UsageTracking.profile("selected", nextProfile);
   };
 
   useEffect(() => {
@@ -96,6 +98,7 @@ const Profile = (props: ProfileProps) => {
     const newProfile = copyCurrentProfile ? loadSettings(profile) : {...defaultSettings};
     newProfile.name = editName;
     saveSettings(newProfile);
+    poe1UsageTracking.profile("created", editName, profiles.length + 1);
     setShowNew(false);
   }
 
@@ -107,6 +110,7 @@ const Profile = (props: ProfileProps) => {
     setProfiles(profiles.filter((e) => e !== profile).concat(editName));
     setProfile(editName);
     deleteProfile(oldProfile);
+    poe1UsageTracking.profile("renamed", editName, profiles.length, oldProfile);
     setShowEdit(false);
   }
 
@@ -115,6 +119,7 @@ const Profile = (props: ProfileProps) => {
     setProfiles(newProfiles);
     setProfile(newProfiles[0]);
     deleteProfile(profile);
+    poe1UsageTracking.profile("deleted", profile, newProfiles.length);
     setShowDelete(false);
   }
 
@@ -127,6 +132,7 @@ const Profile = (props: ProfileProps) => {
 
     setProfile(importedSettings.name);
     saveSettings(importedSettings);
+    poe1UsageTracking.profile("imported", importedSettings.name, profiles.includes(importedSettings.name) ? profiles.length : profiles.length + 1);
     setShowImport(false);
   };
 
@@ -202,7 +208,11 @@ const Profile = (props: ProfileProps) => {
         className="dropdown-select dropdown-sm"
         value={languageSelect ? lang : "ENGLISH"}
         disabled={!languageSelect}
-        onChange={(e) => setLang(e.target.value as RepoeLanguageKey)}
+        onChange={(e) => {
+          const language = e.target.value as RepoeLanguageKey;
+          setLang(language);
+          poe1UsageTracking.language(profile, language, lang);
+        }}
       >
         {Object.entries(RepoeLanguage).map(([key, data]) => (
           <option
@@ -225,11 +235,13 @@ const Profile = (props: ProfileProps) => {
         }}>Import</button>
 
         {showExport &&
-          <ProfileExportBox settings={loadSettings(profile)} setShow={setShowExport} encode={encodeProfile} />
+          <ProfileExportBox settings={loadSettings(profile)} setShow={setShowExport} encode={encodeProfile}
+                            onExport={() => poe1UsageTracking.profileExported(profile)} />
         }
         {showImport &&
           <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile}
-                            decode={decodeProfile} expectedGame="poe" metadata={(settings) => [
+                            decode={decodeProfile} expectedGame="poe"
+                            onImportError={(reason) => poe1UsageTracking.profileImportFailed(reason)} metadata={(settings) => [
                               {label: "Name", value: settings.name},
                               {label: "Language", value: settings.language || "Not specified"},
                               {label: "Selected map mods", value: settings.map.goodIds.length + settings.map.badIds.length},
