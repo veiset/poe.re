@@ -94,7 +94,7 @@ export const PageNavigation = ({title, otherGameLabel, otherGameUrl, statsUrl, i
           </p>
           {items.map((item) => <PageLink key={item.route} {...item} currentPage={currentPage}/>)}
           <p/>
-          <SupportLink href="https://discord.gg/AR9AxAYudF" icon={discordIcon} text="Join us on Discord" className="support-icon-discord"/>
+          <SupportLink href="https://discord.gg/T8BzKnatY6" icon={discordIcon} text="Join us on Discord" className="support-icon-discord"/>
           <SupportLink href={getBugReportUrl()} icon={githubIcon} text="Report issue"/>
           <SupportLink href="https://www.buymeacoffee.com/veiset" icon={coffeeIcon} text="Buy me a coffee" className="support-icon-coffee"/>
           <SupportLink href={statsUrl} icon={plausibleIcon} text="Website stats"/>
