@@ -16,7 +16,6 @@ In both Pages projects, add a service binding in production and preview:
 
 - Variable name: `USAGE_TRACKER`
 - Service: `poe-re-usage-tracker`
-- Environment: production
 
 Repeat the binding for the preview environment if preview analytics should be
 accepted. Redeploy both Pages projects after adding the binding.
