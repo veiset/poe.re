@@ -49,7 +49,7 @@ If you encounter a bug or have a suggestion:
 
 Contributions are always welcome. To keep things organized:
 
-* **Join the discord server:** https://discord.gg/AR9AxAYudF
+* **Join the discord server:** https://discord.gg/T8BzKnatY6
 * **Discuss first:** It's best to discuss ideas or planned changes on discord before starting the work.
 * **Check Issues:** Take a look at the [open issues](https://github.com/veiset/poe.re/issues) to see what needs help or to make sure a topic isn't already being worked on.
 * **Fork and PR:** Once everything is ready, fork the project and submit a pull request.
