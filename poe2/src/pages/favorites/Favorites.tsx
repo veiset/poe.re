@@ -1,96 +1,109 @@
-import React, {lazy, Suspense, useEffect, useMemo, useRef, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import React, { lazy, Suspense, useMemo, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Poe2Header from "@poe2/components/Poe2Header";
-import {FavoriteDialog} from "@shared/components/favorites/FavoriteDialog";
-import {FavoriteTagFilter} from "@shared/components/favorites/FavoriteTagFilter";
-import {FavoriteMetadata} from "@shared/core/favorites/FavoriteTypes";
-import {useFavorites} from "../../FavoritesContext";
-import {FAVORITE_PAGE_REGISTRY} from "../../FavoritePageRegistry";
-import {Poe2FavoriteRecord} from "../../settings";
+import { FavoriteDialog } from "@shared/components/favorites/FavoriteDialog";
+import { FavoriteGroupDialog } from "@shared/components/favorites/FavoriteGroupDialog";
+import { StaticFavoriteDialog } from "@shared/components/favorites/StaticFavoriteDialog";
+import {
+  FavoriteDetailsData,
+  FavoriteDetailsDialog,
+} from "@shared/components/favorites/FavoriteDetailsDialog";
+import { FavoritesToolbar } from "@shared/components/favorites/FavoritesToolbar";
+import { FavoriteMetadata } from "@shared/core/favorites/FavoriteTypes";
+import {
+  ResolvedFavoriteGroup,
+  resolveFavoriteGroups,
+} from "@shared/core/favorites/FavoriteTypes";
+import { useFavorites } from "../../FavoritesContext";
+import { FAVORITE_PAGE_REGISTRY } from "../../FavoritePageRegistry";
+import { Poe2FavoriteRecord } from "../../settings";
+import {
+  isPoe2FavoriteGroup,
+  isPoe2GroupableFavorite,
+  isPoe2StaticFavorite,
+} from "../../favorites";
 import "./Favorites.css";
 const SortableFavoritesGrid = lazy(() => import("./SortableFavoritesGrid"));
 
-interface DetailsDialogProps {
-  favorite: Poe2FavoriteRecord;
-  onClose: () => void;
-  onCustomize: () => void;
-}
-
-const DetailsDialog = ({favorite, onClose, onCustomize}: DetailsDialogProps) => {
-  const navigate = useNavigate();
-  const page = FAVORITE_PAGE_REGISTRY[favorite.pageKey];
-  const [copyStatus, setCopyStatus] = useState("");
-  const closeButtonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    closeButtonRef.current?.focus();
-
-    const closeOnEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
-    };
-
-    window.addEventListener("keydown", closeOnEscape);
-    return () => window.removeEventListener("keydown", closeOnEscape);
-  }, [onClose]);
-
-  const copy = () => navigator.clipboard.writeText(favorite.regex)
-    .then(() => setCopyStatus("Copied"))
-    .catch(() => setCopyStatus("Copy failed"));
-
-  return (
-    <div
-      className="favorite-dialog-backdrop"
-      role="presentation"
-      onMouseDown={(event) => {
-        if (event.target === event.currentTarget) onClose();
-      }}
-    >
-      <section className="favorite-dialog" role="dialog" aria-modal="true" aria-labelledby="poe2-favorite-details-title">
-        <h2 id="poe2-favorite-details-title">
-          <img className="favorite-details-icon" src={page.icon} alt=""/>
-          {favorite.name}
-        </h2>
-        {favorite.description && <p className="favorite-details-description">{favorite.description}</p>}
-        <dl className="favorite-details-grid">
-          <dt>Source</dt>
-          <dd>{page.label}</dd>
-          {favorite.context.league && <>
-            <dt>League</dt>
-            <dd>{favorite.context.league}</dd>
-          </>}
-          <dt>Created</dt>
-          <dd>{new Date(favorite.createdAt).toLocaleString()}</dd>
-          <dt>Updated</dt>
-          <dd>{new Date(favorite.updatedAt).toLocaleString()}</dd>
-        </dl>
-        <div className="favorite-details-regex">{favorite.regex}</div>
-        <div aria-live="polite" className="favorite-dialog-help">{copyStatus}</div>
-        <div className="favorite-dialog-actions">
-          <button ref={closeButtonRef} type="button" onClick={onClose}>Close</button>
-          <button type="button" onClick={onCustomize}>Customize</button>
-          <button type="button" onClick={() => navigate(`${page.route}?favorite=${encodeURIComponent(favorite.id)}`)}>Edit regex</button>
-          <button type="button" onClick={copy}>Copy regex</button>
-        </div>
-      </section>
-    </div>
-  );
-};
-
 const Favorites = () => {
-  const {favorites, customize, remove, reorder} = useFavorites();
+  const {
+    favorites,
+    customize,
+    remove,
+    reorder,
+    createGroup,
+    createStatic,
+    updateStatic,
+    duplicate,
+    setHidden,
+    updateGroup,
+  } = useFavorites();
   const navigate = useNavigate();
   const [editing, setEditing] = useState<Poe2FavoriteRecord>();
-  const [details, setDetails] = useState<Poe2FavoriteRecord>();
+  const [details, setDetails] =
+    useState<ResolvedFavoriteGroup<Poe2FavoriteRecord>>();
   const [tags, setTags] = useState<string[]>([]);
   const [copiedFavoriteId, setCopiedFavoriteId] = useState<string>();
+  const [groupEditorId, setGroupEditorId] = useState<string | null>();
+  const [staticEditorId, setStaticEditorId] = useState<string | null>();
+  const [visibilityMode, setVisibilityMode] = useState(false);
 
-  const allTags = useMemo(
-    () => [...new Set(favorites.flatMap((favorite) => favorite.tags))].sort(),
+  const resolvedFavorites = useMemo(
+    () => resolveFavoriteGroups(favorites),
     [favorites],
   );
-  const visibleFavorites = tags.length > 0
-    ? favorites.filter((favorite) => favorite.tags.some((tag) => tags.includes(tag)))
-    : favorites;
+  const allTags = useMemo(
+    () =>
+      [
+        ...new Set(
+          resolvedFavorites
+            .filter((favorite) => visibilityMode || !favorite.hidden)
+            .flatMap((favorite) => favorite.tags),
+        ),
+      ].sort(),
+    [resolvedFavorites, visibilityMode],
+  );
+  const visibleFavorites =
+    tags.length > 0
+      ? resolvedFavorites.filter((favorite) =>
+          favorite.tags.some((tag) => tags.includes(tag)),
+        )
+      : resolvedFavorites;
+  const shownFavorites = visibilityMode
+    ? resolvedFavorites
+    : visibleFavorites.filter((favorite) => !favorite.hidden);
+  const editingEntry = groupEditorId
+    ? favorites.find((favorite) => favorite.id === groupEditorId)
+    : undefined;
+  const editingGroup =
+    editingEntry && isPoe2FavoriteGroup(editingEntry)
+      ? editingEntry
+      : undefined;
+  const groupCandidates = resolvedFavorites.filter(isPoe2GroupableFavorite);
+  const staticEditorEntry = staticEditorId
+    ? favorites.find((favorite) => favorite.id === staticEditorId)
+    : undefined;
+  const editingStatic =
+    staticEditorEntry && isPoe2StaticFavorite(staticEditorEntry)
+      ? staticEditorEntry
+      : undefined;
+  const detailsData: FavoriteDetailsData | undefined = details
+    ? {
+        ...details,
+        source:
+          details.kind === "favorite"
+            ? {
+                label: FAVORITE_PAGE_REGISTRY[details.pageKey].label,
+                icon: FAVORITE_PAGE_REGISTRY[details.pageKey].icon,
+              }
+            : undefined,
+        context:
+          details.kind === "favorite" && details.context.league
+            ? [{ label: "League", value: details.context.league }]
+            : undefined,
+        group: details.kind === "group" ? details.groupResolution : undefined,
+      }
+    : undefined;
 
   const move = (id: string, offset: number) => {
     const from = favorites.findIndex((favorite) => favorite.id === id);
@@ -104,49 +117,176 @@ const Favorites = () => {
     }
   };
 
-
   const deleteFavorite = (favorite: Poe2FavoriteRecord) => {
-    if (window.confirm(`Delete favorite “${favorite.name}”?`)) {
+    const groups = favorites.filter(
+      (entry) =>
+        isPoe2FavoriteGroup(entry) && entry.memberIds.includes(favorite.id),
+    );
+    const affected = groups.length
+      ? `\n\nIt is referenced by: ${groups.map((entry) => entry.name).join(", ")}. Those groups will be updated or removed if fewer than two favorites remain.`
+      : "";
+    if (window.confirm(`Delete favorite “${favorite.name}”?${affected}`))
       remove(favorite.id);
-    }
   };
 
   return (
     <>
-      <Poe2Header text="Favorites"/>
-      <main className={`poe2-favorites${favorites.length === 0 ? " poe2-favorites-empty-page" : ""}`}>
-        <FavoriteTagFilter tags={allTags} selectedTags={tags} onChange={setTags}/>
+      <Poe2Header text="Favorites" />
+      <main
+        className={`poe2-favorites${favorites.length === 0 ? " poe2-favorites-empty-page" : ""}`}
+      >
+        <FavoritesToolbar
+          tags={allTags}
+          selectedTags={tags}
+          visibilityMode={visibilityMode}
+          hasFavorites={favorites.length > 0}
+          canCreateGroup={groupCandidates.length >= 2}
+          onTagsChange={setTags}
+          onToggleVisibilityMode={() => setVisibilityMode((value) => !value)}
+          onCreateGroup={() => setGroupEditorId(null)}
+          onCreateStatic={() => setStaticEditorId(null)}
+        />
         {favorites.length === 0 ? (
           <div className="poe2-favorites-empty">
             <div className="poe2-favorites-empty-icon">★</div>
             <h2>No favorites yet</h2>
-            <p>Open a generator, configure a regex, then choose <strong>Favorite</strong> in the result bar.</p>
+            <p>
+              Open a generator, configure a regex, then choose{" "}
+              <strong>Favorite</strong> in the result bar.
+            </p>
             <Link to="/vendor">Create a vendor regex</Link>
           </div>
+        ) : shownFavorites.length === 0 ? (
+          <div className="poe2-favorites-empty">
+            {tags.length ? (
+              <>
+                <p>No visible favorites match the selected tags.</p>
+                <button type="button" onClick={() => setTags([])}>
+                  Clear filters
+                </button>
+              </>
+            ) : (
+              <>
+                <p>All favorites are hidden.</p>
+                <button type="button" onClick={() => setVisibilityMode(true)}>
+                  Manage visibility
+                </button>
+              </>
+            )}
+          </div>
         ) : (
-          <Suspense fallback={<div className="favorites-grid-loading" role="status">Loading favorites…</div>}><SortableFavoritesGrid favorites={favorites} visible={visibleFavorites} copiedFavoriteId={copiedFavoriteId}
-            onCopied={setCopiedFavoriteId} onDetails={setDetails} onCustomize={setEditing} onEdit={(favorite) => navigate(`${FAVORITE_PAGE_REGISTRY[favorite.pageKey].route}?favorite=${encodeURIComponent(favorite.id)}`)}
-            onMove={move} onDelete={deleteFavorite} onReorder={reorder}/></Suspense>
+          <Suspense
+            fallback={
+              <div className="favorites-grid-loading" role="status">
+                Loading favorites…
+              </div>
+            }
+          >
+            <SortableFavoritesGrid
+              favorites={resolvedFavorites}
+              visible={shownFavorites}
+              copiedFavoriteId={copiedFavoriteId}
+              onCopied={setCopiedFavoriteId}
+              onDetails={setDetails}
+              onCustomize={setEditing}
+              onEdit={(favorite) =>
+                navigate(
+                  `${FAVORITE_PAGE_REGISTRY[favorite.pageKey].route}?favorite=${encodeURIComponent(favorite.id)}`,
+                )
+              }
+              onMove={move}
+              onDelete={deleteFavorite}
+              onReorder={reorder}
+              visibilityMode={visibilityMode}
+              onToggleVisibility={(favorite) =>
+                setHidden(favorite.id, !favorite.hidden)
+              }
+              onEditGroup={(favorite) => setGroupEditorId(favorite.id)}
+              onEditStatic={(favorite) => setStaticEditorId(favorite.id)}
+              onDuplicate={(favorite) => duplicate(favorite.id)}
+            />
+          </Suspense>
         )}
       </main>
-      {details && <DetailsDialog
-        favorite={details}
-        onClose={() => setDetails(undefined)}
-        onCustomize={() => {
-          setDetails(undefined);
-          setEditing(details);
-        }}
-      />}
-      {editing && <FavoriteDialog
-        title={`Customize ${editing.name}`}
-        initial={editing}
-        duplicateNames={favorites.filter((favorite) => favorite.id !== editing.id).map((favorite) => favorite.name)}
-        onCancel={() => setEditing(undefined)}
-        onSave={(metadata: FavoriteMetadata) => {
-          customize(editing.id, metadata);
-          setEditing(undefined);
-        }}
-      />}
+      {details && detailsData && (
+        <FavoriteDetailsDialog
+          favorite={detailsData}
+          onClose={() => setDetails(undefined)}
+          onCustomize={
+            details.kind === "favorite"
+              ? () => {
+                  setDetails(undefined);
+                  setEditing(details);
+                }
+              : undefined
+          }
+          onEditRegex={
+            details.kind === "favorite"
+              ? () =>
+                  navigate(
+                    `${FAVORITE_PAGE_REGISTRY[details.pageKey].route}?favorite=${encodeURIComponent(details.id)}`,
+                  )
+              : details.kind === "static"
+                ? () => {
+                    setDetails(undefined);
+                    setStaticEditorId(details.id);
+                  }
+                : undefined
+          }
+          onEditGroup={
+            details.kind === "group"
+              ? () => {
+                  setDetails(undefined);
+                  setGroupEditorId(details.id);
+                }
+              : undefined
+          }
+        />
+      )}
+      {editing && (
+        <FavoriteDialog
+          title={`Customize ${editing.name}`}
+          initial={editing}
+          duplicateNames={favorites
+            .filter((favorite) => favorite.id !== editing.id)
+            .map((favorite) => favorite.name)}
+          onCancel={() => setEditing(undefined)}
+          onSave={(metadata: FavoriteMetadata) => {
+            customize(editing.id, metadata);
+            setEditing(undefined);
+          }}
+        />
+      )}
+      {groupEditorId !== undefined && (
+        <FavoriteGroupDialog
+          favorites={resolvedFavorites}
+          initial={editingGroup}
+          duplicateNames={favorites
+            .filter((favorite) => favorite.id !== editingGroup?.id)
+            .map((favorite) => favorite.name)}
+          onCancel={() => setGroupEditorId(undefined)}
+          onSave={(ids, operator, metadata) => {
+            if (editingGroup)
+              updateGroup(editingGroup.id, ids, operator, metadata);
+            else createGroup(ids, operator, metadata);
+            setGroupEditorId(undefined);
+          }}
+        />
+      )}
+      {staticEditorId !== undefined && (
+        <StaticFavoriteDialog
+          initial={editingStatic}
+          duplicateNames={favorites
+            .filter((favorite) => favorite.id !== editingStatic?.id)
+            .map((favorite) => favorite.name)}
+          onCancel={() => setStaticEditorId(undefined)}
+          onSave={(regex, metadata) => {
+            if (editingStatic) updateStatic(editingStatic.id, regex, metadata);
+            else createStatic(regex, metadata);
+            setStaticEditorId(undefined);
+          }}
+        />
+      )}
     </>
   );
 };

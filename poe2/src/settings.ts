@@ -4,21 +4,39 @@ import {itemCraftingDefault, ItemCraftingSettings} from "@shared/types/Settings.
 
 export type Poe2FavoritePageKey = "vendor" | "waystone" | "tablet" | "relic" | "item";
 
-export interface Poe2FavoriteRecord {
+interface Poe2FavoriteBaseRecord {
   schemaVersion: 1;
   id: string;
-  pageKey: Poe2FavoritePageKey;
   name: string;
   description: string;
   color: string;
   icon?: string;
   tags: string[];
+  createdAt: string;
+  updatedAt: string;
+  hidden?: boolean;
+}
+
+export interface Poe2RegexFavoriteRecord extends Poe2FavoriteBaseRecord {
+  kind: "favorite";
+  pageKey: Poe2FavoritePageKey;
   regex: string;
   configuration: unknown;
   context: {league?: string};
-  createdAt: string;
-  updatedAt: string;
 }
+
+export interface Poe2StaticFavoriteRecord extends Poe2FavoriteBaseRecord {
+  kind: "static";
+  regex: string;
+}
+
+export interface Poe2FavoriteGroupRecord extends Poe2FavoriteBaseRecord {
+  kind: "group";
+  memberIds: string[];
+  operator: "and" | "or";
+}
+
+export type Poe2FavoriteRecord = Poe2RegexFavoriteRecord | Poe2StaticFavoriteRecord | Poe2FavoriteGroupRecord;
 
 export interface SelectOption {
   name: string

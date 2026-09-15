@@ -5,6 +5,14 @@ interface SavedProfiles {
   [key: string]: SavedSettings
 }
 
+export const PROFILE_SETTINGS_CHANGED_EVENT = "poe:profile-settings-changed";
+
+const notifyProfileSettingsChanged = (profile: string): void => {
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(new CustomEvent<string>(PROFILE_SETTINGS_CHANGED_EVENT, {detail: profile}));
+  }
+};
+
 export const loadProfiles = (): SavedProfiles => {
   return safeLoad("profiles");
 }
@@ -46,6 +54,7 @@ export const saveSettings = (settings: SavedSettings): void => {
   const profiles = loadProfiles();
   profiles[settings.name] = settings;
   localStorage.setItem("profiles", JSON.stringify(profiles));
+  notifyProfileSettingsChanged(settings.name);
 }
 
 /** Atomically updates one profile from its latest persisted value. */
@@ -56,6 +65,7 @@ export const updateSettings = (profileName: string, updater: (settings: SavedSet
   const next = updater(current);
   profiles[profileName] = next;
   localStorage.setItem("profiles", JSON.stringify(profiles));
+  notifyProfileSettingsChanged(profileName);
   return next;
 };
 

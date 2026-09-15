@@ -1,29 +1,18 @@
-import {DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors} from "@dnd-kit/core";
-import {SortableContext, arrayMove, rectSortingStrategy, sortableKeyboardCoordinates} from "@dnd-kit/sortable";
-import {FavoriteCard} from "@shared/components/favorites/FavoriteCard";
-import {restrictToViewportEdges} from "@shared/core/favorites/restrictToViewportEdges";
+import {SortableFavoritesGrid as SharedGrid, SortableFavoritesGridProps, SortableFavoriteView} from "@shared/components/favorites/SortableFavoritesGrid";
+import {ResolvedFavoriteGroup} from "@shared/core/favorites/FavoriteTypes";
+import {Poe2FavoriteGroupRecord, Poe2FavoriteRecord, Poe2RegexFavoriteRecord, Poe2StaticFavoriteRecord} from "../../settings";
 import {FAVORITE_PAGE_REGISTRY} from "../../FavoritePageRegistry";
-import {Poe2FavoriteRecord} from "../../settings";
 
-export default function SortableFavoritesGrid({favorites, visible, copiedFavoriteId, onCopied, onDetails, onCustomize, onEdit, onMove, onDelete, onReorder}: {
-  favorites: Poe2FavoriteRecord[]; visible: Poe2FavoriteRecord[]; copiedFavoriteId?: string; onCopied: (id: string) => void;
-  onDetails: (favorite: Poe2FavoriteRecord) => void; onCustomize: (favorite: Poe2FavoriteRecord) => void; onEdit: (favorite: Poe2FavoriteRecord) => void;
-  onMove: (id: string, offset: number) => void; onDelete: (favorite: Poe2FavoriteRecord) => void; onReorder: (ids: string[]) => void;
-}) {
-  const sensors = useSensors(useSensor(PointerSensor, {activationConstraint: {distance: 8}}), useSensor(TouchSensor, {activationConstraint: {delay: 180, tolerance: 5}}), useSensor(KeyboardSensor, {coordinateGetter: sortableKeyboardCoordinates}));
-  const dragEnd = ({active, over}: DragEndEvent) => {
-    if (!over || active.id === over.id) return;
-    const from = favorites.findIndex((favorite) => favorite.id === active.id);
-    const to = favorites.findIndex((favorite) => favorite.id === over.id);
-    if (from >= 0 && to >= 0) onReorder(arrayMove(favorites, from, to).map((favorite) => favorite.id));
-  };
-  return <DndContext sensors={sensors} collisionDetection={closestCenter} modifiers={[restrictToViewportEdges]} onDragEnd={dragEnd}>
-    <SortableContext items={visible.map((favorite) => favorite.id)} strategy={rectSortingStrategy}>
-      <div className="favorites-grid">{visible.map((favorite) => {
-        const index = favorites.findIndex((entry) => entry.id === favorite.id);
-        const page = FAVORITE_PAGE_REGISTRY[favorite.pageKey];
-        return <FavoriteCard key={favorite.id} favorite={{...favorite, sourceLabel: page.label, sourceIcon: page.icon}} canMoveEarlier={index > 0} canMoveLater={index < favorites.length - 1} copiedFavoriteId={copiedFavoriteId} onCopied={() => onCopied(favorite.id)} onDetails={() => onDetails(favorite)} onCustomize={() => onCustomize(favorite)} onEdit={() => onEdit(favorite)} onMove={(offset) => onMove(favorite.id, offset)} onDelete={() => onDelete(favorite)}/>;
-      })}</div>
-    </SortableContext>
-  </DndContext>;
+type FavoriteView = ResolvedFavoriteGroup<Poe2FavoriteRecord> & SortableFavoriteView;
+type SharedProps = Omit<SortableFavoritesGridProps<FavoriteView>, "getSourceIcon" | "onEditRegex" | "onEditGroup" | "onEditStatic">;
+
+export default function SortableFavoritesGrid(props: SharedProps & {onEdit: (favorite: Poe2RegexFavoriteRecord) => void; onEditGroup: (favorite: Poe2FavoriteGroupRecord) => void; onEditStatic: (favorite: Poe2StaticFavoriteRecord) => void}) {
+  const {onEdit, onEditGroup, onEditStatic, ...gridProps} = props;
+  return <SharedGrid
+    {...gridProps}
+    getSourceIcon={(favorite) => favorite.kind === "favorite" ? FAVORITE_PAGE_REGISTRY[favorite.pageKey].icon : undefined}
+    onEditRegex={(favorite) => { if (favorite.kind === "favorite") onEdit(favorite); }}
+    onEditGroup={(favorite) => { if (favorite.kind === "group") onEditGroup(favorite); }}
+    onEditStatic={(favorite) => { if (favorite.kind === "static") onEditStatic(favorite); }}
+  />;
 }

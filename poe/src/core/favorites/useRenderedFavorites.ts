@@ -4,7 +4,7 @@ import {defaultSettings, MapSettings} from "@poe/utils/SavedSettings";
 import {loadMapMods} from "@poe/utils/loadData";
 import type {RepoeLanguageKey} from "@poe/utils/Languages";
 import {merge} from "@shared/core/utils";
-import type {FavoriteRecord} from "./FavoriteTypes";
+import {FavoriteRecord, isRegexFavorite} from "./FavoriteTypes";
 
 const mapRegex = (settings: MapSettings, language: RepoeLanguageKey, data: Awaited<ReturnType<typeof loadMapMods>>) => {
   const generated = generateMapModRegex(settings, data, language);
@@ -27,7 +27,7 @@ const normalizeMapSettings = (configuration: unknown): MapSettings => {
  */
 export const useRenderedFavorites = (favorites: FavoriteRecord[], language: RepoeLanguageKey): FavoriteRecord[] => {
   const [mapData, setMapData] = useState<{language: RepoeLanguageKey; data: Awaited<ReturnType<typeof loadMapMods>>}>();
-  const languageDependentFavorites = favorites.filter((favorite) => favorite.languageDependent);
+  const languageDependentFavorites = favorites.filter(isRegexFavorite).filter((favorite) => favorite.languageDependent);
   const hasMapFavorites = languageDependentFavorites.some((favorite) => favorite.pageKey === "maps");
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const useRenderedFavorites = (favorites: FavoriteRecord[], language: Repo
   return useMemo(() => {
     if (!mapData || mapData.language !== language) return favorites;
     return favorites.map((favorite) => {
-      if (!favorite.languageDependent) return favorite;
+      if (!isRegexFavorite(favorite) || !favorite.languageDependent) return favorite;
       if (favorite.pageKey === "maps" && mapData) {
         try {
           const settings = normalizeMapSettings(favorite.configuration);

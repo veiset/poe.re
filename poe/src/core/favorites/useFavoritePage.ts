@@ -3,7 +3,7 @@ import {useLocation, useNavigate, useSearchParams} from "react-router-dom";
 import {merge} from "@shared/core/utils";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {useFavorites} from "./FavoritesContext";
-import {FavoriteContextData, FavoriteSnapshot, Poe1FavoritePageKey, cloneFavoriteConfiguration} from "./FavoriteTypes";
+import {FavoriteContextData, FavoriteSnapshot, Poe1FavoritePageKey, cloneFavoriteConfiguration, isRegexFavorite} from "./FavoriteTypes";
 import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
 import type {RegexFavoriteAction} from "@shared/components/RegexResultBox/RegexResultBox";
 
@@ -21,7 +21,7 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
   const {favorites, requestCreate, updateSnapshot, lastCreationSuccess, clearCreationSuccess} = useFavorites();
   const requestedId = searchParams.get("favorite");
   const requestedFavorite = requestedId ? favorites.find((candidate) => candidate.id === requestedId) : undefined;
-  const favorite = requestedFavorite?.pageKey === pageKey ? requestedFavorite : undefined;
+  const favorite = requestedFavorite && isRegexFavorite(requestedFavorite) && requestedFavorite.pageKey === pageKey ? requestedFavorite : undefined;
   const isEditingFavorite = requestedId !== null;
   useEffect(() => {
     if (!requestedId) return;
@@ -30,6 +30,11 @@ export const useFavoritePage = <T extends object>(pageKey: Poe1FavoritePageKey, 
       nextParams.delete("favorite");
       const search = nextParams.toString();
       navigate({pathname: location.pathname, search: search ? `?${search}` : ""}, {replace: true});
+      return;
+    }
+    if (!isRegexFavorite(requestedFavorite)) {
+      nextParams.delete("favorite");
+      navigate({pathname: "/favorites", search: ""}, {replace: true});
       return;
     }
     if (requestedFavorite.pageKey !== pageKey) {

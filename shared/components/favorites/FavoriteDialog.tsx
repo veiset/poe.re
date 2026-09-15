@@ -8,9 +8,12 @@ interface FavoriteDialogProps {
   duplicateNames?: string[];
   onCancel: () => void;
   onSave: (metadata: FavoriteMetadata) => void | Promise<void>;
+  children?: React.ReactNode;
+  canSave?: boolean;
+  saveLabel?: string;
 }
 
-export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, onSave}: FavoriteDialogProps) => {
+export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, onSave, children, canSave = true, saveLabel = "Save"}: FavoriteDialogProps) => {
   const [name, setName] = useState(initial?.name ?? "");
   const [description, setDescription] = useState(initial?.description ?? "");
   const [color, setColor] = useState(initial?.color ?? DEFAULT_FAVORITE_COLOR);
@@ -25,6 +28,7 @@ export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, o
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!name.trim()) { setError("Name is required"); return; }
+    if (!canSave) return;
     setSaving(true); setError("");
     try {
       await onSave({name: name.trim(), description, color, tags});
@@ -52,10 +56,11 @@ export const FavoriteDialog = ({title, initial, duplicateNames = [], onCancel, o
       <label className="favorite-dialog-field">Tags <span className="favorite-dialog-help">Comma-separated, up to {MAX_FAVORITE_TAGS}; {MAX_FAVORITE_TAG_LENGTH} characters each</span>
         <input value={tagsText} onChange={(event) => setTagsText(event.target.value)}/>
       </label>
+      {children}
       <div className="favorite-dialog-error" role="alert">{error}</div>
       <div className="favorite-dialog-actions">
         <button type="button" onClick={onCancel}>Cancel</button>
-        <button className="favorite-dialog-save" type="submit" disabled={!name.trim() || saving}>{saving ? "Saving…" : "Save"}</button>
+        <button className="favorite-dialog-save" type="submit" disabled={!name.trim() || !canSave || saving}>{saving ? "Saving…" : saveLabel}</button>
       </div>
     </form>
   </div>;
