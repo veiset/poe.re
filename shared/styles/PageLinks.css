@@ -11,7 +11,7 @@
 .support-link {
     margin-top: 0;
     margin-bottom: 2px;
-    padding-left: 5px;
+    padding: 0;
 }
 
 .poe2-link {
@@ -23,16 +23,34 @@
 }
 
 .support-icon {
-    width: 20px;
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 4px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    object-fit: contain;
 }
 
 .support-icon-coffee {
     width: 24px;
     height: 24px;
+}
+
+.support-icon-discord {
+    filter: brightness(0) invert(1);
+}
+
+.support-link-anchor {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px 8px 14px;
+    color: var(--color-text);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.support-link-anchor:hover {
+    color: var(--color-text);
+    text-decoration: none;
 }
 
 .page-link {
@@ -134,7 +152,13 @@ a:hover {
         gap: 6px;
     }
 
-    .page-link-icon {
+    .support-link-anchor {
+        padding: 6px 12px;
+        gap: 6px;
+    }
+
+    .page-link-icon,
+    .support-icon {
         height: 20px;
         width: 20px;
     }
@@ -276,7 +300,12 @@ a:hover {
         padding: 9px 10px;
     }
 
-    .page-link-icon {
+    .support-link-anchor {
+        padding: 9px 10px;
+    }
+
+    .page-link-icon,
+    .support-icon {
         width: 24px;
         height: 24px;
     }
