@@ -24,7 +24,7 @@ interface PageNavigationProps {
 
 const SupportLink = ({href, icon, text, className = ""}: {href: string; icon: string; text: string; className?: string}) => (
   <p className="support-link">
-    <a className="source-link support-link-anchor" href={href} rel="noreferrer">
+    <a className="source-link support-link-anchor" href={href} target="_blank" rel="noopener noreferrer">
       <img src={icon} alt="" className={`support-icon ${className}`} decoding="async" loading="lazy"/>
       {text}
     </a>
