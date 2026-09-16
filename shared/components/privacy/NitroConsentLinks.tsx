@@ -1,14 +1,8 @@
 import {useEffect} from "react";
 import "./NitroConsentLinks.css";
 
-declare global {
-  interface Window {
-    nitroAds?: {loaded?: boolean};
-    __uspapi?: (command: string, version: number) => void;
-    __cmp?: (command: string) => void;
-  }
-}
-
+// window.nitroAds, __uspapi and __cmp are declared in @shared/core/nitroAds.
+//
 // Both links are injected by the NitroPay ad script and only for visitors the
 // respective law applies to: the CCPA opt-out for US state privacy regions, the
 // consent link where a TCF consent string was collected. Everywhere else the

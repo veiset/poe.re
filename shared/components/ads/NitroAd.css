@@ -1,0 +1,9 @@
+/* The slot reserves its configured height up front so filling the ad in does
+   not shove the tool down the page. */
+.nitro-ad {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+}

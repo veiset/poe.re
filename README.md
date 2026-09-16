@@ -142,11 +142,16 @@ the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
 ### Advertising (poe2.re only)
 
-Ads on **poe2.re** are served by NitroPay. Three pieces make that work:
+Ads on **poe2.re** are served by NitroPay. Four pieces make that work:
 
 - The loader in `poe2/index.html` (site-specific — do not copy it to poe.re).
 - `poe2/public/_redirects`, which 301s `/ads.txt` to NitroPay's hosted copy so
   they can add exchanges without a deploy here.
+- `shared/components/ads/NitroAd.tsx`, which wraps `nitroAds.createAd`. Mount a
+  placement in the **layout**, not in a page: it is created once and refreshed
+  through `onNavigate` on each route change, which is what NitroPay asks single
+  page apps to do. `poe2/src/layout/Poe2Banner.tsx` holds the placement id and
+  options exactly as the builder generated them.
 - `shared/components/privacy/NitroConsentLinks.tsx`, rendered once in the poe2
   footer. It asks the ad script to inject the CCPA "Do Not Sell or Share" link
   and the consent-management link. Both only appear where the relevant law
@@ -154,6 +159,9 @@ Ads on **poe2.re** are served by NitroPay. Three pieces make that work:
   Because the consent link is looked up by element id, keep it to one instance.
 
 The `/privacy` page holds the matching disclosures.
+
+To add another placement, generate it in NitroPay's placement builder and mount
+a second `<NitroAd>` with its id alongside `Poe2Banner`.
 
 ### Economy storage
 
