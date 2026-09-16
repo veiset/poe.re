@@ -21,15 +21,6 @@ export function Privacy() {
         browser data for this site.
       </p>
 
-      <h2>Analytics</h2>
-      <p>
-        We use a self-hosted <a href="https://plausible.io/" target="_blank" rel="noopener noreferrer">Plausible
-        Analytics</a> instance to count page views and basic performance metrics. Plausible sets
-        no cookies, does not track you across sites, and does not collect personal data. The
-        aggregated statistics are public at{" "}
-        <a href="https://p.vz.is/poe2.re" target="_blank" rel="noopener noreferrer">p.vz.is/poe2.re</a>.
-      </p>
-
       <h2>Advertising</h2>
       <p>
         Advertising on this site is served by NitroPay and its ad exchange partners. To sell and
