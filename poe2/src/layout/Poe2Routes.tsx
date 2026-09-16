@@ -8,6 +8,7 @@ const Poe2Tablet = lazy(async () => ({default: (await import("../pages/tablet/Ta
 const Poe2Relic = lazy(async () => ({default: (await import("../pages/relic/Relic")).Relic}));
 const Poe2Item = lazy(async () => ({default: (await import("../pages/item/Item")).Item}));
 const Favorites = lazy(() => import("../pages/favorites/Favorites"));
+const Privacy = lazy(async () => ({default: (await import("../pages/privacy/Privacy")).Privacy}));
 
 export const Poe2Routes = () => (
   <Suspense fallback={<div className="route-loading" role="status" aria-live="polite">Loading…</div>}>
@@ -20,6 +21,7 @@ export const Poe2Routes = () => (
       <Route path="tablet" element={<Poe2Tablet/>}/>
       <Route path="relic" element={<Poe2Relic/>}/>
       <Route path="item" element={<Poe2Item/>}/>
+      <Route path="privacy" element={<Privacy/>}/>
     </Route>
 
     <Route path="*" element={<Navigate to="/favorites" replace/>}/>

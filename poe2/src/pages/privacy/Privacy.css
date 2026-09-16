@@ -1,0 +1,39 @@
+.privacy-page {
+    width: 100%;
+    max-width: 820px;
+    padding: 8px 4px 40px;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.privacy-page h1 {
+    font-size: 26px;
+    font-weight: 500;
+    margin: 18px 0 4px;
+}
+
+.privacy-page h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 28px 0 6px;
+    color: var(--color-text-highlight);
+}
+
+.privacy-updated {
+    color: var(--color-text-dim);
+    font-size: 13px;
+    margin: 0 0 8px;
+}
+
+.privacy-page ul {
+    padding-left: 20px;
+}
+
+.privacy-page li {
+    margin-bottom: 6px;
+}
+
+.privacy-page a {
+    color: var(--color-text-link);
+}
+

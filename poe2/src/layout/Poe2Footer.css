@@ -1,0 +1,28 @@
+/* The content container carries a 100vh floor of its own; inside the equally
+   tall wrapper that would push the footer a full screen below the fold, so let
+   it shrink to whatever is left once the footer has its height. */
+.content-height-wrapper > .content-container {
+    min-height: 0;
+    flex: 1 1 auto;
+}
+
+.site-footer {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 14px 16px;
+    background: var(--color-bg);
+    border-top: 1px solid var(--color-border-strong);
+    font-size: 13px;
+    color: var(--color-text-dim);
+}
+
+.site-footer-link {
+    color: var(--color-text-link);
+    text-decoration: none;
+}
+
+.site-footer-link:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,23 @@
+/* The wrapper itself lays nothing out; the two containers become items of the
+   surrounding footer row directly. */
+.nitro-consent-links {
+    display: contents;
+}
+
+/* Spacing is applied per container rather than through a gap on the footer, so
+   a container that stayed empty (the usual case outside the regions these laws
+   cover) takes up no room at all. */
+.nitro-consent-links > *:not(:empty) {
+    display: inline-block;
+    margin-left: 16px;
+}
+
+.nitro-consent-links a {
+    color: var(--color-text-link);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nitro-consent-links a:hover {
+    text-decoration: underline;
+}

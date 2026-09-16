@@ -140,6 +140,21 @@ The worker writes the filtered PoE1 and PoE2 league lists to `leagues.txt` and
 `poe2-leagues.txt` in the R2 bucket. The frontend reads those files through
 the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
+### Advertising (poe2.re only)
+
+Ads on **poe2.re** are served by NitroPay. Three pieces make that work:
+
+- The loader in `poe2/index.html` (site-specific — do not copy it to poe.re).
+- `poe2/public/_redirects`, which 301s `/ads.txt` to NitroPay's hosted copy so
+  they can add exchanges without a deploy here.
+- `shared/components/privacy/NitroConsentLinks.tsx`, rendered once in the poe2
+  footer. It asks the ad script to inject the CCPA "Do Not Sell or Share" link
+  and the consent-management link. Both only appear where the relevant law
+  applies, so append `?usp_debug=1` or `?gdpr_debug=1` to see them elsewhere.
+  Because the consent link is looked up by element id, keep it to one instance.
+
+The `/privacy` page holds the matching disclosures.
+
 ### Economy storage
 
 The R2 bucket, `economy.poe.re` custom domain, CORS policy, and CDN cache rule

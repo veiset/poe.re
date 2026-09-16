@@ -1,0 +1,4 @@
+# NitroPay requires /ads.txt to resolve to their hosted copy so exchanges can
+# verify authorised inventory. Redirecting rather than vendoring the file lets
+# NitroPay add exchanges without a deploy here.
+/ads.txt  https://api.nitropay.com/v1/ads-2596.txt  301
