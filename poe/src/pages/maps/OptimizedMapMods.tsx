@@ -243,7 +243,7 @@ const OptimizedMapMods = () => {
           </div>
         </FilterCard>
 
-        <FilterCard title="Quality"
+        <FilterCard title="Quality (Maven chisels)"
                     headerControl={
                       <ExactOptimizedToggle name="quality-mode"
                                             optimized={optimizeQuality}
