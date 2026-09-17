@@ -1,8 +1,12 @@
 import {useEffect, useRef} from "react";
 import {useLocation} from "react-router-dom";
+import classNames from "classnames";
 import type {NitroAdInstance, NitroAdOptions} from "@shared/core/nitroAds";
 import {useNitroAdsBlocked} from "./useNitroAdsBlocked";
 import "./NitroAd.css";
+
+/** What `nitroAds.createAd` resolves to: one placement, a list, or nothing. */
+type CreatedAd = NitroAdInstance | NitroAdInstance[] | null | undefined;
 
 interface NitroAdProps {
   id: string;
@@ -21,6 +25,8 @@ interface NitroAdProps {
  * When NitroPay's detection snippet reports the ad script as blocked, the
  * container is removed from the DOM rather than hidden, so the reserved height
  * does not sit empty. NitroPay asks for placements to be removed, not hidden.
+ * Should the script still load afterwards, the container comes back and the
+ * placement is created then.
  */
 export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
   const {pathname} = useLocation();
@@ -33,8 +39,10 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
 
     // The loader stub in index.html queues the call until the real script
     // arrives, so this is safe to run before the script has loaded. It can
-    // still return the placement synchronously once it has.
-    Promise.resolve(window.nitroAds?.createAd?.(id, options))
+    // still return the placement synchronously once it has, or throw
+    // synchronously; the Promise constructor routes a throw to the catch
+    // below, where Promise.resolve would let it escape the effect.
+    new Promise<CreatedAd>((resolve) => resolve(window.nitroAds?.createAd?.(id, options)))
       .then((created) => {
         if (cancelled || !created) return;
         ad.current = Array.isArray(created) ? created[0] : created;
@@ -52,9 +60,9 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
       // which React does for us on unmount.
       ad.current = null;
     };
-    // The options object is a module constant at every call site; re-creating
-    // the placement on each render would fight the ad script.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // `options` is deliberately not a dependency: it is a module constant at
+    // every call site, and re-creating the placement on each render would
+    // fight the ad script.
   }, [id, blocked]);
 
   useEffect(() => {
@@ -65,7 +73,7 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
 
   if (blocked) return null;
 
-  return <div id={id} className={`nitro-ad ${className}`.trim()} style={{minHeight: options.height}}/>;
+  return <div id={id} className={classNames("nitro-ad", className)} style={{minHeight: options.height}}/>;
 };
 
 export default NitroAd;

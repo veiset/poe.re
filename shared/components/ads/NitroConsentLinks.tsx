@@ -1,4 +1,5 @@
 import {useEffect} from "react";
+import classNames from "classnames";
 import "./NitroConsentLinks.css";
 
 // window.nitroAds, __uspapi and __cmp are declared in @shared/core/nitroAds.
@@ -25,7 +26,7 @@ export const NitroConsentLinks = ({className = ""}: {className?: string}) => {
   }, []);
 
   return (
-    <span className={`nitro-consent-links ${className}`.trim()}>
+    <span className={classNames("nitro-consent-links", className)}>
       <span data-ccpa-link="1"/>
       <span id="ncmp-consent-link"/>
     </span>

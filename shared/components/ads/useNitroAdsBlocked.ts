@@ -8,24 +8,27 @@ import {useEffect, useState} from "react";
 // necessary such as re-adjusting your layout", which is what callers use this
 // for. A slow network never trips it, because the image has to fail, not stall.
 //
-// Blocking is treated as final for the page load. If the ad script did load
-// (`nitroAds.loaded`), the image test is ignored: the script is what matters.
-const isBlocked = () => !window.nitroAds?.loaded && window.npDetect?.blocking === true;
+// The script loading (`nitroAds.loaded`) always wins over the image test: the
+// pixel can fail ~750ms in while the async script is still on its way, or be
+// caught by a list that lets the script itself through. Once the script has
+// loaded the hook reports unblocked for the rest of the page load, whatever
+// the pixel said.
+const isBlocked = () => window.nitroAds?.loaded !== true && window.npDetect?.blocking === true;
 
 export const useNitroAdsBlocked = (): boolean => {
   const [blocked, setBlocked] = useState(isBlocked);
 
   useEffect(() => {
-    if (blocked) return;
-    const onBlocking = () => {
-      if (isBlocked()) setBlocked(true);
+    const sync = () => setBlocked(isBlocked());
+    // Either event may have fired between the initial render and this effect.
+    sync();
+    document.addEventListener("np.blocking", sync);
+    document.addEventListener("nitroAds.loaded", sync);
+    return () => {
+      document.removeEventListener("np.blocking", sync);
+      document.removeEventListener("nitroAds.loaded", sync);
     };
-    // Covers the case where detection finished between the initial render
-    // and this effect, so the event was missed.
-    onBlocking();
-    document.addEventListener("np.blocking", onBlocking);
-    return () => document.removeEventListener("np.blocking", onBlocking);
-  }, [blocked]);
+  }, []);
 
   return blocked;
 };

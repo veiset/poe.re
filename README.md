@@ -161,7 +161,9 @@ Ads on **poe2.re** are served by NitroPay. Five pieces make that work:
   `np.blocking` when the ad script is blocked, and `NitroAd` then removes its
   container instead of leaving the reserved height empty. NitroPay's docs ask
   for exactly this ("re-adjusting your layout") and for placements to be removed
-  rather than hidden.
+  rather than hidden. `nitroAds.loaded` wins over `np.blocking`, so a visitor
+  whose blocker only catches the detection pixel still gets the slot back once
+  the script arrives.
 
 The `/privacy` page holds the matching disclosures.
 

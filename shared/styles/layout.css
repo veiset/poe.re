@@ -21,7 +21,10 @@ html, body {
 }
 
 .content-container {
-    min-height: 100vh;
+    /* Fills whatever the 100vh .content-height-wrapper has left after its
+       other children (e.g. a footer) instead of carrying a 100vh floor of its
+       own, which would push those siblings a full screen below the fold. */
+    flex: 1 1 auto;
     width: 100%;
     display: flex;
     flex-direction: row;

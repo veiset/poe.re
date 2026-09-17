@@ -1,11 +1,3 @@
-/* The content container carries a 100vh floor of its own; inside the equally
-   tall wrapper that would push the footer a full screen below the fold, so let
-   it shrink to whatever is left once the footer has its height. */
-.content-height-wrapper > .content-container {
-    min-height: 0;
-    flex: 1 1 auto;
-}
-
 .site-footer {
     display: flex;
     flex-shrink: 0;
