@@ -34,5 +34,14 @@ declare global {
     };
     __uspapi?: (command: string, version: number) => void;
     __cmp?: (command: string) => void;
+    /** Set by NitroPay's ad-block detection snippet in poe2/index.html. */
+    npDetect?: {blocking: boolean};
+  }
+
+  interface DocumentEventMap {
+    /** Fired once by the ad script when it has fully loaded. */
+    "nitroAds.loaded": CustomEvent<{acceptable?: boolean; geo?: string; regionCode?: string}>;
+    /** Fired by the detection snippet when the ad script is being blocked. */
+    "np.blocking": CustomEvent<{blocking: boolean}>;
   }
 }

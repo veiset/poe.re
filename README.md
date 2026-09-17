@@ -142,7 +142,7 @@ the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
 ### Advertising (poe2.re only)
 
-Ads on **poe2.re** are served by NitroPay. Four pieces make that work:
+Ads on **poe2.re** are served by NitroPay. Five pieces make that work:
 
 - The loader in `poe2/index.html` (site-specific — do not copy it to poe.re).
 - `shared/components/ads/NitroAd.tsx`, which wraps `nitroAds.createAd`. Mount a
@@ -157,6 +157,11 @@ Ads on **poe2.re** are served by NitroPay. Four pieces make that work:
   Because the consent link is looked up by element id, keep it to one instance.
 - The `/ads.txt` redirect to NitroPay's hosted copy is a Cloudflare redirect rule
   on the poe2.re zone (dashboard, not Terraform); nothing in this repo serves it.
+- NitroPay's ad-block detection snippet, also in `poe2/index.html`. It fires
+  `np.blocking` when the ad script is blocked, and `NitroAd` then removes its
+  container instead of leaving the reserved height empty. NitroPay's docs ask
+  for exactly this ("re-adjusting your layout") and for placements to be removed
+  rather than hidden.
 
 The `/privacy` page holds the matching disclosures.
 
