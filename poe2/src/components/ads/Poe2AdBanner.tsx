@@ -1,6 +1,6 @@
 import NitroAd from "@shared/components/ads/NitroAd";
 import type {NitroAdOptions} from "@shared/core/nitroAds";
-import "./Poe2Banner.css";
+import "./Poe2AdBanner.css";
 
 const BANNER_ID = "ad-std-banner-nitro-001";
 
@@ -17,8 +17,8 @@ const BANNER_OPTIONS: NitroAdOptions = {
   },
 };
 
-export const Poe2Banner = () => (
-  <NitroAd id={BANNER_ID} options={BANNER_OPTIONS} className="poe2-banner-ad"/>
+export const Poe2AdBanner = () => (
+  <NitroAd id={BANNER_ID} options={BANNER_OPTIONS} className="poe2-ad-banner"/>
 );
 
-export default Poe2Banner;
+export default Poe2AdBanner;

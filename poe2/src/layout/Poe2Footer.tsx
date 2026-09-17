@@ -1,5 +1,5 @@
 import {Link} from "react-router-dom";
-import NitroConsentLinks from "@shared/components/privacy/NitroConsentLinks";
+import NitroConsentLinks from "@shared/components/ads/NitroConsentLinks";
 import "./Poe2Footer.css";
 
 // Rendered on every page, which is what NitroPay asks for: the CCPA opt-out has

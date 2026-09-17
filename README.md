@@ -142,24 +142,26 @@ the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
 ### Advertising (poe2.re only)
 
-Ads on **poe2.re** are served by NitroPay. Three pieces make that work:
+Ads on **poe2.re** are served by NitroPay. Four pieces make that work:
 
 - The loader in `poe2/index.html` (site-specific — do not copy it to poe.re).
 - `shared/components/ads/NitroAd.tsx`, which wraps `nitroAds.createAd`. Mount a
   placement in the **layout**, not in a page: it is created once and refreshed
   through `onNavigate` on each route change, which is what NitroPay asks single
-  page apps to do. `poe2/src/layout/Poe2Banner.tsx` holds the placement id and
+  page apps to do. `poe2/src/components/ads/Poe2AdBanner.tsx` holds the placement id and
   options exactly as the builder generated them.
-- `shared/components/privacy/NitroConsentLinks.tsx`, rendered once in the poe2
+- `shared/components/ads/NitroConsentLinks.tsx`, rendered once in the poe2
   footer. It asks the ad script to inject the CCPA "Do Not Sell or Share" link
   and the consent-management link. Both only appear where the relevant law
   applies, so append `?usp_debug=1` or `?gdpr_debug=1` to see them elsewhere.
   Because the consent link is looked up by element id, keep it to one instance.
+- The `/ads.txt` redirect to NitroPay's hosted copy is a Cloudflare redirect rule
+  on the poe2.re zone (dashboard, not Terraform); nothing in this repo serves it.
 
 The `/privacy` page holds the matching disclosures.
 
 To add another placement, generate it in NitroPay's placement builder and mount
-a second `<NitroAd>` with its id alongside `Poe2Banner`.
+a second `<NitroAd>` with its id alongside `Poe2AdBanner`.
 
 ### Economy storage
 

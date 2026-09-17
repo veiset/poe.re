@@ -1,9 +1,9 @@
-.poe2-banner-ad {
+.poe2-ad-banner {
     margin: 10px 0 4px;
 }
 
 @media (max-width: 700px) {
-    .poe2-banner-ad {
+    .poe2-ad-banner {
         margin: 6px 0 2px;
     }
 }
