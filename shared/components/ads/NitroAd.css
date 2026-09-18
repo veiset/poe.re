@@ -7,3 +7,12 @@
     width: 100%;
     overflow: hidden;
 }
+
+/* Takes the slot's place when the ad script is blocked. */
+.nitro-ad-blocked {
+    margin: 0;
+    padding: 6px 0;
+    font-size: 12px;
+    text-align: center;
+    color: var(--color-text-dim);
+}

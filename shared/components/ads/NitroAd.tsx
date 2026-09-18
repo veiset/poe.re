@@ -23,11 +23,11 @@ interface NitroAdProps {
  * NitroPay asks single-page apps to do. Remounting it per page would tear the
  * slot down and rebuild it on each navigation instead.
  *
- * When NitroPay's detection snippet reports the ad script as blocked, the
- * container is removed from the DOM rather than hidden, so the reserved height
- * does not sit empty. NitroPay asks for placements to be removed, not hidden.
- * Should the script still load afterwards, the container comes back and the
- * placement is created then.
+ * When the ad script is found blocked (see useNitroAdsBlocked), the container
+ * is removed from the DOM rather than hidden, so the reserved height does not
+ * sit empty, and a one-line notice takes its place. NitroPay asks for
+ * placements to be removed, not hidden. Should the script still load
+ * afterwards, the container comes back and the placement is created then.
  *
  * If the script loads but nothing is ever rendered into the container (a
  * blocker that stops the bidders rather than the script, or a plain no-fill),
@@ -78,7 +78,13 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
     ad.current?.onNavigate();
   }, [pathname]);
 
-  if (blocked) return null;
+  if (blocked) {
+    return (
+      <p className={classNames("nitro-ad-blocked", className)}>
+        Adblocker detected, minimizing ad space to make the user experience better.
+      </p>
+    );
+  }
 
   return (
     <div

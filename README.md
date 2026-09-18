@@ -166,9 +166,12 @@ Ads on **poe2.re** are served by NitroPay. Five pieces make that work:
   placements removed rather than hidden). Blockers that answer with stand-ins
   (an empty script, a 1x1 image) trip neither, so a script that has not
   reported `nitroAds.loaded` six seconds after navigation counts as blocked
-  too. `nitroAds.loaded` wins over all three, so a visitor whose blocker only
-  catches the probe, or who is on a slow connection, still gets the slot back
-  once the script arrives. If the script loads but never renders anything into the
+  too. A one-line notice takes the slot's place, and the verdict is kept in
+  localStorage for a day so the next load skips the slot from the first
+  render. `nitroAds.loaded` wins over all of it and clears the stored verdict,
+  so a visitor whose blocker only catches the probe, who is on a slow
+  connection, or who turned the blocker off since yesterday still gets the
+  slot back once the script arrives. If the script loads but never renders anything into the
   container, the reserved height is dropped a few seconds after the auction
   timeout while the container stays for the script to fill later.
 
