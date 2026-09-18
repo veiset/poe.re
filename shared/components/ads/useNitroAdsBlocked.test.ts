@@ -2,7 +2,7 @@ import {act, renderHook} from "@testing-library/react";
 import {afterEach, describe, expect, it} from "vitest";
 import {useNitroAdsBlocked} from "./useNitroAdsBlocked";
 
-const fire = (name: "np.blocking" | "nitroAds.loaded") =>
+const fire = (name: "np.blocking" | "nitroAds.loaded" | "nitroAds.failed") =>
   act(() => {
     document.dispatchEvent(new CustomEvent(name, {detail: {blocking: true}}));
   });
@@ -18,6 +18,7 @@ describe("useNitroAdsBlocked", () => {
   afterEach(() => {
     delete window.npDetect;
     delete window.nitroAds;
+    delete window.nitroAdsFailed;
   });
 
   it("is unblocked while nothing has been detected", () => {
@@ -29,6 +30,13 @@ describe("useNitroAdsBlocked", () => {
     const {result} = renderHook(() => useNitroAdsBlocked());
     setBlocking(true);
     fire("np.blocking");
+    expect(result.current).toBe(true);
+  });
+
+  it("blocks when the loader tag reports the script failed", () => {
+    const {result} = renderHook(() => useNitroAdsBlocked());
+    window.nitroAdsFailed = true;
+    fire("nitroAds.failed");
     expect(result.current).toBe(true);
   });
 

@@ -157,13 +157,17 @@ Ads on **poe2.re** are served by NitroPay. Five pieces make that work:
   Because the consent link is looked up by element id, keep it to one instance.
 - The `/ads.txt` redirect to NitroPay's hosted copy is a Cloudflare redirect rule
   on the poe2.re zone (dashboard, not Terraform); nothing in this repo serves it.
-- NitroPay's ad-block detection snippet, also in `poe2/index.html`. It fires
-  `np.blocking` when the ad script is blocked, and `NitroAd` then removes its
-  container instead of leaving the reserved height empty. NitroPay's docs ask
-  for exactly this ("re-adjusting your layout") and for placements to be removed
-  rather than hidden. `nitroAds.loaded` wins over `np.blocking`, so a visitor
-  whose blocker only catches the detection pixel still gets the slot back once
-  the script arrives.
+- Ad-block handling, so blocked visitors do not get an empty band where the ad
+  would be. `shared/core/nitroAdsDetect.ts` is NitroPay's own detection (a probe
+  image on s.nitropay.com, `np.blocking` after three failures), installed from
+  `poe2/src/index.tsx`; the loader tag's `onerror` adds `nitroAds.failed` for
+  lists that block the script but not the probe. On either, `NitroAd` removes
+  its container, which is what NitroPay asks for ("re-adjusting your layout",
+  placements removed rather than hidden). `nitroAds.loaded` wins over both, so
+  a visitor whose blocker only catches the probe still gets the slot back once
+  the script arrives. If the script loads but never renders anything into the
+  container, the reserved height is dropped a few seconds after the auction
+  timeout while the container stays for the script to fill later.
 
 The `/privacy` page holds the matching disclosures.
 

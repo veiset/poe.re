@@ -7,9 +7,11 @@ import {BrowserRouter} from "react-router-dom";
 import {Poe2Routes} from "./layout/Poe2Routes";
 import {migrateHashRoute} from "@shared/core/migrateHashRoute";
 import {recoverFromDynamicImportFailure} from "@shared/core/recoverFromDynamicImportFailure";
+import {installNitroAdsDetection} from "@shared/core/nitroAdsDetect";
 
 migrateHashRoute();
 recoverFromDynamicImportFailure();
+installNitroAdsDetection();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement

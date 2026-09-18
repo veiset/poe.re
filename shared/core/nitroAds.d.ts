@@ -34,14 +34,26 @@ declare global {
     };
     __uspapi?: (command: string, version: number) => void;
     __cmp?: (command: string) => void;
-    /** Set by NitroPay's ad-block detection snippet in poe2/index.html. */
+    /** Set by NitroPay's ad-block detection, see @shared/core/nitroAdsDetect. */
     npDetect?: {blocking: boolean};
+    /** Set by the loader tag's onerror in poe2/index.html when the ad script fails to load. */
+    nitroAdsFailed?: boolean;
   }
 
   interface DocumentEventMap {
     /** Fired once by the ad script when it has fully loaded. */
-    "nitroAds.loaded": CustomEvent<{acceptable?: boolean; geo?: string; regionCode?: string}>;
-    /** Fired by the detection snippet when the ad script is being blocked. */
+    "nitroAds.loaded": CustomEvent<{
+      acceptable?: boolean;
+      /** How long the script waits for bids, in milliseconds. */
+      auctionTimeout?: number;
+      geo?: string;
+      regionCode?: string;
+    }>;
+    /** Fired by the ad script when an ad has been rendered into a placement. */
+    "nitroAds.rendered": CustomEvent<{type?: string}>;
+    /** Fired by the detection in @shared/core/nitroAdsDetect when the ad script is being blocked. */
     "np.blocking": CustomEvent<{blocking: boolean}>;
+    /** Fired by the loader tag's onerror in poe2/index.html when the ad script fails to load. */
+    "nitroAds.failed": Event;
   }
 }

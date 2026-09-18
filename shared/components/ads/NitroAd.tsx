@@ -3,6 +3,7 @@ import {useLocation} from "react-router-dom";
 import classNames from "classnames";
 import type {NitroAdInstance, NitroAdOptions} from "@shared/core/nitroAds";
 import {useNitroAdsBlocked} from "./useNitroAdsBlocked";
+import {useNitroAdUnfilled} from "./useNitroAdUnfilled";
 import "./NitroAd.css";
 
 /** What `nitroAds.createAd` resolves to: one placement, a list, or nothing. */
@@ -27,10 +28,16 @@ interface NitroAdProps {
  * does not sit empty. NitroPay asks for placements to be removed, not hidden.
  * Should the script still load afterwards, the container comes back and the
  * placement is created then.
+ *
+ * If the script loads but nothing is ever rendered into the container (a
+ * blocker that stops the bidders rather than the script, or a plain no-fill),
+ * the reserved height is dropped while the container itself stays put.
  */
 export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
   const {pathname} = useLocation();
   const blocked = useNitroAdsBlocked();
+  const container = useRef<HTMLDivElement | null>(null);
+  const unfilled = useNitroAdUnfilled(container);
   const ad = useRef<NitroAdInstance | null>(null);
 
   useEffect(() => {
@@ -73,7 +80,14 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
 
   if (blocked) return null;
 
-  return <div id={id} className={classNames("nitro-ad", className)} style={{minHeight: options.height}}/>;
+  return (
+    <div
+      id={id}
+      ref={container}
+      className={classNames("nitro-ad", className)}
+      style={{minHeight: unfilled ? 0 : options.height}}
+    />
+  );
 };
 
 export default NitroAd;

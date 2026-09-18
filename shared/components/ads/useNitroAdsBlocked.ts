@@ -2,32 +2,34 @@ import {useEffect, useState} from "react";
 
 // Whether the NitroPay ad script is being blocked for this visitor.
 //
-// The detection snippet in poe2/index.html is NitroPay's own: it tries to load
-// an image from s.nitropay.com and dispatches `np.blocking` after three
-// failures. NitroPay's guidance for that event is to "perform whatever task is
-// necessary such as re-adjusting your layout", which is what callers use this
-// for. A slow network never trips it, because the image has to fail, not stall.
+// Two signals say "blocked":
+// - `np.blocking`, from NitroPay's own detection (@shared/core/nitroAdsDetect):
+//   an image on s.nitropay.com failed to load three times. NitroPay's guidance
+//   for that event is to "perform whatever task is necessary such as
+//   re-adjusting your layout", which is what callers use this for.
+// - `nitroAds.failed`, from the loader tag's onerror in poe2/index.html: the
+//   ad script itself failed to load. Catches lists that block the script but
+//   let the probe image through.
 //
-// The script loading (`nitroAds.loaded`) always wins over the image test: the
-// pixel can fail ~750ms in while the async script is still on its way, or be
-// caught by a list that lets the script itself through. Once the script has
-// loaded the hook reports unblocked for the rest of the page load, whatever
-// the pixel said.
-const isBlocked = () => window.nitroAds?.loaded !== true && window.npDetect?.blocking === true;
+// The script loading (`nitroAds.loaded`) always wins over both: the probe can
+// fail ~750ms in while the async script is still on its way, or be caught by a
+// list that lets the script itself through. Once the script has loaded the hook
+// reports unblocked for the rest of the page load.
+const isBlocked = () =>
+  window.nitroAds?.loaded !== true &&
+  (window.npDetect?.blocking === true || window.nitroAdsFailed === true);
+
+const EVENTS = ["np.blocking", "nitroAds.failed", "nitroAds.loaded"] as const;
 
 export const useNitroAdsBlocked = (): boolean => {
   const [blocked, setBlocked] = useState(isBlocked);
 
   useEffect(() => {
     const sync = () => setBlocked(isBlocked());
-    // Either event may have fired between the initial render and this effect.
+    // Any of the events may have fired between the initial render and this effect.
     sync();
-    document.addEventListener("np.blocking", sync);
-    document.addEventListener("nitroAds.loaded", sync);
-    return () => {
-      document.removeEventListener("np.blocking", sync);
-      document.removeEventListener("nitroAds.loaded", sync);
-    };
+    EVENTS.forEach((name) => document.addEventListener(name, sync));
+    return () => EVENTS.forEach((name) => document.removeEventListener(name, sync));
   }, []);
 
   return blocked;

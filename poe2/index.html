@@ -2,43 +2,8 @@
 <html lang="en">
 <head>
     <script data-cfasync="false">window.nitroAds=window.nitroAds||{createAd:function(){return new Promise(e=>{window.nitroAds.queue.push(["createAd",arguments,e])})},addUserToken:function(){window.nitroAds.queue.push(["addUserToken",arguments])},queue:[]};</script>
-    <script data-cfasync="false" async src="https://s.nitropay.com/ads-2596.js"></script>
-    <!-- NitroPay's ad-block detection, verbatim from
-         https://nitropay.com/docs/detecting-ad-blocking-users/. Fires the
-         np.blocking event that NitroAd listens for to collapse an unfillable slot. -->
-    <script data-cfasync="false">
-    var npDetect = new (function () {
-        this.blocking = false;
-        var errcnt = 0;
-        function testImg() {
-            var i = new Image();
-            i.onerror = () => {
-                errcnt++;
-                if (errcnt < 3) {
-                    setTimeout(testImg, 250);
-                } else {
-                    npDetect.blocking = true;
-
-                    if (document.dispatchEvent && window.CustomEvent) {
-                        document.dispatchEvent(
-                            new CustomEvent('np.blocking', {
-                                detail: {
-                                    blocking: npDetect.blocking,
-                                },
-                            })
-                        );
-                    }
-                }
-            };
-            i.onload = () => {
-                npDetect.blocking = false;
-            };
-
-            i.src = 'https://s.nitropay.com/1.gif?' + Math.random() + '&adslot=';
-        }
-        testImg();
-    })();
-    </script>
+    <script data-cfasync="false" async src="https://s.nitropay.com/ads-2596.js"
+            onerror="window.nitroAdsFailed=true;document.dispatchEvent(new Event('nitroAds.failed'))"></script>
     <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
             data-id="veiset" data-description="Support me on Buy me a coffee!"
             data-message="" data-color="#FF813F"
