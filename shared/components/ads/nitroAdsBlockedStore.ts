@@ -1,6 +1,6 @@
 // Remembers, per browser, that the ad script was found blocked, so the next
 // page load can skip the slot straight away instead of reserving space and
-// waiting for the signals again. The memory is only trusted for a day; after
+// waiting for the signals again. The memory is only trusted for three hours; after
 // that the visitor is re-checked. A script that does load clears it at once.
 //
 // localStorage can be missing or throw (private mode, blocked storage), so
@@ -9,7 +9,7 @@
 const KEY = "nitroAds.blockedAt";
 
 /** How long a stored verdict is trusted before the visitor is re-checked. */
-export const REVALIDATE_MS = 24 * 60 * 60 * 1000;
+export const REVALIDATE_MS = 3 * 60 * 60 * 1000;
 
 export const rememberBlocked = (now: number = Date.now()): void => {
   try {

@@ -137,13 +137,13 @@ describe("useNitroAdsBlocked", () => {
     expect(localStorage.getItem(STORAGE_KEY)).not.toBeNull();
   });
 
-  it("starts blocked from a verdict stored less than a day ago", () => {
+  it("starts blocked from a verdict stored less than three hours ago", () => {
     rememberBlocked(Date.now() - REVALIDATE_MS + 60_000);
     const {result} = renderHook(() => useNitroAdsBlocked());
     expect(result.current).toBe(true);
   });
 
-  it("re-checks when the stored verdict is a day old", () => {
+  it("re-checks when the stored verdict is three hours old", () => {
     rememberBlocked(Date.now() - REVALIDATE_MS);
     const {result} = renderHook(() => useNitroAdsBlocked());
     expect(result.current).toBe(false);

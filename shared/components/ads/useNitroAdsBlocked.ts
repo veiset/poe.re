@@ -16,7 +16,7 @@ import {forgetBlocked, rememberBlocked, wasBlockedRecently} from "./nitroAdsBloc
 //   and the script never reports loaded. If `nitroAds.loaded` has not
 //   happened LOAD_DEADLINE_MS after navigation started, that is what happened.
 //
-// A verdict from any of them is remembered in localStorage for a day (see
+// A verdict from any of them is remembered in localStorage for three hours (see
 // nitroAdsBlockedStore), so the next page load reports blocked from the first
 // render instead of showing the slot and waiting for the signals again.
 //
