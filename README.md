@@ -142,43 +142,10 @@ the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
 ### Advertising (poe2.re only)
 
-Ads on **poe2.re** are served by NitroPay. Five pieces make that work:
-
-- The loader in `poe2/index.html` (site-specific — do not copy it to poe.re).
-- `shared/components/ads/NitroAd.tsx`, which wraps `nitroAds.createAd`. Mount a
-  placement in the **layout**, not in a page: it is created once and refreshed
-  through `onNavigate` on each route change, which is what NitroPay asks single
-  page apps to do. `poe2/src/components/ads/Poe2AdBanner.tsx` holds the placement id and
-  options exactly as the builder generated them.
-- `shared/components/ads/NitroConsentLinks.tsx`, rendered once in the poe2
-  footer. It asks the ad script to inject the CCPA "Do Not Sell or Share" link
-  and the consent-management link. Both only appear where the relevant law
-  applies, so append `?usp_debug=1` or `?gdpr_debug=1` to see them elsewhere.
-  Because the consent link is looked up by element id, keep it to one instance.
-- The `/ads.txt` redirect to NitroPay's hosted copy is a Cloudflare redirect rule
-  on the poe2.re zone (dashboard, not Terraform); nothing in this repo serves it.
-- Ad-block handling, so blocked visitors do not get an empty band where the ad
-  would be. `shared/core/nitroAdsDetect.ts` is NitroPay's own detection (a probe
-  image on s.nitropay.com, `np.blocking` after three failures), installed from
-  `poe2/src/index.tsx`; the loader tag's `onerror` adds `nitroAds.failed` for
-  lists that block the script but not the probe. On either, `NitroAd` removes
-  its container, which is what NitroPay asks for ("re-adjusting your layout",
-  placements removed rather than hidden). Blockers that answer with stand-ins
-  (an empty script, a 1x1 image) trip neither, so a script that has not
-  reported `nitroAds.loaded` six seconds after navigation counts as blocked
-  too. A one-line notice takes the slot's place, and the verdict is kept in
-  localStorage for a day so the next load skips the slot from the first
-  render. `nitroAds.loaded` wins over all of it and clears the stored verdict,
-  so a visitor whose blocker only catches the probe, who is on a slow
-  connection, or who turned the blocker off since yesterday still gets the
-  slot back once the script arrives. If the script loads but never renders anything into the
-  container, the reserved height is dropped a few seconds after the auction
-  timeout while the container stays for the script to fill later.
-
-The `/privacy` page holds the matching disclosures.
-
-To add another placement, generate it in NitroPay's placement builder and mount
-a second `<NitroAd>` with its id alongside `Poe2AdBanner`.
+Ads on **poe2.re** are served by NitroPay; the code lives in
+`shared/components/ads/`, `shared/core/nitroAds*` and `poe2/index.html`.
+See the [privacy page](https://poe2.re/privacy) for what is collected and by
+whom.
 
 ### Economy storage
 
