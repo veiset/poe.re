@@ -3,7 +3,6 @@ import {useLocation} from "react-router-dom";
 import discordIcon from "@shared/img/discord.svg";
 import coffeeIcon from "@shared/img/bmc-logo.svg";
 import githubIcon from "@shared/img/github-mark-white.png";
-import plausibleIcon from "@shared/img/plausible_logo_sm.png";
 import "@shared/styles/PageLinks.css";
 import {PageLink} from "./PageLink";
 import {getBugReportUrl} from "@shared/core/issueTracker";
@@ -18,7 +17,6 @@ interface PageNavigationProps {
   title: string;
   otherGameLabel: string;
   otherGameUrl: string;
-  statsUrl: string;
   items: NavigationItem[];
 }
 
@@ -31,7 +29,7 @@ const SupportLink = ({href, icon, text, className = ""}: {href: string; icon: st
   </p>
 );
 
-export const PageNavigation = ({title, otherGameLabel, otherGameUrl, statsUrl, items}: PageNavigationProps) => {
+export const PageNavigation = ({title, otherGameLabel, otherGameUrl, items}: PageNavigationProps) => {
   const currentPage = useLocation().pathname;
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -97,7 +95,6 @@ export const PageNavigation = ({title, otherGameLabel, otherGameUrl, statsUrl, i
           <SupportLink href="https://discord.gg/T8BzKnatY6" icon={discordIcon} text="Join us on Discord" className="support-icon-discord"/>
           <SupportLink href={getBugReportUrl()} icon={githubIcon} text="Report issue"/>
           <SupportLink href="https://www.buymeacoffee.com/veiset" icon={coffeeIcon} text="Buy me a coffee" className="support-icon-coffee"/>
-          <SupportLink href={statsUrl} icon={plausibleIcon} text="Website stats"/>
         </div>
       </nav>
     </>

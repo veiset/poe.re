@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {Outlet} from "react-router-dom";
 import {Poe2ProfileContext} from "./Poe2ProfileContext";
 import Poe2PageLinks from "./Poe2PageLinks";
+import Poe2Footer from "./Poe2Footer";
 import {ensureDefaultProfile, selectedProfile} from "../localStorage";
-import CoffeeBanner from "@shared/components/banner/CoffeeBanner";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {Poe2LeagueProvider} from "./Poe2LeagueContext";
 import {FavoritesProvider} from "../FavoritesContext";
@@ -22,7 +22,6 @@ export const Poe2Layout = () => {
     <Poe2ProfileContext.Provider value={{currentProfile, setCurrentProfile}}>
       <FavoritesProvider>
         <Poe2LeagueProvider>
-          <CoffeeBanner/>
           <div className="content-height-wrapper">
             <div className="content-container">
               <div className="content-links">
@@ -38,6 +37,7 @@ export const Poe2Layout = () => {
                 <div className="content-right-gfx"/>
               </div>
             </div>
+            <Poe2Footer/>
           </div>
         </Poe2LeagueProvider>
       </FavoritesProvider>

@@ -140,6 +140,13 @@ The worker writes the filtered PoE1 and PoE2 league lists to `leagues.txt` and
 `poe2-leagues.txt` in the R2 bucket. The frontend reads those files through
 the CDN-backed `VITE_ECONOMY_URL` endpoint.
 
+### Advertising (poe2.re only)
+
+Ads on **poe2.re** are served by NitroPay; the code lives in
+`shared/components/ads/`, `shared/core/nitroAds*` and `poe2/index.html`.
+See the [privacy page](https://poe2.re/privacy) for what is collected and by
+whom.
+
 ### Economy storage
 
 The R2 bucket, `economy.poe.re` custom domain, CORS policy, and CDN cache rule

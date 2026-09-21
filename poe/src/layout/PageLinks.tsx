@@ -35,7 +35,6 @@ const PageLinks = () => (
     title="Path of Regex"
     otherGameLabel="Path of Exile 2 Regex"
     otherGameUrl={`${import.meta.env.VITE_POE2_URL || "https://poe2.re"}/vendor`}
-    statsUrl="https://p.vz.is/poe.re"
     items={items}
   />
 );
