@@ -40,28 +40,17 @@ export const NitroAd = ({id, options, className = ""}: NitroAdProps) => {
 
   useEffect(() => {
     if (blocked) return;
-    let cancelled = false;
 
-    // Deferred a microtask so an effect that React runs and immediately cleans
-    // up (StrictMode in development does this on every mount) never reaches
-    // the ad script; only the run that survives creates the placement.
-    queueMicrotask(() => {
-      if (cancelled) return;
-      // The loader stub in index.html queues the call until the real script
-      // arrives, so this is safe to run before the script has loaded. It can
-      // still return the placement synchronously once it has, or throw
-      // synchronously; the Promise constructor routes a throw to the catch
-      // below, where Promise.resolve would let it escape.
-      new Promise<CreatedAd>((resolve) => resolve(window.nitroAds?.createAd?.(id, options))).catch((err: unknown) => {
-        // An unknown or disabled placement id, or a blocked request once the
-        // real script is in charge. Nothing to do from here.
-        console.warn(`NitroAd: could not create placement "${id}"`, err);
-      });
+    // The loader stub in index.html queues the call until the real script
+    // arrives, so this is safe to run before the script has loaded. It can
+    // still return the placement synchronously once it has, or throw
+    // synchronously; the Promise constructor routes a throw to the catch
+    // below, where Promise.resolve would let it escape the effect.
+    new Promise<CreatedAd>((resolve) => resolve(window.nitroAds?.createAd?.(id, options))).catch((err: unknown) => {
+      // An unknown or disabled placement id, or a blocked request once the
+      // real script is in charge. Nothing to do from here.
+      console.warn(`NitroAd: could not create placement "${id}"`, err);
     });
-
-    return () => {
-      cancelled = true;
-    };
     // `options` is deliberately not a dependency: it is a module constant at
     // every call site, and re-creating the placement on each render would
     // fight the ad script.
