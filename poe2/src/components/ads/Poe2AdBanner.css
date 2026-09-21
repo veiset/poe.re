@@ -1,9 +1,4 @@
+/* Sits directly under the page header, which brings its own bottom padding. */
 .poe2-ad-banner {
-    margin: 10px 0 4px;
-}
-
-@media (max-width: 700px) {
-    .poe2-ad-banner {
-        margin: 6px 0 2px;
-    }
+    margin: 0 0 8px;
 }

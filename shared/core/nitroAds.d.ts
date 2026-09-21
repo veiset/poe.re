@@ -19,7 +19,11 @@ export interface NitroAdOptions {
 }
 
 export interface NitroAdInstance {
-  /** Clears and refreshes the placement; call it on every SPA route change. */
+  /**
+   * Clears and refreshes the placement in place. Not used here: NitroPay's
+   * SPA guidance prefers tearing the element down and creating a new
+   * placement per navigation, which NitroAd does by being remounted.
+   */
   onNavigate: (href?: string) => void;
 }
 
