@@ -148,6 +148,11 @@ export function Tablet() {
                       ...settings, type: {...settings.type, overseer: b}
                     })}
           />
+          <Checkbox label="Expedition" value={settings.type.expedition}
+                    onChange={(b) => setSettings({
+                      ...settings, type: {...settings.type, expedition: b}
+                    })}
+          />
         </FilterCard>
         <FilterCard title="Modifier">
           <Checkbox label="Min. uses remaining" value={settings.modifier.usesRemaining}

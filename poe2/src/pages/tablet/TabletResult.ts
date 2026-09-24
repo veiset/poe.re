@@ -56,14 +56,16 @@ function generateTypeRegex(
       settings.breach &&
       settings.abyss &&
       settings.temple &&
-      settings.overseer) ||
+      settings.overseer &&
+      settings.expedition) ||
     (!settings.irradiated &&
       !settings.ritual &&
       !settings.delirium &&
       !settings.breach &&
       !settings.abyss &&
       !settings.temple &&
-      !settings.overseer)
+      !settings.overseer &&
+      !settings.expedition)
   ) {
     return null;
   }
@@ -75,6 +77,7 @@ function generateTypeRegex(
   const abyssRegex = settings.abyss ? "byss" : "";
   const templeRegex = settings.temple ? "empl" : "";
   const overseerRegex = settings.overseer ? "eer" : "";
+  const expeditionRegex = settings.expedition ? "xped" : "";
 
   const result = [
     irradiatedRegex,
@@ -84,6 +87,7 @@ function generateTypeRegex(
     abyssRegex,
     templeRegex,
     overseerRegex,
+    expeditionRegex,
   ]
     .filter((e) => e.length > 0)
     .join("|");
