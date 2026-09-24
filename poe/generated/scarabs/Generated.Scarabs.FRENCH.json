@@ -1,7 +1,7 @@
 {
     "Scarabée cornu de l'Éveil": {
         "name": "Scarabée cornu de l'Éveil",
-        "regex": "éve",
+        "regex": "voul",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjQiLCJzY2FsZSI6MX1d/c939905663/SuperScarab4.png",
         "flavourText": "L'Atlas peut être tout ce que vous voulez... et n'importe quoi.",
         "description": "Les Zones de Palier 16+ contiennent les Boss d'une Invitation de la Prodige choisie au hasard"
@@ -15,7 +15,7 @@
     },
     "Scarabée cornu de la Tradition": {
         "name": "Scarabée cornu de la Tradition",
-        "regex": "ospé",
+        "regex": "trad",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjUiLCJzY2FsZSI6MX1d/cbdd57fa7e/SuperScarab5.png",
         "flavourText": "Pour le plus fort, que la prospérité soit tienne.",
         "description": "Tous les objets cédés par les Monstres rares et uniques de la Zone|sont transformés par un Modificateur de Récompense"
@@ -36,7 +36,7 @@
     },
     "Scarabée cornu du Pandémonium": {
         "name": "Scarabée cornu du Pandémonium",
-        "regex": "ercé",
+        "regex": "ndem",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
         "flavourText": "Les rêves transpercés saignent dans l'esprit.",
         "description": "Les Groupes de monstres de la Zone ont 15% de chances d'être remplacés par un Boss de l'Atlas aléatoire|Les Modificateurs qui s'appliquent au Boss final de la Carte s'appliquent également à ces Boss de l'Atlas"
@@ -50,14 +50,14 @@
     },
     "Scarabée d'Abysse": {
         "name": "Scarabée d'Abysse",
-        "regex": "îner",
+        "regex": "ainer",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
         "flavourText": "Ils cherchent sans cesse à entraîner de nouvelles âmes dans les ténèbres.",
         "description": "La Zone contient un [ContainsAbyss|Abysse] supplémentaire"
     },
     "Scarabée d'Abysse de la Descente": {
         "name": "Scarabée d'Abysse de la Descente",
-        "regex": "ej",
+        "regex": "rej",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png",
         "flavourText": "Ils vous invitent à les rencontres ; à les rejoindre.",
         "description": "La Zone contient des [AbyssalDepths|Profondeurs abyssales]"
@@ -92,21 +92,21 @@
     },
     "Scarabée d'Ailleurs de l'Hémophilie": {
         "name": "Scarabée d'Ailleurs de l'Hémophilie",
-        "regex": "'hé",
+        "regex": "mop",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
         "flavourText": "La réalité elle-même commence à saigner.",
         "description": "Les Portails d'Ailleurs dans la Zone ont 50% d'Augmentation de Rayon d'Assimilation|Dans la Zone, les personnages Tuant des Monstres rares d'Ailleurs ont 30% de chances d'obtenir leurs Modificateurs pendant 20 secondes"
     },
     "Scarabée d'Ailleurs de l'Invasion": {
         "name": "Scarabée d'Ailleurs de l'Invasion",
-        "regex": "'he",
+        "regex": "vue",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJleW9uZCIsInNjYWxlIjoxfV0/a1d0b3e27b/Tier4ScarabBeyond.png",
         "flavourText": "L'heure prévue est presque arrivée.",
         "description": "Les Monstres rares et uniques que vous tuez dans la Zone créent de 8 à 12 Portails d'Ailleurs"
     },
     "Scarabée d'Ailleurs de la Résurgence": {
         "name": "Scarabée d'Ailleurs de la Résurgence",
-        "regex": "ésur",
+        "regex": "t faim",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
         "flavourText": "Ils ont faim.",
         "description": "Les Boss d'Ailleurs apparaissant dans la Zone sont accompagnés par les Boss d'Ailleurs des autres Factions|Les Boss d'Ailleurs de la Zone ont 20% d'Augmentation du nombre d'Objets monétaires impurs cédés|Les Portails d'Ailleurs de la Zone ont 30% d'Augmentation de chances de faire apparaître un Boss unique"
@@ -141,7 +141,7 @@
     },
     "Scarabée d'Essence": {
         "name": "Scarabée d'Essence",
-        "regex": "sû",
+        "regex": "sur,",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/4c99af0610/LesserScarabEssence.png",
         "flavourText": "C'est parfaitement sûr, les créatures piégées à l'intérieur ne peuvent en aucun cas être encore vivantes.",
         "description": "La Zone contient 3 Monstres emprisonnés supplémentaires"
@@ -169,7 +169,7 @@
     },
     "Scarabée d'Essence de la Stabilité": {
         "name": "Scarabée d'Essence de la Stabilité",
-        "regex": "adé",
+        "regex": "deq",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXNzZW5jZSIsInNjYWxlIjoxfV0/28e74041a5/GreaterScarabEssence.png",
         "flavourText": "Avec les outils adéquats et une main adroite, la manipulation|des cristaux peut devenir prévisible.",
         "description": "Corrompre une Essence dans la Zone ne peut résulter qu'en|une amélioration ou une transformation des Essences"
@@ -204,7 +204,7 @@
     },
     "Scarabée d'Expédition du Cherche-rune": {
         "name": "Scarabée d'Expédition du Cherche-rune",
-        "regex": "ésir",
+        "regex": "esir",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/a751f91a8e/NormalScarabExpedition.png",
         "flavourText": "Ce qui est venu des étoiles désire y retourner.",
         "description": "Les Rencontres d'Expédition de la Zone ont 100% d'Augmentation|du nombre de Marqueurs de Monstres Runiques"
@@ -253,14 +253,14 @@
     },
     "Scarabée d'Influence des Hordes": {
         "name": "Scarabée d'Influence des Hordes",
-        "regex": "idée",
+        "regex": "idee",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRWxkZXIiLCJzY2FsZSI6MX1d/660528eb40/GreaterScarabElder.png",
         "flavourText": "Les idées ne peuvent être contenues.",
         "description": "Les Groupes de monstres Influencés dans la Zone ont 40% d'Augmentation de la Taille des Groupes de monstres"
     },
     "Scarabée d'Influence du Façonneur": {
         "name": "Scarabée d'Influence du Façonneur",
-        "regex": "d’é",
+        "regex": "d’e",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTaGFwZXIiLCJzY2FsZSI6MX1d/caf0ac9307/LesserScarabShaper.png",
         "flavourText": "Une mer d’étoiles attend ceux qui osent imaginer.",
         "description": "Ajoute l'Influence du Façonneur à la Zone"
@@ -288,14 +288,14 @@
     },
     "Scarabée d'Ultimatum du Duel": {
         "name": "Scarabée d'Ultimatum du Duel",
-        "regex": "dén",
+        "regex": "icto",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVWx0aW1hdHVtIiwic2NhbGUiOjF9XQ/be3b513bfe/GreaterScarabUltimatum.png",
         "flavourText": "La victoire est dénuée de sens, l'échec sera tourné en ridicule.",
         "description": "Les Rencontres d'Ultimatum de la Zone mèneront toujours à un Boss unique, si possible"
     },
     "Scarabée d'Ultimatum du Pot-de-vin": {
         "name": "Scarabée d'Ultimatum du Pot-de-vin",
-        "regex": "ocè",
+        "regex": "oce",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
         "flavourText": "Un procès est uniquement aussi incorruptible que son juge.",
         "description": "Les Monstres d'Ultimatum ont 150% d'Augmentation de l'Expérience qu'ils octroient|Les Rencontres d'Ultimatum octroient des récompenses comme si vous aviez complété 2 Rounds de plus"
@@ -309,7 +309,7 @@
     },
     "Scarabée de Brèche de l'Instabilité": {
         "name": "Scarabée de Brèche de l'Instabilité",
-        "regex": "éfo",
+        "regex": "tord",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
         "flavourText": "La réalité se tord et se déforme.",
         "description": "La zone contient 2 Brèches instables supplémentaires"
@@ -337,7 +337,7 @@
     },
     "Scarabée de Cartographie de l'Escalade": {
         "name": "Scarabée de Cartographie de l'Escalade",
-        "regex": "spè",
+        "regex": "l'op",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/e7d11bcc5b/LesserScarabMaps.png",
         "flavourText": "L'opportunité prospère là où les rêves sont les plus périlleux.",
         "description": "10% d'Augmentation de Cartes trouvées dans la Zone par modificateur de Carte affectant la zone"
@@ -365,7 +365,7 @@
     },
     "Scarabée de Divination de l'Abondance": {
         "name": "Scarabée de Divination de l'Abondance",
-        "regex": "réo",
+        "regex": "fut",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
         "flavourText": "Avec chaque action, nous créons un millier de futurs.",
         "description": "La Zone contient 6 à 10 Groupes de monstres magiques Touchés par la Divination supplémentaires qui|ont 1000% d'Augmentation de chances de céder des Cartes divinatoires"
@@ -379,7 +379,7 @@
     },
     "Scarabée de Divination du Cloître": {
         "name": "Scarabée de Divination du Cloître",
-        "regex": "loî",
+        "regex": "ladi",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
         "flavourText": "Aucune maladie ne peut être contenue indéfiniment.",
         "description": "La Zone contient 8 à 12 groupes de Fidèles de Doedre|Les Fidèles de Doedre ont 1% d'Augmentation de chances de céder une Bonne pioche"
@@ -470,14 +470,14 @@
     },
     "Scarabée de Sulfite": {
         "name": "Scarabée de Sulfite",
-        "regex": "é…",
+        "regex": "te…",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
         "flavourText": "Enfoncez-vous dans les ténèbres en quête de la vérité…",
         "description": "La Zone contient Niko"
     },
     "Scarabée de Sulfite des Émanations": {
         "name": "Scarabée de Sulfite des Émanations",
-        "regex": "égo",
+        "regex": "uli",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
         "flavourText": "Lorsque la contrée elle-même est malade, même le sol pourrit et dégouline.",
         "description": "Le Sulfite trouvé dans vos Cartes libère des Fumées enrageantes|Les Monstres affectés par les Fumées enrageantes ont 50% d'Augmentation de Quantité d'objets|Dans vos Cartes, le Sulfite est gardé par des Monstres provenant de la Mine d'Azurite"
@@ -526,7 +526,7 @@
     },
     "Scarabée de l'Infestation de la Floraison": {
         "name": "Scarabée de l'Infestation de la Floraison",
-        "regex": "siè",
+        "regex": "flo",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
         "flavourText": "Une fois par siècle, l'Infestation resurgit...",
         "description": "Les Rencontres avec l'Infestation de la Zone ont jusqu'à 3 Boss uniques supplémentaires|Dans les Rencontres avec l'Infestation, les ennemis uniques ont 100% d'Augmentation de Vie|Les Cartes infestées de palier 14+ trouvées dans la Zone deviennent des Cartes ravagées par l'Infesation à la place"
@@ -568,14 +568,14 @@
     },
     "Scarabée des Adversaires": {
         "name": "Scarabée des Adversaires",
-        "regex": "tié",
+        "regex": "adv",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/ab24a34cd1/AltLesserScarabMisc.png",
         "flavourText": "Ils se dressent contre vous avec une inimitié équivalente.",
         "description": "La Zone contient 4 Groupes de monstres supplémentaires et les Monstres rares de ceux-ci sont reflétés"
     },
     "Scarabée des Flammeroles": {
         "name": "Scarabée des Flammeroles",
-        "regex": "necte",
+        "regex": "t  c",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzEiLCJzY2FsZSI6MX1d/303001a475/GreaterScarabMisc1.png",
         "flavourText": "Le Draíocht  connecte tout ce qui vit.",
         "description": "Les Monstres de la Zone ont une chance d'être améliorés par 2 000 Flammeroles de la Sylve"
@@ -589,28 +589,28 @@
     },
     "Scarabée du Bestiaire": {
         "name": "Scarabée du Bestiaire",
-        "regex": "épo",
+        "regex": "epon",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
         "flavourText": "Le Maître des bêtes répond à l'appel.",
         "description": "La Zone contient Einhar"
     },
     "Scarabée du Bestiaire de la Duplication": {
         "name": "Scarabée du Bestiaire de la Duplication",
-        "regex": "é ",
+        "regex": " »",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
         "flavourText": "« Qu'est-ce qui est encore mieux qu'une bête capturée, Exilé ? »",
         "description": "Crée une copie des Bêtes capturées dans la Zone"
     },
     "Scarabée du Bestiaire du Troupeau": {
         "name": "Scarabée du Bestiaire du Troupeau",
-        "regex": "êts",
+        "regex": "ibre",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
         "flavourText": "Les Premiers couraient, aussi libres qu'effrénés, dans les forêts d'antan.",
         "description": "La Zone contient 5 Bêtes rouges supplémentaires si elle contient Einhar"
     },
     "Scarabée du Bosquet": {
         "name": "Scarabée du Bosquet",
-        "regex": "e…",
+        "regex": "d’o",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
         "flavourText": "Des routes dissimulées mènent à des vallons d’ombre et de lumière…",
         "description": "La Zone contient le Bosquet sacré"
@@ -652,14 +652,14 @@
     },
     "Scarabée du Délire de la Névrose": {
         "name": "Scarabée du Délire de la Névrose",
-        "regex": "évr",
+        "regex": "larg",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
         "flavourText": "De larges rictus luisent dans le noir.",
         "description": "Les Rencontres du Délire de la Zone contiennent tous les Boss uniques du Délire|Le compte des Types de Récompenses du Délire augmente de 1 après avoir vaincu un Boss du Délire Unique|Peut uniquement être utilisé avec des Cartes de palier 11+"
     },
     "Scarabée du Délire de la Paranoïa": {
         "name": "Scarabée du Délire de la Paranoïa",
-        "regex": "ï",
+        "regex": "ano",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/e6730494ae/GreaterScarabDelirium.png",
         "flavourText": "Si ça a l'air trop beau pour être vrai...",
         "description": "Les Rencontres du Délire de la Zone génèrent 2 types de récompenses supplémentaires"
@@ -771,7 +771,7 @@
     },
     "Scarabée titanesque des Trésors": {
         "name": "Scarabée titanesque des Trésors",
-        "regex": "ièg",
+        "regex": "n pi",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
         "flavourText": "L'avidité est un piège de l'esprit.",
         "description": "Les Monstres uniques de la Zone ont une récompense supplémentaire|Les Monstres uniques de la Zone ont 30% d'Augmentation de Robustesse"

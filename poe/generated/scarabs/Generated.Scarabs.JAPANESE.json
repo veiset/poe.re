@@ -169,7 +169,7 @@
     },
     "ブライトスカラベ": {
         "name": "ブライトスカラベ",
-        "regex": "蔓が",
+        "regex": "蔓か",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCbGlnaHQiLCJzY2FsZSI6MX1d/401222e4f4/LesserScarabBlight.png",
         "flavourText": "蔓が侵食し、成長し続ける……",
         "description": "エリアにブライトエンカウンターが出現する"
@@ -183,7 +183,7 @@
     },
     "ベスティアリースカラベ": {
         "name": "ベスティアリースカラベ",
-        "regex": "が応",
+        "regex": "か応",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
         "flavourText": "ビーストマスターが応える。",
         "description": "エリアにアイナーが出現する"
@@ -211,7 +211,7 @@
     },
     "ヴェリシウム粉末のエクスペディションスカラベ": {
         "name": "ヴェリシウム粉末のエクスペディションスカラベ",
-        "regex": "ひ",
+        "regex": "きち",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/1bf78dd20a/GreaterScarabExpedition.png",
         "flavourText": "きちんと精製したものをひとつまみ、これが一番重要なのだ。",
         "description": "エリアのエクスペディションエンカウンターの爆発物の数が50%増加する|爆発物の半径が80%増加する"
@@ -295,7 +295,7 @@
     },
     "共鳴するカスケードのブリーチスカラベ": {
         "name": "共鳴するカスケードのブリーチスカラベ",
-        "regex": "傷が",
+        "regex": "傷か",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/d6fe5cdce6/AltTier4ScarabBreach.png",
         "flavourText": "傷が増えるたび、現実が弱まる。",
         "description": "エリアの不安定なブリーチは既に開いた不安定なブリーチごとに10%速くなる|エリアの不安定なブリーチのモンスターは既に開いた不安定なブリーチごとに難易度が上がり報酬がよくなる"
@@ -491,7 +491,7 @@
     },
     "憑依のトーメントスカラベ": {
         "name": "憑依のトーメントスカラベ",
-        "regex": "が本",
+        "regex": "か本",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlRvcm1lbnQiLCJzY2FsZSI6MX1d/5b3bed9d3d/Tier4ScarabTorment.png",
         "flavourText": "強き者が本当の意味で独りであることはない。",
         "description": "エリアのレアモンスターは4分の1の確率で最大3体の拷問された幽霊に憑依されている"
@@ -519,7 +519,7 @@
     },
     "死体のリチュアルスカラベ": {
         "name": "死体のリチュアルスカラベ",
-        "regex": "ただ",
+        "regex": "たた",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlJpdHVhbCIsInNjYWxlIjoxfV0/323f689e68/Tier4ScarabRitual.png",
         "flavourText": "ただの人形となった彼らは再びの生を渇望する。",
         "description": "エリアのリチュアルにレアのアイテム化された死体のモンスターが追加で1体出現する"
@@ -666,7 +666,7 @@
     },
     "血統の角スカラベ": {
         "name": "血統の角スカラベ",
-        "regex": "が生",
+        "regex": "か生",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjEiLCJzY2FsZSI6MX1d/acc1b258a3/SuperScarab1.png",
         "flavourText": "最も強き者だけが生き残る。生き残った者だけが存続する。",
         "description": "エリアのマジックモンスターが150%増加する|エリアのマジックモンスターはモッドを追加で1個持つ"
@@ -694,14 +694,14 @@
     },
     "豊作のハーベストスカラベ": {
         "name": "豊作のハーベストスカラベ",
-        "regex": "木が",
+        "regex": "木か",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
         "flavourText": "木が高いほど、果実はうまくなる。",
         "description": "エリアに聖なる木立が含まれる場合に可能であれば各タイプのティア4のシードが最大で追加で1個出現する"
     },
     "豊富なリチュアルスカラベ": {
         "name": "豊富なリチュアルスカラベ",
-        "regex": "奴が",
+        "regex": "奴か",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiUml0dWFsIiwic2NhbGUiOjF9XQ/a990c91de5/GreaterScarabRitual.png",
         "flavourText": "奴がどんどんと近づいてくる……",
         "description": "エリアのリチュアルが与える恩寵の数が100%増加する"
