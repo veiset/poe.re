@@ -1,16 +1,19 @@
 import * as fs from 'fs';
 import * as path from 'path';
 import {fileURLToPath} from 'node:url';
+import type {MapOption, RegexResult, Token} from '../poe/src/types/generated/mapmods/index';
+import type {TabletOption} from '../poe2/src/types/generated/tablet/index';
+import type {WaystoneOption} from '../poe2/src/types/generated/waystone/index';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const STATS_API_URL = 'https://www.pathofexile.com/api/trade/data/stats';
 const STATS_2_API_URL = 'https://www.pathofexile.com/api/trade2/data/stats';
-const MAP_MODS_FILE = path.join(__dirname, '../poe/src/generated/mapmods/Generated.MapModsV3.ENGLISH.ts');
+const MAP_MODS_FILE = path.join(__dirname, '../poe/generated/mapmods/Generated.Map.ENGLISH.json');
 const OUTPUT_FILE = path.join(__dirname, '../poe/src/generated/mapmods/trade/TradeStatIdMatching.json');
 
-const WAYSTONE_FILE = path.join(__dirname, '../poe2/public/generated/Generated.Waystone.min.json');
-const TABLET_FILE = path.join(__dirname, '../poe2/public/generated/Generated.Tablet.min.json');
+const WAYSTONE_FILE = path.join(__dirname, '../poe2/public/generated/waystone/Generated.Waystone.min.json');
+const TABLET_FILE = path.join(__dirname, '../poe2/public/generated/tablet/Generated.Tablet.min.json');
 const POE2_OUTPUT_DIR = path.join(__dirname, '../poe2/public/generated/trade');
 const WAYSTONE_OUTPUT = path.join(POE2_OUTPUT_DIR, 'WaystoneTradeStatIds.json');
 const TABLET_OUTPUT = path.join(POE2_OUTPUT_DIR, 'TabletTradeStatIds.json');
@@ -31,11 +34,8 @@ interface TradeStatsResponse {
   result: TradeStatGroup[];
 }
 
-interface MapModToken {
-  id: number;
-  generalizedText: string;
-  rawText: string;
-}
+type MapModToken = Token<MapOption>;
+type Poe2Token = Token<TabletOption> | Token<WaystoneOption>;
 
 type MatchMode = 'exact' | 'fuzzy' | 'aggressive';
 
@@ -66,9 +66,13 @@ function normalizePoe2(text: string, aggressive = false): string {
     .replace(/\ba additional\b/g, 'NUM additional');
 
   if (aggressive) {
+    // Trade texts are often the singular "1 X" form of a "(1-2) Xs" mod, or drop the count
+    // entirely ("The first unearthed Runic Monster will be a Rare Monster"). Ignore counts and articles.
     out = out
       .replace(/\bin map\b/g, ' ')
-      .replace(/\bexpedition\b/g, ' ');
+      .replace(/\bexpedition\b/g, ' ')
+      .replace(/\bNUM\b/g, ' ')
+      .replace(/\b(a|an|the)\b/g, ' ');
   }
 
   return out
@@ -77,8 +81,12 @@ function normalizePoe2(text: string, aggressive = false): string {
     .trim();
 }
 
+// Reduce common English plurals so "Strongboxes"/"Bosses"/"Sentries" compare equal to their singulars.
 function depluralize(text: string): string {
-  return text.replace(/([^s])s(?=\s|$)/g, '$1');
+  return text
+    .replace(/ies(?=\s|$)/g, 'y')
+    .replace(/(x|ch|sh|ss)es(?=\s|$)/g, '$1')
+    .replace(/([^s])s(?=\s|$)/g, '$1');
 }
 
 function normalizeText(text: string): string {
@@ -196,30 +204,15 @@ async function fetchTradeStats(apiUrl: string, userAgent: string): Promise<Trade
   return explicitGroup.entries;
 }
 
-function parseMapModsFile(content: string): MapModToken[] {
-  const tokenRegex = /\{id:\s*(-?\d+),\s*regex:\s*"[^"]*",\s*rawText:\s*"([^"]*)",\s*generalizedText:\s*"([^"]*)"/g;
-
-  const tokens: MapModToken[] = [];
-  let match;
-
-  while ((match = tokenRegex.exec(content)) !== null) {
-    tokens.push({
-      id: parseInt(match[1], 10),
-      rawText: match[2],
-      generalizedText: match[3],
-    });
+function loadRegexResult<T>(file: string): RegexResult<T> {
+  const data: unknown = JSON.parse(fs.readFileSync(file, 'utf-8'));
+  if (!data || typeof data !== 'object' || !Array.isArray((data as RegexResult<T>).tokens)) {
+    throw new Error(`${file} does not look like a RegexResult (missing "tokens" array)`);
   }
-
-  console.log(`Parsed ${tokens.length} tokens from map mods file`);
-  return tokens;
+  return data as RegexResult<T>;
 }
 
-function loadPoe2Tokens(file: string) {
-  const data = JSON.parse(fs.readFileSync(file, 'utf-8'));
-  return data.tokens;
-}
-
-function modClauses(token: any): string[] {
+function modClauses(token: Token<unknown>): string[] {
   const source = token.rawText || token.generalizedText || '';
   return source
     .split(/[\n|]/)
@@ -227,7 +220,7 @@ function modClauses(token: any): string[] {
     .filter(Boolean);
 }
 
-function findStatForPoe2Token(token: any, tradeStats: TradeStatEntry[]): TradeStatEntry | null {
+function findStatForPoe2Token(token: Poe2Token, tradeStats: TradeStatEntry[]): TradeStatEntry | null {
   const clauses = modClauses(token);
 
   for (const mode of ['exact', 'fuzzy', 'aggressive'] as MatchMode[]) {
@@ -242,9 +235,9 @@ function findStatForPoe2Token(token: any, tradeStats: TradeStatEntry[]): TradeSt
   return null;
 }
 
-function buildPoe2Mapping(label: string, tokens: any[], tradeStats: TradeStatEntry[]) {
+function buildPoe2Mapping(label: string, tokens: Poe2Token[], tradeStats: TradeStatEntry[]) {
   const mapping: Record<string, string> = {};
-  const unmatched: any[] = [];
+  const unmatched: Poe2Token[] = [];
 
   for (const token of tokens) {
     const found = findStatForPoe2Token(token, tradeStats);
@@ -268,8 +261,8 @@ function buildPoe2Mapping(label: string, tokens: any[], tradeStats: TradeStatEnt
 
 async function runPoe1(tradeStats: TradeStatEntry[]) {
   console.log(`Reading ${MAP_MODS_FILE}...`);
-  const fileContent = fs.readFileSync(MAP_MODS_FILE, 'utf-8');
-  const tokens = parseMapModsFile(fileContent);
+  const tokens: MapModToken[] = loadRegexResult<MapOption>(MAP_MODS_FILE).tokens;
+  console.log(`Parsed ${tokens.length} tokens from map mods file`);
 
   console.log('\nMatching tokens to trade stats...\n');
 
@@ -325,9 +318,9 @@ async function runPoe2(tradeStats: TradeStatEntry[]) {
     fs.mkdirSync(POE2_OUTPUT_DIR, { recursive: true });
   }
 
-  const waystoneTokens = loadPoe2Tokens(WAYSTONE_FILE);
+  const waystoneTokens = loadRegexResult<WaystoneOption>(WAYSTONE_FILE).tokens;
   console.log(`Parsed ${waystoneTokens.length} waystone tokens`);
-  const tabletTokens = loadPoe2Tokens(TABLET_FILE);
+  const tabletTokens = loadRegexResult<TabletOption>(TABLET_FILE).tokens;
   console.log(`Parsed ${tabletTokens.length} tablet tokens`);
 
   writeJson(WAYSTONE_OUTPUT, buildPoe2Mapping('waystone', waystoneTokens, tradeStats));
