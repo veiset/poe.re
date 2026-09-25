@@ -43,7 +43,7 @@
     },
     "Калгууранский скарабей охраняемых богатств": {
         "name": "Калгууранский скарабей охраняемых богатств",
-        "regex": "ёг",
+        "regex": "гк",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
         "flavourText": "Раскопать – это лёгкая часть.",
         "description": "Охраняющие месторождения руды монстры в области как минимум волшебные"
@@ -57,7 +57,7 @@
     },
     "Ритуальный скарабей избранности": {
         "name": "Ритуальный скарабей избранности",
-        "regex": "рай",
+        "regex": "збр",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/08f82dab28/LesserScarabRitual.png",
         "flavourText": "Сам выбирай, какие заповеди тебе больше по душе...",
         "description": "Обновление наград на алтарях Ритуала в области дважды не будет требовать дани|Алтари Ритуала в области позволяют обновить дары ещё 2 раза"
@@ -92,7 +92,7 @@
     },
     "Рогатый скарабей Пандемониума": {
         "name": "Рогатый скарабей Пандемониума",
-        "regex": "зё",
+        "regex": "нзе",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
         "flavourText": "Пронзённые мечты просачиваются в разум.",
         "description": "Группы монстров в области с 15% шансом могут быть заменены случайным боссом Атласа|Свойства, влияющие на финального босса карты, также влияют и на этих боссов Атласа"
@@ -134,7 +134,7 @@
     },
     "Скарабей Анархии": {
         "name": "Скарабей Анархии",
-        "regex": "ивай",
+        "regex": "иваи",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/73d1ee9b23/LesserScarabAnarchy.png",
         "flavourText": "Правило Рэкласта – убивай или будешь убит.",
         "description": "В области можно встретить 5 дополнительных бродячих изгнанников"
@@ -204,7 +204,7 @@
     },
     "Скарабей Бестиария стаи": {
         "name": "Скарабей Бестиария стаи",
-        "regex": "яй",
+        "regex": "яи",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
         "flavourText": "Первые хозяйничали в старых лесах как хотели.",
         "description": "Если в области можно встретить Эйнара, в ней можно встретить 5 дополнительных красных зверей"
@@ -260,7 +260,7 @@
     },
     "Скарабей Господства ужасов": {
         "name": "Скарабей Господства ужасов",
-        "regex": "неё",
+        "regex": "жас",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRvbWluYXRpb24iLCJzY2FsZSI6MX1d/0d55e72414/Tier4ScarabDomination.png",
         "flavourText": "Какой бы ни была награда, бейся за неё.",
         "description": "Алтари в области охраняются боссом Атласа|Свойства, влияющие на финального босса карты, также влияют на этих боссов Атласа"
@@ -281,7 +281,7 @@
     },
     "Скарабей Делириума галлюцинаций": {
         "name": "Скарабей Делириума галлюцинаций",
-        "regex": "чём",
+        "regex": "цин",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
         "flavourText": "О чём это ты?|Атлас всегда таким был.",
         "description": "Найденные в области карты содержат слои Делириума"
@@ -358,7 +358,7 @@
     },
     "Скарабей Засады содержания": {
         "name": "Скарабей Засады содержания",
-        "regex": "иши",
+        "regex": "тиши",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/da665a65ee/Tier4ScarabStrongboxes.png",
         "flavourText": "Тишина скрывает притаившийся рок.",
         "description": "Область содержит множество дополнительных ларцов|Обитатели области затаились в засаде"
@@ -463,7 +463,7 @@
     },
     "Скарабей Предательства подкреплений": {
         "name": "Скарабей Предательства подкреплений",
-        "regex": "ёв",
+        "regex": "трм",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmV0cmF5YWwiLCJzY2FsZSI6MX1d/7dd831f857/GreaterScarabBetrayal.png",
         "flavourText": "Манёвр и контрманёвр.",
         "description": "Членов Бессмертного синдиката в области с 50% шансом будет сопровождать подкрепление"
@@ -477,14 +477,14 @@
     },
     "Скарабей Разлома нестабильности": {
         "name": "Скарабей Разлома нестабильности",
-        "regex": "нёт",
+        "regex": "искр",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
         "flavourText": "Реальность искривляется и гнётся.",
         "description": "В области можно встретить 2 дополнительных нестабильных Разлома"
     },
     "Скарабей Разлома разъярённого роя": {
         "name": "Скарабей Разлома разъярённого роя",
-        "regex": "ярё",
+        "regex": "яре",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/2e4da41035/Tier4ScarabBreach.png",
         "flavourText": "Их владения продолжают расти.",
         "description": "Умения Эйлит в области разъяряют улей, повышая сложность и награду последующих волн"
@@ -526,7 +526,7 @@
     },
     "Скарабей Скверны цветения": {
         "name": "Скарабей Скверны цветения",
-        "regex": "плё",
+        "regex": "кив",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
         "flavourText": "Раз в столетие Скверна выплёскивается наружу...",
         "description": "В схватках со Скверной в области можно встретить до трёх дополнительных уникальных боссов|100% увеличение здоровья уникальных боссов в схватке со Скверной|Найденные в области заражённые карты 14+ уровня выпадают в виде разорённых Скверной карт"
@@ -680,7 +680,7 @@
     },
     "Скарабей левши": {
         "name": "Скарабей левши",
-        "regex": "рёл",
+        "regex": "евш",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzIiLCJzY2FsZSI6MX1d/6f752909bb/GreaterScarabMisc2.png",
         "flavourText": "Подбрось монету – желаешь, чтоб выпал орёл?",
         "description": "100% усиление эффекта свойств-префиксов области|свойства-суффиксы области не имеют эффекта"
@@ -743,7 +743,7 @@
     },
     "Сульфитовый скарабей": {
         "name": "Сульфитовый скарабей",
-        "regex": "кай",
+        "regex": "каи",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
         "flavourText": "Спускайся в темноту в поисках истины...",
         "description": "В области можно встретить Нико"
@@ -771,7 +771,7 @@
     },
     "Тератский скарабей известности": {
         "name": "Тератский скарабей известности",
-        "regex": "идё",
+        "regex": "вея",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
         "flavourText": "Кто это идёт, овеянный легендой?",
         "description": "Всё носимое наёмниками снаряжение в этой области уникальное"

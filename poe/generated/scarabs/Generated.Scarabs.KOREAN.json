@@ -1,805 +1,805 @@
 {
     "각성의 뿔 달린 갑충석": {
         "name": "각성의 뿔 달린 갑충석",
-        "regex": "각성",
+        "regex": "ᅳ대ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjQiLCJzY2FsZSI6MX1d/c939905663/SuperScarab4.png",
         "flavourText": "아틀라스는 그대가 바라는 무엇이든 될 수 있다.",
         "description": "16등급 이상 지역에 무작위 메이븐 초대의 보스 등장"
     },
     "개화의 역병 갑충석": {
         "name": "개화의 역병 갑충석",
-        "regex": "년",
+        "regex": "\\d+ᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/7ecd3dcebc/Tier4ScarabBlight.png",
         "flavourText": "100년에 한 번씩 역병이 쏟아져 나온다...",
         "description": "지역 내 역병 인카운터에서 고유 보스 최대 3마리 추가 등장|역병 인카운터 내 고유 적의 생명력 100% 증가|지역에서 발견하는 14등급 이상의 역병 걸린 지도가 역병에 유린당한 지도로 등장"
     },
     "거대한 갑충석": {
         "name": "거대한 갑충석",
-        "regex": "깃들",
+        "regex": "ᆺ들",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/9ed658ddba/LesserScarabUnique.png",
         "flavourText": "이름에는 어떤 힘이 깃들어 있단 말인가?",
         "description": "지역 무리 규모 증가 1%당 고유 몬스터의 강인함, 피해, 떨어뜨리는 아이템의 희귀도 및 수량 1% 증가"
     },
     "결전 갑충석": {
         "name": "결전 갑충석",
-        "regex": "도전은",
+        "regex": "ᅩ전으",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/b1b423625d/LesserScarabUltimatum.png",
         "flavourText": "도전은 언제든 할 수 있다.",
         "description": "지역에 결전 인카운터 1개 등장"
     },
     "결투의 결전 갑충석": {
         "name": "결투의 결전 갑충석",
-        "regex": "웃",
+        "regex": "ᅵᆯᄑ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVWx0aW1hdHVtIiwic2NhbGUiOjF9XQ/be3b513bfe/GreaterScarabUltimatum.png",
         "flavourText": "승리는 무의미하지만, 실패는 비웃음거리가 된다.",
         "description": "가능할 경우 지역 내 결전 인카운터가 항상 고유 보스로 이어짐"
     },
     "고고학의 탐험 갑충석": {
         "name": "고고학의 탐험 갑충석",
-        "regex": "호기",
+        "regex": "ᅵ혜",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkV4cGVkaXRpb24iLCJzY2FsZSI6MX1d/6bd03eec75/Tier4ScarabExpedition.png",
         "flavourText": "호기심은 지혜를 불러오고, 지혜는 힘을 불러온다.",
         "description": "지역 내 탐험 인카운터의 유적에 접미어 및 접두어 2개 추가"
     },
     "고무의 역병 갑충석": {
         "name": "고무의 역병 갑충석",
-        "regex": "극",
+        "regex": "극",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJsaWdodCIsInNjYWxlIjoxfV0/34e07da01c/AltTier4ScarabBlight.png",
         "flavourText": "압축 변조 장치의 극성을 역전하면 흥미로운 효과가 발생하는 듯하다...",
         "description": "지역 내 강화의 탑이 각각 범위 내 역병 몬스터의|난이도와 보상을 증가시킴"
     },
     "고통 갑충석": {
         "name": "고통 갑충석",
-        "regex": "살면",
+        "regex": "죄ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/8c43bf8c64/LesserScarabTorment.png",
         "flavourText": "그들이 살면서 저지른 죄가 죽은 그대를 괴롭힌다.",
         "description": "지역에 고통받는 혼백 4마리 추가 등장|사로잡힌 몬스터 처치 시 지역 내|고통받는 혼백이 10%의 확률로 해방되고| 사로잡힌 몬스터 1마리를 파냄"
     },
     "공명하는 폭포의 균열 갑충석": {
         "name": "공명하는 폭포의 균열 갑충석",
-        "regex": "처가",
+        "regex": "처ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/d6fe5cdce6/AltTier4ScarabBreach.png",
         "flavourText": "상처가 새로 생길 때마다 현실은 약해진다.",
         "description": "이미 열린 불안정한 균열 하나당 지역 내 불안정한 균열이 10% 더 빠름|이미 열린 불안정한 균열의 수에 따라 지역 내 불안정한 균열 몬스터의|난이도와 보상 증가"
     },
     "공포의 지배 갑충석": {
         "name": "공포의 지배 갑충석",
-        "regex": "주어",
+        "regex": "워ᄅ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRvbWluYXRpb24iLCJzY2FsZSI6MX1d/0d55e72414/Tier4ScarabDomination.png",
         "flavourText": "어떤 상이 주어지든, 그 상을 위해 싸워라.",
         "description": "지역 내 성소를 1마리의 아틀라스 보스가 방어|지도의 마지막 보스에 대한 속성이 이 아틀라스 보스에도 적용"
     },
     "광증의 환영 갑충석": {
         "name": "광증의 환영 갑충석",
-        "regex": "끄",
+        "regex": "ᅵᄁ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/9de6ce65c5/NormalScarabDelirium.png",
         "flavourText": "너무 시끄러워! 왜 저렇게 시끄러운 거야?!|비명을 지르는 것밖에 못하는군!",
         "description": "지역에서 환영 보상 막대가 100% 빨리 채워짐|지역 내 환영이 거울과의 거리에 비례해 50% 더 빠르게 증가"
     },
     "군단 갑충석": {
         "name": "군단 갑충석",
-        "regex": "사에",
+        "regex": "화ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/e7b6e5659c/LesserScarabLegion.png",
         "flavourText": "전사에게 평화가 무슨 득이란 말인가?",
         "description": "지역에 추가 군단 인카운터 등장"
     },
     "군단의 영향력 갑충석": {
         "name": "군단의 영향력 갑충석",
-        "regex": "생각",
+        "regex": "ᅡ두",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRWxkZXIiLCJzY2FsZSI6MX1d/660528eb40/GreaterScarabElder.png",
         "flavourText": "생각은 가둘 수 없다.",
         "description": "지역 내 영향을 받은 몬스터 무리의 무리 규모 40% 증가"
     },
     "군중의 심연 갑충석": {
         "name": "군중의 심연 갑충석",
-        "regex": "러넘",
+        "regex": "ᅥ너",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/e28a53e1a0/NormalScarabAbyss.png",
         "flavourText": "흘러넘칠 때조차 우물의 굶주림에는 끝이 없어라.",
         "description": "먹은 [AbyssFedSoul|영혼] 하나당 지역 내 [ContainsAbyss|심연] 절벽길에서 생성되는 몬스터 100% 증가"
     },
     "군중의 지도 제작 갑충석": {
         "name": "군중의 지도 제작 갑충석",
-        "regex": "지평",
+        "regex": "ᅵ펴",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/41c689bbef/AltNormalScarabMaps.png",
         "flavourText": "끝도, 지평선도 없다.",
         "description": "지역에 난이도와 보상이 높은 몬스터로|이루어진 무리가 8~12개 등장합니다. 이러한 몬스터는 떨어뜨리는 지도 수량이 300% 증가합니다."
     },
     "기괴한 혈통의 갑충석": {
         "name": "기괴한 혈통의 갑충석",
-        "regex": "통은",
+        "regex": "ᅮᆨᄎ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/9196715e8d/LesserScarabMisc.png",
         "flavourText": "혈통은 숙청할 수 있는 것보다 빠르게 진화한다.",
         "description": "마법 무리 규모 40% 증가"
     },
     "기습 갑충석": {
         "name": "기습 갑충석",
-        "regex": "나씩",
+        "regex": "ᅡᄊ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/4afd758a13/LesserScarabIncursion.png",
         "flavourText": "한 번에 기습 하나씩 바알의 비밀을 파헤쳐라.",
         "description": "지역에 알바 등장"
     },
     "기이함의 고통 갑충석": {
         "name": "기이함의 고통 갑충석",
-        "regex": "이렇",
+        "regex": "ᇀᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJUb3JtZW50Iiwic2NhbGUiOjF9XQ/4c94a84fd8/NormalScarabTorment.png",
         "flavourText": "이렇게 피가 얼어붙는 듯한 울음소리는 처음 듣는군!",
         "description": "지도 내 고통받는 혼백이 특이한 변화형으로 등장"
     },
     "기폭의 결전 갑충석": {
         "name": "기폭의 결전 갑충석",
-        "regex": "떻",
+        "regex": "떻",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/abfc80cf45/Tier4ScarabUltimatum.png",
         "flavourText": "화약이 어떻게 만들어지는지는 모르는 편이 낫다.",
         "description": "지역 내 결전 인카운터에서 지도 소유자가|보상으로 기폭제만 획득 가능"
     },
     "도깨비불의 갑충석": {
         "name": "도깨비불의 갑충석",
-        "regex": "흐트는",
+        "regex": "흐트ᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzEiLCJzY2FsZSI6MX1d/303001a475/GreaterScarabMisc1.png",
         "flavourText": "드라이어흐트는 살아 있는 모든 것을 연결합니다.",
         "description": "지역 내 몬스터가 일정 확률로 야생림 도깨비불 2000마리로 강화"
     },
     "도깨비불의 의식 갑충석": {
         "name": "도깨비불의 의식 갑충석",
-        "regex": "믿",
+        "regex": "ᅵᆮ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/f2c3231213/NormalScarabRitual.png",
         "flavourText": "드라이어흐트를 믿으면 늘 외롭지 않으리라.",
         "description": "지역 내 의식 제단이 야생림 도깨비불 생성|야생림 도깨비불이 주변의 플레이어들에게 공물 점수 획득량 100% 증가 부여"
     },
     "떼의 야수 도감 갑충석": {
         "name": "떼의 야수 도감 갑충석",
-        "regex": "떼",
+        "regex": "떼",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/0d5c9d2d30/NormalScarabBeasts.png",
         "flavourText": "최초의 존재는 태고의 숲을 자유롭게 마구 내달렸다.",
         "description": "아인하르가 등장하는 지역에 붉은 야수 5마리 추가 등장"
     },
     "룬 탐색의 탐험 갑충석": {
         "name": "룬 탐색의 탐험 갑충석",
-        "regex": "재들",
+        "regex": "재ᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/a751f91a8e/NormalScarabExpedition.png",
         "flavourText": "별들에서 온 존재들은 돌아가기만을 고대한다.",
         "description": "지역 내 탐험 인카운터의 룬 몬스터|표시물 수량 100% 증가"
     },
     "망상의 환영 갑충석": {
         "name": "망상의 환영 갑충석",
-        "regex": "랬",
+        "regex": "ᅵ야",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkRlbGlyaXVtIiwic2NhbGUiOjF9XQ/aa8241bb6c/Tier4ScarabDelirium.png",
         "flavourText": "지금 무슨 소리야?|아틀라스는 원래 이랬는데.",
         "description": "지역에서 발견하는 지도에 환영 현상 등장"
     },
     "매복 갑충석": {
         "name": "매복 갑충석",
-        "regex": "상하",
+        "regex": "ᅳ거",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/137917584a/LesserScarabStrongboxes.png",
         "flavourText": "이미 예상하고 있다면, 그걸 매복이라 할 수 있는가?",
         "description": "지역 내 금고 4개 추가"
     },
     "매수의 결전 갑충석": {
         "name": "매수의 결전 갑충석",
-        "regex": "재판",
+        "regex": "ᅢᄑ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbHRpbWF0dW0iLCJzY2FsZSI6MX1d/d688264f91/NormalScarabUltimatum.png",
         "flavourText": "재판의 청렴함은 그 판사의 청렴함에 달려 있다.",
         "description": "결전 몬스터가 주는 경험치 150% 증가|결전 인카운터가 라운드 2개를 추가로 완료한 것처럼 보상을 줌"
     },
     "메마른 심장의 역병 갑충석": {
         "name": "메마른 심장의 역병 갑충석",
-        "regex": "젠",
+        "regex": "니,",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmxpZ2h0Iiwic2NhbGUiOjF9XQ/d0aa6a6d55/GreaterScarabBlight.png",
         "flavourText": "핵은 순환마다 성장하니, 언젠가는 속에 든 것을 쏟아내리라...",
         "description": "지역 내 역병 인카운터에 역병 걸린 상자 1개 등장|지역 내 역병 인카운터에서 적 웨이브 추가로 생성|역병 걸린 적을 많이 처치할수록 지역 내 역병 걸린 상자의|크기가 커지고 보상이 늘어남"
     },
     "명성의 트라투스 갑충석": {
         "name": "명성의 트라투스 갑충석",
-        "regex": "설을",
+        "regex": "거ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWVyY2VuYXJpZXMiLCJzY2FsZSI6MX1d/552723764a/GreaterScarabMercenaries.png",
         "flavourText": "전설을 휘감은 거기, 그대는 누구인가?",
         "description": "지역에서 발견하는 용병이 가진 모든 장비 아이템이 고유 아이템임"
     },
     "방해의 영향력 갑충석": {
         "name": "방해의 영향력 갑충석",
-        "regex": "억이",
+        "regex": "ᅦ아",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNoYXBlciIsInNjYWxlIjoxfV0/320c05daeb/Tier4ScarabShaper.png",
         "flavourText": "아틀라스에서는 기억이 울려 퍼지며, 영원히 메아리친다.",
         "description": "지도 보스가 무작위 쉐이퍼 수호자, 엘더 수호자, 정복자 또는 결합 보스 대동|14등급 이상의 지도에만 사용 가능"
     },
     "배신 갑충석": {
         "name": "배신 갑충석",
-        "regex": "일의",
+        "regex": "ᅢ가ᄅ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/d53970be47/LesserScarabBetrayal.png",
         "flavourText": "연합은 그들이 한 일의 대가를 치러야만 한다.",
         "description": "지역에 준 등장"
     },
     "배우자의 심연 갑충석": {
         "name": "배우자의 심연 갑충석",
-        "regex": "연을",
+        "regex": "킨ᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/b40fb2422b/AltTier4ScarabAbyss.png",
         "flavourText": "그들은 군주의 명령을 따라 심연을 지킨다.",
         "description": "지역 내 [ContainsAbyss|심연] 구덩이에서 [AbyssalConsort|심연의 배우자] 1마리 생성"
     },
     "번쩍임의 뿔 달린 갑충석": {
         "name": "번쩍임의 뿔 달린 갑충석",
-        "regex": "밝",
+        "regex": "ᅡᆰ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjYiLCJzY2FsZSI6MX1d/f74c2fdd4f/SuperScarab6.png",
         "flavourText": "부는 가장 밝게 빛나는 이에게 흘러든다.",
         "description": "지역 내 플레이어가 처치한 몬스터 수에 따라 아이템 희귀도가 최대 400%까지|증가하고 시간이 지나면서 서서히 감소"
     },
     "벌레집의 균열 갑충석": {
         "name": "벌레집의 균열 갑충석",
-        "regex": "왕국",
+        "regex": "ᆲᄒ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/769139d13b/LesserScarabBreach.png",
         "flavourText": "그들의 왕국은 늘 영토를 넓히고자 한다.",
         "description": "지역에 균열 벌레집 1개 등장"
     },
     "베리시움 화약의 탐험 갑충석": {
         "name": "베리시움 화약의 탐험 갑충석",
-        "regex": "큰",
+        "regex": "ᅦ대",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/1bf78dd20a/GreaterScarabExpedition.png",
         "flavourText": "제대로 제련한 이 화약을 약간 넣기만 해도 큰 효과를 낼 수 있다.",
         "description": "지역 내 탐험 인카운터의 폭발물 수량 50% 증가|폭발물 반경 80 증가"
     },
     "보강의 배신 갑충석": {
         "name": "보강의 배신 갑충석",
-        "regex": "둬",
+        "regex": "둬",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmV0cmF5YWwiLCJzY2FsZSI6MX1d/7dd831f857/GreaterScarabBetrayal.png",
         "flavourText": "수를 두고, 맞수를 둬라.",
         "description": "지역 내 불멸자 연합 단원이 지원군을 동반할 확률 50% 증가"
     },
     "보물의 거대한 갑충석": {
         "name": "보물의 거대한 갑충석",
-        "regex": "욕",
+        "regex": "ᅭᆨ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJVbmlxdWUiLCJzY2FsZSI6MX1d/e2945f5878/NormalScarabUnique.png",
         "flavourText": "탐욕은 마음의 덫이다.",
         "description": "지역 내 고유 몬스터가 보상 1개 추가 보유|지역 내 고유 몬스터의 강인함 30% 증가"
     },
     "보물의 군단 갑충석": {
         "name": "보물의 군단 갑충석",
-        "regex": "비축",
+        "regex": "ᅵ추",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/5d88c1f891/AltNormalScarabLegion.png",
         "flavourText": "강력한 유물이 깃든 고대의 비축물.",
         "description": "지역 내 군단 상자가 상자 개방 시에 정체 상태에서 해방되는|군단 몬스터에게 20% 확률로 보상을 확산시킴|보상을 획득한 군단 몬스터는 난이도 증가"
     },
     "보전의 뿔 달린 갑충석": {
         "name": "보전의 뿔 달린 갑충석",
-        "regex": "잊",
+        "regex": "ᅵᆽ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjMiLCJzY2FsZSI6MX1d/64d9f06e78/SuperScarab3.png",
         "flavourText": "우리보다 먼저 왔던 이들을 잊어서는 안 된다.",
         "description": "다른 갑충석들이 사용해도 소모되지 않음"
     },
     "보호받는 재물의 칼구르 갑충석": {
         "name": "보호받는 재물의 칼구르 갑충석",
-        "regex": "쉽",
+        "regex": "ᅱᆸ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/5ab4be93db/NormalScarabSettlers.png",
         "flavourText": "땅을 파는 부분이 제일 쉽습니다.",
         "description": "지역 내 광맥을 방어하는 몬스터가 마법 이상으로 등장"
     },
     "복제의 수확 갑충석": {
         "name": "복제의 수확 갑충석",
-        "regex": "철",
+        "regex": "철",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSGFydmVzdCIsInNjYWxlIjoxfV0/6077972903/GreaterScarabHarvest.png",
         "flavourText": "좋은 철은 풍작을 불러온다.",
         "description": "지역 내 수확 몬스터가 떨어뜨리는 생기가 복제됨|지역 내 수확 몬스터의 생명력 100% 증폭"
     },
     "복제의 야수 도감 갑충석": {
         "name": "복제의 야수 도감 갑충석",
-        "regex": "뭔",
+        "regex": "뭐",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
         "flavourText": "\"포획한 야수 하나보다 나은 게 뭔지 아나, 유배자?\"",
         "description": "지역 내에서 포획하는 야수의 복제본 생성"
     },
     "봉쇄의 매복 갑충석": {
         "name": "봉쇄의 매복 갑충석",
-        "regex": "가려",
+        "regex": "ᅫᄋ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/da665a65ee/Tier4ScarabStrongboxes.png",
         "flavourText": "침묵은 가려진 파멸을 숨기고 있다.",
         "description": "지역에 다수의 금고 추가|지역 내 몬스터가 매복 중"
     },
     "분개한 무리의 균열 갑충석": {
         "name": "분개한 무리의 균열 갑충석",
-        "regex": "뻗",
+        "regex": "토ᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJyZWFjaCIsInNjYWxlIjoxfV0/2e4da41035/Tier4ScarabBreach.png",
         "flavourText": "그들의 영토는 더 뻗어 나아간다.",
         "description": "지역 내 아일리트의 스킬이 대신 벌레집을 격앙시켜, 이후 웨이브의 난이도와|보상을 증가시킴"
     },
     "분별의 매복 갑충석": {
         "name": "분별의 매복 갑충석",
-        "regex": "눈",
+        "regex": "예ᄅ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlN0cm9uZ2JveGVzIiwic2NhbGUiOjF9XQ/72722370df/AltTier4ScarabStrongboxes.png",
         "flavourText": "예리한 눈은 진정한 가치와 허울을 구별할 수 있다.",
         "description": "지역 내 금고가 보다 희귀한 종류일 확률이 높아짐"
     },
     "불안정의 균열 갑충석": {
         "name": "불안정의 균열 갑충석",
-        "regex": "실이",
+        "regex": "뒤ᄐ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/91af1cf6e9/AltLesserScarabBreach.png",
         "flavourText": "현실이 뒤틀리고 구부러진다.",
         "description": "지역에 불안정한 균열 2개 추가 등장"
     },
     "비대화의 혼란 갑충석": {
         "name": "비대화의 혼란 갑충석",
-        "regex": "섭",
+        "regex": "섭",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/d391e90e68/NormalScarabAnarchy.png",
         "flavourText": "아황산염 섭취는 비정상적 성장을 유발할 수 있다.",
         "description": "지역 내 황야 탈주 유배자가 30%의 확률로 탈주 거인으로 등장"
     },
     "비밀 공간의 매복 갑충석": {
         "name": "비밀 공간의 매복 갑충석",
-        "regex": "뻔",
+        "regex": "뻔",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJTdHJvbmdib3hlcyIsInNjYWxlIjoxfV0/2654dacfee/NormalScarabStrongboxes.png",
         "flavourText": "뻔한 거짓 밑에 진짜 보물이 있으리라...",
         "description": "지역 내 금고를 15%의 확률로 다시 열 수 있음"
     },
     "사로잡힘의 고통 갑충석": {
         "name": "사로잡힘의 고통 갑충석",
-        "regex": "결코",
+        "regex": "ᆯᄏ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlRvcm1lbnQiLCJzY2FsZSI6MX1d/5b3bed9d3d/Tier4ScarabTorment.png",
         "flavourText": "강한 자는 결코 진정으로 혼자가 아닙니다.",
         "description": "지역 내 희귀 몬스터가 1/4 확률로 최대 3마리의 고통받는 혼백에게 사로잡힘"
     },
     "상승의 에센스 갑충석": {
         "name": "상승의 에센스 갑충석",
-        "regex": "깎",
+        "regex": "깎",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/3a091b8052/NormalScarabEssence.png",
         "flavourText": "면을 이보다 완벽하게 깎을 수는 없었을 것이다.",
         "description": "지역에서 발견하는 에센스가 1등급 높게 발견됨"
     },
     "새김의 결전 갑충석": {
         "name": "새김의 결전 갑충석",
-        "regex": "김",
+        "regex": "ᅵᆻᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYlVsdGltYXR1bSIsInNjYWxlIjoxfV0/080e60e969/AltTier4ScarabUltimatum.png",
         "flavourText": "언제든 내기할 거리는 있기 마련이다... 걸 돈만 있다면.",
         "description": "기폭제를 주는 지역 내 결전 인카운터 보상이|지도 소유자에게 기폭제가 아닌 새겨진 결전을 줌"
     },
     "석회화의 에센스 갑충석": {
         "name": "석회화의 에센스 갑충석",
-        "regex": "정이",
+        "regex": "져ᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/d7e7534a07/Tier4ScarabEssence.png",
         "flavourText": "수정이... 퍼져나갈 수 있는 것인가?",
         "description": "지역 내 자연적으로 서식하는 희귀 몬스터가 에센스에 갇힘"
     },
     "선택의 의식 갑충석": {
         "name": "선택의 의식 갑충석",
-        "regex": "교리",
+        "regex": "교ᄅ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJSaXR1YWwiLCJzY2FsZSI6MX1d/08f82dab28/LesserScarabRitual.png",
         "flavourText": "신성한 교리 중에 마음에 드는 것을 골라라...",
         "description": "지역 내 의식 제단에서 헌정품을 무작위 변경할 때 첫 2회는 비용 없음|지역 내 의식 제단에서 헌정품을 2회 추가로 무작위 변경 가능"
     },
     "수정의 심연 갑충석": {
         "name": "수정의 심연 갑충석",
-        "regex": "빌려",
+        "regex": "이ᄎ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQWJ5c3MiLCJzY2FsZSI6MX1d/84851bd122/GreaterScarabAbyss.png",
         "flavourText": "그들이 빌려 온 힘이 섬뜩한 수정 속에서 소용돌이친다.",
         "description": "지역 내 마지막이 아닌 [ContainsAbyss|심연] 구덩이가 닫힐 때 [AbyssalCrystal|심연 수정] 생성"
     },
     "수확 갑충석": {
         "name": "수확 갑충석",
-        "regex": "곡",
+        "regex": "ᅵᆯᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJIYXJ2ZXN0Iiwic2NhbGUiOjF9XQ/976dcf6526/LesserScarabHarvest.png",
         "flavourText": "숨겨진 길들은 그림자와 빛의 계곡으로 이어지리...",
         "description": "지역에 신성한 숲 등장"
     },
     "쉐이퍼의 영향력 갑충석": {
         "name": "쉐이퍼의 영향력 갑충석",
-        "regex": "상상",
+        "regex": "ᅭᆼᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTaGFwZXIiLCJzY2FsZSI6MX1d/caf0ac9307/LesserScarabShaper.png",
         "flavourText": "상상할 용기가 있는 자에게는 별들의 바다가 기다린다.",
         "description": "지역에 쉐이퍼 영향력 결과물 추가"
     },
     "시간선의 기습 갑충석": {
         "name": "시간선의 기습 갑충석",
-        "regex": "가다",
+        "regex": "ᅡ가ᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkluY3Vyc2lvbiIsInNjYWxlIjoxfV0/748b10e2cf/Tier4ScarabIncursion.png",
         "flavourText": "계속 나아가다 보면 자신을 만나게 된다고들 한다...",
         "description": "지역에서 처치하는 최종 건축가가 아이템화된 사원을 떨어뜨림|지역에서 떨어지는 아이템화된 사원이 현재 사원 구조에 기반해 생성되지만, 방의 등급은 무작위 변경"
     },
     "시신의 의식 갑충석": {
         "name": "시신의 의식 갑충석",
-        "regex": "꼭",
+        "regex": "꼬",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlJpdHVhbCIsInNjYWxlIjoxfV0/323f689e68/Tier4ScarabRitual.png",
         "flavourText": "꼭두각시 신세로 전락하여, 다시금 생명을 얻기를 갈구한다.",
         "description": "지역 내 의식에 희귀 아이템화된 시신 몬스터 1마리 추가 등장"
     },
     "신경증의 환영 갑충석": {
         "name": "신경증의 환영 갑충석",
-        "regex": "미소",
+        "regex": "미ᄉ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/5690762715/AltGreaterScarabDelirium.png",
         "flavourText": "어둠 속에서 미소가 이를 드러내며 번쩍인다.",
         "description": "지역 내 환영 인카운터에서 모든 고유 환영 보스 등장|지역 내 환영 보상 유형이 고유 환영 보스 처치 시 +1 획득|11등급 이상의 지도에만 사용 가능"
     },
     "신성의 갑충석": {
         "name": "신성의 갑충석",
-        "regex": "신념",
+        "regex": "ᆫ녀",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/6d4755a692/NormalScarabMisc.png",
         "flavourText": "신념은 변화하는 법.",
         "description": "지역 내 판테온의 손길에 닿은 희귀 몬스터 최대 3마리 추가|판테온의 손길에 닿은 몬스터가 생성하는 유령이 주는 피해 100% 증가"
     },
     "심연 갑충석": {
         "name": "심연 갑충석",
-        "regex": "맨",
+        "regex": "헤ᄆ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBYnlzcyIsInNjYWxlIjoxfV0/05f3ac3c5c/LesserScarabAbyss.png",
         "flavourText": "그들은 어둠으로 끌고 갈 영혼을 영원히 찾아 헤맨다.",
         "description": "지역에 [ContainsAbyss|심연] 1개 추가 등장"
     },
     "아황산염 갑충석": {
         "name": "아황산염 갑충석",
-        "regex": "파고",
+        "regex": "파고",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTdWxwaGl0ZSIsInNjYWxlIjoxfV0/9bdde2cec0/LesserScarabSulphite.png",
         "flavourText": "진실을 찾아 어둠 속으로 파고들어라...",
         "description": "지역에 니코 등장"
     },
     "악명의 트라투스 갑충석": {
         "name": "악명의 트라투스 갑충석",
-        "regex": "신만",
+        "regex": "신ᄆ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/f880a011d3/NormalScarabMercenaries.png",
         "flavourText": "어떤 이들은 자신만의 길을 가야 한다.",
         "description": "지역에서 발견하는 용병이 악명 높은 용병|지역에서 발견하는 용병이 황야 용병 두 명과 동행함"
     },
     "안정의 갑충석": {
         "name": "안정의 갑충석",
-        "regex": "놀",
+        "regex": "놀",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MiLCJzY2FsZSI6MX1d/c80f553284/Tier4ScarabMisc.png",
         "flavourText": "놀랍군! 연결을 유지할 수단이라니...",
         "description": "지역으로 이어지는 포탈이 50%의 확률로 사용해도 소모되지 않음"
     },
     "안정의 에센스 갑충석": {
         "name": "안정의 에센스 갑충석",
-        "regex": "적절",
+        "regex": "ᅩ구",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRXNzZW5jZSIsInNjYWxlIjoxfV0/28e74041a5/GreaterScarabEssence.png",
         "flavourText": "적절한 도구와 정확한 손만 있다면, 수정을 예측하기 쉬운|방식으로 조작할 수 있다.",
         "description": "지역 내에서 에센스 타락 시 에센스를 업그레이드 또는|변화시키는 결과만 가능"
     },
     "야수 도감 갑충석": {
         "name": "야수 도감 갑충석",
-        "regex": "답",
+        "regex": "답",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZWFzdHMiLCJzY2FsZSI6MX1d/a13711c8ed/LesserScarabBeasts.png",
         "flavourText": "야수의 대가가 부름에 응답한다.",
         "description": "지역에 아인하르 등장"
     },
     "에센스 갑충석": {
         "name": "에센스 갑충석",
-        "regex": "생물",
+        "regex": "ᅵᆨᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFc3NlbmNlIiwic2NhbGUiOjF9XQ/4c99af0610/LesserScarabEssence.png",
         "flavourText": "안에 있는 생물이 아직도 살아 있을 리 없기에 완전히 무해하다.",
         "description": "지역에 갇힌 몬스터 3마리 추가 등장"
     },
     "엘더의 영향력 갑충석": {
         "name": "엘더의 영향력 갑충석",
-        "regex": "너머",
+        "regex": "머ᄋ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFbGRlciIsInNjYWxlIjoxfV0/8828d3f4eb/LesserScarabElder.png",
         "flavourText": "빛 너머에는 오직 공허만이 있다.",
         "description": "지역에 엘더 영향력 결과물 추가"
     },
     "역병 갑충석": {
         "name": "역병 갑충석",
-        "regex": "스멀",
+        "regex": "스ᄆ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCbGlnaHQiLCJzY2FsZSI6MX1d/401222e4f4/LesserScarabBlight.png",
         "flavourText": "덩굴이 스멀스멀 자라난다...",
         "description": "지역에 역병 인카운터 1개 등장"
     },
     "연기의 아황산염 갑충석": {
         "name": "연기의 아황산염 갑충석",
-        "regex": "곤",
+        "regex": "대ᄌ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3VscGhpdGUiLCJzY2FsZSI6MX1d/55c0fed4b6/GreaterScarabSulphite.png",
         "flavourText": "대지 그 자체가 병들면, 땅조차 썩어들며 토해 내곤 한다.",
         "description": "지도 지역에서 발견하는 아황산염이 격앙시키는 연기 방출|격앙시키는 연기의 영향을 받는 적은 아이템 수량 50% 증가|지도 내 아황산염을 남동석 광산의 몬스터가 방어"
     },
     "영원한 분쟁의 군단 갑충석": {
         "name": "영원한 분쟁의 군단 갑충석",
-        "regex": "피바",
+        "regex": "피ᄇ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkxlZ2lvbiIsInNjYWxlIjoxfV0/4a56211137/Tier4ScarabLegion.png",
         "flavourText": "영원한 피바다. 실로 영광스럽도다.",
         "description": "지역 내 군단 몬스터를 여러 번 깨울 수 있음|지역 내 군단 몬스터를 깨울 때마다 난이도와 보상 증가"
     },
     "올플레임의 배신 갑충석": {
         "name": "올플레임의 배신 갑충석",
-        "regex": "죽지",
+        "regex": "ᅮᆨᄌ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXRyYXlhbCIsInNjYWxlIjoxfV0/3e4a843098/NormalScarabBetrayal.png",
         "flavourText": "죽지 않는 자, 오직 고통만을 두려워하리라.",
         "description": "지역 내 올플레임 잉걸불이 교체하는 몬스터 무리의 수 75% 증가"
     },
     "용사의 기습 갑충석": {
         "name": "용사의 기습 갑충석",
-        "regex": "앗조",
+        "regex": "ᆺ조",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiSW5jdXJzaW9uIiwic2NhbGUiOjF9XQ/ff92bda004/GreaterScarabIncursion.png",
         "flavourText": "앗조아틀에서는 오직 최고의 전사만이 선발된다.",
         "description": "35%의 확률로 지역 내 기습의 모든 몬스터가 마법 이상으로 등장|지역 내 기습의 무리 규모 15% 증가"
     },
     "우측의 갑충석": {
         "name": "우측의 갑충석",
-        "regex": "뒷",
+        "regex": "ᅱᆺ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiTWlzYyIsInNjYWxlIjoxfV0/4b55da6494/AltGreaterScarabMisc.png",
         "flavourText": "동전을 던집니다. 뒷면이 나오길 빌까요?",
         "description": "지역 접미어 속성의 효과 100% 증가|지역 접두어 속성의 효과가 적용되지 않음"
     },
     "원상 복구의 배신 갑충석": {
         "name": "원상 복구의 배신 갑충석",
-        "regex": "죽고",
+        "regex": "ᆨ고",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJldHJheWFsIiwic2NhbGUiOjF9XQ/4290457e94/Tier4ScarabBetrayal.png",
         "flavourText": "죽고 또 죽다 보면 고통에 내성이 생긴다.",
         "description": "지역에 있는 심문당한 불멸자 연합 대상이 50%의 확률로|심문 완료 시 계급을 잃지 않음"
     },
     "위험의 지도 제작 갑충석": {
         "name": "위험의 지도 제작 갑충석",
-        "regex": "볼",
+        "regex": "ᆸᄈ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/b41df1ff07/NormalScarabMaps.png",
         "flavourText": "거울에서 볼 수 있는 것은 우리가 비친 모습뿐이다.",
         "description": "지역에 무작위 속성 2개 추가"
     },
     "유령의 지배 갑충석": {
         "name": "유령의 지배 갑충석",
-        "regex": "오로",
+        "regex": "ᅥᆺᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/c907d44dec/NormalScarabDomination.png",
         "flavourText": "힘으로 가는 길 중에는 오로지 광기로 통하는 것도 있으니.",
         "description": "지역에 유령 성소 2개 추가 등장"
     },
     "윤택의 칼구르 갑충석": {
         "name": "윤택의 칼구르 갑충석",
-        "regex": "쉰",
+        "regex": "ᅱᆫ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYlNldHRsZXJzIiwic2NhbGUiOjF9XQ/62d3e05936/Tier4ScarabSettlers.png",
         "flavourText": "광석은 살아 숨 쉰다. 그리고 너의 노력에 만족하지 못한다.",
         "description": "지역 내에서 완료하는 광맥 하나당|광맥을 지키는 몬스터의 난이도와 보상이 증가하고|광맥에 포함된 광석 15% 증가"
     },
     "의외의 동맹의 트라투스 갑충석": {
         "name": "의외의 동맹의 트라투스 갑충석",
-        "regex": "였",
+        "regex": "ᅴᄋ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1lcmNlbmFyaWVzIiwic2NhbGUiOjF9XQ/ec12948f39/Tier4ScarabMercenaries.png",
         "flavourText": "\"엄밀히 말하면, 역사적으로... 그들은 사실 전부 유배자였다.\"",
         "description": "지역 내 황야 탈주 유배자가 50% 확률로 황야 용병과 동행함|지역 내 황야 용병의 수에 따라 황야 용병의 난이도 증가"
     },
     "이계 갑충석": {
         "name": "이계 갑충석",
-        "regex": "묵의",
+        "regex": "거ᄉ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/28f0c03cf7/LesserScarabBeyond.png",
         "flavourText": "침묵의 벽과 거센 폭풍이 끝도 없는 무리에 맞선다.",
         "description": "지역에서 서로 가까이 있는 적을 처치하면 이계 몬스터를 불러옴"
     },
     "잠재력의 매복 갑충석": {
         "name": "잠재력의 매복 갑충석",
-        "regex": "자물",
+        "regex": "ᆯ쇠",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU3Ryb25nYm94ZXMiLCJzY2FsZSI6MX1d/c2cb4efc18/GreaterScarabStrongboxes.png",
         "flavourText": "자물쇠 장인은 더 나은 상자를 만드는 것을 꿈꾼다.",
         "description": "지역 내 금고의 비고정 속성 효과 75% 증가"
     },
     "장교의 군단 갑충석": {
         "name": "장교의 군단 갑충석",
-        "regex": "전장",
+        "regex": "ᆼ교",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJMZWdpb24iLCJzY2FsZSI6MX1d/986b842d3f/NormalScarabLegion.png",
         "flavourText": "전장에도 중간 관리자는 있다.",
         "description": "지역 내 군단 진영에 병장 5명 추가 등장"
     },
     "재기의 이계 갑충석": {
         "name": "재기의 이계 갑충석",
-        "regex": "주렸",
+        "regex": "재ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiQmV5b25kIiwic2NhbGUiOjF9XQ/4e3cafe44b/AltGreaterScarabBeyond.png",
         "flavourText": "그들은 굶주렸다.",
         "description": "지역 내에서 생성되는 이계 보스가 다른 진영의 이계 보스 대동|지역 내 이계 보스가 떨어뜨리는 더럽혀진 화폐 20% 증가|지역 내 이계 포탈이 고유 보스를 생성할 확률 30% 증가"
     },
     "적수의 갑충석": {
         "name": "적수의 갑충석",
-        "regex": "수도",
+        "regex": "매ᄒ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRMZXNzZXJTY2FyYWJNaXNjIiwic2NhbGUiOjF9XQ/ab24a34cd1/AltLesserScarabMisc.png",
         "flavourText": "그대의 적수도 그대를 미워하기는 매한가지다.",
         "description": "지역에 복제된 희귀 몬스터를 포함한 무리 4개 추가 등장"
     },
     "적응의 에센스 갑충석": {
         "name": "적응의 에센스 갑충석",
-        "regex": "격자",
+        "regex": "ᅧᆨ자",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRUaWVyNFNjYXJhYkVzc2VuY2UiLCJzY2FsZSI6MX1d/56560d691e/AltTier4ScarabEssence.png",
         "flavourText": "결정 격자는 필멸자의 머리로는 이해하기 힘든 방향으로 확장된다.",
         "description": "지역 내 갇힌 몬스터가 풀려나면 지역 내 다른 갇힌 몬스터에게 무작위 에센스 속성 부여|에센스 속성의 수에 따라 지역 내 갇힌 몬스터의|난이도와 보상 증가"
     },
     "전설의 거대한 갑충석": {
         "name": "전설의 거대한 갑충석",
-        "regex": "모인",
+        "regex": "모이",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiVW5pcXVlIiwic2NhbGUiOjF9XQ/0194f878a0/GreaterScarabUnique.png",
         "flavourText": "힘이 모인다.",
         "description": "지역 내 고유 몬스터가 몬스터 속성 4개 추가 보유"
     },
     "전통의 뿔 달린 갑충석": {
         "name": "전통의 뿔 달린 갑충석",
-        "regex": "번영",
+        "regex": "ᅥᆫ여",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjUiLCJzY2FsZSI6MX1d/cbdd57fa7e/SuperScarab5.png",
         "flavourText": "가장 강한 자에게 번영이 있으리라.",
         "description": "지역 내 모든 희귀 및 고유 몬스터가 떨어뜨리는 아이템이|보상 속성에 의해 변화됨"
     },
     "정제의 칼구르 갑충석": {
         "name": "정제의 칼구르 갑충석",
-        "regex": "냐",
+        "regex": "니ᄅ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiU2V0dGxlcnMiLCJzY2FsZSI6MX1d/24f57aa157/GreaterScarabSettlers.png",
         "flavourText": "광석의 진짜 가치는 돌에 있는 것이 아니라, 그 돌이 무엇이 되느냐에 있습니다.",
         "description": "지역 내 광맥이 광석 채광을 지시하는 대신 제련한 주괴 부여"
     },
     "좌측의 갑충석": {
         "name": "좌측의 갑충석",
-        "regex": "앞",
+        "regex": "ᅡᇁ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWlzYzIiLCJzY2FsZSI6MX1d/6f752909bb/GreaterScarabMisc2.png",
         "flavourText": "동전을 던집니다. 앞면이 나오길 빌까요?",
         "description": "지역 접두어 속성의 효과 100% 증가|지역 접미어 속성의 효과가 적용되지 않음"
     },
     "주입의 탐험 갑충석": {
         "name": "주입의 탐험 갑충석",
-        "regex": "별빛",
+        "regex": "ᅧᆯᄇ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHRHcmVhdGVyU2NhcmFiRXhwZWRpdGlvbiIsInNjYWxlIjoxfV0/cbeb3c974b/AltGreaterScarabExpedition.png",
         "flavourText": "별빛을 오래 받으면 죽은 자조차 힘을 얻는다.",
         "description": "지역에서 발견하는 일지가 항상 고정 속성 4개 보유|폭파한 유적의 수에 따라 탐험 몬스터의 난이도 및 보상 증가"
     },
     "증대의 지도 제작 갑충석": {
         "name": "증대의 지도 제작 갑충석",
-        "regex": "험한",
+        "regex": "ᅢ야",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNYXBzIiwic2NhbGUiOjF9XQ/e7d11bcc5b/LesserScarabMaps.png",
         "flavourText": "가장 위험한 꿈을 품을 때야말로 기회가 찾아온다.",
         "description": "지역에 영향을 주는 지도 속성 하나당 지역에서 발견하는 지도 10% 증가"
     },
     "지배 갑충석": {
         "name": "지배 갑충석",
-        "regex": "꾸",
+        "regex": "ᆽᄇ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEb21pbmF0aW9uIiwic2NhbGUiOjF9XQ/76cedf832c/LesserScarabDomination.png",
         "flavourText": "피를 힘으로 맞바꾸는 간단한 교환.",
         "description": "지역에 성소 3개 추가 등장"
     },
     "진화의 지배 갑충석": {
         "name": "진화의 지배 갑충석",
-        "regex": "끔",
+        "regex": "ᆷᄍ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRG9taW5hdGlvbiIsInNjYWxlIjoxfV0/8913234164/GreaterScarabDomination.png",
         "flavourText": "아틀라스와 레이클라스트는 한 가지 끔찍한 비밀을 공유한다.",
         "description": "지역에 진화의 성소 1개 추가 등장"
     },
     "찬란한 폭풍의 갑충석": {
         "name": "찬란한 폭풍의 갑충석",
-        "regex": "커다",
+        "regex": "커ᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYk1pc2MyIiwic2NhbGUiOjF9XQ/d19b59b6b8/Tier4ScarabMisc2.png",
         "flavourText": "생명의 커다란 불협화음이 크레센도로 점점 커져 간다.",
         "description": "지역에 찬연한 폭풍 등장"
     },
     "천벌의 뿔 달린 갑충석": {
         "name": "천벌의 뿔 달린 갑충석",
-        "regex": "욱",
+        "regex": "욱",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjIiLCJzY2FsZSI6MX1d/c4f92c444d/SuperScarab2.png",
         "flavourText": "영광이 자신의 파멸을 더욱 강하게 끌어들인다.",
         "description": "지역 내 희귀 몬스터가 속성 2개 추가 보유"
     },
     "총사령관의 균열 갑충석": {
         "name": "총사령관의 균열 갑충석",
-        "regex": "설계",
+        "regex": "ᅨᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9BbHROb3JtYWxTY2FyYWJCcmVhY2giLCJzY2FsZSI6MX1d/864e785561/AltNormalScarabBreach.png",
         "flavourText": "설계되었으며 변함없는 충성.",
         "description": "지역 내 불안정한 균열에 보스 등장|지역 내 벌레집이 벌레집 요새로 이어짐"
     },
     "침략의 기습 갑충석": {
         "name": "침략의 기습 갑충석",
-        "regex": "쪽",
+        "regex": "쪼",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJJbmN1cnNpb24iLCJzY2FsZSI6MX1d/a38b517f35/NormalScarabIncursion.png",
         "flavourText": "한 번 열린 문은 어느 쪽으로든 움직일 수 있는 법.",
         "description": "지역에 기습 몬스터 무리 12~16개 추가 등장"
     },
     "침략의 이계 갑충석": {
         "name": "침략의 이계 갑충석",
-        "regex": "운명의",
+        "regex": "ᆫ명의",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkJleW9uZCIsInNjYWxlIjoxfV0/a1d0b3e27b/Tier4ScarabBeyond.png",
         "flavourText": "운명의 시간이 다가온다.",
         "description": "지역 내 희귀 및 고유 몬스터 처치 시 이계 포탈 8~12개 추가 생성"
     },
     "칼구르 갑충석": {
         "name": "칼구르 갑충석",
-        "regex": "뿌",
+        "regex": "ᅵᇁ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJTZXR0bGVycyIsInNjYWxlIjoxfV0/591426ae68/LesserScarabSettlers.png",
         "flavourText": "풍부한 광맥일수록 뿌리가 깊은 법입니다.",
         "description": "지역에 광맥 2개 추가 등장"
     },
     "타락의 지도 제작 갑충석": {
         "name": "타락의 지도 제작 갑충석",
-        "regex": "락이",
+        "regex": "ᅨ ᄉ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiTWFwcyIsInNjYWxlIjoxfV0/7c589dbe02/GreaterScarabMaps.png",
         "flavourText": "세계 사이에서 타락이 번져 나온다.",
         "description": "지역에서 발견하는 비-고유 지도가 속성 8개가 부여된 타락한 지도로 떨어짐"
     },
     "탐험 갑충석": {
         "name": "탐험 갑충석",
-        "regex": "다를",
+        "regex": "ᅥᆫᄂ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJFeHBlZGl0aW9uIiwic2NhbGUiOjF9XQ/fa49f53ac8/LesserScarabExpedition.png",
         "flavourText": "그들은 고대의 진실을 찾아 바다를 건너 왔다.",
         "description": "지역에 탐험 인카운터 1개 등장"
     },
     "트라투스 갑충석": {
         "name": "트라투스 갑충석",
-        "regex": "몫",
+        "regex": "ᆪ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJNZXJjZW5hcmllcyIsInNjYWxlIjoxfV0/2d075bbafc/LesserScarabMercenaries.png",
         "flavourText": "전리품은 승자의 몫이다.",
         "description": "지역에 용병 서식"
     },
     "특출난 자의 혼란 갑충석": {
         "name": "특출난 자의 혼란 갑충석",
-        "regex": "군계",
+        "regex": "ᅨ이",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFuYXJjaHkiLCJzY2FsZSI6MX1d/3f5f6a8671/Tier4ScarabAnarchy.png",
         "flavourText": "군계일학.",
         "description": "지역에 특출난 탈주 유배자 1명 추가 등장"
     },
     "편집증의 환영 갑충석": {
         "name": "편집증의 환영 갑충석",
-        "regex": "짜인",
+        "regex": "ᇂᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGVsaXJpdW0iLCJzY2FsZSI6MX1d/e6730494ae/GreaterScarabDelirium.png",
         "flavourText": "진짜인지 의심스러울 만큼 좋다면, 아마 진짜가 아닐 것이다.",
         "description": "지역 내 환영 인카운터가 보상 유형 2개 추가 생성"
     },
     "풍부함의 의식 갑충석": {
         "name": "풍부함의 의식 갑충석",
-        "regex": "그가",
+        "regex": "그가",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiUml0dWFsIiwic2NhbGUiOjF9XQ/a990c91de5/GreaterScarabRitual.png",
         "flavourText": "그가 점점 다가온다...",
         "description": "지역 내 의식으로 얻는 헌정품 100% 증가"
     },
     "풍부함의 점술 갑충석": {
         "name": "풍부함의 점술 갑충석",
-        "regex": "미래",
+        "regex": "래ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/acb5d1754a/NormalScarabDivination.png",
         "flavourText": "우리가 행동할 때마다 천 가지 미래가 생겨난다.",
         "description": "지역 내 점술 카드를 떨어뜨릴 확률이 1000% 증가한|점술에 닿은 마법 몬스터 무리 6~10개 추가 등장"
     },
     "풍요의 뿔의 수확 갑충석": {
         "name": "풍요의 뿔의 수확 갑충석",
-        "regex": "나무",
+        "regex": "매ᄀ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkhhcnZlc3QiLCJzY2FsZSI6MX1d/35e8847de2/Tier4ScarabHarvest.png",
         "flavourText": "나무가 클수록 실한 열매가 열리는 법.",
         "description": "지역에 신성한 숲이 등장할 시, 가능할 경우 신성한 숲에 각 유형의 4등급 씨앗 최대 1개씩 추가"
     },
     "하강의 심연 갑충석": {
         "name": "하강의 심연 갑충석",
-        "regex": "당신",
+        "regex": "ᅡ서",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9UaWVyNFNjYXJhYkFieXNzIiwic2NhbGUiOjF9XQ/c1d1da69d6/Tier4ScarabAbyss.png",
         "flavourText": "그들이 당신을 초대한다. 만나서 함께하자고.",
         "description": "지역에 [AbyssalDepths|심연 지하] 1개 추가 등장"
     },
     "혈맹의 뿔 달린 갑충석": {
         "name": "혈맹의 뿔 달린 갑충석",
-        "regex": "자만",
+        "regex": "자마",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjEiLCJzY2FsZSI6MX1d/acc1b258a3/SuperScarab1.png",
         "flavourText": "오직 강인한 자만이 살아남고, 살아남은 자만이 영속한다.",
         "description": "지역의 마법 몬스터 150% 증가|지역 내 마법 몬스터가 속성 1개를 추가로 보유"
     },
     "혈우병의 이계 갑충석": {
         "name": "혈우병의 이계 갑충석",
-        "regex": "흘리",
+        "regex": "우ᄇ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9Ob3JtYWxTY2FyYWJCZXlvbmQiLCJzY2FsZSI6MX1d/6d3487e108/NormalScarabBeyond.png",
         "flavourText": "현실 그 자체가 피를 흘리기 시작한다.",
         "description": "지역 내 이계 포탈의 병합 범위 50% 증가|지역 내에서 이계 희귀 몬스터를 처치하는 캐릭터들이 30% 확률로 20초 동안 몬스터의 속성을 획득함"
     },
     "협력의 혼란 갑충석": {
         "name": "협력의 혼란 갑충석",
-        "regex": "쉴",
+        "regex": "ᅱᆯ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQW5hcmNoeSIsInNjYWxlIjoxfV0/4697e57871/GreaterScarabAnarchy.png",
         "flavourText": "유배자 간의 동맹은 쉴 새 없이 변화한다.",
         "description": "지역 내 황야 탈주 유배자가 50%의 확률로 쌍으로 등장"
     },
     "혼란 갑충석": {
         "name": "혼란 갑충석",
-        "regex": "트에",
+        "regex": "ᆨ거",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJBbmFyY2h5Iiwic2NhbGUiOjF9XQ/73d1ee9b23/LesserScarabAnarchy.png",
         "flavourText": "레이클라스트에서는 죽거나 죽이거나 둘 중 하나다.",
         "description": "지역에 탈주 유배자 5명 추가 등장"
     },
     "혼란 유발의 뿔 달린 갑충석": {
         "name": "혼란 유발의 뿔 달린 갑충석",
-        "regex": "입은",
+        "regex": "ᅥᆼ시",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9TdXBlclNjYXJhYjciLCJzY2FsZSI6MX1d/28b95bae7b/SuperScarab7.png",
         "flavourText": "상처 입은 꿈의 피가 정신 속에서 번져 나간다.",
         "description": "지역 내 몬스터 무리가 15% 확률로 무작위 아틀라스 보스 1마리로 등장|마지막 지도 보스에 대한 속성이 해당 아틀라스 보스에도 적용"
     },
     "환영 갑충석": {
         "name": "환영 갑충석",
-        "regex": "과도",
+        "regex": "과ᄃ",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEZWxpcml1bSIsInNjYWxlIjoxfV0/0b8b887e88/LesserScarabDelirium.png",
         "flavourText": "아무런 효과도 없는 완전히 무해한 갑충석.",
         "description": "지역에 환영의 거울 1개 등장"
     },
     "회랑의 점술 갑충석": {
         "name": "회랑의 점술 갑충석",
-        "regex": "질병",
+        "regex": "ᆨ리",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9MZXNzZXJTY2FyYWJEaXZpbmF0aW9uIiwic2NhbGUiOjF9XQ/20ff060a8d/LesserScarabDivination.png",
         "flavourText": "그 어떤 질병도 영원히 격리할 수는 없다.",
         "description": "지역에 도이드리의 헌신자 무리 8~12개가 추가로 등장|도이드리의 헌신자가 카드 묶음을 떨어뜨릴 확률 1% 추가"
     },
     "훔쳐냄의 점술 갑충석": {
         "name": "훔쳐냄의 점술 갑충석",
-        "regex": "쥐",
+        "regex": "쥐",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiRGl2aW5hdGlvbiIsInNjYWxlIjoxfV0/73ab11f6bd/GreaterScarabDivination.png",
         "flavourText": "운명을 거머쥐지 않으면, 다른 이에게 빼앗기리라.",
         "description": "지역에서 발견하는 점술 카드를 지도의 마지막 보스가 강탈|지도의 해당 마지막 보스가 강탈한 점술 카드가 많을수록|난이도가 높아지고 마지막 보스가 주는 피해 증가|지도의 해당 마지막 보스 처치 시 강탈한 모든 점술 카드 복제"

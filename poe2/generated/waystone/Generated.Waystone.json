@@ -247,7 +247,7 @@
         },
         {
             "id": 457744569,
-            "regex": "ased mon",
+            "regex": "r damage$",
             "rawText": "(5-20)% increased Monster Damage",
             "generalizedText": "^#% increased monster damage$",
             "options": {
@@ -414,7 +414,7 @@
         },
         {
             "id": 1449881570,
-            "regex": "son o",
+            "regex": "n on hit$",
             "rawText": "Monsters have (13-34)% chance to Poison on Hit",
             "generalizedText": "^monsters have #% chance to poison on hit$",
             "options": {
@@ -430,7 +430,7 @@
         },
         {
             "id": 1498656041,
-            "regex": "ed el",
+            "regex": "cation$",
             "rawText": "Monster have (60-120)% increased Elemental Ailment Application",
             "generalizedText": "^monster have #% increased elemental ailment application$",
             "options": {

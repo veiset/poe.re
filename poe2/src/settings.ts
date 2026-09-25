@@ -193,6 +193,7 @@ type TabletSettings = {
     abyss: boolean,
     temple: boolean,
     overseer: boolean,
+    expedition: boolean,
   },
   modifier: {
     usesRemaining: boolean,
@@ -411,6 +412,7 @@ export const defaultSettings: Settings = {
       abyss: false,
       temple: false,
       overseer: false,
+      expedition: false,
     },
     modifier: {
       usesRemaining: false,

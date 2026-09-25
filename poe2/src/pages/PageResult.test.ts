@@ -169,10 +169,20 @@ describe("poe2 generateTabletRegex", () => {
     const s = fullSettings({
       tablet: {
         ...defaultSettings.tablet,
-        type: {irradiated: false, ritual: true, delirium: false, breach: false, abyss: false, temple: false, overseer: false},
+        type: {irradiated: false, ritual: true, delirium: false, breach: false, abyss: false, temple: false, overseer: false, expedition: false},
       },
     });
     expect(generateTabletRegex(s)).toBe(`"(tual)"`);
+  });
+
+  test("expedition tablet type", () => {
+    const s = fullSettings({
+      tablet: {
+        ...defaultSettings.tablet,
+        type: {...defaultSettings.tablet.type, expedition: true},
+      },
+    });
+    expect(generateTabletRegex(s)).toBe(`"(xped)"`);
   });
 
   test("min uses remaining 5", () => {
