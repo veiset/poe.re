@@ -1,0 +1,1721 @@
+{
+    "tokens": [
+        {
+            "id": -2067641223,
+            "regex": "l c",
+            "rawText": "+(26—40)% a la resistencia al caos de los monstruos | +(26—40)% a las resistencias elementales de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^#% a la resistencia al caos de los monstruos $|^ #% a las resistencias elementales de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2059756400,
+            "regex": "mo r",
+            "rawText": "Los monstruos infligen el (15—20)% de su daño físico extra como rayo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como rayo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2041529555,
+            "regex": "ra a",
+            "rawText": "Los monstruos aplican 1 enredadera acechante con cada golpe | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^los monstruos aplican # enredadera acechante con cada golpe $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2014861153,
+            "regex": "je e",
+            "rawText": "Las áreas adyacentes contienen un mensaje embotellado adicional",
+            "generalizedText": "^las areas adyacentes contienen un mensaje embotellado adicional$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2014861152,
+            "regex": "sajes",
+            "rawText": "Las áreas adyacentes contienen 2 mensajes embotellados adicionales",
+            "generalizedText": "^las areas adyacentes contienen # mensajes embotellados adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2006102362,
+            "regex": "mo r",
+            "rawText": "Los monstruos infligen el (5—8)% de su daño físico extra como rayo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 16%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como rayo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2006101730,
+            "regex": "mo r",
+            "rawText": "Los monstruos infligen el (9—14)% de su daño físico extra como rayo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como rayo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1949131405,
+            "regex": "s pe",
+            "rawText": "El daño de los monstruos penetra el (8—12)% de las resistencias elementales | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^el dano de los monstruos penetra el #% de las resistencias elementales $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1942964983,
+            "regex": "o un \\d+% e",
+            "rawText": "Tamaño de los grupos de monstruos aumentado un 5% en todas las áreas del viaje submarino",
+            "generalizedText": "^tamano de los grupos de monstruos aumentado un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1942964982,
+            "regex": "o un \\d+% e",
+            "rawText": "Tamaño de los grupos de monstruos aumentado un 7% en todas las áreas del viaje submarino",
+            "generalizedText": "^tamano de los grupos de monstruos aumentado un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036942,
+            "regex": "uo a",
+            "rawText": "Las áreas adyacentes contienen un monstruo aprisionado adicional",
+            "generalizedText": "^las areas adyacentes contienen un monstruo aprisionado adicional$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036941,
+            "regex": "s apr",
+            "rawText": "Las áreas adyacentes contienen (2—4) monstruos aprisionados adicionales",
+            "generalizedText": "^las areas adyacentes contienen # monstruos aprisionados adicionales$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036940,
+            "regex": "s apr",
+            "rawText": "Las áreas adyacentes contienen 5 monstruos aprisionados adicionales",
+            "generalizedText": "^las areas adyacentes contienen # monstruos aprisionados adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1780104672,
+            "regex": "o h",
+            "rawText": "Los monstruos infligen el (15—20)% de su daño físico extra como hielo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como hielo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1657203875,
+            "regex": "oy",
+            "rawText": "Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16% | Los monstruos disparan 2 proyectiles adicionales",
+            "generalizedText": "^tamano de los grupos de monstruos de las areas adyacentes aumentado un #% $|^ los monstruos disparan # proyectiles adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1651268408,
+            "regex": "tum",
+            "rawText": "Los monstruos entumecen al golpear con hechizos | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos entumecen al golpear con hechizos $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1621293719,
+            "regex": "% ma",
+            "rawText": "Los monstruos tienen un (35—45)% más de vida | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^los monstruos tienen un #% mas de vida $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1612284215,
+            "regex": "^v",
+            "rawText": "Velocidad de movimiento de los monstruos aumentada un 20% | Velocidad de ataque de los monstruos aumentada un 20% | Velocidad de lanzamiento de hechizos de los monstruos aumentada un 20% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^velocidad de movimiento de los monstruos aumentada un #% $|^ velocidad de ataque de los monstruos aumentada un #% $|^ velocidad de lanzamiento de hechizos de los monstruos aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1576025147,
+            "regex": "^v",
+            "rawText": "Velocidad de movimiento de los monstruos aumentada un 10% | Velocidad de ataque de los monstruos aumentada un 10% | Velocidad de lanzamiento de hechizos de los monstruos aumentada un 10% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 14%",
+            "generalizedText": "^velocidad de movimiento de los monstruos aumentada un #% $|^ velocidad de ataque de los monstruos aumentada un #% $|^ velocidad de lanzamiento de hechizos de los monstruos aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1547580139,
+            "regex": "bar",
+            "rawText": "Las áreas adyacentes contienen (12—15) grupos adicionales de barriles",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de barriles$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1547580138,
+            "regex": "bar",
+            "rawText": "Las áreas adyacentes contienen (16—20) grupos adicionales de barriles",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de barriles$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1452177158,
+            "regex": "asc",
+            "rawText": "En todas las áreas del viaje submarino, los frascos que caen tienen un 100% de probabilidad de tener un 20% de calidad",
+            "generalizedText": "^en todas las areas del viaje submarino, los frascos que caen tienen un #% de probabilidad de tener un #% de calidad$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1442892010,
+            "regex": "o h",
+            "rawText": "Los monstruos infligen el (5—8)% de su daño físico extra como hielo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 16%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como hielo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1442891378,
+            "regex": "o h",
+            "rawText": "Los monstruos infligen el (9—14)% de su daño físico extra como hielo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como hielo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1424681657,
+            "regex": "cie",
+            "rawText": "Los monstruos ciegan con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos ciegan con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1407443772,
+            "regex": "cin",
+            "rawText": "Los cinturones que caen en las áreas adyacentes tienen un 10% de probabilidad de caer como cinturón único",
+            "generalizedText": "^los cinturones que caen en las areas adyacentes tienen un #% de probabilidad de caer como cinturon unico$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1407443771,
+            "regex": "cin",
+            "rawText": "Los cinturones que caen en las áreas adyacentes tienen un 20% de probabilidad de caer como cinturón único",
+            "generalizedText": "^los cinturones que caen en las areas adyacentes tienen un #% de probabilidad de caer como cinturon unico$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1399173454,
+            "regex": "hit",
+            "rawText": "Los monstruos ganan el (15—20)% de su daño físico como daño extra de caos | Los monstruos aplican Marchito durante 2 segundos con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos ganan el #% de su dano fisico como dano extra de caos $|^ los monstruos aplican marchito durante # segundos con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1392546753,
+            "regex": "nil",
+            "rawText": "Los anillos que caen en las áreas adyacentes tienen un 10% de probabilidad de caer como un anillo único",
+            "generalizedText": "^los anillos que caen en las areas adyacentes tienen un #% de probabilidad de caer como un anillo unico$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1392546752,
+            "regex": "nil",
+            "rawText": "Los anillos que caen en las áreas adyacentes tienen un 20% de probabilidad de caer como un anillo único",
+            "generalizedText": "^los anillos que caen en las areas adyacentes tienen un #% de probabilidad de caer como un anillo unico$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1387430712,
+            "regex": "r una carga de f",
+            "rawText": "Los monstruos tienen un 50% de probabilidad de ganar una carga de frenesí con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de ganar una carga de frenesi con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1385003407,
+            "regex": "imas",
+            "rawText": "Los jugadores tienen (-9—-6)% a todas las resistencias máximas | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 14%",
+            "generalizedText": "^los jugadores tienen -#% a todas las resistencias maximas $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1335199964,
+            "regex": "lm",
+            "rawText": "Los jugadores tienen Devorador de almas en todas las áreas del viaje submarino",
+            "generalizedText": "^los jugadores tienen devorador de almas en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1303321677,
+            "regex": "r,",
+            "rawText": "Los monstruos roban cargas de poder, frenesí y aguante con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos roban cargas de poder, frenesi y aguante con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1261560107,
+            "regex": "ud",
+            "rawText": "Los monstruos ganan el (51—80)% de la vida máxima como escudo de energía máximo extra | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1190917116,
+            "regex": "mo f",
+            "rawText": "Los monstruos infligen el (5—8)% de su daño físico extra como fuego | Rareza de los objetos que caen en las áreas adyacentes aumentada un 16%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como fuego $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1190916484,
+            "regex": "mo f",
+            "rawText": "Los monstruos infligen el (9—14)% de su daño físico extra como fuego | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como fuego $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1182373514,
+            "regex": "o h",
+            "rawText": "Los monstruos infligen el (21—35)% de su daño físico extra como hielo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 38%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como hielo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1148606395,
+            "regex": "^to",
+            "rawText": "Todas las áreas del viaje submarino contienen medusas amigables",
+            "generalizedText": "^todas las areas del viaje submarino contienen medusas amigables$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1080581745,
+            "regex": "nu",
+            "rawText": "Los monstruos tienen +80% de probabilidad de atenuar todo el daño de hechizos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el dano de hechizos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1057223983,
+            "regex": "ult",
+            "rawText": "Los monstruos tienen la probabilidad de golpe crítico aumentada un (201—240)% | +(41—45)% al multiplicador de golpe crítico de los monstruos | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^los monstruos tienen la probabilidad de golpe critico aumentada un #% $|^ #% al multiplicador de golpe critico de los monstruos $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1022925598,
+            "regex": "u a",
+            "rawText": "Los monstruos tienen su área de efecto aumentada un (41—45)% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^los monstruos tienen su area de efecto aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -983900529,
+            "regex": "env",
+            "rawText": "Los monstruos envenenan con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos envenenan con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -964200120,
+            "regex": "mo f",
+            "rawText": "Los monstruos infligen el (21—35)% de su daño físico extra como fuego | Rareza de los objetos que caen en las áreas adyacentes aumentada un 38%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como fuego $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -914209629,
+            "regex": "alt",
+            "rawText": "Los monstruos tienen un 20% de probabilidad de evitar los estados alterados elementales | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar los estados alterados elementales $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -914208997,
+            "regex": "alt",
+            "rawText": "Los monstruos tienen un 40% de probabilidad de evitar los estados alterados elementales | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar los estados alterados elementales $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -863371234,
+            "regex": "pot",
+            "rawText": "Los monstruos tienen una probabilidad de estar potenciados por 2000 fuegos fatuos del bosque",
+            "generalizedText": "^los monstruos tienen una probabilidad de estar potenciados por # fuegos fatuos del bosque$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -863371233,
+            "regex": "pot",
+            "rawText": "Los monstruos tienen una probabilidad de estar potenciados por 4000 fuegos fatuos del bosque",
+            "generalizedText": "^los monstruos tienen una probabilidad de estar potenciados por # fuegos fatuos del bosque$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -861664766,
+            "regex": "urd",
+            "rawText": "Los monstruos tienen un (10—20)% más de vida | Los monstruos no pueden ser aturdidos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^los monstruos tienen un #% mas de vida $|^ los monstruos no pueden ser aturdidos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -853709831,
+            "regex": "ducc",
+            "rawText": "+(5—8)% a la reducción de daño físico de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^#% a la reduccion de dano fisico de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -853709199,
+            "regex": "ducc",
+            "rawText": "+(9—13)% a la reducción de daño físico de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^#% a la reduccion de dano fisico de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -838741420,
+            "regex": "rev",
+            "rawText": "El modificador de viaje submarino se revelará una vez que se haya explorado",
+            "generalizedText": "^el modificador de viaje submarino se revelara una vez que se haya explorado$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -823853313,
+            "regex": "ud",
+            "rawText": "Los monstruos ganan el (35—50)% de la vida máxima como escudo de energía máximo extra | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -728241162,
+            "regex": "vec",
+            "rawText": "Las habilidades de los monstruos se encadenan 2 veces adicionales | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^las habilidades de los monstruos se encadenan # veces adicionales $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -721532603,
+            "regex": "n una carga de p",
+            "rawText": "Los monstruos ganan una carga de poder con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos ganan una carga de poder con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -695326307,
+            "regex": "ducc",
+            "rawText": "+(14—20)% a la reducción de daño físico de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^#% a la reduccion de dano fisico de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -666785766,
+            "regex": "^da",
+            "rawText": "Daño de los monstruos aumentado un (10—14)% | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^dano de los monstruos aumentado un #% $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -666785134,
+            "regex": "^da",
+            "rawText": "Daño de los monstruos aumentado un (15—20)% | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^dano de los monstruos aumentado un #% $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -620381076,
+            "regex": "ope",
+            "rawText": "Las áreas adyacentes contienen 2 cajas fuertes del operario adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del operario adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -620381075,
+            "regex": "ope",
+            "rawText": "Las áreas adyacentes contienen 3 cajas fuertes del operario adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del operario adicionales$",
+            "options": {
+                "scary": 78,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -617632680,
+            "regex": "n es",
+            "rawText": "La cantidad de objetos que caen está aumentada un 8% en todas las áreas del viaje submarino",
+            "generalizedText": "^la cantidad de objetos que caen esta aumentada un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -617632679,
+            "regex": "n es",
+            "rawText": "La cantidad de objetos que caen está aumentada un 10% en todas las áreas del viaje submarino",
+            "generalizedText": "^la cantidad de objetos que caen esta aumentada un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -600428392,
+            "regex": "vin",
+            "rawText": "Las áreas adyacentes contienen 2 cajas fuertes del adivino adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del adivino adicionales$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -600428391,
+            "regex": "vin",
+            "rawText": "Las áreas adyacentes contienen 3 cajas fuertes del adivino adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del adivino adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -545498346,
+            "regex": "tre",
+            "rawText": "Las áreas adyacentes contienen (4—5) estrellas gigantes adicionales",
+            "generalizedText": "^las areas adyacentes contienen # estrellas gigantes adicionales$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -545498345,
+            "regex": "tre",
+            "rawText": "Las áreas adyacentes contienen (6—7) estrellas gigantes adicionales",
+            "generalizedText": "^las areas adyacentes contienen # estrellas gigantes adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -475471809,
+            "regex": "% ma",
+            "rawText": "Los monstruos tienen un (46—60)% más de vida | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^los monstruos tienen un #% mas de vida $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -471323422,
+            "regex": "rca",
+            "rawText": "Las áreas adyacentes contienen 2 cajas fuertes del arcanista adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del arcanista adicionales$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -471323421,
+            "regex": "rca",
+            "rawText": "Las áreas adyacentes contienen 3 cajas fuertes del arcanista adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes del arcanista adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -452424730,
+            "regex": "mo r",
+            "rawText": "Los monstruos infligen el (21—35)% de su daño físico extra como rayo | Rareza de los objetos que caen en las áreas adyacentes aumentada un 38%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como rayo $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -438912567,
+            "regex": "r una carga de p",
+            "rawText": "Los monstruos tienen un 50% de probabilidad de ganar una carga de poder con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de ganar una carga de poder con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -405270553,
+            "regex": "far",
+            "rawText": "Las áreas adyacentes contienen 4 faroles dorados adicionales",
+            "generalizedText": "^las areas adyacentes contienen # faroles dorados adicionales$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -388654649,
+            "regex": "ibe",
+            "rawText": "Los monstruos reciben el daño extra de los golpes críticos reducido un (20—29)% | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos reciben el dano extra de los golpes criticos reducido un #% $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -363415639,
+            "regex": "xo",
+            "rawText": "Las áreas adyacentes contienen peces exóticos y muy valiosos",
+            "generalizedText": "^las areas adyacentes contienen peces exoticos y muy valiosos$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -329390419,
+            "regex": "% ma",
+            "rawText": "Los monstruos tienen un (10—19)% más de vida | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^los monstruos tienen un #% mas de vida $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -329389787,
+            "regex": "% ma",
+            "rawText": "Los monstruos tienen un (20—34)% más de vida | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos tienen un #% mas de vida $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -315761648,
+            "regex": "ld",
+            "rawText": "-50% menos de efecto de las maldiciones sobre los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^-#% menos de efecto de las maldiciones sobre los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -293676325,
+            "regex": "s pe",
+            "rawText": "El daño de los monstruos penetra el (13—15)% de las resistencias elementales | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^el dano de los monstruos penetra el #% de las resistencias elementales $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -289110147,
+            "regex": "amu",
+            "rawText": "Los amuletos que caen en las áreas adyacentes tienen un 10% de probabilidad de caer como un amuleto único",
+            "generalizedText": "^los amuletos que caen en las areas adyacentes tienen un #% de probabilidad de caer como un amuleto unico$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -289110146,
+            "regex": "amu",
+            "rawText": "Los amuletos que caen en las áreas adyacentes tienen un 20% de probabilidad de caer como un amuleto único",
+            "generalizedText": "^los amuletos que caen en las areas adyacentes tienen un #% de probabilidad de caer como un amuleto unico$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -252733995,
+            "regex": "nu",
+            "rawText": "Los monstruos tienen +40% de probabilidad de atenuar todo el daño de hechizos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el dano de hechizos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -209794039,
+            "regex": "alt",
+            "rawText": "Los monstruos tienen un 80% de probabilidad de evitar los estados alterados elementales | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar los estados alterados elementales $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -60824026,
+            "regex": "n una carga de f",
+            "rawText": "Los monstruos ganan una carga de frenesí con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos ganan una carga de frenesi con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -17433870,
+            "regex": "^da",
+            "rawText": "Daño de los monstruos aumentado un (26—35)% | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 45%",
+            "generalizedText": "^dano de los monstruos aumentado un #% $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 7318347,
+            "regex": "r una carga de a",
+            "rawText": "Los monstruos tienen un 50% de probabilidad de ganar una carga de aguante con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de ganar una carga de aguante con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 14422429,
+            "regex": "imas",
+            "rawText": "Los jugadores tienen (-12—-10)% a todas las resistencias máximas | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 16%",
+            "generalizedText": "^los jugadores tienen -#% a todas las resistencias maximas $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 166142513,
+            "regex": "oy",
+            "rawText": "Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18% | Los monstruos disparan 2 proyectiles adicionales",
+            "generalizedText": "^tamano de los grupos de monstruos de las areas adyacentes aumentado un #% $|^ los monstruos disparan # proyectiles adicionales$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 226723843,
+            "regex": "n una carga de a",
+            "rawText": "Los monstruos ganan una carga de aguante con cada golpe | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos ganan una carga de aguante con cada golpe $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 320757000,
+            "regex": "hit",
+            "rawText": "Los monstruos ganan el (21—29)% de su daño físico como daño extra de caos | Los monstruos aplican Marchito durante 2 segundos con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 45%",
+            "generalizedText": "^los monstruos ganan el #% de su dano fisico como dano extra de caos $|^ los monstruos aplican marchito durante # segundos con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 378631742,
+            "regex": "a j",
+            "rawText": "Las áreas adyacentes contienen una jaula de espíritus atormentados adicional",
+            "generalizedText": "^las areas adyacentes contienen una jaula de espiritus atormentados adicional$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 378631743,
+            "regex": "ulas",
+            "rawText": "Las áreas adyacentes contienen 2 jaulas de espíritus atormentados adicionales",
+            "generalizedText": "^las areas adyacentes contienen # jaulas de espiritus atormentados adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 401607867,
+            "regex": "lu",
+            "rawText": "Influencia de Atziri",
+            "generalizedText": "^influencia de atziri$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 411355763,
+            "regex": "ducc",
+            "rawText": "+(21—35)% a la reducción de daño físico de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 55%",
+            "generalizedText": "^#% a la reduccion de dano fisico de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 429830771,
+            "regex": "imas",
+            "rawText": "Los jugadores tienen (-14—-12)% a todas las resistencias máximas | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^los jugadores tienen -#% a todas las resistencias maximas $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 444863491,
+            "regex": "eras",
+            "rawText": "Los monstruos aplican 3 enredaderas acechantes con cada golpe | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^los monstruos aplican # enredaderas acechantes con cada golpe $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 523869859,
+            "regex": "l c",
+            "rawText": "+(20—25)% a la resistencia al caos de los monstruos | +(20—25)% a las resistencias elementales de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^#% a la resistencia al caos de los monstruos $|^ #% a las resistencias elementales de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 564025627,
+            "regex": "sca",
+            "rawText": "El Área tiene zonas de suelo escarchado | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^el area tiene zonas de suelo escarchado $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 633534750,
+            "regex": "ei",
+            "rawText": "En todas las áreas del viaje submarino, los monstruos raros tienen un 100% de probabilidad de estar poseídos",
+            "generalizedText": "^en todas las areas del viaje submarino, los monstruos raros tienen un #% de probabilidad de estar poseidos$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 639019423,
+            "regex": "^v",
+            "rawText": "Velocidad de movimiento de los monstruos aumentada un 30% | Velocidad de ataque de los monstruos aumentada un 30% | Velocidad de lanzamiento de hechizos de los monstruos aumentada un 30% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^velocidad de movimiento de los monstruos aumentada un #% $|^ velocidad de ataque de los monstruos aumentada un #% $|^ velocidad de lanzamiento de hechizos de los monstruos aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 709639731,
+            "regex": "l c",
+            "rawText": "+0% a la resistencia al caos de los monstruos | +(5—10)% a las resistencias elementales de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^#% a la resistencia al caos de los monstruos $|^ #% a las resistencias elementales de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 709640363,
+            "regex": "l c",
+            "rawText": "+(10—19)% a la resistencia al caos de los monstruos | +(11—19)% a las resistencias elementales de los monstruos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^#% a la resistencia al caos de los monstruos $|^ #% a las resistencias elementales de los monstruos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 755035833,
+            "regex": "nu",
+            "rawText": "Los monstruos tienen +60% de probabilidad de atenuar todo el daño de hechizos | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el dano de hechizos $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 780719992,
+            "regex": "ej",
+            "rawText": "Las áreas adyacentes contienen (8—10) grupos adicionales de cangrejos",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de cangrejos$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 780719993,
+            "regex": "ej",
+            "rawText": "Las áreas adyacentes contienen (11—14) grupos adicionales de cangrejos",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de cangrejos$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 804352412,
+            "regex": "^da",
+            "rawText": "Daño de los monstruos aumentado un (21—25)% | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^dano de los monstruos aumentado un #% $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 836462855,
+            "regex": "ibe",
+            "rawText": "Los monstruos reciben el daño extra de los golpes críticos reducido un (30—45)% | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^los monstruos reciben el dano extra de los golpes criticos reducido un #% $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 924701372,
+            "regex": "hit",
+            "rawText": "Los monstruos ganan el (10—14)% de su daño físico como daño extra de caos | Los monstruos aplican Marchito durante 2 segundos con cada golpe | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos ganan el #% de su dano fisico como dano extra de caos $|^ los monstruos aplican marchito durante # segundos con cada golpe $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 996861445,
+            "regex": "pul",
+            "rawText": "Las áreas adyacentes contienen (8—10) grupos adicionales de pulpos",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de pulpos$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 996861446,
+            "regex": "pul",
+            "rawText": "Las áreas adyacentes contienen (11—14) grupos adicionales de pulpos",
+            "generalizedText": "^las areas adyacentes contienen # grupos adicionales de pulpos$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1110740818,
+            "regex": "cos e",
+            "rawText": "La cantidad de monstruos mágicos está aumentada un 25% en todas las áreas del viaje submarino",
+            "generalizedText": "^la cantidad de monstruos magicos esta aumentada un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1147239824,
+            "regex": "pal",
+            "rawText": "Los monstruos tienen un 40% de probabilidad de evitar el veneno, el empalamiento y el sangrado | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 28%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar el veneno, el empalamiento y el sangrado $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1157662300,
+            "regex": "cos d",
+            "rawText": "La cantidad de monstruos mágicos de las áreas adyacentes está aumentada un 30%",
+            "generalizedText": "^la cantidad de monstruos magicos de las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1157662301,
+            "regex": "cos d",
+            "rawText": "La cantidad de monstruos mágicos de las áreas adyacentes está aumentada un 60%",
+            "generalizedText": "^la cantidad de monstruos magicos de las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1171268340,
+            "regex": "lis",
+            "rawText": "Los monstruos lisian al golpear con ataques | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos lisian al golpear con ataques $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832331,
+            "regex": "o, la cantidad de a",
+            "rawText": "En todas las áreas del viaje submarino, la cantidad de azufre de los muertos que cae está aumentada un 15%",
+            "generalizedText": "^en todas las areas del viaje submarino, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832332,
+            "regex": "o, la cantidad de a",
+            "rawText": "En todas las áreas del viaje submarino, la cantidad de azufre de los muertos que cae está aumentada un 20%",
+            "generalizedText": "^en todas las areas del viaje submarino, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832333,
+            "regex": "o, la cantidad de a",
+            "rawText": "En todas las áreas del viaje submarino, la cantidad de azufre de los muertos que cae está aumentada un 25%",
+            "generalizedText": "^en todas las areas del viaje submarino, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1264341092,
+            "regex": "dr",
+            "rawText": "Los monstruos raros de las áreas adyacentes tendrán un modificador del Panteón",
+            "generalizedText": "^los monstruos raros de las areas adyacentes tendran un modificador del panteon$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1269092788,
+            "regex": "nen a",
+            "rawText": "Los monstruos tienen Antimaleficios | En las áreas adyacentes, la cantidad de azufre de los muertos que cae está aumentada un 30%",
+            "generalizedText": "^los monstruos tienen antimaleficios $|^ en las areas adyacentes, la cantidad de azufre de los muertos que cae esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1278633531,
+            "regex": "\n",
+            "rawText": "Los Monstruos no pueden ser Provocados | La velocidad de acción de los monstruos no se puede modificar por debajo del valor base\nLa velocidad de movimiento de los monstruos no se puede modificar por debajo del valor base | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos no pueden ser provocados $|^ la velocidad de accion de los monstruos no se puede modificar por debajo del valor base\nla velocidad de movimiento de los monstruos no se puede modificar por debajo del valor base $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1352480396,
+            "regex": "u a",
+            "rawText": "Los monstruos tienen su área de efecto aumentada un (30—40)% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 14%",
+            "generalizedText": "^los monstruos tienen su area de efecto aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1548847257,
+            "regex": "ctr",
+            "rawText": "El área tiene zonas de suelo electrificado que aumentan el daño recibido en un 10% | Rareza de los objetos que caen en las áreas adyacentes aumentada un 22%",
+            "generalizedText": "^el area tiene zonas de suelo electrificado que aumentan el dano recibido en un #% $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1576587887,
+            "regex": "o, la cantidad de m",
+            "rawText": "En todas las áreas del viaje submarino, la cantidad de monstruos raros está aumentada un 25%",
+            "generalizedText": "^en todas las areas del viaje submarino, la cantidad de monstruos raros esta aumentada un #%$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1672796984,
+            "regex": "u a",
+            "rawText": "Los monstruos tienen su área de efecto aumentada un (46—60)% | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^los monstruos tienen su area de efecto aumentada un #% $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1724147251,
+            "regex": "alt",
+            "rawText": "Los monstruos tienen un 60% de probabilidad de evitar los estados alterados elementales | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 40%",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de evitar los estados alterados elementales $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1736149746,
+            "regex": "mo f",
+            "rawText": "Los monstruos infligen el (15—20)% de su daño físico extra como fuego | Rareza de los objetos que caen en las áreas adyacentes aumentada un 30%",
+            "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como fuego $|^ rareza de los objetos que caen en las areas adyacentes aumentada un #%$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1761410479,
+            "regex": "eq",
+            "rawText": "El 40% del equipamiento arrojado por los monstruos de las áreas adyacentes se convierte en oro",
+            "generalizedText": "^el #% del equipamiento arrojado por los monstruos de las areas adyacentes se convierte en oro$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1761410480,
+            "regex": "eq",
+            "rawText": "El 80% del equipamiento arrojado por los monstruos de las áreas adyacentes se convierte en oro",
+            "generalizedText": "^el #% del equipamiento arrojado por los monstruos de las areas adyacentes se convierte en oro$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1764464568,
+            "regex": "n au",
+            "rawText": "Rareza de los objetos que caen aumentada un 7% en todas las áreas del viaje submarino",
+            "generalizedText": "^rareza de los objetos que caen aumentada un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1764464569,
+            "regex": "n au",
+            "rawText": "Rareza de los objetos que caen aumentada un 9% en todas las áreas del viaje submarino",
+            "generalizedText": "^rareza de los objetos que caen aumentada un #% en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1765098898,
+            "regex": "ars",
+            "rawText": "Los monstruos raros tienen un 50% de probabilidad de fracturarse al morir en todas las áreas del viaje submarino",
+            "generalizedText": "^los monstruos raros tienen un #% de probabilidad de fracturarse al morir en todas las areas del viaje submarino$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1774543447,
+            "regex": "ud",
+            "rawText": "Los monstruos ganan el (10—19)% de la vida máxima como escudo de energía máximo extra | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 25%",
+            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1774544079,
+            "regex": "ud",
+            "rawText": "Los monstruos ganan el (20—34)% de la vida máxima como escudo de energía máximo extra | La cantidad de objetos que caen en las áreas adyacentes está aumentada un 32%",
+            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra $|^ la cantidad de objetos que caen en las areas adyacentes esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1777791399,
+            "regex": "ult",
+            "rawText": "Los monstruos tienen la probabilidad de golpe crítico aumentada un (242—350)% | +(41—45)% al multiplicador de golpe crítico de los monstruos | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 18%",
+            "generalizedText": "^los monstruos tienen la probabilidad de golpe critico aumentada un #% $|^ #% al multiplicador de golpe critico de los monstruos $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1869768337,
+            "regex": "urad",
+            "rawText": "Los objetos que caen en las áreas adyacentes tienen un 2% de probabilidad de estar fracturados",
+            "generalizedText": "^los objetos que caen en las areas adyacentes tienen un #% de probabilidad de estar fracturados$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1905563325,
+            "regex": "ult",
+            "rawText": "Los monstruos tienen la probabilidad de golpe crítico aumentada un (180—200)% | +(31—40)% al multiplicador de golpe crítico de los monstruos | Tamaño de los grupos de monstruos de las áreas adyacentes aumentado un 14%",
+            "generalizedText": "^los monstruos tienen la probabilidad de golpe critico aumentada un #% $|^ #% al multiplicador de golpe critico de los monstruos $|^ tamano de los grupos de monstruos de las areas adyacentes aumentado un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1982371835,
+            "regex": "bit",
+            "rawText": "Los monstruos raros que son habitantes naturales de todas las áreas del viaje submarino están aprisionados por esencias",
+            "generalizedText": "^los monstruos raros que son habitantes naturales de todas las areas del viaje submarino estan aprisionados por esencias$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2040431782,
+            "regex": "cos$",
+            "rawText": "Los monstruos de todas las áreas del viaje submarino son al menos mágicos",
+            "generalizedText": "^los monstruos de todas las areas del viaje submarino son al menos magicos$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2080208069,
+            "regex": "^en l",
+            "rawText": "En las áreas adyacentes, la cantidad de monstruos raros está aumentada un 30%",
+            "generalizedText": "^en las areas adyacentes, la cantidad de monstruos raros esta aumentada un #%$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2080208070,
+            "regex": "^en l",
+            "rawText": "En las áreas adyacentes, la cantidad de monstruos raros está aumentada un 60%",
+            "generalizedText": "^en las areas adyacentes, la cantidad de monstruos raros esta aumentada un #%$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214528,
+            "regex": "a f",
+            "rawText": "Las áreas adyacentes contienen una caja fuerte adicional",
+            "generalizedText": "^las areas adyacentes contienen una caja fuerte adicional$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214529,
+            "regex": "rtes a",
+            "rawText": "Las áreas adyacentes contienen (2—4) cajas fuertes adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes adicionales$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214530,
+            "regex": "rtes a",
+            "rawText": "Las áreas adyacentes contienen 5 cajas fuertes adicionales",
+            "generalizedText": "^las areas adyacentes contienen # cajas fuertes adicionales$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        }
+    ],
+    "optimizationTable": {}
+}

@@ -17,7 +17,7 @@ export interface FavoritePageDefinition { key: Poe1FavoritePageKey; label: strin
 export const FAVORITE_PAGE_REGISTRY: Record<Poe1FavoritePageKey, FavoritePageDefinition> = {
   vendor: {key: "vendor", label: "Vendor", route: "/vendor", icon: vendorIcon, languageDependent: false},
   maps: {key: "maps", label: "Map mods", route: "/maps", icon: mapIcon, languageDependent: true},
-  boat: {key: "boat", label: "Boat", route: "/boat", icon: boatIcon, languageDependent: false},
+  boat: {key: "boat", label: "Boat", route: "/boat", icon: boatIcon, languageDependent: true},
   items: {key: "items", label: "Items", route: "/items", icon: itemIcon, languageDependent: false},
   expedition: {key: "expedition", label: "Expedition", route: "/expedition", icon: expeditionIcon, languageDependent: false},
   heist: {key: "heist", label: "Heist", route: "/heist", icon: heistIcon, languageDependent: false},

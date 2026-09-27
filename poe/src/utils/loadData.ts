@@ -6,6 +6,7 @@ import type {Jewel} from "@poe/types/generated/jewel";
 import type {MapModsRegex} from "@poe/types/generated/mapmods";
 import type {Scarabs} from "@poe/types/generated/scarabs";
 import type {GemsRegex} from "@poe/types/generated/gems";
+import {createLanguageDataLoader} from "@shared/core/LanguageDataLoader";
 
 const basePath = "/generated";
 
@@ -38,38 +39,20 @@ const itemRegex = lazy(() =>
   fetchJson<ItemRegex[]>(`${basePath}/item/Generated.Item.min.json`),
 );
 
-const boatMods = lazy(() => fetchJson<BoatModsRegex>(`${basePath}/boatmods/Generated.BoatMods.ENGLISH.min.json`));
+const boatMods = createLanguageDataLoader<string, BoatModsRegex>((language) =>
+  fetchJson<BoatModsRegex>(`${basePath}/boatmods/Generated.BoatMods.${language}.min.json`),
+);
 const expedition = lazy(() => fetchJson<Expedition>(`${basePath}/expedition/Generated.Expedition.min.json`));
 const jewel = lazy(() => fetchJson<Jewel>(`${basePath}/jewel/Generated.Jewel.min.json`));
-const beastRegexes = new Map<string, () => Promise<BeastRegex>>();
-function beastRegexFor(language: string): () => Promise<BeastRegex> {
-  let load = beastRegexes.get(language);
-  if (!load) {
-    load = lazy(() => fetchJson<BeastRegex>(`${basePath}/beast/Generated.BeastRegex.${language}.min.json`));
-    beastRegexes.set(language, load);
-  }
-  return load;
-}
-
-const scarabData = new Map<string, () => Promise<Scarabs>>();
-function scarabsFor(language: string): () => Promise<Scarabs> {
-  let load = scarabData.get(language);
-  if (!load) {
-    load = lazy(() => fetchJson<Scarabs>(`${basePath}/scarabs/Generated.Scarabs.${language}.min.json`));
-    scarabData.set(language, load);
-  }
-  return load;
-}
-
-const mapMods = new Map<string, () => Promise<MapModsRegex>>();
-function mapModsFor(language: string): () => Promise<MapModsRegex> {
-  let load = mapMods.get(language);
-  if (!load) {
-    load = lazy(() => fetchJson<MapModsRegex>(`${basePath}/mapmods/Generated.Map.${language}.min.json`));
-    mapMods.set(language, load);
-  }
-  return load;
-}
+const beastRegexes = createLanguageDataLoader<string, BeastRegex>((language) =>
+  fetchJson<BeastRegex>(`${basePath}/beast/Generated.BeastRegex.${language}.min.json`),
+);
+const scarabData = createLanguageDataLoader<string, Scarabs>((language) =>
+  fetchJson<Scarabs>(`${basePath}/scarabs/Generated.Scarabs.${language}.min.json`),
+);
+const mapMods = createLanguageDataLoader<string, MapModsRegex>((language) =>
+  fetchJson<MapModsRegex>(`${basePath}/mapmods/Generated.Map.${language}.min.json`),
+);
 const gems = lazy(() =>
   fetchJson<GemsRegex>(`${basePath}/gems/Generated.Gems.ENGLISH.min.json`),
 );
@@ -82,12 +65,12 @@ export function loadItemRegex(): Promise<ItemRegex[]> {
   return itemRegex();
 }
 
-export const loadBeastRegex = (language: string): Promise<BeastRegex> => beastRegexFor(language)();
-export const loadBoatMods = (): Promise<BoatModsRegex> => boatMods();
+export const loadBeastRegex = (language: string): Promise<BeastRegex> => beastRegexes(language);
+export const loadBoatMods = (language: string): Promise<BoatModsRegex> => boatMods(language);
 export const loadExpedition = (): Promise<Expedition> => expedition();
 export const loadJewel = (): Promise<Jewel> => jewel();
-export const loadScarabs = (language: string): Promise<Scarabs> => scarabsFor(language)();
-export const loadMapMods = (language: string): Promise<MapModsRegex> => mapModsFor(language)();
+export const loadScarabs = (language: string): Promise<Scarabs> => scarabData(language);
+export const loadMapMods = (language: string): Promise<MapModsRegex> => mapMods(language);
 export function loadGems(): Promise<GemsRegex> {
   return gems();
 }

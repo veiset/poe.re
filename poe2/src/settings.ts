@@ -1,4 +1,5 @@
 import type {ItemAffixRegex as ItemModifier} from "@poe2/types/generated/item";
+import type {RepoeLanguageKey} from "@poe/utils/Languages";
 import {AsyncTradePriceRangeValue} from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {itemCraftingDefault, ItemCraftingSettings} from "@shared/types/Settings.types";
 
@@ -22,7 +23,8 @@ export interface Poe2RegexFavoriteRecord extends Poe2FavoriteBaseRecord {
   pageKey: Poe2FavoritePageKey;
   regex: string;
   configuration: unknown;
-  context: {league?: string};
+  context: {league?: string; language?: string};
+  languageDependent: boolean;
 }
 
 export interface Poe2StaticFavoriteRecord extends Poe2FavoriteBaseRecord {
@@ -247,6 +249,7 @@ type VendorSettings = {
 
 export interface Settings {
   name: string
+  language: RepoeLanguageKey
   favorites: Poe2FavoriteRecord[]
   vendor: VendorSettings
   waystone: WaystoneSettings,
@@ -352,6 +355,7 @@ export const defaultEmptyVendor = {
 };
 export const defaultSettings: Settings = {
   name: "default",
+  language: "ENGLISH",
   favorites: [],
   vendor: {
     resultSettings: defaultResultSettings,

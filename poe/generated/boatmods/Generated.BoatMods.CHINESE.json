@@ -1,0 +1,1721 @@
+{
+    "tokens": [
+        {
+            "id": -2067641223,
+            "regex": "的混",
+            "rawText": "+(26—40)% 怪物的混沌抗性 | +(26—40)% 怪物的元素抗性 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物的混沌抗性 $|^ #% 怪物的元素抗性 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2059756400,
+            "regex": "閃",
+            "rawText": "怪物造成 (15—20)% 額外物理傷害視為閃電 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為閃電 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2041529555,
+            "regex": "藤",
+            "rawText": "怪物擊中時造成 1 層緩速藤蔓 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物擊中時造成 # 層緩速藤蔓 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2014861153,
+            "regex": "一個瓶",
+            "rawText": "相鄰區域內含有額外一個瓶中信",
+            "generalizedText": "^相鄰區域內含有額外一個瓶中信$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2014861152,
+            "regex": "\\d+ 個瓶",
+            "rawText": "相鄰區域內含有額外 2 個瓶中信",
+            "generalizedText": "^相鄰區域內含有額外 # 個瓶中信$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2006102362,
+            "regex": "閃",
+            "rawText": "怪物造成 (5—8)% 額外物理傷害視為閃電 | 增加 16% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為閃電 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -2006101730,
+            "regex": "閃",
+            "rawText": "怪物造成 (9—14)% 額外物理傷害視為閃電 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為閃電 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1949131405,
+            "regex": "害穿",
+            "rawText": "怪物傷害穿透 (8—12)% 元素抗性 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物傷害穿透 #% 元素抗性 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1942964983,
+            "regex": "有區域的怪",
+            "rawText": "增加 5% 航程中所有區域的怪物群大小",
+            "generalizedText": "^增加 #% 航程中所有區域的怪物群大小$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1942964982,
+            "regex": "有區域的怪",
+            "rawText": "增加 7% 航程中所有區域的怪物群大小",
+            "generalizedText": "^增加 #% 航程中所有區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036942,
+            "regex": "一名",
+            "rawText": "相鄰區域內含有額外一名被禁錮的怪物",
+            "generalizedText": "^相鄰區域內含有額外一名被禁錮的怪物$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036941,
+            "regex": "\\d+ 名",
+            "rawText": "相鄰區域內含有額外 (2—4) 名被禁錮的怪物",
+            "generalizedText": "^相鄰區域內含有額外 # 名被禁錮的怪物$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1802036940,
+            "regex": "\\d+ 名",
+            "rawText": "相鄰區域內含有額外 5 名被禁錮的怪物",
+            "generalizedText": "^相鄰區域內含有額外 # 名被禁錮的怪物$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1780104672,
+            "regex": "冷",
+            "rawText": "怪物造成 (15—20)% 額外物理傷害視為冰冷 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為冰冷 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1657203875,
+            "regex": "發",
+            "rawText": "增加 16% 相鄰區域的怪物群大小 | 怪物發射 2 額外投射物",
+            "generalizedText": "^增加 #% 相鄰區域的怪物群大小 $|^ 怪物發射 # 額外投射物$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1651268408,
+            "regex": "礙",
+            "rawText": "怪物法術擊中時造成阻礙 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物法術擊中時造成阻礙 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1621293719,
+            "regex": "多",
+            "rawText": "(35—45)% 更多怪物生命 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 更多怪物生命 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1612284215,
+            "regex": "施",
+            "rawText": "增加 20% 怪物移動速度 | 增加 20% 怪物攻擊速度 | 增加 20% 怪物施放速度 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加 #% 怪物移動速度 $|^ 增加 #% 怪物攻擊速度 $|^ 增加 #% 怪物施放速度 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1576025147,
+            "regex": "施",
+            "rawText": "增加 10% 怪物移動速度 | 增加 10% 怪物攻擊速度 | 增加 10% 怪物施放速度 | 增加 14% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加 #% 怪物移動速度 $|^ 增加 #% 怪物攻擊速度 $|^ 增加 #% 怪物施放速度 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1547580139,
+            "regex": "堆",
+            "rawText": "相鄰區域內含有額外 (12—15) 堆木桶",
+            "generalizedText": "^相鄰區域內含有額外 # 堆木桶$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1547580138,
+            "regex": "堆",
+            "rawText": "相鄰區域內含有額外 (16—20) 堆木桶",
+            "generalizedText": "^相鄰區域內含有額外 # 堆木桶$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1452177158,
+            "regex": "藥",
+            "rawText": "航程中所有區域內找到的藥劑有 100% 機率擁有 20% 品質",
+            "generalizedText": "^航程中所有區域內找到的藥劑有 #% 機率擁有 #% 品質$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1442892010,
+            "regex": "冷",
+            "rawText": "怪物造成 (5—8)% 額外物理傷害視為冰冷 | 增加 16% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為冰冷 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1442891378,
+            "regex": "冷",
+            "rawText": "怪物造成 (9—14)% 額外物理傷害視為冰冷 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為冰冷 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1424681657,
+            "regex": "致",
+            "rawText": "怪物擊中時致盲 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物擊中時致盲 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1407443772,
+            "regex": "腰",
+            "rawText": "相鄰區域內掉落的腰帶有 10% 機率改為掉落一條傳奇腰帶",
+            "generalizedText": "^相鄰區域內掉落的腰帶有 #% 機率改為掉落一條傳奇腰帶$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1407443771,
+            "regex": "腰",
+            "rawText": "相鄰區域內掉落的腰帶有 20% 機率改為掉落一條傳奇腰帶",
+            "generalizedText": "^相鄰區域內掉落的腰帶有 #% 機率改為掉落一條傳奇腰帶$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1399173454,
+            "regex": "同",
+            "rawText": "怪物獲得等同它們 (15—20)% 物理傷害的額外混沌傷害 | 怪物擊中時造成凋零 2 秒 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物獲得等同它們 #% 物理傷害的額外混沌傷害 $|^ 怪物擊中時造成凋零 # 秒 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1392546753,
+            "regex": "戒",
+            "rawText": "相鄰區域內掉落的戒指有 10% 機率改為掉落一個傳奇戒指",
+            "generalizedText": "^相鄰區域內掉落的戒指有 #% 機率改為掉落一個傳奇戒指$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1392546752,
+            "regex": "戒",
+            "rawText": "相鄰區域內掉落的戒指有 20% 機率改為掉落一個傳奇戒指",
+            "generalizedText": "^相鄰區域內掉落的戒指有 #% 機率改為掉落一個傳奇戒指$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1387430712,
+            "regex": "率獲得 \\d+ 顆狂",
+            "rawText": "怪物擊中時有 50% 機率獲得 1 顆狂怒球 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時有 #% 機率獲得 # 顆狂怒球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1385003407,
+            "regex": "全",
+            "rawText": "玩家 (-9—-6)% 全部最大抗性 | 增加 14% 相鄰區域的怪物群大小",
+            "generalizedText": "^玩家 -#% 全部最大抗性 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1335199964,
+            "regex": "在",
+            "rawText": "玩家在航程中所有區域時擁有噬魂者",
+            "generalizedText": "^玩家在航程中所有區域時擁有噬魂者$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1303321677,
+            "regex": "偷",
+            "rawText": "怪物擊中時偷取暴擊、狂怒和耐力球 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物擊中時偷取暴擊、狂怒和耐力球 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1261560107,
+            "regex": "護",
+            "rawText": "怪物獲得 (51—80)% 最大生命的額外最大能量護盾 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1190917116,
+            "regex": "火",
+            "rawText": "怪物造成 (5—8)% 額外物理傷害視為火焰 | 增加 16% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為火焰 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1190916484,
+            "regex": "火",
+            "rawText": "怪物造成 (9—14)% 額外物理傷害視為火焰 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為火焰 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1182373514,
+            "regex": "冷",
+            "rawText": "怪物造成 (21—35)% 額外物理傷害視為冰冷 | 增加 38% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為冰冷 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1148606395,
+            "regex": "隻",
+            "rawText": "相鄰區域內含有一隻友善的水母",
+            "generalizedText": "^相鄰區域內含有一隻友善的水母$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1080581745,
+            "regex": "抑",
+            "rawText": "怪物 +80% 壓抑法術傷害率 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物 #% 壓抑法術傷害率 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1057223983,
+            "regex": "物增",
+            "rawText": "怪物增加 (201—240)% 暴擊率 | +(41—45)% 怪物暴擊加成 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物增加 #% 暴擊率 $|^ #% 怪物暴擊加成 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -1022925598,
+            "regex": "範",
+            "rawText": "增加怪物 (41—45)% 範圍效果 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加怪物 #% 範圍效果 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -983900529,
+            "regex": "^被",
+            "rawText": "被怪物擊中時中毒 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^被怪物擊中時中毒 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -964200120,
+            "regex": "火",
+            "rawText": "怪物造成 (21—35)% 額外物理傷害視為火焰 | 增加 38% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為火焰 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -914209629,
+            "regex": "異",
+            "rawText": "怪物有 20% 機率避免元素異常狀態 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物有 #% 機率避免元素異常狀態 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -914208997,
+            "regex": "異",
+            "rawText": "怪物有 40% 機率避免元素異常狀態 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物有 #% 機率避免元素異常狀態 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -863371234,
+            "regex": "荒",
+            "rawText": "怪物有機率受到 2000 個荒林妖精強化",
+            "generalizedText": "^怪物有機率受到 # 個荒林妖精強化$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -863371233,
+            "regex": "荒",
+            "rawText": "怪物有機率受到 4000 個荒林妖精強化",
+            "generalizedText": "^怪物有機率受到 # 個荒林妖精強化$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -861664766,
+            "regex": "暈",
+            "rawText": "(10—20)% 更多怪物生命 | 怪物不會被暈眩 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 更多怪物生命 $|^ 怪物不會被暈眩 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -853709831,
+            "regex": "物物",
+            "rawText": "+(5—8)% 怪物物理傷害減免 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物物理傷害減免 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -853709199,
+            "regex": "物物",
+            "rawText": "+(9—13)% 怪物物理傷害減免 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物物理傷害減免 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -838741420,
+            "regex": "揭",
+            "rawText": "航程詞綴會於測繪後揭露",
+            "generalizedText": "^航程詞綴會於測繪後揭露$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -823853313,
+            "regex": "護",
+            "rawText": "怪物獲得 (35—50)% 最大生命的額外最大能量護盾 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -728241162,
+            "regex": "技",
+            "rawText": "怪物的技能附加 2 次連鎖 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物的技能附加 # 次連鎖 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -721532603,
+            "regex": "時獲得 \\d+ 顆暴",
+            "rawText": "怪物擊中時獲得 1 顆暴擊球 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時獲得 # 顆暴擊球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -695326307,
+            "regex": "物物",
+            "rawText": "+(14—20)% 怪物物理傷害減免 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物物理傷害減免 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -666785766,
+            "regex": "% 怪物傷",
+            "rawText": "增加 (10—14)% 怪物傷害 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 怪物傷害 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -666785134,
+            "regex": "% 怪物傷",
+            "rawText": "增加 (15—20)% 怪物傷害 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 怪物傷害 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -620381076,
+            "regex": "特",
+            "rawText": "相鄰區域內含有額外 2 個特工的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個特工的保險箱$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -620381075,
+            "regex": "特",
+            "rawText": "相鄰區域內含有額外 3 個特工的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個特工的保險箱$",
+            "options": {
+                "scary": 78,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -617632680,
+            "regex": "有區域找到的物品數",
+            "rawText": "增加 8% 航程中所有區域找到的物品數量",
+            "generalizedText": "^增加 #% 航程中所有區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -617632679,
+            "regex": "有區域找到的物品數",
+            "rawText": "增加 10% 航程中所有區域找到的物品數量",
+            "generalizedText": "^增加 #% 航程中所有區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -600428392,
+            "regex": "運",
+            "rawText": "相鄰區域內含有額外 2 個命運的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個命運的保險箱$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -600428391,
+            "regex": "運",
+            "rawText": "相鄰區域內含有額外 3 個命運的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個命運的保險箱$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -545498346,
+            "regex": "星",
+            "rawText": "相鄰區域內含有額外(4—5)群巨大海星",
+            "generalizedText": "^相鄰區域內含有額外#群巨大海星$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -545498345,
+            "regex": "星",
+            "rawText": "相鄰區域內含有額外(6—7)群巨大海星",
+            "generalizedText": "^相鄰區域內含有額外#群巨大海星$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -475471809,
+            "regex": "多",
+            "rawText": "(46—60)% 更多怪物生命 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 更多怪物生命 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -471323422,
+            "regex": "奧",
+            "rawText": "相鄰區域內含有額外 2 個奧術師的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個奧術師的保險箱$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -471323421,
+            "regex": "奧",
+            "rawText": "相鄰區域內含有額外 3 個奧術師的保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個奧術師的保險箱$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -452424730,
+            "regex": "閃",
+            "rawText": "怪物造成 (21—35)% 額外物理傷害視為閃電 | 增加 38% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為閃電 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -438912567,
+            "regex": "率獲得 \\d+ 顆暴",
+            "rawText": "怪物擊中時有 50% 機率獲得 1 顆暴擊球 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時有 #% 機率獲得 # 顆暴擊球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -405270553,
+            "regex": "黃",
+            "rawText": "相鄰區域內含有額外 4 個黃金燈籠",
+            "generalizedText": "^相鄰區域內含有額外 # 個黃金燈籠$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -388654649,
+            "regex": "^減",
+            "rawText": "減少 (20—29)% 怪物承受的暴擊傷害 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^減少 #% 怪物承受的暴擊傷害 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -363415639,
+            "regex": "高",
+            "rawText": "相鄰區域內含有高價且珍稀的魚類",
+            "generalizedText": "^相鄰區域內含有高價且珍稀的魚類$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -329390419,
+            "regex": "多",
+            "rawText": "(10—19)% 更多怪物生命 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 更多怪物生命 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -329389787,
+            "regex": "多",
+            "rawText": "(20—34)% 更多怪物生命 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 更多怪物生命 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -315761648,
+            "regex": "對",
+            "rawText": "對怪物的詛咒有 -50% 更少效果 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^對怪物的詛咒有 -#% 更少效果 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -293676325,
+            "regex": "害穿",
+            "rawText": "怪物傷害穿透 (13—15)% 元素抗性 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物傷害穿透 #% 元素抗性 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -289110147,
+            "regex": "項",
+            "rawText": "相鄰區域內掉落的項鍊有 10% 機率改為掉落一條傳奇項鍊",
+            "generalizedText": "^相鄰區域內掉落的項鍊有 #% 機率改為掉落一條傳奇項鍊$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -289110146,
+            "regex": "項",
+            "rawText": "相鄰區域內掉落的項鍊有 20% 機率改為掉落一條傳奇項鍊",
+            "generalizedText": "^相鄰區域內掉落的項鍊有 #% 機率改為掉落一條傳奇項鍊$",
+            "options": {
+                "scary": 47,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -252733995,
+            "regex": "抑",
+            "rawText": "怪物 +40% 壓抑法術傷害率 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物 #% 壓抑法術傷害率 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": -209794039,
+            "regex": "異",
+            "rawText": "怪物有 80% 機率避免元素異常狀態 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物有 #% 機率避免元素異常狀態 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -60824026,
+            "regex": "時獲得 \\d+ 顆狂",
+            "rawText": "怪物擊中時獲得 1 顆狂怒球 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時獲得 # 顆狂怒球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": -17433870,
+            "regex": "% 怪物傷",
+            "rawText": "增加 (26—35)% 怪物傷害 | 增加 45% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 怪物傷害 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 7318347,
+            "regex": "率獲得 \\d+ 顆耐",
+            "rawText": "怪物擊中時有 50% 機率獲得 1 顆耐力球 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時有 #% 機率獲得 # 顆耐力球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 14422429,
+            "regex": "全",
+            "rawText": "玩家 (-12—-10)% 全部最大抗性 | 增加 16% 相鄰區域的怪物群大小",
+            "generalizedText": "^玩家 -#% 全部最大抗性 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 166142513,
+            "regex": "發",
+            "rawText": "增加 18% 相鄰區域的怪物群大小 | 怪物發射 2 額外投射物",
+            "generalizedText": "^增加 #% 相鄰區域的怪物群大小 $|^ 怪物發射 # 額外投射物$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 226723843,
+            "regex": "時獲得 \\d+ 顆耐",
+            "rawText": "怪物擊中時獲得 1 顆耐力球 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物擊中時獲得 # 顆耐力球 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 320757000,
+            "regex": "同",
+            "rawText": "怪物獲得等同它們 (21—29)% 物理傷害的額外混沌傷害 | 怪物擊中時造成凋零 2 秒 | 增加 45% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物獲得等同它們 #% 物理傷害的額外混沌傷害 $|^ 怪物擊中時造成凋零 # 秒 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 378631742,
+            "regex": "一個關",
+            "rawText": "相鄰區域內含有額外一個關滿罪魂的囚牢",
+            "generalizedText": "^相鄰區域內含有額外一個關滿罪魂的囚牢$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 378631743,
+            "regex": "\\d+ 個關",
+            "rawText": "相鄰區域內含有額外 2 個關滿罪魂的囚牢",
+            "generalizedText": "^相鄰區域內含有額外 # 個關滿罪魂的囚牢$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 401607867,
+            "regex": "阿",
+            "rawText": "阿茲里之息",
+            "generalizedText": "^阿茲里之息$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 411355763,
+            "regex": "物物",
+            "rawText": "+(21—35)% 怪物物理傷害減免 | 增加 55% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物物理傷害減免 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 429830771,
+            "regex": "全",
+            "rawText": "玩家 (-14—-12)% 全部最大抗性 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^玩家 -#% 全部最大抗性 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 444863491,
+            "regex": "藤",
+            "rawText": "怪物擊中時造成 3 層緩速藤蔓 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物擊中時造成 # 層緩速藤蔓 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 523869859,
+            "regex": "的混",
+            "rawText": "+(20—25)% 怪物的混沌抗性 | +(20—25)% 怪物的元素抗性 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物的混沌抗性 $|^ #% 怪物的元素抗性 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 564025627,
+            "regex": "^地",
+            "rawText": "地圖含有冰緩地面 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^地圖含有冰緩地面 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 633534750,
+            "regex": "身",
+            "rawText": "航程中所有區域的稀有怪物有 100% 機率被附身",
+            "generalizedText": "^航程中所有區域的稀有怪物有 #% 機率被附身$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 639019423,
+            "regex": "施",
+            "rawText": "增加 30% 怪物移動速度 | 增加 30% 怪物攻擊速度 | 增加 30% 怪物施放速度 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加 #% 怪物移動速度 $|^ 增加 #% 怪物攻擊速度 $|^ 增加 #% 怪物施放速度 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 709639731,
+            "regex": "的混",
+            "rawText": "+0% 怪物的混沌抗性 | +(5—10)% 怪物的元素抗性 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物的混沌抗性 $|^ #% 怪物的元素抗性 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 709640363,
+            "regex": "的混",
+            "rawText": "+(10—19)% 怪物的混沌抗性 | +(11—19)% 怪物的元素抗性 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^#% 怪物的混沌抗性 $|^ #% 怪物的元素抗性 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 755035833,
+            "regex": "抑",
+            "rawText": "怪物 +60% 壓抑法術傷害率 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物 #% 壓抑法術傷害率 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 780719992,
+            "regex": "螃",
+            "rawText": "相鄰區域內含有額外(8—10)群螃蟹",
+            "generalizedText": "^相鄰區域內含有額外#群螃蟹$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 780719993,
+            "regex": "螃",
+            "rawText": "相鄰區域內含有額外(11—14)群螃蟹",
+            "generalizedText": "^相鄰區域內含有額外#群螃蟹$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 804352412,
+            "regex": "% 怪物傷",
+            "rawText": "增加 (21—25)% 怪物傷害 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 怪物傷害 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 836462855,
+            "regex": "^減",
+            "rawText": "減少 (30—45)% 怪物承受的暴擊傷害 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^減少 #% 怪物承受的暴擊傷害 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 924701372,
+            "regex": "同",
+            "rawText": "怪物獲得等同它們 (10—14)% 物理傷害的額外混沌傷害 | 怪物擊中時造成凋零 2 秒 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物獲得等同它們 #% 物理傷害的額外混沌傷害 $|^ 怪物擊中時造成凋零 # 秒 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 996861445,
+            "regex": "章",
+            "rawText": "相鄰區域內含有額外(8—10)群章魚",
+            "generalizedText": "^相鄰區域內含有額外#群章魚$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 996861446,
+            "regex": "章",
+            "rawText": "相鄰區域內含有額外(11—14)群章魚",
+            "generalizedText": "^相鄰區域內含有額外#群章魚$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1110740818,
+            "regex": "有區域找到的魔",
+            "rawText": "增加 25% 航程中所有區域找到的魔法怪物數量",
+            "generalizedText": "^增加 #% 航程中所有區域找到的魔法怪物數量$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1147239824,
+            "regex": "刺",
+            "rawText": "怪物有 40% 機率避免中毒、穿刺和流血 | 增加 28% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物有 #% 機率避免中毒、穿刺和流血 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1157662300,
+            "regex": "鄰區域找到的魔",
+            "rawText": "增加 30% 相鄰區域找到的魔法怪物數量",
+            "generalizedText": "^增加 #% 相鄰區域找到的魔法怪物數量$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1157662301,
+            "regex": "鄰區域找到的魔",
+            "rawText": "增加 60% 相鄰區域找到的魔法怪物數量",
+            "generalizedText": "^增加 #% 相鄰區域找到的魔法怪物數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1171268340,
+            "regex": "癱",
+            "rawText": "怪物攻擊擊中時造成癱瘓 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物攻擊擊中時造成癱瘓 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832331,
+            "regex": "有區域內找到的亡",
+            "rawText": "增加 15% 航程中所有區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 航程中所有區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832332,
+            "regex": "有區域內找到的亡",
+            "rawText": "增加 20% 航程中所有區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 航程中所有區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1205832333,
+            "regex": "有區域內找到的亡",
+            "rawText": "增加 25% 航程中所有區域內找到的亡者硫酸",
+            "generalizedText": "^增加 #% 航程中所有區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1264341092,
+            "regex": "眾",
+            "rawText": "相鄰區域內的稀有怪物擁有一條眾神殿詞綴",
+            "generalizedText": "^相鄰區域內的稀有怪物擁有一條眾神殿詞綴$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1269092788,
+            "regex": "能受",
+            "rawText": "怪物不能受到詛咒 | 增加 30% 相鄰區域內找到的亡者硫酸",
+            "generalizedText": "^怪物不能受到詛咒 $|^ 增加 #% 相鄰區域內找到的亡者硫酸$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1278633531,
+            "regex": "嘲",
+            "rawText": "怪物不能被嘲諷 | 怪物的行動速度不能被調整至低於基礎值\n怪物的移動速度不能被調整至低於基礎值 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物不能被嘲諷 $|^ 怪物的行動速度不能被調整至低於基礎值\n怪物的移動速度不能被調整至低於基礎值 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1352480396,
+            "regex": "範",
+            "rawText": "增加怪物 (30—40)% 範圍效果 | 增加 14% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加怪物 #% 範圍效果 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1548847257,
+            "regex": "道",
+            "rawText": "區域內有數道增加 10% 承受傷害的感電地面 | 增加 22% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^區域內有數道增加 #% 承受傷害的感電地面 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1576587887,
+            "regex": "有區域找到的稀",
+            "rawText": "增加 25% 航程中所有區域找到的稀有怪物數量",
+            "generalizedText": "^增加 #% 航程中所有區域找到的稀有怪物數量$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1672796984,
+            "regex": "範",
+            "rawText": "增加怪物 (46—60)% 範圍效果 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^增加怪物 #% 範圍效果 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1724147251,
+            "regex": "異",
+            "rawText": "怪物有 60% 機率避免元素異常狀態 | 增加 40% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物有 #% 機率避免元素異常狀態 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1736149746,
+            "regex": "火",
+            "rawText": "怪物造成 (15—20)% 額外物理傷害視為火焰 | 增加 30% 相鄰區域找到的物品稀有度",
+            "generalizedText": "^怪物造成 #% 額外物理傷害視為火焰 $|^ 增加 #% 相鄰區域找到的物品稀有度$",
+            "options": {
+                "scary": 80,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1761410479,
+            "regex": "備",
+            "rawText": "相鄰區域內的怪物掉落的裝備有 40% 會改為掉落金幣",
+            "generalizedText": "^相鄰區域內的怪物掉落的裝備有 #% 會改為掉落金幣$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1761410480,
+            "regex": "備",
+            "rawText": "相鄰區域內的怪物掉落的裝備有 80% 會改為掉落金幣",
+            "generalizedText": "^相鄰區域內的怪物掉落的裝備有 #% 會改為掉落金幣$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1764464568,
+            "regex": "有區域找到的物品稀",
+            "rawText": "增加 7% 航程中所有區域找到的物品稀有度",
+            "generalizedText": "^增加 #% 航程中所有區域找到的物品稀有度$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1764464569,
+            "regex": "有區域找到的物品稀",
+            "rawText": "增加 9% 航程中所有區域找到的物品稀有度",
+            "generalizedText": "^增加 #% 航程中所有區域找到的物品稀有度$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1765098898,
+            "regex": "散",
+            "rawText": "航程內的稀有怪物有 50% 機率於死亡時散裂",
+            "generalizedText": "^航程內的稀有怪物有 #% 機率於死亡時散裂$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1774543447,
+            "regex": "護",
+            "rawText": "怪物獲得 (10—19)% 最大生命的額外最大能量護盾 | 增加 25% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1774544079,
+            "regex": "護",
+            "rawText": "怪物獲得 (20—34)% 最大生命的額外最大能量護盾 | 增加 32% 相鄰區域找到的物品數量",
+            "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾 $|^ 增加 #% 相鄰區域找到的物品數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1777791399,
+            "regex": "物增",
+            "rawText": "怪物增加 (242—350)% 暴擊率 | +(41—45)% 怪物暴擊加成 | 增加 18% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物增加 #% 暴擊率 $|^ #% 怪物暴擊加成 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 83,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1869768337,
+            "regex": "破",
+            "rawText": "相鄰區域內掉落的物品有 2% 機率為破裂物品",
+            "generalizedText": "^相鄰區域內掉落的物品有 #% 機率為破裂物品$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1905563325,
+            "regex": "物增",
+            "rawText": "怪物增加 (180—200)% 暴擊率 | +(31—40)% 怪物暴擊加成 | 增加 14% 相鄰區域的怪物群大小",
+            "generalizedText": "^怪物增加 #% 暴擊率 $|^ #% 怪物暴擊加成 $|^ 增加 #% 相鄰區域的怪物群大小$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": false,
+                "rewards": []
+            }
+        },
+        {
+            "id": 1982371835,
+            "regex": "原",
+            "rawText": "航程中所有區域的原生稀有怪物受到精髓囚禁",
+            "generalizedText": "^航程中所有區域的原生稀有怪物受到精髓囚禁$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2040431782,
+            "regex": "的所",
+            "rawText": "航程中所有區域的所有怪物為魔法",
+            "generalizedText": "^航程中所有區域的所有怪物為魔法$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2080208069,
+            "regex": "鄰區域找到的稀",
+            "rawText": "增加 30% 相鄰區域找到的稀有怪物數量",
+            "generalizedText": "^增加 #% 相鄰區域找到的稀有怪物數量$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2080208070,
+            "regex": "鄰區域找到的稀",
+            "rawText": "增加 60% 相鄰區域找到的稀有怪物數量",
+            "generalizedText": "^增加 #% 相鄰區域找到的稀有怪物數量$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214528,
+            "regex": "一個保",
+            "rawText": "相鄰區域內含有額外一個保險箱",
+            "generalizedText": "^相鄰區域內含有額外一個保險箱$",
+            "options": {
+                "scary": 1,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214529,
+            "regex": "\\d+ 個保",
+            "rawText": "相鄰區域內含有額外 (2—4) 個保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個保險箱$",
+            "options": {
+                "scary": 46,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        },
+        {
+            "id": 2101214530,
+            "regex": "\\d+ 個保",
+            "rawText": "相鄰區域內含有額外 5 個保險箱",
+            "generalizedText": "^相鄰區域內含有額外 # 個保險箱$",
+            "options": {
+                "scary": 68,
+                "nm": false,
+                "prefix": true,
+                "rewards": []
+            }
+        }
+    ],
+    "optimizationTable": {}
+}

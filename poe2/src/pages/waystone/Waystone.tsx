@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {loadSettings, saveSettings, setSelectedProfile} from "../../localStorage";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings, SelectOption, Settings} from "../../settings";
@@ -14,21 +14,34 @@ import NumberField from "@shared/components/NumberField/NumberField";
 import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllToggle";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {rebaseWaystoneSettings} from "@poe2/favoriteLanguageRenderer";
 
 export function Waystone() {
-  const {currentProfile} = useContext(Poe2ProfileContext);
+  const {currentProfile, language} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
   const favoritePage = useFavoritePage("waystone", globalSettings.waystone);
   const [settings, setSettings] = useState<Settings["waystone"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
   const [affixes, setAffixes] = useState<WaystoneAffix[]>([]);
   const [tradeStatIds, setTradeStatIds] = useState<TradeStatIdMap>({});
+  const loadedLanguageRef = useRef<typeof language | undefined>(undefined);
+  const [dataLanguage, setDataLanguage] = useState<typeof language>();
 
   useEffect(() => {
-    if (favoritePage.isEditingFavorite) { setResult(generateWaystoneRegex({...loadSettings(currentProfile), waystone: settings})); return; }
-    loadWaystoneAffixes().then(setAffixes);
+    let active = true;
+    setResult("");
+    setDataLanguage(undefined);
+    const sourceLanguage = loadedLanguageRef.current ?? favoritePage.initialLanguage;
+    Promise.all([loadWaystoneAffixes(sourceLanguage), loadWaystoneAffixes(language)]).then(([source, data]) => {
+      if (!active) return;
+      if (sourceLanguage !== language) setSettings((current) => rebaseWaystoneSettings(current, source, data));
+      loadedLanguageRef.current = language;
+      setAffixes(data);
+      setDataLanguage(language);
+    });
     loadWaystoneTradeStatIds().then(setTradeStatIds);
-  }, []);
+    return () => { active = false; };
+  }, [language, favoritePage.initialLanguage]);
 
   const wantedMods: SelectOption[] = affixes
     .map((mod) => ({
@@ -55,11 +68,16 @@ export function Waystone() {
     }));
 
   useEffect(() => {
+    if (dataLanguage !== language) { setResult(""); return; }
+    if (favoritePage.isEditingFavorite) {
+      setResult(generateWaystoneRegex({...loadSettings(currentProfile), waystone: settings}));
+      return;
+    }
     const base = loadSettings(currentProfile);
     const settingsResult = {...base, waystone: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateWaystoneRegex(settingsResult));
-  }, [settings, favoritePage.isEditingFavorite]);
+  }, [settings, favoritePage.isEditingFavorite, dataLanguage, language]);
 
   useEffect(() => {
     if (favoritePage.isEditingFavorite) return;
@@ -80,7 +98,7 @@ export function Waystone() {
 
   return (
     <>
-      <Poe2Header text="Waystone"/>
+      <Poe2Header text="Waystone" languageSelect/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action(settings)}

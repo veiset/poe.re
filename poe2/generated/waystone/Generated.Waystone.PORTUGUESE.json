@@ -1,0 +1,622 @@
+{
+    "tokens": [
+        {
+            "id": -2133204727,
+            "regex": "e chao c",
+            "rawText": "Área tem trechos de chão congelado",
+            "generalizedText": "^area tem trechos de chao congelado$",
+            "options": {
+                "name": "<if:MS>{Granizo}<elif:FS>{Granizo}<elif:NS>{Granizo}<elif:MP>{Granizos}<elif:FP>{Granizos}<elif:NP>{Granizos}",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1813295619,
+            "regex": "% de recuperacao de v",
+            "rawText": "Jogadores têm -#% de recuperação de vida e de escudo de energia",
+            "generalizedText": "^jogadores tem -#% de recuperacao de vida e de escudo de energia$",
+            "options": {
+                "name": "do Sufocamento",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1622455744,
+            "regex": "r ao atingir$",
+            "rawText": "Monstros têm uma chance de envenenar ao atingir",
+            "generalizedText": "^monstros tem uma chance de envenenar ao atingir$",
+            "options": {
+                "name": "<if:MS>{Venenoso}<elif:FS>{Venenosa}<elif:NS>{Venenoso}<elif:MP>{Venenosos}<elif:FP>{Venenosas}<elif:NP>{Venenosos}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1591291434,
+            "regex": "os ig",
+            "rawText": "Dano dos monstros ignora #% das resistências elementais",
+            "generalizedText": "^dano dos monstros ignora #% das resistencias elementais$",
+            "options": {
+                "name": "Penetração",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1560793141,
+            "regex": "e velocidade de recarga$",
+            "rawText": "Jogadores têm -#% de velocidade de recarga",
+            "generalizedText": "^jogadores tem -#% de velocidade de recarga$",
+            "options": {
+                "name": "da Fadiga",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1480734274,
+            "regex": "sado$",
+            "rawText": "Monstros quebram a armadura equivalente a #% do dano físico causado",
+            "generalizedText": "^monstros quebram a armadura equivalente a #% do dano fisico causado$",
+            "options": {
+                "name": "<if:MS>{Devastador}<elif:FS>{Devastadora}<elif:NS>{Devastador}<elif:MP>{Devastadores}<elif:FP>{Devastadoras}<elif:NP>{Devastadores}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -1391587974,
+            "regex": "m fraq",
+            "rawText": "Jogadores são periodicamente amaldiçoados com fraqueza elemental",
+            "generalizedText": "^jogadores sao periodicamente amaldicoados com fraqueza elemental$",
+            "options": {
+                "name": "da Erosão",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1340224308,
+            "regex": "vos$",
+            "rawText": "Monstros são evasivos",
+            "generalizedText": "^monstros sao evasivos$",
+            "options": {
+                "name": "da Evasão",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1145296269,
+            "regex": "da de m",
+            "rawText": "ㅤ+#% de vida de monstro",
+            "generalizedText": "^ㅤ+#% de vida de monstro$",
+            "options": {
+                "name": "<if:MS>{Duro}<elif:FS>{Dura}<elif:NS>{Duro}<elif:MP>{Duros}<elif:FP>{Duras}<elif:NP>{Duros}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -995965777,
+            "regex": "imo ad",
+            "rawText": "Monstros ganham #% de vida máxima como escudo de energia máximo adicional",
+            "generalizedText": "^monstros ganham #% de vida maxima como escudo de energia maximo adicional$",
+            "options": {
+                "name": "da Energização",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -896444259,
+            "regex": "om gr",
+            "rawText": "Jogadores são periodicamente amaldiçoados com Grilhões Temporais",
+            "generalizedText": "^jogadores sao periodicamente amaldicoados com grilhoes temporais$",
+            "options": {
+                "name": "da Desaceleração",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -639064751,
+            "regex": "oes em",
+            "rawText": "ㅤ-#% de efeito de maldições em monstros",
+            "generalizedText": "^ㅤ-#% de efeito de maldicoes em monstros$",
+            "options": {
+                "name": "do Corpo Fechado",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -517109727,
+            "regex": "no de mo",
+            "rawText": "Dano de monstro aumentado em #%",
+            "generalizedText": "^dano de monstro aumentado em #%$",
+            "options": {
+                "name": "<if:MS>{Lancinante}<elif:FS>{Lancinante}<elif:NS>{Lancinante}<elif:MP>{Lancinantes}<elif:FP>{Lancinantes}<elif:NP>{Lancinantes}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -297038825,
+            "regex": "e chao incendiado$",
+            "rawText": "Área tem trechos de chão incendiado",
+            "generalizedText": "^area tem trechos de chao incendiado$",
+            "options": {
+                "name": "<if:MS>{Flamejante}<elif:FS>{Flamejante}<elif:NS>{Flamejante}<elif:MP>{Flamejantes}<elif:FP>{Flamejantes}<elif:NP>{Flamejantes}",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": -100983803,
+            "regex": "o dano como dano e",
+            "rawText": "Monstros causam #% do dano como dano elétrico adicional",
+            "generalizedText": "^monstros causam #% do dano como dano eletrico adicional$",
+            "options": {
+                "name": "<if:MS>{Trovejante}<elif:FS>{Trovejante}<elif:NS>{Trovejante}<elif:MP>{Trovejantes}<elif:FP>{Trovejantes}<elif:NP>{Trovejantes}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 57847690,
+            "regex": "ntais p",
+            "rawText": "ㅤ+#% de resistências elementais para monstros",
+            "generalizedText": "^ㅤ+#% de resistencias elementais para monstros$",
+            "options": {
+                "name": "do Prisma",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 101163715,
+            "regex": "ros tem a v",
+            "rawText": "Monstros têm a velocidade de ataque, de conjuração e de movimento aumentada em #%",
+            "generalizedText": "^monstros tem a velocidade de ataque, de conjuracao e de movimento aumentada em #%$",
+            "options": {
+                "name": "Fuga",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 254742290,
+            "regex": "imas d",
+            "rawText": "#% de resistências máximas do jogador",
+            "generalizedText": "^#% de resistencias maximas do jogador$",
+            "options": {
+                "name": "<if:MS>{da Exposição}<elif:FS>{da Exposição}",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 273026454,
+            "regex": "om en",
+            "rawText": "Jogadores são periodicamente amaldiçoados com Enfraquecimento",
+            "generalizedText": "^jogadores sao periodicamente amaldicoados com enfraquecimento$",
+            "options": {
+                "name": "do Enfraquecimento",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 350299387,
+            "regex": "os red",
+            "rawText": "Monstros sofrem dano adicional de golpes críticos reduzido em #",
+            "generalizedText": "^monstros sofrem dano adicional de golpes criticos reduzido em #$",
+            "options": {
+                "name": "da Obstrução",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 365429844,
+            "regex": "m a ap",
+            "rawText": "Monstros têm a aplicação de afecção elemental aumentada em #%",
+            "generalizedText": "^monstros tem a aplicacao de afeccao elemental aumentada em #%$",
+            "options": {
+                "name": "do Insuportável",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 453383702,
+            "regex": "m o ac",
+            "rawText": "Monstros têm o acúmulo de atordoamento aumentado em #%",
+            "generalizedText": "^monstros tem o acumulo de atordoamento aumentado em #%$",
+            "options": {
+                "name": "<if:MS>{Impactante}<elif:FS>{Impactante}<elif:NS>{Impactante}<elif:MP>{Impactantes}<elif:FP>{Impactantes}<elif:NP>{Impactantes}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 469096482,
+            "regex": "% ao",
+            "rawText": "Monstros têm uma chance de golpe crítico aumentada em #%|#% ao bônus de dano crítico de monstros",
+            "generalizedText": "^monstros tem uma chance de golpe critico aumentada em #%$|^#% ao bonus de dano critico de monstros$",
+            "options": {
+                "name": "<if:MS>{Destrutivo}<elif:FS>{Destrutiva}<elif:NS>{Destrutivo}<elif:MP>{Destrutivos}<elif:FP>{Destrutivas}<elif:NP>{Destrutivos}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 643576644,
+            "regex": "o bli",
+            "rawText": "Monstros são blindados",
+            "generalizedText": "^monstros sao blindados$",
+            "options": {
+                "name": "da Tolerância",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 829665101,
+            "regex": "o dano como dano de fr",
+            "rawText": "Monstros causam #% do dano como dano de frio adicional",
+            "generalizedText": "^monstros causam #% do dano como dano de frio adicional$",
+            "options": {
+                "name": "<if:MS>{Geladura}<elif:FS>{Geladura}<elif:NS>{Geladura}<elif:MP>{Geladuras}<elif:FP>{Geladuras}<elif:NP>{Geladuras}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 920882973,
+            "regex": "o dano de caos adicional$",
+            "rawText": "Monstros causam #% do dano como dano de caos adicional",
+            "generalizedText": "^monstros causam #% do dano como dano de caos adicional$",
+            "options": {
+                "name": "<if:MS>{Profano}<elif:FS>{Profana}<elif:NS>{Profano}<elif:MP>{Profanos}<elif:FP>{Profanas}<elif:NP>{Profanos}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 1124397189,
+            "regex": "e infligir s",
+            "rawText": "Monstros têm #% de chance de infligir sangramento ao atingir",
+            "generalizedText": "^monstros tem #% de chance de infligir sangramento ao atingir$",
+            "options": {
+                "name": "<if:MS>{Punção}<elif:FS>{Punção}<elif:NS>{Punção}<elif:MP>{Punções}<elif:FP>{Punções}<elif:NP>{Punções}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 1265920315,
+            "regex": "em a p",
+            "rawText": "Monstros têm a precisão aumentada em #%",
+            "generalizedText": "^monstros tem a precisao aumentada em #%$",
+            "options": {
+                "name": "<if:MS>{Preciso}<elif:FS>{Precisa}<elif:NS>{Preciso}<elif:MP>{Precisos}<elif:FP>{Precisas}<elif:NP>{Precisos}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 1451708684,
+            "regex": "o dano como dano de fo",
+            "rawText": "Monstros causam #% do dano como dano de fogo adicional",
+            "generalizedText": "^monstros causam #% do dano como dano de fogo adicional$",
+            "options": {
+                "name": "<if:MS>{Infernal}<elif:FS>{Infernal}<elif:NS>{Infernal}<elif:MP>{Infernais}<elif:FP>{Infernais}<elif:NP>{Infernais}",
+                "types": [
+                    "PREFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 1651044206,
+            "regex": "tem a r",
+            "rawText": "Monstros têm a resistência-limite a afecções aumentada em #%|Monstros têm a resistência-limite a atordoamento aumentada em #%",
+            "generalizedText": "^monstros tem a resistencia-limite a afeccoes aumentada em #%$|^monstros tem a resistencia-limite a atordoamento aumentada em #%$",
+            "options": {
+                "name": "do Inabalável",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 2054754684,
+            "regex": "asco$",
+            "rawText": "Jogadores ganham #% menos cargas de frasco",
+            "generalizedText": "^jogadores ganham #% menos cargas de frasco$",
+            "options": {
+                "name": "da Seca",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        },
+        {
+            "id": 2096348208,
+            "regex": "m trechos de chao e",
+            "rawText": "Área tem trechos de chão eletrificado",
+            "generalizedText": "^area tem trechos de chao eletrificado$",
+            "options": {
+                "name": "<if:MS>{Eletrificante}<elif:FS>{Eletrificante}<elif:NS>{Eletrificante}<elif:MP>{Eletrificantes}<elif:FP>{Eletrificantes}<elif:NP>{Eletrificantes}",
+                "types": [
+                    "SUFFIX"
+                ],
+                "tags": [
+                    "map_key_high",
+                    "map_key_highest",
+                    "map_key_low",
+                    "map_key_medium"
+                ]
+            }
+        }
+    ],
+    "optimizationTable": {
+        "-2133204727:-297038825:2096348208": {
+            "ids": [
+                -2133204727,
+                -297038825,
+                2096348208
+            ],
+            "regex": "m trec",
+            "weight": 8,
+            "count": 3
+        },
+        "-1813295619:-1560793141": {
+            "ids": [
+                -1813295619,
+                -1560793141
+            ],
+            "regex": "res tem",
+            "weight": 9,
+            "count": 2
+        },
+        "-1622455744:469096482": {
+            "ids": [
+                -1622455744,
+                469096482
+            ],
+            "regex": "ros tem u",
+            "weight": 11,
+            "count": 2
+        },
+        "-1391587974:-896444259:273026454": {
+            "ids": [
+                -1391587974,
+                -896444259,
+                273026454
+            ],
+            "regex": "coa",
+            "weight": 3,
+            "count": 3
+        },
+        "-100983803:829665101:920882973:1451708684": {
+            "ids": [
+                -100983803,
+                829665101,
+                920882973,
+                1451708684
+            ],
+            "regex": "ros cau",
+            "weight": 9,
+            "count": 4
+        },
+        "101163715:365429844:1265920315:1651044206": {
+            "ids": [
+                101163715,
+                365429844,
+                1265920315,
+                1651044206
+            ],
+            "regex": "ros tem a",
+            "weight": 11,
+            "count": 4
+        }
+    }
+}

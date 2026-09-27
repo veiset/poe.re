@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {loadSettings, saveSettings, setSelectedProfile} from "../../localStorage";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings, SelectOption, Settings} from "../../settings";
@@ -10,18 +10,32 @@ import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import Poe2Header from "@poe2/components/Poe2Header";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {rebaseRelicSettings} from "@poe2/favoriteLanguageRenderer";
 
 export function Relic() {
-  const {currentProfile} = useContext(Poe2ProfileContext);
+  const {currentProfile, language} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
   const favoritePage = useFavoritePage("relic", globalSettings.relic);
   const [settings, setSettings] = useState<Settings["relic"]>(favoritePage.initialConfiguration);
   const [result, setResult] = useState("");
   const [relicRegex, setRelicRegex] = useState<RelicRegex[]>([]);
+  const loadedLanguageRef = useRef<typeof language | undefined>(undefined);
+  const [dataLanguage, setDataLanguage] = useState<typeof language>();
 
   useEffect(() => {
-    loadRelicRegex().then(setRelicRegex);
-  }, []);
+    let active = true;
+    setResult("");
+    setDataLanguage(undefined);
+    const sourceLanguage = loadedLanguageRef.current ?? favoritePage.initialLanguage;
+    Promise.all([loadRelicRegex(sourceLanguage), loadRelicRegex(language)]).then(([source, data]) => {
+      if (!active) return;
+      if (sourceLanguage !== language) setSettings((current) => rebaseRelicSettings(current, source, data));
+      loadedLanguageRef.current = language;
+      setRelicRegex(data);
+      setDataLanguage(language);
+    });
+    return () => { active = false; };
+  }, [language, favoritePage.initialLanguage]);
 
   const prefixes: SelectOption[] = relicRegex
     .filter((e) => e.affix === "PREFIX")
@@ -44,12 +58,13 @@ export function Relic() {
     }));
 
   useEffect(() => {
+    if (dataLanguage !== language) { setResult(""); return; }
     if (favoritePage.isEditingFavorite) { setResult(generateRelicResult({...loadSettings(currentProfile), relic: settings})); return; }
     const base = loadSettings(currentProfile);
     const settingsResult = {...base, relic: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateRelicResult(settingsResult));
-  }, [settings, favoritePage.isEditingFavorite]);
+  }, [settings, favoritePage.isEditingFavorite, relicRegex, dataLanguage, language]);
 
   useEffect(() => {
     if (favoritePage.isEditingFavorite) return;
@@ -61,7 +76,7 @@ export function Relic() {
 
   return (
     <>
-      <Poe2Header text="Relic"/>
+      <Poe2Header text="Relic" languageSelect/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action(settings)}

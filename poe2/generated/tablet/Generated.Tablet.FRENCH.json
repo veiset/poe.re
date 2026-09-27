@@ -1,0 +1,1563 @@
+{
+    "tokens": [
+        {
+            "id": -2039013743,
+            "regex": "s qu'un g",
+            "rawText": "#% de chances qu'un groupe de Monstres supplémentaire entoure les Balises vaal dans la Carte",
+            "generalizedText": "^#% de chances qu'un groupe de monstres supplementaire entoure les balises vaal dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": -2010271605,
+            "regex": "'etre m",
+            "rawText": "Dans la Carte, les Monstres Ressuscités par les Autels de Rituel ont #% d'Augmentation de chances d'être Magiques",
+            "generalizedText": "^dans la carte, les monstres ressuscites par les autels de rituel ont #% d'augmentation de chances d'etre magiques$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1983457655,
+            "regex": "is st",
+            "rawText": "Dans la Carte, les Brèches instables génèrent un Monstre Rare supplémentaire une fois Stabilisées",
+            "generalizedText": "^dans la carte, les breches instables generent un monstre rare supplementaire une fois stabilisees$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1977046275,
+            "regex": "ir un c",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir un Cercle d'invocation",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir un cercle d'invocation$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1966879481,
+            "regex": "ation de la taille des g",
+            "rawText": "#% d'Augmentation de la Taille des Groupes dans la Carte",
+            "generalizedText": "^#% d'augmentation de la taille des groupes dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1939426210,
+            "regex": "d'av",
+            "rawText": "Dans la Carte, les Monstres Abyssaux ont #% d'Augmentation de chances d'avoir des Modificateurs abyssaux",
+            "generalizedText": "^dans la carte, les monstres abyssaux ont #% d'augmentation de chances d'avoir des modificateurs abyssaux$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -1890711045,
+            "regex": "lire ap",
+            "rawText": "Dans la Carte, les Brumes du Délire appliquent #% d'Augmentation de Délire aux Joueurs",
+            "generalizedText": "^dans la carte, les brumes du delire appliquent #% d'augmentation de delire aux joueurs$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -1855312305,
+            "regex": "nir q",
+            "rawText": "La Carte a #% de chances de contenir quatre Abysses supplémentaires",
+            "generalizedText": "^la carte a #% de chances de contenir quatre abysses supplementaires$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -1749500965,
+            "regex": "tres dans la",
+            "rawText": "#% d'Augmentation de la Rareté des Monstres dans la Carte",
+            "generalizedText": "^#% d'augmentation de la rarete des monstres dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1710251164,
+            "regex": "ion tr",
+            "rawText": "#% d'Augmentation de la Rareté des Objets trouvés dans la Carte|La Carte contient une Essence supplémentaire|#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte",
+            "generalizedText": "^#% d'augmentation de la rarete des objets trouves dans la carte$|^la carte contient une essence supplementaire$|^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1691435119,
+            "regex": "coute",
+            "rawText": "Dans la Carte, les Faveurs relancées auprès des Autels de Rituel ont #% de chances de ne pas coûter de Tribut",
+            "generalizedText": "^dans la carte, les faveurs relancees aupres des autels de rituel ont #% de chances de ne pas couter de tribut$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1691391031,
+            "regex": "eche r",
+            "rawText": "Dans la Carte, les Monstres de Brèche Rares ont #% d'Augmentation d'Efficacité",
+            "generalizedText": "^dans la carte, les monstres de breche rares ont #% d'augmentation d'efficacite$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1687533017,
+            "regex": "n de n",
+            "rawText": "Dans la Carte, les Abysses ont #% d'Augmentation de nombre de Monstres générés",
+            "generalizedText": "^dans la carte, les abysses ont #% d'augmentation de nombre de monstres generes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -1662910246,
+            "regex": "eches o",
+            "rawText": "Dans la Carte, les Brèches ont #% d'Augmentation de Taille des Groupes",
+            "generalizedText": "^dans la carte, les breches ont #% d'augmentation de taille des groupes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1620176862,
+            "regex": "de marq",
+            "rawText": "La Carte a #% d'Augmentation du nombre de Marqueurs de Monstres Runiques",
+            "generalizedText": "^la carte a #% d'augmentation du nombre de marqueurs de monstres runiques$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1617869407,
+            "regex": "ipen",
+            "rawText": "Dans la Carte, les Brumes du Délire se dissipent #% plus lentement",
+            "generalizedText": "^dans la carte, les brumes du delire se dissipent #% plus lentement$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -1603820150,
+            "regex": "t un ab",
+            "rawText": "La Carte contient un Abysse supplémentaire",
+            "generalizedText": "^la carte contient un abysse supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -1452725078,
+            "regex": "les monstres du",
+            "rawText": "Dans la Carte, les Monstres du Délire ont #% d'Augmentation de Taille des Groupes",
+            "generalizedText": "^dans la carte, les monstres du delire ont #% d'augmentation de taille des groupes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -1370454699,
+            "regex": "ont \\d+ m",
+            "rawText": "Les Monstres Uniques ont # Modificateur supplémentaire",
+            "generalizedText": "^les monstres uniques ont # modificateur supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1342916786,
+            "regex": "ye$",
+            "rawText": "Dans la Carte, les Monstres Sacrifiés sur les Autels de Rituel ont #% d'Augmentation du Tribut octroyé",
+            "generalizedText": "^dans la carte, les monstres sacrifies sur les autels de rituel ont #% d'augmentation du tribut octroye$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1304866805,
+            "regex": "tel s",
+            "rawText": "#% de Réduction de la Taille des Groupes dans la Carte|#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte|La Carte contient un Autel supplémentaire",
+            "generalizedText": "^#% de reduction de la taille des groupes dans la carte$|^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$|^la carte contient un autel supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1250660427,
+            "regex": "vru",
+            "rawText": "Dans la Carte, les Brèches instables ont #% d'Augmentation de chances de contenir Vruun, Maréchal de Xesht",
+            "generalizedText": "^dans la carte, les breches instables ont #% d'augmentation de chances de contenir vruun, marechal de xesht$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1169721778,
+            "regex": "r des ess",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir des Essences",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir des essences$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1100397124,
+            "regex": "ge al",
+            "rawText": "Dans la Carte, le coût en Tribut d'un tirage aléatoire de nouvelles Faveurs auprès d'un Autel de Rituel a #% de Réduction",
+            "generalizedText": "^dans la carte, le cout en tribut d'un tirage aleatoire de nouvelles faveurs aupres d'un autel de rituel a #% de reduction$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1045848668,
+            "regex": "ouren",
+            "rawText": "Dans la Carte, les Monstres qui entourent les Balises vaal ont #% d'Augmentation de Taille des Groupes",
+            "generalizedText": "^dans la carte, les monstres qui entourent les balises vaal ont #% d'augmentation de taille des groupes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": -912039463,
+            "regex": "des objets cedes p",
+            "rawText": "#% d'Augmentation de la Rareté des Objets cédés par les Boss de Carte",
+            "generalizedText": "^#% d'augmentation de la rarete des objets cedes par les boss de carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": -780944243,
+            "regex": "'or t",
+            "rawText": "#% d'Augmentation de l'Or trouvé dans la Carte",
+            "generalizedText": "^#% d'augmentation de l'or trouve dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -770186692,
+            "regex": "tuel v",
+            "rawText": "Dans la Carte, les Autels de Rituel vous permettent de tirer au sort de nouvelles Faveurs une fois de plus",
+            "generalizedText": "^dans la carte, les autels de rituel vous permettent de tirer au sort de nouvelles faveurs une fois de plus$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -651455175,
+            "regex": "rt su",
+            "rawText": "#% de Réduction de la Taille des Groupes dans la Carte|#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte|La Carte contient un Coffre-fort supplémentaire",
+            "generalizedText": "^#% de reduction de la taille des groupes dans la carte$|^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$|^la carte contient un coffre-fort supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -383582395,
+            "regex": "veau$",
+            "rawText": "Dans la Carte, les Dons de la matrice ont #% de chances d'être cédés avec +1 niveau",
+            "generalizedText": "^dans la carte, les dons de la matrice ont #% de chances d'etre cedes avec # niveau$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -322448256,
+            "regex": "rt su",
+            "rawText": "La Carte contient un Coffre-fort supplémentaire",
+            "generalizedText": "^la carte contient un coffre-fort supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": -207711657,
+            "regex": "ir des a",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir des Autels",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir des autels$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -160075803,
+            "regex": "ss u",
+            "rawText": "Dans la Carte, les Rencontres du Délire ont #% davantage de chances de générer des Boss Uniques",
+            "generalizedText": "^dans la carte, les rencontres du delire ont #% davantage de chances de generer des boss uniques$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -131481416,
+            "regex": "fosses",
+            "rawText": "Dans la Carte, les Fosses d'Abysse ont deux fois plus de chances de contenir des Récompenses",
+            "generalizedText": "^dans la carte, les fosses d'abysse ont deux fois plus de chances de contenir des recompenses$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -76893326,
+            "regex": "ice t",
+            "rawText": "#% d'Augmentation de la Quantité de Dons de la matrice trouvés dans la Carte",
+            "generalizedText": "^#% d'augmentation de la quantite de dons de la matrice trouves dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -4101647,
+            "regex": "bitee",
+            "rawText": "#% d'Augmentation de la Rareté des Objets trouvés dans la Carte|#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte|La Carte est habitée par # Exilé renégat supplémentaire",
+            "generalizedText": "^#% d'augmentation de la rarete des objets trouves dans la carte$|^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$|^la carte est habitee par # exile renegat supplementaire$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 77862394,
+            "regex": "tot$",
+            "rawText": "Dans la Carte, les Faveurs Différées auprès des Autels de Rituel réapparaissent #% plus tôt",
+            "generalizedText": "^dans la carte, les faveurs differees aupres des autels de rituel reapparaissent #% plus tot$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 78150937,
+            "regex": "mee,",
+            "rawText": "Les Monstres Abyssaux ont #% d'Augmentation d'Efficacité pour chaque Fosse fermée, jusqu'à un maximum de 100%",
+            "generalizedText": "^les monstres abyssaux ont #% d'augmentation d'efficacite pour chaque fosse fermee, jusqu'a un maximum de #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 160540054,
+            "regex": "s d'aj",
+            "rawText": "#% de chances d'ajouter un Monstre Unique de Balise vaal à la Carte",
+            "generalizedText": "^#% de chances d'ajouter un monstre unique de balise vaal a la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 366564632,
+            "regex": "s rares da",
+            "rawText": "#% d'Augmentation du nombre de Monstres Rares dans la Carte",
+            "generalizedText": "^#% d'augmentation du nombre de monstres rares dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 467944113,
+            "regex": "s trouves d",
+            "rawText": "#% d'Augmentation de la Rareté des Objets trouvés dans la Carte",
+            "generalizedText": "^#% d'augmentation de la rarete des objets trouves dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 468868458,
+            "regex": "a quantite d'ob",
+            "rawText": "#% d'Augmentation de la Quantité d'Objets cédés par les Boss de Carte",
+            "generalizedText": "^#% d'augmentation de la quantite d'objets cedes par les boss de carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 526189805,
+            "regex": "'invoq",
+            "rawText": "Dans la Carte, les Balises vaal ont #% d'Augmentation de chances d'invoquer des Monstres supplémentaires",
+            "generalizedText": "^dans la carte, les balises vaal ont #% d'augmentation de chances d'invoquer des monstres supplementaires$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 638028086,
+            "regex": "ce da",
+            "rawText": "#% d'Augmentation du gain d'Expérience dans la Carte",
+            "generalizedText": "^#% d'augmentation du gain d'experience dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 715581820,
+            "regex": "rs de ri",
+            "rawText": "Dans la Carte, les Faveurs de Rituel ont #% d'Augmentation de chances d'être des Présages",
+            "generalizedText": "^dans la carte, les faveurs de rituel ont #% d'augmentation de chances d'etre des presages$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 728698894,
+            "regex": "n de cou",
+            "rawText": "Dans la Carte, les Faveurs Différées auprès des Autels de Rituel ont #% de Réduction de coût en Tribut",
+            "generalizedText": "^dans la carte, les faveurs differees aupres des autels de rituel ont #% de reduction de cout en tribut$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 732083771,
+            "regex": "sses g",
+            "rawText": "Dans la Carte, les Abysses génèrent # Monstres Rares supplémentaires",
+            "generalizedText": "^dans la carte, les abysses generent # monstres rares supplementaires$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 756237419,
+            "regex": "ir des esp",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir des Esprits azmériens",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir des esprits azmeriens$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 768098685,
+            "regex": "un cr",
+            "rawText": "#% de chances de gagner un Cristal supplémentaire via les Balises vaal dans la Carte",
+            "generalizedText": "^#% de chances de gagner un cristal supplementaire via les balises vaal dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 810401751,
+            "regex": "ene t",
+            "rawText": "#% d'Augmentation de la Quantité de Sang de Ruchené trouvée dans la Carte",
+            "generalizedText": "^#% d'augmentation de la quantite de sang de ruchene trouvee dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": 927488618,
+            "regex": "'esq",
+            "rawText": "#% d'Augmentation de la taille des Ensembles d'Esquilles de Simulacre trouvés dans la Carte",
+            "generalizedText": "^#% d'augmentation de la taille des ensembles d'esquilles de simulacre trouves dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 931599732,
+            "regex": "ires g",
+            "rawText": "Dans la Carte, les Objets monétaires générés par les Abysses ont #% d'Augmentation de chances d'être Profanés",
+            "generalizedText": "^dans la carte, les objets monetaires generes par les abysses ont #% d'augmentation de chances d'etre profanes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 961936227,
+            "regex": "aal s",
+            "rawText": "#% d'Augmentation des chances que les Coffres de Balise vaal soient Rares dans la Carte",
+            "generalizedText": "^#% d'augmentation des chances que les coffres de balise vaal soient rares dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1017787054,
+            "regex": "'etre r",
+            "rawText": "Dans la Carte, les Monstres Ressuscités par les Autels de Rituel ont #% d'Augmentation de chances d'être Rares",
+            "generalizedText": "^dans la carte, les monstres ressuscites par les autels de rituel ont #% d'augmentation de chances d'etre rares$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 1043704191,
+            "regex": "t un es",
+            "rawText": "La Carte contient un Esprit azmérien supplémentaire",
+            "generalizedText": "^la carte contient un esprit azmerien supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1049484898,
+            "regex": "ient une e",
+            "rawText": "La Carte contient une Essence supplémentaire",
+            "generalizedText": "^la carte contient une essence supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1097992629,
+            "regex": "\\d+ esp",
+            "rawText": "#% d'Augmentation de la Rareté des Objets trouvés dans la Carte|#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte|La Carte contient # Esprit azmérien supplémentaire",
+            "generalizedText": "^#% d'augmentation de la rarete des objets trouves dans la carte$|^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$|^la carte contient # esprit azmerien supplementaire$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1118589074,
+            "regex": "tel s",
+            "rawText": "La Carte contient un Autel supplémentaire",
+            "generalizedText": "^la carte contient un autel supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1147894097,
+            "regex": "giques d",
+            "rawText": "#% d'Augmentation du nombre de Monstres Magiques dans la Carte",
+            "generalizedText": "^#% d'augmentation du nombre de monstres magiques dans la carte$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1223590674,
+            "regex": "e men",
+            "rawText": "Dans la Carte, les Abysses ont #% d'Augmentation de chances de mener à des Profondeurs abyssales",
+            "generalizedText": "^dans la carte, les abysses ont #% d'augmentation de chances de mener a des profondeurs abyssales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 1272982029,
+            "regex": "tres ont \\d+",
+            "rawText": "Les Monstres ont #% d'Augmentation d'Efficacité",
+            "generalizedText": "^les monstres ont #% d'augmentation d'efficacite$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1323937116,
+            "regex": "des exi",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir des Exilés renégats",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir des exiles renegats$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1358957283,
+            "regex": "yee$",
+            "rawText": "Les Boss de Carte ont #% d'Augmentation de l'Expérience octroyée",
+            "generalizedText": "^les boss de carte ont #% d'augmentation de l'experience octroyee$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1386955132,
+            "regex": "te, \\d+",
+            "rawText": "Dans la Carte, # groupe de Monstres supplémentaire entoure les Balises vaal",
+            "generalizedText": "^dans la carte, # groupe de monstres supplementaire entoure les balises vaal$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1439103785,
+            "regex": "rd d'",
+            "rawText": "#% d'Augmentation de la Quantité de Journaux de bord d'Expédition cédés par les Monstres Runiques dans la Carte",
+            "generalizedText": "^#% d'augmentation de la quantite de journaux de bord d'expedition cedes par les monstres runiques dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 1553324698,
+            "regex": "siper$",
+            "rawText": "Dans la Carte, les Brumes du Délire durent # secondes supplémentaires avant de se dissiper",
+            "generalizedText": "^dans la carte, les brumes du delire durent # secondes supplementaires avant de se dissiper$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 1608528424,
+            "regex": "um c",
+            "rawText": "Les Monstres générés par les Vestiges de Vérisium cèdent #% d'Augmentation de Vérisium",
+            "generalizedText": "^les monstres generes par les vestiges de verisium cedent #% d'augmentation de verisium$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 1612627987,
+            "regex": "ion tr",
+            "rawText": "#% d'Augmentation de la Quantité de Pierres de téléportation trouvées dans la Carte",
+            "generalizedText": "^#% d'augmentation de la quantite de pierres de teleportation trouvees dans la carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1636021171,
+            "regex": "d'ec",
+            "rawText": "Dans la Carte, les Brumes du Délire ont #% d'Augmentation du nombre d'Éclats de Miroir générés",
+            "generalizedText": "^dans la carte, les brumes du delire ont #% d'augmentation du nombre d'eclats de miroir generes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 1737743709,
+            "regex": "fres ra",
+            "rawText": "La Carte contient # Coffres Rares supplémentaires",
+            "generalizedText": "^la carte contient # coffres rares supplementaires$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1783716087,
+            "regex": "nts g",
+            "rawText": "Dans la Carte, les Brumes du Délire ont #% d'Augmentation du nombre de Miroirs fissurants générés",
+            "generalizedText": "^dans la carte, les brumes du delire ont #% d'augmentation du nombre de miroirs fissurants generes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 1789968466,
+            "regex": "t un cerc",
+            "rawText": "La Carte contient un Cercle d'invocation supplémentaire",
+            "generalizedText": "^la carte contient un cercle d'invocation supplementaire$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1951605346,
+            "regex": "oire su",
+            "rawText": "La Carte a # Modificateur aléatoire supplémentaire",
+            "generalizedText": "^la carte a # modificateur aleatoire supplementaire$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 2008394276,
+            "regex": "r des co",
+            "rawText": "La Carte a #% d'Augmentation de chances de contenir des Coffres-forts",
+            "generalizedText": "^la carte a #% d'augmentation de chances de contenir des coffres-forts$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 2038414872,
+            "regex": "ite la",
+            "rawText": "#% d'Augmentation de Quantité la de Pierres de téléportations cédées par les Boss de Carte",
+            "generalizedText": "^#% d'augmentation de quantite la de pierres de teleportations cedees par les boss de carte$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 2048371274,
+            "regex": "paus",
+            "rawText": "Dans la Carte, tuer des Monstres Rares met le compte à rebours du Miroir du Délire en pause pendant # secondes",
+            "generalizedText": "^dans la carte, tuer des monstres rares met le compte a rebours du miroir du delire en pause pendant # secondes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        }
+    ],
+    "optimizationTable": {
+        "-2039013743:1386955132": {
+            "ids": [
+                -2039013743,
+                1386955132
+            ],
+            "regex": "ure l",
+            "weight": 7,
+            "count": 2
+        },
+        "-2039013743:768098685": {
+            "ids": [
+                -2039013743,
+                768098685
+            ],
+            "regex": "aal d",
+            "weight": 7,
+            "count": 2
+        },
+        "-2039013743:-1045848668:526189805:768098685:1386955132": {
+            "ids": [
+                -2039013743,
+                -1045848668,
+                526189805,
+                768098685,
+                1386955132
+            ],
+            "regex": "les balise",
+            "weight": 12,
+            "count": 5
+        },
+        "-2010271605:-1691435119:-1342916786:715581820:728698894:1017787054": {
+            "ids": [
+                -2010271605,
+                -1691435119,
+                -1342916786,
+                715581820,
+                728698894,
+                1017787054
+            ],
+            "regex": "el o",
+            "weight": 6,
+            "count": 6
+        },
+        "-2010271605:-383582395:715581820:931599732:1017787054": {
+            "ids": [
+                -2010271605,
+                -383582395,
+                715581820,
+                931599732,
+                1017787054
+            ],
+            "regex": "s d'etr",
+            "weight": 9,
+            "count": 5
+        },
+        "-2010271605:1017787054": {
+            "ids": [
+                -2010271605,
+                1017787054
+            ],
+            "regex": "res res",
+            "weight": 9,
+            "count": 2
+        },
+        "-2010271605:-1939426210:-1691391031:-1452725078:-1342916786:-1045848668:1017787054": {
+            "ids": [
+                -2010271605,
+                -1939426210,
+                -1691391031,
+                -1452725078,
+                -1342916786,
+                -1045848668,
+                1017787054
+            ],
+            "regex": "rte, les m",
+            "weight": 12,
+            "count": 7
+        },
+        "-1983457655:-1662910246:-1250660427": {
+            "ids": [
+                -1983457655,
+                -1662910246,
+                -1250660427
+            ],
+            "regex": ", les bre",
+            "weight": 11,
+            "count": 3
+        },
+        "-1983457655:732083771": {
+            "ids": [
+                -1983457655,
+                732083771
+            ],
+            "regex": "es generen",
+            "weight": 12,
+            "count": 2
+        },
+        "-1977046275:-1620176862:-1169721778:-207711657:756237419:1323937116:2008394276": {
+            "ids": [
+                -1977046275,
+                -1620176862,
+                -1169721778,
+                -207711657,
+                756237419,
+                1323937116,
+                2008394276
+            ],
+            "regex": "te a \\d+% d'",
+            "weight": 15,
+            "count": 7
+        },
+        "-1966879481:-1662910246:-1452725078:-1304866805:-1045848668:-651455175:927488618": {
+            "ids": [
+                -1966879481,
+                -1662910246,
+                -1452725078,
+                -1304866805,
+                -1045848668,
+                -651455175,
+                927488618
+            ],
+            "regex": "le des",
+            "weight": 8,
+            "count": 7
+        },
+        "-1966879481:-1304866805:-651455175": {
+            "ids": [
+                -1966879481,
+                -1304866805,
+                -651455175
+            ],
+            "regex": "upes da",
+            "weight": 9,
+            "count": 3
+        },
+        "-1966879481:-1304866805:-651455175:927488618": {
+            "ids": [
+                -1966879481,
+                -1304866805,
+                -651455175,
+                927488618
+            ],
+            "regex": "e la ta",
+            "weight": 9,
+            "count": 4
+        },
+        "-1966879481:-1662910246:-1452725078:-1304866805:-1045848668:-651455175": {
+            "ids": [
+                -1966879481,
+                -1662910246,
+                -1452725078,
+                -1304866805,
+                -1045848668,
+                -651455175
+            ],
+            "regex": "e des g",
+            "weight": 9,
+            "count": 6
+        },
+        "-1939426210:160540054": {
+            "ids": [
+                -1939426210,
+                160540054
+            ],
+            "regex": "nces d'a",
+            "weight": 10,
+            "count": 2
+        },
+        "-1939426210:78150937": {
+            "ids": [
+                -1939426210,
+                78150937
+            ],
+            "regex": "x ont \\d+",
+            "weight": 12,
+            "count": 2
+        },
+        "-1890711045:-1617869407:1553324698:1636021171:1783716087": {
+            "ids": [
+                -1890711045,
+                -1617869407,
+                1553324698,
+                1636021171,
+                1783716087
+            ],
+            "regex": "e, les bru",
+            "weight": 12,
+            "count": 5
+        },
+        "-1749500965:366564632:961936227": {
+            "ids": [
+                -1749500965,
+                366564632,
+                961936227
+            ],
+            "regex": "res dans la c",
+            "weight": 15,
+            "count": 3
+        },
+        "-1710251164:-1304866805:-651455175:-4101647:1097992629:1612627987": {
+            "ids": [
+                -1710251164,
+                -1304866805,
+                -651455175,
+                -4101647,
+                1097992629,
+                1612627987
+            ],
+            "regex": "ion tr",
+            "weight": 8,
+            "count": 6
+        },
+        "-1710251164:-1304866805:-651455175:-4101647:1097992629": {
+            "ids": [
+                -1710251164,
+                -1304866805,
+                -651455175,
+                -4101647,
+                1097992629
+            ],
+            "regex": "ion tr",
+            "weight": 8,
+            "count": 5
+        },
+        "-1710251164:-76893326:-4101647:467944113:927488618:1097992629": {
+            "ids": [
+                -1710251164,
+                -76893326,
+                -4101647,
+                467944113,
+                927488618,
+                1097992629
+            ],
+            "regex": "ouves d",
+            "weight": 9,
+            "count": 6
+        },
+        "-1710251164:-76893326:-4101647:927488618:1097992629": {
+            "ids": [
+                -1710251164,
+                -76893326,
+                -4101647,
+                927488618,
+                1097992629
+            ],
+            "regex": "ouves d",
+            "weight": 9,
+            "count": 5
+        },
+        "-1710251164:-1304866805:-651455175:-4101647:1097992629:1612627987:2038414872": {
+            "ids": [
+                -1710251164,
+                -1304866805,
+                -651455175,
+                -4101647,
+                1097992629,
+                1612627987,
+                2038414872
+            ],
+            "regex": "e pierres",
+            "weight": 11,
+            "count": 7
+        },
+        "-1710251164:-1304866805:-651455175:-4101647:1097992629:2038414872": {
+            "ids": [
+                -1710251164,
+                -1304866805,
+                -651455175,
+                -4101647,
+                1097992629,
+                2038414872
+            ],
+            "regex": "e pierres",
+            "weight": 11,
+            "count": 6
+        },
+        "-1710251164:1049484898": {
+            "ids": [
+                -1710251164,
+                1049484898
+            ],
+            "regex": "ient une e",
+            "weight": 12,
+            "count": 2
+        },
+        "-1710251164:-4101647:467944113:1097992629": {
+            "ids": [
+                -1710251164,
+                -4101647,
+                467944113,
+                1097992629
+            ],
+            "regex": "s trouves d",
+            "weight": 13,
+            "count": 4
+        },
+        "-1710251164:-4101647:1097992629": {
+            "ids": [
+                -1710251164,
+                -4101647,
+                1097992629
+            ],
+            "regex": "s trouves d",
+            "weight": 13,
+            "count": 3
+        },
+        "-1691435119:77862394:728698894": {
+            "ids": [
+                -1691435119,
+                77862394,
+                728698894
+            ],
+            "regex": "ees aup",
+            "weight": 9,
+            "count": 3
+        },
+        "-1691435119:-131481416:77862394:715581820:728698894": {
+            "ids": [
+                -1691435119,
+                -131481416,
+                77862394,
+                715581820,
+                728698894
+            ],
+            "regex": "e, les f",
+            "weight": 10,
+            "count": 5
+        },
+        "-1691435119:77862394:715581820:728698894": {
+            "ids": [
+                -1691435119,
+                77862394,
+                715581820,
+                728698894
+            ],
+            "regex": "e, les fa",
+            "weight": 11,
+            "count": 4
+        },
+        "-1691391031:1272982029": {
+            "ids": [
+                -1691391031,
+                1272982029
+            ],
+            "regex": "res ont \\d+",
+            "weight": 14,
+            "count": 2
+        },
+        "-1687533017:931599732:1223590674": {
+            "ids": [
+                -1687533017,
+                931599732,
+                1223590674
+            ],
+            "regex": "ses on",
+            "weight": 8,
+            "count": 3
+        },
+        "-1687533017:732083771:1223590674": {
+            "ids": [
+                -1687533017,
+                732083771,
+                1223590674
+            ],
+            "regex": ", les ab",
+            "weight": 10,
+            "count": 3
+        },
+        "-1687533017:-770186692:732083771:1223590674": {
+            "ids": [
+                -1687533017,
+                -770186692,
+                732083771,
+                1223590674
+            ],
+            "regex": "te, les a",
+            "weight": 11,
+            "count": 4
+        },
+        "-1662910246:-1452725078:-1045848668": {
+            "ids": [
+                -1662910246,
+                -1452725078,
+                -1045848668
+            ],
+            "regex": "e taille d",
+            "weight": 12,
+            "count": 3
+        },
+        "-1617869407:1553324698": {
+            "ids": [
+                -1617869407,
+                1553324698
+            ],
+            "regex": "e se dis",
+            "weight": 10,
+            "count": 2
+        },
+        "-1603820150:-1304866805": {
+            "ids": [
+                -1603820150,
+                -1304866805
+            ],
+            "regex": "ent un a",
+            "weight": 10,
+            "count": 2
+        },
+        "-1603820150:-1304866805:1118589074": {
+            "ids": [
+                -1603820150,
+                -1304866805,
+                1118589074
+            ],
+            "regex": "ent un a",
+            "weight": 10,
+            "count": 3
+        },
+        "-1452725078:-160075803:1636021171:1783716087": {
+            "ids": [
+                -1452725078,
+                -160075803,
+                1636021171,
+                1783716087
+            ],
+            "regex": "lire o",
+            "weight": 8,
+            "count": 4
+        },
+        "-1304866805:768098685": {
+            "ids": [
+                -1304866805,
+                768098685
+            ],
+            "regex": "l sup",
+            "weight": 7,
+            "count": 2
+        },
+        "-1304866805:1118589074": {
+            "ids": [
+                -1304866805,
+                1118589074
+            ],
+            "regex": "tel s",
+            "weight": 7,
+            "count": 2
+        },
+        "-1304866805:768098685:1118589074": {
+            "ids": [
+                -1304866805,
+                768098685,
+                1118589074
+            ],
+            "regex": "l sup",
+            "weight": 7,
+            "count": 3
+        },
+        "-1169721778:756237419": {
+            "ids": [
+                -1169721778,
+                756237419
+            ],
+            "regex": "ir des es",
+            "weight": 11,
+            "count": 2
+        },
+        "-1169721778:756237419:1323937116": {
+            "ids": [
+                -1169721778,
+                756237419,
+                1323937116
+            ],
+            "regex": "nir des e",
+            "weight": 11,
+            "count": 3
+        },
+        "-1169721778:-207711657:-131481416:756237419:1323937116:2008394276": {
+            "ids": [
+                -1169721778,
+                -207711657,
+                -131481416,
+                756237419,
+                1323937116,
+                2008394276
+            ],
+            "regex": "e contenir d",
+            "weight": 14,
+            "count": 6
+        },
+        "-1100397124:-770186692": {
+            "ids": [
+                -1100397124,
+                -770186692
+            ],
+            "regex": "elles f",
+            "weight": 9,
+            "count": 2
+        },
+        "-1100397124:728698894": {
+            "ids": [
+                -1100397124,
+                728698894
+            ],
+            "regex": "e cout e",
+            "weight": 10,
+            "count": 2
+        },
+        "-1045848668:526189805": {
+            "ids": [
+                -1045848668,
+                526189805
+            ],
+            "regex": "aal o",
+            "weight": 7,
+            "count": 2
+        },
+        "-912039463:468868458:2038414872": {
+            "ids": [
+                -912039463,
+                468868458,
+                2038414872
+            ],
+            "regex": "r les boss d",
+            "weight": 14,
+            "count": 3
+        },
+        "-912039463:468868458": {
+            "ids": [
+                -912039463,
+                468868458
+            ],
+            "regex": "des par les b",
+            "weight": 15,
+            "count": 2
+        },
+        "-780944243:638028086:810401751": {
+            "ids": [
+                -780944243,
+                638028086,
+                810401751
+            ],
+            "regex": "e dans la ca",
+            "weight": 14,
+            "count": 3
+        },
+        "-651455175:-322448256": {
+            "ids": [
+                -651455175,
+                -322448256
+            ],
+            "regex": "rt su",
+            "weight": 7,
+            "count": 2
+        },
+        "-651455175:1789968466": {
+            "ids": [
+                -651455175,
+                1789968466
+            ],
+            "regex": "ient un c",
+            "weight": 11,
+            "count": 2
+        },
+        "-651455175:-322448256:1789968466": {
+            "ids": [
+                -651455175,
+                -322448256,
+                1789968466
+            ],
+            "regex": "ient un c",
+            "weight": 11,
+            "count": 3
+        },
+        "77862394:728698894": {
+            "ids": [
+                77862394,
+                728698894
+            ],
+            "regex": "rs di",
+            "weight": 7,
+            "count": 2
+        },
+        "77862394:715581820:728698894": {
+            "ids": [
+                77862394,
+                715581820,
+                728698894
+            ],
+            "regex": "s faveurs d",
+            "weight": 13,
+            "count": 3
+        },
+        "160540054:961936227": {
+            "ids": [
+                160540054,
+                961936227
+            ],
+            "regex": "de bali",
+            "weight": 9,
+            "count": 2
+        },
+        "366564632:961936227": {
+            "ids": [
+                366564632,
+                961936227
+            ],
+            "regex": "ares da",
+            "weight": 9,
+            "count": 2
+        },
+        "526189805:2048371274": {
+            "ids": [
+                526189805,
+                2048371274
+            ],
+            "regex": "uer des m",
+            "weight": 11,
+            "count": 2
+        },
+        "1043704191:1097992629": {
+            "ids": [
+                1043704191,
+                1097992629
+            ],
+            "regex": "rien s",
+            "weight": 8,
+            "count": 2
+        },
+        "1097992629:1737743709": {
+            "ids": [
+                1097992629,
+                1737743709
+            ],
+            "regex": "tient \\d+",
+            "weight": 12,
+            "count": 2
+        },
+        "1147894097:1439103785": {
+            "ids": [
+                1147894097,
+                1439103785
+            ],
+            "regex": "ques da",
+            "weight": 9,
+            "count": 2
+        }
+    }
+}

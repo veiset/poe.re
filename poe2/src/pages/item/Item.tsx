@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useMemo, useState} from "react";
+import React, {useContext, useEffect, useMemo, useRef, useState} from "react";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings} from "../../settings";
 import {loadSettings, updateSettings} from "../../localStorage";
@@ -19,14 +19,17 @@ import ModWarning from "@shared/core/item/ModWarning";
 import RareItemMatchSettings from "@shared/components/item/RareItemMatchSettings";
 import MagicItemMatchSettings from "@shared/components/item/MagicItemMatchSettings";
 import "./Item.css";
+import {rebaseItemSettings} from "@poe2/favoriteLanguageRenderer";
 
 export function Item() {
-  const {currentProfile} = useContext(Poe2ProfileContext);
+  const {currentProfile, language} = useContext(Poe2ProfileContext);
   const storedProfile = loadSettings(currentProfile);
   const favoritePage = useFavoritePage("item", storedProfile.itemCrafting);
   const [result, setResult] = useState("");
   const [basetypes, setBasetypes] = useState<BaseType[]>([]);
   const [itemRegex, setItemRegex] = useState<ItemRegex[]>([]);
+  const [dataLanguage, setDataLanguage] = useState<typeof language>();
+  const itemDataRef = useRef<{language: typeof language; basetypes: BaseType[]; regex: ItemRegex[]} | undefined>(undefined);
   const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
 
   const affixMap: Record<string, ItemAffixRegex> = useMemo(() => groupAffixes(itemRegex), [itemRegex]);
@@ -51,14 +54,6 @@ export function Item() {
   const nonMagicBases = ["heist"];
   const onlyMagicBases = ["utility flasks"];
 
-  useEffect(() => {
-    loadItemBasetypes().then(setBasetypes);
-  }, []);
-
-  useEffect(() => {
-    if (itembase) loadItemRegex().then(setItemRegex);
-  }, [itembase]);
-
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
 
@@ -68,6 +63,33 @@ export function Item() {
     magicSettings: {onlyIfBothPrefixAndSuffix, matchOpenAffix},
     customText: {value: customTextStr, enabled: enableCustomText},
   };
+
+  const currentSettingsRef = useRef(currentSettings);
+  currentSettingsRef.current = currentSettings;
+
+  useEffect(() => {
+    let active = true;
+    setResult("");
+    setDataLanguage(undefined);
+    const sourceLanguage = itemDataRef.current?.language ?? favoritePage.initialLanguage;
+    Promise.all([
+      loadItemBasetypes(sourceLanguage), loadItemRegex(sourceLanguage),
+      loadItemBasetypes(language), loadItemRegex(language),
+    ]).then(([sourceBases, sourceRegex, nextBases, nextRegex]) => {
+      if (!active) return;
+      if (sourceLanguage !== language) {
+        const rebased = rebaseItemSettings(currentSettingsRef.current, sourceBases, nextBases, sourceRegex, nextRegex).settings;
+        setItembase(rebased.itembase);
+        setSelectedRareMods(rebased.selectedRareMods);
+        setSelectedMagicMods(rebased.selectedMagicMods);
+      }
+      itemDataRef.current = {language, basetypes: nextBases, regex: nextRegex};
+      setBasetypes(nextBases);
+      setItemRegex(nextRegex);
+      setDataLanguage(language);
+    });
+    return () => { active = false; };
+  }, [language, favoritePage.initialLanguage]);
 
   useEffect(() => {
     if (itembase) {
@@ -87,6 +109,7 @@ export function Item() {
   }, [itembase, itemRegex]);
 
   useEffect(() => {
+    if (dataLanguage !== language) { setResult(""); return; }
     if (itembase && itembase.rarity === "Rare") {
       setResult(generateRareItemRegex(affixMap, currentSettings));
     }
@@ -97,10 +120,10 @@ export function Item() {
       ...latest,
       itemCrafting: currentSettings
     }));
-  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases, itemRegex, basetypes]);
+  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases, itemRegex, basetypes, dataLanguage, language]);
 
   return (<>
-      <Poe2Header text={"Item"}/>
+      <Poe2Header text={"Item"} languageSelect/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action(currentSettings)}

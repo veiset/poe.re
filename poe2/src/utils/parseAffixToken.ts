@@ -6,6 +6,7 @@ export interface ParsedAffix {
   regex: string,
   values: number[],
   ranges: number[][],
+  sourceIndex?: number,
 }
 
 export function parseAffixToken<T>(token: Token<T>): ParsedAffix {

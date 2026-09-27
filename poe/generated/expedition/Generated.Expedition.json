@@ -1440,7 +1440,7 @@
                     "id": "445",
                     "name": "Dream Fragments",
                     "baseType": "Sapphire Ring",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvUmluZzZVbmlxdWUiLCJ3IjoxLCJoIjoxLCJzY2FsZSI6MX1d/0c74ddd77c/Ring6Unique.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvUmluZ3MvRHJlYW1GcmFnbWVudHNBbHQyIiwidyI6MSwiaCI6MSwic2NhbGUiOjF9XQ/668f0325c3/DreamFragmentsAlt2.png",
                     "detailsId": null,
                     "links": null
                 },
@@ -2556,7 +2556,7 @@
                     "id": "752",
                     "name": "Limbsplit",
                     "baseType": "Woodsplitter",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlX3NwYXJlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/6cc29798f1/TwoHandAxe_spare.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Ud29IYW5kQXhlcy9Ud29IYW5kQXhlX3NwYXJlIiwidyI6MiwiaCI6NCwic2NhbGUiOjEsInJlbGljIjoxMn1d/e752546184/TwoHandAxe_spare.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -2612,7 +2612,7 @@
                     "id": "1672",
                     "name": "The Whispering Ice",
                     "baseType": "Vile Staff",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvVGhlV2hpc3BlcmluZ0ljZVJhY2VBbHQiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/bf3f20bc8e/TheWhisperingIceRaceAlt.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9TdGF2ZXMvU3RhZmY4dW5pcXVlIiwidyI6MiwiaCI6NCwic2NhbGUiOjF9XQ/04e7459f43/Staff8unique.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -3258,7 +3258,7 @@
                     "id": "394",
                     "name": "Death's Harp",
                     "baseType": "Death Bow",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0RlYXRoc2hhcnAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MX1d/488e5f6267/Deathsharp.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9Ud29IYW5kV2VhcG9ucy9Cb3dzL0RlYXRoc2hhcnAiLCJ3IjoyLCJoIjo0LCJzY2FsZSI6MSwicmVsaWMiOjZ9XQ/558b53ee5b/Deathsharp.png",
                     "detailsId": null,
                     "links": null
                 },
@@ -3285,7 +3285,7 @@
                     "links": null
                 },
                 {
-                    "id": "4760",
+                    "id": "4781",
                     "name": "Yriel's Fostering",
                     "baseType": "Exquisite Leather",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb2R5QXJtb3Vycy9QYWxlQ291bmNpbEFybW91ciIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/f3c31cf6b4/PaleCouncilArmour.png",
@@ -3400,7 +3400,7 @@
                     "id": "343",
                     "name": "Cybil's Paw",
                     "baseType": "Thresher Claw",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DeWJpbHNDbGF3QWx0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/6f8e24fcef/CybilsClawAlt.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9DbGF3cy9DeWJpbHNDbGF3IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/6da52a7519/CybilsClaw.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -3541,7 +3541,7 @@
             "regex": "\"ot g\"",
             "items": [
                 {
-                    "id": "2252",
+                    "id": "4775",
                     "name": "Volkuur's Guidance",
                     "baseType": "Zealot Gloves",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9HbG92ZXMvUGFsZUNvdW5jaWxHbG92ZXMiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/3271f5441a/PaleCouncilGloves.png",
@@ -3889,7 +3889,7 @@
             "regex": "kine",
             "items": [
                 {
-                    "id": "826",
+                    "id": "128404",
                     "name": "Moonsorrow",
                     "baseType": "Kinetic Wand",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kVW5pcXVlMiIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/7a5458ab50/WandUnique2.png",
@@ -4882,7 +4882,7 @@
                     "id": "659",
                     "name": "Ichimonji",
                     "baseType": "Corsair Sword",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0JsYWRlT2ZWYXN0cmkiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MX1d/a01d200e74/BladeOfVastri.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0JsYWRlT2ZWYXN0cmkiLCJ3IjoxLCJoIjozLCJzY2FsZSI6MSwicmVsaWMiOjN9XQ/2aba393a72/BladeOfVastri.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -5217,7 +5217,7 @@
             "regex": "blas",
             "items": [
                 {
-                    "id": "1727",
+                    "id": "128229",
                     "name": "Twyzel",
                     "baseType": "Blasting Wand",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9XYW5kMVVuaXF1ZSIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/086aeb214c/Wand1Unique.png",
@@ -5584,7 +5584,7 @@
                     "id": "607",
                     "name": "Headhunter",
                     "baseType": "Leather Belt",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxfV0/e9542ec6ee/Headhunter.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQmVsdHMvSGVhZGh1bnRlciIsInciOjIsImgiOjEsInNjYWxlIjoxLCJyZWxpYyI6MTF9XQ/468bc189ab/Headhunter.png",
                     "detailsId": null,
                     "links": null
                 },
@@ -7664,7 +7664,7 @@
                     "id": "1062",
                     "name": "Rime Gaze",
                     "baseType": "Mind Cage",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleEludFVuaXF1ZTEiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MX1d/607641b0c2/HelmetDexIntUnique1.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL0hlbG1ldERleEludFVuaXF1ZTEiLCJ3IjoyLCJoIjoyLCJzY2FsZSI6MSwicmVsaWMiOjR9XQ/dd0bfec02d/HelmetDexIntUnique1.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -7706,7 +7706,7 @@
                     "id": "167518",
                     "name": "Dread Captain's Cutlass",
                     "baseType": "Ghostflame Blade",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0NhcHRhaW5zQ3V0bGFzc1ZhcmlhbnQwNiIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/afa2a85fa3/CaptainsCutlassVariant06.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9PbmVIYW5kU3dvcmRzL0NhcHRhaW5zQ3V0bGFzc1ZhcmlhbnQwMCIsInciOjIsImgiOjMsInNjYWxlIjoxfV0/f0e7655eeb/CaptainsCutlassVariant00.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -7841,10 +7841,10 @@
             "regex": "\"eted b\"",
             "items": [
                 {
-                    "id": "168288",
+                    "id": "168285",
                     "name": "Ralakesh's Impatience",
                     "baseType": "Riveted Boots",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9SYWxha2VzaHNJbXBhdGllbmNlIiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlbGljIjo0fV0/ea9e15ed28/RalakeshsImpatience.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9SYWxha2VzaHNJbXBhdGllbmNlIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/54540f0f3d/RalakeshsImpatience.png",
                     "detailsId": null,
                     "links": null
                 }
@@ -8004,7 +8004,7 @@
                     "id": "1769",
                     "name": "Veil of the Night",
                     "baseType": "Great Helmet",
-                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ZlaWxPZlRoZU5pZ2h0IiwidyI6MiwiaCI6Miwic2NhbGUiOjEsInJlbGljIjo1fV0/52de2606a7/VeilOfTheNight.png",
+                    "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9IZWxtZXRzL1ZlaWxPZlRoZU5pZ2h0IiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/809ee0994f/VeilOfTheNight.png",
                     "detailsId": null,
                     "links": null
                 }

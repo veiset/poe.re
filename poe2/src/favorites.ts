@@ -8,6 +8,7 @@ import {
   selectValidFavoriteGroupMembers,
 } from "@shared/core/favorites/FavoriteTypes";
 import {loadSettings, updateSettings} from "./localStorage";
+import {FAVORITE_PAGE_REGISTRY} from "./FavoritePageRegistry";
 import {
   Poe2FavoriteGroupRecord,
   Poe2FavoritePageKey,
@@ -21,7 +22,8 @@ export interface FavoriteSnapshot {
   pageKey: Poe2FavoritePageKey;
   regex: string;
   configuration: unknown;
-  context: {league?: string};
+  context: {league?: string; language?: string};
+  languageDependent: boolean;
 }
 
 const favoritePageKeys: readonly Poe2FavoritePageKey[] = ["vendor", "waystone", "tablet", "relic", "item"];
@@ -94,7 +96,13 @@ const parseFavorite = (item: unknown): Poe2FavoriteRecord | undefined => {
     pageKey: item.pageKey as Poe2FavoritePageKey,
     regex: item.regex,
     configuration: item.configuration,
-    context: {league: typeof context.league === "string" ? context.league : undefined},
+    context: {
+      league: typeof context.league === "string" ? context.league : undefined,
+      language: typeof context.language === "string" ? context.language : undefined,
+    },
+    languageDependent: typeof item.languageDependent === "boolean"
+      ? item.languageDependent
+      : FAVORITE_PAGE_REGISTRY[item.pageKey as Poe2FavoritePageKey].languageDependent,
   };
 };
 
@@ -135,6 +143,7 @@ export const createFavorite = (profile: string, snapshot: FavoriteSnapshot, meta
     regex: snapshot.regex,
     configuration: cloneFavoriteConfiguration(snapshot.configuration),
     context: {...snapshot.context},
+    languageDependent: snapshot.languageDependent,
     createdAt: now,
     updatedAt: now,
   });
@@ -216,6 +225,7 @@ export const updateFavorite = (profile: string, id: string, snapshot: FavoriteSn
         regex: snapshot.regex,
         configuration: cloneFavoriteConfiguration(snapshot.configuration),
         context: {...snapshot.context},
+        languageDependent: snapshot.languageDependent,
         updatedAt: timestamp(),
       }
       : favorite),

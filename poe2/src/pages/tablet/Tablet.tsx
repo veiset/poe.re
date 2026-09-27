@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import {loadSettings, saveSettings, setSelectedProfile} from "../../localStorage";
 import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
 import {defaultSettings, SelectOption, Settings} from "../../settings";
@@ -14,9 +14,10 @@ import NumberField from "@shared/components/NumberField/NumberField";
 import ModSearchBox from "@shared/components/ModSearchBox";
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe2/useFavoritePage";
+import {rebaseTabletSettings} from "@poe2/favoriteLanguageRenderer";
 
 export function Tablet() {
-  const {currentProfile} = useContext(Poe2ProfileContext);
+  const {currentProfile, language} = useContext(Poe2ProfileContext);
   const globalSettings = loadSettings(currentProfile)
   const favoritePage = useFavoritePage("tablet", globalSettings.tablet);
   const [settings, setSettings] = useState<Settings["tablet"]>(favoritePage.initialConfiguration);
@@ -24,12 +25,24 @@ export function Tablet() {
   const [affixes, setAffixes] = useState<TabletAffix[]>([]);
   const [affixSearch, setAffixSearch] = useState("");
   const [tradeStatIds, setTradeStatIds] = useState<TradeStatIdMap>({});
+  const loadedLanguageRef = useRef<typeof language | undefined>(undefined);
+  const [dataLanguage, setDataLanguage] = useState<typeof language>();
 
   useEffect(() => {
-    if (favoritePage.isEditingFavorite) { setResult(generateTabletRegex({...loadSettings(currentProfile), tablet: settings})); return; }
-    loadTabletAffixes().then(setAffixes);
+    let active = true;
+    setResult("");
+    setDataLanguage(undefined);
+    const sourceLanguage = loadedLanguageRef.current ?? favoritePage.initialLanguage;
+    Promise.all([loadTabletAffixes(sourceLanguage), loadTabletAffixes(language)]).then(([source, data]) => {
+      if (!active) return;
+      if (sourceLanguage !== language) setSettings((current) => rebaseTabletSettings(current, source, data));
+      loadedLanguageRef.current = language;
+      setAffixes(data);
+      setDataLanguage(language);
+    });
     loadTabletTradeStatIds().then(setTradeStatIds);
-  }, []);
+    return () => { active = false; };
+  }, [language, favoritePage.initialLanguage]);
 
   const normalizedSearch = affixSearch.trim().toLowerCase();
   const affixOptions: SelectOption[] = affixes
@@ -46,11 +59,16 @@ export function Tablet() {
     }));
 
   useEffect(() => {
+    if (dataLanguage !== language) { setResult(""); return; }
+    if (favoritePage.isEditingFavorite) {
+      setResult(generateTabletRegex({...loadSettings(currentProfile), tablet: settings}));
+      return;
+    }
     const base = loadSettings(currentProfile);
     const settingsResult = {...base, tablet: {...settings}, name: currentProfile};
     saveSettings(settingsResult);
     setResult(generateTabletRegex(settingsResult));
-  }, [settings, favoritePage.isEditingFavorite]);
+  }, [settings, favoritePage.isEditingFavorite, dataLanguage, language]);
 
   useEffect(() => {
     if (favoritePage.isEditingFavorite) return;
@@ -62,7 +80,7 @@ export function Tablet() {
 
   return (
     <>
-      <Poe2Header text="Tablet"/>
+      <Poe2Header text="Tablet" languageSelect/>
       <RegexResultBox
         result={result}
         favorite={favoritePage.action(settings)}

@@ -1,4 +1,4 @@
-import React, { lazy, Suspense, useMemo, useState } from "react";
+import React, { lazy, Suspense, useContext, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Poe2Header from "@poe2/components/Poe2Header";
 import { FavoriteDialog } from "@shared/components/favorites/FavoriteDialog";
@@ -23,6 +23,8 @@ import {
   isPoe2StaticFavorite,
 } from "../../favorites";
 import "./Favorites.css";
+import {Poe2ProfileContext} from "../../layout/Poe2ProfileContext";
+import {useRenderedFavorites} from "../../useRenderedFavorites";
 const SortableFavoritesGrid = lazy(() => import("./SortableFavoritesGrid"));
 
 const Favorites = () => {
@@ -38,6 +40,8 @@ const Favorites = () => {
     setHidden,
     updateGroup,
   } = useFavorites();
+  const {language} = useContext(Poe2ProfileContext);
+  const renderedFavorites = useRenderedFavorites(favorites, language);
   const navigate = useNavigate();
   const [editing, setEditing] = useState<Poe2FavoriteRecord>();
   const [details, setDetails] =
@@ -49,8 +53,8 @@ const Favorites = () => {
   const [visibilityMode, setVisibilityMode] = useState(false);
 
   const resolvedFavorites = useMemo(
-    () => resolveFavoriteGroups(favorites),
-    [favorites],
+    () => resolveFavoriteGroups(renderedFavorites),
+    [renderedFavorites],
   );
   const allTags = useMemo(
     () =>
@@ -97,10 +101,12 @@ const Favorites = () => {
                 icon: FAVORITE_PAGE_REGISTRY[details.pageKey].icon,
               }
             : undefined,
-        context:
-          details.kind === "favorite" && details.context.league
-            ? [{ label: "League", value: details.context.league }]
-            : undefined,
+        context: details.kind === "favorite"
+          ? [
+              ...(details.context.league ? [{label: "League", value: details.context.league}] : []),
+              ...(details.context.language ? [{label: "Language", value: details.context.language}] : []),
+            ]
+          : undefined,
         group: details.kind === "group" ? details.groupResolution : undefined,
       }
     : undefined;
@@ -131,7 +137,7 @@ const Favorites = () => {
 
   return (
     <>
-      <Poe2Header text="Favorites" />
+      <Poe2Header text="Favorites" languageSelect />
       <main
         className={`poe2-favorites${favorites.length === 0 ? " poe2-favorites-empty-page" : ""}`}
       >
