@@ -75,6 +75,41 @@ describe("SelectableTokenList", () => {
     expect(screen.queryByText("Monsters have more Life")).toBeNull();
   });
 
+  test("regex search matches mods as they appear in game (#538)", () => {
+    const mapMods: T[] = [
+      {id: 1, regex: "", rawText: "Monsters have (45-100)% increased Area of Effect", generalizedText: "", options: {kind: "prefix"}},
+      {id: 2, regex: "", rawText: "Monsters fire 2 additional Projectiles|Monsters have 100% increased Area of Effect", generalizedText: "", options: {kind: "prefix"}},
+      {id: 3, regex: "", rawText: "Unique Boss has (25-35)% increased Life|Unique Boss has (45-70)% increased Area of Effect", generalizedText: "", options: {kind: "prefix"}},
+    ];
+    render(<SelectableTokenList elements={mapMods} selected={[]} setSelected={vi.fn()}/>);
+    const input = screen.getByPlaceholderText(/Search for a modifier/i);
+
+    fireEvent.change(input, {target: {value: "\"!e \\d+% increased ar\""}});
+    expect(screen.getByText("Monsters have (45-100)% increased Area of Effect")).toBeInTheDocument();
+    expect(screen.getByText("Monsters fire 2 additional Projectiles · Monsters have 100% increased Area of Effect")).toBeInTheDocument();
+    expect(screen.queryByText(/^Unique Boss/)).toBeNull();
+
+    fireEvent.change(input, {target: {value: "\"d life$\""}});
+    expect(screen.getByText("Unique Boss has (25-35)% increased Life · Unique Boss has (45-70)% increased Area of Effect")).toBeInTheDocument();
+  });
+
+  test("[A|B] terms are searched as B", () => {
+    const thorns: T[] = [
+      {id: 1, regex: "", rawText: "Rare Monsters have [PhysicalThorns|Physical Thorns] reflecting (400-800) Physical Damage", generalizedText: "", options: {kind: "prefix"}},
+    ];
+    render(<SelectableTokenList elements={thorns} selected={[]} setSelected={vi.fn()}/>);
+    const input = screen.getByPlaceholderText(/Search for a modifier/i);
+
+    for (const query of ["have physical thorns", "\"ve phy\""]) {
+      fireEvent.change(input, {target: {value: query}});
+      expect(screen.getByText(/^Rare Monsters have/)).toBeInTheDocument();
+    }
+    for (const query of ["physicalthorns", "\"calt\""]) {
+      fireEvent.change(input, {target: {value: query}});
+      expect(screen.queryByText(/^Rare Monsters have/)).toBeNull();
+    }
+  });
+
   test("clicking a row toggles selection", () => {
     const setSelected = vi.fn();
     render(<SelectableTokenList elements={tokens} selected={[]} setSelected={setSelected}/>);

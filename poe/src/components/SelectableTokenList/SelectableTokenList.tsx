@@ -1,7 +1,7 @@
 import type {Token} from "@poe/types/generated/mapmods";
 import React, {Dispatch, ReactNode, SetStateAction} from "react";
 import SelectableSearch from "./SelectableSearch";
-import {regexSearch} from "../../utils/regex/ReverseRegexLookup";
+import {inGameText, regexSearch} from "../../utils/regex/ReverseRegexLookup";
 import "./SelectableTokenList.css";
 
 
@@ -27,8 +27,9 @@ const SelectableTokenList = (props: SelectableTokenListProps) => {
   const visible = elements
     .filter((token) => {
       const regexMatch = regexSearch(token.rawText.toLowerCase(), search);
+      const searchText = inGameText(token.rawText.toLowerCase());
       const regularMatch = !search || search.toLowerCase().trim().split(" ")
-        .every(q => token.rawText.toLowerCase().includes(q));
+        .every(q => searchText.includes(q));
       return regularMatch || regexMatch;
     })
     .sort(sorting);
