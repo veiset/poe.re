@@ -52,13 +52,15 @@ async function loadAffixTokens(file: string): Promise<Token<{prefix: boolean}>[]
   return tokens;
 }
 
-const tabletAffixes = createLanguageDataLoader<RepoeLanguageKey, TabletAffix[]>(async (language) => {
-  const tokens = await loadAffixTokens(`${basePath}/tablet/Generated.Tablet.${language}.min.json`);
+// Tablets and waystones only have English data with value ranges (the generator's single file), so every
+// language loads it. That keeps the same mods in the same order for every language, which rebasing needs.
+const tabletAffixes = createLanguageDataLoader<RepoeLanguageKey, TabletAffix[]>(async () => {
+  const tokens = await loadAffixTokens(`${basePath}/tablet/Generated.Tablet.min.json`);
   return tokens.map((token, sourceIndex) => ({...parseAffixToken(token), sourceIndex})).sort((a, b) => a.name.localeCompare(b.name));
 });
 
-const waystoneAffixes = createLanguageDataLoader<RepoeLanguageKey, WaystoneAffix[]>(async (language) => {
-  const tokens = await loadAffixTokens(`${basePath}/waystone/Generated.Waystone.${language}.min.json`);
+const waystoneAffixes = createLanguageDataLoader<RepoeLanguageKey, WaystoneAffix[]>(async () => {
+  const tokens = await loadAffixTokens(`${basePath}/waystone/Generated.Waystone.min.json`);
   return tokens.map((token, sourceIndex) => ({...parseAffixToken(token), sourceIndex, prefix: token.options.prefix})).sort((a, b) => a.name.localeCompare(b.name));
 });
 
