@@ -183,13 +183,6 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "An additional Room is revealed on the Trial Map",
-        "regex": "p$",
-        "values": [],
-        "ranges": [],
-        "affix": "SUFFIX"
-    },
-    {
         "name": "Bosses take #% increased Damage",
         "regex": "^bo",
         "values": [],
@@ -334,9 +327,12 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "The Merchant has an additional Choice",
-        "regex": "cho",
-        "values": [],
+        "name": "The Merchant has # additional Choices",
+        "regex": "dd",
+        "values": [
+            1.0,
+            1.0
+        ],
         "ranges": [],
         "affix": "PREFIX"
     },
