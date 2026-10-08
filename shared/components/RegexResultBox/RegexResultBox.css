@@ -38,6 +38,22 @@
     color: var(--color-text);
 }
 
+/* The previous result keeps the box's height; the spinner takes no space of its own */
+.rrb-result-loading {
+    position: relative;
+}
+
+.rrb-result-hidden {
+    visibility: hidden;
+}
+
+.rrb-result-loading .rrb-spinner {
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin: 0;
+}
+
 .rrb-result-info {
     color: var(--color-text-dim);
     padding-top: 8px;

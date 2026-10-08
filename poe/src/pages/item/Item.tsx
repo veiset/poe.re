@@ -156,6 +156,7 @@ const Item = () => {
       <HeaderWithLanguage text={"Item"}/>
       <RegexResultBox
         result={result}
+        loading={loading}
         favorite={favoritePage.action(currentSettings, {language: lang})}
         reset={() => {
           setNonMagicalBase(false);

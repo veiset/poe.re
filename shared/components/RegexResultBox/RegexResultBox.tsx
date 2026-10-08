@@ -1,6 +1,7 @@
 import "./RegexResultBox.css";
-import React, {Dispatch, SetStateAction, useEffect, useState} from "react";
+import React, {Dispatch, SetStateAction, useEffect, useRef, useState} from "react";
 import {Checkbox} from "../Checkbox/Checkbox";
+import {Spinner} from "../Spinner/Spinner";
 import {BugReport} from "../bugreport/BugReport";
 import {loadWebSettings, saveWebSettings} from "../../core/WebSettings";
 import {TRANSLATION_NEED} from "@poe/utils/Languages";
@@ -33,6 +34,8 @@ export interface RegexResultBoxProps {
   autoCopy?: boolean
   onAutoCopyChange?: (enabled: boolean) => void
   favorite?: RegexFavoriteAction
+  // Data for the result is loading; the box keeps its layout and shows a spinner
+  loading?: boolean
 }
 
 const RegexResultBox = (props: RegexResultBoxProps) => {
@@ -53,6 +56,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
     autoCopy: autoCopyProp,
     onAutoCopyChange,
     favorite,
+    loading,
   } = props;
 
   const maxLen = maxLength ?? 250;
@@ -76,6 +80,10 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
   const finalResult = (customText.length > 0 && enableCustomText)
     ? `${result} ${customText}`
     : result;
+  // While loading, the previous result is laid out invisibly so nothing on the page moves
+  const lastResult = useRef(finalResult);
+  if (!loading) lastResult.current = finalResult;
+  const shownResult = loading ? lastResult.current : finalResult;
   const favoriteDisabledReason = favorite?.disabledReason || (!finalResult.trim() ? "Generate a non-empty regex before saving a favorite." : undefined);
 
   const saveFavorite = async () => {
@@ -92,44 +100,49 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
   };
 
   useEffect(() => {
-    if (!autoCopy) return;
+    if (!autoCopy || loading) return;
     if (finalResult === copied) return;
 
     navigator.clipboard.writeText(finalResult)
       .then(() => setCopied(finalResult))
       .catch(() => { /* permission denied; retry on next change */ });
-  }, [finalResult, autoCopy, copied]);
+  }, [finalResult, autoCopy, copied, loading]);
 
   return (
     <div className="rrb-layout">
       <div className="rrb-result">
-        <div className={finalResult === copied ? "rrb-result-text copied-good" : "rrb-result-text"}>
-          {finalResult}
-        </div>
+        {loading
+          ? <div className="rrb-result-text rrb-result-loading">
+            <span className="rrb-result-hidden">{shownResult}</span>
+            <Spinner className="rrb-spinner" label="Loading…"/>
+          </div>
+          : <div className={finalResult === copied ? "rrb-result-text copied-good" : "rrb-result-text"}>
+            {finalResult}
+          </div>}
         {error && <div className="error">Error: {error}</div>}
         {warning && <div className="warning">{warning}</div>}
-        {finalResult.includes(TRANSLATION_NEED) &&
+        {shownResult.includes(TRANSLATION_NEED) &&
             <div className="warning">Some parts of the result are not translated, if you are able to translate them please
                 open an issue on <a className="warning-link" href="https://github.com/veiset/poe.re/issues">GitHub</a></div>}
         {favorite?.mode === "edit" && <div className="rrb-favorite-status">
           Editing favorite{favorite.favoriteName ? `: ${favorite.favoriteName}` : ""}
-          {favorite.savedResult !== undefined && favorite.savedResult !== finalResult && " — output changed; save to replace the stored snapshot"}
+          {favorite.savedResult !== undefined && favorite.savedResult !== shownResult && " — output changed; save to replace the stored snapshot"}
         </div>}
         {favorite?.successMessage && <div className="rrb-favorite-success" role="status">{favorite.successMessage}</div>}
         {favoriteError && <div className="error" role="alert">Error: {favoriteError}</div>}
-        {finalResult.length > maxLen &&
-            <div className="error">Error: {finalResult.length} / {maxLen} characters used - PoE client has a max limit
+        {shownResult.length > maxLen &&
+            <div className="error">Error: {shownResult.length} / {maxLen} characters used - PoE client has a max limit
                 of {maxLen} characters
             </div>
         }
-        {finalResult.length <= maxLen &&
+        {shownResult.length <= maxLen &&
             <div className="rrb-result-info">
-                length: {finalResult.length} / {maxLen}
+                length: {shownResult.length} / {maxLen}
             </div>
         }
       </div>
       <div className="rrb-actions">
-        <button className="rrb-copy-button" onClick={() => {
+        <button className="rrb-copy-button" disabled={loading} onClick={() => {
           navigator.clipboard.writeText(finalResult).then(() => setCopied(finalResult)).catch(() => setCopied(undefined));
         }}>
           Copy
@@ -151,7 +164,7 @@ const RegexResultBox = (props: RegexResultBoxProps) => {
         {middleAction}
         {favorite && <>
           <button className="rrb-favorite-button" type="button"
-                  disabled={Boolean(favoriteDisabledReason) || favoriteSaving}
+                  disabled={Boolean(favoriteDisabledReason) || favoriteSaving || loading}
                   title={favoriteDisabledReason ?? (favorite.mode === "edit" ? "Update this favorite" : "Save the current regex as a favorite")}
                   onClick={saveFavorite}>
             {favoriteSaving ? "Saving…" : favorite.mode === "edit" ? "Update favorite" : "Favorite"}
