@@ -12,8 +12,8 @@ const STATS_2_API_URL = 'https://www.pathofexile.com/api/trade2/data/stats';
 const MAP_MODS_FILE = path.join(__dirname, '../poe/generated/mapmods/Generated.Map.ENGLISH.json');
 const OUTPUT_FILE = path.join(__dirname, '../poe/src/generated/mapmods/trade/TradeStatIdMatching.json');
 
-const WAYSTONE_FILE = path.join(__dirname, '../poe2/public/generated/waystone/Generated.Waystone.min.json');
-const TABLET_FILE = path.join(__dirname, '../poe2/public/generated/tablet/Generated.Tablet.min.json');
+const WAYSTONE_FILE = path.join(__dirname, '../poe2/public/generated/waystone/Generated.Waystone.ENGLISH.min.json');
+const TABLET_FILE = path.join(__dirname, '../poe2/public/generated/tablet/Generated.Tablet.ENGLISH.min.json');
 const POE2_OUTPUT_DIR = path.join(__dirname, '../poe2/public/generated/trade');
 const WAYSTONE_OUTPUT = path.join(POE2_OUTPUT_DIR, 'WaystoneTradeStatIds.json');
 const TABLET_OUTPUT = path.join(POE2_OUTPUT_DIR, 'TabletTradeStatIds.json');
