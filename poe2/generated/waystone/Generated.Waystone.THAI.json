@@ -1,48 +1,289 @@
 {
     "tokens": [
         {
-            "id": -2067797108,
-            "regex": "าะ​",
-            "rawText": "มอนสเตอร์ หุ้มเกราะ​",
-            "generalizedText": "^มอนสเตอร หมเกราะ​$",
+            "id": -1718797825,
+            "regex": "บค",
+            "rawText": "มอนสเตอร์ ได้รับความเสียหายเพิ่มเติมจากการปะทะคริติคอล ลดลง (15-30)%",
+            "generalizedText": "^มอนสเตอร ไดรบความเสยหายเพมเตมจากการปะทะครตคอล ลดลง #%$",
             "options": {
-                "name": "of Enduring",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "of Obstruction",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1698573306,
+            "regex": "นล",
+            "rawText": "ด่านมี พื้นลุกไหม้ เป็นบางส่วน",
+            "generalizedText": "^ดานม พนลกไหม เปนบางสวน$",
+            "options": {
+                "name": "of Flames",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1596647297,
+            "regex": "ตแ",
+            "rawText": "ผู้เล่น มีความเร็วในการ เติม พลังชีวิตและโล่พลังงาน ลดลง อีก (40-20)%",
+            "generalizedText": "^ผเลน มความเรวในการ เตม พลงชวตและโลพลงงาน ลดลง อก #%$",
+            "options": {
+                "name": "of Smothering",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1497188554,
+            "regex": "มด",
+            "rawText": "ด่าน ถูกสาปด้วย หมดเรี่ยวแรง",
+            "generalizedText": "^ดาน ถกสาปดวย หมดเรยวแรง$",
+            "options": {
+                "name": "of Enfeebling",
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": -1752890333,
-            "regex": "นการ เ",
-            "rawText": "ผู้เล่น มีความเร็วในการ เติม พลังชีวิตและโล่พลังงาน ลดลง อีก #%",
-            "generalizedText": "^ผเลน มความเรวในการ เตม พลงชวตและโลพลงงาน ลดลง อก #%$",
+            "id": -1463814744,
+            "regex": "บช",
+            "rawText": "ผู้เล่น ได้รับชาร์จขวดยา ลดลง (35-20)%",
+            "generalizedText": "^ผเลน ไดรบชารจขวดยา ลดลง #%$",
             "options": {
-                "name": "of Smothering",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "of Drought",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1489020830,
-            "regex": "ต, ร",
-            "rawText": "มอนสเตอร์ มีความเร็วในการโจมตี, ร่าย, เคลื่อนที่ เพิ่มขึ้น #%",
+            "id": -1430091794,
+            "regex": "ำแ",
+            "rawText": "มอนสเตอร์ นำความเสียหาย (5-24)% ไปเสริมเป็น น้ำแข็ง",
+            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน นำแขง$",
+            "options": {
+                "name": "Frostbitten",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1427494180,
+            "regex": "ไฟ",
+            "rawText": "มอนสเตอร์ นำความเสียหาย (5-24)% ไปเสริมเป็น ไฟ",
+            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน ไฟ$",
+            "options": {
+                "name": "Infernal",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1389952336,
+            "regex": "ออ",
+            "rawText": "มอนสเตอร์ นำความเสียหาย (5-24)% ไปเสริมเป็น เคออส",
+            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน เคออส$",
+            "options": {
+                "name": "Profane",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1307791168,
+            "regex": "มก",
+            "rawText": "มอนสเตอร์ มีการสะสมค่าสตัน เพิ่มขึ้น (50-110)%",
+            "generalizedText": "^มอนสเตอร มการสะสมคาสตน เพมขน #%$",
+            "options": {
+                "name": "Impacting",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1291605512,
+            "regex": "แพ",
+            "rawText": "ด่าน ถูกสาปด้วย แพ้ธาตุ",
+            "generalizedText": "^ดาน ถกสาปดวย แพธาต$",
+            "options": {
+                "name": "of Erosion",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1157042950,
+            "regex": "อต",
+            "rawText": "มอนสเตอร์ มีอัตราความแม่นยำ เพิ่มขึ้น (10-50)%",
+            "generalizedText": "^มอนสเตอร มอตราความแมนยำ เพมขน #%$",
+            "options": {
+                "name": "Precise",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1062239040,
+            "regex": "ภ",
+            "rawText": "มอนสเตอร์ หักเกราะ เท่ากับ (15-45)% ของความเสียหาย กายภาพ ที่สร้าง",
+            "generalizedText": "^มอนสเตอร หกเกราะ เทากบ #% ของความเสยหาย กายภาพ ทสราง$",
+            "options": {
+                "name": "Shattering",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -834332200,
+            "regex": "ะต",
+            "rawText": "ความเสียหายของมอนสเตอร์ เจาะต้านทาน ธาตุ (6-16)%",
+            "generalizedText": "^ความเสยหายของมอนสเตอร เจาะตานทาน ธาต #%$",
+            "options": {
+                "name": "Penetrating",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -668086108,
+            "regex": "หมเ",
+            "rawText": "มอนสเตอร์ หุ้มเกราะ​",
+            "generalizedText": "^มอนสเตอร หมเกราะ​$",
+            "options": {
+                "name": "of Enduring",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -357737163,
+            "regex": "ษ",
+            "rawText": "มอนสเตอร์ มีโอกาสสร้างสถานะ พิษ (13-40)% เมื่อปะทะ​",
+            "generalizedText": "^มอนสเตอร มโอกาสสรางสถานะ พษ #% เมอปะทะ​$",
+            "options": {
+                "name": "Venomous",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -194879968,
+            "regex": "ซ",
+            "rawText": "ด่าน ถูกสาปด้วย โซ่กาลเวลา",
+            "generalizedText": "^ดาน ถกสาปดวย โซกาลเวลา$",
+            "options": {
+                "name": "of Slowing",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 345823526,
+            "regex": "ยฟ",
+            "rawText": "มอนสเตอร์ นำความเสียหาย (5-24)% ไปเสริมเป็น สายฟ้า",
+            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน สายฟา$",
+            "options": {
+                "name": "Thunderous",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 570723712,
+            "regex": "ต ข",
+            "rawText": "ค่าต้านทาน ธาตุ ของมอนสเตอร์ +(20-40)%",
+            "generalizedText": "^คาตานทาน ธาต ของมอนสเตอร +#%$",
+            "options": {
+                "name": "of the Prism",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 683350088,
+            "regex": ",",
+            "rawText": "มอนสเตอร์ มีความเร็วในการโจมตี, ร่าย, เคลื่อนที่ เพิ่มขึ้น (10-15)%",
             "generalizedText": "^มอนสเตอร มความเรวในการโจมต, ราย, เคลอนท เพมขน #%$",
             "options": {
                 "name": "Fleeting",
-                "types": [
-                    "PREFIX"
-                ],
+                "prefix": true,
                 "tags": [
                     "map_key_high",
                     "map_key_highest"
@@ -50,577 +291,997 @@
             }
         },
         {
-            "id": -1363703781,
-            "regex": "าง สถ",
-            "rawText": "มอนสเตอร์ มีความสามารถในการสร้าง สถานะเจ็บป่วยธาตุ เพิ่มขึ้น #%",
-            "generalizedText": "^มอนสเตอร มความสามารถในการสราง สถานะเจบปวยธาต เพมขน #%$",
-            "options": {
-                "name": "of Overpowering",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1307094037,
-            "regex": "มอตราค",
-            "rawText": "มอนสเตอร์ มีอัตราความแม่นยำ เพิ่มขึ้น #%",
-            "generalizedText": "^มอนสเตอร มอตราความแมนยำ เพมขน #%$",
-            "options": {
-                "name": "Precise",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1156016415,
-            "regex": "ก​",
+            "id": 876824218,
+            "regex": "ลบ",
             "rawText": "มอนสเตอร์ หลบหลีก​",
             "generalizedText": "^มอนสเตอร หลบหลก​$",
             "options": {
                 "name": "of Evasion",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": -1074440724,
-            "regex": "ร นำความเสยหาย \\d+% ไปเสรมเปน ส",
-            "rawText": "มอนสเตอร์ นำความเสียหาย #% ไปเสริมเป็น สายฟ้า",
-            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน สายฟา$",
+            "id": 887697611,
+            "regex": "ทก",
+            "rawText": "ค่าต้านทาน ทุกชนิด สูงสุด ของผู้เล่น -(10-3)%",
+            "generalizedText": "^คาตานทาน ทกชนด สงสด ของผเลน -#%$",
             "options": {
-                "name": "Thunderous",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "of Exposure",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1028378081,
-            "regex": "^ลดผ",
-            "rawText": "ลดผลของคำสาป ต่อมอนสเตอร์ อีก #%",
-            "generalizedText": "^ลดผลของคำสาป ตอมอนสเตอร อก #%$",
-            "options": {
-                "name": "of Hexwarding",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
+                    "map_key_medium",
                     "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -849732621,
-            "regex": "ย แพ",
-            "rawText": "ด่าน ถูกสาปด้วย แพ้ธาตุ",
-            "generalizedText": "^ดาน ถกสาปดวย แพธาต$",
-            "options": {
-                "name": "of Erosion",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -723832929,
-            "regex": "วย โ",
-            "rawText": "ด่าน ถูกสาปด้วย โซ่กาลเวลา",
-            "generalizedText": "^ดาน ถกสาปดวย โซกาลเวลา$",
-            "options": {
-                "name": "of Slowing",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -583099877,
-            "regex": "น มความเรวในการฟ",
-            "rawText": "ผู้เล่น มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง อีก #%",
-            "generalizedText": "^ผเลน มความเรวในการฟนฟคลดาวน ลดลง อก #%$",
-            "options": {
-                "name": "of Fatigue",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -475465530,
-            "regex": "น นำแขง$",
-            "rawText": "มอนสเตอร์ นำความเสียหาย #% ไปเสริมเป็น น้ำแข็ง",
-            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน นำแขง$",
-            "options": {
-                "name": "Frostbitten",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -435806182,
-            "regex": "ตของ ม",
-            "rawText": "เพิ่มพลังชีวิตของ มอนสเตอร์ อีก #%",
-            "generalizedText": "^เพมพลงชวตของ มอนสเตอร อก #%$",
-            "options": {
-                "name": "Tough",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -212442970,
-            "regex": "วย เพ",
-            "rawText": "มอนสเตอร์ มีความยากในการติด สถานะเจ็บป่วย เพิ่มขึ้น #%|มอนสเตอร์ มีความยากในการติดสถานะ สตัน เพิ่มขึ้น #%",
-            "generalizedText": "^มอนสเตอร มความยากในการตด สถานะเจบปวย เพมขน #%$|^มอนสเตอร มความยากในการตดสถานะ สตน เพมขน #%$",
+            "id": 899028336,
+            "regex": "มย",
+            "rawText": "มอนสเตอร์ มีความยากในการติดสถานะ สตัน เพิ่มขึ้น (30-79)%|มอนสเตอร์ มีความยากในการติด สถานะเจ็บป่วย เพิ่มขึ้น (30-79)%",
+            "generalizedText": "^มอนสเตอร มความยากในการตดสถานะ สตน เพมขน #%$|^มอนสเตอร มความยากในการตด สถานะเจบปวย เพมขน #%$",
             "options": {
                 "name": "of the Unwavering",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -194777053,
-            "regex": "ม พนห",
-            "rawText": "ด่านมี พื้นหนาวเย็น เป็นบางส่วน",
-            "generalizedText": "^ดานม พนหนาวเยน เปนบางสวน$",
-            "options": {
-                "name": "Sleet",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
+                    "map_key_medium",
                     "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -159336662,
-            "regex": "ลน ไ",
-            "rawText": "ผู้เล่น ได้รับชาร์จขวดยา ลดลง #%",
-            "generalizedText": "^ผเลน ไดรบชารจขวดยา ลดลง #%$",
-            "options": {
-                "name": "of Drought",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 150357289,
-            "regex": "ทะ​",
-            "rawText": "มอนสเตอร์ มีโอกาสสร้างสถานะ พิษ #% เมื่อปะทะ​",
-            "generalizedText": "^มอนสเตอร มโอกาสสรางสถานะ พษ #% เมอปะทะ​$",
-            "options": {
-                "name": "Venomous",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 175605152,
-            "regex": "ำ พล",
-            "rawText": "มอนสเตอร์ นำ พลังชีวิตสูงสุด #% ไปเสริมเป็น โล่พลังงานสูงสุด",
-            "generalizedText": "^มอนสเตอร นำ พลงชวตสงสด #% ไปเสรมเปน โลพลงงานสงสด$",
-            "options": {
-                "name": "of Buffering",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 250681948,
-            "regex": "ร เจ",
-            "rawText": "ความเสียหายของมอนสเตอร์ เจาะต้านทาน ธาตุ #%",
-            "generalizedText": "^ความเสยหายของมอนสเตอร เจาะตานทาน ธาต #%$",
-            "options": {
-                "name": "Penetrating",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 310317561,
-            "regex": "อลของม",
-            "rawText": "มอนสเตอร์ มีโอกาสปะทะคริติคอล เพิ่มขึ้น #%|โบนัสความเสียหายคริติคอลของมอนสเตอร์ #%",
-            "generalizedText": "^มอนสเตอร มโอกาสปะทะครตคอล เพมขน #%$|^โบนสความเสยหายครตคอลของมอนสเตอร #%$",
-            "options": {
-                "name": "Destructive",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 366353372,
-            "regex": "อปะทะ$",
-            "rawText": "มอนสเตอร์ มีโอกาสสร้างสถานะ เลือดไหล #% เมื่อปะทะ",
-            "generalizedText": "^มอนสเตอร มโอกาสสรางสถานะ เลอดไหล #% เมอปะทะ$",
-            "options": {
-                "name": "Puncturing",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 381483141,
-            "regex": "ยของ มอ",
-            "rawText": "เพิ่มความเสียหายของ มอนสเตอร์ #%",
+            "id": 1082183842,
+            "regex": "พมค",
+            "rawText": "เพิ่มความเสียหายของ มอนสเตอร์ (5-24)%",
             "generalizedText": "^เพมความเสยหายของ มอนสเตอร #%$",
             "options": {
                 "name": "Painful",
-                "types": [
-                    "PREFIX"
-                ],
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1006356985,
-            "regex": "ปน ไฟ$",
-            "rawText": "มอนสเตอร์ นำความเสียหาย #% ไปเสริมเป็น ไฟ",
-            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน ไฟ$",
+            "id": 1140153707,
+            "regex": "อด",
+            "rawText": "มอนสเตอร์ มีโอกาสสร้างสถานะ เลือดไหล (5-25)% เมื่อปะทะ",
+            "generalizedText": "^มอนสเตอร มโอกาสสรางสถานะ เลอดไหล #% เมอปะทะ$",
             "options": {
-                "name": "Infernal",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "Puncturing",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1224795042,
-            "regex": "ย หม",
-            "rawText": "ด่าน ถูกสาปด้วย หมดเรี่ยวแรง",
-            "generalizedText": "^ดาน ถกสาปดวย หมดเรยวแรง$",
+            "id": 1346756180,
+            "regex": "รฟ",
+            "rawText": "ผู้เล่น มีความเร็วในการฟื้นฟูคูลดาวน์ ลดลง อีก (30-15)%",
+            "generalizedText": "^ผเลน มความเรวในการฟนฟคลดาวน ลดลง อก #%$",
             "options": {
-                "name": "of Enfeebling",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "of Fatigue",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1411067874,
+            "regex": "ตส",
+            "rawText": "มอนสเตอร์ นำ พลังชีวิตสูงสุด (12-25)% ไปเสริมเป็น โล่พลังงานสูงสุด",
+            "generalizedText": "^มอนสเตอร นำ พลงชวตสงสด #% ไปเสรมเปน โลพลงงานสงสด$",
+            "options": {
+                "name": "of Buffering",
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 1232674694,
-            "regex": "สด ขอ",
-            "rawText": "ค่าต้านทาน ทุกชนิด สูงสุด ของผู้เล่น #%",
-            "generalizedText": "^คาตานทาน ทกชนด สงสด ของผเลน #%$",
+            "id": 1518963479,
+            "regex": "สป",
+            "rawText": "มอนสเตอร์ มีโอกาสปะทะคริติคอล เพิ่มขึ้น (80-300)%|โบนัสความเสียหายคริติคอลของมอนสเตอร์ +(11-30)%",
+            "generalizedText": "^มอนสเตอร มโอกาสปะทะครตคอล เพมขน #%$|^โบนสความเสยหายครตคอลของมอนสเตอร +#%$",
             "options": {
-                "name": "of Exposure",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "Destructive",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1508319208,
-            "regex": "ย \\d+% ไปเสรมเปน เคออส$",
-            "rawText": "มอนสเตอร์ นำความเสียหาย #% ไปเสริมเป็น เคออส",
-            "generalizedText": "^มอนสเตอร นำความเสยหาย #% ไปเสรมเปน เคออส$",
+            "id": 1606482166,
+            "regex": "นห",
+            "rawText": "ด่านมี พื้นหนาวเย็น เป็นบางส่วน",
+            "generalizedText": "^ดานม พนหนาวเยน เปนบางสวน$",
             "options": {
-                "name": "Profane",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "of Sleet",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1684703981,
-            "regex": "ต ของม",
-            "rawText": "ค่าต้านทาน ธาตุ ของมอนสเตอร์ +#%",
-            "generalizedText": "^คาตานทาน ธาต ของมอนสเตอร +#%$",
+            "id": 1716791865,
+            "regex": "มส",
+            "rawText": "มอนสเตอร์ มีความสามารถในการสร้าง สถานะเจ็บป่วยธาตุ เพิ่มขึ้น (60-130)%",
+            "generalizedText": "^มอนสเตอร มความสามารถในการสราง สถานะเจบปวยธาต เพมขน #%$",
             "options": {
-                "name": "of the Prism",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "of Overpowering",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1698848448,
-            "regex": "ม พนช",
+            "id": 1760181301,
+            "regex": "มพ",
+            "rawText": "เพิ่มพลังชีวิตของ มอนสเตอร์ อีก (10-30)%",
+            "generalizedText": "^เพมพลงชวตของ มอนสเตอร อก #%$",
+            "options": {
+                "name": "Tough",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2039236504,
+            "regex": "^ล",
+            "rawText": "ลดผลของคำสาป ต่อมอนสเตอร์ อีก (50-20)%",
+            "generalizedText": "^ลดผลของคำสาป ตอมอนสเตอร อก #%$",
+            "options": {
+                "name": "of Hexwarding",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2071181624,
+            "regex": "นช",
             "rawText": "ด่านมี พื้นช็อค เป็นบางส่วน",
             "generalizedText": "^ดานม พนชอค เปนบางสวน$",
             "options": {
-                "name": "Shocking",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "of Shocking",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1739356045,
-            "regex": "ร มก",
-            "rawText": "มอนสเตอร์ มีการสะสมค่าสตัน เพิ่มขึ้น #%",
-            "generalizedText": "^มอนสเตอร มการสะสมคาสตน เพมขน #%$",
-            "options": {
-                "name": "Impacting",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
+                    "map_key_medium",
                     "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1745853598,
-            "regex": "ร หก",
-            "rawText": "มอนสเตอร์ หักเกราะ เท่ากับ #% ของความเสียหาย กายภาพ ที่สร้าง",
-            "generalizedText": "^มอนสเตอร หกเกราะ เทากบ #% ของความเสยหาย กายภาพ ทสราง$",
-            "options": {
-                "name": "Shattering",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 2050215285,
-            "regex": "ม พนล",
-            "rawText": "ด่านมี พื้นลุกไหม้ เป็นบางส่วน",
-            "generalizedText": "^ดานม พนลกไหม เปนบางสวน$",
-            "options": {
-                "name": "Flaming",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 2106037296,
-            "regex": "มจากก",
-            "rawText": "มอนสเตอร์ ได้รับความเสียหายเพิ่มเติมจากการปะทะคริติคอล ลดลง #%",
-            "generalizedText": "^มอนสเตอร ไดรบความเสยหายเพมเตมจากการปะทะครตคอล ลดลง #%$",
-            "options": {
-                "name": "of Obstruction",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "map_key_highest"
                 ]
             }
         }
     ],
     "optimizationTable": {
-        "-2067797108:150357289": {
+        "-1718797825:1518963479": {
             "ids": [
-                -2067797108,
-                150357289
+                -1718797825,
+                1518963479
+            ],
+            "regex": "ะค",
+            "weight": 2,
+            "count": 2
+        },
+        "-1718797825:899028336:1518963479": {
+            "ids": [
+                -1718797825,
+                899028336,
+                1518963479
+            ],
+            "regex": "รต",
+            "weight": 2,
+            "count": 3
+        },
+        "-1718797825:-1389952336:1518963479": {
+            "ids": [
+                -1718797825,
+                -1389952336,
+                1518963479
+            ],
+            "regex": "คอ",
+            "weight": 2,
+            "count": 3
+        },
+        "-1718797825:-357737163:1140153707:1518963479": {
+            "ids": [
+                -1718797825,
+                -357737163,
+                1140153707,
+                1518963479
+            ],
+            "regex": "ปะ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1718797825:-1596647297:-1463814744:1346756180:1411067874:1760181301": {
+            "ids": [
+                -1718797825,
+                -1596647297,
+                -1463814744,
+                1346756180,
+                1411067874,
+                1760181301
+            ],
+            "regex": "ลง",
+            "weight": 2,
+            "count": 6
+        },
+        "-1718797825:-834332200": {
+            "ids": [
+                -1718797825,
+                -834332200
+            ],
+            "regex": "จา",
+            "weight": 2,
+            "count": 2
+        },
+        "-1718797825:-1463814744": {
+            "ids": [
+                -1718797825,
+                -1463814744
+            ],
+            "regex": "ดร",
+            "weight": 2,
+            "count": 2
+        },
+        "-1718797825:-1596647297:-1463814744:1346756180": {
+            "ids": [
+                -1718797825,
+                -1596647297,
+                -1463814744,
+                1346756180
+            ],
+            "regex": "ดล",
+            "weight": 2,
+            "count": 4
+        },
+        "-1718797825:-1596647297:-1463814744:1346756180:2039236504": {
+            "ids": [
+                -1718797825,
+                -1596647297,
+                -1463814744,
+                1346756180,
+                2039236504
+            ],
+            "regex": "ลด",
+            "weight": 2,
+            "count": 5
+        },
+        "-1718797825:-1596647297": {
+            "ids": [
+                -1718797825,
+                -1596647297
+            ],
+            "regex": "ตม",
+            "weight": 2,
+            "count": 2
+        },
+        "-1718797825:-1596647297:-1307791168:683350088:899028336:1346756180:1716791865": {
+            "ids": [
+                -1718797825,
+                -1596647297,
+                -1307791168,
+                683350088,
+                899028336,
+                1346756180,
+                1716791865
+            ],
+            "regex": "การ",
+            "weight": 3,
+            "count": 7
+        },
+        "-1698573306:1140153707": {
+            "ids": [
+                -1698573306,
+                1140153707
+            ],
+            "regex": "ไห",
+            "weight": 2,
+            "count": 2
+        },
+        "-1698573306:-1497188554:-668086108": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -668086108
+            ],
+            "regex": "หม",
+            "weight": 2,
+            "count": 3
+        },
+        "-1698573306:876824218": {
+            "ids": [
+                -1698573306,
+                876824218
+            ],
+            "regex": "ลก",
+            "weight": 2,
+            "count": 2
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1346756180:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1346756180,
+                1606482166,
+                2071181624
+            ],
+            "regex": "ดา",
+            "weight": 2,
+            "count": 7
+        },
+        "-1698573306:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                1606482166,
+                2071181624
+            ],
+            "regex": "นม",
+            "weight": 2,
+            "count": 3
+        },
+        "-1698573306:1346756180:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                1346756180,
+                1606482166,
+                2071181624
+            ],
+            "regex": "วน",
+            "weight": 2,
+            "count": 4
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1606482166,
+                2071181624
+            ],
+            "regex": "ดาน",
+            "weight": 3,
+            "count": 6
+        },
+        "-1698573306:-1596647297:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1596647297,
+                1606482166,
+                2071181624
+            ],
+            "regex": "ม พ",
+            "weight": 5,
+            "count": 4
+        },
+        "-1596647297:-357737163:-194879968:683350088:1140153707:1411067874:1518963479": {
+            "ids": [
+                -1596647297,
+                -357737163,
+                -194879968,
+                683350088,
+                1140153707,
+                1411067874,
+                1518963479
+            ],
+            "regex": "โ",
+            "weight": 1,
+            "count": 7
+        },
+        "-1596647297:-1307791168:683350088:899028336:1082183842:1346756180:1716791865": {
+            "ids": [
+                -1596647297,
+                -1307791168,
+                683350088,
+                899028336,
+                1082183842,
+                1346756180,
+                1716791865
+            ],
+            "regex": "มค",
+            "weight": 2,
+            "count": 7
+        },
+        "-1596647297:-357737163:1140153707:1346756180:1518963479:1760181301:2039236504": {
+            "ids": [
+                -1596647297,
+                -357737163,
+                1140153707,
+                1346756180,
+                1518963479,
+                1760181301,
+                2039236504
+            ],
+            "regex": "อก",
+            "weight": 2,
+            "count": 7
+        },
+        "-1596647297:1411067874:1760181301": {
+            "ids": [
+                -1596647297,
+                1411067874,
+                1760181301
+            ],
+            "regex": "พล",
+            "weight": 2,
+            "count": 3
+        },
+        "-1596647297:1411067874": {
+            "ids": [
+                -1596647297,
+                1411067874
+            ],
+            "regex": "โล",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:683350088:899028336:1346756180:1716791865": {
+            "ids": [
+                -1596647297,
+                683350088,
+                899028336,
+                1346756180,
+                1716791865
+            ],
+            "regex": "นก",
+            "weight": 2,
+            "count": 5
+        },
+        "-1596647297:-1497188554:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                -1497188554,
+                683350088,
+                1346756180
+            ],
+            "regex": "เร",
+            "weight": 2,
+            "count": 4
+        },
+        "-1596647297:-1463814744:887697611:1346756180": {
+            "ids": [
+                -1596647297,
+                -1463814744,
+                887697611,
+                1346756180
+            ],
+            "regex": "ผเ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1596647297:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                683350088,
+                1346756180
+            ],
+            "regex": "วใ",
+            "weight": 2,
+            "count": 3
+        },
+        "-1596647297:683350088:899028336:1082183842:1346756180:1716791865": {
+            "ids": [
+                -1596647297,
+                683350088,
+                899028336,
+                1082183842,
+                1346756180,
+                1716791865
+            ],
+            "regex": "มคว",
+            "weight": 3,
+            "count": 6
+        },
+        "-1596647297:-834332200": {
+            "ids": [
+                -1596647297,
+                -834332200
+            ],
+            "regex": "ร เ",
+            "weight": 5,
+            "count": 2
+        },
+        "-1596647297:1346756180": {
+            "ids": [
+                -1596647297,
+                1346756180
+            ],
+            "regex": "น ม",
+            "weight": 5,
+            "count": 2
+        },
+        "-1596647297:683350088:1082183842:1346756180": {
+            "ids": [
+                -1596647297,
+                683350088,
+                1082183842,
+                1346756180
+            ],
+            "regex": "มความเ",
+            "weight": 6,
+            "count": 4
+        },
+        "-1596647297:1346756180:1760181301:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                1760181301,
+                2039236504
+            ],
+            "regex": "ก \\d+",
+            "weight": 8,
+            "count": 4
+        },
+        "-1497188554:-1291605512:-194879968:899028336:1716791865": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968,
+                899028336,
+                1716791865
+            ],
+            "regex": "วย",
+            "weight": 2,
+            "count": 5
+        },
+        "-1497188554:-1291605512:-194879968": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968
+            ],
+            "regex": "ถก",
+            "weight": 2,
+            "count": 3
+        },
+        "-1497188554:-1291605512:-194879968:2039236504": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968,
+                2039236504
+            ],
+            "regex": "าป",
+            "weight": 2,
+            "count": 4
+        },
+        "-1463814744:-1427494180": {
+            "ids": [
+                -1463814744,
+                -1427494180
+            ],
+            "regex": "น ไ",
+            "weight": 5,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526
+            ],
+            "regex": "ำค",
+            "weight": 2,
+            "count": 4
+        },
+        "-1430091794:-1427494180:-1389952336:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
+            ],
+            "regex": "ปเ",
+            "weight": 2,
+            "count": 5
+        },
+        "-1427494180:345823526:1346756180": {
+            "ids": [
+                -1427494180,
+                345823526,
+                1346756180
+            ],
+            "regex": "ฟ",
+            "weight": 1,
+            "count": 3
+        },
+        "-1307791168:-357737163:1140153707:1518963479": {
+            "ids": [
+                -1307791168,
+                -357737163,
+                1140153707,
+                1518963479
+            ],
+            "regex": "าส",
+            "weight": 2,
+            "count": 4
+        },
+        "-1307791168:-1157042950:683350088:899028336:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                683350088,
+                899028336,
+                1518963479,
+                1716791865
+            ],
+            "regex": "มข",
+            "weight": 2,
+            "count": 6
+        },
+        "-1307791168:1716791865": {
+            "ids": [
+                -1307791168,
+                1716791865
+            ],
+            "regex": "รส",
+            "weight": 2,
+            "count": 2
+        },
+        "-1307791168:899028336": {
+            "ids": [
+                -1307791168,
+                899028336
+            ],
+            "regex": "สต",
+            "weight": 2,
+            "count": 2
+        },
+        "-1307791168:570723712:887697611": {
+            "ids": [
+                -1307791168,
+                570723712,
+                887697611
+            ],
+            "regex": "คา",
+            "weight": 2,
+            "count": 3
+        },
+        "-1291605512:-834332200:570723712:1716791865": {
+            "ids": [
+                -1291605512,
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "ธ",
+            "weight": 1,
+            "count": 4
+        },
+        "-1291605512:-834332200:570723712:887697611:1716791865": {
+            "ids": [
+                -1291605512,
+                -834332200,
+                570723712,
+                887697611,
+                1716791865
+            ],
+            "regex": "าต",
+            "weight": 2,
+            "count": 5
+        },
+        "-1157042950:-1062239040:-668086108:-357737163:683350088:1140153707:1716791865": {
+            "ids": [
+                -1157042950,
+                -1062239040,
+                -668086108,
+                -357737163,
+                683350088,
+                1140153707,
+                1716791865
+            ],
+            "regex": "รา",
+            "weight": 2,
+            "count": 7
+        },
+        "-1062239040:-668086108": {
+            "ids": [
+                -1062239040,
+                -668086108
+            ],
+            "regex": "เก",
+            "weight": 2,
+            "count": 2
+        },
+        "-1062239040:-834332200:-668086108": {
+            "ids": [
+                -1062239040,
+                -834332200,
+                -668086108
+            ],
+            "regex": "าะ",
+            "weight": 2,
+            "count": 3
+        },
+        "-1062239040:-357737163:1140153707:1716791865": {
+            "ids": [
+                -1062239040,
+                -357737163,
+                1140153707,
+                1716791865
+            ],
+            "regex": "สรา",
+            "weight": 3,
+            "count": 4
+        },
+        "-1062239040:2039236504": {
+            "ids": [
+                -1062239040,
+                2039236504
+            ],
+            "regex": "องค",
+            "weight": 3,
+            "count": 2
+        },
+        "-1062239040:1140153707": {
+            "ids": [
+                -1062239040,
+                1140153707
+            ],
+            "regex": "ะ เ",
+            "weight": 5,
+            "count": 2
+        },
+        "-1062239040:-668086108:876824218": {
+            "ids": [
+                -1062239040,
+                -668086108,
+                876824218
+            ],
+            "regex": "ร ห",
+            "weight": 5,
+            "count": 3
+        },
+        "-834332200:1082183842": {
+            "ids": [
+                -834332200,
+                1082183842
+            ],
+            "regex": "ยข",
+            "weight": 2,
+            "count": 2
+        },
+        "-834332200:570723712:1518963479": {
+            "ids": [
+                -834332200,
+                570723712,
+                1518963479
+            ],
+            "regex": "งม",
+            "weight": 2,
+            "count": 3
+        },
+        "-834332200:899028336:1716791865": {
+            "ids": [
+                -834332200,
+                899028336,
+                1716791865
+            ],
+            "regex": "เจ",
+            "weight": 2,
+            "count": 3
+        },
+        "-834332200:570723712:887697611": {
+            "ids": [
+                -834332200,
+                570723712,
+                887697611
+            ],
+            "regex": "ตา",
+            "weight": 2,
+            "count": 3
+        },
+        "-834332200:570723712": {
+            "ids": [
+                -834332200,
+                570723712
+            ],
+            "regex": "น ธ",
+            "weight": 5,
+            "count": 2
+        },
+        "-668086108:-357737163:876824218": {
+            "ids": [
+                -668086108,
+                -357737163,
+                876824218
+            ],
+            "regex": "​",
+            "weight": 1,
+            "count": 3
+        },
+        "-668086108:-357737163": {
+            "ids": [
+                -668086108,
+                -357737163
             ],
             "regex": "ะ​",
             "weight": 2,
             "count": 2
         },
-        "-1752890333:-583099877": {
+        "-357737163:1140153707:1518963479": {
             "ids": [
-                -1752890333,
-                -583099877
+                -357737163,
+                1140153707,
+                1518963479
             ],
-            "regex": "ลน ม",
-            "weight": 6,
+            "regex": "มโ",
+            "weight": 2,
+            "count": 3
+        },
+        "-357737163:1140153707": {
+            "ids": [
+                -357737163,
+                1140153707
+            ],
+            "regex": "สส",
+            "weight": 2,
             "count": 2
         },
-        "-1028378081:-435806182": {
+        "-357737163:899028336:1140153707:1716791865": {
             "ids": [
-                -1028378081,
-                -435806182
+                -357737163,
+                899028336,
+                1140153707,
+                1716791865
             ],
-            "regex": "อร อ",
-            "weight": 6,
-            "count": 2
+            "regex": "สถ",
+            "weight": 2,
+            "count": 4
         },
-        "-849732621:-723832929:1224795042": {
+        "570723712:887697611": {
             "ids": [
-                -849732621,
-                -723832929,
-                1224795042
+                570723712,
+                887697611
             ],
-            "regex": "าปด",
+            "regex": "คาต",
             "weight": 3,
-            "count": 3
-        },
-        "-435806182:381483141": {
-            "ids": [
-                -435806182,
-                381483141
-            ],
-            "regex": "อง มอ",
-            "weight": 7,
             "count": 2
         },
-        "-194777053:1698848448:2050215285": {
+        "683350088:1140153707": {
             "ids": [
-                -194777053,
-                1698848448,
-                2050215285
+                683350088,
+                1140153707
             ],
-            "regex": "ปนบา",
-            "weight": 4,
+            "regex": "ลอ",
+            "weight": 2,
+            "count": 2
+        },
+        "683350088:1346756180": {
+            "ids": [
+                683350088,
+                1346756180
+            ],
+            "regex": "คล",
+            "weight": 2,
+            "count": 2
+        },
+        "683350088:899028336:1716791865": {
+            "ids": [
+                683350088,
+                899028336,
+                1716791865
+            ],
+            "regex": "ร มค",
+            "weight": 6,
             "count": 3
         },
-        "150357289:366353372": {
+        "876824218:1140153707": {
             "ids": [
-                150357289,
-                366353372
+                876824218,
+                1140153707
             ],
-            "regex": "% เมอป",
-            "weight": 8,
+            "regex": "หล",
+            "weight": 2,
+            "count": 2
+        },
+        "887697611:1411067874": {
+            "ids": [
+                887697611,
+                1411067874
+            ],
+            "regex": "สง",
+            "weight": 2,
+            "count": 2
+        },
+        "887697611:899028336": {
+            "ids": [
+                887697611,
+                899028336
+            ],
+            "regex": "ด ส",
+            "weight": 5,
+            "count": 2
+        },
+        "899028336:1716791865": {
+            "ids": [
+                899028336,
+                1716791865
+            ],
+            "regex": "ะเ",
+            "weight": 2,
+            "count": 2
+        },
+        "1082183842:1760181301": {
+            "ids": [
+                1082183842,
+                1760181301
+            ],
+            "regex": "ง ม",
+            "weight": 5,
+            "count": 2
+        },
+        "1346756180:1606482166": {
+            "ids": [
+                1346756180,
+                1606482166
+            ],
+            "regex": "าว",
+            "weight": 2,
+            "count": 2
+        },
+        "1518963479:2039236504": {
+            "ids": [
+                1518963479,
+                2039236504
+            ],
+            "regex": "ลข",
+            "weight": 2,
+            "count": 2
+        },
+        "1760181301:2039236504": {
+            "ids": [
+                1760181301,
+                2039236504
+            ],
+            "regex": "ร อ",
+            "weight": 5,
             "count": 2
         }
     }

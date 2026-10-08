@@ -1,285 +1,9 @@
 {
     "tokens": [
         {
-            "id": -1983337334,
-            "regex": "pa te p",
-            "rawText": "Los altares de ritual del mapa te permiten aleatorizar los favores una vez adicional",
-            "generalizedText": "^los altares de ritual del mapa te permiten aleatorizar los favores una vez adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1945699786,
-            "regex": "^oro",
-            "rawText": "Oro que cae en el mapa aumentado un #%",
-            "generalizedText": "^oro que cae en el mapa aumentado un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1904132256,
-            "regex": "un sa",
-            "rawText": "El mapa contiene un santuario adicional",
-            "generalizedText": "^el mapa contiene un santuario adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1860924419,
-            "regex": "ras del",
-            "rawText": "Las fisuras del mapa tienen el tamaño de los grupos de monstruos aumentado un #%",
-            "generalizedText": "^las fisuras del mapa tienen el tamano de los grupos de monstruos aumentado un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": -1835089548,
-            "regex": "uos tienen s",
-            "rawText": "Los monstruos tienen su efectividad aumentada un #%",
-            "generalizedText": "^los monstruos tienen su efectividad aumentada un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1791489343,
-            "regex": "ne un c",
-            "rawText": "El mapa contiene un círculo de invocación adicional",
-            "generalizedText": "^el mapa contiene un circulo de invocacion adicional$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1677568614,
-            "regex": "pas ot",
-            "rawText": "Los jefes de mapas otorgan un #% más de experiencia",
-            "generalizedText": "^los jefes de mapas otorgan un #% mas de experiencia$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1650903248,
-            "regex": "a raros d",
-            "rawText": "Efectividad de los monstruos de fisura raros del mapa aumentada un #%",
-            "generalizedText": "^efectividad de los monstruos de fisura raros del mapa aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": -1631501687,
-            "regex": "s magicos a",
-            "rawText": "El mapa tiene la cantidad de monstruos mágicos aumentada un #%",
-            "generalizedText": "^el mapa tiene la cantidad de monstruos magicos aumentada un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1626789193,
-            "regex": "bitad",
-            "rawText": "La rareza de los objetos que caen en el mapa está aumentada un #%|Cantidad de las piedras guía que encuentras en el mapa aumentada un #%|El mapa está habitado por # exiliado renegado adicional",
-            "generalizedText": "^la rareza de los objetos que caen en el mapa esta aumentada un #%$|^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$|^el mapa esta habitado por # exiliado renegado adicional$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1538136551,
-            "regex": "r un ci",
-            "rawText": "El mapa tiene la probabilidad de contener un círculo de invocación aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener un circulo de invocacion aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1536625579,
-            "regex": "var f",
-            "rawText": "Reservar favores en los altares de ritual del mapa cuesta tributo reducido un #%",
-            "generalizedText": "^reservar favores en los altares de ritual del mapa cuesta tributo reducido un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1502545188,
-            "regex": "e mapas a",
-            "rawText": "Cantidad de objetos arrojados por los jefes de mapas aumentada un #%",
-            "generalizedText": "^cantidad de objetos arrojados por los jefes de mapas aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1450658733,
-            "regex": "eap",
-            "rawText": "Los favores que reservas en los altares de ritual reaparecen un #% antes",
-            "generalizedText": "^los favores que reservas en los altares de ritual reaparecen un #% antes$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1430150057,
-            "regex": "rrado,",
-            "rawText": "Los monstruos abisales tienen su efectividad aumentada un #% por cada foso cerrado, hasta un 100%",
-            "generalizedText": "^los monstruos abisales tienen su efectividad aumentada un #% por cada foso cerrado, hasta un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -1394217958,
-            "regex": "pa ten",
-            "rawText": "Probabilidad de que los monstruos abisales del mapa tengan modificadores abisales aumentada un #%",
-            "generalizedText": "^probabilidad de que los monstruos abisales del mapa tengan modificadores abisales aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -1390687846,
-            "regex": "zar f",
-            "rawText": "Aleatorizar favores en los altares de ritual en el mapa cuesta tributo reducido un #%",
-            "generalizedText": "^aleatorizar favores en los altares de ritual en el mapa cuesta tributo reducido un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1372386454,
-            "regex": "e mapa a",
-            "rawText": "Rareza de los objetos arrojados por los jefes de mapa aumentada un #%",
-            "generalizedText": "^rareza de los objetos arrojados por los jefes de mapa aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1358513397,
-            "regex": "% al",
-            "rawText": "Tamaño de los grupos de monstruos aumentado un #% alrededor de los focos vaal del mapa",
-            "generalizedText": "^tamano de los grupos de monstruos aumentado un #% alrededor de los focos vaal del mapa$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": -1151094714,
-            "regex": "evivid",
-            "rawText": "Los monstruos revividos de los altares de ritual del mapa tienen la probabilidad de ser raros aumentada un #%",
-            "generalizedText": "^los monstruos revividos de los altares de ritual del mapa tienen la probabilidad de ser raros aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1064255397,
-            "regex": "ven d",
-            "rawText": "Los monstruos que reviven de los altares de ritual del mapa tienen la probabilidad de ser mágicos aumentada un #%",
-            "generalizedText": "^los monstruos que reviven de los altares de ritual del mapa tienen la probabilidad de ser magicos aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -911390016,
-            "regex": "uos del mapa a",
-            "rawText": "Tamaño de los grupos de monstruos del mapa aumentado un #%",
-            "generalizedText": "^tamano de los grupos de monstruos del mapa aumentado un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -909643545,
-            "regex": "r caj",
-            "rawText": "El mapa tiene la probabilidad de contener cajas fuertes aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener cajas fuertes aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -881549247,
-            "regex": "ne la r",
-            "rawText": "El mapa tiene la rareza de los monstruos aumentada un #%",
+            "id": -2044629037,
+            "regex": "e la r",
+            "rawText": "El mapa tiene la rareza de los monstruos aumentada un (15-20)%",
             "generalizedText": "^el mapa tiene la rareza de los monstruos aumentada un #%$",
             "options": {
                 "prefix": true,
@@ -289,178 +13,10 @@
             }
         },
         {
-            "id": -831712991,
-            "regex": "er ex",
-            "rawText": "El mapa tiene la probabilidad de contener exiliados renegados aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener exiliados renegados aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -657846159,
-            "regex": "icos t",
-            "rawText": "Los monstruos únicos tienen # modificador adicional",
-            "generalizedText": "^los monstruos unicos tienen # modificador adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -627997524,
-            "regex": "irio de l",
-            "rawText": "Los monstruos de delirio de los monstruos del mapa tienen el tamaño de los grupos de monstruos aumentado un #%",
-            "generalizedText": "^los monstruos de delirio de los monstruos del mapa tienen el tamano de los grupos de monstruos aumentado un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": -573744593,
-            "regex": "ran la c",
-            "rawText": "Los abismos del mapa generan la cantidad de monstruos aumentada un #%",
-            "generalizedText": "^los abismos del mapa generan la cantidad de monstruos aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -340562925,
-            "regex": "orio a",
-            "rawText": "El mapa tiene # modificador aleatorio adicional",
-            "generalizedText": "^el mapa tiene # modificador aleatorio adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -302731572,
-            "regex": "l alr",
-            "rawText": "Hay # grupo de monstruos adicional alrededor de los focos vaal del mapa",
-            "generalizedText": "^hay # grupo de monstruos adicional alrededor de los focos vaal del mapa$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": -286316656,
-            "regex": "ianos",
-            "rawText": "El mapa tiene la probabilidad de contener espíritus azmerianos aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener espiritus azmerianos aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -63495935,
-            "regex": "un sa",
-            "rawText": "Tamaño de los grupos de monstruos del mapa reducido un #%|Cantidad de las piedras guía que encuentras en el mapa aumentada un #%|El mapa contiene un santuario adicional",
-            "generalizedText": "^tamano de los grupos de monstruos del mapa reducido un #%$|^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$|^el mapa contiene un santuario adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -59467838,
-            "regex": "er sant",
-            "rawText": "El mapa tiene la probabilidad de contener santuarios aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener santuarios aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -58994397,
-            "regex": "\\d+ esp",
-            "rawText": "La rareza de los objetos que caen en el mapa está aumentada un #%|Cantidad de las piedras guía que encuentras en el mapa aumentada un #%|El mapa contiene # espíritu azmeriano adicional",
-            "generalizedText": "^la rareza de los objetos que caen en el mapa esta aumentada un #%$|^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$|^el mapa contiene # espiritu azmeriano adicional$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 77067883,
-            "regex": "pa ap",
-            "rawText": "La niebla del delirio del mapa aplica delirio aumentado un #% a los jugadores",
-            "generalizedText": "^la niebla del delirio del mapa aplica delirio aumentado un #% a los jugadores$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 113750088,
-            "regex": "aen en",
-            "rawText": "La rareza de los objetos que caen en el mapa está aumentada un #%",
-            "generalizedText": "^la rareza de los objetos que caen en el mapa esta aumentada un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 160781761,
-            "regex": "aen en",
-            "rawText": "La rareza de los objetos que caen en el mapa está aumentada un #%|El mapa contiene una esencia adicional|Cantidad de las piedras guía que encuentras en el mapa aumentada un #%",
-            "generalizedText": "^la rareza de los objetos que caen en el mapa esta aumentada un #%$|^el mapa contiene una esencia adicional$|^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 200324717,
-            "regex": "e esq",
-            "rawText": "La niebla del delirio del mapa genera una cantidad de esquirlas de espejo aumentada un #%",
-            "generalizedText": "^la niebla del delirio del mapa genera una cantidad de esquirlas de espejo aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 299464150,
-            "regex": "m ar",
-            "rawText": "Los monstruos de los remanentes de verisium arrojan verisium aumentado un #%",
-            "generalizedText": "^los monstruos de los remanentes de verisium arrojan verisium aumentado un #%$",
+            "id": -2026817376,
+            "regex": "iq",
+            "rawText": "Las expediciones contienen (1-2) reliquias vaal en el mapa",
+            "generalizedText": "^las expediciones contienen # reliquias vaal en el mapa$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -469,9 +25,9 @@
             }
         },
         {
-            "id": 313983006,
-            "regex": "er au",
-            "rawText": "Los favores de ritual del mapa tienen la probabilidad de ser augurios aumentada un #%",
+            "id": -2005637209,
+            "regex": "r au",
+            "rawText": "Los favores de ritual del mapa tienen la probabilidad de ser augurios aumentada un (35-70)%",
             "generalizedText": "^los favores de ritual del mapa tienen la probabilidad de ser augurios aumentada un #%$",
             "options": {
                 "prefix": false,
@@ -481,142 +37,10 @@
             }
         },
         {
-            "id": 315698754,
-            "regex": "ia que e",
-            "rawText": "Cantidad de las piedras guía que encuentras en el mapa aumentada un #%",
-            "generalizedText": "^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 364983454,
-            "regex": "fosos",
-            "rawText": "Los fosos de los abismos del mapa tienen el doble de probabilidad de tener recompensas",
-            "generalizedText": "^los fosos de los abismos del mapa tienen el doble de probabilidad de tener recompensas$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": 475629878,
-            "regex": "er ese",
-            "rawText": "El mapa tiene la probabilidad de contener esencias aumentada un #%",
-            "generalizedText": "^el mapa tiene la probabilidad de contener esencias aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 497320254,
-            "regex": "de regi",
-            "rawText": "Cantidad de registros de expedición que arrojan los monstruos rúnicos en el mapa aumentada un #%",
-            "generalizedText": "^cantidad de registros de expedicion que arrojan los monstruos runicos en el mapa aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "expedition"
-                ]
-            }
-        },
-        {
-            "id": 649620236,
-            "regex": "un cr",
-            "rawText": "#% de probabilidad de ganar un cristal adicional de los focos vaal del mapa",
-            "generalizedText": "^#% de probabilidad de ganar un cristal adicional de los focos vaal del mapa$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 676929763,
-            "regex": "zan$",
-            "rawText": "Las fisuras inestables del mapa generan un monstruo raro adicional cuando se estabilizan",
-            "generalizedText": "^las fisuras inestables del mapa generan un monstruo raro adicional cuando se estabilizan$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 693315336,
-            "regex": "ia que a",
-            "rawText": "Cantidad de las piedras guía que arrojan los jefes de los mapas aumentada un #%",
-            "generalizedText": "^cantidad de las piedras guia que arrojan los jefes de los mapas aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 794533330,
-            "regex": "sipar",
-            "rawText": "La niebla de delirio del mapa dura # segundos adicionales antes de disiparse",
-            "generalizedText": "^la niebla de delirio del mapa dura # segundos adicionales antes de disiparse$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 826253450,
-            "regex": "vr",
-            "rawText": "Las fisuras inestables del mapa tienen la probabilidad de contener a Vruun, Mariscal de Xesht aumentada un #%",
-            "generalizedText": "^las fisuras inestables del mapa tienen la probabilidad de contener a vruun, mariscal de xesht aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 911344929,
-            "regex": "riu",
-            "rawText": "Es un #% más probable que los encuentros de Delirium del mapa generen jefes únicos",
-            "generalizedText": "^es un #% mas probable que los encuentros de delirium del mapa generen jefes unicos$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 959755009,
-            "regex": "er cu",
-            "rawText": "El mapa tiene un #% de probabilidad de contener cuatro abismos adicionales",
-            "generalizedText": "^el mapa tiene un #% de probabilidad de contener cuatro abismos adicionales$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": 1000515734,
-            "regex": "apa o",
-            "rawText": "Los monstruos sacrificados en los altares de ritual del mapa otorgan tributo aumentado un #%",
-            "generalizedText": "^los monstruos sacrificados en los altares de ritual del mapa otorgan tributo aumentado un #%$",
+            "id": -1933464139,
+            "regex": "var",
+            "rawText": "Reservar favores en los altares de ritual del mapa cuesta tributo reducido un (30-20)%",
+            "generalizedText": "^reservar favores en los altares de ritual del mapa cuesta tributo reducido un #%$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -625,93 +49,9 @@
             }
         },
         {
-            "id": 1003579866,
-            "regex": "ya g",
-            "rawText": "#% de probabilidad de que haya grupos adicionales de monstruos alrededor de los focos vaal en el mapa",
-            "generalizedText": "^#% de probabilidad de que haya grupos adicionales de monstruos alrededor de los focos vaal en el mapa$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1125979776,
-            "regex": "uo u",
-            "rawText": "#% de probabilidad de agregar un monstruo único de focos vaal al mapa",
-            "generalizedText": "^#% de probabilidad de agregar un monstruo unico de focos vaal al mapa$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1170304809,
-            "regex": "ne una e",
-            "rawText": "El mapa contiene una esencia adicional",
-            "generalizedText": "^el mapa contiene una esencia adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 1188246160,
-            "regex": "\\d+ mon",
-            "rawText": "Los abismos del mapa generan # monstruos raros adicionales",
-            "generalizedText": "^los abismos del mapa generan # monstruos raros adicionales$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": 1221297252,
-            "regex": "gan o",
-            "rawText": "Probabilidad de que caigan objetos monetarios profanados en los abismos del mapa aumentada un #%",
-            "generalizedText": "^probabilidad de que caigan objetos monetarios profanados en los abismos del mapa aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": 1223136494,
-            "regex": "a unas",
-            "rawText": "Los abismos del mapa tienen la probabilidad de conducir a unas profundidades abisales aumentada un #%",
-            "generalizedText": "^los abismos del mapa tienen la probabilidad de conducir a unas profundidades abisales aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": 1228783326,
-            "regex": "re q",
-            "rawText": "La cantidad de regalos del vientre que cae en el mapa está aumentada un #%",
-            "generalizedText": "^la cantidad de regalos del vientre que cae en el mapa esta aumentada un #%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 1254542572,
-            "regex": "voquen",
-            "rawText": "Probabilidad de que los focos vaal invoquen monstruos adicionales aumentada un #% en el mapa",
+            "id": -1788692627,
+            "regex": "oq",
+            "rawText": "Probabilidad de que los focos vaal invoquen monstruos adicionales aumentada un (25-50)% en el mapa",
             "generalizedText": "^probabilidad de que los focos vaal invoquen monstruos adicionales aumentada un #% en el mapa$",
             "options": {
                 "prefix": false,
@@ -721,10 +61,22 @@
             }
         },
         {
-            "id": 1264225473,
-            "regex": "tre t",
-            "rawText": "Los regalos del vientre tienen un #% de probabilidad de caer de un nivel más alto en el mapa",
-            "generalizedText": "^los regalos del vientre tienen un #% de probabilidad de caer de un nivel mas alto en el mapa$",
+            "id": -1786171939,
+            "regex": "ff",
+            "rawText": "(5-10)% increased Expedition Explosive Area of Effect in Map",
+            "generalizedText": "^#% increased expedition explosive area of effect in map$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1784287093,
+            "regex": "ras d",
+            "rawText": "Las fisuras del mapa tienen el tamaño de los grupos de monstruos aumentado un (5-15)%",
+            "generalizedText": "^las fisuras del mapa tienen el tamano de los grupos de monstruos aumentado un #%$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -733,44 +85,20 @@
             }
         },
         {
-            "id": 1447225496,
-            "regex": "rizas",
-            "rawText": "Los favores que aleatorizas en los altares de ritual del mapa tienen un #% de probabilidad de no costar tributo",
-            "generalizedText": "^los favores que aleatorizas en los altares de ritual del mapa tienen un #% de probabilidad de no costar tributo$",
+            "id": -1635710298,
+            "regex": "or a",
+            "rawText": "Los monstruos únicos tienen 1 modificador adicional",
+            "generalizedText": "^los monstruos unicos tienen # modificador adicional$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "ritual"
+                    "default"
                 ]
             }
         },
         {
-            "id": 1474821901,
-            "regex": "ipa u",
-            "rawText": "La niebla de delirio del mapa se disipa un #% más despacio",
-            "generalizedText": "^la niebla de delirio del mapa se disipa un #% mas despacio$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 1475570877,
-            "regex": "rte ad",
-            "rawText": "El mapa contiene una caja fuerte adicional",
-            "generalizedText": "^el mapa contiene una caja fuerte adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 1633167857,
-            "regex": "smo a",
+            "id": -1617113142,
+            "regex": "n ab",
             "rawText": "El mapa contiene un abismo adicional",
             "generalizedText": "^el mapa contiene un abismo adicional$",
             "options": {
@@ -781,10 +109,10 @@
             }
         },
         {
-            "id": 1704710240,
-            "regex": "pil",
-            "rawText": "Los tamaños de las pilas de fragmentos de simulacro que encuentras en los mapas están aumentados un #%",
-            "generalizedText": "^los tamanos de las pilas de fragmentos de simulacro que encuentras en los mapas estan aumentados un #%$",
+            "id": -1594182537,
+            "regex": "spa",
+            "rawText": "La niebla de delirio del mapa se disipa un (30-20)% más despacio",
+            "generalizedText": "^la niebla de delirio del mapa se disipa un #% mas despacio$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -793,21 +121,45 @@
             }
         },
         {
-            "id": 1823005182,
-            "regex": "l sea",
-            "rawText": "Probabilidad de que los cofres de los focos vaal sean raros aumentada un #% en el mapa",
-            "generalizedText": "^probabilidad de que los cofres de los focos vaal sean raros aumentada un #% en el mapa$",
+            "id": -1564770511,
+            "regex": "orio",
+            "rawText": "El mapa tiene (1-2) modificadores aleatorios adicionales",
+            "generalizedText": "^el mapa tiene # modificadores aleatorios adicionales$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "incursion"
+                    "default"
                 ]
             }
         },
         {
-            "id": 1953106999,
-            "regex": "na que c",
-            "rawText": "La cantidad de sangre de colmena que cae en el mapa está aumentada un #%",
+            "id": -1553918089,
+            "regex": "zas",
+            "rawText": "Los favores que aleatorizas en los altares de ritual del mapa tienen un (3-6)% de probabilidad de no costar tributo",
+            "generalizedText": "^los favores que aleatorizas en los altares de ritual del mapa tienen un #% de probabilidad de no costar tributo$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1519456051,
+            "regex": "ran l",
+            "rawText": "Los abismos del mapa generan la cantidad de monstruos aumentada un (20-30)%",
+            "generalizedText": "^los abismos del mapa generan la cantidad de monstruos aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -1442604101,
+            "regex": "lm",
+            "rawText": "La cantidad de sangre de colmena que cae en el mapa está aumentada un (30-60)%",
             "generalizedText": "^la cantidad de sangre de colmena que cae en el mapa esta aumentada un #%$",
             "options": {
                 "prefix": false,
@@ -817,9 +169,9 @@
             }
         },
         {
-            "id": 1979378879,
+            "id": -1401280853,
             "regex": "s raros au",
-            "rawText": "El mapa tiene la cantidad de monstruos raros aumentada un #%",
+            "rawText": "El mapa tiene la cantidad de monstruos raros aumentada un (25-35)%",
             "generalizedText": "^el mapa tiene la cantidad de monstruos raros aumentada un #%$",
             "options": {
                 "prefix": true,
@@ -829,9 +181,405 @@
             }
         },
         {
-            "id": 1987345096,
-            "regex": "ntes au",
-            "rawText": "La niebla de delirio del mapa genera una cantidad de espejos fracturantes aumentada un #%",
+            "id": -1377869826,
+            "regex": "m t",
+            "rawText": "Los remanentes de verisium tienen +(25-35)% de probabilidad de agregar un modificador rúnico adicional al mapa",
+            "generalizedText": "^los remanentes de verisium tienen +#% de probabilidad de agregar un modificador runico adicional al mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1360675046,
+            "regex": "aen",
+            "rawText": "La rareza de los objetos que caen en el mapa está aumentada un (8-12)%",
+            "generalizedText": "^la rareza de los objetos que caen en el mapa esta aumentada un #%$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1349688955,
+            "regex": "ub",
+            "rawText": "Las expediciones contienen (1-2) jefes adicionales recubiertos con hielo en el mapa",
+            "generalizedText": "^las expediciones contienen # jefes adicionales recubiertos con hielo en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1329521044,
+            "regex": "n v",
+            "rawText": "Los monstruos de los remanentes de verisium arrojan verisium aumentado un (15-25)%",
+            "generalizedText": "^los monstruos de los remanentes de verisium arrojan verisium aumentado un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1325149272,
+            "regex": "uo u",
+            "rawText": "(10-25)% de probabilidad de agregar un monstruo único de focos vaal al mapa",
+            "generalizedText": "^#% de probabilidad de agregar un monstruo unico de focos vaal al mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": -1309913324,
+            "regex": "r ese",
+            "rawText": "El mapa tiene la probabilidad de contener esencias aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener esencias aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1308339624,
+            "regex": "^oro",
+            "rawText": "Oro que cae en el mapa aumentado un (25-35)%",
+            "generalizedText": "^oro que cae en el mapa aumentado un #%$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1127158390,
+            "regex": "a que a",
+            "rawText": "Cantidad de las piedras guía que arrojan los jefes de los mapas aumentada un (18-30)%",
+            "generalizedText": "^cantidad de las piedras guia que arrojan los jefes de los mapas aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": -1033399892,
+            "regex": "e monstruos d",
+            "rawText": "Tamaño de los grupos de monstruos del mapa aumentado un (5-7)%",
+            "generalizedText": "^tamano de los grupos de monstruos del mapa aumentado un #%$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1028076924,
+            "regex": "uos t",
+            "rawText": "Los monstruos tienen su efectividad aumentada un (10-15)%",
+            "generalizedText": "^los monstruos tienen su efectividad aumentada un #%$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1026217690,
+            "regex": "a que e",
+            "rawText": "Cantidad de las piedras guía que encuentras en el mapa aumentada un (30-40)%",
+            "generalizedText": "^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1014931673,
+            "regex": "r s",
+            "rawText": "El mapa tiene la probabilidad de contener santuarios aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener santuarios aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -956801645,
+            "regex": "ju",
+            "rawText": "La niebla del delirio del mapa aplica delirio aumentado un (15-30)% a los jugadores",
+            "generalizedText": "^la niebla del delirio del mapa aplica delirio aumentado un #% a los jugadores$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -864971456,
+            "regex": "on au",
+            "rawText": "El mapa tiene la probabilidad de contener un círculo de invocación aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener un circulo de invocacion aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -859828309,
+            "regex": "xh",
+            "rawText": "Los (1-2) primeros monstruos rúnicos exhumados en el mapa serán monstruos raros",
+            "generalizedText": "^los # primeros monstruos runicos exhumados en el mapa seran monstruos raros$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -828476369,
+            "regex": "enter",
+            "rawText": "Las expediciones contienen (1-2) cajas fuertes enterradas en el mapa",
+            "generalizedText": "^las expediciones contienen # cajas fuertes enterradas en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -782248059,
+            "regex": "n ad",
+            "rawText": "El mapa contiene un círculo de invocación adicional",
+            "generalizedText": "^el mapa contiene un circulo de invocacion adicional$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -773162240,
+            "regex": "uat",
+            "rawText": "El mapa tiene un (20-40)% de probabilidad de contener cuatro abismos adicionales",
+            "generalizedText": "^el mapa tiene un #% de probabilidad de contener cuatro abismos adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -724125136,
+            "regex": "uan",
+            "rawText": "Las fisuras inestables del mapa generan (1-2) monstruos raros adicionales cuando se estabilizan",
+            "generalizedText": "^las fisuras inestables del mapa generan # monstruos raros adicionales cuando se estabilizan$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -659266483,
+            "regex": "nes d",
+            "rawText": "Rareza de los monstruos de las expediciones del mapa aumentada un (15-25)%",
+            "generalizedText": "^rareza de los monstruos de las expediciones del mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -614112895,
+            "regex": "aer",
+            "rawText": "Los regalos del vientre tienen un (10-30)% de probabilidad de caer de un nivel más alto en el mapa",
+            "generalizedText": "^los regalos del vientre tienen un #% de probabilidad de caer de un nivel mas alto en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -611033189,
+            "regex": "eng",
+            "rawText": "Probabilidad de que los monstruos abisales del mapa tengan modificadores abisales aumentada un (20-30)%",
+            "generalizedText": "^probabilidad de que los monstruos abisales del mapa tengan modificadores abisales aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -540903682,
+            "regex": "ars",
+            "rawText": "La niebla de delirio del mapa dura (6-12) segundos adicionales antes de disiparse",
+            "generalizedText": "^la niebla de delirio del mapa dura # segundos adicionales antes de disiparse$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -481412666,
+            "regex": "ai",
+            "rawText": "Probabilidad de que caigan objetos monetarios profanados en los abismos del mapa aumentada un (20-30)%",
+            "generalizedText": "^probabilidad de que caigan objetos monetarios profanados en los abismos del mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -377868554,
+            "regex": "^ef",
+            "rawText": "Efectividad de los monstruos de fisura raros del mapa aumentada un (5-20)%",
+            "generalizedText": "^efectividad de los monstruos de fisura raros del mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -354629506,
+            "regex": "un s",
+            "rawText": "El mapa contiene un santuario adicional",
+            "generalizedText": "^el mapa contiene un santuario adicional$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -314560709,
+            "regex": "vr",
+            "rawText": "Las fisuras inestables del mapa tienen la probabilidad de contener a Vruun, Mariscal de Xesht aumentada un (20-50)%",
+            "generalizedText": "^las fisuras inestables del mapa tienen la probabilidad de contener a vruun, mariscal de xesht aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -250359622,
+            "regex": "dup",
+            "rawText": "Las expediciones tienen +(30-40)% de probabilidad sobrepasante de duplicar a los monstruos rúnicos del mapa",
+            "generalizedText": "^las expediciones tienen +#% de probabilidad sobrepasante de duplicar a los monstruos runicos del mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -88829109,
+            "regex": "os del mapa generan \\d+",
+            "rawText": "Los abismos del mapa generan (2-3) monstruos raros adicionales",
+            "generalizedText": "^los abismos del mapa generan # monstruos raros adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -42287288,
+            "regex": "o,",
+            "rawText": "Los monstruos abisales tienen su efectividad aumentada un (8-12)% por cada foso cerrado, hasta un 100%",
+            "generalizedText": "^los monstruos abisales tienen su efectividad aumentada un #% por cada foso cerrado, hasta un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 25067405,
+            "regex": "tes ad",
+            "rawText": "El mapa contiene (1-2) cajas fuertes adicionales",
+            "generalizedText": "^el mapa contiene # cajas fuertes adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 62629171,
+            "regex": "pil",
+            "rawText": "Los tamaños de las pilas de fragmentos de simulacro que encuentras en los mapas están aumentados un (15-30)%",
+            "generalizedText": "^los tamanos de las pilas de fragmentos de simulacro que encuentras en los mapas estan aumentados un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 108640922,
+            "regex": "vivi",
+            "rawText": "Los monstruos revividos de los altares de ritual del mapa tienen la probabilidad de ser raros aumentada un (25-40)%",
+            "generalizedText": "^los monstruos revividos de los altares de ritual del mapa tienen la probabilidad de ser raros aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 135469244,
+            "regex": "ctu",
+            "rawText": "La niebla de delirio del mapa genera una cantidad de espejos fracturantes aumentada un (15-30)%",
             "generalizedText": "^la niebla de delirio del mapa genera una cantidad de espejos fracturantes aumentada un #%$",
             "options": {
                 "prefix": false,
@@ -841,34 +589,10 @@
             }
         },
         {
-            "id": 2003797409,
-            "regex": "e un espi",
-            "rawText": "El mapa contiene un espíritu azmeriano adicional",
-            "generalizedText": "^el mapa contiene un espiritu azmeriano adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 2024741756,
-            "regex": "pa red",
-            "rawText": "Tamaño de los grupos de monstruos del mapa reducido un #%|Cantidad de las piedras guía que encuentras en el mapa aumentada un #%|El mapa contiene una caja fuerte adicional",
-            "generalizedText": "^tamano de los grupos de monstruos del mapa reducido un #%$|^cantidad de las piedras guia que encuentras en el mapa aumentada un #%$|^el mapa contiene una caja fuerte adicional$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 2034606215,
-            "regex": "fres r",
-            "rawText": "El mapa contiene # cofres raros adicionales",
-            "generalizedText": "^el mapa contiene # cofres raros adicionales$",
+            "id": 164419697,
+            "regex": "a ad",
+            "rawText": "El mapa contiene una esencia adicional",
+            "generalizedText": "^el mapa contiene una esencia adicional$",
             "options": {
                 "prefix": true,
                 "tags": [
@@ -877,10 +601,10 @@
             }
         },
         {
-            "id": 2081742940,
-            "regex": "^mat",
-            "rawText": "matar monstruos raros en el mapa pausa el contador del espejo de delirio durante # segundos",
-            "generalizedText": "^matar monstruos raros en el mapa pausa el contador del espejo de delirio durante # segundos$",
+            "id": 182417783,
+            "regex": "^es",
+            "rawText": "Es un (15-30)% más probable que los encuentros de Delirium del mapa generen jefes únicos",
+            "generalizedText": "^es un #% mas probable que los encuentros de delirium del mapa generen jefes unicos$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -889,9 +613,69 @@
             }
         },
         {
-            "id": 2135099941,
-            "regex": "^exper",
-            "rawText": "Experiencia ganada en el mapa aumentada un #%",
+            "id": 197397637,
+            "regex": "ya",
+            "rawText": "(30-60)% de probabilidad de que haya grupos adicionales de monstruos alrededor de los focos vaal en el mapa",
+            "generalizedText": "^#% de probabilidad de que haya grupos adicionales de monstruos alrededor de los focos vaal en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 444792259,
+            "regex": "erm",
+            "rawText": "Los altares de ritual del mapa te permiten aleatorizar los favores (1-3) veces adicionales",
+            "generalizedText": "^los altares de ritual del mapa te permiten aleatorizar los favores # veces adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 474552856,
+            "regex": "er ca",
+            "rawText": "El mapa tiene la probabilidad de contener cajas fuertes aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener cajas fuertes aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 479296149,
+            "regex": "r esp",
+            "rawText": "El mapa tiene la probabilidad de contener espíritus azmerianos aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener espiritus azmerianos aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 504241682,
+            "regex": "io de l",
+            "rawText": "Los monstruos de delirio de los monstruos del mapa tienen el tamaño de los grupos de monstruos aumentado un (15-30)%",
+            "generalizedText": "^los monstruos de delirio de los monstruos del mapa tienen el tamano de los grupos de monstruos aumentado un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 564968189,
+            "regex": "^exp",
+            "rawText": "Experiencia ganada en el mapa aumentada un (12-18)%",
             "generalizedText": "^experiencia ganada en el mapa aumentada un #%$",
             "options": {
                 "prefix": true,
@@ -901,9 +685,333 @@
             }
         },
         {
-            "id": 2143357700,
-            "regex": "de marc",
-            "rawText": "El mapa tiene la cantidad de marcadores de monstruos rúnicos aumentada un #%",
+            "id": 574430759,
+            "regex": "vive",
+            "rawText": "Los monstruos que reviven de los altares de ritual del mapa tienen la probabilidad de ser mágicos aumentada un (35-70)%",
+            "generalizedText": "^los monstruos que reviven de los altares de ritual del mapa tienen la probabilidad de ser magicos aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 611955315,
+            "regex": "ond",
+            "rawText": "Los abismos del mapa tienen la probabilidad de conducir a unas profundidades abisales aumentada un (10-20)%",
+            "generalizedText": "^los abismos del mapa tienen la probabilidad de conducir a unas profundidades abisales aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 655807109,
+            "regex": "s s",
+            "rawText": "Los monstruos sacrificados en los altares de ritual del mapa otorgan tributo aumentado un (18-30)%",
+            "generalizedText": "^los monstruos sacrificados en los altares de ritual del mapa otorgan tributo aumentado un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 690095601,
+            "regex": "^ha",
+            "rawText": "Hay 1 grupo de monstruos adicional alrededor de los focos vaal del mapa",
+            "generalizedText": "^hay # grupo de monstruos adicional alrededor de los focos vaal del mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 739252212,
+            "regex": "^ma",
+            "rawText": "matar monstruos raros en el mapa pausa el contador del espejo de delirio durante (3-5) segundos",
+            "generalizedText": "^matar monstruos raros en el mapa pausa el contador del espejo de delirio durante # segundos$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 857219754,
+            "regex": "u a",
+            "rawText": "El mapa contiene 1 espíritu azmeriano adicional",
+            "generalizedText": "^el mapa contiene # espiritu azmeriano adicional$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 874837226,
+            "regex": "\\d+ sa",
+            "rawText": "El mapa contiene (1-2) santuarios adicionales",
+            "generalizedText": "^el mapa contiene # santuarios adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 881932307,
+            "regex": "gados",
+            "rawText": "El mapa tiene la probabilidad de contener exiliados renegados aumentada un (70-100)%",
+            "generalizedText": "^el mapa tiene la probabilidad de contener exiliados renegados aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 881965784,
+            "regex": "nos ad",
+            "rawText": "El mapa contiene (1-2) espíritus azmerianos adicionales",
+            "generalizedText": "^el mapa contiene # espiritus azmerianos adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 924177740,
+            "regex": "sea",
+            "rawText": "Probabilidad de que los cofres de los focos vaal sean raros aumentada un (30-60)% en el mapa",
+            "generalizedText": "^probabilidad de que los cofres de los focos vaal sean raros aumentada un #% en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 989647046,
+            "regex": "ganar",
+            "rawText": "(5-10)% de probabilidad de ganar un cristal adicional de los focos vaal del mapa",
+            "generalizedText": "^#% de probabilidad de ganar un cristal adicional de los focos vaal del mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1056236838,
+            "regex": "sq",
+            "rawText": "La niebla del delirio del mapa genera una cantidad de esquirlas de espejo aumentada un (12-26)%",
+            "generalizedText": "^la niebla del delirio del mapa genera una cantidad de esquirlas de espejo aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 1060331787,
+            "regex": "^al",
+            "rawText": "Aleatorizar favores en los altares de ritual en el mapa cuesta tributo reducido un (30-20)%",
+            "generalizedText": "^aleatorizar favores en los altares de ritual en el mapa cuesta tributo reducido un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 1079448376,
+            "regex": "res r",
+            "rawText": "El mapa contiene (2-3) cofres raros adicionales",
+            "generalizedText": "^el mapa contiene # cofres raros adicionales$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1090906942,
+            "regex": "les e",
+            "rawText": "Las expediciones contienen (1-2) centinelas de verisium adicionales en el mapa",
+            "generalizedText": "^las expediciones contienen # centinelas de verisium adicionales en el mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 1107604097,
+            "regex": "eap",
+            "rawText": "Los favores que reservas en los altares de ritual reaparecen un (25-40)% antes",
+            "generalizedText": "^los favores que reservas en los altares de ritual reaparecen un #% antes$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 1120183281,
+            "regex": "dob",
+            "rawText": "Los fosos de los abismos del mapa tienen el doble de probabilidad de tener recompensas",
+            "generalizedText": "^los fosos de los abismos del mapa tienen el doble de probabilidad de tener recompensas$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 1662257259,
+            "regex": "d de o",
+            "rawText": "Cantidad de objetos arrojados por los jefes de mapas aumentada un (13-20)%",
+            "generalizedText": "^cantidad de objetos arrojados por los jefes de mapas aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1670789869,
+            "regex": "ja f",
+            "rawText": "El mapa contiene una caja fuerte adicional",
+            "generalizedText": "^el mapa contiene una caja fuerte adicional$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1736733570,
+            "regex": "re q",
+            "rawText": "La cantidad de regalos del vientre que cae en el mapa está aumentada un (30-60)%",
+            "generalizedText": "^la cantidad de regalos del vientre que cae en el mapa esta aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": 1773870625,
+            "regex": "% al",
+            "rawText": "Tamaño de los grupos de monstruos aumentado un (10-30)% alrededor de los focos vaal del mapa",
+            "generalizedText": "^tamano de los grupos de monstruos aumentado un #% alrededor de los focos vaal del mapa$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1813505419,
+            "regex": "e mapa a",
+            "rawText": "Rareza de los objetos arrojados por los jefes de mapa aumentada un (35-60)%",
+            "generalizedText": "^rareza de los objetos arrojados por los jefes de mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1819020306,
+            "regex": "hab",
+            "rawText": "El mapa está habitado por 1 exiliado renegado adicional",
+            "generalizedText": "^el mapa esta habitado por # exiliado renegado adicional$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1849197898,
+            "regex": "as o",
+            "rawText": "Los jefes de mapas otorgan un (40-80)% más de experiencia",
+            "generalizedText": "^los jefes de mapas otorgan un #% mas de experiencia$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1874847282,
+            "regex": "uos m",
+            "rawText": "El mapa tiene la cantidad de monstruos mágicos aumentada un (30-40)%",
+            "generalizedText": "^el mapa tiene la cantidad de monstruos magicos aumentada un #%$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1885842260,
+            "regex": "un r",
+            "rawText": "Las expediciones tienen +(30-40)% de probabilidad sobrepasante de contener un remanente de verisium adicional",
+            "generalizedText": "^las expediciones tienen +#% de probabilidad sobrepasante de contener un remanente de verisium adicional$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 1947862885,
+            "regex": "egi",
+            "rawText": "Cantidad de registros de expedición que arrojan los monstruos rúnicos en el mapa aumentada un (15-25)%",
+            "generalizedText": "^cantidad de registros de expedicion que arrojan los monstruos runicos en el mapa aumentada un #%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 2009544500,
+            "regex": "arc",
+            "rawText": "El mapa tiene la cantidad de marcadores de monstruos rúnicos aumentada un (15-25)%",
             "generalizedText": "^el mapa tiene la cantidad de marcadores de monstruos runicos aumentada un #%$",
             "options": {
                 "prefix": false,
@@ -911,815 +1019,3221 @@
                     "expedition"
                 ]
             }
+        },
+        {
+            "id": 2125725641,
+            "regex": "as ad",
+            "rawText": "El mapa contiene (1-2) esencias adicionales",
+            "generalizedText": "^el mapa contiene # esencias adicionales$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
         }
     ],
     "optimizationTable": {
-        "-1983337334:-1394217958": {
+        "-2044629037:-1360675046:-377868554": {
             "ids": [
-                -1983337334,
-                -1394217958
+                -2044629037,
+                -1360675046,
+                -377868554
             ],
-            "regex": "pa te",
-            "weight": 7,
+            "regex": "a r",
+            "weight": 5,
+            "count": 3
+        },
+        "-2044629037:-1360675046": {
+            "ids": [
+                -2044629037,
+                -1360675046
+            ],
+            "regex": "la r",
+            "weight": 6,
             "count": 2
         },
-        "-1983337334:-1536625579:-1151094714:-1064255397:313983006:1000515734:1447225496": {
+        "-2044629037:-1360675046:-659266483:1813505419": {
             "ids": [
-                -1983337334,
-                -1536625579,
-                -1151094714,
-                -1064255397,
-                313983006,
-                1000515734,
-                1447225496
+                -2044629037,
+                -1360675046,
+                -659266483,
+                1813505419
             ],
-            "regex": "itual del",
+            "regex": "za d",
+            "weight": 6,
+            "count": 4
+        },
+        "-2044629037:-1784287093:-1519456051:504241682:1773870625": {
+            "ids": [
+                -2044629037,
+                -1784287093,
+                -1519456051,
+                504241682,
+                1773870625
+            ],
+            "regex": "uos au",
+            "weight": 8,
+            "count": 5
+        },
+        "-2044629037:-1127158390:-659266483:-611033189:-377868554:504241682": {
+            "ids": [
+                -2044629037,
+                -1127158390,
+                -659266483,
+                -611033189,
+                -377868554,
+                504241682
+            ],
+            "regex": "e los m",
+            "weight": 9,
+            "count": 6
+        },
+        "-2044629037:-1127158390:-659266483:-377868554:504241682": {
+            "ids": [
+                -2044629037,
+                -1127158390,
+                -659266483,
+                -377868554,
+                504241682
+            ],
+            "regex": "de los m",
+            "weight": 10,
+            "count": 5
+        },
+        "-2044629037:-659266483:-611033189:-377868554:504241682": {
+            "ids": [
+                -2044629037,
+                -659266483,
+                -611033189,
+                -377868554,
+                504241682
+            ],
+            "regex": "e los mo",
+            "weight": 10,
+            "count": 5
+        },
+        "-2044629037:-659266483:-377868554:504241682": {
+            "ids": [
+                -2044629037,
+                -659266483,
+                -377868554,
+                504241682
+            ],
+            "regex": "de los mo",
             "weight": 11,
+            "count": 4
+        },
+        "-2044629037:-659266483": {
+            "ids": [
+                -2044629037,
+                -659266483
+            ],
+            "regex": "a de los m",
+            "weight": 12,
+            "count": 2
+        },
+        "-2044629037:-611033189:-42287288": {
+            "ids": [
+                -2044629037,
+                -611033189,
+                -42287288
+            ],
+            "regex": "s monstruos a",
+            "weight": 15,
+            "count": 3
+        },
+        "-2026817376:-1127158390:-1026217690": {
+            "ids": [
+                -2026817376,
+                -1127158390,
+                -1026217690
+            ],
+            "regex": "uia",
+            "weight": 3,
+            "count": 3
+        },
+        "-2026817376:-1349688955:-828476369:-659266483:-250359622:1090906942:1885842260": {
+            "ids": [
+                -2026817376,
+                -1349688955,
+                -828476369,
+                -659266483,
+                -250359622,
+                1090906942,
+                1885842260
+            ],
+            "regex": "ione",
+            "weight": 4,
             "count": 7
         },
-        "-1983337334:-1151094714:-1064255397:313983006:1447225496": {
+        "-2026817376:-1349688955:-828476369:-724125136:1090906942": {
             "ids": [
-                -1983337334,
-                -1151094714,
-                -1064255397,
-                313983006,
-                1447225496
+                -2026817376,
+                -1349688955,
+                -828476369,
+                -724125136,
+                1090906942
             ],
-            "regex": "l del mapa t",
-            "weight": 14,
+            "regex": "es c",
+            "weight": 6,
             "count": 5
         },
-        "-1945699786:1228783326:1953106999": {
+        "-2026817376:197397637:1060331787": {
             "ids": [
-                -1945699786,
-                1228783326,
-                1953106999
+                -2026817376,
+                197397637,
+                1060331787
             ],
-            "regex": "ae en",
+            "regex": "al e",
+            "weight": 6,
+            "count": 3
+        },
+        "-2026817376:-1349688955:-828476369:1090906942": {
+            "ids": [
+                -2026817376,
+                -1349688955,
+                -828476369,
+                1090906942
+            ],
+            "regex": "nes c",
             "weight": 7,
-            "count": 3
-        },
-        "-1945699786:-911390016": {
-            "ids": [
-                -1945699786,
-                -911390016
-            ],
-            "regex": "pa aumentado",
-            "weight": 14,
-            "count": 2
-        },
-        "-1904132256:-63495935": {
-            "ids": [
-                -1904132256,
-                -63495935
-            ],
-            "regex": "un sa",
-            "weight": 7,
-            "count": 2
-        },
-        "-1860924419:-627997524": {
-            "ids": [
-                -1860924419,
-                -627997524
-            ],
-            "regex": "nen el t",
-            "weight": 10,
-            "count": 2
-        },
-        "-1860924419:-1358513397:-911390016:-627997524:-63495935:2024741756": {
-            "ids": [
-                -1860924419,
-                -1358513397,
-                -911390016,
-                -627997524,
-                -63495935,
-                2024741756
-            ],
-            "regex": "mano de l",
-            "weight": 11,
-            "count": 6
-        },
-        "-1860924419:-627997524:364983454": {
-            "ids": [
-                -1860924419,
-                -627997524,
-                364983454
-            ],
-            "regex": "a tienen e",
-            "weight": 12,
-            "count": 3
-        },
-        "-1860924419:-1394217958:-627997524:364983454:826253450:1223136494": {
-            "ids": [
-                -1860924419,
-                -1394217958,
-                -627997524,
-                364983454,
-                826253450,
-                1223136494
-            ],
-            "regex": "s del mapa t",
-            "weight": 14,
-            "count": 6
-        },
-        "-1860924419:-627997524:364983454:826253450:1223136494": {
-            "ids": [
-                -1860924419,
-                -627997524,
-                364983454,
-                826253450,
-                1223136494
-            ],
-            "regex": "s del mapa ti",
-            "weight": 15,
-            "count": 5
-        },
-        "-1860924419:-1358513397:-627997524": {
-            "ids": [
-                -1860924419,
-                -1358513397,
-                -627997524
-            ],
-            "regex": "uos aumentado",
-            "weight": 15,
-            "count": 3
-        },
-        "-1835089548:-1430150057": {
-            "ids": [
-                -1835089548,
-                -1430150057
-            ],
-            "regex": "vidad a",
-            "weight": 9,
-            "count": 2
-        },
-        "-1677568614:-1502545188": {
-            "ids": [
-                -1677568614,
-                -1502545188
-            ],
-            "regex": "s de mapas",
-            "weight": 12,
-            "count": 2
-        },
-        "-1650903248:-911390016:77067883:1221297252": {
-            "ids": [
-                -1650903248,
-                -911390016,
-                77067883,
-                1221297252
-            ],
-            "regex": "del mapa a",
-            "weight": 12,
             "count": 4
         },
-        "-1650903248:-911390016:1221297252": {
+        "-2026817376:197397637": {
             "ids": [
-                -1650903248,
-                -911390016,
-                1221297252
+                -2026817376,
+                197397637
             ],
-            "regex": "del mapa au",
-            "weight": 13,
-            "count": 3
-        },
-        "-1631501687:-1064255397:2143357700": {
-            "ids": [
-                -1631501687,
-                -1064255397,
-                2143357700
-            ],
-            "regex": "cos au",
-            "weight": 8,
-            "count": 3
-        },
-        "-1631501687:-1064255397": {
-            "ids": [
-                -1631501687,
-                -1064255397
-            ],
-            "regex": "gicos a",
-            "weight": 9,
+            "regex": "aal e",
+            "weight": 7,
             "count": 2
         },
-        "-1631501687:1979378879:2143357700": {
+        "-2026817376:-1635710298:-1349688955:-828476369:1090906942": {
             "ids": [
-                -1631501687,
-                1979378879,
-                2143357700
+                -2026817376,
+                -1635710298,
+                -1349688955,
+                -828476369,
+                1090906942
             ],
-            "regex": "ne la c",
+            "regex": "en \\d+",
             "weight": 9,
-            "count": 3
-        },
-        "-1626789193:-58994397:113750088:160781761:1228783326:1953106999": {
-            "ids": [
-                -1626789193,
-                -58994397,
-                113750088,
-                160781761,
-                1228783326,
-                1953106999
-            ],
-            "regex": "ta au",
-            "weight": 7,
-            "count": 6
-        },
-        "-1626789193:-63495935:-58994397:160781761:315698754:693315336:2024741756": {
-            "ids": [
-                -1626789193,
-                -63495935,
-                -58994397,
-                160781761,
-                315698754,
-                693315336,
-                2024741756
-            ],
-            "regex": "uia q",
-            "weight": 7,
-            "count": 7
-        },
-        "-1626789193:-63495935:-58994397:160781761:693315336:2024741756": {
-            "ids": [
-                -1626789193,
-                -63495935,
-                -58994397,
-                160781761,
-                693315336,
-                2024741756
-            ],
-            "regex": "uia q",
-            "weight": 7,
-            "count": 6
-        },
-        "-1626789193:-58994397:160781761:1228783326:1953106999": {
-            "ids": [
-                -1626789193,
-                -58994397,
-                160781761,
-                1228783326,
-                1953106999
-            ],
-            "regex": "ta au",
-            "weight": 7,
             "count": 5
         },
-        "-1626789193:-58994397:113750088:160781761": {
+        "-2005637209:-1933464139:-1553918089:444792259:1060331787:1107604097": {
             "ids": [
-                -1626789193,
-                -58994397,
-                113750088,
-                160781761
+                -2005637209,
+                -1933464139,
+                -1553918089,
+                444792259,
+                1060331787,
+                1107604097
             ],
-            "regex": "aen en",
-            "weight": 8,
-            "count": 4
-        },
-        "-1626789193:-58994397:160781761": {
-            "ids": [
-                -1626789193,
-                -58994397,
-                160781761
-            ],
-            "regex": "aen en",
-            "weight": 8,
-            "count": 3
-        },
-        "-1626789193:-63495935:-58994397:160781761:315698754:2024741756": {
-            "ids": [
-                -1626789193,
-                -63495935,
-                -58994397,
-                160781761,
-                315698754,
-                2024741756
-            ],
-            "regex": "ia que e",
-            "weight": 10,
+            "regex": "fav",
+            "weight": 3,
             "count": 6
         },
-        "-1626789193:-63495935:-58994397:160781761:2024741756": {
+        "-2005637209:-1635710298:-314560709:-250359622:611955315": {
             "ids": [
-                -1626789193,
-                -63495935,
-                -58994397,
-                160781761,
-                2024741756
+                -2005637209,
+                -1635710298,
+                -314560709,
+                -250359622,
+                611955315
             ],
-            "regex": "ia que e",
-            "weight": 10,
+            "regex": "r a",
+            "weight": 5,
             "count": 5
         },
-        "-1538136551:-909643545:-831712991:-286316656:-59467838:475629878": {
+        "-2005637209:-314560709": {
             "ids": [
-                -1538136551,
-                -909643545,
-                -831712991,
-                -286316656,
-                -59467838,
-                475629878
+                -2005637209,
+                -314560709
             ],
-            "regex": "a tiene la p",
-            "weight": 14,
-            "count": 6
-        },
-        "-1536625579:-1390687846": {
-            "ids": [
-                -1536625579,
-                -1390687846
-            ],
-            "regex": "r fav",
-            "weight": 7,
+            "regex": "er a",
+            "weight": 6,
             "count": 2
         },
-        "-1536625579:-1450658733:-1390687846:1000515734:1447225496": {
+        "-2005637209:-1519456051:-314560709:108640922:574430759:611955315": {
             "ids": [
-                -1536625579,
-                -1450658733,
-                -1390687846,
-                1000515734,
-                1447225496
+                -2005637209,
+                -1519456051,
+                -314560709,
+                108640922,
+                574430759,
+                611955315
             ],
-            "regex": "en los al",
-            "weight": 11,
-            "count": 5
-        },
-        "-1536625579:-1450658733:-1390687846:1000515734:1221297252:1447225496": {
-            "ids": [
-                -1536625579,
-                -1450658733,
-                -1390687846,
-                1000515734,
-                1221297252,
-                1447225496
-            ],
-            "regex": "s en los a",
-            "weight": 12,
-            "count": 6
-        },
-        "-1502545188:693315336": {
-            "ids": [
-                -1502545188,
-                693315336
-            ],
-            "regex": "pas a",
-            "weight": 7,
-            "count": 2
-        },
-        "-1502545188:-1372386454": {
-            "ids": [
-                -1502545188,
-                -1372386454
-            ],
-            "regex": "jados p",
-            "weight": 9,
-            "count": 2
-        },
-        "-1394217958:1223136494": {
-            "ids": [
-                -1394217958,
-                1223136494
-            ],
-            "regex": "sales a",
-            "weight": 9,
-            "count": 2
-        },
-        "-1394217958:676929763:826253450": {
-            "ids": [
-                -1394217958,
-                676929763,
-                826253450
-            ],
-            "regex": "es del m",
-            "weight": 10,
-            "count": 3
-        },
-        "-1390687846:1003579866": {
-            "ids": [
-                -1390687846,
-                1003579866
-            ],
-            "regex": "l en el m",
-            "weight": 11,
-            "count": 2
-        },
-        "-1358513397:-302731572:649620236": {
-            "ids": [
-                -1358513397,
-                -302731572,
-                649620236
-            ],
-            "regex": "aal d",
-            "weight": 7,
-            "count": 3
-        },
-        "-1358513397:-302731572:649620236:1003579866:1254542572:1823005182": {
-            "ids": [
-                -1358513397,
-                -302731572,
-                649620236,
-                1003579866,
-                1254542572,
-                1823005182
-            ],
-            "regex": "e los fo",
-            "weight": 10,
-            "count": 6
-        },
-        "-1358513397:-302731572:649620236:1003579866:1823005182": {
-            "ids": [
-                -1358513397,
-                -302731572,
-                649620236,
-                1003579866,
-                1823005182
-            ],
-            "regex": "de los fo",
-            "weight": 11,
-            "count": 5
-        },
-        "-1358513397:-302731572:1003579866": {
-            "ids": [
-                -1358513397,
-                -302731572,
-                1003579866
-            ],
-            "regex": "r de los f",
-            "weight": 12,
-            "count": 3
-        },
-        "-1151094714:1823005182:1979378879": {
-            "ids": [
-                -1151094714,
-                1823005182,
-                1979378879
-            ],
-            "regex": "ros au",
-            "weight": 8,
-            "count": 3
-        },
-        "-1151094714:-1064255397:313983006": {
-            "ids": [
-                -1151094714,
-                -1064255397,
-                313983006
-            ],
-            "regex": "d de se",
-            "weight": 9,
-            "count": 3
-        },
-        "-1151094714:-1064255397:313983006:826253450:1223136494": {
-            "ids": [
-                -1151094714,
-                -1064255397,
-                313983006,
-                826253450,
-                1223136494
-            ],
-            "regex": "nen la pr",
-            "weight": 11,
-            "count": 5
-        },
-        "-1151094714:-1064255397:313983006:1447225496": {
-            "ids": [
-                -1151094714,
-                -1064255397,
-                313983006,
-                1447225496
-            ],
-            "regex": "l del mapa ti",
-            "weight": 15,
-            "count": 4
-        },
-        "-911390016:-627997524:-63495935:2024741756": {
-            "ids": [
-                -911390016,
-                -627997524,
-                -63495935,
-                2024741756
-            ],
-            "regex": "uos del m",
-            "weight": 11,
-            "count": 4
-        },
-        "-909643545:1987345096": {
-            "ids": [
-                -909643545,
-                1987345096
-            ],
-            "regex": "tes au",
-            "weight": 8,
-            "count": 2
-        },
-        "-909643545:959755009": {
-            "ids": [
-                -909643545,
-                959755009
-            ],
-            "regex": "ntener c",
-            "weight": 10,
-            "count": 2
-        },
-        "-831712991:-286316656:475629878": {
-            "ids": [
-                -831712991,
-                -286316656,
-                475629878
-            ],
-            "regex": "ontener e",
-            "weight": 11,
-            "count": 3
-        },
-        "-657846159:1188246160": {
-            "ids": [
-                -657846159,
-                1188246160
-            ],
-            "regex": "n \\d+ m",
-            "weight": 10,
-            "count": 2
-        },
-        "-627997524:77067883:200324717:794533330:1474821901:1987345096:2081742940": {
-            "ids": [
-                -627997524,
-                77067883,
-                200324717,
-                794533330,
-                1474821901,
-                1987345096,
-                2081742940
-            ],
-            "regex": "irio d",
-            "weight": 8,
-            "count": 7
-        },
-        "-627997524:77067883:200324717:794533330:1474821901:1987345096": {
-            "ids": [
-                -627997524,
-                77067883,
-                200324717,
-                794533330,
-                1474821901,
-                1987345096
-            ],
-            "regex": "irio de",
-            "weight": 9,
-            "count": 6
-        },
-        "-627997524:794533330:1474821901:1987345096:2081742940": {
-            "ids": [
-                -627997524,
-                794533330,
-                1474821901,
-                1987345096,
-                2081742940
-            ],
-            "regex": "e delirio d",
-            "weight": 13,
-            "count": 5
-        },
-        "-627997524:794533330:1474821901:1987345096": {
-            "ids": [
-                -627997524,
-                794533330,
-                1474821901,
-                1987345096
-            ],
-            "regex": "e delirio de",
-            "weight": 14,
-            "count": 4
-        },
-        "-627997524:364983454:1223136494": {
-            "ids": [
-                -627997524,
-                364983454,
-                1223136494
-            ],
-            "regex": "os del mapa t",
-            "weight": 15,
-            "count": 3
-        },
-        "-573744593:200324717:676929763:911344929:1188246160:1987345096": {
-            "ids": [
-                -573744593,
-                200324717,
-                676929763,
-                911344929,
-                1188246160,
-                1987345096
-            ],
-            "regex": "pa g",
+            "regex": "n la",
             "weight": 6,
             "count": 6
         },
-        "-573744593:364983454:1188246160:1221297252:1223136494": {
+        "-2005637209:108640922:574430759": {
             "ids": [
-                -573744593,
-                364983454,
-                1188246160,
-                1221297252,
-                1223136494
+                -2005637209,
+                108640922,
+                574430759
             ],
-            "regex": "mos del",
-            "weight": 9,
-            "count": 5
-        },
-        "-573744593:676929763:1188246160": {
-            "ids": [
-                -573744593,
-                676929763,
-                1188246160
-            ],
-            "regex": "a generan",
-            "weight": 11,
+            "regex": "e se",
+            "weight": 6,
             "count": 3
         },
-        "-573744593:200324717:676929763:1188246160:1987345096": {
+        "-2005637209:-1564770511:-1014931673:874837226": {
             "ids": [
-                -573744593,
-                200324717,
-                676929763,
-                1188246160,
-                1987345096
+                -2005637209,
+                -1564770511,
+                -1014931673,
+                874837226
             ],
-            "regex": "pa genera",
-            "weight": 11,
+            "regex": "ios a",
+            "weight": 7,
+            "count": 4
+        },
+        "-2005637209:-314560709:108640922:574430759:611955315": {
+            "ids": [
+                -2005637209,
+                -314560709,
+                108640922,
+                574430759,
+                611955315
+            ],
+            "regex": "nen l",
+            "weight": 7,
             "count": 5
         },
-        "-573744593:1188246160": {
+        "-2005637209:-1933464139:-1553918089:108640922:444792259:574430759:655807109": {
             "ids": [
-                -573744593,
-                1188246160
+                -2005637209,
+                -1933464139,
+                -1553918089,
+                108640922,
+                444792259,
+                574430759,
+                655807109
             ],
-            "regex": "os del mapa g",
-            "weight": 15,
-            "count": 2
+            "regex": "ual d",
+            "weight": 7,
+            "count": 7
         },
-        "-286316656:-58994397:2003797409": {
+        "-2005637209:-1553918089:444792259:1107604097": {
             "ids": [
-                -286316656,
-                -58994397,
-                2003797409
+                -2005637209,
+                -1553918089,
+                444792259,
+                1107604097
             ],
-            "regex": "iano",
-            "weight": 4,
-            "count": 3
+            "regex": "s fav",
+            "weight": 7,
+            "count": 4
         },
-        "-286316656:475629878": {
+        "-2005637209:-1014931673": {
             "ids": [
-                -286316656,
-                475629878
-            ],
-            "regex": "ntener es",
-            "weight": 11,
-            "count": 2
-        },
-        "-63495935:2024741756": {
-            "ids": [
-                -63495935,
-                2024741756
-            ],
-            "regex": "pa red",
-            "weight": 8,
-            "count": 2
-        },
-        "-59467838:313983006": {
-            "ids": [
-                -59467838,
-                313983006
+                -2005637209,
+                -1014931673
             ],
             "regex": "ios au",
             "weight": 8,
             "count": 2
         },
-        "-58994397:2003797409": {
+        "-2005637209:-1442604101:108640922:574430759": {
             "ids": [
-                -58994397,
-                2003797409
+                -2005637209,
+                -1442604101,
+                108640922,
+                574430759
             ],
-            "regex": "iano a",
+            "regex": "d de s",
+            "weight": 8,
+            "count": 4
+        },
+        "-2005637209:2009544500": {
+            "ids": [
+                -2005637209,
+                2009544500
+            ],
+            "regex": "ores d",
             "weight": 8,
             "count": 2
         },
-        "-58994397:2034606215": {
+        "-2005637209:-1553918089:108640922:444792259:574430759": {
             "ids": [
-                -58994397,
-                2034606215
+                -2005637209,
+                -1553918089,
+                108640922,
+                444792259,
+                574430759
             ],
-            "regex": "ntiene \\d+",
-            "weight": 13,
+            "regex": "l del mapa t",
+            "weight": 14,
+            "count": 5
+        },
+        "-2005637209:-1553918089:108640922:574430759": {
+            "ids": [
+                -2005637209,
+                -1553918089,
+                108640922,
+                574430759
+            ],
+            "regex": "l del mapa ti",
+            "weight": 15,
+            "count": 4
+        },
+        "-1933464139:-1026217690:62629171:182417783:1060331787": {
+            "ids": [
+                -1933464139,
+                -1026217690,
+                62629171,
+                182417783,
+                1060331787
+            ],
+            "regex": "cue",
+            "weight": 3,
+            "count": 5
+        },
+        "-1933464139:-1553918089:655807109:1060331787": {
+            "ids": [
+                -1933464139,
+                -1553918089,
+                655807109,
+                1060331787
+            ],
+            "regex": "tri",
+            "weight": 3,
+            "count": 4
+        },
+        "-1933464139:1060331787": {
+            "ids": [
+                -1933464139,
+                1060331787
+            ],
+            "regex": "ues",
+            "weight": 3,
             "count": 2
         },
-        "77067883:200324717:794533330:1474821901:1987345096": {
+        "-1933464139:108640922:1060331787": {
             "ids": [
-                77067883,
-                200324717,
-                794533330,
-                1474821901,
-                1987345096
+                -1933464139,
+                108640922,
+                1060331787
             ],
-            "regex": "irio del",
+            "regex": "ido",
+            "weight": 3,
+            "count": 3
+        },
+        "-1933464139:197397637:690095601:1060331787:1773870625": {
+            "ids": [
+                -1933464139,
+                197397637,
+                690095601,
+                1060331787,
+                1773870625
+            ],
+            "regex": "red",
+            "weight": 3,
+            "count": 5
+        },
+        "-1933464139:611955315:1060331787": {
+            "ids": [
+                -1933464139,
+                611955315,
+                1060331787
+            ],
+            "regex": "duci",
+            "weight": 4,
+            "count": 3
+        },
+        "-1933464139:1060331787:1819020306": {
+            "ids": [
+                -1933464139,
+                1060331787,
+                1819020306
+            ],
+            "regex": "o r",
+            "weight": 5,
+            "count": 3
+        },
+        "-1933464139:-828476369:1060331787:1090906942": {
+            "ids": [
+                -1933464139,
+                -828476369,
+                1060331787,
+                1090906942
+            ],
+            "regex": "es e",
+            "weight": 6,
+            "count": 4
+        },
+        "-1933464139:-1553918089:-481412666:62629171:655807109:1060331787:1107604097": {
+            "ids": [
+                -1933464139,
+                -1553918089,
+                -481412666,
+                62629171,
+                655807109,
+                1060331787,
+                1107604097
+            ],
+            "regex": "en lo",
+            "weight": 7,
+            "count": 7
+        },
+        "-1933464139:-1553918089:-481412666:655807109:1060331787:1107604097": {
+            "ids": [
+                -1933464139,
+                -1553918089,
+                -481412666,
+                655807109,
+                1060331787,
+                1107604097
+            ],
+            "regex": "n los a",
+            "weight": 9,
+            "count": 6
+        },
+        "-1933464139:-1553918089:655807109:1060331787:1107604097": {
+            "ids": [
+                -1933464139,
+                -1553918089,
+                655807109,
+                1060331787,
+                1107604097
+            ],
+            "regex": "n los al",
             "weight": 10,
             "count": 5
         },
-        "77067883:200324717": {
+        "-1788692627:-1026217690:62629171:182417783": {
             "ids": [
-                77067883,
-                200324717
+                -1788692627,
+                -1026217690,
+                62629171,
+                182417783
             ],
-            "regex": "l delirio d",
-            "weight": 13,
+            "regex": "uen",
+            "weight": 3,
+            "count": 4
+        },
+        "-1788692627:-611033189:-481412666:182417783:197397637:924177740:1736733570": {
+            "ids": [
+                -1788692627,
+                -611033189,
+                -481412666,
+                182417783,
+                197397637,
+                924177740,
+                1736733570
+            ],
+            "regex": "e q",
+            "weight": 5,
+            "count": 7
+        },
+        "-1788692627:924177740": {
+            "ids": [
+                -1788692627,
+                924177740
+            ],
+            "regex": "% e",
+            "weight": 5,
             "count": 2
         },
-        "160781761:1170304809": {
+        "-1788692627:-1377869826:-1325149272:-859828309:-611033189": {
             "ids": [
-                160781761,
-                1170304809
+                -1788692627,
+                -1377869826,
+                -1325149272,
+                -859828309,
+                -611033189
             ],
-            "regex": "ne una e",
-            "weight": 10,
-            "count": 2
+            "regex": "n mo",
+            "weight": 6,
+            "count": 5
         },
-        "200324717:1987345096": {
+        "-1788692627:-611033189:182417783:924177740": {
             "ids": [
-                200324717,
-                1987345096
+                -1788692627,
+                -611033189,
+                182417783,
+                924177740
             ],
-            "regex": "nera una",
-            "weight": 10,
-            "count": 2
+            "regex": "ue l",
+            "weight": 6,
+            "count": 4
         },
-        "497320254:693315336": {
+        "-1788692627:197397637:690095601:924177740:989647046:1120183281:1773870625": {
             "ids": [
-                497320254,
-                693315336
+                -1788692627,
+                197397637,
+                690095601,
+                924177740,
+                989647046,
+                1120183281,
+                1773870625
             ],
-            "regex": "ojan l",
+            "regex": "s fo",
+            "weight": 6,
+            "count": 7
+        },
+        "-1788692627:-611033189:-481412666:197397637:924177740": {
+            "ids": [
+                -1788692627,
+                -611033189,
+                -481412666,
+                197397637,
+                924177740
+            ],
+            "regex": "de q",
+            "weight": 6,
+            "count": 5
+        },
+        "-1788692627:-611033189:135469244:474552856:611955315": {
+            "ids": [
+                -1788692627,
+                -611033189,
+                135469244,
+                474552856,
+                611955315
+            ],
+            "regex": "es au",
+            "weight": 7,
+            "count": 5
+        },
+        "-1788692627:-1325149272:-859828309": {
+            "ids": [
+                -1788692627,
+                -1325149272,
+                -859828309
+            ],
+            "regex": "n mon",
+            "weight": 7,
+            "count": 3
+        },
+        "-1788692627:-611033189:-540903682:611955315": {
+            "ids": [
+                -1788692627,
+                -611033189,
+                -540903682,
+                611955315
+            ],
+            "regex": "les a",
+            "weight": 7,
+            "count": 4
+        },
+        "-1788692627:197397637:690095601:924177740:989647046:1773870625": {
+            "ids": [
+                -1788692627,
+                197397637,
+                690095601,
+                924177740,
+                989647046,
+                1773870625
+            ],
+            "regex": "s foc",
+            "weight": 7,
+            "count": 6
+        },
+        "-1788692627:-611033189:611955315": {
+            "ids": [
+                -1788692627,
+                -611033189,
+                611955315
+            ],
+            "regex": "les au",
+            "weight": 8,
+            "count": 3
+        },
+        "-1788692627:690095601": {
+            "ids": [
+                -1788692627,
+                690095601
+            ],
+            "regex": "uos ad",
             "weight": 8,
             "count": 2
         },
-        "497320254:1228783326": {
+        "-1788692627:-611033189:924177740": {
             "ids": [
-                497320254,
-                1228783326
+                -1788692627,
+                -611033189,
+                924177740
             ],
-            "regex": "tidad de re",
-            "weight": 13,
+            "regex": "de que l",
+            "weight": 10,
+            "count": 3
+        },
+        "-1786171939:-1028076924:-377868554:-42287288": {
+            "ids": [
+                -1786171939,
+                -1028076924,
+                -377868554,
+                -42287288
+            ],
+            "regex": "fec",
+            "weight": 3,
+            "count": 4
+        },
+        "-1786171939:1107604097": {
+            "ids": [
+                -1786171939,
+                1107604097
+            ],
+            "regex": "rea",
+            "weight": 3,
             "count": 2
         },
-        "676929763:826253450": {
+        "-1786171939:655807109": {
             "ids": [
-                676929763,
-                826253450
+                -1786171939,
+                655807109
             ],
-            "regex": "bles de",
+            "regex": "a o",
+            "weight": 5,
+            "count": 2
+        },
+        "-1786171939:-1127158390:1947862885": {
+            "ids": [
+                -1786171939,
+                -1127158390,
+                1947862885
+            ],
+            "regex": "e ar",
+            "weight": 6,
+            "count": 3
+        },
+        "-1784287093:-1033399892:62629171:504241682:1773870625": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                62629171,
+                504241682,
+                1773870625
+            ],
+            "regex": "tam",
+            "weight": 3,
+            "count": 5
+        },
+        "-1784287093:-1033399892:197397637:504241682:690095601:1773870625": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                197397637,
+                504241682,
+                690095601,
+                1773870625
+            ],
+            "regex": "gru",
+            "weight": 3,
+            "count": 6
+        },
+        "-1784287093:-1033399892:197397637:504241682:1773870625": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                197397637,
+                504241682,
+                1773870625
+            ],
+            "regex": "upos",
+            "weight": 4,
+            "count": 5
+        },
+        "-1784287093:-724125136:-314560709": {
+            "ids": [
+                -1784287093,
+                -724125136,
+                -314560709
+            ],
+            "regex": "uras",
+            "weight": 4,
+            "count": 3
+        },
+        "-1784287093:-1127158390:-1033399892:-1026217690:504241682:1773870625": {
+            "ids": [
+                -1784287093,
+                -1127158390,
+                -1033399892,
+                -1026217690,
+                504241682,
+                1773870625
+            ],
+            "regex": "s g",
+            "weight": 5,
+            "count": 6
+        },
+        "-1784287093:-1033399892:504241682:1773870625": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                504241682,
+                1773870625
+            ],
+            "regex": "os g",
+            "weight": 6,
+            "count": 4
+        },
+        "-1784287093:504241682": {
+            "ids": [
+                -1784287093,
+                504241682
+            ],
+            "regex": "l ta",
+            "weight": 6,
+            "count": 2
+        },
+        "-1784287093:-1594182537:62629171:1056236838:1090906942:1849197898": {
+            "ids": [
+                -1784287093,
+                -1594182537,
+                62629171,
+                1056236838,
+                1090906942,
+                1849197898
+            ],
+            "regex": "as d",
+            "weight": 6,
+            "count": 6
+        },
+        "-1784287093:504241682:1120183281": {
+            "ids": [
+                -1784287093,
+                504241682,
+                1120183281
+            ],
+            "regex": "nen e",
+            "weight": 7,
+            "count": 3
+        },
+        "-1784287093:-1033399892:197397637:504241682:1773870625:2009544500": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                197397637,
+                504241682,
+                1773870625,
+                2009544500
+            ],
+            "regex": "s de mo",
             "weight": 9,
+            "count": 6
+        },
+        "-1784287093:504241682:1773870625": {
+            "ids": [
+                -1784287093,
+                504241682,
+                1773870625
+            ],
+            "regex": "s aumentado",
+            "weight": 13,
+            "count": 3
+        },
+        "-1784287093:-611033189:-314560709:504241682:611955315:1120183281": {
+            "ids": [
+                -1784287093,
+                -611033189,
+                -314560709,
+                504241682,
+                611955315,
+                1120183281
+            ],
+            "regex": "s del mapa t",
+            "weight": 14,
+            "count": 6
+        },
+        "-1784287093:-314560709:504241682:611955315:1120183281": {
+            "ids": [
+                -1784287093,
+                -314560709,
+                504241682,
+                611955315,
+                1120183281
+            ],
+            "regex": "s del mapa ti",
+            "weight": 15,
+            "count": 5
+        },
+        "-1784287093:-1519456051:197397637:504241682:690095601:1773870625": {
+            "ids": [
+                -1784287093,
+                -1519456051,
+                197397637,
+                504241682,
+                690095601,
+                1773870625
+            ],
+            "regex": "e monstruos a",
+            "weight": 15,
+            "count": 6
+        },
+        "-1635710298:62629171:182417783": {
+            "ids": [
+                -1635710298,
+                62629171,
+                182417783
+            ],
+            "regex": "s u",
+            "weight": 5,
+            "count": 3
+        },
+        "-1635710298:-859828309:-250359622:182417783:1947862885:2009544500": {
+            "ids": [
+                -1635710298,
+                -859828309,
+                -250359622,
+                182417783,
+                1947862885,
+                2009544500
+            ],
+            "regex": "nicos",
+            "weight": 5,
+            "count": 6
+        },
+        "-1635710298:-1028076924:-250359622:-42287288:1885842260": {
+            "ids": [
+                -1635710298,
+                -1028076924,
+                -250359622,
+                -42287288,
+                1885842260
+            ],
+            "regex": "s ti",
+            "weight": 6,
+            "count": 5
+        },
+        "-1635710298:62629171": {
+            "ids": [
+                -1635710298,
+                62629171
+            ],
+            "regex": "os u",
+            "weight": 6,
             "count": 2
         },
-        "794533330:1474821901": {
+        "-1635710298:-1028076924": {
             "ids": [
-                794533330,
-                1474821901
+                -1635710298,
+                -1028076924
+            ],
+            "regex": "os ti",
+            "weight": 7,
+            "count": 2
+        },
+        "-1635710298:182417783": {
+            "ids": [
+                -1635710298,
+                182417783
+            ],
+            "regex": "s uni",
+            "weight": 7,
+            "count": 2
+        },
+        "-1635710298:-1564770511:-724125136:-88829109": {
+            "ids": [
+                -1635710298,
+                -1564770511,
+                -724125136,
+                -88829109
+            ],
+            "regex": "\\d+ m",
+            "weight": 8,
+            "count": 4
+        },
+        "-1635710298:-1564770511": {
+            "ids": [
+                -1635710298,
+                -1564770511
+            ],
+            "regex": "\\d+ mod",
+            "weight": 10,
+            "count": 2
+        },
+        "-1635710298:-724125136:-88829109": {
+            "ids": [
+                -1635710298,
+                -724125136,
+                -88829109
+            ],
+            "regex": "n \\d+ m",
+            "weight": 10,
+            "count": 3
+        },
+        "-1617113142:-782248059:-773162240:-354629506:164419697:1670789869": {
+            "ids": [
+                -1617113142,
+                -782248059,
+                -773162240,
+                -354629506,
+                164419697,
+                1670789869
+            ],
+            "regex": "ne u",
+            "weight": 6,
+            "count": 6
+        },
+        "-1617113142:-1377869826:-354629506:857219754:1819020306": {
+            "ids": [
+                -1617113142,
+                -1377869826,
+                -354629506,
+                857219754,
+                1819020306
+            ],
+            "regex": "o ad",
+            "weight": 6,
+            "count": 5
+        },
+        "-1617113142:-782248059:-354629506:164419697:1670789869": {
+            "ids": [
+                -1617113142,
+                -782248059,
+                -354629506,
+                164419697,
+                1670789869
+            ],
+            "regex": "ntiene u",
+            "weight": 10,
+            "count": 5
+        },
+        "-1594182537:-956801645:-540903682:135469244:1056236838": {
+            "ids": [
+                -1594182537,
+                -956801645,
+                -540903682,
+                135469244,
+                1056236838
+            ],
+            "regex": "eb",
+            "weight": 2,
+            "count": 5
+        },
+        "-1594182537:-614112895:182417783:1849197898": {
+            "ids": [
+                -1594182537,
+                -614112895,
+                182417783,
+                1849197898
+            ],
+            "regex": "mas",
+            "weight": 3,
+            "count": 4
+        },
+        "-1594182537:-540903682": {
+            "ids": [
+                -1594182537,
+                -540903682
             ],
             "regex": "sip",
             "weight": 3,
             "count": 2
         },
-        "794533330:1474821901:1987345096": {
+        "-1594182537:-859828309": {
             "ids": [
-                794533330,
-                1474821901,
-                1987345096
+                -1594182537,
+                -859828309
+            ],
+            "regex": "a s",
+            "weight": 5,
+            "count": 2
+        },
+        "-1594182537:182417783:1849197898": {
+            "ids": [
+                -1594182537,
+                182417783,
+                1849197898
+            ],
+            "regex": "% m",
+            "weight": 5,
+            "count": 3
+        },
+        "-1594182537:-956801645:-540903682:135469244:504241682:739252212:1056236838": {
+            "ids": [
+                -1594182537,
+                -956801645,
+                -540903682,
+                135469244,
+                504241682,
+                739252212,
+                1056236838
+            ],
+            "regex": "rio d",
+            "weight": 7,
+            "count": 7
+        },
+        "-1594182537:1849197898": {
+            "ids": [
+                -1594182537,
+                1849197898
+            ],
+            "regex": "mas d",
+            "weight": 7,
+            "count": 2
+        },
+        "-1594182537:-956801645:-540903682:135469244:504241682:1056236838": {
+            "ids": [
+                -1594182537,
+                -956801645,
+                -540903682,
+                135469244,
+                504241682,
+                1056236838
+            ],
+            "regex": "rio de",
+            "weight": 8,
+            "count": 6
+        },
+        "-1594182537:-540903682:135469244": {
+            "ids": [
+                -1594182537,
+                -540903682,
+                135469244
             ],
             "regex": "bla de d",
             "weight": 10,
             "count": 3
         },
-        "1000515734:1221297252": {
+        "-1594182537:-540903682:135469244:504241682:739252212": {
             "ids": [
-                1000515734,
-                1221297252
+                -1594182537,
+                -540903682,
+                135469244,
+                504241682,
+                739252212
             ],
-            "regex": "ados en lo",
+            "regex": "e delirio d",
+            "weight": 13,
+            "count": 5
+        },
+        "-1594182537:-540903682:135469244:504241682": {
+            "ids": [
+                -1594182537,
+                -540903682,
+                135469244,
+                504241682
+            ],
+            "regex": "e delirio de",
+            "weight": 14,
+            "count": 4
+        },
+        "-1564770511:-1553918089:444792259:1060331787": {
+            "ids": [
+                -1564770511,
+                -1553918089,
+                444792259,
+                1060331787
+            ],
+            "regex": "lea",
+            "weight": 3,
+            "count": 4
+        },
+        "-1564770511:874837226": {
+            "ids": [
+                -1564770511,
+                874837226
+            ],
+            "regex": "ios ad",
+            "weight": 8,
+            "count": 2
+        },
+        "-1564770511:25067405:857219754:874837226:881965784:1079448376:2125725641": {
+            "ids": [
+                -1564770511,
+                25067405,
+                857219754,
+                874837226,
+                881965784,
+                1079448376,
+                2125725641
+            ],
+            "regex": "ne \\d+",
+            "weight": 9,
+            "count": 7
+        },
+        "-1553918089:444792259:1060331787": {
+            "ids": [
+                -1553918089,
+                444792259,
+                1060331787
+            ],
+            "regex": "riz",
+            "weight": 3,
+            "count": 3
+        },
+        "-1553918089:-1360675046:574430759:1107604097": {
+            "ids": [
+                -1553918089,
+                -1360675046,
+                574430759,
+                1107604097
+            ],
+            "regex": "s q",
+            "weight": 5,
+            "count": 4
+        },
+        "-1553918089:-1127158390:1947862885": {
+            "ids": [
+                -1553918089,
+                -1127158390,
+                1947862885
+            ],
+            "regex": "ue a",
+            "weight": 6,
+            "count": 3
+        },
+        "-1553918089:1107604097": {
+            "ids": [
+                -1553918089,
+                1107604097
+            ],
+            "regex": "es q",
+            "weight": 6,
+            "count": 2
+        },
+        "-1553918089:-1026217690:-828476369:62629171:1107604097": {
+            "ids": [
+                -1553918089,
+                -1026217690,
+                -828476369,
+                62629171,
+                1107604097
+            ],
+            "regex": "as en",
+            "weight": 7,
+            "count": 5
+        },
+        "-1553918089:-614112895": {
+            "ids": [
+                -1553918089,
+                -614112895
+            ],
+            "regex": "nen u",
+            "weight": 7,
+            "count": 2
+        },
+        "-1553918089:62629171:1107604097": {
+            "ids": [
+                -1553918089,
+                62629171,
+                1107604097
+            ],
+            "regex": "as en l",
+            "weight": 9,
+            "count": 3
+        },
+        "-1553918089:-773162240:-614112895": {
+            "ids": [
+                -1553918089,
+                -773162240,
+                -614112895
+            ],
+            "regex": "n \\d+% d",
+            "weight": 11,
+            "count": 3
+        },
+        "-1553918089:-614112895:1107604097:1849197898": {
+            "ids": [
+                -1553918089,
+                -614112895,
+                1107604097,
+                1849197898
+            ],
+            "regex": "n un \\d+",
+            "weight": 11,
+            "count": 4
+        },
+        "-1553918089:-614112895:1107604097": {
+            "ids": [
+                -1553918089,
+                -614112895,
+                1107604097
+            ],
+            "regex": "en un \\d+",
+            "weight": 12,
+            "count": 3
+        },
+        "-1519456051:-859828309:-724125136:-88829109:135469244:1056236838": {
+            "ids": [
+                -1519456051,
+                -859828309,
+                -724125136,
+                -88829109,
+                135469244,
+                1056236838
+            ],
+            "regex": "era",
+            "weight": 3,
+            "count": 6
+        },
+        "-1519456051:-859828309:-724125136:-88829109": {
+            "ids": [
+                -1519456051,
+                -859828309,
+                -724125136,
+                -88829109
+            ],
+            "regex": "eran",
+            "weight": 4,
+            "count": 4
+        },
+        "-1519456051:-724125136:-88829109:135469244:1056236838": {
+            "ids": [
+                -1519456051,
+                -724125136,
+                -88829109,
+                135469244,
+                1056236838
+            ],
+            "regex": "nera",
+            "weight": 4,
+            "count": 5
+        },
+        "-1519456051:-724125136:-88829109:135469244:182417783:1056236838": {
+            "ids": [
+                -1519456051,
+                -724125136,
+                -88829109,
+                135469244,
+                182417783,
+                1056236838
+            ],
+            "regex": "gene",
+            "weight": 4,
+            "count": 6
+        },
+        "-1519456051:-724125136:-88829109": {
+            "ids": [
+                -1519456051,
+                -724125136,
+                -88829109
+            ],
+            "regex": "neran",
+            "weight": 5,
+            "count": 3
+        },
+        "-1519456051:-1127158390:1947862885": {
+            "ids": [
+                -1519456051,
+                -1127158390,
+                1947862885
+            ],
+            "regex": "an l",
+            "weight": 6,
+            "count": 3
+        },
+        "-1519456051:-611033189:-481412666:-88829109:-42287288:611955315:1120183281": {
+            "ids": [
+                -1519456051,
+                -611033189,
+                -481412666,
+                -88829109,
+                -42287288,
+                611955315,
+                1120183281
+            ],
+            "regex": "s ab",
+            "weight": 6,
+            "count": 7
+        },
+        "-1519456051:-481412666:-88829109:611955315:1120183281": {
+            "ids": [
+                -1519456051,
+                -481412666,
+                -88829109,
+                611955315,
+                1120183281
+            ],
+            "regex": "mos d",
+            "weight": 7,
+            "count": 5
+        },
+        "-1519456051:-1401280853:1874847282:2009544500": {
+            "ids": [
+                -1519456051,
+                -1401280853,
+                1874847282,
+                2009544500
+            ],
+            "regex": "d de m",
+            "weight": 8,
+            "count": 4
+        },
+        "-1519456051:-1442604101:-1401280853:1736733570:1874847282:2009544500": {
+            "ids": [
+                -1519456051,
+                -1442604101,
+                -1401280853,
+                1736733570,
+                1874847282,
+                2009544500
+            ],
+            "regex": "la can",
+            "weight": 8,
+            "count": 6
+        },
+        "-1519456051:-1401280853:1874847282": {
+            "ids": [
+                -1519456051,
+                -1401280853,
+                1874847282
+            ],
+            "regex": "d de mo",
+            "weight": 9,
+            "count": 3
+        },
+        "-1519456051:-88829109": {
+            "ids": [
+                -1519456051,
+                -88829109
+            ],
+            "regex": "os del mapa g",
+            "weight": 15,
+            "count": 2
+        },
+        "-1442604101:-1360675046:-1308339624:-614112895:1736733570": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                -1308339624,
+                -614112895,
+                1736733570
+            ],
+            "regex": "ae",
+            "weight": 2,
+            "count": 5
+        },
+        "-1442604101:-1127158390:-1026217690": {
+            "ids": [
+                -1442604101,
+                -1127158390,
+                -1026217690
+            ],
+            "regex": "a q",
+            "weight": 5,
+            "count": 3
+        },
+        "-1442604101:-1360675046:1736733570": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                1736733570
+            ],
+            "regex": "ta a",
+            "weight": 6,
+            "count": 3
+        },
+        "-1442604101:-1360675046:1736733570:1819020306": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                1736733570,
+                1819020306
+            ],
+            "regex": "pa e",
+            "weight": 6,
+            "count": 4
+        },
+        "-1442604101:-1360675046:-1308339624:-481412666:1736733570": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                -1308339624,
+                -481412666,
+                1736733570
+            ],
+            "regex": "ue c",
+            "weight": 6,
+            "count": 5
+        },
+        "-1442604101:-1308339624:1736733570": {
+            "ids": [
+                -1442604101,
+                -1308339624,
+                1736733570
+            ],
+            "regex": "ae e",
+            "weight": 6,
+            "count": 3
+        },
+        "-1442604101:-1308339624:-1026217690:62629171:1736733570": {
+            "ids": [
+                -1442604101,
+                -1308339624,
+                -1026217690,
+                62629171,
+                1736733570
+            ],
+            "regex": "e en",
+            "weight": 6,
+            "count": 5
+        },
+        "-1442604101:-1360675046:-1308339624:1736733570": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                -1308339624,
+                1736733570
+            ],
+            "regex": "ue cae",
+            "weight": 8,
+            "count": 4
+        },
+        "-1442604101:1885842260": {
+            "ids": [
+                -1442604101,
+                1885842260
+            ],
+            "regex": "e de c",
+            "weight": 8,
+            "count": 2
+        },
+        "-1401280853:-859828309:-724125136:-88829109:739252212:1079448376": {
+            "ids": [
+                -1401280853,
+                -859828309,
+                -724125136,
+                -88829109,
+                739252212,
+                1079448376
+            ],
+            "regex": "s ra",
+            "weight": 6,
+            "count": 6
+        },
+        "-1401280853:-859828309:-724125136:-88829109:739252212": {
+            "ids": [
+                -1401280853,
+                -859828309,
+                -724125136,
+                -88829109,
+                739252212
+            ],
+            "regex": "os ra",
+            "weight": 7,
+            "count": 5
+        },
+        "-1401280853:-724125136:-88829109:108640922:924177740:1079448376": {
+            "ids": [
+                -1401280853,
+                -724125136,
+                -88829109,
+                108640922,
+                924177740,
+                1079448376
+            ],
+            "regex": "ros a",
+            "weight": 7,
+            "count": 6
+        },
+        "-1401280853:108640922:924177740": {
+            "ids": [
+                -1401280853,
+                108640922,
+                924177740
+            ],
+            "regex": "ros au",
+            "weight": 8,
+            "count": 3
+        },
+        "-1401280853:1874847282:2009544500": {
+            "ids": [
+                -1401280853,
+                1874847282,
+                2009544500
+            ],
+            "regex": "ne la c",
+            "weight": 9,
+            "count": 3
+        },
+        "-1401280853:-724125136:-88829109:1079448376": {
+            "ids": [
+                -1401280853,
+                -724125136,
+                -88829109,
+                1079448376
+            ],
+            "regex": "s raros a",
+            "weight": 11,
+            "count": 4
+        },
+        "-1401280853:-724125136:-88829109": {
+            "ids": [
+                -1401280853,
+                -724125136,
+                -88829109
+            ],
+            "regex": "os raros a",
+            "weight": 12,
+            "count": 3
+        },
+        "-1401280853:2009544500": {
+            "ids": [
+                -1401280853,
+                2009544500
+            ],
+            "regex": "e monstruos r",
+            "weight": 15,
+            "count": 2
+        },
+        "-1377869826:-859828309:-250359622:1947862885:2009544500": {
+            "ids": [
+                -1377869826,
+                -859828309,
+                -250359622,
+                1947862885,
+                2009544500
+            ],
+            "regex": "runi",
+            "weight": 4,
+            "count": 5
+        },
+        "-1377869826:-1325149272:-864971456:989647046:1885842260": {
+            "ids": [
+                -1377869826,
+                -1325149272,
+                -864971456,
+                989647046,
+                1885842260
+            ],
+            "regex": "r u",
+            "weight": 5,
+            "count": 5
+        },
+        "-1377869826:108640922:1120183281": {
+            "ids": [
+                -1377869826,
+                108640922,
+                1120183281
+            ],
+            "regex": "r r",
+            "weight": 5,
+            "count": 3
+        },
+        "-1377869826:-1325149272": {
+            "ids": [
+                -1377869826,
+                -1325149272
+            ],
+            "regex": "e ag",
+            "weight": 6,
+            "count": 2
+        },
+        "-1377869826:-1325149272:989647046": {
+            "ids": [
+                -1377869826,
+                -1325149272,
+                989647046
+            ],
+            "regex": "ar u",
+            "weight": 6,
+            "count": 3
+        },
+        "-1377869826:-1325149272:690095601": {
+            "ids": [
+                -1377869826,
+                -1325149272,
+                690095601
+            ],
+            "regex": "l al",
+            "weight": 6,
+            "count": 3
+        },
+        "-1377869826:-1329521044:-614112895": {
+            "ids": [
+                -1377869826,
+                -1329521044,
+                -614112895
+            ],
+            "regex": "los r",
+            "weight": 7,
+            "count": 3
+        },
+        "-1377869826:-1329521044": {
+            "ids": [
+                -1377869826,
+                -1329521044
+            ],
+            "regex": "s rem",
+            "weight": 7,
+            "count": 2
+        },
+        "-1377869826:-1329521044:-540903682": {
+            "ids": [
+                -1377869826,
+                -1329521044,
+                -540903682
+            ],
+            "regex": "tes d",
+            "weight": 7,
+            "count": 3
+        },
+        "-1377869826:-611033189": {
+            "ids": [
+                -1377869826,
+                -611033189
+            ],
+            "regex": "n mod",
+            "weight": 7,
+            "count": 2
+        },
+        "-1377869826:690095601": {
+            "ids": [
+                -1377869826,
+                690095601
+            ],
+            "regex": "nal a",
+            "weight": 7,
+            "count": 2
+        },
+        "-1377869826:-1329521044:1090906942": {
+            "ids": [
+                -1377869826,
+                -1329521044,
+                1090906942
+            ],
+            "regex": "s de ve",
+            "weight": 9,
+            "count": 3
+        },
+        "-1360675046:1813505419:1849197898": {
+            "ids": [
+                -1360675046,
+                1813505419,
+                1849197898
+            ],
+            "regex": "s o",
+            "weight": 5,
+            "count": 3
+        },
+        "-1360675046:-481412666:1662257259:1813505419": {
+            "ids": [
+                -1360675046,
+                -481412666,
+                1662257259,
+                1813505419
+            ],
+            "regex": "jetos",
+            "weight": 5,
+            "count": 4
+        },
+        "-1360675046:1813505419": {
+            "ids": [
+                -1360675046,
+                1813505419
+            ],
+            "regex": "os o",
+            "weight": 6,
+            "count": 2
+        },
+        "-1360675046:574430759": {
+            "ids": [
+                -1360675046,
+                574430759
+            ],
+            "regex": "os q",
+            "weight": 6,
+            "count": 2
+        },
+        "-1349688955:-1127158390:182417783:1662257259:1813505419:1849197898": {
+            "ids": [
+                -1349688955,
+                -1127158390,
+                182417783,
+                1662257259,
+                1813505419,
+                1849197898
+            ],
+            "regex": "fes",
+            "weight": 3,
+            "count": 6
+        },
+        "-1349688955:-614112895": {
+            "ids": [
+                -1349688955,
+                -614112895
+            ],
+            "regex": "o e",
+            "weight": 5,
+            "count": 2
+        },
+        "-1349688955:1079448376": {
+            "ids": [
+                -1349688955,
+                1079448376
+            ],
+            "regex": "es r",
+            "weight": 6,
+            "count": 2
+        },
+        "-1349688955:25067405:444792259": {
+            "ids": [
+                -1349688955,
+                25067405,
+                444792259
+            ],
+            "regex": "es ad",
+            "weight": 7,
+            "count": 3
+        },
+        "-1329521044:-1127158390:1662257259:1813505419:1947862885": {
+            "ids": [
+                -1329521044,
+                -1127158390,
+                1662257259,
+                1813505419,
+                1947862885
+            ],
+            "regex": "oj",
+            "weight": 2,
+            "count": 5
+        },
+        "-1329521044:-1127158390:1947862885": {
+            "ids": [
+                -1329521044,
+                -1127158390,
+                1947862885
+            ],
+            "regex": "jan",
+            "weight": 3,
+            "count": 3
+        },
+        "-1329521044:1090906942:1885842260": {
+            "ids": [
+                -1329521044,
+                1090906942,
+                1885842260
+            ],
+            "regex": "m a",
+            "weight": 5,
+            "count": 3
+        },
+        "-1329521044:-1033399892:-659266483:-377868554:504241682": {
+            "ids": [
+                -1329521044,
+                -1033399892,
+                -659266483,
+                -377868554,
+                504241682
+            ],
+            "regex": "uos d",
+            "weight": 7,
+            "count": 5
+        },
+        "-1329521044:-1127158390:-659266483:62629171:108640922:924177740:1120183281": {
+            "ids": [
+                -1329521044,
+                -1127158390,
+                -659266483,
+                62629171,
+                108640922,
+                924177740,
+                1120183281
+            ],
+            "regex": "s de l",
+            "weight": 8,
+            "count": 7
+        },
+        "-1329521044:-659266483:62629171:108640922:1120183281": {
+            "ids": [
+                -1329521044,
+                -659266483,
+                62629171,
+                108640922,
+                1120183281
+            ],
+            "regex": "os de l",
+            "weight": 9,
+            "count": 5
+        },
+        "-1329521044:-1127158390:108640922:924177740:1120183281": {
+            "ids": [
+                -1329521044,
+                -1127158390,
+                108640922,
+                924177740,
+                1120183281
+            ],
+            "regex": "s de lo",
+            "weight": 9,
+            "count": 5
+        },
+        "-1329521044:-659266483": {
+            "ids": [
+                -1329521044,
+                -659266483
+            ],
+            "regex": "uos de l",
+            "weight": 10,
+            "count": 2
+        },
+        "-1329521044:108640922:1120183281": {
+            "ids": [
+                -1329521044,
+                108640922,
+                1120183281
+            ],
+            "regex": "os de lo",
+            "weight": 10,
+            "count": 3
+        },
+        "-1329521044:-659266483:-377868554:504241682": {
+            "ids": [
+                -1329521044,
+                -659266483,
+                -377868554,
+                504241682
+            ],
+            "regex": "s monstruos d",
+            "weight": 15,
+            "count": 4
+        },
+        "-1309913324:2125725641": {
+            "ids": [
+                -1309913324,
+                2125725641
+            ],
+            "regex": "cias",
+            "weight": 4,
+            "count": 2
+        },
+        "-1309913324:479296149": {
+            "ids": [
+                -1309913324,
+                479296149
+            ],
+            "regex": "r es",
+            "weight": 6,
+            "count": 2
+        },
+        "-1309913324:479296149:881932307": {
+            "ids": [
+                -1309913324,
+                479296149,
+                881932307
+            ],
+            "regex": "er e",
+            "weight": 6,
+            "count": 3
+        },
+        "-1309913324:-1127158390:-614112895:1662257259:2125725641": {
+            "ids": [
+                -1309913324,
+                -1127158390,
+                -614112895,
+                1662257259,
+                2125725641
+            ],
+            "regex": "as a",
+            "weight": 6,
+            "count": 5
+        },
+        "-1309913324:-1127158390:1662257259": {
+            "ids": [
+                -1309913324,
+                -1127158390,
+                1662257259
+            ],
+            "regex": "as au",
+            "weight": 7,
+            "count": 3
+        },
+        "-1309913324:-1014931673:-864971456:474552856:479296149:881932307": {
+            "ids": [
+                -1309913324,
+                -1014931673,
+                -864971456,
+                474552856,
+                479296149,
+                881932307
+            ],
+            "regex": "e la p",
+            "weight": 8,
+            "count": 6
+        },
+        "-1308339624:62629171": {
+            "ids": [
+                -1308339624,
+                62629171
+            ],
+            "regex": "o q",
+            "weight": 5,
+            "count": 2
+        },
+        "-1308339624:-1033399892": {
+            "ids": [
+                -1308339624,
+                -1033399892
+            ],
+            "regex": "a aumentado",
+            "weight": 13,
+            "count": 2
+        },
+        "-1308339624:-1026217690:564968189:1947862885": {
+            "ids": [
+                -1308339624,
+                -1026217690,
+                564968189,
+                1947862885
+            ],
+            "regex": "n el mapa a",
+            "weight": 13,
+            "count": 4
+        },
+        "-1127158390:-1026217690": {
+            "ids": [
+                -1127158390,
+                -1026217690
+            ],
+            "regex": "dr",
+            "weight": 2,
+            "count": 2
+        },
+        "-1127158390:-956801645:1662257259:1813505419:1849197898": {
+            "ids": [
+                -1127158390,
+                -956801645,
+                1662257259,
+                1813505419,
+                1849197898
+            ],
+            "regex": "s j",
+            "weight": 5,
+            "count": 5
+        },
+        "-1127158390:62629171:1874847282": {
+            "ids": [
+                -1127158390,
+                62629171,
+                1874847282
+            ],
+            "regex": "s ma",
+            "weight": 6,
+            "count": 3
+        },
+        "-1127158390:-1026217690:62629171": {
+            "ids": [
+                -1127158390,
+                -1026217690,
+                62629171
+            ],
+            "regex": "s pi",
+            "weight": 6,
+            "count": 3
+        },
+        "-1127158390:1662257259:1813505419:1849197898": {
+            "ids": [
+                -1127158390,
+                1662257259,
+                1813505419,
+                1849197898
+            ],
+            "regex": "s je",
+            "weight": 6,
+            "count": 4
+        },
+        "-1127158390:1947862885": {
+            "ids": [
+                -1127158390,
+                1947862885
+            ],
+            "regex": "ue ar",
+            "weight": 7,
+            "count": 2
+        },
+        "-1127158390:62629171": {
+            "ids": [
+                -1127158390,
+                62629171
+            ],
+            "regex": "s map",
+            "weight": 7,
+            "count": 2
+        },
+        "-1127158390:1662257259": {
+            "ids": [
+                -1127158390,
+                1662257259
+            ],
+            "regex": "pas a",
+            "weight": 7,
+            "count": 2
+        },
+        "-1127158390:-1026217690:-377868554": {
+            "ids": [
+                -1127158390,
+                -1026217690,
+                -377868554
+            ],
+            "regex": "d de l",
+            "weight": 8,
+            "count": 3
+        },
+        "-1127158390:924177740": {
+            "ids": [
+                -1127158390,
+                924177740
+            ],
+            "regex": "es de l",
+            "weight": 9,
+            "count": 2
+        },
+        "-1033399892:504241682": {
+            "ids": [
+                -1033399892,
+                504241682
+            ],
+            "regex": "uos del",
+            "weight": 9,
+            "count": 2
+        },
+        "-1033399892:-956801645:-659266483:-481412666:-377868554": {
+            "ids": [
+                -1033399892,
+                -956801645,
+                -659266483,
+                -481412666,
+                -377868554
+            ],
+            "regex": "del mapa a",
+            "weight": 12,
+            "count": 5
+        },
+        "-1033399892:-659266483:-481412666:-377868554": {
+            "ids": [
+                -1033399892,
+                -659266483,
+                -481412666,
+                -377868554
+            ],
+            "regex": "del mapa au",
+            "weight": 13,
+            "count": 4
+        },
+        "-1033399892:-481412666:-377868554": {
+            "ids": [
+                -1033399892,
+                -481412666,
+                -377868554
+            ],
+            "regex": "os del mapa a",
+            "weight": 15,
+            "count": 3
+        },
+        "-1028076924:-614112895:-377868554:-42287288:108640922:574430759:1736733570": {
+            "ids": [
+                -1028076924,
+                -614112895,
+                -377868554,
+                -42287288,
+                108640922,
+                574430759,
+                1736733570
+            ],
+            "regex": "vi",
+            "weight": 2,
+            "count": 7
+        },
+        "-1028076924:-377868554:-42287288:108640922": {
+            "ids": [
+                -1028076924,
+                -377868554,
+                -42287288,
+                108640922
+            ],
+            "regex": "ivi",
+            "weight": 3,
+            "count": 4
+        },
+        "-1028076924:-377868554:-42287288": {
+            "ids": [
+                -1028076924,
+                -377868554,
+                -42287288
+            ],
+            "regex": "efec",
+            "weight": 4,
+            "count": 3
+        },
+        "-1028076924:-42287288": {
+            "ids": [
+                -1028076924,
+                -42287288
+            ],
+            "regex": "u e",
+            "weight": 5,
+            "count": 2
+        },
+        "-1028076924:-354629506:-42287288": {
+            "ids": [
+                -1028076924,
+                -354629506,
+                -42287288
+            ],
+            "regex": "n s",
+            "weight": 5,
+            "count": 3
+        },
+        "-1026217690:62629171:182417783": {
+            "ids": [
+                -1026217690,
+                62629171,
+                182417783
+            ],
+            "regex": "ncu",
+            "weight": 3,
+            "count": 3
+        },
+        "-1026217690:-614112895:62629171:182417783:1736733570": {
+            "ids": [
+                -1026217690,
+                -614112895,
+                62629171,
+                182417783,
+                1736733570
+            ],
+            "regex": "ntr",
+            "weight": 3,
+            "count": 5
+        },
+        "-1026217690:62629171": {
+            "ids": [
+                -1026217690,
+                62629171
+            ],
+            "regex": "ntra",
+            "weight": 4,
+            "count": 2
+        },
+        "-1026217690:-859828309:-828476369:739252212:1090906942:1947862885": {
+            "ids": [
+                -1026217690,
+                -859828309,
+                -828476369,
+                739252212,
+                1090906942,
+                1947862885
+            ],
+            "regex": "s en e",
+            "weight": 8,
+            "count": 6
+        },
+        "-1026217690:-828476369": {
+            "ids": [
+                -1026217690,
+                -828476369
+            ],
+            "regex": "as en e",
+            "weight": 9,
+            "count": 2
+        },
+        "-1026217690:-659266483:-481412666:-377868554:564968189:1813505419:1947862885": {
+            "ids": [
+                -1026217690,
+                -659266483,
+                -481412666,
+                -377868554,
+                564968189,
+                1813505419,
+                1947862885
+            ],
+            "regex": "pa aumentada",
+            "weight": 14,
+            "count": 7
+        },
+        "-1014931673:874837226": {
+            "ids": [
+                -1014931673,
+                874837226
+            ],
+            "regex": "arios a",
+            "weight": 9,
+            "count": 2
+        },
+        "-956801645:881932307:1819020306": {
+            "ids": [
+                -956801645,
+                881932307,
+                1819020306
+            ],
+            "regex": "gad",
+            "weight": 3,
+            "count": 3
+        },
+        "-956801645:-250359622": {
+            "ids": [
+                -956801645,
+                -250359622
+            ],
+            "regex": "pli",
+            "weight": 3,
+            "count": 2
+        },
+        "-956801645:1107604097:1773870625": {
+            "ids": [
+                -956801645,
+                1107604097,
+                1773870625
+            ],
+            "regex": "% a",
+            "weight": 5,
+            "count": 3
+        },
+        "-956801645:655807109:1056236838": {
+            "ids": [
+                -956801645,
+                655807109,
+                1056236838
+            ],
+            "regex": "o au",
+            "weight": 6,
+            "count": 3
+        },
+        "-864971456:-782248059:2009544500": {
+            "ids": [
+                -864971456,
+                -782248059,
+                2009544500
+            ],
+            "regex": "rc",
+            "weight": 2,
+            "count": 3
+        },
+        "-864971456:-782248059": {
+            "ids": [
+                -864971456,
+                -782248059
+            ],
+            "regex": "irc",
+            "weight": 3,
+            "count": 2
+        },
+        "-864971456:-782248059:611955315": {
+            "ids": [
+                -864971456,
+                -782248059,
+                611955315
+            ],
+            "regex": "cir",
+            "weight": 3,
+            "count": 3
+        },
+        "-864971456:-782248059:989647046": {
+            "ids": [
+                -864971456,
+                -782248059,
+                989647046
+            ],
+            "regex": "un c",
+            "weight": 6,
+            "count": 3
+        },
+        "-864971456:1885842260": {
+            "ids": [
+                -864971456,
+                1885842260
+            ],
+            "regex": "er u",
+            "weight": 6,
+            "count": 2
+        },
+        "-864971456:62629171": {
+            "ids": [
+                -864971456,
+                62629171
+            ],
+            "regex": "n au",
+            "weight": 6,
+            "count": 2
+        },
+        "-864971456:989647046": {
+            "ids": [
+                -864971456,
+                989647046
+            ],
+            "regex": "r un c",
+            "weight": 8,
+            "count": 2
+        },
+        "-859828309:-250359622:1947862885:2009544500": {
+            "ids": [
+                -859828309,
+                -250359622,
+                1947862885,
+                2009544500
+            ],
+            "regex": "s ru",
+            "weight": 6,
+            "count": 4
+        },
+        "-859828309:-611033189": {
+            "ids": [
+                -859828309,
+                -611033189
+            ],
+            "regex": "an m",
+            "weight": 6,
+            "count": 2
+        },
+        "-859828309:1947862885": {
+            "ids": [
+                -859828309,
+                1947862885
+            ],
+            "regex": "cos e",
+            "weight": 7,
+            "count": 2
+        },
+        "-859828309:-481412666:655807109": {
+            "ids": [
+                -859828309,
+                -481412666,
+                655807109
+            ],
+            "regex": "dos e",
+            "weight": 7,
+            "count": 3
+        },
+        "-859828309:444792259": {
+            "ids": [
+                -859828309,
+                444792259
+            ],
+            "regex": "s \\d+",
+            "weight": 8,
+            "count": 2
+        },
+        "-859828309:739252212:1947862885": {
+            "ids": [
+                -859828309,
+                739252212,
+                1947862885
+            ],
+            "regex": "os en e",
+            "weight": 9,
+            "count": 3
+        },
+        "-859828309:-250359622:108640922:1947862885": {
+            "ids": [
+                -859828309,
+                -250359622,
+                108640922,
+                1947862885
+            ],
+            "regex": "s monstruos r",
+            "weight": 15,
+            "count": 4
+        },
+        "-828476369:-42287288": {
+            "ids": [
+                -828476369,
+                -42287288
+            ],
+            "regex": "errad",
+            "weight": 5,
+            "count": 2
+        },
+        "-828476369:25067405:1079448376:1090906942": {
+            "ids": [
+                -828476369,
+                25067405,
+                1079448376,
+                1090906942
+            ],
+            "regex": "\\d+ c",
+            "weight": 8,
+            "count": 4
+        },
+        "-828476369:25067405": {
+            "ids": [
+                -828476369,
+                25067405
+            ],
+            "regex": "\\d+ ca",
+            "weight": 9,
+            "count": 2
+        },
+        "-828476369:1090906942": {
+            "ids": [
+                -828476369,
+                1090906942
+            ],
+            "regex": "n \\d+ c",
+            "weight": 10,
+            "count": 2
+        },
+        "-773162240:-42287288:474552856": {
+            "ids": [
+                -773162240,
+                -42287288,
+                474552856
+            ],
+            "regex": "r c",
+            "weight": 5,
+            "count": 3
+        },
+        "-773162240:474552856": {
+            "ids": [
+                -773162240,
+                474552856
+            ],
+            "regex": "er c",
+            "weight": 6,
+            "count": 2
+        },
+        "-724125136:-314560709": {
+            "ids": [
+                -724125136,
+                -314560709
+            ],
+            "regex": "ines",
+            "weight": 4,
+            "count": 2
+        },
+        "-724125136:-314560709:182417783": {
+            "ids": [
+                -724125136,
+                -314560709,
+                182417783
+            ],
+            "regex": "able",
+            "weight": 4,
+            "count": 3
+        },
+        "-724125136:-611033189:-314560709:197397637": {
+            "ids": [
+                -724125136,
+                -611033189,
+                -314560709,
+                197397637
+            ],
+            "regex": "les d",
+            "weight": 7,
+            "count": 4
+        },
+        "-724125136:-88829109:1079448376": {
+            "ids": [
+                -724125136,
+                -88829109,
+                1079448376
+            ],
+            "regex": "ros ad",
+            "weight": 8,
+            "count": 3
+        },
+        "-724125136:-659266483:-611033189:-314560709": {
+            "ids": [
+                -724125136,
+                -659266483,
+                -611033189,
+                -314560709
+            ],
+            "regex": "es del",
+            "weight": 8,
+            "count": 4
+        },
+        "-724125136:-611033189:-314560709": {
+            "ids": [
+                -724125136,
+                -611033189,
+                -314560709
+            ],
+            "regex": "les del",
+            "weight": 9,
+            "count": 3
+        },
+        "-724125136:-88829109": {
+            "ids": [
+                -724125136,
+                -88829109
+            ],
+            "regex": "an \\d+",
+            "weight": 9,
+            "count": 2
+        },
+        "-659266483:62629171": {
+            "ids": [
+                -659266483,
+                62629171
+            ],
+            "regex": "s de la",
+            "weight": 9,
+            "count": 2
+        },
+        "-614112895:1736733570": {
+            "ids": [
+                -614112895,
+                1736733570
+            ],
+            "regex": "gal",
+            "weight": 3,
+            "count": 2
+        },
+        "-614112895:197397637:690095601:739252212:1773870625": {
+            "ids": [
+                -614112895,
+                197397637,
+                690095601,
+                739252212,
+                1773870625
+            ],
+            "regex": "r d",
+            "weight": 5,
+            "count": 5
+        },
+        "-611033189:-481412666:564968189:655807109:989647046:1849197898": {
+            "ids": [
+                -611033189,
+                -481412666,
+                564968189,
+                655807109,
+                989647046,
+                1849197898
+            ],
+            "regex": "gan",
+            "weight": 3,
+            "count": 6
+        },
+        "-611033189:-42287288:611955315": {
+            "ids": [
+                -611033189,
+                -42287288,
+                611955315
+            ],
+            "regex": "isa",
+            "weight": 3,
+            "count": 3
+        },
+        "-611033189:444792259": {
+            "ids": [
+                -611033189,
+                444792259
+            ],
+            "regex": "a te",
+            "weight": 6,
+            "count": 2
+        },
+        "-611033189:611955315": {
+            "ids": [
+                -611033189,
+                611955315
+            ],
+            "regex": "es ab",
+            "weight": 7,
+            "count": 2
+        },
+        "-611033189:-42287288": {
+            "ids": [
+                -611033189,
+                -42287288
+            ],
+            "regex": "uos ab",
+            "weight": 8,
+            "count": 2
+        },
+        "-611033189:197397637": {
+            "ids": [
+                -611033189,
+                197397637
+            ],
+            "regex": "ales d",
+            "weight": 8,
+            "count": 2
+        },
+        "-540903682:739252212": {
+            "ids": [
+                -540903682,
+                739252212
+            ],
+            "regex": "dur",
+            "weight": 3,
+            "count": 2
+        },
+        "-540903682:881932307": {
+            "ids": [
+                -540903682,
+                881932307
+            ],
+            "regex": "dos a",
+            "weight": 7,
+            "count": 2
+        },
+        "-540903682:739252212:874837226": {
+            "ids": [
+                -540903682,
+                739252212,
+                874837226
+            ],
+            "regex": "\\d+ s",
+            "weight": 8,
+            "count": 3
+        },
+        "-540903682:182417783:504241682": {
+            "ids": [
+                -540903682,
+                182417783,
+                504241682
+            ],
+            "regex": "s de d",
+            "weight": 8,
+            "count": 3
+        },
+        "-481412666:564968189": {
+            "ids": [
+                -481412666,
+                564968189
+            ],
+            "regex": "nad",
+            "weight": 3,
+            "count": 2
+        },
+        "-481412666:1736733570": {
+            "ids": [
+                -481412666,
+                1736733570
+            ],
+            "regex": "e que c",
+            "weight": 9,
+            "count": 2
+        },
+        "-377868554:182417783:1947862885": {
+            "ids": [
+                -377868554,
+                182417783,
+                1947862885
+            ],
+            "regex": "ros d",
+            "weight": 7,
+            "count": 3
+        },
+        "-314560709:-42287288": {
+            "ids": [
+                -314560709,
+                -42287288
+            ],
+            "regex": ",",
+            "weight": 1,
+            "count": 2
+        },
+        "-314560709:2009544500": {
+            "ids": [
+                -314560709,
+                2009544500
+            ],
+            "regex": "mar",
+            "weight": 3,
+            "count": 2
+        },
+        "-250359622:1885842260": {
+            "ids": [
+                -250359622,
+                1885842260
+            ],
+            "regex": "br",
+            "weight": 2,
+            "count": 2
+        },
+        "-250359622:-42287288:1885842260": {
+            "ids": [
+                -250359622,
+                -42287288,
+                1885842260
+            ],
+            "regex": "es t",
+            "weight": 6,
+            "count": 3
+        },
+        "-42287288:197397637:690095601:1819020306": {
+            "ids": [
+                -42287288,
+                197397637,
+                690095601,
+                1819020306
+            ],
+            "regex": "ha",
+            "weight": 2,
+            "count": 4
+        },
+        "-42287288:1120183281": {
+            "ids": [
+                -42287288,
+                1120183281
+            ],
+            "regex": "fos",
+            "weight": 3,
+            "count": 2
+        },
+        "-42287288:474552856": {
+            "ids": [
+                -42287288,
+                474552856
+            ],
+            "regex": "r ca",
+            "weight": 6,
+            "count": 2
+        },
+        "25067405:135469244:474552856": {
+            "ids": [
+                25067405,
+                135469244,
+                474552856
+            ],
+            "regex": "tes a",
+            "weight": 7,
+            "count": 3
+        },
+        "25067405:474552856": {
+            "ids": [
+                25067405,
+                474552856
+            ],
+            "regex": "rtes a",
+            "weight": 8,
+            "count": 2
+        },
+        "25067405:1079448376": {
+            "ids": [
+                25067405,
+                1079448376
+            ],
+            "regex": "e \\d+ c",
+            "weight": 10,
+            "count": 2
+        },
+        "25067405:857219754:874837226:881965784:1079448376:2125725641": {
+            "ids": [
+                25067405,
+                857219754,
+                874837226,
+                881965784,
+                1079448376,
+                2125725641
+            ],
+            "regex": "ntiene \\d+",
+            "weight": 13,
+            "count": 6
+        },
+        "62629171:135469244:924177740:1079448376": {
+            "ids": [
+                62629171,
+                135469244,
+                924177740,
+                1079448376
+            ],
+            "regex": "fr",
+            "weight": 2,
+            "count": 4
+        },
+        "62629171:135469244": {
+            "ids": [
+                62629171,
+                135469244
+            ],
+            "regex": "fra",
+            "weight": 3,
+            "count": 2
+        },
+        "62629171:479296149:881965784": {
+            "ids": [
+                62629171,
+                479296149,
+                881965784
+            ],
+            "regex": "anos",
+            "weight": 4,
+            "count": 3
+        },
+        "62629171:1056236838:1090906942": {
+            "ids": [
+                62629171,
+                1056236838,
+                1090906942
+            ],
+            "regex": "las d",
+            "weight": 7,
+            "count": 3
+        },
+        "62629171:1947862885": {
+            "ids": [
+                62629171,
+                1947862885
+            ],
+            "regex": "n los m",
+            "weight": 9,
+            "count": 2
+        },
+        "108640922:574430759": {
+            "ids": [
+                108640922,
+                574430759
+            ],
+            "regex": "rev",
+            "weight": 3,
+            "count": 2
+        },
+        "108640922:1120183281": {
+            "ids": [
+                108640922,
+                1120183281
+            ],
+            "regex": "er r",
+            "weight": 6,
+            "count": 2
+        },
+        "135469244:739252212": {
+            "ids": [
+                135469244,
+                739252212
+            ],
+            "regex": "rant",
+            "weight": 4,
+            "count": 2
+        },
+        "135469244:1056236838:1670789869": {
+            "ids": [
+                135469244,
+                1056236838,
+                1670789869
+            ],
+            "regex": "na c",
+            "weight": 6,
+            "count": 3
+        },
+        "135469244:1056236838": {
+            "ids": [
+                135469244,
+                1056236838
+            ],
+            "regex": "ra u",
+            "weight": 6,
+            "count": 2
+        },
+        "135469244:474552856": {
+            "ids": [
+                135469244,
+                474552856
+            ],
+            "regex": "tes au",
+            "weight": 8,
+            "count": 2
+        },
+        "164419697:1670789869": {
+            "ids": [
+                164419697,
+                1670789869
+            ],
+            "regex": "e una",
+            "weight": 7,
+            "count": 2
+        },
+        "182417783:1947862885": {
+            "ids": [
+                182417783,
+                1947862885
+            ],
+            "regex": "tros",
+            "weight": 4,
+            "count": 2
+        },
+        "182417783:504241682": {
+            "ids": [
+                182417783,
+                504241682
+            ],
+            "regex": "os de d",
+            "weight": 9,
+            "count": 2
+        },
+        "197397637:690095601:1773870625": {
+            "ids": [
+                197397637,
+                690095601,
+                1773870625
+            ],
+            "regex": "lr",
+            "weight": 2,
+            "count": 3
+        },
+        "197397637:690095601": {
+            "ids": [
+                197397637,
+                690095601
+            ],
+            "regex": "ay",
+            "weight": 2,
+            "count": 2
+        },
+        "197397637:690095601:739252212:1773870625": {
+            "ids": [
+                197397637,
+                690095601,
+                739252212,
+                1773870625
+            ],
+            "regex": "or d",
+            "weight": 6,
+            "count": 4
+        },
+        "197397637:1662257259:1813505419:1849197898:2009544500": {
+            "ids": [
+                197397637,
+                1662257259,
+                1813505419,
+                1849197898,
+                2009544500
+            ],
+            "regex": "es de m",
+            "weight": 9,
+            "count": 5
+        },
+        "197397637:690095601:924177740:989647046:1773870625": {
+            "ids": [
+                197397637,
+                690095601,
+                924177740,
+                989647046,
+                1773870625
+            ],
+            "regex": "de los f",
+            "weight": 10,
+            "count": 5
+        },
+        "444792259:1060331787": {
+            "ids": [
+                444792259,
+                1060331787
+            ],
+            "regex": "zar",
+            "weight": 3,
+            "count": 2
+        },
+        "444792259:1662257259:1813505419": {
+            "ids": [
+                444792259,
+                1662257259,
+                1813505419
+            ],
+            "regex": "r l",
+            "weight": 5,
+            "count": 3
+        },
+        "479296149:857219754:881965784": {
+            "ids": [
+                479296149,
+                857219754,
+                881965784
+            ],
+            "regex": "ian",
+            "weight": 3,
+            "count": 3
+        },
+        "479296149:881965784": {
+            "ids": [
+                479296149,
+                881965784
+            ],
+            "regex": "ianos",
+            "weight": 5,
+            "count": 2
+        },
+        "504241682:611955315:1120183281": {
+            "ids": [
+                504241682,
+                611955315,
+                1120183281
+            ],
+            "regex": "os del mapa t",
+            "weight": 15,
+            "count": 3
+        },
+        "564968189:1849197898": {
+            "ids": [
+                564968189,
+                1849197898
+            ],
+            "regex": "xper",
+            "weight": 4,
+            "count": 2
+        },
+        "564968189:989647046": {
+            "ids": [
+                564968189,
+                989647046
+            ],
+            "regex": "gana",
+            "weight": 4,
+            "count": 2
+        },
+        "574430759:1874847282": {
+            "ids": [
+                574430759,
+                1874847282
+            ],
+            "regex": "gicos",
+            "weight": 5,
+            "count": 2
+        },
+        "574430759:1107604097": {
+            "ids": [
+                574430759,
+                1107604097
+            ],
+            "regex": "ue r",
+            "weight": 6,
+            "count": 2
+        },
+        "574430759:1874847282:2009544500": {
+            "ids": [
+                574430759,
+                1874847282,
+                2009544500
+            ],
+            "regex": "cos a",
+            "weight": 7,
+            "count": 3
+        },
+        "655807109:1849197898": {
+            "ids": [
+                655807109,
+                1849197898
+            ],
+            "regex": "org",
+            "weight": 3,
+            "count": 2
+        },
+        "690095601:989647046:1773870625": {
+            "ids": [
+                690095601,
+                989647046,
+                1773870625
+            ],
+            "regex": "aal d",
+            "weight": 7,
+            "count": 3
+        },
+        "739252212:874837226": {
+            "ids": [
+                739252212,
+                874837226
+            ],
+            "regex": "e \\d+ s",
+            "weight": 10,
+            "count": 2
+        },
+        "857219754:881965784:1819020306:2125725641": {
+            "ids": [
+                857219754,
+                881965784,
+                1819020306,
+                2125725641
+            ],
+            "regex": "\\d+ e",
+            "weight": 8,
+            "count": 4
+        },
+        "857219754:881965784:2125725641": {
+            "ids": [
+                857219754,
+                881965784,
+                2125725641
+            ],
+            "regex": "\\d+ es",
+            "weight": 9,
+            "count": 3
+        },
+        "857219754:881965784": {
+            "ids": [
+                857219754,
+                881965784
+            ],
+            "regex": "\\d+ esp",
+            "weight": 10,
+            "count": 2
+        },
+        "881932307:1819020306": {
+            "ids": [
+                881932307,
+                1819020306
+            ],
+            "regex": "neg",
+            "weight": 3,
+            "count": 2
+        },
+        "924177740:1079448376": {
+            "ids": [
+                924177740,
+                1079448376
+            ],
+            "regex": "cof",
+            "weight": 3,
+            "count": 2
+        },
+        "924177740:1885842260": {
+            "ids": [
+                924177740,
+                1885842260
+            ],
+            "regex": "n r",
+            "weight": 5,
+            "count": 2
+        },
+        "1056236838:1849197898": {
+            "ids": [
+                1056236838,
+                1849197898
+            ],
+            "regex": "as de e",
+            "weight": 9,
+            "count": 2
+        },
+        "1090906942:1885842260": {
+            "ids": [
+                1090906942,
+                1885842260
+            ],
+            "regex": "m ad",
+            "weight": 6,
+            "count": 2
+        },
+        "1662257259:1813505419": {
+            "ids": [
+                1662257259,
+                1813505419
+            ],
+            "regex": "jad",
+            "weight": 3,
+            "count": 2
+        },
+        "1662257259:1813505419:1849197898": {
+            "ids": [
+                1662257259,
+                1813505419,
+                1849197898
+            ],
+            "regex": "s de ma",
+            "weight": 9,
+            "count": 3
+        },
+        "1662257259:1849197898": {
+            "ids": [
+                1662257259,
+                1849197898
+            ],
+            "regex": "s de mapas",
             "weight": 12,
             "count": 2
         },
-        "1254542572:1823005182": {
+        "1736733570:1947862885": {
             "ids": [
-                1254542572,
-                1823005182
+                1736733570,
+                1947862885
             ],
-            "regex": "% en el m",
-            "weight": 11,
+            "regex": "e reg",
+            "weight": 7,
             "count": 2
         },
-        "1475570877:2024741756": {
+        "1849197898:1947862885": {
             "ids": [
-                1475570877,
-                2024741756
+                1849197898,
+                1947862885
             ],
-            "regex": "rte ad",
-            "weight": 8,
+            "regex": "s de ex",
+            "weight": 9,
             "count": 2
         }
     }
