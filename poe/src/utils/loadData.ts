@@ -7,6 +7,8 @@ import type {MapModsRegex} from "@poe/types/generated/mapmods";
 import type {Scarabs} from "@poe/types/generated/scarabs";
 import type {GemsRegex} from "@poe/types/generated/gems";
 import {createLanguageDataLoader} from "@shared/core/LanguageDataLoader";
+import {hasItem} from "@shared/core/item/RebaseItemSettings";
+import type {Itembase} from "@shared/core/item/ItemBaseSelector";
 
 const basePath = "/generated";
 
@@ -31,12 +33,12 @@ function lazy<T>(load: () => Promise<T>): () => Promise<T> {
   };
 }
 
-const itemBasetypes = lazy(() =>
-  fetchJson<ItemBase[]>(`${basePath}/item/Generated.Basetypes.Item.min.json`),
+const itemBasetypes = createLanguageDataLoader<string, ItemBase[]>((language) =>
+  fetchJson<ItemBase[]>(`${basePath}/item/Generated.Basetypes.Item.${language}.min.json`),
 );
 
-const itemRegex = lazy(() =>
-  fetchJson<ItemRegex[]>(`${basePath}/item/Generated.Item.min.json`),
+const itemRegex = createLanguageDataLoader<string, ItemRegex[]>((language) =>
+  fetchJson<ItemRegex[]>(`${basePath}/item/Generated.Item.${language}.min.json`),
 );
 
 const boatMods = createLanguageDataLoader<string, BoatModsRegex>((language) =>
@@ -57,13 +59,12 @@ const gems = createLanguageDataLoader<string, GemsRegex>((language) =>
   fetchJson<GemsRegex>(`${basePath}/gems/Generated.Gems.${language}.min.json`),
 );
 
-export function loadItemBasetypes(): Promise<ItemBase[]> {
-  return itemBasetypes();
-}
+export const loadItemBasetypes = (language: string): Promise<ItemBase[]> => itemBasetypes(language);
+export const loadItemRegex = (language: string): Promise<ItemRegex[]> => itemRegex(language);
 
-export function loadItemRegex(): Promise<ItemRegex[]> {
-  return itemRegex();
-}
+// Item settings saved before items were localized hold English names
+export const itemSettingsLanguage = async (language: string, itembase: Itembase | undefined): Promise<string> =>
+  hasItem(await loadItemBasetypes(language), itembase) ? language : "ENGLISH";
 
 export const loadBeastRegex = (language: string): Promise<BeastRegex> => beastRegexes(language);
 export const loadBoatMods = (language: string): Promise<BoatModsRegex> => boatMods(language);

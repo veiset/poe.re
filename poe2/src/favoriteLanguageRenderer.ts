@@ -1,4 +1,5 @@
 import {groupAffixes} from "@shared/core/item/GroupUtils";
+import {rebaseItemSettings} from "@shared/core/item/RebaseItemSettings";
 import {generateMagicItemRegex, generateRareItemRegex} from "@shared/core/item/ItemOutput";
 import type {ItemCraftingSettings} from "@shared/types/Settings.types";
 import {merge} from "@shared/core/utils";
@@ -24,66 +25,6 @@ const mapOptions = (options: SelectOption[], from: AffixOption[], to: AffixOptio
     const target = source && to.find((affix) => affix.sourceIndex === source.sourceIndex);
     return target ? {...option, id: target.id, name: target.name, regex: target.regex, ranges: target.ranges} : option;
   });
-
-export const rebaseItemSettings = (
-  settings: ItemCraftingSettings,
-  sourceBases: Awaited<ReturnType<typeof loadItemBasetypes>>,
-  targetBases: Awaited<ReturnType<typeof loadItemBasetypes>>,
-  sourceRegex: Awaited<ReturnType<typeof loadItemRegex>>,
-  targetRegex: Awaited<ReturnType<typeof loadItemRegex>>,
-): {settings: ItemCraftingSettings; basetypes: Awaited<ReturnType<typeof loadItemBasetypes>>} => {
-  const itembase = settings.itembase;
-  if (!itembase) return {settings, basetypes: targetBases};
-  const sourceBaseIndex = sourceBases.findIndex((base) => base.name === itembase.baseType);
-  const sourceBase = sourceBases[sourceBaseIndex];
-  const itemIndex = sourceBase?.items.indexOf(itembase.item) ?? -1;
-  const targetBase = targetBases[sourceBaseIndex];
-  const targetItem = targetBase?.items[itemIndex];
-  const sourceRootIndex = sourceRegex.findIndex((entry) => entry.basetype === itembase.baseType);
-  const sourceRoot = sourceRegex[sourceRootIndex];
-  const targetRoot = targetRegex[sourceRootIndex];
-  if (!sourceBase || !targetBase || itemIndex < 0 || !targetItem || !sourceRoot || !targetRoot) {
-    return {settings, basetypes: targetBases};
-  }
-  const targetItemBase = {...itembase, baseType: targetBase.name, item: targetItem};
-  const selectedRareMods: ItemCraftingSettings["selectedRareMods"] = {};
-  for (const [key, selection] of Object.entries(settings.selectedRareMods)) {
-    const categoryIndex = sourceRoot.categoryRegex.findIndex((category) =>
-      category.modifiers.some((modifier) => `${sourceRoot.basetype}-${category.category}-${modifier.desc}` === key));
-    const sourceCategory = sourceRoot.categoryRegex[categoryIndex];
-    const targetCategory = targetRoot.categoryRegex[categoryIndex];
-    const modifierIndex = sourceCategory?.modifiers.findIndex((modifier) =>
-      `${sourceRoot.basetype}-${sourceCategory.category}-${modifier.desc}` === key) ?? -1;
-    const targetModifier = targetCategory?.modifiers[modifierIndex];
-    if (targetCategory && targetModifier) {
-      selectedRareMods[`${targetRoot.basetype}-${targetCategory.category}-${targetModifier.desc}`] = {
-        ...selection,
-        itembase: targetItemBase,
-      };
-    }
-  }
-  const selectedMagicMods = settings.selectedMagicMods.flatMap((selection) => {
-    const categoryIndex = sourceRoot.categoryRegex.findIndex((category) => category.category === selection.category);
-    const sourceCategory = sourceRoot.categoryRegex[categoryIndex];
-    const targetCategory = targetRoot.categoryRegex[categoryIndex];
-    const modifierIndex = sourceCategory?.modifiers.findIndex((modifier) =>
-      modifier.affixes.some((affix) => affix.name === selection.desc)) ?? -1;
-    const sourceAffixes = sourceCategory?.modifiers[modifierIndex]?.affixes ?? [];
-    const affixIndex = sourceAffixes.findIndex((affix) => affix.name === selection.desc);
-    const targetAffix = targetCategory?.modifiers[modifierIndex]?.affixes[affixIndex];
-    return targetCategory && targetAffix ? [{
-      ...selection,
-      basetype: targetRoot.basetype,
-      category: targetCategory.category,
-      desc: targetAffix.name,
-      regex: targetAffix,
-    }] : [];
-  });
-  return {
-    settings: {...settings, itembase: targetItemBase, selectedRareMods, selectedMagicMods},
-    basetypes: targetBases,
-  };
-};
 
 export const rebaseWaystoneSettings = (
   settings: typeof defaultSettings.waystone,

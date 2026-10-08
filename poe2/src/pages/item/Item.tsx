@@ -19,7 +19,7 @@ import ModWarning from "@shared/core/item/ModWarning";
 import RareItemMatchSettings from "@shared/components/item/RareItemMatchSettings";
 import MagicItemMatchSettings from "@shared/components/item/MagicItemMatchSettings";
 import "./Item.css";
-import {rebaseItemSettings} from "@poe2/favoriteLanguageRenderer";
+import {rebaseItemSettings} from "@shared/core/item/RebaseItemSettings";
 
 export function Item() {
   const {currentProfile, language} = useContext(Poe2ProfileContext);

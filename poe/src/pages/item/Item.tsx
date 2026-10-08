@@ -1,8 +1,8 @@
-import React, {useContext, useEffect, useMemo, useState} from "react";
+import React, {useContext, useEffect, useMemo, useRef, useState} from "react";
 import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import {loadSettings, updateSettings} from "@poe/utils/LocalStorage";
-import Header from "@poe/components/Header";
+import {HeaderWithLanguage} from "@poe/components/Header";
 import RegexResultBox from "@shared/components/RegexResultBox/RegexResultBox";
 import ItemBaseSelector, {Itembase} from "@shared/core/item/ItemBaseSelector";
 import RareItemSelect, {RareModSelection} from "@shared/core/item/RareItemSelect";
@@ -16,19 +16,23 @@ import SimilarItemsInfo from "@shared/components/item/SimilarItemsInfo";
 import RareItemMatchSettings from "@shared/components/item/RareItemMatchSettings";
 import MagicItemMatchSettings from "@shared/components/item/MagicItemMatchSettings";
 import type {BaseType, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
-import {loadItemBasetypes, loadItemRegex} from "@poe/utils/loadData";
+import {itemSettingsLanguage, loadItemBasetypes, loadItemRegex} from "@poe/utils/loadData";
 import {findSimilarBases, groupAffixes} from "@shared/core/item/GroupUtils";
+import {rebaseItemSettings} from "@shared/core/item/RebaseItemSettings";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 import "./Item.css";
 
 const Item = () => {
-  const {globalProfile} = useContext(ProfileContext);
+  const {globalProfile, lang} = useContext(ProfileContext);
   const storedProfile = loadSettings(globalProfile);
   const favoritePage = useFavoritePage("items", storedProfile.itemCrafting);
   const profile = {...storedProfile, itemCrafting: favoritePage.initialConfiguration};
   const [result, setResult] = useState<string>("");
   const [basetypes, setBasetypes] = useState<BaseType[]>([]);
   const [itemRegex, setItemRegex] = useState<ItemRegex[]>([]);
+  const [dataLanguage, setDataLanguage] = useState<string>();
+  const [regexLanguage, setRegexLanguage] = useState<string>();
+  const loadedLanguage = useRef<string | undefined>(undefined);
 
   const affixMap: Record<string, ItemAffixRegex> = useMemo(() => groupAffixes(itemRegex), [itemRegex]);
 
@@ -52,14 +56,6 @@ const Item = () => {
   const nonMagicBases = ["heist"];
   const onlyMagicBases = ["utility flasks"];
 
-  useEffect(() => {
-    loadItemBasetypes().then(setBasetypes);
-  }, []);
-
-  useEffect(() => {
-    if (itembase) loadItemRegex().then(setItemRegex);
-  }, [itembase]);
-
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
 
@@ -69,6 +65,57 @@ const Item = () => {
     magicSettings: {onlyIfBothPrefixAndSuffix, matchOpenAffix},
     customText: {value: customTextStr, enabled: enableCustomText},
   };
+  const currentSettingsRef = useRef(currentSettings);
+  currentSettingsRef.current = currentSettings;
+
+  useEffect(() => {
+    let active = true;
+    setResult("");
+    setDataLanguage(undefined);
+    setItemRegex([]);
+    setRegexLanguage(undefined);
+    (async () => {
+      const current = currentSettingsRef.current;
+      const sourceLanguage = loadedLanguage.current
+        ?? await itemSettingsLanguage(favoritePage.initialLanguage, current.itembase);
+      const rebase = sourceLanguage !== lang;
+      // The mod data is large, so it is only loaded here when selected mods have to move language
+      const moveMods = rebase && (Object.keys(current.selectedRareMods).length > 0 || current.selectedMagicMods.length > 0);
+      const noRegex: Promise<ItemRegex[] | undefined> = Promise.resolve(undefined);
+      const [sourceBases, nextBases, sourceRegex, nextRegex] = await Promise.all([
+        loadItemBasetypes(sourceLanguage), loadItemBasetypes(lang),
+        moveMods ? loadItemRegex(sourceLanguage) : noRegex, moveMods ? loadItemRegex(lang) : noRegex,
+      ]);
+      if (!active) return;
+      if (rebase) {
+        const rebased = rebaseItemSettings(current, sourceBases, nextBases, sourceRegex ?? [], nextRegex ?? []).settings;
+        setItembase(rebased.itembase);
+        if (moveMods) {
+          setSelectedRareMods(rebased.selectedRareMods);
+          setSelectedMagicMods(rebased.selectedMagicMods);
+        }
+      }
+      loadedLanguage.current = lang;
+      setBasetypes(nextBases);
+      if (nextRegex) {
+        setItemRegex(nextRegex);
+        setRegexLanguage(lang);
+      }
+      setDataLanguage(lang);
+    })();
+    return () => { active = false; };
+  }, [lang, favoritePage.initialLanguage]);
+
+  useEffect(() => {
+    if (!itembase || dataLanguage !== lang || regexLanguage === lang) return;
+    let active = true;
+    loadItemRegex(lang).then((regex) => {
+      if (!active) return;
+      setItemRegex(regex);
+      setRegexLanguage(lang);
+    });
+    return () => { active = false; };
+  }, [itembase, dataLanguage, lang, regexLanguage]);
 
   useEffect(() => {
     if (itembase) {
@@ -88,6 +135,7 @@ const Item = () => {
   }, [itembase, itemRegex]);
 
   useEffect(() => {
+    if (dataLanguage !== lang) { setResult(""); return; }
     if (itembase && itembase.rarity === "Rare") {
       setResult(generateRareItemRegex(affixMap, currentSettings));
     }
@@ -98,13 +146,13 @@ const Item = () => {
       ...latest,
       itemCrafting: currentSettings
     }));
-  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases, itemRegex, basetypes]);
+  }, [selectedRareMods, selectedMagicMods, itembase, onlyIfBothPrefixAndSuffix, matchOpenAffix, matchAnyMod, matchPrefixAndSuffix, customTextStr, enableCustomText, matchSimilarBases, itemRegex, basetypes, dataLanguage, lang]);
 
   return (<>
-      <Header text={"Item"}/>
+      <HeaderWithLanguage text={"Item"}/>
       <RegexResultBox
         result={result}
-        favorite={favoritePage.action(currentSettings, {language: storedProfile.language})}
+        favorite={favoritePage.action(currentSettings, {language: lang})}
         reset={() => {
           setNonMagicalBase(false);
           setMatchSimilarBases(defaultSettings.itemCrafting.matchSimilarBases);
