@@ -120,7 +120,7 @@ export function generate3LinkStr(settings: PoeStringSettings): string {
 
   let result = "";
   if (settings.anyThreeLink) {
-    result = addExpression(result, "-\\w-");
+    result = addExpression(result, "-[rgbw]-");
     return result
   };
   if (rrr) result = addExpression(result, "r-r-r");
