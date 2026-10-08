@@ -1,0 +1,26 @@
+.spinner {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+    color: var(--color-text-muted);
+}
+
+.spinner-circle {
+    width: 18px;
+    height: 18px;
+    border: 3px solid var(--color-border-strong);
+    border-top-color: var(--color-accent-hover);
+    border-radius: 50%;
+    animation: spinner-rotate 0.8s linear infinite;
+}
+
+@keyframes spinner-rotate {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .spinner-circle {
+        animation-duration: 2.4s;
+    }
+}

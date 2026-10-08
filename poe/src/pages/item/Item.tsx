@@ -19,6 +19,8 @@ import type {BaseType, ItemAffixRegex, ItemRegex} from "@shared/generated/item";
 import {itemSettingsLanguage, loadItemBasetypes, loadItemRegex} from "@poe/utils/loadData";
 import {findSimilarBases, groupAffixes} from "@shared/core/item/GroupUtils";
 import {rebaseItemSettings} from "@shared/core/item/RebaseItemSettings";
+import {Spinner} from "@shared/components/Spinner/Spinner";
+import {RepoeLanguage} from "@poe/utils/Languages";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 import "./Item.css";
 
@@ -55,6 +57,8 @@ const Item = () => {
   const [onlyMagicBase, setOnlyMagicBase] = useState(false);
   const nonMagicBases = ["heist"];
   const onlyMagicBases = ["utility flasks"];
+
+  const loading = dataLanguage !== lang || (itembase !== undefined && regexLanguage !== lang);
 
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
@@ -177,6 +181,7 @@ const Item = () => {
         enableBug={true}
       />
       <ItemInfoBanner/>
+      {loading && <Spinner className="item-loading" label={`Loading ${RepoeLanguage[lang].name} item data…`}/>}
 
       <ItemBaseSelector itemBase={itembase} basetypes={basetypes} setItemBase={setItembase}
                         nonMagicalBase={nonMagicalBase}
