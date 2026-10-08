@@ -3897,7 +3897,7 @@
                     "links": null
                 },
                 {
-                    "id": "128182",
+                    "id": "103527",
                     "name": "Piscator's Vigil",
                     "baseType": "Kinetic Wand",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9QaXNjYXRvcnNWaWdpbCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/332f80f7ac/PiscatorsVigil.png",
@@ -6645,7 +6645,7 @@
                     "links": null
                 },
                 {
-                    "id": "103533",
+                    "id": "128308",
                     "name": "Obliteration",
                     "baseType": "Omen Wand",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvV2VhcG9ucy9PbmVIYW5kV2VhcG9ucy9XYW5kcy9NYWxlZGljdCIsInciOjEsImgiOjMsInNjYWxlIjoxfV0/2ddc131782/Maledict.png",
@@ -7841,7 +7841,7 @@
             "regex": "\"eted b\"",
             "items": [
                 {
-                    "id": "168285",
+                    "id": "168288",
                     "name": "Ralakesh's Impatience",
                     "baseType": "Riveted Boots",
                     "icon": "https://web.poecdn.com/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQXJtb3Vycy9Cb290cy9SYWxha2VzaHNJbXBhdGllbmNlIiwidyI6MiwiaCI6Miwic2NhbGUiOjF9XQ/54540f0f3d/RalakeshsImpatience.png",

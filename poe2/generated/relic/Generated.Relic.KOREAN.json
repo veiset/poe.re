@@ -1,7 +1,7 @@
 [
     {
         "name": "최대 생명력 #% 증가",
-        "regex": "ᆼ력 \\d+",
+        "regex": "ᅢᆼᄆ",
         "values": [],
         "ranges": [
             [
@@ -25,7 +25,7 @@
     },
     {
         "name": "명예 회복량 #% 증가",
-        "regex": "예 ᄒ",
+        "regex": "ᅩᆨᄅ",
         "values": [],
         "ranges": [
             [
@@ -36,9 +36,59 @@
         "affix": "PREFIX"
     },
     {
-        "name": "몬스터가 #%의 확률로 신성한 물을 2배로 떨어뜨림",
-        "regex": "2배ᄅ",
+        "name": "시련 시작 시 신성한 물 # 획득",
+        "regex": "ᆫ ᄉ",
         "values": [],
+        "ranges": [
+            [
+                30.0,
+                59.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "방어도, 회피, 에너지 보호막 #% 증가",
+        "regex": "ᅥᄃ",
+        "values": [],
+        "ranges": [
+            [
+                20.0,
+                70.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "덫이 주는 피해 #% 감소",
+        "regex": "ᅥᆾ",
+        "values": [],
+        "ranges": [
+            [
+                5.0,
+                10.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "이동 속도 #% 증가",
+        "regex": "^이ᄃ",
+        "values": [],
+        "ranges": [
+            [
+                3.0,
+                10.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "몬스터가 #%의 확률로 신성한 물을 #배로 떨어뜨림",
+        "regex": "ᆯ으",
+        "values": [
+            2.0
+        ],
         "ranges": [
             [
                 5.0,
@@ -48,9 +98,11 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "분수가 #%의 확률로 신성한 물 2배 제공",
-        "regex": "^분ᄉ",
-        "values": [],
+        "name": "분수가 #%의 확률로 신성한 물 #배 제공",
+        "regex": "ᅦᄀ",
+        "values": [
+            2.0
+        ],
         "ranges": [
             [
                 5.0,
@@ -58,22 +110,127 @@
             ]
         ],
         "affix": "SUFFIX"
+    },
+    {
+        "name": "몬스터가 떨어뜨리는 유물의 수량 #% 증가",
+        "regex": "ᅮᆯ의",
+        "values": [],
+        "ranges": [
+            [
+                6.0,
+                20.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "회피 구르기 거리 +#미터",
+        "regex": "거",
+        "values": [],
+        "ranges": [
+            [
+                0.3,
+                0.7
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "디버프의 감속 효력 #% 감소",
+        "regex": "디",
+        "values": [],
+        "ranges": [
+            [
+                8.0,
+                20.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "플레이어에 대한 명중의 치명타 피해 보너스 #% 감소",
+        "regex": "ᅢᄒ",
+        "values": [],
+        "ranges": [
+            [
+                12.0,
+                25.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "명예 저항 +#%",
+        "regex": "^명예 ᄌ",
+        "values": [],
+        "ranges": [
+            [
+                8.0,
+                40.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "몬스터가 떨어뜨리는 열쇠의 수량 #% 증가",
+        "regex": "ᅬᄋ",
+        "values": [],
+        "ranges": [
+            [
+                6.0,
+                25.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "희귀 몬스터가 받는 피해 #% 증가",
+        "regex": "ᅱ 몬스터가 ᄇ",
+        "values": [],
+        "ranges": [
+            [
+                11.0,
+                30.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "보스가 받는 피해 #% 증가",
+        "regex": "ᅳ가 ᄇ",
+        "values": [],
+        "ranges": [
+            [
+                11.0,
+                30.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "상인이 선택지 #개 추가 보유",
+        "regex": "ᅥᆫᄐ",
+        "values": [
+            1.0
+        ],
+        "ranges": [],
+        "affix": "PREFIX"
     },
     {
         "name": "상인 가격 #% 감소",
-        "regex": "가겨",
+        "regex": "가ᄀ",
         "values": [],
         "ranges": [
             [
-                -10.0,
-                -6.0
+                6.0,
+                10.0
             ]
         ],
         "affix": "SUFFIX"
     },
     {
         "name": "보스 처치 시 명예 # 회복",
-        "regex": "스 ᄎ",
+        "regex": "ᅥᄎ",
         "values": [],
         "ranges": [
             [
@@ -85,7 +242,7 @@
     },
     {
         "name": "마라케스 성소 숭배 시 명예 # 회복",
-        "regex": "^마ᄅ",
+        "regex": "ᅡᄏ",
         "values": [],
         "ranges": [
             [
@@ -96,20 +253,72 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "시련 시작 시 신성한 물 # 획득",
-        "regex": "련 시",
+        "name": "시련 지도에서 방 #개가 추가로 드러남",
+        "regex": "ᅥᄂ",
         "values": [],
         "ranges": [
             [
-                30.0,
-                59.0
+                1.0,
+                4.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "몬스터가 받는 피해 #% 증가",
+        "regex": "^몬스터가 ᄇ",
+        "values": [],
+        "ranges": [
+            [
+                11.0,
+                30.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "열쇠 획득 시 #%의 확률로 #개 더 획득",
+        "regex": "ᅢ ᄃ",
+        "values": [
+            1.0
+        ],
+        "ranges": [
+            [
+                7.0,
+                16.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "명예를 모두 잃게 될 경우 #% 확률로 대신 명예 # 획득",
+        "regex": "ᆶ",
+        "values": [
+            1.0
+        ],
+        "ranges": [
+            [
+                5.0,
+                12.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "층 완료 시 각각의 열쇠가 #% 확률로 업그레이드",
+        "regex": "츠",
+        "values": [],
+        "ranges": [
+            [
+                3.0,
+                9.0
             ]
         ],
         "affix": "PREFIX"
     },
     {
         "name": "방 완료 시 신성한 물 # 획득",
-        "regex": "ᅭ 시 시",
+        "regex": "ᅭ 시 ᄉ",
         "values": [],
         "ranges": [
             [
@@ -133,7 +342,7 @@
     },
     {
         "name": "고난을 획득해야 할 때 #%의 확률로 긴급회피",
-        "regex": "ᅳᆨ해ᄋ",
+        "regex": "ᆸᄒ",
         "values": [],
         "ranges": [
             [
@@ -144,149 +353,8 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "몬스터가 받는 피해 #% 증가",
-        "regex": "^몬스터가 바",
-        "values": [],
-        "ranges": [
-            [
-                11.0,
-                30.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "희귀 몬스터가 받는 피해 #% 증가",
-        "regex": "ᅱ 몬스터가 ᄇ",
-        "values": [],
-        "ranges": [
-            [
-                11.0,
-                30.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "보스가 받는 피해 #% 증가",
-        "regex": "ᅳ가 바",
-        "values": [],
-        "ranges": [
-            [
-                11.0,
-                30.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "상인이 선택지 1개 추가 보유",
-        "regex": "ᅢᆨᄌ",
-        "values": [
-            1.0
-        ],
-        "ranges": [],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "몬스터가 떨어뜨리는 유물의 수량 #% 증가",
-        "regex": "는 유ᄆ",
-        "values": [],
-        "ranges": [
-            [
-                6.0,
-                20.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "방어도, 회피, 에너지 보호막 #% 증가",
-        "regex": "ᅡᆨ \\d+",
-        "values": [],
-        "ranges": [
-            [
-                20.0,
-                70.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "덫이 주는 피해 #% 감소",
-        "regex": "^덫이",
-        "values": [],
-        "ranges": [
-            [
-                -10.0,
-                -5.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "이동 속도 #% 증가",
-        "regex": "^이동 ᄉ",
-        "values": [],
-        "ranges": [
-            [
-                3.0,
-                10.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "회피 구르기 거리 #미터",
-        "regex": "ᅵ터$",
-        "values": [],
-        "ranges": [
-            [
-                3.0,
-                7.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "디버프의 감속 효력 #% 감소",
-        "regex": "^디버프ᄋ",
-        "values": [],
-        "ranges": [
-            [
-                -20.0,
-                -8.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "플레이어에 대한 명중의 치명타 피해 보너스 #% 감소",
-        "regex": "ᅳ \\d+",
-        "values": [],
-        "ranges": [
-            [
-                12.0,
-                25.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "열쇠 획득 시 #%의 확률로 1개 더 획득",
-        "regex": "ᆯ로 1",
-        "values": [],
-        "ranges": [
-            [
-                7.0,
-                16.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
         "name": "열쇠 획득 시 명예 # 회복",
-        "regex": "ᆨ 시 며",
+        "regex": "ᆨ 시 ᄆ",
         "values": [],
         "ranges": [
             [
@@ -297,20 +365,8 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "명예 저항 #%",
-        "regex": "^명예 저항 \\d+",
-        "values": [],
-        "ranges": [
-            [
-                8.0,
-                40.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "최대 명예 저항 #%",
-        "regex": "^최대 명예 ᄌ",
+        "name": "최대 명예 저항 +#%",
+        "regex": "ᅢ 명예 ᄌ",
         "values": [],
         "ranges": [
             [
@@ -319,41 +375,5 @@
             ]
         ],
         "affix": "SUFFIX"
-    },
-    {
-        "name": "몬스터가 떨어뜨리는 열쇠의 수량 #% 증가",
-        "regex": "ᆯ쇠ᄋ",
-        "values": [],
-        "ranges": [
-            [
-                6.0,
-                25.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "명예를 모두 잃게 될 경우 #% 확률로 대신 명예 1 획득",
-        "regex": "ᅵᆶᄀ",
-        "values": [],
-        "ranges": [
-            [
-                5.0,
-                12.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "층 완료 시 각각의 열쇠가 #% 확률로 업그레이드",
-        "regex": "^츠",
-        "values": [],
-        "ranges": [
-            [
-                3.0,
-                9.0
-            ]
-        ],
-        "affix": "PREFIX"
     }
 ]

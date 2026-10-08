@@ -1,123 +1,289 @@
 {
     "tokens": [
         {
-            "id": -1853956098,
-            "regex": "터의 원소 ᄌ",
-            "rawText": "몬스터의 원소 저항 +#%",
-            "generalizedText": "^몬스터의 원소 저항 +#%$",
+            "id": -1718797825,
+            "regex": "ᆮᄂ",
+            "rawText": "몬스터가 치명타 명중으로 받는 추가 피해 (15-30)% 감소",
+            "generalizedText": "^몬스터가 치명타 명중으로 받는 추가 피해 #% 감소$",
             "options": {
-                "name": "- 분광기",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "- 장애물",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1824265931,
-            "regex": "ᅥᆨ \\d+% 증ᄀ",
-            "rawText": "몬스터의 기절 축적 #% 증가",
-            "generalizedText": "^몬스터의 기절 축적 #% 증가$",
+            "id": -1698573306,
+            "regex": "ᅥᆷᄒ",
+            "rawText": "지역에 점화 지대 존재",
+            "generalizedText": "^지역에 점화 지대 존재$",
             "options": {
-                "name": "충격적인",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "- 화염",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1755458537,
-            "regex": "ᆯ 유발$",
-            "rawText": "몬스터가 명중 시 #%의 확률로 출혈 유발",
-            "generalizedText": "^몬스터가 명중 시 #%의 확률로 출혈 유발$",
-            "options": {
-                "name": "구멍을 뚫는",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1557009766,
-            "regex": "ᅢ 피해로 주",
-            "rawText": "몬스터가 피해의 #%를 추가 번개 피해로 줌",
-            "generalizedText": "^몬스터가 피해의 #%를 추가 번개 피해로 줌$",
-            "options": {
-                "name": "천둥 같은",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1365838719,
-            "regex": "ᅥ 피해 \\d+",
-            "rawText": "몬스터 피해 #% 증가",
-            "generalizedText": "^몬스터 피해 #% 증가$",
-            "options": {
-                "name": "통증의",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1349886626,
-            "regex": "어의 새",
-            "rawText": "플레이어의 생명력 및 에너지 보호막 회복 속도 #% 감폭",
+            "id": -1596647297,
+            "regex": "ᆨ ᄆ",
+            "rawText": "플레이어의 생명력 및 에너지 보호막 회복 속도 (40-20)% 감폭",
             "generalizedText": "^플레이어의 생명력 및 에너지 보호막 회복 속도 #% 감폭$",
             "options": {
                 "name": "- 질식",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1213470958,
-            "regex": "ᅩᆨ도 \\d+% 증가$",
-            "rawText": "몬스터의 공격, 시전 및 이동 속도 #% 증가",
+            "id": -1497188554,
+            "regex": "ᅵ 쇠",
+            "rawText": "지역이 쇠약화 저주에 걸림",
+            "generalizedText": "^지역이 쇠약화 저주에 걸림$",
+            "options": {
+                "name": "- 쇠약화",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1463814744,
+            "regex": "ᅳᄏ",
+            "rawText": "플레이어의 플라스크 충전량 (35-20)% 감소",
+            "generalizedText": "^플레이어의 플라스크 충전량 #% 감소$",
+            "options": {
+                "name": "- 가뭄",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1430091794,
+            "regex": "냉",
+            "rawText": "몬스터가 피해의 (5-24)%를 추가 냉기 피해로 줌",
+            "generalizedText": "^몬스터가 피해의 #%를 추가 냉기 피해로 줌$",
+            "options": {
+                "name": "동상 걸린",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1427494180,
+            "regex": "ᆷ ᄑ",
+            "rawText": "몬스터가 피해의 (5-24)%를 추가 화염 피해로 줌",
+            "generalizedText": "^몬스터가 피해의 #%를 추가 화염 피해로 줌$",
+            "options": {
+                "name": "지옥불의",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1389952336,
+            "regex": "ᅡ ᄏ",
+            "rawText": "몬스터가 피해의 (5-24)%를 추가 카오스 피해로 줌",
+            "generalizedText": "^몬스터가 피해의 #%를 추가 카오스 피해로 줌$",
+            "options": {
+                "name": "부정한",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1307791168,
+            "regex": "축",
+            "rawText": "몬스터의 기절 축적 (50-110)% 증가",
+            "generalizedText": "^몬스터의 기절 축적 #% 증가$",
+            "options": {
+                "name": "충격적인",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1291605512,
+            "regex": "ᅵ 워",
+            "rawText": "지역이 원소 약화 저주에 걸림",
+            "generalizedText": "^지역이 원소 약화 저주에 걸림$",
+            "options": {
+                "name": "- 침식",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1157042950,
+            "regex": "ᅪᆨᄃ",
+            "rawText": "몬스터의 정확도 (10-50)% 증가",
+            "generalizedText": "^몬스터의 정확도 #% 증가$",
+            "options": {
+                "name": "정확한",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1062239040,
+            "regex": "ᅡᄀ",
+            "rawText": "몬스터가 준 물리 피해의 (15-45)%와 동일한 방어구 파괴",
+            "generalizedText": "^몬스터가 준 물리 피해의 #%와 동일한 방어구 파괴$",
+            "options": {
+                "name": "산산조각의",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -834332200,
+            "regex": "해ᄀ",
+            "rawText": "몬스터 피해가 (6-16)%의 원소 저항 관통",
+            "generalizedText": "^몬스터 피해가 #%의 원소 저항 관통$",
+            "options": {
+                "name": "관통의",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -668086108,
+            "regex": "ᆸᄋ",
+            "rawText": "몬스터가 장갑을 두른 몬스터",
+            "generalizedText": "^몬스터가 장갑을 두른 몬스터$",
+            "options": {
+                "name": "- 인내",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -357737163,
+            "regex": "ᅮᆼᄃ",
+            "rawText": "몬스터가 명중 시 (13-40)%의 확률로 중독 유발",
+            "generalizedText": "^몬스터가 명중 시 #%의 확률로 중독 유발$",
+            "options": {
+                "name": "독성",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -194879968,
+            "regex": "슬",
+            "rawText": "지역이 시간의 사슬 저주에 걸림",
+            "generalizedText": "^지역이 시간의 사슬 저주에 걸림$",
+            "options": {
+                "name": "- 감속",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 345823526,
+            "regex": "ᆫ개",
+            "rawText": "몬스터가 피해의 (5-24)%를 추가 번개 피해로 줌",
+            "generalizedText": "^몬스터가 피해의 #%를 추가 번개 피해로 줌$",
+            "options": {
+                "name": "천둥 같은",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 570723712,
+            "regex": "ᅥ의 원소 ᄌ",
+            "rawText": "몬스터의 원소 저항 +(20-40)%",
+            "generalizedText": "^몬스터의 원소 저항 +#%$",
+            "options": {
+                "name": "- 분광기",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 683350088,
+            "regex": ",",
+            "rawText": "몬스터의 공격, 시전 및 이동 속도 (10-15)% 증가",
             "generalizedText": "^몬스터의 공격, 시전 및 이동 속도 #% 증가$",
             "options": {
                 "name": "쾌속",
-                "types": [
-                    "PREFIX"
-                ],
+                "prefix": true,
                 "tags": [
                     "map_key_high",
                     "map_key_highest"
@@ -125,513 +291,890 @@
             }
         },
         {
-            "id": -1160279127,
-            "regex": "ᆨ에 감",
-            "rawText": "지역에 감전 지대 존재",
-            "generalizedText": "^지역에 감전 지대 존재$",
-            "options": {
-                "name": "감전의",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1120068096,
-            "regex": "ᅮ른",
-            "rawText": "몬스터가 장갑을 두른 몬스터",
-            "generalizedText": "^몬스터가 장갑을 두른 몬스터$",
-            "options": {
-                "name": "- 인내",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1045460228,
-            "regex": "어의 ᄌ",
-            "rawText": "플레이어의 재사용 대기시간 회복 속도 #% 감폭",
-            "generalizedText": "^플레이어의 재사용 대기시간 회복 속도 #% 감폭$",
-            "options": {
-                "name": "- 피로",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -769089840,
-            "regex": "터의 사",
-            "rawText": "몬스터의 상태 이상 한계치 #% 증가|몬스터의 기절 한계치 #% 증가",
-            "generalizedText": "^몬스터의 상태 이상 한계치 #% 증가$|^몬스터의 기절 한계치 #% 증가$",
-            "options": {
-                "name": "- 변함없는 자",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -622268547,
-            "regex": "ᅥ 저ᄒ",
-            "rawText": "플레이어 저항 최대치 #%",
-            "generalizedText": "^플레이어 저항 최대치 #%$",
-            "options": {
-                "name": "- 노출",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -601837285,
-            "regex": "ᆨ용 \\d+",
-            "rawText": "몬스터의 원소 상태 이상 적용 #% 증가",
-            "generalizedText": "^몬스터의 원소 상태 이상 적용 #% 증가$",
-            "options": {
-                "name": "- 압도",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -323807626,
-            "regex": "ᅳ \\d+%",
-            "rawText": "몬스터의 치명타 명중 확률 #% 증가|몬스터의 치명타 피해 보너스 #%",
-            "generalizedText": "^몬스터의 치명타 명중 확률 #% 증가$|^몬스터의 치명타 피해 보너스 #%$",
-            "options": {
-                "name": "파멸적인",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 41076165,
-            "regex": "ᅪᆨ도 \\d+%",
-            "rawText": "몬스터의 정확도 #% 증가",
-            "generalizedText": "^몬스터의 정확도 #% 증가$",
-            "options": {
-                "name": "정밀한",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 71803016,
-            "regex": "치로 ᄒ",
-            "rawText": "몬스터가 최대 생명력의 #%를 추가 에너지 보호막 최대치로 획득",
-            "generalizedText": "^몬스터가 최대 생명력의 #%를 추가 에너지 보호막 최대치로 획득$",
-            "options": {
-                "name": "- 완충",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 98060174,
-            "regex": "이 워",
-            "rawText": "지역이 원소 약화 저주에 걸림",
-            "generalizedText": "^지역이 원소 약화 저주에 걸림$",
-            "options": {
-                "name": "- 침식",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 242729252,
-            "regex": "ᆼ전ᄅ",
-            "rawText": "플레이어의 플라스크 충전량 #% 감소",
-            "generalizedText": "^플레이어의 플라스크 충전량 #% 감소$",
-            "options": {
-                "name": "- 가뭄",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 287876360,
-            "regex": "ᅡᆫ 방어구 ᄑ",
-            "rawText": "몬스터가 준 물리 피해의 #%와 동일한 방어구 파괴",
-            "generalizedText": "^몬스터가 준 물리 피해의 #%와 동일한 방어구 파괴$",
-            "options": {
-                "name": "산산조각의",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 748500562,
-            "regex": "ᅵ 쇠",
-            "rawText": "지역이 쇠약화 저주에 걸림",
-            "generalizedText": "^지역이 쇠약화 저주에 걸림$",
-            "options": {
-                "name": "- 쇠약화",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 759211310,
-            "regex": "ᆷ 피해로 주",
-            "rawText": "몬스터가 피해의 #%를 추가 화염 피해로 줌",
-            "generalizedText": "^몬스터가 피해의 #%를 추가 화염 피해로 줌$",
-            "options": {
-                "name": "지옥불의",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 837491691,
-            "regex": "ᅧᆨ \\d+% ᄌ",
-            "rawText": "몬스터의 생명력 #% 증폭",
-            "generalizedText": "^몬스터의 생명력 #% 증폭$",
-            "options": {
-                "name": "강인한",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 932314126,
-            "regex": "ᅥ가 치",
-            "rawText": "몬스터가 치명타 명중으로 받는 추가 피해 #% 감소",
-            "generalizedText": "^몬스터가 치명타 명중으로 받는 추가 피해 #% 감소$",
-            "options": {
-                "name": "- 장애물",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1064518670,
-            "regex": "ᅳ 피해로 줌",
-            "rawText": "몬스터가 피해의 #%를 추가 카오스 피해로 줌",
-            "generalizedText": "^몬스터가 피해의 #%를 추가 카오스 피해로 줌$",
-            "options": {
-                "name": "부정한",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1169197699,
-            "regex": "ᅳᆫ 저주 ᄒ",
-            "rawText": "몬스터에게 적용되는 저주 효과 #% 감폭",
-            "generalizedText": "^몬스터에게 적용되는 저주 효과 #% 감폭$",
-            "options": {
-                "name": "- 사술 결계",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1204156975,
-            "regex": "ᆨ 유발$",
-            "rawText": "몬스터가 명중 시 #%의 확률로 중독 유발",
-            "generalizedText": "^몬스터가 명중 시 #%의 확률로 중독 유발$",
-            "options": {
-                "name": "독성",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1271079886,
-            "regex": "%의 ᄋ",
-            "rawText": "몬스터 피해가 #%의 원소 저항 관통",
-            "generalizedText": "^몬스터 피해가 #%의 원소 저항 관통$",
-            "options": {
-                "name": "관통의",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1647004743,
-            "regex": "슬 ᄌ",
-            "rawText": "지역이 시간의 사슬 저주에 걸림",
-            "generalizedText": "^지역이 시간의 사슬 저주에 걸림$",
-            "options": {
-                "name": "- 감속",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 1672937037,
-            "regex": "기 피해로 주",
-            "rawText": "몬스터가 피해의 #%를 추가 냉기 피해로 줌",
-            "generalizedText": "^몬스터가 피해의 #%를 추가 냉기 피해로 줌$",
-            "options": {
-                "name": "동상 걸린",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1727231452,
-            "regex": "ᅥ가 회",
+            "id": 876824218,
+            "regex": "ᅬ피ᄒ",
             "rawText": "몬스터가 회피하는 몬스터",
             "generalizedText": "^몬스터가 회피하는 몬스터$",
             "options": {
                 "name": "- 회피",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 2062549497,
-            "regex": "역에 ᄌ",
-            "rawText": "지역에 점화 지대 존재",
-            "generalizedText": "^지역에 점화 지대 존재$",
+            "id": 887697611,
+            "regex": "ᅥ ᄌ",
+            "rawText": "플레이어 저항 최대치 -(10-3)%",
+            "generalizedText": "^플레이어 저항 최대치 -#%$",
             "options": {
-                "name": "불을 뿜는",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "- 노출",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 2114511301,
-            "regex": "ᆨ에 어",
+            "id": 899028336,
+            "regex": "ᅨᄎ",
+            "rawText": "몬스터의 기절 한계치 (30-79)% 증가|몬스터의 상태 이상 한계치 (30-79)% 증가",
+            "generalizedText": "^몬스터의 기절 한계치 #% 증가$|^몬스터의 상태 이상 한계치 #% 증가$",
+            "options": {
+                "name": "- 변함없는 자",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1082183842,
+            "regex": "ᅢ \\d+% ᄌ",
+            "rawText": "몬스터 피해 (5-24)% 증가",
+            "generalizedText": "^몬스터 피해 #% 증가$",
+            "options": {
+                "name": "통증의",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1140153707,
+            "regex": "ᅮᆯᄒ",
+            "rawText": "몬스터가 명중 시 (5-25)%의 확률로 출혈 유발",
+            "generalizedText": "^몬스터가 명중 시 #%의 확률로 출혈 유발$",
+            "options": {
+                "name": "구멍을 뚫는",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1346756180,
+            "regex": "ᅢᄉ",
+            "rawText": "플레이어의 재사용 대기시간 회복 속도 (30-15)% 감폭",
+            "generalizedText": "^플레이어의 재사용 대기시간 회복 속도 #% 감폭$",
+            "options": {
+                "name": "- 피로",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1411067874,
+            "regex": "ᅳᆨ",
+            "rawText": "몬스터가 최대 생명력의 (12-25)%를 추가 에너지 보호막 최대치로 획득",
+            "generalizedText": "^몬스터가 최대 생명력의 #%를 추가 에너지 보호막 최대치로 획득$",
+            "options": {
+                "name": "- 완충",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1518963479,
+            "regex": "ᅩᄂ",
+            "rawText": "몬스터의 치명타 명중 확률 (80-300)% 증가|몬스터의 치명타 피해 보너스 +(11-30)%",
+            "generalizedText": "^몬스터의 치명타 명중 확률 #% 증가$|^몬스터의 치명타 피해 보너스 +#%$",
+            "options": {
+                "name": "파멸적인",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1606482166,
+            "regex": "얼ᄋ",
             "rawText": "지역에 얼음 지대 존재",
             "generalizedText": "^지역에 얼음 지대 존재$",
             "options": {
-                "name": "진눈깨비",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "- 진눈깨비",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1716791865,
+            "regex": "ᆼ ᄌ",
+            "rawText": "몬스터의 원소 상태 이상 적용 (60-130)% 증가",
+            "generalizedText": "^몬스터의 원소 상태 이상 적용 #% 증가$",
+            "options": {
+                "name": "- 압도",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1760181301,
+            "regex": "ᅳᆼᄑ",
+            "rawText": "몬스터의 생명력 (10-30)% 증폭",
+            "generalizedText": "^몬스터의 생명력 #% 증폭$",
+            "options": {
+                "name": "강인한",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2039236504,
+            "regex": "게",
+            "rawText": "몬스터에게 적용되는 저주 효과 (50-20)% 감폭",
+            "generalizedText": "^몬스터에게 적용되는 저주 효과 #% 감폭$",
+            "options": {
+                "name": "- 사술 결계",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2071181624,
+            "regex": "ᅦ 가",
+            "rawText": "지역에 감전 지대 존재",
+            "generalizedText": "^지역에 감전 지대 존재$",
+            "options": {
+                "name": "- 감전",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         }
     ],
     "optimizationTable": {
-        "-1853956098:-601837285": {
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:1411067874": {
             "ids": [
-                -1853956098,
-                -601837285
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
             ],
-            "regex": "터의 워",
-            "weight": 9,
-            "count": 2
+            "regex": "ᅮᄀ",
+            "weight": 2,
+            "count": 6
         },
-        "-1755458537:1204156975": {
+        "-1718797825:899028336:1518963479:1716791865": {
             "ids": [
-                -1755458537,
-                1204156975
+                -1718797825,
+                899028336,
+                1518963479,
+                1716791865
             ],
-            "regex": "ᆼ 시 \\d+",
-            "weight": 11,
-            "count": 2
-        },
-        "-1557009766:759211310:1064518670:1672937037": {
-            "ids": [
-                -1557009766,
-                759211310,
-                1064518670,
-                1672937037
-            ],
-            "regex": "ᅩ 줌",
-            "weight": 7,
+            "regex": "ᆼᄐ",
+            "weight": 2,
             "count": 4
         },
-        "-1365838719:1271079886": {
+        "-1718797825:1518963479": {
             "ids": [
-                -1365838719,
-                1271079886
+                -1718797825,
+                1518963479
             ],
-            "regex": "ᅳ터 ᄑ",
-            "weight": 7,
+            "regex": "치ᄆ",
+            "weight": 3,
             "count": 2
         },
-        "-1160279127:2062549497:2114511301": {
+        "-1718797825:-357737163:1140153707:1518963479": {
             "ids": [
-                -1160279127,
-                2062549497,
-                2114511301
+                -1718797825,
+                -357737163,
+                1140153707,
+                1518963479
             ],
-            "regex": "ᅵ대 ᄌ",
-            "weight": 7,
-            "count": 3
+            "regex": "ᅧᆼᄌ",
+            "weight": 3,
+            "count": 4
         },
-        "98060174:748500562:1647004743": {
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:1518963479": {
             "ids": [
-                98060174,
-                748500562,
-                1647004743
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1518963479
             ],
-            "regex": "ᆯ림",
-            "weight": 4,
-            "count": 3
+            "regex": "ᅡ ᄑ",
+            "weight": 5,
+            "count": 6
         },
-        "98060174:748500562": {
+        "-1718797825:1411067874": {
             "ids": [
-                98060174,
-                748500562
+                -1718797825,
+                1411067874
             ],
-            "regex": "ᆨ화 ᄌ",
-            "weight": 7,
+            "regex": "ᅡ ᄎ",
+            "weight": 5,
             "count": 2
         },
-        "748500562:1647004743": {
+        "-1718797825:-1596647297:-1463814744:1346756180:2039236504": {
             "ids": [
-                748500562,
-                1647004743
+                -1718797825,
+                -1596647297,
+                -1463814744,
+                1346756180,
+                2039236504
             ],
-            "regex": "ᅧᆨ이 ᄉ",
+            "regex": "% ᄀ",
+            "weight": 5,
+            "count": 5
+        },
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526": {
+            "ids": [
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526
+            ],
+            "regex": "가 ᄑ",
+            "weight": 6,
+            "count": 5
+        },
+        "-1718797825:1082183842": {
+            "ids": [
+                -1718797825,
+                1082183842
+            ],
+            "regex": "ᅢ \\d+",
             "weight": 8,
+            "count": 2
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1411067874:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1411067874,
+                1606482166,
+                2071181624
+            ],
+            "regex": "ᅧᆨᄋ",
+            "weight": 3,
+            "count": 7
+        },
+        "-1698573306:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                1606482166,
+                2071181624
+            ],
+            "regex": "ᆨ에",
+            "weight": 3,
+            "count": 3
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1606482166,
+                2071181624
+            ],
+            "regex": "역ᄋ",
+            "weight": 4,
+            "count": 6
+        },
+        "-1698573306:-1497188554:-1291605512": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512
+            ],
+            "regex": "ᅪ ᄌ",
+            "weight": 5,
+            "count": 3
+        },
+        "-1698573306:2039236504": {
+            "ids": [
+                -1698573306,
+                2039236504
+            ],
+            "regex": "ᅦ ᄌ",
+            "weight": 5,
+            "count": 2
+        },
+        "-1596647297:-1430091794:1411067874:1760181301": {
+            "ids": [
+                -1596647297,
+                -1430091794,
+                1411067874,
+                1760181301
+            ],
+            "regex": "ᅢᆼ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1596647297:-1157042950:683350088:1346756180:1411067874": {
+            "ids": [
+                -1596647297,
+                -1157042950,
+                683350088,
+                1346756180,
+                1411067874
+            ],
+            "regex": "ᆨᄃ",
+            "weight": 2,
+            "count": 5
+        },
+        "-1596647297:1411067874": {
+            "ids": [
+                -1596647297,
+                1411067874
+            ],
+            "regex": "ᅦᄂ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:683350088": {
+            "ids": [
+                -1596647297,
+                683350088
+            ],
+            "regex": "ᅵᆾ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:1346756180": {
+            "ids": [
+                -1596647297,
+                1346756180
+            ],
+            "regex": "ᅬᄇ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:1411067874:1760181301": {
+            "ids": [
+                -1596647297,
+                1411067874,
+                1760181301
+            ],
+            "regex": "생",
+            "weight": 3,
+            "count": 3
+        },
+        "-1596647297:1346756180:1760181301:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                1760181301,
+                2039236504
+            ],
+            "regex": "폭",
+            "weight": 3,
+            "count": 4
+        },
+        "-1596647297:-1157042950:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                -1157042950,
+                683350088,
+                1346756180
+            ],
+            "regex": "ᆨ도",
+            "weight": 3,
+            "count": 4
+        },
+        "-1596647297:-1463814744:887697611:1346756180": {
+            "ids": [
+                -1596647297,
+                -1463814744,
+                887697611,
+                1346756180
+            ],
+            "regex": "플",
+            "weight": 3,
+            "count": 4
+        },
+        "-1596647297:-1463814744:1346756180": {
+            "ids": [
+                -1596647297,
+                -1463814744,
+                1346756180
+            ],
+            "regex": "어ᄋ",
+            "weight": 3,
+            "count": 3
+        },
+        "-1596647297:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                683350088,
+                1346756180
+            ],
+            "regex": "ᅩᆨᄃ",
+            "weight": 3,
+            "count": 3
+        },
+        "-1596647297:1346756180:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                2039236504
+            ],
+            "regex": "ᅡᆷᄑ",
+            "weight": 3,
+            "count": 3
+        },
+        "-1596647297:1760181301": {
+            "ids": [
+                -1596647297,
+                1760181301
+            ],
+            "regex": "ᅴ 생",
+            "weight": 7,
+            "count": 2
+        },
+        "-1596647297:899028336:1760181301": {
+            "ids": [
+                -1596647297,
+                899028336,
+                1760181301
+            ],
+            "regex": "ᅥ의 ᄉ",
+            "weight": 7,
+            "count": 3
+        },
+        "-1497188554:-1291605512:-194879968": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968
+            ],
+            "regex": "주ᄋ",
+            "weight": 3,
+            "count": 3
+        },
+        "-1497188554:-1291605512:-194879968:2071181624": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968,
+                2071181624
+            ],
+            "regex": "ᅦ ᄀ",
+            "weight": 5,
+            "count": 4
+        },
+        "-1497188554:-1291605512": {
+            "ids": [
+                -1497188554,
+                -1291605512
+            ],
+            "regex": "ᅪ 저",
+            "weight": 6,
+            "count": 2
+        },
+        "-1497188554:-194879968": {
+            "ids": [
+                -1497188554,
+                -194879968
+            ],
+            "regex": "ᆨ이 ᄉ",
+            "weight": 7,
+            "count": 2
+        },
+        "-1463814744:-194879968": {
+            "ids": [
+                -1463814744,
+                -194879968
+            ],
+            "regex": "ᅡ스",
+            "weight": 3,
+            "count": 2
+        },
+        "-1463814744:1716791865": {
+            "ids": [
+                -1463814744,
+                1716791865
+            ],
+            "regex": "ᆼ \\d+",
+            "weight": 8,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526
+            ],
+            "regex": "ᅢᄅ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1430091794:-1427494180:-1389952336:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
+            ],
+            "regex": "%ᄅ",
+            "weight": 2,
+            "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                345823526
+            ],
+            "regex": "해ᄋ",
+            "weight": 3,
+            "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:-1307791168:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1307791168,
+                345823526,
+                1411067874
+            ],
+            "regex": "ᆯ 추",
+            "weight": 6,
+            "count": 6
+        },
+        "-1430091794:-1062239040": {
+            "ids": [
+                -1430091794,
+                -1062239040
+            ],
+            "regex": "ᅵ 피ᄒ",
+            "weight": 7,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                345823526,
+                1411067874
+            ],
+            "regex": "ᅴ \\d+",
+            "weight": 8,
+            "count": 6
+        },
+        "-1427494180:876824218": {
+            "ids": [
+                -1427494180,
+                876824218
+            ],
+            "regex": "ᅡ ᄒ",
+            "weight": 5,
+            "count": 2
+        },
+        "-1307791168:899028336": {
+            "ids": [
+                -1307791168,
+                899028336
+            ],
+            "regex": "기ᄌ",
+            "weight": 3,
+            "count": 2
+        },
+        "-1307791168:-1157042950:683350088:899028336:1082183842:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                683350088,
+                899028336,
+                1082183842,
+                1518963479,
+                1716791865
+            ],
+            "regex": "증ᄀ",
+            "weight": 4,
+            "count": 7
+        },
+        "-1307791168:683350088:899028336": {
+            "ids": [
+                -1307791168,
+                683350088,
+                899028336
+            ],
+            "regex": "ᅥ의 ᄀ",
+            "weight": 7,
+            "count": 3
+        },
+        "-1307791168:1760181301": {
+            "ids": [
+                -1307791168,
+                1760181301
+            ],
+            "regex": "ᆨ \\d+",
+            "weight": 8,
+            "count": 2
+        },
+        "-1291605512:-834332200:570723712:1716791865": {
+            "ids": [
+                -1291605512,
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "ᅯ",
+            "weight": 1,
+            "count": 4
+        },
+        "-1157042950:1346756180": {
+            "ids": [
+                -1157042950,
+                1346756180
+            ],
+            "regex": "ᅥ의 ᄌ",
+            "weight": 7,
+            "count": 2
+        },
+        "-1062239040:-834332200:-357737163:1140153707": {
+            "ids": [
+                -1062239040,
+                -834332200,
+                -357737163,
+                1140153707
+            ],
+            "regex": "%ᄋ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1062239040:-668086108": {
+            "ids": [
+                -1062239040,
+                -668086108
+            ],
+            "regex": "ᅡ ᄌ",
+            "weight": 5,
+            "count": 2
+        },
+        "-834332200:570723712:887697611": {
+            "ids": [
+                -834332200,
+                570723712,
+                887697611
+            ],
+            "regex": "ᅥᄒ",
+            "weight": 2,
+            "count": 3
+        },
+        "-834332200:-357737163:1140153707": {
+            "ids": [
+                -834332200,
+                -357737163,
+                1140153707
+            ],
+            "regex": "%의",
+            "weight": 3,
+            "count": 3
+        },
+        "-834332200:1082183842": {
+            "ids": [
+                -834332200,
+                1082183842
+            ],
+            "regex": "ᅥ ᄑ",
+            "weight": 5,
+            "count": 2
+        },
+        "-834332200:570723712": {
+            "ids": [
+                -834332200,
+                570723712
+            ],
+            "regex": "소 ᄌ",
+            "weight": 6,
+            "count": 2
+        },
+        "-834332200:570723712:1716791865": {
+            "ids": [
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "ᅴ 워",
+            "weight": 6,
+            "count": 3
+        },
+        "-668086108:876824218": {
+            "ids": [
+                -668086108,
+                876824218
+            ],
+            "regex": "ᆫ 모",
+            "weight": 6,
+            "count": 2
+        },
+        "-357737163:1140153707:1518963479": {
+            "ids": [
+                -357737163,
+                1140153707,
+                1518963479
+            ],
+            "regex": "ᅲᆯ",
+            "weight": 2,
+            "count": 3
+        },
+        "-357737163:1140153707": {
+            "ids": [
+                -357737163,
+                1140153707
+            ],
+            "regex": "ᅲᄇ",
+            "weight": 2,
+            "count": 2
+        },
+        "-357737163:683350088:1140153707": {
+            "ids": [
+                -357737163,
+                683350088,
+                1140153707
+            ],
+            "regex": "ᆼ ᄉ",
+            "weight": 5,
+            "count": 3
+        },
+        "-357737163:899028336:1140153707": {
+            "ids": [
+                -357737163,
+                899028336,
+                1140153707
+            ],
+            "regex": "ᅵ \\d+",
+            "weight": 8,
+            "count": 3
+        },
+        "-194879968:1346756180": {
+            "ids": [
+                -194879968,
+                1346756180
+            ],
+            "regex": "시ᄀ",
+            "weight": 3,
+            "count": 2
+        },
+        "-194879968:899028336": {
+            "ids": [
+                -194879968,
+                899028336
+            ],
+            "regex": "ᅴ 사",
+            "weight": 6,
+            "count": 2
+        },
+        "570723712:1716791865": {
+            "ids": [
+                570723712,
+                1716791865
+            ],
+            "regex": "ᅥ의 ᄋ",
+            "weight": 7,
+            "count": 2
+        },
+        "887697611:1411067874": {
+            "ids": [
+                887697611,
+                1411067874
+            ],
+            "regex": "최",
+            "weight": 2,
+            "count": 2
+        },
+        "899028336:1716791865": {
+            "ids": [
+                899028336,
+                1716791865
+            ],
+            "regex": "ᅡᆼᄐ",
+            "weight": 3,
+            "count": 2
+        },
+        "899028336:1518963479": {
+            "ids": [
+                899028336,
+                1518963479
+            ],
+            "regex": "ᆼ ᄒ",
+            "weight": 5,
+            "count": 2
+        },
+        "899028336:1760181301": {
+            "ids": [
+                899028336,
+                1760181301
+            ],
+            "regex": "터의 ᄉ",
+            "weight": 8,
+            "count": 2
+        },
+        "1716791865:2039236504": {
+            "ids": [
+                1716791865,
+                2039236504
+            ],
+            "regex": "ᆨ요",
+            "weight": 3,
             "count": 2
         }
     }

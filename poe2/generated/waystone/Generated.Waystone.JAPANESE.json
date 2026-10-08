@@ -1,483 +1,289 @@
 {
     "tokens": [
         {
-            "id": -2003251197,
-            "regex": "気タメーシとして与",
-            "rawText": "モンスターはダメージの#%を追加冷気ダメージとして与える",
-            "generalizedText": "^モンスターはタメーシの#%を追加冷気タメーシとして与える$",
+            "id": -1718797825,
+            "regex": "受",
+            "rawText": "モンスターがクリティカルヒットから受ける追加ダメージが(15-30)%減少する",
+            "generalizedText": "^モンスターかクリティカルヒットから受ける追加タメーシか#%減少する$",
             "options": {
-                "name": "凍傷の",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "妨害の",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1802633177,
-            "regex": "ーの命",
-            "rawText": "モンスターの命中力が#%増加する",
-            "generalizedText": "^モンスターの命中力か#%増加する$",
-            "options": {
-                "name": "精密な",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1781567135,
-            "regex": "ーの耐性の",
-            "rawText": "プレイヤーの耐性の最大値が#%",
-            "generalizedText": "^フレイヤーの耐性の最大値か#%$",
-            "options": {
-                "name": "曝露の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1712834218,
-            "regex": "アには発",
+            "id": -1698573306,
+            "regex": "発",
             "rawText": "エリアには発火領域がまだらに存在する",
             "generalizedText": "^エリアには発火領域かまたらに存在する$",
             "options": {
                 "name": "炎の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1545039133,
-            "regex": "ーのタメーシか",
-            "rawText": "モンスターのダメージが#%増加する",
-            "generalizedText": "^モンスターのタメーシか#%増加する$",
+            "id": -1596647297,
+            "regex": "復",
+            "rawText": "全てのプレイヤーのライフとエナジーシールドの回復レートが(40-20)%低下する",
+            "generalizedText": "^全てのフレイヤーのライフとエナシーシールトの回復レートか#%低下する$",
             "options": {
-                "name": "痛みの",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "窒息の",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1531761046,
-            "regex": "アには冷",
-            "rawText": "エリアには冷却領域がまだらに存在する",
-            "generalizedText": "^エリアには冷却領域かまたらに存在する$",
-            "options": {
-                "name": "霙れる",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1488718213,
-            "regex": "る追",
-            "rawText": "モンスターがクリティカルヒットから受ける追加ダメージが#%減少する",
-            "generalizedText": "^モンスターかクリティカルヒットから受ける追加タメーシか#%減少する$",
-            "options": {
-                "name": "妨害の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1483515280,
-            "regex": "率て出",
-            "rawText": "モンスターはヒット時に#%の確率で出血を付与する",
-            "generalizedText": "^モンスターはヒット時に#%の確率て出血を付与する$",
-            "options": {
-                "name": "刺突する",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1478126241,
-            "regex": "ーは状",
-            "rawText": "モンスターは状態異常閾値が#%増加する|モンスターのスタン閾値が#%増加する",
-            "generalizedText": "^モンスターは状態異常閾値か#%増加する$|^モンスターのスタン閾値か#%増加する$",
-            "options": {
-                "name": "確固不動の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1353979792,
-            "regex": "対する呪",
-            "rawText": "モンスターに対する呪いの効果が#%低下する",
-            "generalizedText": "^モンスターに対する呪いの効果か#%低下する$",
-            "options": {
-                "name": "抗呪の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1254208754,
-            "regex": "得フ",
-            "rawText": "全てのプレイヤーの獲得フラスコチャージが#%減少する",
-            "generalizedText": "^全てのフレイヤーの獲得フラスコチャーシか#%減少する$",
-            "options": {
-                "name": "干魃の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1002081301,
-            "regex": "アには感",
-            "rawText": "エリアには感電領域がまだらに存在する",
-            "generalizedText": "^エリアには感電領域かまたらに存在する$",
-            "options": {
-                "name": "感電する",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -776216746,
-            "regex": "火タメーシとして与",
-            "rawText": "モンスターはダメージの#%を追加火ダメージとして与える",
-            "generalizedText": "^モンスターはタメーシの#%を追加火タメーシとして与える$",
-            "options": {
-                "name": "業火の",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -755340148,
-            "regex": "ターのラ",
-            "rawText": "モンスターのライフが#%上昇する",
-            "generalizedText": "^モンスターのライフか#%上昇する$",
-            "options": {
-                "name": "頑健性の",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -622085590,
-            "regex": "ーの元素耐",
-            "rawText": "モンスターの元素耐性 +#%",
-            "generalizedText": "^モンスターの元素耐性 +#%$",
-            "options": {
-                "name": "プリズムの",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -274842120,
-            "regex": "沌タメーシとして与",
-            "rawText": "モンスターはダメージの#%を追加混沌ダメージとして与える",
-            "generalizedText": "^モンスターはタメーシの#%を追加混沌タメーシとして与える$",
-            "options": {
-                "name": "冒涜的な",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -230498948,
-            "regex": "のスタン蓄",
-            "rawText": "モンスターのスタン蓄積が#%増加する",
-            "generalizedText": "^モンスターのスタン蓄積か#%増加する$",
-            "options": {
-                "name": "衝突する",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -81477234,
-            "regex": "フルて",
+            "id": -1497188554,
+            "regex": "エン",
             "rawText": "エリアはエンフィーブルで定期的に呪われる",
             "generalizedText": "^エリアはエンフィーフルて定期的に呪われる$",
             "options": {
                 "name": "弱体化の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": -54827792,
-            "regex": "加最",
-            "rawText": "モンスターは最大ライフの#%を追加最大エナジーシールドとして獲得する",
-            "generalizedText": "^モンスターは最大ライフの#%を追加最大エナシーシールトとして獲得する$",
+            "id": -1463814744,
+            "regex": "の獲",
+            "rawText": "全てのプレイヤーの獲得フラスコチャージが(35-20)%減少する",
+            "generalizedText": "^全てのフレイヤーの獲得フラスコチャーシか#%減少する$",
             "options": {
-                "name": "緩衝の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "干魃の",
+                "prefix": false,
                 "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -37898488,
-            "regex": "ターは回",
-            "rawText": "モンスターは回避力が高い",
-            "generalizedText": "^モンスターは回避力か高い$",
-            "options": {
-                "name": "回避の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 64746666,
-            "regex": "与率か",
-            "rawText": "モンスターの元素系状態異常付与率が#%増加する",
-            "generalizedText": "^モンスターの元素系状態異常付与率か#%増加する$",
-            "options": {
-                "name": "圧倒の",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 805791468,
-            "regex": "の確率て毒",
-            "rawText": "モンスターはヒット時に#%の確率で毒を付与する",
-            "generalizedText": "^モンスターはヒット時に#%の確率て毒を付与する$",
-            "options": {
-                "name": "毒液の",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
+                    "map_key_medium",
                     "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 827737826,
-            "regex": "雷タメーシとして与",
-            "rawText": "モンスターはダメージの#%を追加雷ダメージとして与える",
-            "generalizedText": "^モンスターはタメーシの#%を追加雷タメーシとして与える$",
+            "id": -1430091794,
+            "regex": "加冷",
+            "rawText": "モンスターはダメージの(5-24)%を追加冷気ダメージとして与える",
+            "generalizedText": "^モンスターはタメーシの#%を追加冷気タメーシとして与える$",
             "options": {
-                "name": "電雷の",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "凍傷の",
+                "prefix": true,
                 "tags": [
+                    "map_key_low",
+                    "map_key_medium",
                     "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1081930039,
-            "regex": "アはテ",
-            "rawText": "エリアはテンポラルチェーンで定期的に呪われる",
-            "generalizedText": "^エリアはテンホラルチェーンて定期的に呪われる$",
+            "id": -1427494180,
+            "regex": "加火",
+            "rawText": "モンスターはダメージの(5-24)%を追加火ダメージとして与える",
+            "generalizedText": "^モンスターはタメーシの#%を追加火タメーシとして与える$",
             "options": {
-                "name": "減速の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "業火の",
+                "prefix": true,
                 "tags": [
-                    "default"
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1205232010,
-            "regex": "ネスて",
+            "id": -1389952336,
+            "regex": "加混",
+            "rawText": "モンスターはダメージの(5-24)%を追加混沌ダメージとして与える",
+            "generalizedText": "^モンスターはタメーシの#%を追加混沌タメーシとして与える$",
+            "options": {
+                "name": "冒涜的な",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1307791168,
+            "regex": "蓄",
+            "rawText": "モンスターのスタン蓄積が(50-110)%増加する",
+            "generalizedText": "^モンスターのスタン蓄積か#%増加する$",
+            "options": {
+                "name": "衝突する",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1291605512,
+            "regex": "ネ",
             "rawText": "エリアはエレメンタルウィークネスで定期的に呪われる",
             "generalizedText": "^エリアはエレメンタルウィークネスて定期的に呪われる$",
             "options": {
                 "name": "侵蝕の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 1319628054,
-            "regex": "ーはアー",
+            "id": -1157042950,
+            "regex": "の命",
+            "rawText": "モンスターの命中力が(10-50)%増加する",
+            "generalizedText": "^モンスターの命中力か#%増加する$",
+            "options": {
+                "name": "精密な",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1062239040,
+            "regex": "物",
+            "rawText": "モンスターは与えた物理ダメージの(15-45)%と同量のアーマーを破壊する",
+            "generalizedText": "^モンスターは与えた物理タメーシの#%と同量のアーマーを破壊する$",
+            "options": {
+                "name": "砕く",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -834332200,
+            "regex": "貫",
+            "rawText": "モンスターのダメージは(6-16)%の元素耐性を貫通する",
+            "generalizedText": "^モンスターのタメーシは#%の元素耐性を貫通する$",
+            "options": {
+                "name": "突破する",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -668086108,
+            "regex": "はア",
             "rawText": "モンスターはアーマーが高い",
             "generalizedText": "^モンスターはアーマーか高い$",
             "options": {
                 "name": "耐久の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 1352206140,
-            "regex": "%の元",
-            "rawText": "モンスターのダメージは#%の元素耐性を貫通する",
-            "generalizedText": "^モンスターのタメーシは#%の元素耐性を貫通する$",
+            "id": -357737163,
+            "regex": "て毒",
+            "rawText": "モンスターはヒット時に(13-40)%の確率で毒を付与する",
+            "generalizedText": "^モンスターはヒット時に#%の確率て毒を付与する$",
             "options": {
-                "name": "突破する",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "毒液の",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1448063942,
-            "regex": "ターのア",
-            "rawText": "モンスターのアタックスピード、キャストスピードおよび移動スピードが#%増加する",
+            "id": -194879968,
+            "regex": "はテ",
+            "rawText": "エリアはテンポラルチェーンで定期的に呪われる",
+            "generalizedText": "^エリアはテンホラルチェーンて定期的に呪われる$",
+            "options": {
+                "name": "減速の",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 345823526,
+            "regex": "加雷",
+            "rawText": "モンスターはダメージの(5-24)%を追加雷ダメージとして与える",
+            "generalizedText": "^モンスターはタメーシの#%を追加雷タメーシとして与える$",
+            "options": {
+                "name": "電雷の",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 570723712,
+            "regex": "ーの元素耐",
+            "rawText": "モンスターの元素耐性 +(20-40)%",
+            "generalizedText": "^モンスターの元素耐性 +#%$",
+            "options": {
+                "name": "プリズムの",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 683350088,
+            "regex": "キ",
+            "rawText": "モンスターのアタックスピード、キャストスピードおよび移動スピードが(10-15)%増加する",
             "generalizedText": "^モンスターのアタックスヒート、キャストスヒートおよひ移動スヒートか#%増加する$",
             "options": {
                 "name": "束の間の",
-                "types": [
-                    "PREFIX"
-                ],
+                "prefix": true,
                 "tags": [
                     "map_key_high",
                     "map_key_highest"
@@ -485,143 +291,724 @@
             }
         },
         {
-            "id": 1572655492,
-            "regex": "を破壊する$",
-            "rawText": "モンスターは与えた物理ダメージの#%と同量のアーマーを破壊する",
-            "generalizedText": "^モンスターは与えた物理タメーシの#%と同量のアーマーを破壊する$",
+            "id": 876824218,
+            "regex": "は回",
+            "rawText": "モンスターは回避力が高い",
+            "generalizedText": "^モンスターは回避力か高い$",
             "options": {
-                "name": "砕く",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "回避の",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "default"
                 ]
             }
         },
         {
-            "id": 1671133393,
-            "regex": "ターのク",
-            "rawText": "モンスターのクリティカルヒット率が#%増加する|モンスターのクリティカルダメージボーナス #%",
-            "generalizedText": "^モンスターのクリティカルヒット率か#%増加する$|^モンスターのクリティカルタメーシホーナス #%$",
+            "id": 887697611,
+            "regex": "の耐",
+            "rawText": "プレイヤーの耐性の最大値が-(10-3)%",
+            "generalizedText": "^フレイヤーの耐性の最大値か-#%$",
             "options": {
-                "name": "破壊する",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "曝露の",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1875219344,
-            "regex": "ーのクー",
-            "rawText": "全てのプレイヤーのクールダウン解消レートが#%低下する",
+            "id": 899028336,
+            "regex": "閾",
+            "rawText": "モンスターのスタン閾値が(30-79)%増加する|モンスターは状態異常閾値が(30-79)%増加する",
+            "generalizedText": "^モンスターのスタン閾値か#%増加する$|^モンスターは状態異常閾値か#%増加する$",
+            "options": {
+                "name": "確固不動の",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1082183842,
+            "regex": "のタメーシか",
+            "rawText": "モンスターのダメージが(5-24)%増加する",
+            "generalizedText": "^モンスターのタメーシか#%増加する$",
+            "options": {
+                "name": "痛みの",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1140153707,
+            "regex": "出",
+            "rawText": "モンスターはヒット時に(5-25)%の確率で出血を付与する",
+            "generalizedText": "^モンスターはヒット時に#%の確率て出血を付与する$",
+            "options": {
+                "name": "刺突する",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1346756180,
+            "regex": "解",
+            "rawText": "全てのプレイヤーのクールダウン解消レートが(30-15)%低下する",
             "generalizedText": "^全てのフレイヤーのクールタウン解消レートか#%低下する$",
             "options": {
                 "name": "疲労の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 2050052048,
-            "regex": "フとエ",
-            "rawText": "全てのプレイヤーのライフとエナジーシールドの回復レートが#%低下する",
-            "generalizedText": "^全てのフレイヤーのライフとエナシーシールトの回復レートか#%低下する$",
+            "id": 1411067874,
+            "regex": "は最",
+            "rawText": "モンスターは最大ライフの(12-25)%を追加最大エナジーシールドとして獲得する",
+            "generalizedText": "^モンスターは最大ライフの#%を追加最大エナシーシールトとして獲得する$",
             "options": {
-                "name": "窒息の",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "緩衝の",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1518963479,
+            "regex": "ト率",
+            "rawText": "モンスターのクリティカルヒット率が(80-300)%増加する|モンスターのクリティカルダメージボーナス +(11-30)%",
+            "generalizedText": "^モンスターのクリティカルヒット率か#%増加する$|^モンスターのクリティカルタメーシホーナス +#%$",
+            "options": {
+                "name": "破壊する",
+                "prefix": true,
+                "tags": [
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1606482166,
+            "regex": "却",
+            "rawText": "エリアには冷却領域がまだらに存在する",
+            "generalizedText": "^エリアには冷却領域かまたらに存在する$",
+            "options": {
+                "name": "霙の",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1716791865,
+            "regex": "系",
+            "rawText": "モンスターの元素系状態異常付与率が(60-130)%増加する",
+            "generalizedText": "^モンスターの元素系状態異常付与率か#%増加する$",
+            "options": {
+                "name": "圧倒の",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1760181301,
+            "regex": "昇",
+            "rawText": "モンスターのライフが(10-30)%上昇する",
+            "generalizedText": "^モンスターのライフか#%上昇する$",
+            "options": {
+                "name": "頑健性の",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2039236504,
+            "regex": "対",
+            "rawText": "モンスターに対する呪いの効果が(50-20)%低下する",
+            "generalizedText": "^モンスターに対する呪いの効果か#%低下する$",
+            "options": {
+                "name": "抗呪の",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2071181624,
+            "regex": "は感",
+            "rawText": "エリアには感電領域がまだらに存在する",
+            "generalizedText": "^エリアには感電領域かまたらに存在する$",
+            "options": {
+                "name": "感電の",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         }
     ],
     "optimizationTable": {
-        "-1712834218:-1531761046:-1002081301": {
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:1411067874": {
             "ids": [
-                -1712834218,
-                -1531761046,
-                -1002081301
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
             ],
-            "regex": "域かま",
-            "weight": 3,
-            "count": 3
+            "regex": "追",
+            "weight": 1,
+            "count": 6
         },
-        "-1483515280:805791468": {
+        "-1718797825:1518963479": {
             "ids": [
-                -1483515280,
-                805791468
+                -1718797825,
+                1518963479
             ],
-            "regex": "はヒット時",
-            "weight": 5,
+            "regex": "カ",
+            "weight": 1,
             "count": 2
         },
-        "-1478126241:-230498948": {
+        "-1718797825:-357737163:683350088:1140153707:1518963479": {
             "ids": [
-                -1478126241,
-                -230498948
+                -1718797825,
+                -357737163,
+                683350088,
+                1140153707,
+                1518963479
             ],
-            "regex": "ターのスタ",
-            "weight": 5,
+            "regex": "ヒ",
+            "weight": 1,
+            "count": 5
+        },
+        "-1718797825:-1463814744": {
+            "ids": [
+                -1718797825,
+                -1463814744
+            ],
+            "regex": "少",
+            "weight": 1,
             "count": 2
         },
-        "-1254208754:1875219344:2050052048": {
+        "-1718797825:-1463814744:1082183842": {
             "ids": [
-                -1254208754,
-                1875219344,
-                2050052048
+                -1718797825,
+                -1463814744,
+                1082183842
             ],
-            "regex": "のフレイヤーの",
-            "weight": 7,
-            "count": 3
-        },
-        "-622085590:64746666": {
-            "ids": [
-                -622085590,
-                64746666
-            ],
-            "regex": "ターの元",
-            "weight": 4,
-            "count": 2
-        },
-        "-81477234:1081930039:1205232010": {
-            "ids": [
-                -81477234,
-                1081930039,
-                1205232010
-            ],
-            "regex": "呪わ",
+            "regex": "シか",
             "weight": 2,
             "count": 3
         },
-        "-81477234:1205232010": {
+        "-1718797825:-357737163:1140153707:1518963479": {
             "ids": [
-                -81477234,
-                1205232010
+                -1718797825,
+                -357737163,
+                1140153707,
+                1518963479
             ],
-            "regex": "アはエ",
+            "regex": "ヒッ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1718797825:-668086108": {
+            "ids": [
+                -1718797825,
+                -668086108
+            ],
+            "regex": "ーか",
+            "weight": 2,
+            "count": 2
+        },
+        "-1718797825:-1596647297:683350088:1346756180": {
+            "ids": [
+                -1718797825,
+                -1596647297,
+                683350088,
+                1346756180
+            ],
+            "regex": "トか",
+            "weight": 2,
+            "count": 4
+        },
+        "-1718797825:1082183842": {
+            "ids": [
+                -1718797825,
+                1082183842
+            ],
+            "regex": "メーシか",
+            "weight": 4,
+            "count": 2
+        },
+        "-1698573306:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                1606482166,
+                2071181624
+            ],
+            "regex": "領",
+            "weight": 1,
+            "count": 3
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1606482166,
+                2071181624
+            ],
+            "regex": "エリ",
+            "weight": 2,
+            "count": 6
+        },
+        "-1596647297:1411067874:1518963479": {
+            "ids": [
+                -1596647297,
+                1411067874,
+                1518963479
+            ],
+            "regex": "ナ",
+            "weight": 1,
+            "count": 3
+        },
+        "-1596647297:-1463814744:887697611:1346756180": {
+            "ids": [
+                -1596647297,
+                -1463814744,
+                887697611,
+                1346756180
+            ],
+            "regex": "ヤ",
+            "weight": 1,
+            "count": 4
+        },
+        "-1596647297:1346756180:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                2039236504
+            ],
+            "regex": "低",
+            "weight": 1,
+            "count": 3
+        },
+        "-1596647297:1760181301": {
+            "ids": [
+                -1596647297,
+                1760181301
+            ],
+            "regex": "のラ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:1411067874:1760181301": {
+            "ids": [
+                -1596647297,
+                1411067874,
+                1760181301
+            ],
+            "regex": "ライ",
+            "weight": 2,
+            "count": 3
+        },
+        "-1596647297:1411067874": {
+            "ids": [
+                -1596647297,
+                1411067874
+            ],
+            "regex": "エナ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:1346756180:1411067874": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                1411067874
+            ],
+            "regex": "ール",
+            "weight": 2,
+            "count": 3
+        },
+        "-1596647297:-1463814744:1346756180": {
+            "ids": [
+                -1596647297,
+                -1463814744,
+                1346756180
+            ],
+            "regex": "全て",
+            "weight": 2,
+            "count": 3
+        },
+        "-1596647297:1346756180": {
+            "ids": [
+                -1596647297,
+                1346756180
+            ],
+            "regex": "レー",
+            "weight": 2,
+            "count": 2
+        },
+        "-1596647297:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                683350088,
+                1346756180
+            ],
+            "regex": "ートか",
             "weight": 3,
+            "count": 3
+        },
+        "-1497188554:-1291605512:-194879968": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968
+            ],
+            "regex": "期",
+            "weight": 1,
+            "count": 3
+        },
+        "-1497188554:-1291605512": {
+            "ids": [
+                -1497188554,
+                -1291605512
+            ],
+            "regex": "はエ",
+            "weight": 2,
+            "count": 2
+        },
+        "-1463814744:1411067874": {
+            "ids": [
+                -1463814744,
+                1411067874
+            ],
+            "regex": "獲",
+            "weight": 1,
+            "count": 2
+        },
+        "-1463814744:-194879968": {
+            "ids": [
+                -1463814744,
+                -194879968
+            ],
+            "regex": "チ",
+            "weight": 1,
+            "count": 2
+        },
+        "-1463814744:683350088": {
+            "ids": [
+                -1463814744,
+                683350088
+            ],
+            "regex": "ャ",
+            "weight": 1,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                345823526
+            ],
+            "regex": "え",
+            "weight": 1,
+            "count": 5
+        },
+        "-1430091794:1606482166": {
+            "ids": [
+                -1430091794,
+                1606482166
+            ],
+            "regex": "冷",
+            "weight": 1,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526
+            ],
+            "regex": "はタ",
+            "weight": 2,
+            "count": 4
+        },
+        "-1430091794:-1427494180:-1389952336:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
+            ],
+            "regex": "%を",
+            "weight": 2,
+            "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                345823526,
+                1411067874
+            ],
+            "regex": "の\\d+",
+            "weight": 5,
+            "count": 6
+        },
+        "-1307791168:-1157042950:683350088:899028336:1082183842:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                683350088,
+                899028336,
+                1082183842,
+                1518963479,
+                1716791865
+            ],
+            "regex": "増",
+            "weight": 1,
+            "count": 7
+        },
+        "-1307791168:899028336": {
+            "ids": [
+                -1307791168,
+                899028336
+            ],
+            "regex": "のス",
+            "weight": 2,
+            "count": 2
+        },
+        "-1157042950:876824218": {
+            "ids": [
+                -1157042950,
+                876824218
+            ],
+            "regex": "力",
+            "weight": 1,
+            "count": 2
+        },
+        "-1062239040:683350088": {
+            "ids": [
+                -1062239040,
+                683350088
+            ],
+            "regex": "のア",
+            "weight": 2,
+            "count": 2
+        },
+        "-1062239040:-668086108": {
+            "ids": [
+                -1062239040,
+                -668086108
+            ],
+            "regex": "アー",
+            "weight": 2,
+            "count": 2
+        },
+        "-834332200:570723712:1716791865": {
+            "ids": [
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "元",
+            "weight": 1,
+            "count": 3
+        },
+        "-834332200:1082183842": {
+            "ids": [
+                -834332200,
+                1082183842
+            ],
+            "regex": "のタ",
+            "weight": 2,
+            "count": 2
+        },
+        "-834332200:-357737163:1140153707": {
+            "ids": [
+                -834332200,
+                -357737163,
+                1140153707
+            ],
+            "regex": "%の",
+            "weight": 2,
+            "count": 3
+        },
+        "-834332200:570723712": {
+            "ids": [
+                -834332200,
+                570723712
+            ],
+            "regex": "素耐",
+            "weight": 2,
+            "count": 2
+        },
+        "-834332200:570723712:887697611": {
+            "ids": [
+                -834332200,
+                570723712,
+                887697611
+            ],
+            "regex": "耐性",
+            "weight": 2,
+            "count": 3
+        },
+        "-668086108:876824218": {
+            "ids": [
+                -668086108,
+                876824218
+            ],
+            "regex": "高",
+            "weight": 1,
+            "count": 2
+        },
+        "-357737163:1140153707:1518963479:1716791865": {
+            "ids": [
+                -357737163,
+                1140153707,
+                1518963479,
+                1716791865
+            ],
+            "regex": "率",
+            "weight": 1,
+            "count": 4
+        },
+        "-357737163:1140153707": {
+            "ids": [
+                -357737163,
+                1140153707
+            ],
+            "regex": "時",
+            "weight": 1,
+            "count": 2
+        },
+        "-357737163:1140153707:1716791865": {
+            "ids": [
+                -357737163,
+                1140153707,
+                1716791865
+            ],
+            "regex": "付",
+            "weight": 1,
+            "count": 3
+        },
+        "-194879968:1518963479": {
+            "ids": [
+                -194879968,
+                1518963479
+            ],
+            "regex": "ホ",
+            "weight": 1,
+            "count": 2
+        },
+        "570723712:1716791865": {
+            "ids": [
+                570723712,
+                1716791865
+            ],
+            "regex": "ーの元",
+            "weight": 3,
+            "count": 2
+        },
+        "887697611:1411067874": {
+            "ids": [
+                887697611,
+                1411067874
+            ],
+            "regex": "大",
+            "weight": 1,
+            "count": 2
+        },
+        "887697611:899028336": {
+            "ids": [
+                887697611,
+                899028336
+            ],
+            "regex": "値",
+            "weight": 1,
+            "count": 2
+        },
+        "899028336:1716791865": {
+            "ids": [
+                899028336,
+                1716791865
+            ],
+            "regex": "異",
+            "weight": 1,
+            "count": 2
+        },
+        "1346756180:1518963479": {
+            "ids": [
+                1346756180,
+                1518963479
+            ],
+            "regex": "のク",
+            "weight": 2,
+            "count": 2
+        },
+        "1518963479:1716791865": {
+            "ids": [
+                1518963479,
+                1716791865
+            ],
+            "regex": "率か",
+            "weight": 2,
             "count": 2
         }
     }

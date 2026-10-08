@@ -1,7 +1,7 @@
 [
     {
         "name": "#% d'Augmentation de la Vie maximale",
-        "regex": "ie maximale$",
+        "regex": "vie",
         "values": [],
         "ranges": [
             [
@@ -13,7 +13,7 @@
     },
     {
         "name": "#% d'Augmentation de l'Honneur maximum",
-        "regex": "mum$",
+        "regex": "m$",
         "values": [],
         "ranges": [
             [
@@ -25,7 +25,7 @@
     },
     {
         "name": "#% d'Augmentation de l'Honneur restauré",
-        "regex": "aure$",
+        "regex": "ure$",
         "values": [],
         "ranges": [
             [
@@ -36,8 +36,56 @@
         "affix": "PREFIX"
     },
     {
+        "name": "Vous gagnez # Eaux sacrées au début de l'Épreuve",
+        "regex": "ees a",
+        "values": [],
+        "ranges": [
+            [
+                30.0,
+                59.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "#% d'Augmentation de l'Armure, de l'Évasion et du Bouclier d'énergie",
+        "regex": "arm",
+        "values": [],
+        "ranges": [
+            [
+                20.0,
+                70.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "Les Pièges ont #% de Réduction de Dégâts",
+        "regex": "pie",
+        "values": [],
+        "ranges": [
+            [
+                5.0,
+                10.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
+        "name": "#% d'Augmentation de la Vitesse de déplacement",
+        "regex": "se de",
+        "values": [],
+        "ranges": [
+            [
+                3.0,
+                10.0
+            ]
+        ],
+        "affix": "PREFIX"
+    },
+    {
         "name": "Les Monstres ont #% de chances de céder le double d'Eaux sacrées",
-        "regex": "ceder l",
+        "regex": "der",
         "values": [],
         "ranges": [
             [
@@ -49,7 +97,7 @@
     },
     {
         "name": "Les Fontaines ont #% de chances d'octroyer le double d'Eaux sacrées",
-        "regex": "ntaines",
+        "regex": "ye",
         "values": [],
         "ranges": [
             [
@@ -60,100 +108,76 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "#% de Réduction des prix du Marchand",
-        "regex": "rix",
-        "values": [],
-        "ranges": [
-            [
-                -10.0,
-                -6.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Restaure # d'Honneur en tuant un Boss",
-        "regex": "ss$",
-        "values": [],
-        "ranges": [
-            [
-                40.0,
-                150.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Restaure # d'Honneur lorsque vous priez à un Autel maraketh",
-        "regex": "riez",
-        "values": [],
-        "ranges": [
-            [
-                25.0,
-                75.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Vous gagnez # Eaux sacrées au début de l'Épreuve",
-        "regex": "acrees a",
-        "values": [],
-        "ranges": [
-            [
-                30.0,
-                59.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "Vous gagnez # Eaux sacrées lorsque vous complétez une Salle",
-        "regex": "rees l",
-        "values": [],
-        "ranges": [
-            [
-                11.0,
-                30.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Restaure # d'Honneur lorsque vous terminez une Salle",
-        "regex": "us term",
-        "values": [],
-        "ranges": [
-            [
-                10.0,
-                30.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "#% de chances de ne pas subir une Affliction",
-        "regex": "une af",
+        "name": "#% d'Augmentation de la Quantité de Reliques cédées par les Monstres",
+        "regex": "e rel",
         "values": [],
         "ranges": [
             [
                 6.0,
-                15.0
+                20.0
             ]
         ],
         "affix": "SUFFIX"
     },
     {
-        "name": "Les Monstres ont #% d'Augmentation des Dégâts subis",
-        "regex": "tres ont \\d+% d'",
+        "name": "+# mètres de distance de Roulade",
+        "regex": "ul",
         "values": [],
         "ranges": [
             [
-                11.0,
-                30.0
+                0.3,
+                0.7
             ]
         ],
-        "affix": "PREFIX"
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "Les Ralentissements émanant des Effets néfastes vous affectant ont #% de Réduction d'Efficacité",
+        "regex": "fe",
+        "values": [],
+        "ranges": [
+            [
+                8.0,
+                20.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "Les Touches vous prenant pour cible ont #% de Réduction de Bonus de Dégâts critiques",
+        "regex": "uch",
+        "values": [],
+        "ranges": [
+            [
+                12.0,
+                25.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "+#% à la Résistance de l'Honneur",
+        "regex": "e de l'honneur$",
+        "values": [],
+        "ranges": [
+            [
+                8.0,
+                40.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "#% d'Augmentation de la Quantité de Clés cédées par les Monstres",
+        "regex": "de cl",
+        "values": [],
+        "ranges": [
+            [
+                6.0,
+                25.0
+            ]
+        ],
+        "affix": "SUFFIX"
     },
     {
         "name": "Les Monstres Rares ont #% d'Augmentation des Dégâts subis",
@@ -181,112 +205,38 @@
     },
     {
         "name": "Le Marchand vous propose un choix supplémentaire",
-        "regex": "oix",
-        "values": [
-            1.0
-        ],
+        "regex": "rop",
+        "values": [],
         "ranges": [],
         "affix": "PREFIX"
     },
     {
-        "name": "#% d'Augmentation de la Quantité de Reliques cédées par les Monstres",
-        "regex": "ues ced",
+        "name": "#% de Réduction des prix du Marchand",
+        "regex": "d$",
         "values": [],
         "ranges": [
             [
                 6.0,
-                20.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "#% d'Augmentation de l'Armure, de l'Évasion et du Bouclier d'énergie",
-        "regex": "t du bouclier d'energie$",
-        "values": [],
-        "ranges": [
-            [
-                20.0,
-                70.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "Les Pièges ont #% de Réduction de Dégâts",
-        "regex": "eges o",
-        "values": [],
-        "ranges": [
-            [
-                -10.0,
-                -5.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "#% d'Augmentation de la Vitesse de déplacement",
-        "regex": "a vitesse de deplacement$",
-        "values": [],
-        "ranges": [
-            [
-                3.0,
                 10.0
             ]
         ],
-        "affix": "PREFIX"
+        "affix": "SUFFIX"
     },
     {
-        "name": "# mètres de distance de Roulade",
-        "regex": "\\d+ m",
+        "name": "Restaure # d'Honneur en tuant un Boss",
+        "regex": "tua",
         "values": [],
         "ranges": [
             [
-                3.0,
-                7.0
+                40.0,
+                150.0
             ]
         ],
         "affix": "SUFFIX"
     },
     {
-        "name": "Les Ralentissements émanant des Effets néfastes vous affectant ont #% de Réduction d'Efficacité",
-        "regex": "anan",
-        "values": [],
-        "ranges": [
-            [
-                -20.0,
-                -8.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Les Touches vous prenant pour cible ont #% de Réduction de Bonus de Dégâts critiques",
-        "regex": "r ci",
-        "values": [],
-        "ranges": [
-            [
-                12.0,
-                25.0
-            ]
-        ],
-        "affix": "SUFFIX"
-    },
-    {
-        "name": "Lorsque vous gagnez une Clé, vous avez #% de chances de gagner une autre",
-        "regex": "utre$",
-        "values": [],
-        "ranges": [
-            [
-                7.0,
-                16.0
-            ]
-        ],
-        "affix": "PREFIX"
-    },
-    {
-        "name": "Restaure # d'Honneur lorsque vous ramassez une Clé",
-        "regex": "massez",
+        "name": "Restaure # d'Honneur lorsque vous priez à un Autel maraketh",
+        "regex": "ak",
         "values": [],
         "ranges": [
             [
@@ -297,45 +247,47 @@
         "affix": "SUFFIX"
     },
     {
-        "name": "#% à la Résistance de l'Honneur",
-        "regex": "a resistance de l'honneur$",
+        "name": "# Salles supplémentaires sont révélées sur la Carte de l'Épreuve",
+        "regex": "son",
         "values": [],
         "ranges": [
             [
-                8.0,
-                40.0
+                1.0,
+                4.0
             ]
         ],
         "affix": "SUFFIX"
     },
     {
-        "name": "#% à la Résistance de l'Honneur maximale",
-        "regex": "r maximale$",
+        "name": "Les Monstres ont #% d'Augmentation des Dégâts subis",
+        "regex": "tres ont \\d+% d'",
         "values": [],
         "ranges": [
             [
-                2.0,
-                5.0
+                11.0,
+                30.0
             ]
         ],
-        "affix": "SUFFIX"
+        "affix": "PREFIX"
     },
     {
-        "name": "#% d'Augmentation de la Quantité de Clés cédées par les Monstres",
-        "regex": "de cl",
+        "name": "Lorsque vous gagnez une Clé, vous avez #% de chances de gagner une autre",
+        "regex": "le,",
         "values": [],
         "ranges": [
             [
-                6.0,
-                25.0
+                7.0,
+                16.0
             ]
         ],
-        "affix": "SUFFIX"
+        "affix": "PREFIX"
     },
     {
-        "name": "Lorsque vous perdez tout votre Honneur, vous avez #% de chances de rester à 1 d'Honneur à la place",
-        "regex": "neur,",
-        "values": [],
+        "name": "Lorsque vous perdez tout votre Honneur, vous avez #% de chances de rester à # d'Honneur à la place",
+        "regex": "r,",
+        "values": [
+            1.0
+        ],
         "ranges": [
             [
                 5.0,
@@ -346,7 +298,7 @@
     },
     {
         "name": "Lorsque vous finissez un Étage, chacune de vos Clés a #% de chances d'être améliorée",
-        "regex": "finis",
+        "regex": "cu",
         "values": [],
         "ranges": [
             [
@@ -355,5 +307,65 @@
             ]
         ],
         "affix": "PREFIX"
+    },
+    {
+        "name": "Vous gagnez # Eaux sacrées lorsque vous complétez une Salle",
+        "regex": "let",
+        "values": [],
+        "ranges": [
+            [
+                11.0,
+                30.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "Restaure # d'Honneur lorsque vous terminez une Salle",
+        "regex": "mine",
+        "values": [],
+        "ranges": [
+            [
+                10.0,
+                30.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "#% de chances de ne pas subir une Affliction",
+        "regex": "bir",
+        "values": [],
+        "ranges": [
+            [
+                6.0,
+                15.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "Restaure # d'Honneur lorsque vous ramassez une Clé",
+        "regex": "ram",
+        "values": [],
+        "ranges": [
+            [
+                25.0,
+                75.0
+            ]
+        ],
+        "affix": "SUFFIX"
+    },
+    {
+        "name": "+#% à la Résistance de l'Honneur maximale",
+        "regex": "r maxima",
+        "values": [],
+        "ranges": [
+            [
+                2.0,
+                5.0
+            ]
+        ],
+        "affix": "SUFFIX"
     }
 ]

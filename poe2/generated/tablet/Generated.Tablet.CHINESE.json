@@ -1,117 +1,9 @@
 {
     "tokens": [
         {
-            "id": -2092367728,
-            "regex": "壇所需",
-            "rawText": "減少#%地圖內的祭祀神壇所需的貢禮數量",
-            "generalizedText": "^減少#%地圖內的祭祀神壇所需的貢禮數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -2039170704,
-            "regex": "目掉落物",
-            "rawText": "增加#%地圖頭目掉落物品的稀有度",
-            "generalizedText": "^增加#%地圖頭目掉落物品的稀有度$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1945551180,
-            "regex": "所延",
-            "rawText": "地圖內的祭祀神壇所延遲的恩惠之物出現速度加快#%",
-            "generalizedText": "^地圖內的祭祀神壇所延遲的恩惠之物出現速度加快#%$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1790640598,
-            "regex": "物印",
-            "rawText": "增加#%地圖內含有的符文怪物印記的數量",
-            "generalizedText": "^增加#%地圖內含有的符文怪物印記的數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "expedition"
-                ]
-            }
-        },
-        {
-            "id": -1572845914,
-            "regex": "壇獎",
-            "rawText": "增加#%地圖內的祭祀神壇獎勵為預兆的機率",
-            "generalizedText": "^增加#%地圖內的祭祀神壇獎勵為預兆的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1562110960,
-            "regex": "個精",
-            "rawText": "增加#%地圖內找到的物品稀有度|地圖內含有額外的一個精髓|增加#%地圖內找到的換界石數量",
-            "generalizedText": "^增加#%地圖內找到的物品稀有度$|^地圖內含有額外的一個精髓$|^增加#%地圖內找到的換界石數量$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1560535587,
-            "regex": "個保",
-            "rawText": "地圖內含有額外的一個保險箱",
-            "generalizedText": "^地圖內含有額外的一個保險箱$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1488161500,
-            "regex": "到的換",
-            "rawText": "增加#%地圖內找到的換界石數量",
-            "generalizedText": "^增加#%地圖內找到的換界石數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -1480102660,
-            "regex": "霧增",
-            "rawText": "地圖中的譫妄迷霧增加#%裂鏡碎片的生成量",
-            "generalizedText": "^地圖中的譫妄迷霧增加#%裂鏡碎片的生成量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": -1468452716,
+            "id": -2044629037,
             "regex": "圖增",
-            "rawText": "地圖增加#%怪物稀有度",
+            "rawText": "地圖增加(15-20)%怪物稀有度",
             "generalizedText": "^地圖增加#%怪物稀有度$",
             "options": {
                 "prefix": true,
@@ -121,10 +13,22 @@
             }
         },
         {
-            "id": -1452192147,
-            "regex": "壇重",
-            "rawText": "減少#%地圖內的祭祀神壇重骰所需的貢禮數量",
-            "generalizedText": "^減少#%地圖內的祭祀神壇重骰所需的貢禮數量$",
+            "id": -2026817376,
+            "regex": "個瓦",
+            "rawText": "地圖中的探險含有(1-2)個瓦爾遺物",
+            "generalizedText": "^地圖中的探險含有#個瓦爾遺物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -2005637209,
+            "regex": "預",
+            "rawText": "增加(35-70)%地圖內的祭祀神壇獎勵為預兆的機率",
+            "generalizedText": "^增加#%地圖內的祭祀神壇獎勵為預兆的機率$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -133,8 +37,68 @@
             }
         },
         {
-            "id": -1433719137,
-            "regex": "道深",
+            "id": -1933464139,
+            "regex": "壇所需",
+            "rawText": "減少(30-20)%地圖內的祭祀神壇所需的貢禮數量",
+            "generalizedText": "^減少#%地圖內的祭祀神壇所需的貢禮數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1788692627,
+            "regex": "塔召",
+            "rawText": "增加(25-50)%地圖內的瓦爾烽塔召喚額外怪物的機率",
+            "generalizedText": "^增加#%地圖內的瓦爾烽塔召喚額外怪物的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": -1786171939,
+            "regex": "炸",
+            "rawText": "增加(5-10)%地圖中探險炸藥的範圍效果",
+            "generalizedText": "^增加#%地圖中探險炸藥的範圍效果$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1784287093,
+            "regex": "內裂",
+            "rawText": "增加(5-15)%地圖內裂痕的怪物群大小",
+            "generalizedText": "^增加#%地圖內裂痕的怪物群大小$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1635710298,
+            "regex": "會擁",
+            "rawText": "傳奇怪物會擁有1個額外的詞綴",
+            "generalizedText": "^傳奇怪物會擁有#個額外的詞綴$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1617113142,
+            "regex": "一道",
             "rawText": "地圖內含有額外一道深淵",
             "generalizedText": "^地圖內含有額外一道深淵$",
             "options": {
@@ -145,21 +109,9 @@
             }
         },
         {
-            "id": -1421159416,
-            "regex": "%在",
-            "rawText": "增加#%在地圖內的祭祀神壇所獻祭的怪物提供的貢禮數量",
-            "generalizedText": "^增加#%在地圖內的祭祀神壇所獻祭的怪物提供的貢禮數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -1391160602,
+            "id": -1594182537,
             "regex": "霧消",
-            "rawText": "減少#%地圖內的譫妄迷霧消散速度",
+            "rawText": "減少(30-20)%地圖內的譫妄迷霧消散速度",
             "generalizedText": "^減少#%地圖內的譫妄迷霧消散速度$",
             "options": {
                 "prefix": false,
@@ -169,10 +121,34 @@
             }
         },
         {
-            "id": -1251704831,
-            "regex": "隻額",
-            "rawText": "地圖內的深淵生成#隻額外稀有怪物",
-            "generalizedText": "^地圖內的深淵生成#隻額外稀有怪物$",
+            "id": -1564770511,
+            "regex": "外變",
+            "rawText": "地圖有(1-2)個額外變動詞綴",
+            "generalizedText": "^地圖有#個額外變動詞綴$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1553918089,
+            "regex": "耗",
+            "rawText": "地圖內的祭祀神壇有(3-6)%機率不消耗貢禮",
+            "generalizedText": "^地圖內的祭祀神壇有#%機率不消耗貢禮$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": -1519456051,
+            "regex": "成的怪",
+            "rawText": "增加(20-30)%地圖內的深淵生成的怪物數量",
+            "generalizedText": "^增加#%地圖內的深淵生成的怪物數量$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -181,9 +157,105 @@
             }
         },
         {
-            "id": -1247977786,
-            "regex": "的金",
-            "rawText": "增加#%地圖內所獲取的金幣數量",
+            "id": -1442604101,
+            "regex": "巢",
+            "rawText": "增加(30-60)%地圖內找到的巢裔之血數量",
+            "generalizedText": "^增加#%地圖內找到的巢裔之血數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": -1401280853,
+            "regex": "有的稀",
+            "rawText": "增加(25-35)%地圖含有的稀有怪物數量",
+            "generalizedText": "^增加#%地圖含有的稀有怪物數量$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1377869826,
+            "regex": "添",
+            "rawText": "地圖中的維里西姆遺物擁有+(25-35)%機率添加一條額外符文詞綴",
+            "generalizedText": "^地圖中的維里西姆遺物擁有+#%機率添加一條額外符文詞綴$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1360675046,
+            "regex": "的物",
+            "rawText": "增加(8-12)%地圖內找到的物品稀有度",
+            "generalizedText": "^增加#%地圖內找到的物品稀有度$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1349688955,
+            "regex": "封",
+            "rawText": "地圖中的探險含有(1-2)個額外封存於冰霜中的頭目",
+            "generalizedText": "^地圖中的探險含有#個額外封存於冰霜中的頭目$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1329521044,
+            "regex": "%維",
+            "rawText": "增加(15-25)%維里西姆遺物怪物掉落的維里西姆",
+            "generalizedText": "^增加#%維里西姆遺物怪物掉落的維里西姆$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -1325149272,
+            "regex": "新",
+            "rawText": "有(10-25)%機率為地圖新增一名瓦爾烽塔傳奇怪物",
+            "generalizedText": "^有#%機率為地圖新增一名瓦爾烽塔傳奇怪物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": -1309913324,
+            "regex": "有精",
+            "rawText": "增加(70-100)%地圖內含有精髓的機率",
+            "generalizedText": "^增加#%地圖內含有精髓的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1308339624,
+            "regex": "金",
+            "rawText": "增加(25-35)%地圖內所獲取的金幣數量",
             "generalizedText": "^增加#%地圖內所獲取的金幣數量$",
             "options": {
                 "prefix": true,
@@ -193,8 +265,116 @@
             }
         },
         {
-            "id": -1117095933,
-            "regex": "的一個召",
+            "id": -1127158390,
+            "regex": "落的換",
+            "rawText": "增加(18-30)%地圖頭目掉落的換界石數量",
+            "generalizedText": "^增加#%地圖頭目掉落的換界石數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": -1033399892,
+            "regex": "內的怪",
+            "rawText": "增加(5-7)%地圖內的怪物群大小",
+            "generalizedText": "^增加#%地圖內的怪物群大小$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1028076924,
+            "regex": "%怪物的",
+            "rawText": "增加(10-15)%怪物的效用",
+            "generalizedText": "^增加#%怪物的效用$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1026217690,
+            "regex": "到的換",
+            "rawText": "增加(30-40)%地圖內找到的換界石數量",
+            "generalizedText": "^增加#%地圖內找到的換界石數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -1014931673,
+            "regex": "有神",
+            "rawText": "增加(70-100)%地圖內含有神殿的機率",
+            "generalizedText": "^增加#%地圖內含有神殿的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -956801645,
+            "regex": "玩",
+            "rawText": "地圖中的譫妄會增加(15-30)%玩家的譫妄程度",
+            "generalizedText": "^地圖中的譫妄會增加#%玩家的譫妄程度$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": -864971456,
+            "regex": "有召",
+            "rawText": "增加(70-100)%地圖內有含有召喚法陣的機率",
+            "generalizedText": "^增加#%地圖內有含有召喚法陣的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": -859828309,
+            "regex": "土",
+            "rawText": "地圖中前(1-2)名出土的符文怪物會是稀有怪物",
+            "generalizedText": "^地圖中前#名出土的符文怪物會是稀有怪物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -828476369,
+            "regex": "埋",
+            "rawText": "地圖中的探險含有(1-2)個埋藏的保險箱",
+            "generalizedText": "^地圖中的探險含有#個埋藏的保險箱$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -782248059,
+            "regex": "個召",
             "rawText": "地圖內含有額外的一個召喚法陣",
             "generalizedText": "^地圖內含有額外的一個召喚法陣$",
             "options": {
@@ -205,165 +385,9 @@
             }
         },
         {
-            "id": -1068931610,
-            "regex": "在穩",
-            "rawText": "地圖內的不穩定裂痕會在穩定後生成一名額外稀有怪物]",
-            "generalizedText": "^地圖內的不穩定裂痕會在穩定後生成一名額外稀有怪物]$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": -1019853816,
-            "regex": "個神殿",
-            "rawText": "地圖內含有額外的一個神殿",
-            "generalizedText": "^地圖內含有額外的一個神殿$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -1019814980,
-            "regex": "個精",
-            "rawText": "地圖內含有額外的一個精髓",
-            "generalizedText": "^地圖內含有額外的一個精髓$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -955582143,
-            "regex": "個阿",
-            "rawText": "地圖內含有額外的一個阿茲莫里魂靈",
-            "generalizedText": "^地圖內含有額外的一個阿茲莫里魂靈$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": -893555223,
-            "regex": "險事",
-            "rawText": "增加#%地圖內的探險事件所生成的符文怪物掉落的探險日誌數量",
-            "generalizedText": "^增加#%地圖內的探險事件所生成的符文怪物掉落的探險日誌數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "expedition"
-                ]
-            }
-        },
-        {
-            "id": -859643819,
-            "regex": "霧在",
-            "rawText": "地圖內的譫妄迷霧在擊殺稀有怪物時會暫停#秒",
-            "generalizedText": "^地圖內的譫妄迷霧在擊殺稀有怪物時會暫停#秒$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": -826173451,
-            "regex": "外變",
-            "rawText": "地圖有#個額外變動詞綴",
-            "generalizedText": "^地圖有#個額外變動詞綴$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -697641535,
-            "regex": "率從",
-            "rawText": "有#%機率從地圖內的瓦爾烽塔獲得額外一個額外水晶",
-            "generalizedText": "^有#%機率從地圖內的瓦爾烽塔獲得額外一個額外水晶$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": -651107220,
-            "regex": "內稀",
-            "rawText": "增加#%地圖內稀有裂痕怪物的效用",
-            "generalizedText": "^增加#%地圖內稀有裂痕怪物的效用$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": -649394018,
-            "regex": "淵生成的",
-            "rawText": "增加#%地圖內的深淵生成的怪物數量",
-            "generalizedText": "^增加#%地圖內的深淵生成的怪物數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -632299806,
-            "regex": "壇可",
-            "rawText": "地圖內的祭祀神壇可以額外重骰一次",
-            "generalizedText": "^地圖內的祭祀神壇可以額外重骰一次$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": -617278938,
-            "regex": "含有召",
-            "rawText": "增加#%地圖內有含有召喚法陣的機率",
-            "generalizedText": "^增加#%地圖內有含有召喚法陣的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -539081792,
-            "regex": "%擁",
-            "rawText": "地圖內的深淵怪物增加#%擁有深淵詞綴的機率",
-            "generalizedText": "^地圖內的深淵怪物增加#%擁有深淵詞綴的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -442632449,
-            "regex": "率包",
-            "rawText": "地圖有#%機率包含4道額外深淵",
+            "id": -773162240,
+            "regex": "包",
+            "rawText": "地圖有(20-40)%機率包含4道額外深淵",
             "generalizedText": "^地圖有#%機率包含#道額外深淵$",
             "options": {
                 "prefix": false,
@@ -373,81 +397,33 @@
             }
         },
         {
-            "id": -427280722,
-            "regex": "的譫妄怪",
-            "rawText": "增加#%地圖內的譫妄怪物怪物群大小",
-            "generalizedText": "^增加#%地圖內的譫妄怪物怪物群大小$",
+            "id": -724125136,
+            "regex": "後",
+            "rawText": "地圖內的不穩定裂痕會在穩定後生成(1-2)名額外稀有怪物]",
+            "generalizedText": "^地圖內的不穩定裂痕會在穩定後生成#名額外稀有怪物]$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "delirium"
+                    "breach"
                 ]
             }
         },
         {
-            "id": -392421686,
-            "regex": "到的換",
-            "rawText": "減少#%地圖內的怪物群大小|增加#%地圖內找到的換界石數量|地圖內含有額外的一個神殿",
-            "generalizedText": "^減少#%地圖內的怪物群大小$|^增加#%地圖內找到的換界石數量$|^地圖內含有額外的一個神殿$",
+            "id": -659266483,
+            "regex": "險怪",
+            "rawText": "增加(15-25)%地圖中的探險怪物稀有度",
+            "generalizedText": "^增加#%地圖中的探險怪物稀有度$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "default"
+                    "expedition"
                 ]
             }
         },
         {
-            "id": -364719012,
-            "regex": "%來",
-            "rawText": "增加#%來自地圖內深淵的褻瀆通貨掉落機率",
-            "generalizedText": "^增加#%來自地圖內深淵的褻瀆通貨掉落機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "abyss"
-                ]
-            }
-        },
-        {
-            "id": -260429266,
-            "regex": "內掉",
-            "rawText": "增加#%地圖內掉落的幻像斷片數量",
-            "generalizedText": "^增加#%地圖內掉落的幻像斷片數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": -256518036,
-            "regex": "個稀",
-            "rawText": "地圖內含有額外的#個稀有箱子",
-            "generalizedText": "^地圖內含有額外的#個稀有箱子$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -231434512,
-            "regex": "有盜",
-            "rawText": "增加#%地圖內含有盜賊流亡者的機率",
-            "generalizedText": "^增加#%地圖內含有盜賊流亡者的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -146030113,
-            "regex": "一等",
-            "rawText": "地圖內有#%機率掉落高一等級的胎贈",
+            "id": -614112895,
+            "regex": "高",
+            "rawText": "地圖內有(10-30)%機率掉落高一等級的胎贈",
             "generalizedText": "^地圖內有#%機率掉落高一等級的胎贈$",
             "options": {
                 "prefix": false,
@@ -457,10 +433,10 @@
             }
         },
         {
-            "id": -138848706,
-            "regex": "已關",
-            "rawText": "每有一個已關閉的坑洞，增加#%深淵怪物效用，最多100%",
-            "generalizedText": "^每有一個已關閉的坑洞，增加#%深淵怪物效用，最多#%$",
+            "id": -611033189,
+            "regex": "%擁",
+            "rawText": "地圖內的深淵怪物增加(20-30)%擁有深淵詞綴的機率",
+            "generalizedText": "^地圖內的深淵怪物增加#%擁有深淵詞綴的機率$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -469,106 +445,10 @@
             }
         },
         {
-            "id": -104297093,
-            "regex": "目賦",
-            "rawText": "增加#%地圖頭目賦予的經驗",
-            "generalizedText": "^增加#%地圖頭目賦予的經驗$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 9810428,
-            "regex": "塔的",
-            "rawText": "增加#%地圖內瓦爾烽塔的寶箱為稀有的機率",
-            "generalizedText": "^增加#%地圖內瓦爾烽塔的寶箱為稀有的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 11186406,
-            "regex": "加\\d+%地圖內的怪",
-            "rawText": "增加#%地圖內的怪物群大小",
-            "generalizedText": "^增加#%地圖內的怪物群大小$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 151652537,
-            "regex": "內裂",
-            "rawText": "增加#%地圖內裂痕的怪物群大小",
-            "generalizedText": "^增加#%地圖內裂痕的怪物群大小$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 252020550,
-            "regex": "%為魔",
-            "rawText": "地圖內的祭祀神壇所復活的怪物增加#%為魔法怪物的機率",
-            "generalizedText": "^地圖內的祭祀神壇所復活的怪物增加#%為魔法怪物的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": 285843297,
-            "regex": "%怪物的",
-            "rawText": "增加#%怪物的效用",
-            "generalizedText": "^增加#%怪物的效用$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 295156256,
-            "regex": "塔召",
-            "rawText": "增加#%地圖內的瓦爾烽塔召喚額外怪物的機率",
-            "generalizedText": "^增加#%地圖內的瓦爾烽塔召喚額外怪物的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 300523507,
-            "regex": "巢裔",
-            "rawText": "增加#%地圖內找到的巢裔之血數量",
-            "generalizedText": "^增加#%地圖內找到的巢裔之血數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 329993251,
-            "regex": "妄有",
-            "rawText": "地圖內的譫妄有#%更多機率生成傳奇頭目",
-            "generalizedText": "^地圖內的譫妄有#%更多機率生成傳奇頭目$",
+            "id": -540903682,
+            "regex": "持",
+            "rawText": "地圖內含有的譫妄迷霧會在消散前額外持續(6-12)秒",
+            "generalizedText": "^地圖內含有的譫妄迷霧會在消散前額外持續#秒$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -577,214 +457,10 @@
             }
         },
         {
-            "id": 421852870,
-            "regex": "外阿",
-            "rawText": "增加#%地圖內找到的物品稀有度|增加#%地圖內找到的換界石數量|地圖內含有#個額外阿茲莫里魂靈",
-            "generalizedText": "^增加#%地圖內找到的物品稀有度$|^增加#%地圖內找到的換界石數量$|^地圖內含有#個額外阿茲莫里魂靈$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 561969982,
-            "regex": "%為稀",
-            "rawText": "地圖內的祭祀神壇所復活的怪物增加#%為稀有怪物的機率",
-            "generalizedText": "^地圖內的祭祀神壇所復活的怪物增加#%為稀有怪物的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": 576877800,
-            "regex": "有阿",
-            "rawText": "增加#%地圖內有含有阿茲莫里魂靈的機率",
-            "generalizedText": "^增加#%地圖內有含有阿茲莫里魂靈的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 709991259,
-            "regex": "個保",
-            "rawText": "減少#%地圖內的怪物群大小|增加#%地圖內找到的換界石數量|地圖內含有額外的一個保險箱",
-            "generalizedText": "^減少#%地圖內的怪物群大小$|^增加#%地圖內找到的換界石數量$|^地圖內含有額外的一個保險箱$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 727508649,
-            "regex": "外盜",
-            "rawText": "增加#%地圖內找到的物品稀有度|增加#%地圖內找到的換界石數量|地圖內含有#名額外盜賊流亡者",
-            "generalizedText": "^增加#%地圖內找到的物品稀有度$|^增加#%地圖內找到的換界石數量$|^地圖內含有#名額外盜賊流亡者$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 801989776,
-            "regex": "有神",
-            "rawText": "增加#%地圖內含有神殿的機率",
-            "generalizedText": "^增加#%地圖內含有神殿的機率$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 807306364,
-            "regex": "有的魔",
-            "rawText": "增加#%地圖含有的魔法怪物",
-            "generalizedText": "^增加#%地圖含有的魔法怪物$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 850344724,
-            "regex": "壇有",
-            "rawText": "地圖內的祭祀神壇有#%機率不消耗貢禮",
-            "generalizedText": "^地圖內的祭祀神壇有#%機率不消耗貢禮$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "ritual"
-                ]
-            }
-        },
-        {
-            "id": 862959964,
-            "regex": "的掉",
-            "rawText": "增加#%地圖頭目的掉落物品數量",
-            "generalizedText": "^增加#%地圖頭目的掉落物品數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "map_boss"
-                ]
-            }
-        },
-        {
-            "id": 887016250,
-            "regex": "妄會",
-            "rawText": "地圖中的譫妄會增加#%玩家的譫妄程度",
-            "generalizedText": "^地圖中的譫妄會增加#%玩家的譫妄程度$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "delirium"
-                ]
-            }
-        },
-        {
-            "id": 1009762406,
-            "regex": "贈數",
-            "rawText": "增加#%地圖內找到的胎贈數量",
-            "generalizedText": "^增加#%地圖內找到的胎贈數量$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "breach"
-                ]
-            }
-        },
-        {
-            "id": 1009902714,
-            "regex": "遭的",
-            "rawText": "增加#%地圖內瓦爾烽塔周遭的怪物群大小",
-            "generalizedText": "^增加#%地圖內瓦爾烽塔周遭的怪物群大小$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1063627342,
-            "regex": "驗量",
-            "rawText": "增加#%地圖內所獲取的經驗量",
-            "generalizedText": "^增加#%地圖內所獲取的經驗量$",
-            "options": {
-                "prefix": true,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 1174106353,
-            "regex": "物會擁",
-            "rawText": "傳奇怪物會擁有#個額外的詞綴",
-            "generalizedText": "^傳奇怪物會擁有#個額外的詞綴$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": 1218394904,
-            "regex": "率擁",
-            "rawText": "有#%機率擁有一群額外怪物在地圖內的瓦爾烽塔周遭",
-            "generalizedText": "^有#%機率擁有一群額外怪物在地圖內的瓦爾烽塔周遭$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1404472778,
-            "regex": "為地",
-            "rawText": "有#%機率為地圖新增一名瓦爾烽塔傳奇怪物",
-            "generalizedText": "^有#%機率為地圖新增一名瓦爾烽塔傳奇怪物$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1443354344,
-            "regex": "遭擁",
-            "rawText": "地圖內的瓦爾烽塔周遭擁有額外#群怪物",
-            "generalizedText": "^地圖內的瓦爾烽塔周遭擁有額外#群怪物$",
-            "options": {
-                "prefix": false,
-                "tags": [
-                    "incursion"
-                ]
-            }
-        },
-        {
-            "id": 1450557217,
-            "regex": "淵增",
-            "rawText": "地圖內的深淵增加有#%機率前往無盡深淵",
-            "generalizedText": "^地圖內的深淵增加有#%機率前往無盡深淵$",
+            "id": -481412666,
+            "regex": "自",
+            "rawText": "增加(20-30)%來自地圖內深淵的褻瀆通貨掉落機率",
+            "generalizedText": "^增加#%來自地圖內深淵的褻瀆通貨掉落機率$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -793,22 +469,22 @@
             }
         },
         {
-            "id": 1545829460,
-            "regex": "目掉落的",
-            "rawText": "增加#%地圖頭目掉落的換界石數量",
-            "generalizedText": "^增加#%地圖頭目掉落的換界石數量$",
+            "id": -377868554,
+            "regex": "內稀",
+            "rawText": "增加(5-20)%地圖內稀有裂痕怪物的效用",
+            "generalizedText": "^增加#%地圖內稀有裂痕怪物的效用$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "map_boss"
+                    "breach"
                 ]
             }
         },
         {
-            "id": 1654898034,
-            "regex": "有保",
-            "rawText": "增加#%地圖內有含有保險箱的機率",
-            "generalizedText": "^增加#%地圖內有含有保險箱的機率$",
+            "id": -354629506,
+            "regex": "一個神",
+            "rawText": "地圖內含有額外的一個神殿",
+            "generalizedText": "^地圖內含有額外的一個神殿$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -817,9 +493,9 @@
             }
         },
         {
-            "id": 1692894596,
-            "regex": "．",
-            "rawText": "增加#%地圖內的不穩定裂痕含有烈許的統領．弗倫的機率",
+            "id": -314560709,
+            "regex": "烈",
+            "rawText": "增加(20-50)%地圖內的不穩定裂痕含有烈許的統領．弗倫的機率",
             "generalizedText": "^增加#%地圖內的不穩定裂痕含有烈許的統領．弗倫的機率$",
             "options": {
                 "prefix": false,
@@ -829,10 +505,94 @@
             }
         },
         {
-            "id": 1705192784,
-            "regex": "找到的物",
-            "rawText": "增加#%地圖內找到的物品稀有度",
-            "generalizedText": "^增加#%地圖內找到的物品稀有度$",
+            "id": -250359622,
+            "regex": "複",
+            "rawText": "探險擁有+(30-40)%滿溢機率複製地圖中的符文怪物",
+            "generalizedText": "^探險擁有+#%滿溢機率複製地圖中的符文怪物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": -88829109,
+            "regex": "隻",
+            "rawText": "地圖內的深淵生成(2-3)隻額外稀有怪物",
+            "generalizedText": "^地圖內的深淵生成#隻額外稀有怪物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": -42287288,
+            "regex": "每",
+            "rawText": "每有一個已關閉的坑洞，增加(8-12)%深淵怪物效用，最多100%",
+            "generalizedText": "^每有一個已關閉的坑洞，增加#%深淵怪物效用，最多#%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 25067405,
+            "regex": "\\d+個保",
+            "rawText": "地圖內含有額外的(1-2)個保險箱",
+            "generalizedText": "^地圖內含有額外的#個保險箱$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 62629171,
+            "regex": "斷",
+            "rawText": "增加(15-30)%地圖內掉落的幻像斷片數量",
+            "generalizedText": "^增加#%地圖內掉落的幻像斷片數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 108640922,
+            "regex": "%為稀",
+            "rawText": "地圖內的祭祀神壇所復活的怪物增加(25-40)%為稀有怪物的機率",
+            "generalizedText": "^地圖內的祭祀神壇所復活的怪物增加#%為稀有怪物的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 135469244,
+            "regex": "破",
+            "rawText": "增加(15-30)%地圖內的譫妄生成破碎之鏡",
+            "generalizedText": "^增加#%地圖內的譫妄生成破碎之鏡$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 164419697,
+            "regex": "一個精",
+            "rawText": "地圖內含有額外的一個精髓",
+            "generalizedText": "^地圖內含有額外的一個精髓$",
             "options": {
                 "prefix": true,
                 "tags": [
@@ -841,8 +601,284 @@
             }
         },
         {
-            "id": 1716368006,
-            "regex": "淵坑",
+            "id": 182417783,
+            "regex": "更",
+            "rawText": "地圖內的譫妄有(15-30)%更多機率生成傳奇頭目",
+            "generalizedText": "^地圖內的譫妄有#%更多機率生成傳奇頭目$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 197397637,
+            "regex": "率擁",
+            "rawText": "有(30-60)%機率擁有一群額外怪物在地圖內的瓦爾烽塔周遭",
+            "generalizedText": "^有#%機率擁有一群額外怪物在地圖內的瓦爾烽塔周遭$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 444792259,
+            "regex": "壇可",
+            "rawText": "地圖內的祭祀神壇可以額外重骰(1-3)次",
+            "generalizedText": "^地圖內的祭祀神壇可以額外重骰#次$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 474552856,
+            "regex": "有保",
+            "rawText": "增加(70-100)%地圖內有含有保險箱的機率",
+            "generalizedText": "^增加#%地圖內有含有保險箱的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 479296149,
+            "regex": "有阿",
+            "rawText": "增加(70-100)%地圖內有含有阿茲莫里魂靈的機率",
+            "generalizedText": "^增加#%地圖內有含有阿茲莫里魂靈的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 504241682,
+            "regex": "妄怪",
+            "rawText": "增加(15-30)%地圖內的譫妄怪物怪物群大小",
+            "generalizedText": "^增加#%地圖內的譫妄怪物怪物群大小$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 564968189,
+            "regex": "驗量",
+            "rawText": "增加(12-18)%地圖內所獲取的經驗量",
+            "generalizedText": "^增加#%地圖內所獲取的經驗量$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 574430759,
+            "regex": "為魔",
+            "rawText": "地圖內的祭祀神壇所復活的怪物增加(35-70)%為魔法怪物的機率",
+            "generalizedText": "^地圖內的祭祀神壇所復活的怪物增加#%為魔法怪物的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 611955315,
+            "regex": "往",
+            "rawText": "地圖內的深淵增加有(10-20)%機率前往無盡深淵",
+            "generalizedText": "^地圖內的深淵增加有#%機率前往無盡深淵$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "abyss"
+                ]
+            }
+        },
+        {
+            "id": 655807109,
+            "regex": "提",
+            "rawText": "增加(18-30)%在地圖內的祭祀神壇所獻祭的怪物提供的貢禮數量",
+            "generalizedText": "^增加#%在地圖內的祭祀神壇所獻祭的怪物提供的貢禮數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 690095601,
+            "regex": "遭擁",
+            "rawText": "地圖內的瓦爾烽塔周遭擁有額外1群怪物",
+            "generalizedText": "^地圖內的瓦爾烽塔周遭擁有額外#群怪物$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 739252212,
+            "regex": "擊",
+            "rawText": "地圖內的譫妄迷霧在擊殺稀有怪物時會暫停(3-5)秒",
+            "generalizedText": "^地圖內的譫妄迷霧在擊殺稀有怪物時會暫停#秒$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 857219754,
+            "regex": "外阿",
+            "rawText": "地圖內含有1個額外阿茲莫里魂靈",
+            "generalizedText": "^地圖內含有#個額外阿茲莫里魂靈$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 874837226,
+            "regex": "\\d+個神",
+            "rawText": "地圖內含有額外的(1-2)個神殿",
+            "generalizedText": "^地圖內含有額外的#個神殿$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 881932307,
+            "regex": "有盜",
+            "rawText": "增加(70-100)%地圖內含有盜賊流亡者的機率",
+            "generalizedText": "^增加#%地圖內含有盜賊流亡者的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 881965784,
+            "regex": "個阿",
+            "rawText": "地圖內含有額外的(1-2)個阿茲莫里魂靈",
+            "generalizedText": "^地圖內含有額外的#個阿茲莫里魂靈$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 924177740,
+            "regex": "塔的",
+            "rawText": "增加(30-60)%地圖內瓦爾烽塔的寶箱為稀有的機率",
+            "generalizedText": "^增加#%地圖內瓦爾烽塔的寶箱為稀有的機率$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 989647046,
+            "regex": "從",
+            "rawText": "有(5-10)%機率從地圖內的瓦爾烽塔獲得額外一個額外水晶",
+            "generalizedText": "^有#%機率從地圖內的瓦爾烽塔獲得額外一個額外水晶$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1056236838,
+            "regex": "霧增",
+            "rawText": "地圖中的譫妄迷霧增加(12-26)%裂鏡碎片的生成量",
+            "generalizedText": "^地圖中的譫妄迷霧增加#%裂鏡碎片的生成量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "delirium"
+                ]
+            }
+        },
+        {
+            "id": 1060331787,
+            "regex": "壇重",
+            "rawText": "減少(30-20)%地圖內的祭祀神壇重骰所需的貢禮數量",
+            "generalizedText": "^減少#%地圖內的祭祀神壇重骰所需的貢禮數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 1079448376,
+            "regex": "個稀",
+            "rawText": "地圖內含有額外的(2-3)個稀有箱子",
+            "generalizedText": "^地圖內含有額外的#個稀有箱子$",
+            "options": {
+                "prefix": true,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1090906942,
+            "regex": "外維",
+            "rawText": "地圖中的探險含有(1-2)個額外維里西姆守望",
+            "generalizedText": "^地圖中的探險含有#個額外維里西姆守望$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 1107604097,
+            "regex": "延",
+            "rawText": "地圖內的祭祀神壇所延遲的恩惠之物出現速度加快(25-40)%",
+            "generalizedText": "^地圖內的祭祀神壇所延遲的恩惠之物出現速度加快#%$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "ritual"
+                ]
+            }
+        },
+        {
+            "id": 1120183281,
+            "regex": "兩",
             "rawText": "地圖內的深淵坑洞有兩倍機率含有獎勵",
             "generalizedText": "^地圖內的深淵坑洞有兩倍機率含有獎勵$",
             "options": {
@@ -853,10 +889,70 @@
             }
         },
         {
-            "id": 1906859483,
-            "regex": "有的稀",
-            "rawText": "增加#%地圖含有的稀有怪物數量",
-            "generalizedText": "^增加#%地圖含有的稀有怪物數量$",
+            "id": 1662257259,
+            "regex": "目的",
+            "rawText": "增加(13-20)%地圖頭目的掉落物品數量",
+            "generalizedText": "^增加#%地圖頭目的掉落物品數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1670789869,
+            "regex": "一個保",
+            "rawText": "地圖內含有額外的一個保險箱",
+            "generalizedText": "^地圖內含有額外的一個保險箱$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1736733570,
+            "regex": "贈數",
+            "rawText": "增加(30-60)%地圖內找到的胎贈數量",
+            "generalizedText": "^增加#%地圖內找到的胎贈數量$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "breach"
+                ]
+            }
+        },
+        {
+            "id": 1773870625,
+            "regex": "遭的",
+            "rawText": "增加(10-30)%地圖內瓦爾烽塔周遭的怪物群大小",
+            "generalizedText": "^增加#%地圖內瓦爾烽塔周遭的怪物群大小$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "incursion"
+                ]
+            }
+        },
+        {
+            "id": 1813505419,
+            "regex": "品的",
+            "rawText": "增加(35-60)%地圖頭目掉落物品的稀有度",
+            "generalizedText": "^增加#%地圖頭目掉落物品的稀有度$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1819020306,
+            "regex": "外盜",
+            "rawText": "地圖內含有1名額外盜賊流亡者",
+            "generalizedText": "^地圖內含有#名額外盜賊流亡者$",
             "options": {
                 "prefix": true,
                 "tags": [
@@ -865,22 +961,34 @@
             }
         },
         {
-            "id": 1958953052,
-            "regex": "髓的",
-            "rawText": "增加#%地圖內含有精髓的機率",
-            "generalizedText": "^增加#%地圖內含有精髓的機率$",
+            "id": 1849197898,
+            "regex": "賦",
+            "rawText": "增加(40-80)%地圖頭目賦予的經驗",
+            "generalizedText": "^增加#%地圖頭目賦予的經驗$",
             "options": {
                 "prefix": false,
+                "tags": [
+                    "map_boss"
+                ]
+            }
+        },
+        {
+            "id": 1874847282,
+            "regex": "的魔",
+            "rawText": "增加(30-40)%地圖含有的魔法怪物",
+            "generalizedText": "^增加#%地圖含有的魔法怪物$",
+            "options": {
+                "prefix": true,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 1991666846,
-            "regex": "%維",
-            "rawText": "增加#%維里西姆遺物怪物掉落的維里西姆",
-            "generalizedText": "^增加#%維里西姆遺物怪物掉落的維里西姆$",
+            "id": 1885842260,
+            "regex": "個維",
+            "rawText": "探險擁有+(30-40)%滿溢機率含有額外一個維里西姆遺物",
+            "generalizedText": "^探險擁有+#%滿溢機率含有額外一個維里西姆遺物$",
             "options": {
                 "prefix": false,
                 "tags": [
@@ -889,562 +997,1120 @@
             }
         },
         {
-            "id": 2071141217,
-            "regex": "妄生",
-            "rawText": "增加#%地圖內的譫妄生成破碎之鏡",
-            "generalizedText": "^增加#%地圖內的譫妄生成破碎之鏡$",
+            "id": 1947862885,
+            "regex": "事",
+            "rawText": "增加(15-25)%地圖內的探險事件所生成的符文怪物掉落的探險日誌數量",
+            "generalizedText": "^增加#%地圖內的探險事件所生成的符文怪物掉落的探險日誌數量$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "delirium"
+                    "expedition"
                 ]
             }
         },
         {
-            "id": 2109769122,
-            "regex": "霧會",
-            "rawText": "地圖內含有的譫妄迷霧會在消散前額外持續#秒",
-            "generalizedText": "^地圖內含有的譫妄迷霧會在消散前額外持續#秒$",
+            "id": 2009544500,
+            "regex": "印",
+            "rawText": "增加(15-25)%地圖內含有的符文怪物印記的數量",
+            "generalizedText": "^增加#%地圖內含有的符文怪物印記的數量$",
             "options": {
                 "prefix": false,
                 "tags": [
-                    "delirium"
+                    "expedition"
+                ]
+            }
+        },
+        {
+            "id": 2125725641,
+            "regex": "\\d+個精",
+            "rawText": "地圖內含有額外的(1-2)個精髓",
+            "generalizedText": "^地圖內含有額外的#個精髓$",
+            "options": {
+                "prefix": false,
+                "tags": [
+                    "map_boss"
                 ]
             }
         }
     ],
     "optimizationTable": {
-        "-2092367728:-1452192147:-1421159416": {
+        "-2044629037:-1028076924": {
             "ids": [
-                -2092367728,
-                -1452192147,
-                -1421159416
-            ],
-            "regex": "禮數",
-            "weight": 2,
-            "count": 3
-        },
-        "-2092367728:-1945551180:-1421159416:252020550:561969982": {
-            "ids": [
-                -2092367728,
-                -1945551180,
-                -1421159416,
-                252020550,
-                561969982
-            ],
-            "regex": "壇所",
-            "weight": 2,
-            "count": 5
-        },
-        "-2092367728:-1452192147": {
-            "ids": [
-                -2092367728,
-                -1452192147
-            ],
-            "regex": "需的貢",
-            "weight": 3,
-            "count": 2
-        },
-        "-2092367728:-1572845914:-1452192147": {
-            "ids": [
-                -2092367728,
-                -1572845914,
-                -1452192147
-            ],
-            "regex": "%地圖內的祭",
-            "weight": 6,
-            "count": 3
-        },
-        "-2092367728:-1452192147:-1391160602:-392421686:709991259": {
-            "ids": [
-                -2092367728,
-                -1452192147,
-                -1391160602,
-                -392421686,
-                709991259
-            ],
-            "regex": "少\\d+%地",
-            "weight": 7,
-            "count": 5
-        },
-        "-2039170704:1545829460": {
-            "ids": [
-                -2039170704,
-                1545829460
-            ],
-            "regex": "目掉",
-            "weight": 2,
-            "count": 2
-        },
-        "-2039170704:-104297093:862959964:1545829460": {
-            "ids": [
-                -2039170704,
-                -104297093,
-                862959964,
-                1545829460
-            ],
-            "regex": "%地圖頭",
-            "weight": 4,
-            "count": 4
-        },
-        "-1790640598:807306364:1906859483:2109769122": {
-            "ids": [
-                -1790640598,
-                807306364,
-                1906859483,
-                2109769122
-            ],
-            "regex": "含有的",
-            "weight": 3,
-            "count": 4
-        },
-        "-1790640598:-893555223": {
-            "ids": [
-                -1790640598,
-                -893555223
-            ],
-            "regex": "的符文怪",
-            "weight": 4,
-            "count": 2
-        },
-        "-1790640598:2109769122": {
-            "ids": [
-                -1790640598,
-                2109769122
-            ],
-            "regex": "內含有的",
-            "weight": 4,
-            "count": 2
-        },
-        "-1790640598:-231434512:801989776:1958953052": {
-            "ids": [
-                -1790640598,
-                -231434512,
-                801989776,
-                1958953052
-            ],
-            "regex": "%地圖內含",
-            "weight": 5,
-            "count": 4
-        },
-        "-1562110960:-392421686:300523507:421852870:709991259:727508649:1009762406": {
-            "ids": [
-                -1562110960,
-                -392421686,
-                300523507,
-                421852870,
-                709991259,
-                727508649,
-                1009762406
-            ],
-            "regex": "內找",
-            "weight": 2,
-            "count": 7
-        },
-        "-1562110960:-1019814980": {
-            "ids": [
-                -1562110960,
-                -1019814980
-            ],
-            "regex": "個精",
-            "weight": 2,
-            "count": 2
-        },
-        "-1562110960:-1488161500:-392421686:421852870:709991259:727508649": {
-            "ids": [
-                -1562110960,
-                -1488161500,
-                -392421686,
-                421852870,
-                709991259,
-                727508649
-            ],
-            "regex": "到的換",
-            "weight": 3,
-            "count": 6
-        },
-        "-1562110960:-1488161500:-392421686:421852870:709991259:727508649:1545829460": {
-            "ids": [
-                -1562110960,
-                -1488161500,
-                -392421686,
-                421852870,
-                709991259,
-                727508649,
-                1545829460
-            ],
-            "regex": "界石數",
-            "weight": 3,
-            "count": 7
-        },
-        "-1562110960:-392421686:421852870:709991259:727508649": {
-            "ids": [
-                -1562110960,
-                -392421686,
-                421852870,
-                709991259,
-                727508649
-            ],
-            "regex": "到的換",
-            "weight": 3,
-            "count": 5
-        },
-        "-1562110960:-392421686:421852870:709991259:727508649:1545829460": {
-            "ids": [
-                -1562110960,
-                -392421686,
-                421852870,
-                709991259,
-                727508649,
-                1545829460
-            ],
-            "regex": "界石數",
-            "weight": 3,
-            "count": 6
-        },
-        "-1562110960:-1560535587:-1117095933:-1019814980:-955582143:-392421686:709991259": {
-            "ids": [
-                -1562110960,
-                -1560535587,
-                -1117095933,
-                -1019814980,
-                -955582143,
-                -392421686,
-                709991259
-            ],
-            "regex": "外的一",
-            "weight": 3,
-            "count": 7
-        },
-        "-1562110960:-1117095933:-1019853816:-1019814980:-955582143:-392421686:709991259": {
-            "ids": [
-                -1562110960,
-                -1117095933,
-                -1019853816,
-                -1019814980,
-                -955582143,
-                -392421686,
-                709991259
-            ],
-            "regex": "外的一",
-            "weight": 3,
-            "count": 7
-        },
-        "-1562110960:-1560535587:-1117095933:-1019853816:-955582143:-392421686:709991259": {
-            "ids": [
-                -1562110960,
-                -1560535587,
-                -1117095933,
-                -1019853816,
-                -955582143,
-                -392421686,
-                709991259
-            ],
-            "regex": "外的一",
-            "weight": 3,
-            "count": 7
-        },
-        "-1562110960:421852870:727508649:1705192784": {
-            "ids": [
-                -1562110960,
-                421852870,
-                727508649,
-                1705192784
-            ],
-            "regex": "找到的物",
-            "weight": 4,
-            "count": 4
-        },
-        "-1562110960:421852870:727508649": {
-            "ids": [
-                -1562110960,
-                421852870,
-                727508649
-            ],
-            "regex": "找到的物",
-            "weight": 4,
-            "count": 3
-        },
-        "-1560535587:709991259": {
-            "ids": [
-                -1560535587,
-                709991259
-            ],
-            "regex": "個保",
-            "weight": 2,
-            "count": 2
-        },
-        "-1480102660:887016250": {
-            "ids": [
-                -1480102660,
-                887016250
-            ],
-            "regex": "中的譫",
-            "weight": 3,
-            "count": 2
-        },
-        "-1468452716:285843297": {
-            "ids": [
-                -1468452716,
-                285843297
+                -2044629037,
+                -1028076924
             ],
             "regex": "%怪",
             "weight": 2,
             "count": 2
         },
-        "-1421159416:1218394904": {
+        "-2044629037:-659266483": {
             "ids": [
-                -1421159416,
-                1218394904
+                -2044629037,
+                -659266483
             ],
-            "regex": "在地圖內的",
-            "weight": 5,
+            "regex": "物稀",
+            "weight": 2,
             "count": 2
         },
-        "-1391160602:-859643819:-427280722:329993251:2071141217": {
+        "-2026817376:-1349688955:-828476369:-659266483:1090906942:1947862885": {
             "ids": [
-                -1391160602,
-                -859643819,
-                -427280722,
-                329993251,
-                2071141217
+                -2026817376,
+                -1349688955,
+                -828476369,
+                -659266483,
+                1090906942,
+                1947862885
             ],
-            "regex": "內的譫",
+            "regex": "的探",
+            "weight": 2,
+            "count": 6
+        },
+        "-2026817376:-1349688955:-828476369:1090906942": {
+            "ids": [
+                -2026817376,
+                -1349688955,
+                -828476369,
+                1090906942
+            ],
+            "regex": "險含",
+            "weight": 2,
+            "count": 4
+        },
+        "-2026817376:-1349688955:-828476369:-659266483:1090906942": {
+            "ids": [
+                -2026817376,
+                -1349688955,
+                -828476369,
+                -659266483,
+                1090906942
+            ],
+            "regex": "中的探",
             "weight": 3,
             "count": 5
         },
-        "-1391160602:-859643819": {
+        "-2026817376:-1349688955:-828476369:857219754:1090906942:1819020306": {
             "ids": [
-                -1391160602,
-                -859643819
+                -2026817376,
+                -1349688955,
+                -828476369,
+                857219754,
+                1090906942,
+                1819020306
             ],
-            "regex": "內的譫妄迷",
-            "weight": 5,
-            "count": 2
-        },
-        "-1391160602:-427280722:2071141217": {
-            "ids": [
-                -1391160602,
-                -427280722,
-                2071141217
-            ],
-            "regex": "%地圖內的譫",
+            "regex": "含有\\d+",
             "weight": 6,
-            "count": 3
+            "count": 6
         },
-        "-1251704831:-649394018": {
+        "-2026817376:-1635710298:-1564770511:-1349688955:-828476369:857219754:1090906942": {
             "ids": [
-                -1251704831,
-                -649394018
+                -2026817376,
+                -1635710298,
+                -1564770511,
+                -1349688955,
+                -828476369,
+                857219754,
+                1090906942
             ],
-            "regex": "淵生",
-            "weight": 2,
-            "count": 2
+            "regex": "有\\d+個",
+            "weight": 6,
+            "count": 7
         },
-        "-1251704831:-649394018:-539081792:1450557217:1716368006": {
+        "-2026817376:-1349688955:-828476369:857219754:1090906942": {
             "ids": [
-                -1251704831,
-                -649394018,
-                -539081792,
-                1450557217,
-                1716368006
+                -2026817376,
+                -1349688955,
+                -828476369,
+                857219754,
+                1090906942
             ],
-            "regex": "內的深",
-            "weight": 3,
+            "regex": "含有\\d+個",
+            "weight": 7,
             "count": 5
         },
-        "-1247977786:1063627342": {
+        "-2005637209:-1325149272:108640922:574430759:924177740": {
             "ids": [
-                -1247977786,
-                1063627342
+                -2005637209,
+                -1325149272,
+                108640922,
+                574430759,
+                924177740
             ],
-            "regex": "內所",
-            "weight": 2,
+            "regex": "為",
+            "weight": 1,
+            "count": 5
+        },
+        "-2005637209:1120183281": {
+            "ids": [
+                -2005637209,
+                1120183281
+            ],
+            "regex": "獎",
+            "weight": 1,
             "count": 2
         },
-        "-1068931610:1692894596": {
+        "-2005637209:-1933464139:1060331787": {
             "ids": [
-                -1068931610,
-                1692894596
+                -2005637209,
+                -1933464139,
+                1060331787
             ],
-            "regex": "內的不",
-            "weight": 3,
-            "count": 2
-        },
-        "-1019853816:-392421686": {
-            "ids": [
-                -1019853816,
-                -392421686
-            ],
-            "regex": "個神殿",
-            "weight": 3,
-            "count": 2
-        },
-        "-893555223:1991666846": {
-            "ids": [
-                -893555223,
-                1991666846
-            ],
-            "regex": "物掉落的",
-            "weight": 4,
-            "count": 2
-        },
-        "-826173451:-442632449": {
-            "ids": [
-                -826173451,
-                -442632449
-            ],
-            "regex": "圖有",
-            "weight": 2,
-            "count": 2
-        },
-        "-826173451:421852870:1174106353": {
-            "ids": [
-                -826173451,
-                421852870,
-                1174106353
-            ],
-            "regex": "\\d+個額",
+            "regex": "%地圖內的祭",
             "weight": 6,
             "count": 3
         },
-        "-697641535:295156256:1218394904:1443354344": {
+        "-1933464139:-1594182537:1060331787": {
             "ids": [
-                -697641535,
-                295156256,
-                1218394904,
-                1443354344
+                -1933464139,
+                -1594182537,
+                1060331787
+            ],
+            "regex": "減",
+            "weight": 1,
+            "count": 3
+        },
+        "-1933464139:-1553918089:655807109:1060331787": {
+            "ids": [
+                -1933464139,
+                -1553918089,
+                655807109,
+                1060331787
+            ],
+            "regex": "貢",
+            "weight": 1,
+            "count": 4
+        },
+        "-1933464139:1060331787": {
+            "ids": [
+                -1933464139,
+                1060331787
+            ],
+            "regex": "需",
+            "weight": 1,
+            "count": 2
+        },
+        "-1933464139:655807109:1060331787": {
+            "ids": [
+                -1933464139,
+                655807109,
+                1060331787
+            ],
+            "regex": "的貢",
+            "weight": 2,
+            "count": 3
+        },
+        "-1933464139:108640922:574430759:655807109:1107604097": {
+            "ids": [
+                -1933464139,
+                108640922,
+                574430759,
+                655807109,
+                1107604097
+            ],
+            "regex": "壇所",
+            "weight": 2,
+            "count": 5
+        },
+        "-1788692627:-1028076924:-377868554:108640922:574430759": {
+            "ids": [
+                -1788692627,
+                -1028076924,
+                -377868554,
+                108640922,
+                574430759
+            ],
+            "regex": "物的",
+            "weight": 2,
+            "count": 5
+        },
+        "-1788692627:197397637:690095601:989647046": {
+            "ids": [
+                -1788692627,
+                197397637,
+                690095601,
+                989647046
             ],
             "regex": "的瓦",
             "weight": 2,
             "count": 4
         },
-        "-651107220:285843297": {
+        "-1788692627:197397637": {
             "ids": [
-                -651107220,
-                285843297
+                -1788692627,
+                197397637
             ],
-            "regex": "物的效",
-            "weight": 3,
-            "count": 2
-        },
-        "-617278938:576877800:1654898034": {
-            "ids": [
-                -617278938,
-                576877800,
-                1654898034
-            ],
-            "regex": "有含",
-            "weight": 2,
-            "count": 3
-        },
-        "-617278938:-146030113:576877800:1654898034": {
-            "ids": [
-                -617278938,
-                -146030113,
-                576877800,
-                1654898034
-            ],
-            "regex": "圖內有",
-            "weight": 3,
-            "count": 4
-        },
-        "-539081792:252020550:561969982": {
-            "ids": [
-                -539081792,
-                252020550,
-                561969982
-            ],
-            "regex": "怪物增加\\d+",
-            "weight": 8,
-            "count": 3
-        },
-        "-392421686:11186406:709991259": {
-            "ids": [
-                -392421686,
-                11186406,
-                709991259
-            ],
-            "regex": "圖內的怪",
-            "weight": 4,
-            "count": 3
-        },
-        "-392421686:11186406:151652537:709991259:1009902714": {
-            "ids": [
-                -392421686,
-                11186406,
-                151652537,
-                709991259,
-                1009902714
-            ],
-            "regex": "的怪物群大",
-            "weight": 5,
-            "count": 5
-        },
-        "-146030113:1009762406": {
-            "ids": [
-                -146030113,
-                1009762406
-            ],
-            "regex": "的胎",
+            "regex": "外怪",
             "weight": 2,
             "count": 2
         },
-        "9810428:1009902714": {
+        "-1788692627:108640922:574430759": {
             "ids": [
-                9810428,
-                1009902714
-            ],
-            "regex": "內瓦",
-            "weight": 2,
-            "count": 2
-        },
-        "252020550:561969982": {
-            "ids": [
-                252020550,
-                561969982
-            ],
-            "regex": "所復",
-            "weight": 2,
-            "count": 2
-        },
-        "252020550:295156256:561969982": {
-            "ids": [
-                252020550,
-                295156256,
-                561969982
+                -1788692627,
+                108640922,
+                574430759
             ],
             "regex": "物的機",
             "weight": 3,
             "count": 3
         },
-        "421852870:727508649": {
+        "-1786171939:-1028076924:-377868554:-42287288": {
             "ids": [
-                421852870,
-                727508649
+                -1786171939,
+                -1028076924,
+                -377868554,
+                -42287288
             ],
-            "regex": "含有\\d+",
-            "weight": 6,
+            "regex": "效",
+            "weight": 1,
+            "count": 4
+        },
+        "-1786171939:-659266483": {
+            "ids": [
+                -1786171939,
+                -659266483
+            ],
+            "regex": "%地圖中",
+            "weight": 4,
             "count": 2
         },
-        "807306364:1906859483": {
+        "-1784287093:-1033399892:504241682:1773870625": {
             "ids": [
-                807306364,
-                1906859483
+                -1784287093,
+                -1033399892,
+                504241682,
+                1773870625
+            ],
+            "regex": "大",
+            "weight": 1,
+            "count": 4
+        },
+        "-1784287093:-1519456051:-1033399892:108640922:574430759:655807109:1773870625": {
+            "ids": [
+                -1784287093,
+                -1519456051,
+                -1033399892,
+                108640922,
+                574430759,
+                655807109,
+                1773870625
+            ],
+            "regex": "的怪物",
+            "weight": 3,
+            "count": 7
+        },
+        "-1784287093:-1033399892:1773870625": {
+            "ids": [
+                -1784287093,
+                -1033399892,
+                1773870625
+            ],
+            "regex": "的怪物群",
+            "weight": 4,
+            "count": 3
+        },
+        "-1635710298:-956801645:-859828309:-724125136:-540903682:739252212": {
+            "ids": [
+                -1635710298,
+                -956801645,
+                -859828309,
+                -724125136,
+                -540903682,
+                739252212
+            ],
+            "regex": "會",
+            "weight": 1,
+            "count": 6
+        },
+        "-1635710298:-1564770511:-1349688955:857219754:989647046:1090906942": {
+            "ids": [
+                -1635710298,
+                -1564770511,
+                -1349688955,
+                857219754,
+                989647046,
+                1090906942
+            ],
+            "regex": "個額",
+            "weight": 2,
+            "count": 6
+        },
+        "-1635710298:-1325149272": {
+            "ids": [
+                -1635710298,
+                -1325149272
+            ],
+            "regex": "奇怪",
+            "weight": 2,
+            "count": 2
+        },
+        "-1635710298:-859828309": {
+            "ids": [
+                -1635710298,
+                -859828309
+            ],
+            "regex": "物會",
+            "weight": 2,
+            "count": 2
+        },
+        "-1635710298:-1377869826:-611033189:-250359622:197397637:690095601:1885842260": {
+            "ids": [
+                -1635710298,
+                -1377869826,
+                -611033189,
+                -250359622,
+                197397637,
+                690095601,
+                1885842260
+            ],
+            "regex": "擁有",
+            "weight": 2,
+            "count": 7
+        },
+        "-1635710298:-1564770511:-1349688955:857219754:1090906942": {
+            "ids": [
+                -1635710298,
+                -1564770511,
+                -1349688955,
+                857219754,
+                1090906942
+            ],
+            "regex": "\\d+個額",
+            "weight": 6,
+            "count": 5
+        },
+        "-1617113142:-773162240": {
+            "ids": [
+                -1617113142,
+                -773162240
+            ],
+            "regex": "道",
+            "weight": 1,
+            "count": 2
+        },
+        "-1617113142:989647046:1885842260": {
+            "ids": [
+                -1617113142,
+                989647046,
+                1885842260
+            ],
+            "regex": "外一",
+            "weight": 2,
+            "count": 3
+        },
+        "-1617113142:1885842260": {
+            "ids": [
+                -1617113142,
+                1885842260
+            ],
+            "regex": "有額外一",
+            "weight": 4,
+            "count": 2
+        },
+        "-1594182537:-540903682": {
+            "ids": [
+                -1594182537,
+                -540903682
+            ],
+            "regex": "散",
+            "weight": 1,
+            "count": 2
+        },
+        "-1594182537:-1553918089:-540903682": {
+            "ids": [
+                -1594182537,
+                -1553918089,
+                -540903682
+            ],
+            "regex": "消",
+            "weight": 1,
+            "count": 3
+        },
+        "-1594182537:-540903682:739252212:1056236838": {
+            "ids": [
+                -1594182537,
+                -540903682,
+                739252212,
+                1056236838
+            ],
+            "regex": "迷",
+            "weight": 1,
+            "count": 4
+        },
+        "-1594182537:1107604097": {
+            "ids": [
+                -1594182537,
+                1107604097
+            ],
+            "regex": "速",
+            "weight": 1,
+            "count": 2
+        },
+        "-1594182537:135469244:182417783:504241682:739252212": {
+            "ids": [
+                -1594182537,
+                135469244,
+                182417783,
+                504241682,
+                739252212
+            ],
+            "regex": "內的譫",
+            "weight": 3,
+            "count": 5
+        },
+        "-1594182537:135469244:504241682": {
+            "ids": [
+                -1594182537,
+                135469244,
+                504241682
+            ],
+            "regex": "%地圖內的譫",
+            "weight": 6,
+            "count": 3
+        },
+        "-1564770511:-773162240": {
+            "ids": [
+                -1564770511,
+                -773162240
+            ],
+            "regex": "圖有",
+            "weight": 2,
+            "count": 2
+        },
+        "-1553918089:-724125136:-314560709": {
+            "ids": [
+                -1553918089,
+                -724125136,
+                -314560709
+            ],
+            "regex": "不",
+            "weight": 1,
+            "count": 3
+        },
+        "-1553918089:-1325149272:-773162240:-614112895:197397637:611955315:989647046": {
+            "ids": [
+                -1553918089,
+                -1325149272,
+                -773162240,
+                -614112895,
+                197397637,
+                611955315,
+                989647046
+            ],
+            "regex": "有\\d+%機",
+            "weight": 7,
+            "count": 7
+        },
+        "-1519456051:-724125136:-88829109:135469244:182417783:1056236838:1947862885": {
+            "ids": [
+                -1519456051,
+                -724125136,
+                -88829109,
+                135469244,
+                182417783,
+                1056236838,
+                1947862885
+            ],
+            "regex": "生",
+            "weight": 1,
+            "count": 7
+        },
+        "-1519456051:-1401280853": {
+            "ids": [
+                -1519456051,
+                -1401280853
+            ],
+            "regex": "物數",
+            "weight": 2,
+            "count": 2
+        },
+        "-1519456051:1947862885": {
+            "ids": [
+                -1519456051,
+                1947862885
+            ],
+            "regex": "成的",
+            "weight": 2,
+            "count": 2
+        },
+        "-1519456051:-88829109": {
+            "ids": [
+                -1519456051,
+                -88829109
+            ],
+            "regex": "淵生",
+            "weight": 2,
+            "count": 2
+        },
+        "-1519456051:-611033189:-88829109:611955315:1120183281": {
+            "ids": [
+                -1519456051,
+                -611033189,
+                -88829109,
+                611955315,
+                1120183281
+            ],
+            "regex": "的深",
+            "weight": 2,
+            "count": 5
+        },
+        "-1442604101:-1360675046:-1026217690:1736733570": {
+            "ids": [
+                -1442604101,
+                -1360675046,
+                -1026217690,
+                1736733570
+            ],
+            "regex": "找",
+            "weight": 1,
+            "count": 4
+        },
+        "-1401280853:1874847282": {
+            "ids": [
+                -1401280853,
+                1874847282
             ],
             "regex": "圖含",
             "weight": 2,
             "count": 2
         },
-        "1009902714:1218394904:1443354344": {
+        "-1401280853:-540903682:924177740:1874847282:2009544500": {
             "ids": [
-                1009902714,
-                1218394904,
-                1443354344
+                -1401280853,
+                -540903682,
+                924177740,
+                1874847282,
+                2009544500
             ],
-            "regex": "塔周",
+            "regex": "有的",
+            "weight": 2,
+            "count": 5
+        },
+        "-1401280853:1813505419": {
+            "ids": [
+                -1401280853,
+                1813505419
+            ],
+            "regex": "的稀",
+            "weight": 2,
+            "count": 2
+        },
+        "-1401280853:-859828309:-724125136:-88829109:108640922:739252212": {
+            "ids": [
+                -1401280853,
+                -859828309,
+                -724125136,
+                -88829109,
+                108640922,
+                739252212
+            ],
+            "regex": "有怪",
+            "weight": 2,
+            "count": 6
+        },
+        "-1401280853:-540903682:1874847282:2009544500": {
+            "ids": [
+                -1401280853,
+                -540903682,
+                1874847282,
+                2009544500
+            ],
+            "regex": "含有的",
+            "weight": 3,
+            "count": 4
+        },
+        "-1377869826:-1329521044": {
+            "ids": [
+                -1377869826,
+                -1329521044
+            ],
+            "regex": "的維",
+            "weight": 2,
+            "count": 2
+        },
+        "-1377869826:-1329521044:1885842260": {
+            "ids": [
+                -1377869826,
+                -1329521044,
+                1885842260
+            ],
+            "regex": "姆遺",
             "weight": 2,
             "count": 3
+        },
+        "-1349688955:857219754:1090906942": {
+            "ids": [
+                -1349688955,
+                857219754,
+                1090906942
+            ],
+            "regex": "含有\\d+個額",
+            "weight": 8,
+            "count": 3
+        },
+        "-1329521044:1947862885": {
+            "ids": [
+                -1329521044,
+                1947862885
+            ],
+            "regex": "物掉",
+            "weight": 2,
+            "count": 2
+        },
+        "-1329521044:-1127158390:62629171:1947862885": {
+            "ids": [
+                -1329521044,
+                -1127158390,
+                62629171,
+                1947862885
+            ],
+            "regex": "落的",
+            "weight": 2,
+            "count": 4
+        },
+        "-1329521044:504241682": {
+            "ids": [
+                -1329521044,
+                504241682
+            ],
+            "regex": "物怪",
+            "weight": 2,
+            "count": 2
+        },
+        "-1325149272:-859828309:-724125136:1819020306": {
+            "ids": [
+                -1325149272,
+                -859828309,
+                -724125136,
+                1819020306
+            ],
+            "regex": "名",
+            "weight": 1,
+            "count": 4
+        },
+        "-1309913324:-1014931673:881932307:2009544500": {
+            "ids": [
+                -1309913324,
+                -1014931673,
+                881932307,
+                2009544500
+            ],
+            "regex": "%地圖內含",
+            "weight": 5,
+            "count": 4
+        },
+        "-1308339624:564968189": {
+            "ids": [
+                -1308339624,
+                564968189
+            ],
+            "regex": "取",
+            "weight": 1,
+            "count": 2
+        },
+        "-1308339624:564968189:989647046": {
+            "ids": [
+                -1308339624,
+                564968189,
+                989647046
+            ],
+            "regex": "獲",
+            "weight": 1,
+            "count": 3
+        },
+        "-1127158390:-1026217690": {
+            "ids": [
+                -1127158390,
+                -1026217690
+            ],
+            "regex": "換",
+            "weight": 1,
+            "count": 2
+        },
+        "-1127158390:1813505419": {
+            "ids": [
+                -1127158390,
+                1813505419
+            ],
+            "regex": "目掉",
+            "weight": 2,
+            "count": 2
+        },
+        "-1127158390:1662257259:1813505419:1849197898": {
+            "ids": [
+                -1127158390,
+                1662257259,
+                1813505419,
+                1849197898
+            ],
+            "regex": "圖頭",
+            "weight": 2,
+            "count": 4
+        },
+        "-1028076924:-377868554": {
+            "ids": [
+                -1028076924,
+                -377868554
+            ],
+            "regex": "的效",
+            "weight": 2,
+            "count": 2
+        },
+        "-1028076924:-377868554:-42287288": {
+            "ids": [
+                -1028076924,
+                -377868554,
+                -42287288
+            ],
+            "regex": "效用",
+            "weight": 2,
+            "count": 3
+        },
+        "-956801645:1056236838": {
+            "ids": [
+                -956801645,
+                1056236838
+            ],
+            "regex": "中的譫",
+            "weight": 3,
+            "count": 2
+        },
+        "-864971456:-782248059": {
+            "ids": [
+                -864971456,
+                -782248059
+            ],
+            "regex": "陣",
+            "weight": 1,
+            "count": 2
+        },
+        "-864971456:474552856:479296149": {
+            "ids": [
+                -864971456,
+                474552856,
+                479296149
+            ],
+            "regex": "有含",
+            "weight": 2,
+            "count": 3
+        },
+        "-864971456:-614112895:474552856:479296149": {
+            "ids": [
+                -864971456,
+                -614112895,
+                474552856,
+                479296149
+            ],
+            "regex": "內有",
+            "weight": 2,
+            "count": 4
+        },
+        "-859828309:1107604097": {
+            "ids": [
+                -859828309,
+                1107604097
+            ],
+            "regex": "出",
+            "weight": 1,
+            "count": 2
+        },
+        "-859828309:-540903682:611955315": {
+            "ids": [
+                -859828309,
+                -540903682,
+                611955315
+            ],
+            "regex": "前",
+            "weight": 1,
+            "count": 3
+        },
+        "-859828309:-250359622:1947862885:2009544500": {
+            "ids": [
+                -859828309,
+                -250359622,
+                1947862885,
+                2009544500
+            ],
+            "regex": "的符",
+            "weight": 2,
+            "count": 4
+        },
+        "-859828309:-724125136:1819020306": {
+            "ids": [
+                -859828309,
+                -724125136,
+                1819020306
+            ],
+            "regex": "\\d+名",
+            "weight": 5,
+            "count": 3
+        },
+        "-782248059:-354629506:164419697:1670789869": {
+            "ids": [
+                -782248059,
+                -354629506,
+                164419697,
+                1670789869
+            ],
+            "regex": "的一",
+            "weight": 2,
+            "count": 4
+        },
+        "-724125136:-314560709": {
+            "ids": [
+                -724125136,
+                -314560709
+            ],
+            "regex": "穩",
+            "weight": 1,
+            "count": 2
+        },
+        "-724125136:1819020306": {
+            "ids": [
+                -724125136,
+                1819020306
+            ],
+            "regex": "名額",
+            "weight": 2,
+            "count": 2
+        },
+        "-724125136:-540903682": {
+            "ids": [
+                -724125136,
+                -540903682
+            ],
+            "regex": "會在",
+            "weight": 2,
+            "count": 2
+        },
+        "-724125136:-88829109": {
+            "ids": [
+                -724125136,
+                -88829109
+            ],
+            "regex": "外稀",
+            "weight": 2,
+            "count": 2
+        },
+        "-614112895:1736733570": {
+            "ids": [
+                -614112895,
+                1736733570
+            ],
+            "regex": "胎",
+            "weight": 1,
+            "count": 2
+        },
+        "-611033189:108640922:574430759": {
+            "ids": [
+                -611033189,
+                108640922,
+                574430759
+            ],
+            "regex": "物增",
+            "weight": 2,
+            "count": 3
+        },
+        "-611033189:-42287288": {
+            "ids": [
+                -611033189,
+                -42287288
+            ],
+            "regex": "淵怪",
+            "weight": 2,
+            "count": 2
+        },
+        "-540903682:739252212": {
+            "ids": [
+                -540903682,
+                739252212
+            ],
+            "regex": "秒",
+            "weight": 1,
+            "count": 2
+        },
+        "-354629506:874837226": {
+            "ids": [
+                -354629506,
+                874837226
+            ],
+            "regex": "個神",
+            "weight": 2,
+            "count": 2
+        },
+        "-250359622:1885842260": {
+            "ids": [
+                -250359622,
+                1885842260
+            ],
+            "regex": "溢",
+            "weight": 1,
+            "count": 2
+        },
+        "-42287288:1120183281": {
+            "ids": [
+                -42287288,
+                1120183281
+            ],
+            "regex": "坑",
+            "weight": 1,
+            "count": 2
+        },
+        "-42287288:197397637": {
+            "ids": [
+                -42287288,
+                197397637
+            ],
+            "regex": "有一",
+            "weight": 2,
+            "count": 2
+        },
+        "25067405:1670789869": {
+            "ids": [
+                25067405,
+                1670789869
+            ],
+            "regex": "個保",
+            "weight": 2,
+            "count": 2
+        },
+        "25067405:874837226:881965784:1079448376:2125725641": {
+            "ids": [
+                25067405,
+                874837226,
+                881965784,
+                1079448376,
+                2125725641
+            ],
+            "regex": "的\\d+",
+            "weight": 5,
+            "count": 5
+        },
+        "62629171:1056236838": {
+            "ids": [
+                62629171,
+                1056236838
+            ],
+            "regex": "片",
+            "weight": 1,
+            "count": 2
+        },
+        "108640922:574430759": {
+            "ids": [
+                108640922,
+                574430759
+            ],
+            "regex": "復",
+            "weight": 1,
+            "count": 2
+        },
+        "108640922:924177740": {
+            "ids": [
+                108640922,
+                924177740
+            ],
+            "regex": "為稀",
+            "weight": 2,
+            "count": 2
+        },
+        "164419697:2125725641": {
+            "ids": [
+                164419697,
+                2125725641
+            ],
+            "regex": "個精",
+            "weight": 2,
+            "count": 2
+        },
+        "197397637:690095601:1773870625": {
+            "ids": [
+                197397637,
+                690095601,
+                1773870625
+            ],
+            "regex": "周",
+            "weight": 1,
+            "count": 3
+        },
+        "444792259:1060331787": {
+            "ids": [
+                444792259,
+                1060331787
+            ],
+            "regex": "重",
+            "weight": 1,
+            "count": 2
+        },
+        "479296149:857219754:881965784": {
+            "ids": [
+                479296149,
+                857219754,
+                881965784
+            ],
+            "regex": "里魂",
+            "weight": 2,
+            "count": 3
+        },
+        "564968189:1849197898": {
+            "ids": [
+                564968189,
+                1849197898
+            ],
+            "regex": "經",
+            "weight": 1,
+            "count": 2
+        },
+        "574430759:1874847282": {
+            "ids": [
+                574430759,
+                1874847282
+            ],
+            "regex": "法怪",
+            "weight": 2,
+            "count": 2
+        },
+        "881932307:1819020306": {
+            "ids": [
+                881932307,
+                1819020306
+            ],
+            "regex": "盜",
+            "weight": 1,
+            "count": 2
+        },
+        "924177740:1773870625": {
+            "ids": [
+                924177740,
+                1773870625
+            ],
+            "regex": "內瓦",
+            "weight": 2,
+            "count": 2
+        },
+        "989647046:1885842260": {
+            "ids": [
+                989647046,
+                1885842260
+            ],
+            "regex": "外一個",
+            "weight": 3,
+            "count": 2
+        },
+        "1120183281:1885842260": {
+            "ids": [
+                1120183281,
+                1885842260
+            ],
+            "regex": "率含",
+            "weight": 2,
+            "count": 2
+        },
+        "1662257259:1813505419": {
+            "ids": [
+                1662257259,
+                1813505419
+            ],
+            "regex": "落物",
+            "weight": 2,
+            "count": 2
         }
     }
 }

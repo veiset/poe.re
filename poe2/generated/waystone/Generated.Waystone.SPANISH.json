@@ -1,414 +1,289 @@
 {
     "tokens": [
         {
-            "id": -2134824877,
-            "regex": "tan b",
-            "rawText": "Los monstruos están blindados",
-            "generalizedText": "^los monstruos estan blindados$",
+            "id": -1718797825,
+            "regex": "cib",
+            "rawText": "Los monstruos reciben el daño extra de los impactos críticos reducido un (15-30)%",
+            "generalizedText": "^los monstruos reciben el dano extra de los impactos criticos reducido un #%$",
             "options": {
-                "name": "de resistencia",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "de obturación",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1698573306,
+            "regex": "uem",
+            "rawText": "El área tiene zonas de suelo quemado",
+            "generalizedText": "^el area tiene zonas de suelo quemado$",
+            "options": {
+                "name": "de llamas",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1596647297,
+            "regex": "gia$",
+            "rawText": "Los jugadores tienen un (40-20)% menos de velocidad de recuperación de vida y escudo de energía",
+            "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperacion de vida y escudo de energia$",
+            "options": {
+                "name": "de asfixia",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1497188554,
+            "regex": "itar",
+            "rawText": "El área tiene la maldición de Debilitar",
+            "generalizedText": "^el area tiene la maldicion de debilitar$",
+            "options": {
+                "name": "de debilitamiento",
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": -2097517023,
-            "regex": "as de suelo el",
-            "rawText": "El área tiene zonas de suelo electrificado",
-            "generalizedText": "^el area tiene zonas de suelo electrificado$",
+            "id": -1463814744,
+            "regex": "gas",
+            "rawText": "Los jugadores ganan cargas de frascos reducidas un (35-20)%",
+            "generalizedText": "^los jugadores ganan cargas de frascos reducidas un #%$",
             "options": {
-                "name": "<if:MS>{electrocutante}<elif:MP>{electrocutantes}",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "de sequía",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1820799715,
-            "regex": "icos r",
-            "rawText": "Los monstruos reciben el daño extra de los impactos críticos reducido un #%",
-            "generalizedText": "^los monstruos reciben el dano extra de los impactos criticos reducido un #%$",
+            "id": -1430091794,
+            "regex": "iel",
+            "rawText": "Los monstruos infligen el (5-24)% del daño como daño de hielo extra",
+            "generalizedText": "^los monstruos infligen el #% del dano como dano de hielo extra$",
             "options": {
-                "name": "de obturación",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "gélido",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -1403100860,
-            "regex": "e debilidad e",
+            "id": -1427494180,
+            "regex": "fue",
+            "rawText": "Los monstruos infligen el (5-24)% del daño como daño de fuego extra",
+            "generalizedText": "^los monstruos infligen el #% del dano como dano de fuego extra$",
+            "options": {
+                "name": "infernal",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1389952336,
+            "regex": "aos e",
+            "rawText": "Los monstruos infligen el (5-24)% del daño como daño de caos extra",
+            "generalizedText": "^los monstruos infligen el #% del dano como dano de caos extra$",
+            "options": {
+                "name": "profano",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1307791168,
+            "regex": "acu",
+            "rawText": "Los monstruos tienen la acumulación del aturdimiento aumentada un (50-110)%",
+            "generalizedText": "^los monstruos tienen la acumulacion del aturdimiento aumentada un #%$",
+            "options": {
+                "name": "impactante",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": -1291605512,
+            "regex": "tal$",
             "rawText": "El área tiene la maldición de Debilidad elemental",
             "generalizedText": "^el area tiene la maldicion de debilidad elemental$",
             "options": {
                 "name": "de erosión",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": -1162826364,
-            "regex": "uos pe",
-            "rawText": "El daño de los monstruos penetra el #% de las resistencias elementales",
-            "generalizedText": "^el dano de los monstruos penetra el #% de las resistencias elementales$",
-            "options": {
-                "name": "<if:MS>{penetrante}<elif:MP>{penetrantes}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1111382542,
-            "regex": "e suelo es",
-            "rawText": "El área tiene zonas de suelo escarchado",
-            "generalizedText": "^el area tiene zonas de suelo escarchado$",
-            "options": {
-                "name": "<if:MS>{cellisqueante}<elif:MP>{cellisqueantes}",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -1001905009,
-            "regex": "s de suelo q",
-            "rawText": "El área tiene zonas de suelo quemado",
-            "generalizedText": "^el area tiene zonas de suelo quemado$",
-            "options": {
-                "name": "<if:MS>{llameante}<elif:MP>{llameantes}",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -875660835,
-            "regex": "asivos",
-            "rawText": "Los monstruos están evasivos",
-            "generalizedText": "^los monstruos estan evasivos$",
-            "options": {
-                "name": "de evasión",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -811971576,
-            "regex": "o dano de rayo extra$",
-            "rawText": "Los monstruos infligen el #% del daño como daño de rayo extra",
-            "generalizedText": "^los monstruos infligen el #% del dano como dano de rayo extra$",
-            "options": {
-                "name": "<if:MS>{atronador}<elif:FS>{atronadora}<elif:MP>{atronadores}<elif:FP>{atronadoras}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -794300419,
-            "regex": "gadores$",
-            "rawText": "#% a las resistencias máximas de los jugadores",
-            "generalizedText": "^#% a las resistencias maximas de los jugadores$",
-            "options": {
-                "name": "de Exposición",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -320765306,
-            "regex": "r sangrado a",
-            "rawText": "Los monstruos tienen un #% de probabilidad de aplicar sangrado al impactar",
-            "generalizedText": "^los monstruos tienen un #% de probabilidad de aplicar sangrado al impactar$",
-            "options": {
-                "name": "<if:MS>{punzante}<elif:MP>{punzantes}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -272550054,
-            "regex": "as de vida$",
-            "rawText": "Los monstruos tienen un #% más de vida",
-            "generalizedText": "^los monstruos tienen un #% mas de vida$",
-            "options": {
-                "name": "<if:MS>{duro}<elif:FS>{dura}<elif:MP>{duros}<elif:FP>{duras}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": -229585493,
-            "regex": "imo ex",
-            "rawText": "Los monstruos ganan el #% de la vida máxima como escudo de energía máximo extra",
-            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra$",
-            "options": {
-                "name": "de amortiguamiento",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "default"
-                ]
-            }
-        },
-        {
-            "id": -112036287,
-            "regex": "n la pre",
-            "rawText": "Los monstruos tienen la precisión aumentada un #%",
+            "id": -1157042950,
+            "regex": "cisi",
+            "rawText": "Los monstruos tienen la precisión aumentada un (10-50)%",
             "generalizedText": "^los monstruos tienen la precision aumentada un #%$",
             "options": {
-                "name": "<if:MS>{preciso}<elif:FS>{precisa}<elif:MP>{precisos}<elif:FP>{precisas}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "preciso",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -106843854,
-            "regex": "da y e",
-            "rawText": "Los jugadores tienen un #% menos de velocidad de recuperación de vida y escudo de energía",
-            "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperacion de vida y escudo de energia$",
+            "id": -1062239040,
+            "regex": "rom",
+            "rawText": "Los monstruos rompen una cantidad de armadura equivalente al (15-45)% del daño físico infligido",
+            "generalizedText": "^los monstruos rompen una cantidad de armadura equivalente al #% del dano fisico infligido$",
             "options": {
-                "name": "de asfixia",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "destrozador",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -83142867,
-            "regex": "^dano de l",
-            "rawText": "Daño de los monstruos aumentado un #%",
-            "generalizedText": "^dano de los monstruos aumentado un #%$",
+            "id": -834332200,
+            "regex": "a el",
+            "rawText": "El daño de los monstruos penetra el (6-16)% de las resistencias elementales",
+            "generalizedText": "^el dano de los monstruos penetra el #% de las resistencias elementales$",
             "options": {
-                "name": "<if:MS>{doloroso}<elif:FS>{dolorosa}<elif:MP>{dolorosos}<elif:FP>{dolorosas}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "penetrante",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": -51964333,
-            "regex": "nen el u",
-            "rawText": "Los monstruos tienen el umbral de los estados alterados aumentado un #%|Los monstruos tienen el umbral de aturdimiento aumentado un #%",
-            "generalizedText": "^los monstruos tienen el umbral de los estados alterados aumentado un #%$|^los monstruos tienen el umbral de aturdimiento aumentado un #%$",
+            "id": -668086108,
+            "regex": "bli",
+            "rawText": "Los monstruos están blindados",
+            "generalizedText": "^los monstruos estan blindados$",
             "options": {
-                "name": "de inquebrantabilidad",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "de resistencia",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
+                    "default"
                 ]
             }
         },
         {
-            "id": -51357293,
-            "regex": "ecto de la",
-            "rawText": "#% menos de efecto de las maldiciones en los monstruos",
-            "generalizedText": "^#% menos de efecto de las maldiciones en los monstruos$",
+            "id": -357737163,
+            "regex": "nv",
+            "rawText": "Los monstruos tienen un (13-40)% de probabilidad de envenenar al impactar",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de envenenar al impactar$",
             "options": {
-                "name": "de protección contra maleficios",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "venenoso",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 72585924,
-            "regex": "o dano de hielo extra$",
-            "rawText": "Los monstruos infligen el #% del daño como daño de hielo extra",
-            "generalizedText": "^los monstruos infligen el #% del dano como dano de hielo extra$",
-            "options": {
-                "name": "<if:MS>{gélido}<elif:FS>{gélida}<elif:MP>{gélidos}<elif:FP>{gélidas}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 148761524,
-            "regex": "e cade",
+            "id": -194879968,
+            "regex": "tem",
             "rawText": "El área tiene la maldición de Cadenas temporales",
             "generalizedText": "^el area tiene la maldicion de cadenas temporales$",
             "options": {
                 "name": "de ralentización",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 248596817,
-            "regex": "ntales d",
-            "rawText": "+#% a las resistencias elementales de los monstruos",
+            "id": 345823526,
+            "regex": "yo",
+            "rawText": "Los monstruos infligen el (5-24)% del daño como daño de rayo extra",
+            "generalizedText": "^los monstruos infligen el #% del dano como dano de rayo extra$",
+            "options": {
+                "name": "atronador",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 570723712,
+            "regex": "ales d",
+            "rawText": "+(20-40)% a las resistencias elementales de los monstruos",
             "generalizedText": "^+#% a las resistencias elementales de los monstruos$",
             "options": {
                 "name": "del prisma",
-                "types": [
-                    "SUFFIX"
-                ],
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 303965937,
-            "regex": "a la bo",
-            "rawText": "Los monstruos tienen la probabilidad de impacto crítico aumentada un #%|#% a la bonificación de daño crítico de los monstruos",
-            "generalizedText": "^los monstruos tienen la probabilidad de impacto critico aumentada un #%$|^#% a la bonificacion de dano critico de los monstruos$",
-            "options": {
-                "name": "<if:MS>{destructivo}<elif:FS>{destructiva}<elif:MP>{destructivos}<elif:FP>{destructivas}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 574072859,
-            "regex": "r al impactar$",
-            "rawText": "Los monstruos tienen un #% de probabilidad de envenenar al impactar",
-            "generalizedText": "^los monstruos tienen un #% de probabilidad de envenenar al impactar$",
-            "options": {
-                "name": "<if:MS>{venenoso}<elif:FS>{venenosa}<elif:MP>{venenosos}<elif:FP>{venenosas}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 613834534,
-            "regex": "n las v",
-            "rawText": "Los monstruos tienen las velocidades de ataque, lanzamiento de hechizos y movimiento aumentadas un #%",
+            "id": 683350088,
+            "regex": ",",
+            "rawText": "Los monstruos tienen las velocidades de ataque, lanzamiento de hechizos y movimiento aumentadas un (10-15)%",
             "generalizedText": "^los monstruos tienen las velocidades de ataque, lanzamiento de hechizos y movimiento aumentadas un #%$",
             "options": {
-                "name": "<if:MS>{fugaz}<elif:MP>{fugaces}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "fugaz",
+                "prefix": true,
                 "tags": [
                     "map_key_high",
                     "map_key_highest"
@@ -416,244 +291,1004 @@
             }
         },
         {
-            "id": 723385372,
-            "regex": "la ap",
-            "rawText": "Los monstruos tienen la aplicación de estados alterados elementales aumentada un #%",
-            "generalizedText": "^los monstruos tienen la aplicacion de estados alterados elementales aumentada un #%$",
+            "id": 876824218,
+            "regex": "siv",
+            "rawText": "Los monstruos están evasivos",
+            "generalizedText": "^los monstruos estan evasivos$",
             "options": {
-                "name": "de avasallamiento",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1142544261,
-            "regex": "o dano de caos extra$",
-            "rawText": "Los monstruos infligen el #% del daño como daño de caos extra",
-            "generalizedText": "^los monstruos infligen el #% del dano como dano de caos extra$",
-            "options": {
-                "name": "<if:MS>{profano}<elif:FS>{profana}<elif:MP>{profanos}<elif:FP>{profanas}",
-                "types": [
-                    "PREFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1153052787,
-            "regex": "e velocidad de recuperacion del enfriamiento$",
-            "rawText": "Los jugadores tienen un #% menos de velocidad de recuperación del enfriamiento",
-            "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperacion del enfriamiento$",
-            "options": {
-                "name": "de fatiga",
-                "types": [
-                    "SUFFIX"
-                ],
-                "tags": [
-                    "map_key_high",
-                    "map_key_highest",
-                    "map_key_low",
-                    "map_key_medium"
-                ]
-            }
-        },
-        {
-            "id": 1164514715,
-            "regex": "e debilitar",
-            "rawText": "El área tiene la maldición de Debilitar",
-            "generalizedText": "^el area tiene la maldicion de debilitar$",
-            "options": {
-                "name": "de debilitamiento",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "de evasión",
+                "prefix": false,
                 "tags": [
                     "default"
                 ]
             }
         },
         {
-            "id": 1184209499,
-            "regex": "o dano de fuego extra$",
-            "rawText": "Los monstruos infligen el #% del daño como daño de fuego extra",
-            "generalizedText": "^los monstruos infligen el #% del dano como dano de fuego extra$",
+            "id": 887697611,
+            "regex": "imas",
+            "rawText": "-(10-3)% a las resistencias máximas de los jugadores",
+            "generalizedText": "^-#% a las resistencias maximas de los jugadores$",
             "options": {
-                "name": "<if:MS>{infernal}<elif:MP>{infernales}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "de Exposición",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1327620591,
-            "regex": "gido$",
-            "rawText": "Los monstruos rompen una cantidad de armadura equivalente al #% del daño físico infligido",
-            "generalizedText": "^los monstruos rompen una cantidad de armadura equivalente al #% del dano fisico infligido$",
+            "id": 899028336,
+            "regex": "umbr",
+            "rawText": "Los monstruos tienen el umbral de aturdimiento aumentado un (30-79)%|Los monstruos tienen el umbral de los estados alterados aumentado un (30-79)%",
+            "generalizedText": "^los monstruos tienen el umbral de aturdimiento aumentado un #%$|^los monstruos tienen el umbral de los estados alterados aumentado un #%$",
             "options": {
-                "name": "<if:MS>{destrozador}<elif:FS>{destrozadora}<elif:MP>{destrozadores}<elif:FP>{destrozadoras}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "de inquebrantabilidad",
+                "prefix": false,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1780909371,
-            "regex": "cidas",
-            "rawText": "Los jugadores ganan cargas de frascos reducidas un #%",
-            "generalizedText": "^los jugadores ganan cargas de frascos reducidas un #%$",
+            "id": 1082183842,
+            "regex": "^da",
+            "rawText": "Daño de los monstruos aumentado un (5-24)%",
+            "generalizedText": "^dano de los monstruos aumentado un #%$",
             "options": {
-                "name": "de sequía",
-                "types": [
-                    "SUFFIX"
-                ],
+                "name": "doloroso",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         },
         {
-            "id": 1832125244,
-            "regex": "os tienen la ac",
-            "rawText": "Los monstruos tienen la acumulación del aturdimiento aumentada un #%",
-            "generalizedText": "^los monstruos tienen la acumulacion del aturdimiento aumentada un #%$",
+            "id": 1140153707,
+            "regex": "ngra",
+            "rawText": "Los monstruos tienen un (5-25)% de probabilidad de aplicar sangrado al impactar",
+            "generalizedText": "^los monstruos tienen un #% de probabilidad de aplicar sangrado al impactar$",
             "options": {
-                "name": "<if:MS>{impactante}<elif:MP>{impactantes}",
-                "types": [
-                    "PREFIX"
-                ],
+                "name": "punzante",
+                "prefix": true,
                 "tags": [
-                    "map_key_high",
-                    "map_key_highest",
                     "map_key_low",
-                    "map_key_medium"
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1346756180,
+            "regex": "enf",
+            "rawText": "Los jugadores tienen un (30-15)% menos de velocidad de recuperación del enfriamiento",
+            "generalizedText": "^los jugadores tienen un #% menos de velocidad de recuperacion del enfriamiento$",
+            "options": {
+                "name": "de fatiga",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1411067874,
+            "regex": "imo",
+            "rawText": "Los monstruos ganan el (12-25)% de la vida máxima como escudo de energía máximo extra",
+            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra$",
+            "options": {
+                "name": "de amortiguamiento",
+                "prefix": false,
+                "tags": [
+                    "default"
+                ]
+            }
+        },
+        {
+            "id": 1518963479,
+            "regex": "bon",
+            "rawText": "Los monstruos tienen la probabilidad de impacto crítico aumentada un (80-300)%|+(11-30)% a la bonificación de daño crítico de los monstruos",
+            "generalizedText": "^los monstruos tienen la probabilidad de impacto critico aumentada un #%$|^+#% a la bonificacion de dano critico de los monstruos$",
+            "options": {
+                "name": "destructivo",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1606482166,
+            "regex": "rch",
+            "rawText": "El área tiene zonas de suelo escarchado",
+            "generalizedText": "^el area tiene zonas de suelo escarchado$",
+            "options": {
+                "name": "de aguanieve",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1716791865,
+            "regex": "licac",
+            "rawText": "Los monstruos tienen la aplicación de estados alterados elementales aumentada un (60-130)%",
+            "generalizedText": "^los monstruos tienen la aplicacion de estados alterados elementales aumentada un #%$",
+            "options": {
+                "name": "de avasallamiento",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 1760181301,
+            "regex": "vida$",
+            "rawText": "Los monstruos tienen un (10-30)% más de vida",
+            "generalizedText": "^los monstruos tienen un #% mas de vida$",
+            "options": {
+                "name": "duro",
+                "prefix": true,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2039236504,
+            "regex": "efe",
+            "rawText": "(50-20)% menos de efecto de las maldiciones en los monstruos",
+            "generalizedText": "^#% menos de efecto de las maldiciones en los monstruos$",
+            "options": {
+                "name": "de antimaleficios",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
+                ]
+            }
+        },
+        {
+            "id": 2071181624,
+            "regex": "rif",
+            "rawText": "El área tiene zonas de suelo electrificado",
+            "generalizedText": "^el area tiene zonas de suelo electrificado$",
+            "options": {
+                "name": "de electrocución",
+                "prefix": false,
+                "tags": [
+                    "map_key_low",
+                    "map_key_medium",
+                    "map_key_high",
+                    "map_key_highest"
                 ]
             }
         }
     ],
     "optimizationTable": {
-        "-2097517023:-1111382542:-1001905009": {
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:1411067874": {
             "ids": [
-                -2097517023,
-                -1111382542,
-                -1001905009
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
             ],
-            "regex": "ne z",
-            "weight": 6,
-            "count": 3
+            "regex": "xt",
+            "weight": 2,
+            "count": 6
         },
-        "-2097517023:-1111382542": {
+        "-1718797825:1518963479": {
             "ids": [
-                -2097517023,
-                -1111382542
+                -1718797825,
+                1518963479
             ],
-            "regex": "as de suelo e",
-            "weight": 15,
+            "regex": "cri",
+            "weight": 3,
             "count": 2
         },
-        "-1820799715:1780909371": {
+        "-1718797825:-1463814744": {
             "ids": [
-                -1820799715,
-                1780909371
+                -1718797825,
+                -1463814744
             ],
-            "regex": "cos r",
+            "regex": "red",
+            "weight": 3,
+            "count": 2
+        },
+        "-1718797825:899028336:1082183842": {
+            "ids": [
+                -1718797825,
+                899028336,
+                1082183842
+            ],
+            "regex": "o u",
+            "weight": 5,
+            "count": 3
+        },
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:899028336:1411067874": {
+            "ids": [
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                899028336,
+                1411067874
+            ],
+            "regex": "n el",
+            "weight": 6,
+            "count": 7
+        },
+        "-1718797825:-1430091794:-1427494180:-1389952336:-1062239040:-834332200:345823526": {
+            "ids": [
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                -834332200,
+                345823526
+            ],
+            "regex": "l da",
+            "weight": 6,
+            "count": 7
+        },
+        "-1718797825:-834332200:570723712:887697611:899028336:1082183842:1518963479": {
+            "ids": [
+                -1718797825,
+                -834332200,
+                570723712,
+                887697611,
+                899028336,
+                1082183842,
+                1518963479
+            ],
+            "regex": "e lo",
+            "weight": 6,
+            "count": 7
+        },
+        "-1718797825:-1430091794:-1427494180:345823526:1411067874": {
+            "ids": [
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                345823526,
+                1411067874
+            ],
+            "regex": "o ext",
+            "weight": 7,
+            "count": 5
+        },
+        "-1718797825:-1430091794:-1427494180:-1389952336:345823526:899028336": {
+            "ids": [
+                -1718797825,
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                899028336
+            ],
+            "regex": "en el",
+            "weight": 7,
+            "count": 6
+        },
+        "-1718797825:-1062239040": {
+            "ids": [
+                -1718797825,
+                -1062239040
+            ],
+            "regex": "uos r",
             "weight": 7,
             "count": 2
         },
-        "-1403100860:148761524:1164514715": {
+        "-1698573306:-1596647297:-1430091794:683350088:1346756180:1606482166:2071181624": {
             "ids": [
-                -1403100860,
-                148761524,
-                1164514715
+                -1698573306,
+                -1596647297,
+                -1430091794,
+                683350088,
+                1346756180,
+                1606482166,
+                2071181624
             ],
-            "regex": "la mal",
-            "weight": 8,
+            "regex": "elo",
+            "weight": 3,
+            "count": 7
+        },
+        "-1698573306:-1062239040": {
+            "ids": [
+                -1698573306,
+                -1062239040
+            ],
+            "regex": "mad",
+            "weight": 3,
+            "count": 2
+        },
+        "-1698573306:-1497188554:-1291605512:-194879968:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                -1497188554,
+                -1291605512,
+                -194879968,
+                1606482166,
+                2071181624
+            ],
+            "regex": "rea",
+            "weight": 3,
+            "count": 6
+        },
+        "-1698573306:1606482166:2071181624": {
+            "ids": [
+                -1698573306,
+                1606482166,
+                2071181624
+            ],
+            "regex": "onas",
+            "weight": 4,
             "count": 3
         },
-        "-1403100860:1164514715": {
+        "-1698573306:-1497188554:-1307791168:-1291605512:-194879968:1606482166:2071181624": {
             "ids": [
-                -1403100860,
-                1164514715
+                -1698573306,
+                -1497188554,
+                -1307791168,
+                -1291605512,
+                -194879968,
+                1606482166,
+                2071181624
             ],
-            "regex": "icion de d",
-            "weight": 12,
+            "regex": "el a",
+            "weight": 6,
+            "count": 7
+        },
+        "-1596647297:1411067874": {
+            "ids": [
+                -1596647297,
+                1411067874
+            ],
+            "regex": "ud",
+            "weight": 2,
             "count": 2
         },
-        "-1162826364:-83142867": {
+        "-1596647297:-1463814744:887697611:1346756180": {
             "ids": [
-                -1162826364,
-                -83142867
+                -1596647297,
+                -1463814744,
+                887697611,
+                1346756180
             ],
-            "regex": "ano de los m",
-            "weight": 14,
-            "count": 2
-        },
-        "-811971576:72585924:1142544261:1184209499": {
-            "ids": [
-                -811971576,
-                72585924,
-                1142544261,
-                1184209499
-            ],
-            "regex": "uos inflig",
-            "weight": 12,
+            "regex": "jug",
+            "weight": 3,
             "count": 4
         },
-        "-794300419:248596817": {
+        "-1596647297:1346756180": {
             "ids": [
-                -794300419,
-                248596817
+                -1596647297,
+                1346756180
             ],
-            "regex": "% a las",
+            "regex": "ecu",
+            "weight": 3,
+            "count": 2
+        },
+        "-1596647297:1346756180:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                2039236504
+            ],
+            "regex": "meno",
+            "weight": 4,
+            "count": 3
+        },
+        "-1596647297:683350088:1346756180": {
+            "ids": [
+                -1596647297,
+                683350088,
+                1346756180
+            ],
+            "regex": "velo",
+            "weight": 4,
+            "count": 3
+        },
+        "-1596647297:1346756180:1760181301": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                1760181301
+            ],
+            "regex": "e v",
+            "weight": 5,
+            "count": 3
+        },
+        "-1596647297:1346756180:1760181301:2039236504": {
+            "ids": [
+                -1596647297,
+                1346756180,
+                1760181301,
+                2039236504
+            ],
+            "regex": "% m",
+            "weight": 5,
+            "count": 4
+        },
+        "-1596647297:1760181301": {
+            "ids": [
+                -1596647297,
+                1760181301
+            ],
+            "regex": "e vi",
+            "weight": 6,
+            "count": 2
+        },
+        "-1596647297:-357737163:1140153707:1346756180:1760181301": {
+            "ids": [
+                -1596647297,
+                -357737163,
+                1140153707,
+                1346756180,
+                1760181301
+            ],
+            "regex": "nen u",
+            "weight": 7,
+            "count": 5
+        },
+        "-1596647297:-1062239040:-357737163:1140153707:1346756180:1518963479": {
+            "ids": [
+                -1596647297,
+                -1062239040,
+                -357737163,
+                1140153707,
+                1346756180,
+                1518963479
+            ],
+            "regex": "idad d",
+            "weight": 8,
+            "count": 6
+        },
+        "-1497188554:-357737163:1140153707": {
+            "ids": [
+                -1497188554,
+                -357737163,
+                1140153707
+            ],
+            "regex": "tar",
+            "weight": 3,
+            "count": 3
+        },
+        "-1497188554:-1291605512:-194879968:2039236504": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968,
+                2039236504
+            ],
+            "regex": "ldic",
+            "weight": 4,
+            "count": 4
+        },
+        "-1497188554:-1291605512:-194879968": {
+            "ids": [
+                -1497188554,
+                -1291605512,
+                -194879968
+            ],
+            "regex": "ne l",
+            "weight": 6,
+            "count": 3
+        },
+        "-1497188554:-1291605512": {
+            "ids": [
+                -1497188554,
+                -1291605512
+            ],
+            "regex": "n de de",
             "weight": 9,
             "count": 2
         },
-        "-112036287:303965937": {
+        "-1463814744:1411067874": {
             "ids": [
-                -112036287,
-                303965937
+                -1463814744,
+                1411067874
             ],
-            "regex": "nen la pr",
-            "weight": 11,
+            "regex": "gan",
+            "weight": 3,
             "count": 2
         },
-        "-112036287:303965937:613834534:723385372:1832125244": {
+        "-1463814744:683350088": {
             "ids": [
-                -112036287,
-                303965937,
-                613834534,
-                723385372,
-                1832125244
+                -1463814744,
+                683350088
             ],
-            "regex": "uos tienen l",
-            "weight": 14,
+            "regex": "s u",
+            "weight": 5,
+            "count": 2
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                345823526
+            ],
+            "regex": "fl",
+            "weight": 2,
             "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:345823526": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526
+            ],
+            "regex": "ige",
+            "weight": 3,
+            "count": 4
+        },
+        "-1430091794:-1427494180:-1389952336:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1411067874
+            ],
+            "regex": "com",
+            "weight": 3,
+            "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:345823526:1518963479": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                345823526,
+                1518963479
+            ],
+            "regex": "ano c",
+            "weight": 7,
+            "count": 5
+        },
+        "-1430091794:-1427494180:-1389952336:-834332200:345823526:1082183842": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -834332200,
+                345823526,
+                1082183842
+            ],
+            "regex": "ano d",
+            "weight": 7,
+            "count": 6
+        },
+        "-1430091794:1606482166:2071181624": {
+            "ids": [
+                -1430091794,
+                1606482166,
+                2071181624
+            ],
+            "regex": "elo e",
+            "weight": 7,
+            "count": 3
+        },
+        "-1430091794:-1427494180:-1389952336:-1062239040:-834332200:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -1062239040,
+                -834332200,
+                345823526,
+                1411067874
+            ],
+            "regex": "l \\d+",
+            "weight": 8,
+            "count": 7
+        },
+        "-1430091794:-1427494180:-1389952336:-834332200:345823526:1411067874": {
+            "ids": [
+                -1430091794,
+                -1427494180,
+                -1389952336,
+                -834332200,
+                345823526,
+                1411067874
+            ],
+            "regex": "el \\d+",
+            "weight": 9,
+            "count": 6
+        },
+        "-1307791168:-1157042950:683350088:899028336:1082183842:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                683350088,
+                899028336,
+                1082183842,
+                1518963479,
+                1716791865
+            ],
+            "regex": "aum",
+            "weight": 3,
+            "count": 7
+        },
+        "-1307791168:899028336": {
+            "ids": [
+                -1307791168,
+                899028336
+            ],
+            "regex": "atu",
+            "weight": 3,
+            "count": 2
+        },
+        "-1307791168:683350088:899028336": {
+            "ids": [
+                -1307791168,
+                683350088,
+                899028336
+            ],
+            "regex": "imi",
+            "weight": 3,
+            "count": 3
+        },
+        "-1307791168:-1157042950:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                1518963479,
+                1716791865
+            ],
+            "regex": "a u",
+            "weight": 5,
+            "count": 4
+        },
+        "-1307791168:683350088:899028336:1518963479": {
+            "ids": [
+                -1307791168,
+                683350088,
+                899028336,
+                1518963479
+            ],
+            "regex": "o au",
+            "weight": 6,
+            "count": 4
+        },
+        "-1307791168:-1157042950:683350088:1518963479:1716791865": {
+            "ids": [
+                -1307791168,
+                -1157042950,
+                683350088,
+                1518963479,
+                1716791865
+            ],
+            "regex": "n la",
+            "weight": 6,
+            "count": 5
+        },
+        "-1307791168:1716791865": {
+            "ids": [
+                -1307791168,
+                1716791865
+            ],
+            "regex": "n la a",
+            "weight": 8,
+            "count": 2
+        },
+        "-1291605512:-834332200:570723712:1716791865": {
+            "ids": [
+                -1291605512,
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "lem",
+            "weight": 3,
+            "count": 4
+        },
+        "-1157042950:-1062239040": {
+            "ids": [
+                -1157042950,
+                -1062239040
+            ],
+            "regex": "isi",
+            "weight": 3,
+            "count": 2
+        },
+        "-1157042950:1518963479": {
+            "ids": [
+                -1157042950,
+                1518963479
+            ],
+            "regex": "n la p",
+            "weight": 8,
+            "count": 2
+        },
+        "-834332200:570723712:887697611": {
+            "ids": [
+                -834332200,
+                570723712,
+                887697611
+            ],
+            "regex": "cias",
+            "weight": 4,
+            "count": 3
+        },
+        "-834332200:570723712:1716791865": {
+            "ids": [
+                -834332200,
+                570723712,
+                1716791865
+            ],
+            "regex": "ntale",
+            "weight": 5,
+            "count": 3
+        },
+        "-834332200:2039236504": {
+            "ids": [
+                -834332200,
+                2039236504
+            ],
+            "regex": "e las",
+            "weight": 7,
+            "count": 2
+        },
+        "-834332200:570723712": {
+            "ids": [
+                -834332200,
+                570723712
+            ],
+            "regex": "ias e",
+            "weight": 7,
+            "count": 2
+        },
+        "-834332200:1411067874": {
+            "ids": [
+                -834332200,
+                1411067874
+            ],
+            "regex": "% de l",
+            "weight": 8,
+            "count": 2
+        },
+        "-834332200:1082183842": {
+            "ids": [
+                -834332200,
+                1082183842
+            ],
+            "regex": "no de l",
+            "weight": 9,
+            "count": 2
+        },
+        "-834332200:1082183842:1518963479": {
+            "ids": [
+                -834332200,
+                1082183842,
+                1518963479
+            ],
+            "regex": "o de lo",
+            "weight": 9,
+            "count": 3
+        },
+        "-834332200:570723712:1082183842:1518963479": {
+            "ids": [
+                -834332200,
+                570723712,
+                1082183842,
+                1518963479
+            ],
+            "regex": "e los m",
+            "weight": 9,
+            "count": 4
+        },
+        "-668086108:876824218": {
+            "ids": [
+                -668086108,
+                876824218
+            ],
+            "regex": "stan",
+            "weight": 4,
+            "count": 2
+        },
+        "-668086108:876824218:899028336:1716791865": {
+            "ids": [
+                -668086108,
+                876824218,
+                899028336,
+                1716791865
+            ],
+            "regex": "esta",
+            "weight": 4,
+            "count": 4
+        },
+        "-668086108:876824218:899028336": {
+            "ids": [
+                -668086108,
+                876824218,
+                899028336
+            ],
+            "regex": "s esta",
+            "weight": 8,
+            "count": 3
+        },
+        "-357737163:1140153707:1518963479": {
+            "ids": [
+                -357737163,
+                1140153707,
+                1518963479
+            ],
+            "regex": "rob",
+            "weight": 3,
+            "count": 3
+        },
+        "-357737163:1140153707": {
+            "ids": [
+                -357737163,
+                1140153707
+            ],
+            "regex": "ctar",
+            "weight": 4,
+            "count": 2
+        },
+        "-357737163:1140153707:1760181301": {
+            "ids": [
+                -357737163,
+                1140153707,
+                1760181301
+            ],
+            "regex": "os tienen u",
+            "weight": 13,
+            "count": 3
+        },
+        "-194879968:2071181624": {
+            "ids": [
+                -194879968,
+                2071181624
+            ],
+            "regex": "cad",
+            "weight": 3,
+            "count": 2
+        },
+        "570723712:887697611:1518963479": {
+            "ids": [
+                570723712,
+                887697611,
+                1518963479
+            ],
+            "regex": "% a",
+            "weight": 5,
+            "count": 3
+        },
+        "570723712:887697611": {
+            "ids": [
+                570723712,
+                887697611
+            ],
+            "regex": "a las",
+            "weight": 7,
+            "count": 2
+        },
+        "683350088:899028336": {
+            "ids": [
+                683350088,
+                899028336
+            ],
+            "regex": "e at",
+            "weight": 6,
+            "count": 2
+        },
+        "876824218:1411067874": {
+            "ids": [
+                876824218,
+                1411067874
+            ],
+            "regex": "an e",
+            "weight": 6,
+            "count": 2
+        },
+        "887697611:1411067874": {
+            "ids": [
+                887697611,
+                1411067874
+            ],
+            "regex": "ax",
+            "weight": 2,
+            "count": 2
+        },
+        "887697611:1760181301": {
+            "ids": [
+                887697611,
+                1760181301
+            ],
+            "regex": "mas d",
+            "weight": 7,
+            "count": 2
+        },
+        "899028336:1716791865": {
+            "ids": [
+                899028336,
+                1716791865
+            ],
+            "regex": "lt",
+            "weight": 2,
+            "count": 2
+        },
+        "899028336:1082183842": {
+            "ids": [
+                899028336,
+                1082183842
+            ],
+            "regex": "entado",
+            "weight": 6,
+            "count": 2
+        },
+        "899028336:1082183842:1716791865": {
+            "ids": [
+                899028336,
+                1082183842,
+                1716791865
+            ],
+            "regex": "s au",
+            "weight": 6,
+            "count": 3
+        },
+        "1140153707:1716791865": {
+            "ids": [
+                1140153707,
+                1716791865
+            ],
+            "regex": "pl",
+            "weight": 2,
+            "count": 2
+        },
+        "1518963479:1716791865": {
+            "ids": [
+                1518963479,
+                1716791865
+            ],
+            "regex": "cac",
+            "weight": 3,
+            "count": 2
+        },
+        "1606482166:2071181624": {
+            "ids": [
+                1606482166,
+                2071181624
+            ],
+            "regex": "uelo e",
+            "weight": 8,
+            "count": 2
         }
     }
 }
