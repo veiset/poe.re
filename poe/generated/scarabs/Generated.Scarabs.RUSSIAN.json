@@ -211,7 +211,7 @@
     },
     "Скарабей Бестиария удвоения": {
         "name": "Скарабей Бестиария удвоения",
-        "regex": "‎",
+        "regex": "«ч",
         "icon": "/gen/image/WzI1LDE0LHsiZiI6IjJESXRlbXMvQ3VycmVuY3kvU2NhcmFicy9HcmVhdGVyU2NhcmFiQmVhc3RzIiwic2NhbGUiOjF9XQ/09caa391c6/GreaterScarabBeasts.png",
         "flavourText": "«Что лучше одного пойманного зверя, изгнанник?»‎",
         "description": "Создает копию пойманных в области зверей"

@@ -150,8 +150,8 @@
         },
         {
             "id": -1430865583,
-            "regex": "calt",
-            "rawText": "Rare Monsters have [PhysicalThorns|Physical Thorns] reflecting 1500 Physical Damage|Rare Monsters have [ElementalThorns|Elemental Thorns] reflecting 2500 Elemental Damage",
+            "regex": "\\d+ e",
+            "rawText": "Rare Monsters have Physical Thorns reflecting 1500 Physical Damage|Rare Monsters have Elemental Thorns reflecting 2500 Elemental Damage",
             "generalizedText": "^rare monsters have physical thorns reflecting # physical damage$|^rare monsters have elemental thorns reflecting # elemental damage$",
             "options": {
                 "scary": 1001,
@@ -509,13 +509,15 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -235013251,
             "regex": "ve phy",
-            "rawText": "Rare Monsters have [PhysicalThorns|Physical Thorns] reflecting (400-800) Physical Damage",
+            "rawText": "Rare Monsters have Physical Thorns reflecting (400-800) Physical Damage",
             "generalizedText": "^rare monsters have physical thorns reflecting # physical damage$",
             "options": {
                 "scary": 0,
@@ -795,7 +797,7 @@
         {
             "id": 284489036,
             "regex": "ss are",
-            "rawText": "Players have (30-25)% less Area of Effect",
+            "rawText": "Players have (25-30)% less Area of Effect",
             "generalizedText": "^players have #% less area of effect$",
             "options": {
                 "scary": 1001,
@@ -877,7 +879,9 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": false,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -889,7 +893,9 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": false,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1017,7 +1023,7 @@
         {
             "id": 1078205993,
             "regex": "\\d+ e",
-            "rawText": "Rare Monsters have [ElementalThorns|Elemental Thorns] reflecting (900-1500) Elemental Damage",
+            "rawText": "Rare Monsters have Elemental Thorns reflecting (900-1500) Elemental Damage",
             "generalizedText": "^rare monsters have elemental thorns reflecting # elemental damage$",
             "options": {
                 "scary": 0,
@@ -1079,7 +1085,7 @@
         {
             "id": 1205583947,
             "regex": "ech$",
-            "rawText": "Players have (60-50)% reduced Maximum total Life, Mana and Energy Shield Recovery per second from Leech",
+            "rawText": "Players have (50-60)% reduced Maximum total Life, Mana and Energy Shield Recovery per second from Leech",
             "generalizedText": "^players have #% reduced maximum total life, mana and energy shield recovery per second from leech$",
             "options": {
                 "scary": 1001,
@@ -1177,7 +1183,7 @@
         {
             "id": 1464066514,
             "regex": "s def",
-            "rawText": "Players have (30-25)% less Defences",
+            "rawText": "Players have (25-30)% less Defences",
             "generalizedText": "^players have #% less defences$",
             "options": {
                 "scary": 1001,

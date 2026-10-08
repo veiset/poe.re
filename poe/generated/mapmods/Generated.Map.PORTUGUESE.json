@@ -20,7 +20,7 @@
             "options": {
                 "scary": 650,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -32,20 +32,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1940135977,
             "regex": "e ataques$",
-            "rawText": "Monstros têm +50% de Chance de Bloquear Dano de Ataques|47% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^monstros tem #% de chance de bloquear dano de ataques$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Monstros têm +50% de Chance de Bloquear Dano de Ataques",
+            "generalizedText": "^monstros tem #% de chance de bloquear dano de ataques$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -80,7 +82,7 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -104,26 +106,28 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1621497665,
             "regex": "e frenesi$",
-            "rawText": "Monstros ganham uma Carga de Frenesi ao Acertar|Monstros têm +1 de Máximo de Cargas de Frenesi|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros ganham uma carga de frenesi ao acertar$|^monstros tem # de maximo de cargas de frenesi$|^#% mais mapas encontrados na area$",
+            "rawText": "Monstros ganham uma Carga de Frenesi ao Acertar|Monstros têm +1 de Máximo de Cargas de Frenesi",
+            "generalizedText": "^monstros ganham uma carga de frenesi ao acertar$|^monstros tem # de maximo de cargas de frenesi$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -1616686189,
             "regex": "mo ex",
-            "rawText": "Monstros ganham (20-49)% da Vida Máxima como Escudo de Energia Máximo Extra",
+            "rawText": "Monstros ganham (20-80)% da Vida Máxima como Escudo de Energia Máximo Extra",
             "generalizedText": "^monstros ganham #% da vida maxima como escudo de energia maximo extra$",
             "options": {
                 "scary": 240,
@@ -140,20 +144,22 @@
             "options": {
                 "scary": 94,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1430865583,
             "regex": "sico$",
-            "rawText": "Monstros raros têm espinhos físicos que refletem 1500 de dano físico|Monstros raros têm espinhos elementais que refletem 2500 de dano elemental|47% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^monstros raros tem espinhos fisicos que refletem # de dano fisico$|^monstros raros tem espinhos elementais que refletem # de dano elemental$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Monstros raros têm espinhos físicos que refletem 1500 de dano físico|Monstros raros têm espinhos elementais que refletem 2500 de dano elemental",
+            "generalizedText": "^monstros raros tem espinhos fisicos que refletem # de dano fisico$|^monstros raros tem espinhos elementais que refletem # de dano elemental$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -164,7 +170,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -176,19 +182,7 @@
             "options": {
                 "scary": 500,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -1298230190,
-            "regex": "^buff",
-            "rawText": "Buff em jogadores expiram 100% mais rápido|35% mais Escaravelhos encontrados na Área",
-            "generalizedText": "^buff em jogadores expiram #% mais rapido$|^#% mais escaravelhos encontrados na area$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -212,7 +206,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -224,7 +218,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -248,7 +242,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -284,7 +278,7 @@
             "options": {
                 "scary": 295,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -303,24 +297,12 @@
         {
             "id": -946283701,
             "regex": "^buff",
-            "rawText": "Buff em jogadores expiram (30-70)% mais rápido",
+            "rawText": "Buff em jogadores expiram (30-100)% mais rápido",
             "generalizedText": "^buff em jogadores expiram #% mais rapido$",
             "options": {
                 "scary": 96,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -938285245,
-            "regex": "uprimo",
-            "rawText": "Monstros têm +100% de chance de Suprimor Dano Mágico|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros tem #% de chance de suprimor dano magico$|^#% mais mapas encontrados na area$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -339,13 +321,15 @@
         {
             "id": -931745379,
             "regex": "ir$",
-            "rawText": "Monstros infligem 2 Vinhas Constringentes ao atingir|40% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros infligem # vinhas constringentes ao atingir$|^#% mais mapas encontrados na area$",
+            "rawText": "Monstros infligem 2 Vinhas Constringentes ao atingir",
+            "generalizedText": "^monstros infligem # vinhas constringentes ao atingir$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -361,18 +345,6 @@
             }
         },
         {
-            "id": -875993462,
-            "regex": "ais it",
-            "rawText": "(90-100)% mais Vida de Monstros|47% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^#% mais vida de monstros$|^#% mais itens monetarios encontrados na area$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
             "id": -763914456,
             "regex": "es g",
             "rawText": "Jogadores ganham (30-50)% de Cargas de Frasco reduzidas",
@@ -380,7 +352,7 @@
             "options": {
                 "scary": 210,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -410,7 +382,7 @@
         },
         {
             "id": -688435205,
-            "regex": "vos$",
+            "regex": "por mor",
             "rawText": "Área é habitada por Mortos-Vivos",
             "generalizedText": "^area e habitada por mortos-vivos$",
             "options": {
@@ -512,14 +484,14 @@
             "options": {
                 "scary": 980,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -268547495,
             "regex": "uprimo",
-            "rawText": "Monstros têm +(30-60)% de chance de Suprimor Dano Mágico",
+            "rawText": "Monstros têm +(30-100)% de chance de Suprimor Dano Mágico",
             "generalizedText": "^monstros tem #% de chance de suprimor dano magico$",
             "options": {
                 "scary": 290,
@@ -537,7 +509,9 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -560,7 +534,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -579,7 +553,7 @@
         {
             "id": -172005981,
             "regex": "da de m",
-            "rawText": "(20-49)% mais Vida de Monstros",
+            "rawText": "(20-100)% mais Vida de Monstros",
             "generalizedText": "^#% mais vida de monstros$",
             "options": {
                 "scary": 100,
@@ -608,20 +582,22 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -126908257,
             "regex": "am,",
-            "rawText": "Monstros Incendeiam, Congelam e Eletrizam ao Acertar|Todo o Dano dos Monstros pode Incendiar, Congelar e Eletrizar|60% mais Escaravelhos encontrados na Área",
-            "generalizedText": "^monstros incendeiam, congelam e eletrizam ao acertar$|^todo o dano dos monstros pode incendiar, congelar e eletrizar$|^#% mais escaravelhos encontrados na area$",
+            "rawText": "Monstros Incendeiam, Congelam e Eletrizam ao Acertar|Todo o Dano dos Monstros pode Incendiar, Congelar e Eletrizar",
+            "generalizedText": "^monstros incendeiam, congelam e eletrizam ao acertar$|^todo o dano dos monstros pode incendiar, congelar e eletrizar$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -632,7 +608,7 @@
             "options": {
                 "scary": 85,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -663,13 +639,15 @@
         {
             "id": -105914721,
             "regex": "eles$",
-            "rawText": "Jogadores têm -40% de efeito de frascos aplicados a eles|47% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^jogadores tem -#% de efeito de frascos aplicados a eles$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Jogadores têm -40% de efeito de frascos aplicados a eles",
+            "generalizedText": "^jogadores tem -#% de efeito de frascos aplicados a eles$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -680,7 +658,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -692,7 +670,7 @@
             "options": {
                 "scary": 250,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -764,7 +742,7 @@
             "options": {
                 "scary": 365,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -800,7 +778,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -812,19 +790,19 @@
             "options": {
                 "scary": 600,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 284489036,
             "regex": "m area$",
-            "rawText": "Jogadores têm (30-25)% menos Efeito em Área",
+            "rawText": "Jogadores têm (25-30)% menos Efeito em Área",
             "generalizedText": "^jogadores tem #% menos efeito em area$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -836,20 +814,22 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 357242916,
             "regex": "tados$",
-            "rawText": "Monstros têm +1 de Máximo de Cargas de Tolerância|Monstros ganham uma Carga de Tolerância quando acertados|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros tem # de maximo de cargas de tolerancia$|^monstros ganham uma carga de tolerancia quando acertados$|^#% mais mapas encontrados na area$",
+            "rawText": "Monstros têm +1 de Máximo de Cargas de Tolerância|Monstros ganham uma Carga de Tolerância quando acertados",
+            "generalizedText": "^monstros tem # de maximo de cargas de tolerancia$|^monstros ganham uma carga de tolerancia quando acertados$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -860,7 +840,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -872,32 +852,22 @@
             "options": {
                 "scary": 0,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 639399394,
             "regex": "f de",
-            "rawText": "Monstros Únicos têm um Buff de Altar aleatório|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros unicos tem um buff de altar aleatorio$|^#% mais mapas encontrados na area$",
+            "rawText": "Monstros Únicos têm um Buff de Altar aleatório",
+            "generalizedText": "^monstros unicos tem um buff de altar aleatorio$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": 646965355,
-            "regex": "mo ex",
-            "rawText": "Monstros ganham (70-80)% da Vida Máxima como Escudo de Energia Máximo Extra|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros ganham #% da vida maxima como escudo de energia maximo extra$|^#% mais mapas encontrados na area$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -908,8 +878,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -920,8 +892,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -968,7 +942,7 @@
             "options": {
                 "scary": 60,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -992,7 +966,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1016,20 +990,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1061710360,
             "regex": "serr",
-            "rawText": "Jogadores são atacados por Serras Manchadas de Sangue|47% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^jogadores sao atacados por serras manchadas de sangue$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Jogadores são atacados por Serras Manchadas de Sangue",
+            "generalizedText": "^jogadores sao atacados por serras manchadas de sangue$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1040,7 +1016,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1076,20 +1052,22 @@
             "options": {
                 "scary": 990,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1117764869,
             "regex": "^deb",
-            "rawText": "Debuffs nos Monstros expiram 100% mais rápido|64% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^debuffs nos monstros expiram #% mais rapido$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Debuffs nos Monstros expiram 100% mais rápido",
+            "generalizedText": "^debuffs nos monstros expiram #% mais rapido$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1100,31 +1078,31 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1205583947,
             "regex": "m recu",
-            "rawText": "Jogadores têm Recuperação Máxima total do Dreno de Vida, Mana e Escudo de Energia reduzida em (60-50)%",
+            "rawText": "Jogadores têm Recuperação Máxima total do Dreno de Vida, Mana e Escudo de Energia reduzida em (50-60)%",
             "generalizedText": "^jogadores tem recuperacao maxima total do dreno de vida, mana e escudo de energia reduzida em #%$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1211148661,
-            "regex": "dente$",
+            "regex": "e solo ar",
             "rawText": "Área possui trechos de Solo Ardente",
             "generalizedText": "^area possui trechos de solo ardente$",
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1136,7 +1114,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1148,7 +1126,7 @@
             "options": {
                 "scary": 700,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1160,20 +1138,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1333860371,
             "regex": "mete",
-            "rawText": "Jogadores são focados por um Meteoro quando usam um Frasco|45% mais Itens Monetários encontrados na Área",
-            "generalizedText": "^jogadores sao focados por um meteoro quando usam um frasco$|^#% mais itens monetarios encontrados na area$",
+            "rawText": "Jogadores são focados por um Meteoro quando usam um Frasco",
+            "generalizedText": "^jogadores sao focados por um meteoro quando usam um frasco$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1196,20 +1176,22 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1464066514,
             "regex": "esas$",
-            "rawText": "Jogadores têm (30-25)% menos Defesas|35% mais Escaravelhos encontrados na Área",
-            "generalizedText": "^jogadores tem #% menos defesas$|^#% mais escaravelhos encontrados na area$",
+            "rawText": "Jogadores têm (25-30)% menos Defesas",
+            "generalizedText": "^jogadores tem #% menos defesas$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1227,13 +1209,15 @@
         {
             "id": 1494523238,
             "regex": "e poder$",
-            "rawText": "Monstros ganham uma Carga de Poder ao Acertar|Monstros têm +1 de Máximo de Cargas de Poder|35% mais Mapas encontrados na Área",
-            "generalizedText": "^monstros ganham uma carga de poder ao acertar$|^monstros tem # de maximo de cargas de poder$|^#% mais mapas encontrados na area$",
+            "rawText": "Monstros ganham uma Carga de Poder ao Acertar|Monstros têm +1 de Máximo de Cargas de Poder",
+            "generalizedText": "^monstros ganham uma carga de poder ao acertar$|^monstros tem # de maximo de cargas de poder$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -1280,7 +1264,7 @@
             "options": {
                 "scary": 390,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1292,7 +1276,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1311,13 +1295,15 @@
         {
             "id": 1665221611,
             "regex": "m nu",
-            "rawText": "Monstros Raros têm um Núcleo Volátil|53% mais Escaravelhos encontrados na Área",
-            "generalizedText": "^monstros raros tem um nucleo volatil$|^#% mais escaravelhos encontrados na area$",
+            "rawText": "Monstros Raros têm um Núcleo Volátil",
+            "generalizedText": "^monstros raros tem um nucleo volatil$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1340,7 +1326,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1352,7 +1338,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1376,7 +1362,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1388,7 +1374,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1400,20 +1386,22 @@
             "options": {
                 "scary": 400,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1932675161,
             "regex": "ovent",
-            "rawText": "Área contém trechos de chão marcado movente, que infligem marcas aleatórias|36% mais Escaravelhos encontrados na Área",
-            "generalizedText": "^area contem trechos de chao marcado movente, que infligem marcas aleatorias$|^#% mais escaravelhos encontrados na area$",
+            "rawText": "Área contém trechos de chão marcado movente, que infligem marcas aleatórias",
+            "generalizedText": "^area contem trechos de chao marcado movente, que infligem marcas aleatorias$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1448,7 +1436,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1466,27 +1454,13 @@
         }
     ],
     "optimizationTable": {
-        "-1940135977:-1430865583:-875993462:-105914721:1061710360:1117764869:1333860371": {
-            "ids": [
-                -1940135977,
-                -1430865583,
-                -875993462,
-                -105914721,
-                1061710360,
-                1117764869,
-                1333860371
-            ],
-            "regex": "ais it",
-            "weight": 8,
-            "count": 7
-        },
-        "-1940135977:-1772662453:-1204380788:-938285245:-627831782:-166549521:-54649013": {
+        "-1940135977:-1772662453:-1204380788:-627831782:-268547495:-166549521:-54649013": {
             "ids": [
                 -1940135977,
                 -1772662453,
                 -1204380788,
-                -938285245,
                 -627831782,
+                -268547495,
                 -166549521,
                 -54649013
             ],
@@ -1568,10 +1542,9 @@
             "weight": 8,
             "count": 7
         },
-        "-1647756153:-875993462:-683043845:-172005981:156744008:1541760497": {
+        "-1647756153:-683043845:-172005981:156744008:1541760497": {
             "ids": [
                 -1647756153,
-                -875993462,
                 -683043845,
                 -172005981,
                 156744008,
@@ -1579,31 +1552,29 @@
             ],
             "regex": "e monstros",
             "weight": 12,
-            "count": 6
+            "count": 5
         },
-        "-1647756153:-875993462:-683043845:156744008:1541760497": {
+        "-1647756153:-683043845:156744008:1541760497": {
             "ids": [
                 -1647756153,
-                -875993462,
                 -683043845,
                 156744008,
                 1541760497
             ],
             "regex": "e monstros",
             "weight": 12,
-            "count": 5
+            "count": 4
         },
-        "-1647756153:-875993462:-172005981:156744008:1541760497": {
+        "-1647756153:-172005981:156744008:1541760497": {
             "ids": [
                 -1647756153,
-                -875993462,
                 -172005981,
                 156744008,
                 1541760497
             ],
             "regex": "e monstros",
             "weight": 12,
-            "count": 5
+            "count": 4
         },
         "-1647756153:-683043845:-580302769:1469490158:1899039946": {
             "ids": [
@@ -1707,20 +1678,6 @@
             "weight": 8,
             "count": 2
         },
-        "-1621497665:-938285245:-931745379:357242916:639399394:646965355:1494523238": {
-            "ids": [
-                -1621497665,
-                -938285245,
-                -931745379,
-                357242916,
-                639399394,
-                646965355,
-                1494523238
-            ],
-            "regex": "mais m",
-            "weight": 8,
-            "count": 7
-        },
         "-1621497665:357242916:1494523238": {
             "ids": [
                 -1621497665,
@@ -1730,15 +1687,6 @@
             "regex": "e maximo",
             "weight": 10,
             "count": 3
-        },
-        "-1616686189:646965355": {
-            "ids": [
-                -1616686189,
-                646965355
-            ],
-            "regex": "mo ex",
-            "weight": 7,
-            "count": 2
         },
         "-1430865583:-235013251:1078205993": {
             "ids": [
@@ -1805,80 +1753,6 @@
             "regex": "% ao",
             "weight": 6,
             "count": 2
-        },
-        "-1298230190:-946283701:1117764869": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869
-            ],
-            "regex": "apido",
-            "weight": 5,
-            "count": 3
-        },
-        "-1298230190:1117764869": {
-            "ids": [
-                -1298230190,
-                1117764869
-            ],
-            "regex": "apido",
-            "weight": 5,
-            "count": 2
-        },
-        "-1298230190:-946283701": {
-            "ids": [
-                -1298230190,
-                -946283701
-            ],
-            "regex": "f em j",
-            "weight": 8,
-            "count": 2
-        },
-        "-1298230190:-126908257:1464066514:1665221611:1932675161": {
-            "ids": [
-                -1298230190,
-                -126908257,
-                1464066514,
-                1665221611,
-                1932675161
-            ],
-            "regex": "lhos e",
-            "weight": 8,
-            "count": 5
-        },
-        "-1298230190:-946283701:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "iram \\d+",
-            "weight": 11,
-            "count": 5
-        },
-        "-1298230190:-946283701:1117764869:1469490158": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869,
-                1469490158
-            ],
-            "regex": "iram \\d+",
-            "weight": 11,
-            "count": 4
-        },
-        "-1298230190:1117764869:1469490158:1634487773": {
-            "ids": [
-                -1298230190,
-                1117764869,
-                1469490158,
-                1634487773
-            ],
-            "regex": "iram \\d+",
-            "weight": 11,
-            "count": 4
         },
         "-1204380788:-166549521:1283094925:1494523238": {
             "ids": [
@@ -2128,14 +2002,35 @@
             "weight": 14,
             "count": 2
         },
-        "-938285245:-268547495": {
+        "-946283701:1117764869": {
             "ids": [
-                -938285245,
-                -268547495
+                -946283701,
+                1117764869
             ],
-            "regex": "uprimo",
-            "weight": 6,
+            "regex": "apido",
+            "weight": 5,
             "count": 2
+        },
+        "-946283701:1117764869:1469490158:1634487773": {
+            "ids": [
+                -946283701,
+                1117764869,
+                1469490158,
+                1634487773
+            ],
+            "regex": "iram \\d+",
+            "weight": 11,
+            "count": 4
+        },
+        "-946283701:1117764869:1469490158": {
+            "ids": [
+                -946283701,
+                1117764869,
+                1469490158
+            ],
+            "regex": "iram \\d+",
+            "weight": 11,
+            "count": 3
         },
         "-933231182:17483843": {
             "ids": [
@@ -2243,25 +2138,6 @@
             "weight": 9,
             "count": 2
         },
-        "-875993462:1541760497": {
-            "ids": [
-                -875993462,
-                1541760497
-            ],
-            "regex": "da de m",
-            "weight": 9,
-            "count": 2
-        },
-        "-875993462:-172005981:1541760497": {
-            "ids": [
-                -875993462,
-                -172005981,
-                1541760497
-            ],
-            "regex": "da de m",
-            "weight": 9,
-            "count": 3
-        },
         "-737013402:194321329": {
             "ids": [
                 -737013402,
@@ -2324,6 +2200,15 @@
             ],
             "regex": "sico p",
             "weight": 8,
+            "count": 2
+        },
+        "-172005981:1541760497": {
+            "ids": [
+                -172005981,
+                1541760497
+            ],
+            "regex": "da de m",
+            "weight": 9,
             "count": 2
         },
         "-166549521:-126908257": {

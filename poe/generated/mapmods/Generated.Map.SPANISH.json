@@ -20,7 +20,7 @@
             "options": {
                 "scary": 650,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -32,20 +32,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1940135977,
             "regex": "e ataques$",
-            "rawText": "Los monstruos tienen +50% de probabilidad de bloquear el daño de ataques|En el área caen un 47% menos de objetos monetarios",
-            "generalizedText": "^los monstruos tienen #% de probabilidad de bloquear el dano de ataques$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los monstruos tienen +50% de probabilidad de bloquear el daño de ataques",
+            "generalizedText": "^los monstruos tienen #% de probabilidad de bloquear el dano de ataques$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -80,7 +82,7 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -104,26 +106,28 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1621497665,
             "regex": "s de frenesi$",
-            "rawText": "Los monstruos ganan una carga de frenesí con cada golpe|Los monstruos tienen +1 al máximo de cargas de frenesí|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos ganan una carga de frenesi con cada golpe$|^los monstruos tienen # al maximo de cargas de frenesi$|^en el area caen un #% mas de mapas$",
+            "rawText": "Los monstruos ganan una carga de frenesí con cada golpe|Los monstruos tienen +1 al máximo de cargas de frenesí",
+            "generalizedText": "^los monstruos ganan una carga de frenesi con cada golpe$|^los monstruos tienen # al maximo de cargas de frenesi$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -1616686189,
             "regex": "tra$",
-            "rawText": "Los monstruos ganan el (20-49)% de la vida máxima como escudo de energía máximo extra",
+            "rawText": "Los monstruos ganan el (20-80)% de la vida máxima como escudo de energía máximo extra",
             "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra$",
             "options": {
                 "scary": 240,
@@ -140,20 +144,22 @@
             "options": {
                 "scary": 94,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1430865583,
             "regex": "sico$",
-            "rawText": "Los monstruos raros tienen espinas físicas que reflejan 1500 de daño físico|Los monstruos raros tienen espinas elementales que reflejan 2500 de daño elemental|En el área caen un 47% menos de objetos monetarios",
-            "generalizedText": "^los monstruos raros tienen espinas fisicas que reflejan # de dano fisico$|^los monstruos raros tienen espinas elementales que reflejan # de dano elemental$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los monstruos raros tienen espinas físicas que reflejan 1500 de daño físico|Los monstruos raros tienen espinas elementales que reflejan 2500 de daño elemental",
+            "generalizedText": "^los monstruos raros tienen espinas fisicas que reflejan # de dano fisico$|^los monstruos raros tienen espinas elementales que reflejan # de dano elemental$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -164,7 +170,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -176,19 +182,7 @@
             "options": {
                 "scary": 500,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -1298230190,
-            "regex": "jos$",
-            "rawText": "Los efectos beneficiosos expiran un 100% más rápido sobre los jugadores|En el área caen un 35% más de escarabajos",
-            "generalizedText": "^los efectos beneficiosos expiran un #% mas rapido sobre los jugadores$|^en el area caen un #% mas de escarabajos$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -212,7 +206,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -224,7 +218,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -248,7 +242,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -266,7 +260,7 @@
         },
         {
             "id": -1047451686,
-            "regex": "ancia$",
+            "regex": "por m",
             "rawText": "El área está habitada por monstruos con ataques a distancia",
             "generalizedText": "^el area esta habitada por monstruos con ataques a distancia$",
             "options": {
@@ -284,7 +278,7 @@
             "options": {
                 "scary": 295,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -303,30 +297,18 @@
         {
             "id": -946283701,
             "regex": "osos e",
-            "rawText": "Los efectos beneficiosos expiran un (30-70)% más rápido sobre los jugadores",
+            "rawText": "Los efectos beneficiosos expiran un (30-100)% más rápido sobre los jugadores",
             "generalizedText": "^los efectos beneficiosos expiran un #% mas rapido sobre los jugadores$",
             "options": {
                 "scary": 96,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -938285245,
-            "regex": "pas$",
-            "rawText": "Los monstruos tienen +100% de probabilidad de atenuar todo el daño de hechizos|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el dano de hechizos$|^en el area caen un #% mas de mapas$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -933231182,
-            "regex": "^vel",
+            "regex": "^veloci",
             "rawText": "Velocidad de lanzamiento de hechizos de los monstruos aumentada un (35-45)%|Velocidad de ataque de los monstruos aumentada un (35-45)%|Velocidad de movimiento de los monstruos aumentada un (25-30)%",
             "generalizedText": "^velocidad de lanzamiento de hechizos de los monstruos aumentada un #%$|^velocidad de ataque de los monstruos aumentada un #%$|^velocidad de movimiento de los monstruos aumentada un #%$",
             "options": {
@@ -339,13 +321,15 @@
         {
             "id": -931745379,
             "regex": "eras a",
-            "rawText": "Los monstruos aplican 2 enredaderas acechantes con cada golpe|En el área caen un 40% más de mapas",
-            "generalizedText": "^los monstruos aplican # enredaderas acechantes con cada golpe$|^en el area caen un #% mas de mapas$",
+            "rawText": "Los monstruos aplican 2 enredaderas acechantes con cada golpe",
+            "generalizedText": "^los monstruos aplican # enredaderas acechantes con cada golpe$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -361,18 +345,6 @@
             }
         },
         {
-            "id": -875993462,
-            "regex": "vida$",
-            "rawText": "Los monstruos tienen un (90-100)% más de vida|En el área caen un 47% menos de objetos monetarios",
-            "generalizedText": "^los monstruos tienen un #% mas de vida$|^en el area caen un #% menos de objetos monetarios$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
             "id": -763914456,
             "regex": "res g",
             "rawText": "Los jugadores ganan Cargas de Frascos reducidas un (30-50)%",
@@ -380,7 +352,7 @@
             "options": {
                 "scary": 210,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -410,7 +382,7 @@
         },
         {
             "id": -688435205,
-            "regex": "rtos$",
+            "regex": "por no",
             "rawText": "El área está habitada por no-muertos",
             "generalizedText": "^el area esta habitada por no-muertos$",
             "options": {
@@ -512,14 +484,14 @@
             "options": {
                 "scary": 980,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -268547495,
             "regex": "uar t",
-            "rawText": "Los monstruos tienen +(30-60)% de probabilidad de atenuar todo el daño de hechizos",
+            "rawText": "Los monstruos tienen +(30-100)% de probabilidad de atenuar todo el daño de hechizos",
             "generalizedText": "^los monstruos tienen #% de probabilidad de atenuar todo el dano de hechizos$",
             "options": {
                 "scary": 290,
@@ -537,7 +509,9 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -560,7 +534,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -579,7 +553,7 @@
         {
             "id": -172005981,
             "regex": "vida$",
-            "rawText": "Los monstruos tienen un (20-49)% más de vida",
+            "rawText": "Los monstruos tienen un (20-100)% más de vida",
             "generalizedText": "^los monstruos tienen un #% mas de vida$",
             "options": {
                 "scary": 100,
@@ -608,31 +582,33 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -126908257,
             "regex": "man,",
-            "rawText": "Los monstruos queman, congelan y electrocutan con cada golpe|Todo el daño de los monstruos puede quemar, congelar y electrocutar|En el área caen un 60% más de escarabajos",
-            "generalizedText": "^los monstruos queman, congelan y electrocutan con cada golpe$|^todo el dano de los monstruos puede quemar, congelar y electrocutar$|^en el area caen un #% mas de escarabajos$",
+            "rawText": "Los monstruos queman, congelan y electrocutan con cada golpe|Todo el daño de los monstruos puede quemar, congelar y electrocutar",
+            "generalizedText": "^los monstruos queman, congelan y electrocutan con cada golpe$|^todo el dano de los monstruos puede quemar, congelar y electrocutar$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
             "id": -114660370,
-            "regex": "ision$",
+            "regex": "e precision$",
             "rawText": "Los jugadores tienen un (15-25)% menos de precisión",
             "generalizedText": "^los jugadores tienen un #% menos de precision$",
             "options": {
                 "scary": 85,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -663,13 +639,15 @@
         {
             "id": -105914721,
             "regex": "llos$",
-            "rawText": "Los jugadores tienen un 40% menos de efecto de los frascos que se aplican a ellos|En el área caen un 47% menos de objetos monetarios",
-            "generalizedText": "^los jugadores tienen un #% menos de efecto de los frascos que se aplican a ellos$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los jugadores tienen un 40% menos de efecto de los frascos que se aplican a ellos",
+            "generalizedText": "^los jugadores tienen un #% menos de efecto de los frascos que se aplican a ellos$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -680,7 +658,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -692,7 +670,7 @@
             "options": {
                 "scary": 250,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -722,7 +700,7 @@
         },
         {
             "id": 17483843,
-            "regex": "^vel",
+            "regex": "^veloci",
             "rawText": "Velocidad de movimiento de los monstruos aumentada un (15-30)%|Velocidad de ataque de los monstruos aumentada un (20-45)%|Velocidad de lanzamiento de hechizos de los monstruos aumentada un (20-45)%",
             "generalizedText": "^velocidad de movimiento de los monstruos aumentada un #%$|^velocidad de ataque de los monstruos aumentada un #%$|^velocidad de lanzamiento de hechizos de los monstruos aumentada un #%$",
             "options": {
@@ -764,7 +742,7 @@
             "options": {
                 "scary": 365,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -800,7 +778,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -812,19 +790,19 @@
             "options": {
                 "scary": 600,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 284489036,
             "regex": "cto$",
-            "rawText": "Los jugadores tienen un (30-25)% menos de área de efecto",
+            "rawText": "Los jugadores tienen un (25-30)% menos de área de efecto",
             "generalizedText": "^los jugadores tienen un #% menos de area de efecto$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -836,20 +814,22 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 357242916,
             "regex": "peados",
-            "rawText": "Los monstruos tienen +1 al máximo de cargas de aguante|Los monstruos ganan una carga de aguante cuando son golpeados|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos tienen # al maximo de cargas de aguante$|^los monstruos ganan una carga de aguante cuando son golpeados$|^en el area caen un #% mas de mapas$",
+            "rawText": "Los monstruos tienen +1 al máximo de cargas de aguante|Los monstruos ganan una carga de aguante cuando son golpeados",
+            "generalizedText": "^los monstruos tienen # al maximo de cargas de aguante$|^los monstruos ganan una carga de aguante cuando son golpeados$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -860,7 +840,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -872,44 +852,36 @@
             "options": {
                 "scary": 0,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 639399394,
             "regex": "io al",
-            "rawText": "Los monstruos únicos tienen un efecto beneficioso de santuario aleatorio|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos unicos tienen un efecto beneficioso de santuario aleatorio$|^en el area caen un #% mas de mapas$",
+            "rawText": "Los monstruos únicos tienen un efecto beneficioso de santuario aleatorio",
+            "generalizedText": "^los monstruos unicos tienen un efecto beneficioso de santuario aleatorio$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": 646965355,
-            "regex": "tra$",
-            "rawText": "Los monstruos ganan el (70-80)% de la vida máxima como escudo de energía máximo extra|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos ganan el #% de la vida maxima como escudo de energia maximo extra$|^en el area caen un #% mas de mapas$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": 647925005,
-            "regex": "idad$",
+            "regex": "n de vu",
             "rawText": "Los jugadores tienen la maldición de Vulnerabilidad|Los jugadores tienen la maldición de Cadenas temporales|Los jugadores tienen la maldición de Debilidad elemental",
             "generalizedText": "^los jugadores tienen la maldicion de vulnerabilidad$|^los jugadores tienen la maldicion de cadenas temporales$|^los jugadores tienen la maldicion de debilidad elemental$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -920,8 +892,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -968,7 +942,7 @@
             "options": {
                 "scary": 60,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -992,7 +966,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1016,20 +990,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1061710360,
             "regex": "nsan",
-            "rawText": "Los jugadores reciben ataques de sierras ensangrentadas|En el área caen un 47% menos de objetos monetarios",
-            "generalizedText": "^los jugadores reciben ataques de sierras ensangrentadas$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los jugadores reciben ataques de sierras ensangrentadas",
+            "generalizedText": "^los jugadores reciben ataques de sierras ensangrentadas$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1040,7 +1016,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1058,7 +1034,7 @@
         },
         {
             "id": 1082020744,
-            "regex": "iones$",
+            "regex": "r abo",
             "rawText": "El Área está habitada por Abominaciones",
             "generalizedText": "^el area esta habitada por abominaciones$",
             "options": {
@@ -1076,43 +1052,45 @@
             "options": {
                 "scary": 990,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1117764869,
             "regex": "vos ex",
-            "rawText": "Los efectos nocivos expiran un 100% más rápido sobre los monstruos|En el área caen un 64% menos de objetos monetarios",
-            "generalizedText": "^los efectos nocivos expiran un #% mas rapido sobre los monstruos$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los efectos nocivos expiran un 100% más rápido sobre los monstruos",
+            "generalizedText": "^los efectos nocivos expiran un #% mas rapido sobre los monstruos$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
             "id": 1202132179,
-            "regex": "idad$",
+            "regex": "n de vu",
             "rawText": "Los jugadores tienen la maldición de Vulnerabilidad",
             "generalizedText": "^los jugadores tienen la maldicion de vulnerabilidad$",
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1205583947,
             "regex": "otale",
-            "rawText": "Los jugadores tienen la recuperación de vida, maná y escudo de energía totales máximos de la absorción reducida un (60-50)% por segundo",
+            "rawText": "Los jugadores tienen la recuperación de vida, maná y escudo de energía totales máximos de la absorción reducida un (50-60)% por segundo",
             "generalizedText": "^los jugadores tienen la recuperacion de vida, mana y escudo de energia totales maximos de la absorcion reducida un #% por segundo$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1124,7 +1102,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1136,7 +1114,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1148,7 +1126,7 @@
             "options": {
                 "scary": 700,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1160,20 +1138,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1333860371,
             "regex": "teo",
-            "rawText": "Los jugadores son el objetivo de un meteorito cuando usan un frasco|En el área caen un 45% menos de objetos monetarios",
-            "generalizedText": "^los jugadores son el objetivo de un meteorito cuando usan un frasco$|^en el area caen un #% menos de objetos monetarios$",
+            "rawText": "Los jugadores son el objetivo de un meteorito cuando usan un frasco",
+            "generalizedText": "^los jugadores son el objetivo de un meteorito cuando usan un frasco$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1196,20 +1176,22 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1464066514,
             "regex": "nsas$",
-            "rawText": "Los jugadores tienen un (30-25)% menos de defensas|En el área caen un 35% más de escarabajos",
-            "generalizedText": "^los jugadores tienen un #% menos de defensas$|^en el area caen un #% mas de escarabajos$",
+            "rawText": "Los jugadores tienen un (25-30)% menos de defensas",
+            "generalizedText": "^los jugadores tienen un #% menos de defensas$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1227,13 +1209,15 @@
         {
             "id": 1494523238,
             "regex": "s de poder$",
-            "rawText": "Los monstruos ganan una carga de poder con cada golpe|Los monstruos tienen +1 al máximo de cargas de poder|En el área caen un 35% más de mapas",
-            "generalizedText": "^los monstruos ganan una carga de poder con cada golpe$|^los monstruos tienen # al maximo de cargas de poder$|^en el area caen un #% mas de mapas$",
+            "rawText": "Los monstruos ganan una carga de poder con cada golpe|Los monstruos tienen +1 al máximo de cargas de poder",
+            "generalizedText": "^los monstruos ganan una carga de poder con cada golpe$|^los monstruos tienen # al maximo de cargas de poder$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -1262,7 +1246,7 @@
         },
         {
             "id": 1551446200,
-            "regex": "cios$",
+            "regex": "en an",
             "rawText": "Los monstruos tienen Antimaleficios",
             "generalizedText": "^los monstruos tienen antimaleficios$",
             "options": {
@@ -1280,19 +1264,19 @@
             "options": {
                 "scary": 390,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1598599541,
-            "regex": "orales$",
+            "regex": "n de cad",
             "rawText": "Los jugadores tienen la maldición de Cadenas temporales",
             "generalizedText": "^los jugadores tienen la maldicion de cadenas temporales$",
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1311,13 +1295,15 @@
         {
             "id": 1665221611,
             "regex": "leos",
-            "rawText": "Los monstruos raros tienen núcleos volátiles|En el área caen un 53% más de escarabajos",
-            "generalizedText": "^los monstruos raros tienen nucleos volatiles$|^en el area caen un #% mas de escarabajos$",
+            "rawText": "Los monstruos raros tienen núcleos volátiles",
+            "generalizedText": "^los monstruos raros tienen nucleos volatiles$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1340,7 +1326,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1352,13 +1338,13 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1799781772,
-            "regex": "elo$",
+            "regex": "omo h",
             "rawText": "Los monstruos infligen el (50-110)% de su daño físico extra como hielo",
             "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como hielo$",
             "options": {
@@ -1376,7 +1362,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1388,7 +1374,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1400,20 +1386,22 @@
             "options": {
                 "scary": 400,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1932675161,
             "regex": "diz",
-            "rawText": "El área contiene zonas de suelo señalado movedizo que aplica señales aleatorias|En el área caen un 36% más de escarabajos",
-            "generalizedText": "^el area contiene zonas de suelo senalado movedizo que aplica senales aleatorias$|^en el area caen un #% mas de escarabajos$",
+            "rawText": "El área contiene zonas de suelo señalado movedizo que aplica señales aleatorias",
+            "generalizedText": "^el area contiene zonas de suelo senalado movedizo que aplica senales aleatorias$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1448,13 +1436,13 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 2132856290,
-            "regex": "ayo$",
+            "regex": "mo r",
             "rawText": "Los monstruos infligen el (50-110)% de su daño físico extra como rayo",
             "generalizedText": "^los monstruos infligen el #% de su dano fisico extra como rayo$",
             "options": {
@@ -1475,20 +1463,6 @@
             "weight": 11,
             "count": 2
         },
-        "-1940135977:-1430865583:-875993462:-105914721:1061710360:1117764869:1333860371": {
-            "ids": [
-                -1940135977,
-                -1430865583,
-                -875993462,
-                -105914721,
-                1061710360,
-                1117764869,
-                1333860371
-            ],
-            "regex": "s de ob",
-            "weight": 9,
-            "count": 7
-        },
         "-1818595967:972998450": {
             "ids": [
                 -1818595967,
@@ -1498,24 +1472,22 @@
             "weight": 8,
             "count": 2
         },
-        "-1772662453:-1204380788:-875993462:-627831782:-166549521:1541760497": {
+        "-1772662453:-1204380788:-627831782:-166549521:1541760497": {
             "ids": [
                 -1772662453,
                 -1204380788,
-                -875993462,
                 -627831782,
                 -166549521,
                 1541760497
             ],
             "regex": "uos tienen u",
             "weight": 14,
-            "count": 6
+            "count": 5
         },
-        "-1772662453:-1204380788:-875993462:-627831782:-172005981:-166549521:1541760497": {
+        "-1772662453:-1204380788:-627831782:-172005981:-166549521:1541760497": {
             "ids": [
                 -1772662453,
                 -1204380788,
-                -875993462,
                 -627831782,
                 -172005981,
                 -166549521,
@@ -1523,7 +1495,7 @@
             ],
             "regex": "uos tienen u",
             "weight": 14,
-            "count": 7
+            "count": 6
         },
         "-1647756153:-683043845": {
             "ids": [
@@ -1690,20 +1662,6 @@
             "weight": 9,
             "count": 5
         },
-        "-1621497665:-938285245:-931745379:357242916:639399394:646965355:1494523238": {
-            "ids": [
-                -1621497665,
-                -938285245,
-                -931745379,
-                357242916,
-                639399394,
-                646965355,
-                1494523238
-            ],
-            "regex": "mas de m",
-            "weight": 10,
-            "count": 7
-        },
         "-1621497665:357242916:1494523238": {
             "ids": [
                 -1621497665,
@@ -1714,28 +1672,26 @@
             "weight": 10,
             "count": 3
         },
-        "-1616686189:-645418310:10729340:127168403:646965355": {
+        "-1616686189:-645418310:10729340:127168403": {
             "ids": [
                 -1616686189,
                 -645418310,
                 10729340,
-                127168403,
-                646965355
-            ],
-            "regex": "s ganan e",
-            "weight": 11,
-            "count": 5
-        },
-        "-1616686189:-645418310:10729340:646965355": {
-            "ids": [
-                -1616686189,
-                -645418310,
-                10729340,
-                646965355
+                127168403
             ],
             "regex": "s ganan e",
             "weight": 11,
             "count": 4
+        },
+        "-1616686189:-645418310:10729340": {
+            "ids": [
+                -1616686189,
+                -645418310,
+                10729340
+            ],
+            "regex": "s ganan e",
+            "weight": 11,
+            "count": 3
         },
         "-1430865583:-235013251:1078205993": {
             "ids": [
@@ -1813,46 +1769,6 @@
             "regex": "uos tienen l",
             "weight": 14,
             "count": 3
-        },
-        "-1298230190:-946283701:1117764869": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869
-            ],
-            "regex": "pido",
-            "weight": 4,
-            "count": 3
-        },
-        "-1298230190:1117764869": {
-            "ids": [
-                -1298230190,
-                1117764869
-            ],
-            "regex": "pido",
-            "weight": 4,
-            "count": 2
-        },
-        "-1298230190:-946283701": {
-            "ids": [
-                -1298230190,
-                -946283701
-            ],
-            "regex": "osos e",
-            "weight": 8,
-            "count": 2
-        },
-        "-1298230190:-126908257:1464066514:1665221611:1932675161": {
-            "ids": [
-                -1298230190,
-                -126908257,
-                1464066514,
-                1665221611,
-                1932675161
-            ],
-            "regex": "s de esc",
-            "weight": 10,
-            "count": 5
         },
         "-1204380788:-166549521": {
             "ids": [
@@ -2051,13 +1967,13 @@
             "weight": 14,
             "count": 3
         },
-        "-938285245:-268547495": {
+        "-946283701:1117764869": {
             "ids": [
-                -938285245,
-                -268547495
+                -946283701,
+                1117764869
             ],
-            "regex": "uar t",
-            "weight": 7,
+            "regex": "pido",
+            "weight": 4,
             "count": 2
         },
         "-933231182:-580302769:17483843:156744008": {
@@ -2201,17 +2117,6 @@
             "regex": "o dano e",
             "weight": 10,
             "count": 3
-        },
-        "-645418310:10729340:127168403:646965355": {
-            "ids": [
-                -645418310,
-                10729340,
-                127168403,
-                646965355
-            ],
-            "regex": "s ganan e",
-            "weight": 11,
-            "count": 4
         },
         "-617888797:-210607554": {
             "ids": [

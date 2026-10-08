@@ -20,7 +20,7 @@
             "options": {
                 "scary": 650,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -32,20 +32,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1940135977,
             "regex": "locken$",
-            "rawText": "Monster haben +50% Chance, Angriffsschaden zu blocken|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^monster haben #% chance, angriffsschaden zu blocken$|^#% mehr gefundene wahrung im gebiet$",
+            "rawText": "Monster haben +50% Chance, Angriffsschaden zu blocken",
+            "generalizedText": "^monster haben #% chance, angriffsschaden zu blocken$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -80,7 +82,7 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -104,26 +106,28 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1621497665,
             "regex": "n ras",
-            "rawText": "Monster erhalten bei Treffer eine Raserei-Ladung|Monster haben +1 zu maximalen Raserei-Ladungen|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster erhalten bei treffer eine raserei-ladung$|^monster haben # zu maximalen raserei-ladungen$|^#% mehr gefundene karten im gebiet$",
+            "rawText": "Monster erhalten bei Treffer eine Raserei-Ladung|Monster haben +1 zu maximalen Raserei-Ladungen",
+            "generalizedText": "^monster erhalten bei treffer eine raserei-ladung$|^monster haben # zu maximalen raserei-ladungen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -1616686189,
             "regex": "ld$",
-            "rawText": "Monster erhalten (20-49)% des maximalen Lebens als extra maximalen Energieschild",
+            "rawText": "Monster erhalten (20-80)% des maximalen Lebens als extra maximalen Energieschild",
             "generalizedText": "^monster erhalten #% des maximalen lebens als extra maximalen energieschild$",
             "options": {
                 "scary": 240,
@@ -140,20 +144,22 @@
             "options": {
                 "scary": 94,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1430865583,
-            "regex": "lth",
-            "rawText": "Seltene Monster haben [PhysicalThorns|physische Dornen], die 1500 physischen Schaden reflektieren|Seltene Monster haben [ElementalThorns|elementare Dornen], die 2500 Elementarschaden reflektieren|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^seltene monster haben physische dornen, die # physischen schaden reflektieren$|^seltene monster haben elementare dornen, die # elementarschaden reflektieren$|^#% mehr gefundene wahrung im gebiet$",
+            "regex": "\\d+ e",
+            "rawText": "Seltene Monster haben physische Dornen, die 1500 physischen Schaden reflektieren|Seltene Monster haben elementare Dornen, die 2500 Elementarschaden reflektieren",
+            "generalizedText": "^seltene monster haben physische dornen, die # physischen schaden reflektieren$|^seltene monster haben elementare dornen, die # elementarschaden reflektieren$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -164,7 +170,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -176,19 +182,7 @@
             "options": {
                 "scary": 500,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -1298230190,
-            "regex": "^star",
-            "rawText": "Stärkungen auf Spielern klingen 100% schneller ab|35% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^starkungen auf spielern klingen #% schneller ab$|^#% mehr gefundene skarabaen im gebiet$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -212,7 +206,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -224,7 +218,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -248,7 +242,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -284,7 +278,7 @@
             "options": {
                 "scary": 295,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -303,24 +297,12 @@
         {
             "id": -946283701,
             "regex": "^star",
-            "rawText": "Stärkungen auf Spielern klingen (30-70)% schneller ab",
+            "rawText": "Stärkungen auf Spielern klingen (30-100)% schneller ab",
             "generalizedText": "^starkungen auf spielern klingen #% schneller ab$",
             "options": {
                 "scary": 96,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -938285245,
-            "regex": "ucken$",
-            "rawText": "Monster haben +100% Chance, Zauberschaden zu unterdrücken|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrucken$|^#% mehr gefundene karten im gebiet$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -339,13 +321,15 @@
         {
             "id": -931745379,
             "regex": "an$",
-            "rawText": "Monster wenden bei Treffer 2 Greifende Ranken an|40% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster wenden bei treffer # greifende ranken an$|^#% mehr gefundene karten im gebiet$",
+            "rawText": "Monster wenden bei Treffer 2 Greifende Ranken an",
+            "generalizedText": "^monster wenden bei treffer # greifende ranken an$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -361,18 +345,6 @@
             }
         },
         {
-            "id": -875993462,
-            "regex": "rleb",
-            "rawText": "(90-100)% mehr Monsterleben|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^#% mehr monsterleben$|^#% mehr gefundene wahrung im gebiet$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
             "id": -763914456,
             "regex": "lungen$",
             "rawText": "Spieler erhalten (30-50)% verringerte Fläschchenfüllungen",
@@ -380,7 +352,7 @@
             "options": {
                 "scary": 210,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -512,14 +484,14 @@
             "options": {
                 "scary": 980,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -268547495,
             "regex": "ucken$",
-            "rawText": "Monster haben +(30-60)% Chance, Zauberschaden zu unterdrücken",
+            "rawText": "Monster haben +(30-100)% Chance, Zauberschaden zu unterdrücken",
             "generalizedText": "^monster haben #% chance, zauberschaden zu unterdrucken$",
             "options": {
                 "scary": 290,
@@ -537,13 +509,15 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -235013251,
             "regex": "ben ph",
-            "rawText": "Seltene Monster haben [PhysicalThorns|physische Dornen], die (400-800) physischen Schaden reflektieren",
+            "rawText": "Seltene Monster haben physische Dornen, die (400-800) physischen Schaden reflektieren",
             "generalizedText": "^seltene monster haben physische dornen, die # physischen schaden reflektieren$",
             "options": {
                 "scary": 0,
@@ -560,7 +534,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -579,7 +553,7 @@
         {
             "id": -172005981,
             "regex": "rleb",
-            "rawText": "(20-49)% mehr Monsterleben",
+            "rawText": "(20-100)% mehr Monsterleben",
             "generalizedText": "^#% mehr monsterleben$",
             "options": {
                 "scary": 100,
@@ -608,20 +582,22 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -126908257,
             "regex": "in u",
-            "rawText": "Monster entzünden, frieren ein und schocken bei Treffer|Sämtlicher Monsterschaden kann entzünden, einfrieren und schocken|60% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^monster entzunden, frieren ein und schocken bei treffer$|^samtlicher monsterschaden kann entzunden, einfrieren und schocken$|^#% mehr gefundene skarabaen im gebiet$",
+            "rawText": "Monster entzünden, frieren ein und schocken bei Treffer|Sämtlicher Monsterschaden kann entzünden, einfrieren und schocken",
+            "generalizedText": "^monster entzunden, frieren ein und schocken bei treffer$|^samtlicher monsterschaden kann entzunden, einfrieren und schocken$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -632,7 +608,7 @@
             "options": {
                 "scary": 85,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -663,13 +639,15 @@
         {
             "id": -105914721,
             "regex": "endete",
-            "rawText": "Spieler haben 40% weniger Wirkung von auf sie angewendete Fläschchen|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler haben #% weniger wirkung von auf sie angewendete flaschchen$|^#% mehr gefundene wahrung im gebiet$",
+            "rawText": "Spieler haben 40% weniger Wirkung von auf sie angewendete Fläschchen",
+            "generalizedText": "^spieler haben #% weniger wirkung von auf sie angewendete flaschchen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -680,7 +658,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -692,7 +670,7 @@
             "options": {
                 "scary": 250,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -764,7 +742,7 @@
             "options": {
                 "scary": 365,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -800,7 +778,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -812,19 +790,19 @@
             "options": {
                 "scary": 600,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 284489036,
             "regex": "er wirkungs",
-            "rawText": "Spieler haben (30-25)% weniger Wirkungsbereich",
+            "rawText": "Spieler haben (25-30)% weniger Wirkungsbereich",
             "generalizedText": "^spieler haben #% weniger wirkungsbereich$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -836,20 +814,22 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 357242916,
             "regex": "n bei er",
-            "rawText": "Monster haben +1 zu maximalen Widerstands-Ladungen|Monster erhalten bei erlittenem Treffer eine Widerstands-Ladung|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster haben # zu maximalen widerstands-ladungen$|^monster erhalten bei erlittenem treffer eine widerstands-ladung$|^#% mehr gefundene karten im gebiet$",
+            "rawText": "Monster haben +1 zu maximalen Widerstands-Ladungen|Monster erhalten bei erlittenem Treffer eine Widerstands-Ladung",
+            "generalizedText": "^monster haben # zu maximalen widerstands-ladungen$|^monster erhalten bei erlittenem treffer eine widerstands-ladung$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -860,7 +840,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -872,32 +852,22 @@
             "options": {
                 "scary": 0,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 639399394,
             "regex": "rkung$",
-            "rawText": "Einzigartige Monster haben eine zufällige Schrein-Stärkung|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^einzigartige monster haben eine zufallige schrein-starkung$|^#% mehr gefundene karten im gebiet$",
+            "rawText": "Einzigartige Monster haben eine zufällige Schrein-Stärkung",
+            "generalizedText": "^einzigartige monster haben eine zufallige schrein-starkung$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": 646965355,
-            "regex": "ld$",
-            "rawText": "Monster erhalten (70-80)% des maximalen Lebens als extra maximalen Energieschild|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster erhalten #% des maximalen lebens als extra maximalen energieschild$|^#% mehr gefundene karten im gebiet$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -908,8 +878,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -920,8 +892,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -968,7 +942,7 @@
             "options": {
                 "scary": 60,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -992,7 +966,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1016,20 +990,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1061710360,
             "regex": "tbe",
-            "rawText": "Spieler werden von blutbeschmierten Sägeblättern angegriffen|47% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler werden von blutbeschmierten sageblattern angegriffen$|^#% mehr gefundene wahrung im gebiet$",
+            "rawText": "Spieler werden von blutbeschmierten Sägeblättern angegriffen",
+            "generalizedText": "^spieler werden von blutbeschmierten sageblattern angegriffen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1040,14 +1016,14 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1078205993,
             "regex": "\\d+ e",
-            "rawText": "Seltene Monster haben [ElementalThorns|elementare Dornen], die (900-1500) Elementarschaden reflektieren",
+            "rawText": "Seltene Monster haben elementare Dornen, die (900-1500) Elementarschaden reflektieren",
             "generalizedText": "^seltene monster haben elementare dornen, die # elementarschaden reflektieren$",
             "options": {
                 "scary": 0,
@@ -1076,20 +1052,22 @@
             "options": {
                 "scary": 990,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1117764869,
             "regex": "^schw",
-            "rawText": "Schwächungen auf Monstern klingen 100% schneller ab|64% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^schwachungen auf monstern klingen #% schneller ab$|^#% mehr gefundene wahrung im gebiet$",
+            "rawText": "Schwächungen auf Monstern klingen 100% schneller ab",
+            "generalizedText": "^schwachungen auf monstern klingen #% schneller ab$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1100,19 +1078,19 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1205583947,
             "regex": "ub$",
-            "rawText": "Spieler haben (60-50)% verringerte maximale Gesamtwiederherstellung des Lebens, Manas und Energieschilds pro Sekunde durch Raub",
+            "rawText": "Spieler haben (50-60)% verringerte maximale Gesamtwiederherstellung des Lebens, Manas und Energieschilds pro Sekunde durch Raub",
             "generalizedText": "^spieler haben #% verringerte maximale gesamtwiederherstellung des lebens, manas und energieschilds pro sekunde durch raub$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1124,7 +1102,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1136,7 +1114,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1148,7 +1126,7 @@
             "options": {
                 "scary": 700,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1160,20 +1138,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1333860371,
             "regex": "teo",
-            "rawText": "Spieler werden von einem Meteor ins Ziel genommen, wenn sie ein Fläschchen benutzen|45% mehr gefundene Währung im Gebiet",
-            "generalizedText": "^spieler werden von einem meteor ins ziel genommen, wenn sie ein flaschchen benutzen$|^#% mehr gefundene wahrung im gebiet$",
+            "rawText": "Spieler werden von einem Meteor ins Ziel genommen, wenn sie ein Fläschchen benutzen",
+            "generalizedText": "^spieler werden von einem meteor ins ziel genommen, wenn sie ein flaschchen benutzen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1196,20 +1176,22 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1464066514,
             "regex": "ven$",
-            "rawText": "Spieler haben (30-25)% weniger Defensiven|35% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^spieler haben #% weniger defensiven$|^#% mehr gefundene skarabaen im gebiet$",
+            "rawText": "Spieler haben (25-30)% weniger Defensiven",
+            "generalizedText": "^spieler haben #% weniger defensiven$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1227,13 +1209,15 @@
         {
             "id": 1494523238,
             "regex": "u maximalen e",
-            "rawText": "Monster erhalten bei Treffer eine Energie-Ladung|Monster haben +1 zu maximalen Energie-Ladungen|35% mehr gefundene Karten im Gebiet",
-            "generalizedText": "^monster erhalten bei treffer eine energie-ladung$|^monster haben # zu maximalen energie-ladungen$|^#% mehr gefundene karten im gebiet$",
+            "rawText": "Monster erhalten bei Treffer eine Energie-Ladung|Monster haben +1 zu maximalen Energie-Ladungen",
+            "generalizedText": "^monster erhalten bei treffer eine energie-ladung$|^monster haben # zu maximalen energie-ladungen$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -1280,7 +1264,7 @@
             "options": {
                 "scary": 390,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1292,7 +1276,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1311,13 +1295,15 @@
         {
             "id": 1665221611,
             "regex": "rne$",
-            "rawText": "Seltene Monster haben Explosive Kerne|53% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^seltene monster haben explosive kerne$|^#% mehr gefundene skarabaen im gebiet$",
+            "rawText": "Seltene Monster haben Explosive Kerne",
+            "generalizedText": "^seltene monster haben explosive kerne$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1340,7 +1326,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1352,7 +1338,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1376,7 +1362,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1388,7 +1374,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1400,20 +1386,22 @@
             "options": {
                 "scary": 400,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1932675161,
             "regex": "det$",
-            "rawText": "Gebiet enthält stellenweise bewegenden Maltragenden Boden, der zufällige Male anwendet|36% mehr gefundene Skarabäen im Gebiet",
-            "generalizedText": "^gebiet enthalt stellenweise bewegenden maltragenden boden, der zufallige male anwendet$|^#% mehr gefundene skarabaen im gebiet$",
+            "rawText": "Gebiet enthält stellenweise bewegenden Maltragenden Boden, der zufällige Male anwendet",
+            "generalizedText": "^gebiet enthalt stellenweise bewegenden maltragenden boden, der zufallige male anwendet$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1448,7 +1436,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1466,41 +1454,13 @@
         }
     ],
     "optimizationTable": {
-        "-1940135977:-1430865583:-875993462:-105914721:1061710360:1117764869:1333860371": {
-            "ids": [
-                -1940135977,
-                -1430865583,
-                -875993462,
-                -105914721,
-                1061710360,
-                1117764869,
-                1333860371
-            ],
-            "regex": "g im",
-            "weight": 6,
-            "count": 7
-        },
-        "-1940135977:-1772662453:-1204380788:-938285245:-627831782:-268547495:-166549521": {
+        "-1940135977:-1772662453:-1204380788:-627831782:-268547495:-166549521": {
             "ids": [
                 -1940135977,
                 -1772662453,
                 -1204380788,
-                -938285245,
                 -627831782,
                 -268547495,
-                -166549521
-            ],
-            "regex": "n \\d+% c",
-            "weight": 11,
-            "count": 7
-        },
-        "-1940135977:-1772662453:-1204380788:-938285245:-627831782:-166549521": {
-            "ids": [
-                -1940135977,
-                -1772662453,
-                -1204380788,
-                -938285245,
-                -627831782,
                 -166549521
             ],
             "regex": "n \\d+% c",
@@ -1667,6 +1627,20 @@
             "weight": 8,
             "count": 5
         },
+        "-1621497665:-1616686189:-1094717370:-225071089:-54649013:357242916:1494523238": {
+            "ids": [
+                -1621497665,
+                -1616686189,
+                -1094717370,
+                -225071089,
+                -54649013,
+                357242916,
+                1494523238
+            ],
+            "regex": "ter er",
+            "weight": 8,
+            "count": 7
+        },
         "-1621497665:-225071089:357242916:1283094925:1494523238": {
             "ids": [
                 -1621497665,
@@ -1679,13 +1653,27 @@
             "weight": 8,
             "count": 5
         },
-        "-1621497665:-1094717370:-225071089:357242916:646965355:1283094925:1494523238": {
+        "-1621497665:-1616686189:-225071089:-54649013:357242916:1283094925:1494523238": {
             "ids": [
                 -1621497665,
+                -1616686189,
+                -225071089,
+                -54649013,
+                357242916,
+                1283094925,
+                1494523238
+            ],
+            "regex": "ter er",
+            "weight": 8,
+            "count": 7
+        },
+        "-1621497665:-1616686189:-1094717370:-225071089:357242916:1283094925:1494523238": {
+            "ids": [
+                -1621497665,
+                -1616686189,
                 -1094717370,
                 -225071089,
                 357242916,
-                646965355,
                 1283094925,
                 1494523238
             ],
@@ -1693,45 +1681,57 @@
             "weight": 9,
             "count": 7
         },
-        "-1621497665:-938285245:-931745379:357242916:639399394:646965355:1494523238": {
-            "ids": [
-                -1621497665,
-                -938285245,
-                -931745379,
-                357242916,
-                639399394,
-                646965355,
-                1494523238
-            ],
-            "regex": "rten im",
-            "weight": 9,
-            "count": 7
-        },
-        "-1621497665:-1616686189:-1094717370:-225071089:357242916:646965355:1494523238": {
+        "-1621497665:-1616686189:-1094717370:-225071089:357242916:1494523238": {
             "ids": [
                 -1621497665,
                 -1616686189,
                 -1094717370,
                 -225071089,
                 357242916,
-                646965355,
                 1494523238
             ],
             "regex": "ter erh",
             "weight": 9,
+            "count": 6
+        },
+        "-1621497665:-1616686189:-1094717370:-763914456:-225071089:357242916:1494523238": {
+            "ids": [
+                -1621497665,
+                -1616686189,
+                -1094717370,
+                -763914456,
+                -225071089,
+                357242916,
+                1494523238
+            ],
+            "regex": "er erha",
+            "weight": 9,
             "count": 7
         },
-        "-1621497665:-1616686189:-225071089:357242916:646965355:1283094925:1494523238": {
+        "-1621497665:-1616686189:-225071089:357242916:1283094925:1494523238": {
             "ids": [
                 -1621497665,
                 -1616686189,
                 -225071089,
                 357242916,
-                646965355,
                 1283094925,
                 1494523238
             ],
             "regex": "ter erh",
+            "weight": 9,
+            "count": 6
+        },
+        "-1621497665:-1616686189:-763914456:-225071089:357242916:1283094925:1494523238": {
+            "ids": [
+                -1621497665,
+                -1616686189,
+                -763914456,
+                -225071089,
+                357242916,
+                1283094925,
+                1494523238
+            ],
+            "regex": "er erha",
             "weight": 9,
             "count": 7
         },
@@ -1924,65 +1924,6 @@
             "weight": 6,
             "count": 2
         },
-        "-1298230190:-946283701:1117764869": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869
-            ],
-            "regex": "% sc",
-            "weight": 6,
-            "count": 3
-        },
-        "-1298230190:1117764869": {
-            "ids": [
-                -1298230190,
-                1117764869
-            ],
-            "regex": "% sc",
-            "weight": 6,
-            "count": 2
-        },
-        "-1298230190:-126908257:1464066514:1665221611:1932675161": {
-            "ids": [
-                -1298230190,
-                -126908257,
-                1464066514,
-                1665221611,
-                1932675161
-            ],
-            "regex": "e ska",
-            "weight": 7,
-            "count": 5
-        },
-        "-1298230190:-946283701": {
-            "ids": [
-                -1298230190,
-                -946283701
-            ],
-            "regex": "lern k",
-            "weight": 8,
-            "count": 2
-        },
-        "-1298230190:-946283701:-105914721": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                -105914721
-            ],
-            "regex": "n auf s",
-            "weight": 9,
-            "count": 3
-        },
-        "-1298230190:-105914721": {
-            "ids": [
-                -1298230190,
-                -105914721
-            ],
-            "regex": "n auf s",
-            "weight": 9,
-            "count": 2
-        },
         "-1158025910:-580302769:-126908257:2080363489": {
             "ids": [
                 -1158025910,
@@ -2158,6 +2099,24 @@
             "weight": 13,
             "count": 4
         },
+        "-946283701:1117764869": {
+            "ids": [
+                -946283701,
+                1117764869
+            ],
+            "regex": "% sc",
+            "weight": 6,
+            "count": 2
+        },
+        "-946283701:-105914721": {
+            "ids": [
+                -946283701,
+                -105914721
+            ],
+            "regex": "n auf s",
+            "weight": 9,
+            "count": 2
+        },
         "-933231182:17483843": {
             "ids": [
                 -933231182,
@@ -2185,52 +2144,6 @@
             "regex": "den bei t",
             "weight": 11,
             "count": 3
-        },
-        "-875993462:1541760497": {
-            "ids": [
-                -875993462,
-                1541760497
-            ],
-            "regex": "rleb",
-            "weight": 4,
-            "count": 2
-        },
-        "-875993462:-172005981:1541760497": {
-            "ids": [
-                -875993462,
-                -172005981,
-                1541760497
-            ],
-            "regex": "rleb",
-            "weight": 4,
-            "count": 3
-        },
-        "-875993462:-580302769:-172005981:-126908257:583869527:1541760497:2080363489": {
-            "ids": [
-                -875993462,
-                -580302769,
-                -172005981,
-                -126908257,
-                583869527,
-                1541760497,
-                2080363489
-            ],
-            "regex": "r mon",
-            "weight": 7,
-            "count": 7
-        },
-        "-875993462:-580302769:-126908257:583869527:1541760497:2080363489": {
-            "ids": [
-                -875993462,
-                -580302769,
-                -126908257,
-                583869527,
-                1541760497,
-                2080363489
-            ],
-            "regex": "r mon",
-            "weight": 7,
-            "count": 6
         },
         "-763914456:-105914721": {
             "ids": [
@@ -2313,6 +2226,31 @@
             "weight": 10,
             "count": 5
         },
+        "-580302769:-172005981:-126908257:583869527:1541760497:2080363489": {
+            "ids": [
+                -580302769,
+                -172005981,
+                -126908257,
+                583869527,
+                1541760497,
+                2080363489
+            ],
+            "regex": "r mon",
+            "weight": 7,
+            "count": 6
+        },
+        "-580302769:-126908257:583869527:1541760497:2080363489": {
+            "ids": [
+                -580302769,
+                -126908257,
+                583869527,
+                1541760497,
+                2080363489
+            ],
+            "regex": "r mon",
+            "weight": 7,
+            "count": 5
+        },
         "-580302769:-126908257:583869527:2080363489": {
             "ids": [
                 -580302769,
@@ -2379,6 +2317,15 @@
             "regex": "en besie",
             "weight": 10,
             "count": 3
+        },
+        "-172005981:1541760497": {
+            "ids": [
+                -172005981,
+                1541760497
+            ],
+            "regex": "rleb",
+            "weight": 4,
+            "count": 2
         },
         "-166549521:-126908257": {
             "ids": [
