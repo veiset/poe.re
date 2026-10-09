@@ -62,6 +62,14 @@ const Item = () => {
 
   const similarItems = matchSimilarBases && itembase ?
     findSimilarBases(itembase.baseType, itembase.item, basetypes) : [];
+  const magicNameCategories = regexMods && {
+    ...regexMods,
+    categoryRegex: regexMods.categoryRegex.filter(({category}) => category === "prefix" || category === "suffix"),
+  };
+  const magicModifierCategories = regexMods && {
+    ...regexMods,
+    categoryRegex: regexMods.categoryRegex.filter(({category}) => category !== "prefix" && category !== "suffix"),
+  };
 
   const currentSettings: ItemCraftingSettings = {
     itembase, matchSimilarBases, selectedRareMods, selectedMagicMods,
@@ -144,7 +152,13 @@ const Item = () => {
       setResult(generateRareItemRegex(affixMap, currentSettings));
     }
     if (itembase && itembase.rarity === "Magic") {
-      setResult(generateMagicItemRegex(currentSettings, basetypes));
+      const selectedModifierMods = Object.fromEntries(Object.entries(selectedRareMods)
+        .filter(([key]) => magicModifierCategories?.categoryRegex
+          .some(({category}) => key.startsWith(`${itembase.baseType}-${category}-`))));
+      setResult([
+        generateMagicItemRegex(currentSettings, basetypes),
+        generateRareItemRegex(affixMap, {...currentSettings, selectedRareMods: selectedModifierMods}),
+      ].filter(Boolean).join(" "));
     }
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({
       ...latest,
@@ -167,8 +181,10 @@ const Item = () => {
             setSelectedRareMods(defaultSettings.itemCrafting.selectedRareMods);
           }
           if (itembase?.rarity === "Magic") {
-            // setSelectedMagicMods(defaultSettings.itemCrafting.selectedMagicMods);
             setSelectedMagicMods(selectedMagicMods.filter((e) => e.basetype !== itembase.baseType));
+            setSelectedRareMods(Object.fromEntries(Object.entries(selectedRareMods)
+              .filter(([key]) => !magicModifierCategories?.categoryRegex
+                .some(({category}) => key.startsWith(`${itembase.baseType}-${category}-`)))));
             setOnlyIfBothPrefixAndSuffix(defaultSettings.itemCrafting.magicSettings.onlyIfBothPrefixAndSuffix);
             setMatchOpenAffix(defaultSettings.itemCrafting.magicSettings.matchOpenAffix);
           }
@@ -212,7 +228,7 @@ const Item = () => {
           </div>
       }
       {
-        itembase && regexMods && itembase.rarity === "Magic" &&
+        itembase && magicNameCategories && magicModifierCategories && itembase.rarity === "Magic" &&
           <div>
               <MagicItemMatchSettings
                   onlyIfBothPrefixAndSuffix={onlyIfBothPrefixAndSuffix}
@@ -221,10 +237,17 @@ const Item = () => {
                   setMatchOpenAffix={setMatchOpenAffix}
               />
               <MagicItemSelect
-                  itemRegex={regexMods}
+                  itemRegex={magicNameCategories}
                   itembase={itembase}
                   selected={selectedMagicMods}
                   setSelected={setSelectedMagicMods}
+              />
+              <RareItemSelect
+                  itemRegex={magicModifierCategories}
+                  itembase={itembase}
+                  displayTiers={false}
+                  setSelected={setSelectedRareMods}
+                  selected={selectedRareMods}
               />
           </div>
       }
