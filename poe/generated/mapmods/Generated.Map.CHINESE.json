@@ -20,7 +20,7 @@
             "options": {
                 "scary": 650,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -32,20 +32,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1940135977,
             "regex": "害格擋率$",
-            "rawText": "怪物 +50% 攻擊傷害格擋率|區域內掉落的通貨增加 47%",
-            "generalizedText": "^怪物 #% 攻擊傷害格擋率$|^區域內掉落的通貨增加 #%$",
+            "rawText": "怪物 +50% 攻擊傷害格擋率",
+            "generalizedText": "^怪物 #% 攻擊傷害格擋率$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -80,7 +82,7 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -104,26 +106,28 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1621497665,
             "regex": "物狂",
-            "rawText": "怪物擊中時獲得 1 顆狂怒球|怪物狂怒球上限 +1|區域內掉落的地圖增加 35%",
-            "generalizedText": "^怪物擊中時獲得 # 顆狂怒球$|^怪物狂怒球上限 #$|^區域內掉落的地圖增加 #%$",
+            "rawText": "怪物擊中時獲得 1 顆狂怒球|怪物狂怒球上限 +1",
+            "generalizedText": "^怪物擊中時獲得 # 顆狂怒球$|^怪物狂怒球上限 #$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
             "id": -1616686189,
             "regex": "大能量護盾$",
-            "rawText": "怪物獲得 (20-49)% 最大生命的額外最大能量護盾",
+            "rawText": "怪物獲得 (20-80)% 最大生命的額外最大能量護盾",
             "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾$",
             "options": {
                 "scary": 240,
@@ -140,20 +144,22 @@
             "options": {
                 "scary": 94,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -1430865583,
-            "regex": "的通",
-            "rawText": "稀有怪物擁有會反射 1500 物理傷害的物理荊棘|稀有怪物擁有會反射 2500 元素傷害的元素荊棘|區域內掉落的通貨增加 47%",
-            "generalizedText": "^稀有怪物擁有會反射 # 物理傷害的物理荊棘$|^稀有怪物擁有會反射 # 元素傷害的元素荊棘$|^區域內掉落的通貨增加 #%$",
+            "regex": "害的物",
+            "rawText": "稀有怪物擁有會反射 1500 物理傷害的物理荊棘|稀有怪物擁有會反射 2500 元素傷害的元素荊棘",
+            "generalizedText": "^稀有怪物擁有會反射 # 物理傷害的物理荊棘$|^稀有怪物擁有會反射 # 元素傷害的元素荊棘$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -164,7 +170,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -176,19 +182,7 @@
             "options": {
                 "scary": 500,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -1298230190,
-            "regex": "果加",
-            "rawText": "玩家身上的增益效果加速 100% 失效|區域內掉落的聖甲蟲增加 35%",
-            "generalizedText": "^玩家身上的增益效果加速 #% 失效$|^區域內掉落的聖甲蟲增加 #%$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -212,7 +206,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -224,7 +218,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -248,7 +242,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -284,7 +278,7 @@
             "options": {
                 "scary": 295,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -303,24 +297,12 @@
         {
             "id": -946283701,
             "regex": "果加",
-            "rawText": "玩家身上的增益效果加速 (30-70)% 失效",
+            "rawText": "玩家身上的增益效果加速 (30-100)% 失效",
             "generalizedText": "^玩家身上的增益效果加速 #% 失效$",
             "options": {
                 "scary": 96,
                 "nm": false,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": -938285245,
-            "regex": "圖增",
-            "rawText": "怪物 +100% 壓抑法術傷害率|區域內掉落的地圖增加 35%",
-            "generalizedText": "^怪物 #% 壓抑法術傷害率$|^區域內掉落的地圖增加 #%$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -339,13 +321,15 @@
         {
             "id": -931745379,
             "regex": "層緩",
-            "rawText": "怪物擊中時造成 2 層緩速藤蔓|區域內掉落的地圖增加 40%",
-            "generalizedText": "^怪物擊中時造成 # 層緩速藤蔓$|^區域內掉落的地圖增加 #%$",
+            "rawText": "怪物擊中時造成 2 層緩速藤蔓",
+            "generalizedText": "^怪物擊中時造成 # 層緩速藤蔓$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -361,18 +345,6 @@
             }
         },
         {
-            "id": -875993462,
-            "regex": "多怪",
-            "rawText": "(90-100)% 更多怪物生命|區域內掉落的通貨增加 47%",
-            "generalizedText": "^#% 更多怪物生命$|^區域內掉落的通貨增加 #%$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
             "id": -763914456,
             "regex": "家獲",
             "rawText": "玩家獲得的藥劑充能減少 (30-50)%",
@@ -380,7 +352,7 @@
             "options": {
                 "scary": 210,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -512,14 +484,14 @@
             "options": {
                 "scary": 980,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -268547495,
             "regex": "害率$",
-            "rawText": "怪物 +(30-60)% 壓抑法術傷害率",
+            "rawText": "怪物 +(30-100)% 壓抑法術傷害率",
             "generalizedText": "^怪物 #% 壓抑法術傷害率$",
             "options": {
                 "scary": 290,
@@ -537,7 +509,9 @@
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -560,7 +534,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -579,7 +553,7 @@
         {
             "id": -172005981,
             "regex": "多怪",
-            "rawText": "(20-49)% 更多怪物生命",
+            "rawText": "(20-100)% 更多怪物生命",
             "generalizedText": "^#% 更多怪物生命$",
             "options": {
                 "scary": 100,
@@ -608,20 +582,22 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": -126908257,
             "regex": "物點",
-            "rawText": "擊中時，怪物點燃、冰凍和感電|全部怪物傷害可以點燃、冰凍和感電|區域內掉落的聖甲蟲增加 60%",
-            "generalizedText": "^擊中時，怪物點燃、冰凍和感電$|^全部怪物傷害可以點燃、冰凍和感電$|^區域內掉落的聖甲蟲增加 #%$",
+            "rawText": "擊中時，怪物點燃、冰凍和感電|全部怪物傷害可以點燃、冰凍和感電",
+            "generalizedText": "^擊中時，怪物點燃、冰凍和感電$|^全部怪物傷害可以點燃、冰凍和感電$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -632,7 +608,7 @@
             "options": {
                 "scary": 85,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -663,13 +639,15 @@
         {
             "id": -105914721,
             "regex": "少施",
-            "rawText": "40%更少施加於玩家的藥劑效果|區域內掉落的通貨增加 47%",
-            "generalizedText": "^#%更少施加於玩家的藥劑效果$|^區域內掉落的通貨增加 #%$",
+            "rawText": "40%更少施加於玩家的藥劑效果",
+            "generalizedText": "^#%更少施加於玩家的藥劑效果$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -680,7 +658,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -692,7 +670,7 @@
             "options": {
                 "scary": 250,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -764,7 +742,7 @@
             "options": {
                 "scary": 365,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -800,7 +778,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -812,19 +790,19 @@
             "options": {
                 "scary": 600,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 284489036,
             "regex": "少的",
-            "rawText": "玩家有 (30-25)% 更少的範圍效果",
+            "rawText": "玩家有 (25-30)% 更少的範圍效果",
             "generalizedText": "^玩家有 #% 更少的範圍效果$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -836,20 +814,22 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 357242916,
             "regex": "物耐",
-            "rawText": "怪物耐力球上限 +1|怪物擊中時獲得 1 顆耐力球|區域內掉落的地圖增加 35%",
-            "generalizedText": "^怪物耐力球上限 #$|^怪物擊中時獲得 # 顆耐力球$|^區域內掉落的地圖增加 #%$",
+            "rawText": "怪物耐力球上限 +1|怪物擊中時獲得 1 顆耐力球",
+            "generalizedText": "^怪物耐力球上限 #$|^怪物擊中時獲得 # 顆耐力球$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -860,7 +840,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -872,32 +852,22 @@
             "options": {
                 "scary": 0,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 639399394,
             "regex": "殿效",
-            "rawText": "傳奇怪物有 1 個隨機神殿效果|區域內掉落的地圖增加 35%",
-            "generalizedText": "^傳奇怪物有 # 個隨機神殿效果$|^區域內掉落的地圖增加 #%$",
+            "rawText": "傳奇怪物有 1 個隨機神殿效果",
+            "generalizedText": "^傳奇怪物有 # 個隨機神殿效果$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
-            }
-        },
-        {
-            "id": 646965355,
-            "regex": "圖增",
-            "rawText": "怪物獲得 (70-80)% 最大生命的額外最大能量護盾|區域內掉落的地圖增加 35%",
-            "generalizedText": "^怪物獲得 #% 最大生命的額外最大能量護盾$|^區域內掉落的地圖增加 #%$",
-            "options": {
-                "scary": 1001,
-                "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -908,8 +878,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -920,8 +892,10 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -968,7 +942,7 @@
             "options": {
                 "scary": 60,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -992,7 +966,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1016,20 +990,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1061710360,
             "regex": "漬",
-            "rawText": "玩家受到血漬鋸刃攻擊|區域內掉落的通貨增加 47%",
-            "generalizedText": "^玩家受到血漬鋸刃攻擊$|^區域內掉落的通貨增加 #%$",
+            "rawText": "玩家受到血漬鋸刃攻擊",
+            "generalizedText": "^玩家受到血漬鋸刃攻擊$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1040,7 +1016,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1076,20 +1052,22 @@
             "options": {
                 "scary": 990,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1117764869,
             "regex": "物身",
-            "rawText": "怪物身上的減益效果消逝加速 100%|區域內掉落的通貨增加 64%",
-            "generalizedText": "^怪物身上的減益效果消逝加速 #%$|^區域內掉落的通貨增加 #%$",
+            "rawText": "怪物身上的減益效果消逝加速 100%",
+            "generalizedText": "^怪物身上的減益效果消逝加速 #%$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1100,19 +1078,19 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1205583947,
             "regex": "和偷",
-            "rawText": "玩家減少 (60-50)% 最大總生命、魔力和偷取每秒能量護盾恢復",
+            "rawText": "玩家減少 (50-60)% 最大總生命、魔力和偷取每秒能量護盾恢復",
             "generalizedText": "^玩家減少 #% 最大總生命、魔力和偷取每秒能量護盾恢復$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1124,7 +1102,7 @@
             "options": {
                 "scary": 310,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1136,7 +1114,7 @@
             "options": {
                 "scary": 80,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1148,7 +1126,7 @@
             "options": {
                 "scary": 700,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1160,20 +1138,22 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1333860371,
             "regex": "隕",
-            "rawText": "玩家使用藥劑時被隕石瞄準|區域內掉落的通貨增加 45%",
-            "generalizedText": "^玩家使用藥劑時被隕石瞄準$|^區域內掉落的通貨增加 #%$",
+            "rawText": "玩家使用藥劑時被隕石瞄準",
+            "generalizedText": "^玩家使用藥劑時被隕石瞄準$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Currency"
+                ]
             }
         },
         {
@@ -1196,20 +1176,22 @@
             "options": {
                 "scary": 150,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1464066514,
             "regex": "的防",
-            "rawText": "玩家的防禦減少 (30-25)%|區域內掉落的聖甲蟲增加 35%",
-            "generalizedText": "^玩家的防禦減少 #%$|^區域內掉落的聖甲蟲增加 #%$",
+            "rawText": "玩家的防禦減少 (25-30)%",
+            "generalizedText": "^玩家的防禦減少 #%$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1227,13 +1209,15 @@
         {
             "id": 1494523238,
             "regex": "擊球上",
-            "rawText": "怪物擊中時獲得 1 顆暴擊球|怪物暴擊球上限 +1|區域內掉落的地圖增加 35%",
-            "generalizedText": "^怪物擊中時獲得 # 顆暴擊球$|^怪物暴擊球上限 #$|^區域內掉落的地圖增加 #%$",
+            "rawText": "怪物擊中時獲得 1 顆暴擊球|怪物暴擊球上限 +1",
+            "generalizedText": "^怪物擊中時獲得 # 顆暴擊球$|^怪物暴擊球上限 #$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Maps"
+                ]
             }
         },
         {
@@ -1280,7 +1264,7 @@
             "options": {
                 "scary": 390,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1292,7 +1276,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1311,13 +1295,15 @@
         {
             "id": 1665221611,
             "regex": "有核",
-            "rawText": "稀有怪物擁有核息|區域內掉落的聖甲蟲增加 53%",
-            "generalizedText": "^稀有怪物擁有核息$|^區域內掉落的聖甲蟲增加 #%$",
+            "rawText": "稀有怪物擁有核息",
+            "generalizedText": "^稀有怪物擁有核息$",
             "options": {
                 "scary": 1001,
                 "nm": true,
                 "prefix": true,
-                "rewards": []
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1340,7 +1326,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1352,7 +1338,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1376,7 +1362,7 @@
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1388,7 +1374,7 @@
             "options": {
                 "scary": 360,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1400,20 +1386,22 @@
             "options": {
                 "scary": 400,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
         {
             "id": 1932675161,
             "regex": "數片",
-            "rawText": "區域內含有數片會施加隨機印記的移動印記地面|區域內掉落的聖甲蟲增加 36%",
-            "generalizedText": "^區域內含有數片會施加隨機印記的移動印記地面$|^區域內掉落的聖甲蟲增加 #%$",
+            "rawText": "區域內含有數片會施加隨機印記的移動印記地面",
+            "generalizedText": "^區域內含有數片會施加隨機印記的移動印記地面$",
             "options": {
                 "scary": 1001,
                 "nm": true,
-                "prefix": true,
-                "rewards": []
+                "prefix": false,
+                "rewards": [
+                    "Scarabs"
+                ]
             }
         },
         {
@@ -1448,7 +1436,7 @@
             "options": {
                 "scary": 50,
                 "nm": false,
-                "prefix": true,
+                "prefix": false,
                 "rewards": []
             }
         },
@@ -1484,53 +1472,26 @@
             "weight": 3,
             "count": 2
         },
-        "-1940135977:-1430865583:-875993462:-105914721:1061710360:1117764869:1333860371": {
+        "-1940135977:-268547495:1469490158:1899039946": {
             "ids": [
                 -1940135977,
-                -1430865583,
-                -875993462,
-                -105914721,
-                1061710360,
-                1117764869,
-                1333860371
-            ],
-            "regex": "的通",
-            "weight": 2,
-            "count": 7
-        },
-        "-1940135977:-938285245:-268547495:1469490158:1899039946": {
-            "ids": [
-                -1940135977,
-                -938285245,
                 -268547495,
                 1469490158,
                 1899039946
             ],
             "regex": "物 \\d+",
             "weight": 8,
-            "count": 5
+            "count": 4
         },
-        "-1940135977:-938285245:-268547495:1469490158": {
+        "-1940135977:-268547495:1469490158": {
             "ids": [
                 -1940135977,
-                -938285245,
                 -268547495,
                 1469490158
             ],
             "regex": "物 \\d+",
             "weight": 8,
-            "count": 4
-        },
-        "-1940135977:-938285245:1469490158:1899039946": {
-            "ids": [
-                -1940135977,
-                -938285245,
-                1469490158,
-                1899039946
-            ],
-            "regex": "物 \\d+",
-            "weight": 8,
-            "count": 4
+            "count": 3
         },
         "-1934587276:-737013402:194321329": {
             "ids": [
@@ -1639,20 +1600,6 @@
             "weight": 2,
             "count": 6
         },
-        "-1621497665:-938285245:-931745379:357242916:639399394:646965355:1494523238": {
-            "ids": [
-                -1621497665,
-                -938285245,
-                -931745379,
-                357242916,
-                639399394,
-                646965355,
-                1494523238
-            ],
-            "regex": "圖增",
-            "weight": 2,
-            "count": 7
-        },
         "-1621497665:357242916:1494523238": {
             "ids": [
                 -1621497665,
@@ -1699,38 +1646,35 @@
             "weight": 2,
             "count": 5
         },
-        "-1616686189:-645418310:10729340:127168403:646965355": {
+        "-1616686189:-645418310:10729340:127168403": {
             "ids": [
                 -1616686189,
                 -645418310,
                 10729340,
-                127168403,
-                646965355
-            ],
-            "regex": "物獲",
-            "weight": 2,
-            "count": 5
-        },
-        "-1616686189:-645418310:10729340:646965355": {
-            "ids": [
-                -1616686189,
-                -645418310,
-                10729340,
-                646965355
+                127168403
             ],
             "regex": "物獲",
             "weight": 2,
             "count": 4
         },
-        "-1616686189:-645418310:646965355": {
+        "-1616686189:-645418310:10729340": {
             "ids": [
                 -1616686189,
                 -645418310,
-                646965355
+                10729340
+            ],
+            "regex": "物獲",
+            "weight": 2,
+            "count": 3
+        },
+        "-1616686189:-645418310": {
+            "ids": [
+                -1616686189,
+                -645418310
             ],
             "regex": "物獲得 \\d+",
             "weight": 10,
-            "count": 3
+            "count": 2
         },
         "-1430865583:-235013251:1078205993": {
             "ids": [
@@ -1811,46 +1755,6 @@
             "weight": 4,
             "count": 2
         },
-        "-1298230190:-946283701": {
-            "ids": [
-                -1298230190,
-                -946283701
-            ],
-            "regex": "果加",
-            "weight": 2,
-            "count": 2
-        },
-        "-1298230190:-946283701:1117764869": {
-            "ids": [
-                -1298230190,
-                -946283701,
-                1117764869
-            ],
-            "regex": "加速",
-            "weight": 2,
-            "count": 3
-        },
-        "-1298230190:-126908257:1464066514:1665221611:1932675161": {
-            "ids": [
-                -1298230190,
-                -126908257,
-                1464066514,
-                1665221611,
-                1932675161
-            ],
-            "regex": "蟲增",
-            "weight": 2,
-            "count": 5
-        },
-        "-1298230190:1117764869": {
-            "ids": [
-                -1298230190,
-                1117764869
-            ],
-            "regex": "加速",
-            "weight": 2,
-            "count": 2
-        },
         "-1204380788:-80588106": {
             "ids": [
                 -1204380788,
@@ -1929,13 +1833,13 @@
             "weight": 2,
             "count": 2
         },
-        "-938285245:-268547495": {
+        "-946283701:1117764869": {
             "ids": [
-                -938285245,
-                -268547495
+                -946283701,
+                1117764869
             ],
-            "regex": "% 壓",
-            "weight": 5,
+            "regex": "加速",
+            "weight": 2,
             "count": 2
         },
         "-933231182:17483843": {
@@ -1987,25 +1891,6 @@
             "weight": 5,
             "count": 2
         },
-        "-875993462:1541760497": {
-            "ids": [
-                -875993462,
-                1541760497
-            ],
-            "regex": "多怪",
-            "weight": 2,
-            "count": 2
-        },
-        "-875993462:-172005981:1541760497": {
-            "ids": [
-                -875993462,
-                -172005981,
-                1541760497
-            ],
-            "regex": "多怪",
-            "weight": 2,
-            "count": 3
-        },
         "-763914456:-105914721": {
             "ids": [
                 -763914456,
@@ -2033,17 +1918,6 @@
             "weight": 3,
             "count": 2
         },
-        "-645418310:10729340:127168403:646965355": {
-            "ids": [
-                -645418310,
-                10729340,
-                127168403,
-                646965355
-            ],
-            "regex": "物獲",
-            "weight": 2,
-            "count": 4
-        },
         "-645418310:639399394": {
             "ids": [
                 -645418310,
@@ -2051,15 +1925,6 @@
             ],
             "regex": "\\d+ 個隨",
             "weight": 9,
-            "count": 2
-        },
-        "-645418310:646965355": {
-            "ids": [
-                -645418310,
-                646965355
-            ],
-            "regex": "物獲得 \\d+",
-            "weight": 10,
             "count": 2
         },
         "-258709095:823410479": {
@@ -2077,6 +1942,15 @@
                 357242916
             ],
             "regex": "顆耐",
+            "weight": 2,
+            "count": 2
+        },
+        "-172005981:1541760497": {
+            "ids": [
+                -172005981,
+                1541760497
+            ],
+            "regex": "多怪",
             "weight": 2,
             "count": 2
         },
