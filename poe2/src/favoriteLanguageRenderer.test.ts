@@ -32,8 +32,8 @@ describe("refreshing saved waystone mods from the loaded data", () => {
   });
 
   it("renders a favorite in its own language with the current regex", async () => {
-    const history = {current: {poe2: {patch: "0.5.5.4.2", commit: "d1bab48"}}};
-    vi.stubGlobal("fetch", vi.fn(async (url: string) => ({ok: true, json: async () => url.endsWith("/history.json") ? history : {tokens: [
+    const current = {current: {poe2: {patch: "0.5.5.4.2", commit: "d1bab48"}}};
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => ({ok: true, json: async () => url.endsWith("/current.json") ? current : {tokens: [
       {id: curses.id, regex: "ses", rawText: "(50-20)% less effect of Curses on Monsters", options: {prefix: false}},
     ]}})));
     // The app finds the data before anything loads it, see GeneratedDataProvider

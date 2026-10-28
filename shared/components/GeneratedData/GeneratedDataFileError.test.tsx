@@ -5,10 +5,10 @@ import {Link, MemoryRouter, Outlet, Route, Routes} from "react-router-dom";
 import {fetchGeneratedFile, loadGeneratedData} from "@shared/generatedData";
 import {GeneratedDataFileError} from "./GeneratedDataFileError";
 
-const history = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}};
-// history.json, and a 404 for every file
+const current = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}};
+// current.json, and a 404 for every file
 const fetchMock = vi.fn(async (url: string) =>
-  url.endsWith("/history.json") ? {ok: true, json: async () => history} : {ok: false, status: 404, statusText: "Not Found"});
+  url.endsWith("/current.json") ? {ok: true, json: async () => current} : {ok: false, status: 404, statusText: "Not Found"});
 
 // A layout with the error above its pages, and a language to switch
 const App = () => {

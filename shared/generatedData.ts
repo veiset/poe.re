@@ -8,7 +8,7 @@ const timeoutSeconds = 30;
 
 /**
  * Where the generated files are read from:
- * - "r2": poe-item-gen's latest upload to R2, which history.json names;
+ * - "r2": poe-item-gen's latest upload to R2, which current.json names;
  * - "local": the copies in <app>/public/generated, deployed with the app.
  */
 export type DataSource = "r2" | "local";
@@ -60,14 +60,14 @@ async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
   }
 }
 
-interface History {
+interface Current {
   current: Partial<Record<Game, {patch: string, commit: string}>>;
 }
 
 let loaded: GeneratedData | undefined;
 
 /**
- * Finds the game's generated files: for R2, the latest upload in history.json, which is
+ * Finds the game's generated files: for R2, the latest upload in current.json, which is
  * revalidated on every visit, so the next page load after an upload uses the new files.
  * GeneratedDataProvider calls it before anything else on the page runs.
  */
@@ -76,10 +76,10 @@ export async function loadGeneratedData(game: Game): Promise<GeneratedData> {
     loaded = {source: "local", game};
     return loaded;
   }
-  const history = await fetchJson<History>(`${dataBaseUrl}/history.json`, {cache: "no-cache"});
-  const upload = history.current?.[game];
+  const {current} = await fetchJson<Current>(`${dataBaseUrl}/current.json`, {cache: "no-cache"});
+  const upload = current?.[game];
   if (!upload) {
-    throw new Error(`${dataBaseUrl}/history.json has no upload for ${game}`);
+    throw new Error(`${dataBaseUrl}/current.json has no upload for ${game}`);
   }
   loaded = {source: "r2", game, dataBaseUrl, patch: upload.patch, commit: upload.commit};
   return loaded;
