@@ -9,6 +9,10 @@
 
 export interface NitroAdOptions {
   height?: number;
+  /** Allowed ad sizes as [width, height] pairs, e.g. [[160, 600]]. */
+  sizes?: [number, number][];
+  /** The placement is only requested while this media query matches. */
+  mediaQuery?: string;
   delayLoading?: boolean;
   report?: {
     enabled: boolean;

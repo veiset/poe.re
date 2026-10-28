@@ -3,6 +3,7 @@ import {Outlet} from "react-router-dom";
 import {Poe2ProfileContext} from "./Poe2ProfileContext";
 import Poe2PageLinks from "./Poe2PageLinks";
 import SiteFooter from "@shared/components/SiteFooter";
+import {Poe2SideAdBanner} from "@shared/components/ads/banners/Poe2AdBanner";
 import {ensureDefaultProfile, loadSettings, selectedProfile, updateSettings} from "../localStorage";
 import {useRefreshFromInitialLoad, useRefreshOnFocus} from "@shared/core/RefreshOnFocus";
 import {Poe2LeagueProvider} from "./Poe2LeagueContext";
@@ -34,6 +35,7 @@ export const Poe2Layout = () => {
             <div className="content-container">
               <div className="content-links">
                 <Poe2PageLinks/>
+                <Poe2SideAdBanner/>
               </div>
               <div className="content-main">
                 <div className="content-left-gfx"/>

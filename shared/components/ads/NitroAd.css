@@ -10,6 +10,24 @@
     margin: 0 0 8px;
 }
 
+/* The side banner under the menu, only on screens wide enough for the menu
+   column (see layout.css). It stays in view while the page scrolls. */
+.nitro-side-ad {
+    position: sticky;
+    top: 16px;
+    margin-top: 24px;
+}
+
+.nitro-side-ad .nitro-ad-blocked {
+    display: none;
+}
+
+@media (max-width: 1900px) {
+    .nitro-side-ad {
+        display: none;
+    }
+}
+
 /* Takes the slot's place when the ad script is blocked. */
 .nitro-ad-blocked {
     margin: 0 0 8px;
