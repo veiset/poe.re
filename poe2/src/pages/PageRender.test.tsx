@@ -12,9 +12,9 @@ const renderPage = (page: React.ReactElement) =>
 
 describe("poe2 pages render", () => {
   // The relic page loads its data from R2 when it renders. Unstubbed, the fetch rejects after the test.
-  const history = {current: {poe2: {patch: "0.5.5.4.2", commit: "d1bab48"}}};
+  const current = {current: {poe2: {patch: "0.5.5.4.2", commit: "d1bab48"}}};
   beforeEach(async () => {
-    vi.stubGlobal("fetch", vi.fn(async (url: string) => ({ok: true, json: async () => url.endsWith("/history.json") ? history : []})));
+    vi.stubGlobal("fetch", vi.fn(async (url: string) => ({ok: true, json: async () => url.endsWith("/current.json") ? current : []})));
     // The app finds the data before anything loads it, see GeneratedDataProvider
     await loadGeneratedData("poe2");
   });

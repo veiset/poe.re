@@ -22,7 +22,7 @@ interface GeneratedDataProviderProps {
 }
 
 /**
- * The first thing the app renders: it finds the game's generated data (history.json for R2), runs
+ * The first thing the app renders: it finds the game's generated data (current.json for R2), runs
  * beforeRender, and then renders the app, which can count on the data's patch. When the data can't
  * be found, it shows an error instead, since no page works without it.
  */

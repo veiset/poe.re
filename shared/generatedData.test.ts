@@ -1,10 +1,10 @@
 import {afterEach, beforeEach, describe, expect, it, vi} from "vitest";
 
-const history = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}, poe2: {patch: "0.5.5.4.2", commit: "72cc002"}}};
+const current = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}, poe2: {patch: "0.5.5.4.2", commit: "72cc002"}}};
 const ok = (body: unknown) => ({ok: true, json: async () => body});
 const notFound = {ok: false, status: 404, statusText: "Not Found"};
-// Answers history.json, and every other file with its own URL
-const answer = async (url: string, _init?: RequestInit) => ok(url.endsWith("/history.json") ? history : {url});
+// Answers current.json, and every other file with its own URL
+const answer = async (url: string, _init?: RequestInit) => ok(url.endsWith("/current.json") ? current : {url});
 const fetchMock = vi.fn(answer);
 
 // Each test imports the module again, so no data is found yet
@@ -21,12 +21,12 @@ describe("generated data from R2", () => {
     fetchMock.mockImplementation(answer);
   });
 
-  it("finds the game's latest upload in history.json, revalidated on every visit", async () => {
+  it("finds the game's latest upload in current.json, revalidated on every visit", async () => {
     const {loadGeneratedData} = await load();
     await expect(loadGeneratedData("poe2")).resolves.toEqual({
       source: "r2", game: "poe2", dataBaseUrl: "https://data.poe.re", patch: "0.5.5.4.2", commit: "72cc002",
     });
-    expect(fetchMock).toHaveBeenCalledWith("https://data.poe.re/history.json", {cache: "no-cache", signal: expect.any(AbortSignal)});
+    expect(fetchMock).toHaveBeenCalledWith("https://data.poe.re/current.json", {cache: "no-cache", signal: expect.any(AbortSignal)});
   });
 
   it("loads a file of that upload, with its commit", async () => {
@@ -46,15 +46,15 @@ describe("generated data from R2", () => {
   it("gives up on a request that doesn't load within 30 seconds", async () => {
     const {loadGeneratedData} = await load();
     fetchMock.mockRejectedValueOnce(new DOMException("signal timed out", "TimeoutError"));
-    await expect(loadGeneratedData("poe1")).rejects.toThrow("https://data.poe.re/history.json didn't load within 30 seconds");
+    await expect(loadGeneratedData("poe1")).rejects.toThrow("https://data.poe.re/current.json didn't load within 30 seconds");
   });
 
-  it("fails when history.json fails, or has no upload for the game", async () => {
+  it("fails when current.json fails, or has no upload for the game", async () => {
     const {loadGeneratedData} = await load();
     fetchMock.mockResolvedValueOnce({ok: false, status: 503, statusText: "Service Unavailable"} as never);
     await expect(loadGeneratedData("poe1")).rejects.toThrow("503 Service Unavailable");
-    fetchMock.mockResolvedValueOnce(ok({current: {poe1: history.current.poe1}}));
-    await expect(loadGeneratedData("poe2")).rejects.toThrow("history.json has no upload for poe2");
+    fetchMock.mockResolvedValueOnce(ok({current: {poe1: current.current.poe1}}));
+    await expect(loadGeneratedData("poe2")).rejects.toThrow("current.json has no upload for poe2");
   });
 
   it("reports a file that fails to load", async () => {

@@ -1,10 +1,10 @@
 import {afterEach, beforeEach, describe, expect, it, vi} from "vitest";
 import {act, cleanup, fireEvent, render, screen} from "@testing-library/react";
 
-const history = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}};
+const current = {current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}};
 const ok = (body: unknown) => ({ok: true, json: async () => body});
 const failed = (status: number, statusText: string) => ({ok: false, status, statusText});
-const answer = async () => ok(history);
+const answer = async () => ok(current);
 const fetchMock = vi.fn(answer);
 
 // Each test imports the modules again, so no data is found yet. The page shows the patch it gets.
@@ -37,7 +37,7 @@ describe("GeneratedDataProvider", () => {
     expect(screen.getByText("Loading game data…")).toBeInTheDocument();
     expect(screen.queryByText(/Page/)).not.toBeInTheDocument();
 
-    await act(async () => respond(ok(history)));
+    await act(async () => respond(ok(current)));
     expect(screen.getByText("Page on 3.29.3.3")).toBeInTheDocument();
     expect(screen.queryByText("Loading game data…")).not.toBeInTheDocument();
   });

@@ -29,7 +29,7 @@ describe("PoB Codes import", () => {
     localStorage.setItem("selectedProfile", "default");
     localStorage.setItem("webSettings", JSON.stringify({poe1League: "Standard"}));
     vi.stubGlobal("fetch", vi.fn(async (input: RequestInfo | URL) => {
-      if (String(input).endsWith("/history.json")) return {ok: true, json: async () => ({current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}})};
+      if (String(input).endsWith("/current.json")) return {ok: true, json: async () => ({current: {poe1: {patch: "3.29.3.3", commit: "d1bab48"}}})};
       if (String(input).includes("/mapmods/")) return {ok: true, json: async () => String(input).includes("FRENCH") ? frenchCatalog : catalog};
       return {ok: true, text: async () => "Standard\nHardcore"};
     }));
