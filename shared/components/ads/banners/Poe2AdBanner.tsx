@@ -25,4 +25,31 @@ export const Poe2AdBanner = () => {
   return <NitroAd key={pathname} id={BANNER_ID} options={BANNER_OPTIONS}/>;
 };
 
+const SIDE_BANNER_ID = "side-banner-nitro-poe2";
+
+const SIDE_BANNER_OPTIONS: NitroAdOptions = {
+  height: 600,
+  sizes: [["160", "600"]],
+  // Only where the menu is a column on the left (see layout.css).
+  mediaQuery: "(min-width: 1901px)",
+  delayLoading: true,
+  report: {
+    enabled: true,
+    icon: true,
+    wording: "Report Ad",
+    position: "top-right",
+  },
+};
+
+// Rendered by Poe2Layout under the menu, on screens wide enough for the menu
+// column. Keyed by pathname like Poe2AdBanner.
+export const Poe2SideAdBanner = () => {
+  const {pathname} = useLocation();
+  return (
+    <div className="nitro-side-ad">
+      <NitroAd key={pathname} id={SIDE_BANNER_ID} options={SIDE_BANNER_OPTIONS}/>
+    </div>
+  );
+};
+
 export default Poe2AdBanner;

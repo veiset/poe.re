@@ -1,8 +1,8 @@
 import "./Privacy.css";
 
 const SITES = {
-  "poe.re": {game: "Path of Exile", lastUpdated: "22 October 2026", poecdnImages: true},
-  "poe2.re": {game: "Path of Exile 2", lastUpdated: "16 September 2026", poecdnImages: false},
+  "poe.re": {game: "Path of Exile", lastUpdated: "28 October 2026", poecdnImages: true},
+  "poe2.re": {game: "Path of Exile 2", lastUpdated: "28 October 2026", poecdnImages: false},
 };
 
 export function Privacy({site}: {site: keyof typeof SITES}) {
@@ -75,8 +75,7 @@ export function Privacy({site}: {site: keyof typeof SITES}) {
       <h2>Links to other sites</h2>
       <p>
         The site links out to the official Path of Exile trade site, GitHub, Discord and Buy Me a
-        Coffee, and embeds the Buy Me a Coffee widget. Those services have their own privacy
-        policies and this one does not cover them.
+        Coffee. Those services have their own privacy policies and this one does not cover them.
       </p>
       {poecdnImages && (
         <p>
