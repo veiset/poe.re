@@ -29,7 +29,7 @@ const SIDE_BANNER_ID = "side-banner-nitro-poe1";
 
 const SIDE_BANNER_OPTIONS: NitroAdOptions = {
   height: 600,
-  sizes: [["160", "600"]],
+  sizes: [[160, 600]],
   // Only where the menu is a column on the left (see layout.css).
   mediaQuery: "(min-width: 1901px)",
   delayLoading: true,
