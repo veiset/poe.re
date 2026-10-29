@@ -13,11 +13,15 @@ Solve the problem at hand with the smallest change that does it, and don't refac
 - Every request to https://data.poe.re, from curl, a script or any other tool, must send a User-Agent that names the tool, its version and its URL, so the traffic can be identified when something goes wrong: `<name>/<version> (<url>)`, e.g. `poe.re/1.0 (https://poe.re)` or `mytool/1.4.0 (https://mytool.example.com)`. Not a default like `curl/8.5.0`. With curl: `curl -A "poe.re/1.0 (https://poe.re)" https://data.poe.re/current.json`. With fetch: `fetch(url, {headers: {"User-Agent": "poe.re/1.0 (https://poe.re)"}})`.
 - `<app>/generated` and `<app>/public/generated` are older copies: the local fallback, test fixtures, and read by other projects. Don't edit them by hand, and don't read the JSON in full (`poe/generated` is 124 MB).
 
+## Typedefs
+
+- The TypeScript types for the generated data are published with it: https://data.poe.re/typedefs/SHA256SUMS lists the files, and each is at `https://data.poe.re/typedefs/<path>`, e.g. https://data.poe.re/typedefs/poe1/MapMods.ts. Each file starts with a comment naming the data files it types.
+- `shared/typedefs` is a copy of them, and only changes through `pnpm fetch-typedefs`: it downloads the files in that list and removes the ones no longer in it. Don't edit it by hand, and commit the result with the code that needs it.
+
 ## Updating the generated data
 
 - If the data is wrong, e.g. a missing mod, a bad translation or a mod's regex, don't fix or work around it here. Say in the issue or PR which file and entry are wrong, and leave the fix to the generator.
 - Never touch `poe/src/generated/`, even when its data is wrong; report it as above.
-- The data's types are in `shared/typedefs`, which only changes through `pnpm fetch-typedefs`.
 - Mod ids can change when the data is regenerated, and did in #536 and #549. Code that saves or matches mods by id has to expect that.
 
 ## Saved profiles
