@@ -13,6 +13,11 @@ Solve the problem at hand with the smallest change that does it, and don't refac
 - Every request to https://data.poe.re, from curl, a script or any other tool, must send a User-Agent that names the tool, its version and its URL, so the traffic can be identified when something goes wrong: `<name>/<version> (<url>)`, e.g. `poe.re/1.0 (https://poe.re)` or `mytool/1.4.0 (https://mytool.example.com)`. Not a default like `curl/8.5.0`. With curl: `curl -A "poe.re/1.0 (https://poe.re)" https://data.poe.re/current.json`. With fetch: `fetch(url, {headers: {"User-Agent": "poe.re/1.0 (https://poe.re)"}})`.
 - `<app>/generated` and `<app>/public/generated` are older copies: the local fallback, test fixtures, and read by other projects. Don't edit them by hand, and don't read the JSON in full (`poe/generated` is 124 MB).
 
+## Trade ids
+
+- The trade ids map mod ids to the official trade API's stat ids, e.g. `"-2064669900": "explicit.stat_4150353141"`. They're generated data, in each patch's `trade-ids/`: https://data.poe.re/generated/poe1/3.29.3.3/SHA256SUMS lists `trade-ids/Generated.TradeIds.Map.json`, at https://data.poe.re/generated/poe1/3.29.3.3/trade-ids/Generated.TradeIds.Map.json.
+- PoE1 has `Generated.TradeIds.Map.json`, and PoE2 `Generated.TradeIds.Waystone.json` and `Generated.TradeIds.Tablet.json`. The apps load the `.min.json` of each. Their type is `TradeIds` in `shared/typedefs/TradeIds.ts`.
+
 ## Typedefs
 
 - The TypeScript types for the generated data are published with it: https://data.poe.re/typedefs/SHA256SUMS lists the files, and each is at `https://data.poe.re/typedefs/<path>`, e.g. https://data.poe.re/typedefs/poe1/MapMods.ts. Each file starts with a comment naming the data files it types.
