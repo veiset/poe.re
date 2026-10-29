@@ -15,7 +15,6 @@ Solve the problem at hand with the smallest change that does it, and don't refac
   - A Node script, such as `pnpm fetch-typedefs`: `fetch(url, {headers: {"User-Agent": "fetch-typedefs/1.0 (terminal)"}})`.
   - A dev server on your machine: `mytool/1.0 (local)`.
   - A desktop app: `mytool/1.0 (local app)`.
-  - A web page: the browser sends its own User-Agent, and it can't be set reliably from `fetch`.
 - `<app>/generated` and `<app>/public/generated` are older copies: the local fallback, test fixtures, and read by other projects. Don't edit them by hand, and don't read the JSON in full (`poe/generated` is 124 MB).
 
 ## Trade ids
