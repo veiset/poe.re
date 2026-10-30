@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useMemo, useState} from "react";
 import {Link, useLocation, useNavigate} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import "@shared/components/profile/Profile.css";
@@ -8,26 +8,44 @@ import {loadProfileNames, setSelectedProfile, updateSettings} from "@poe/utils/L
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import type {MapModsRegex} from "@shared/typedefs/poe1/MapMods";
 
-export function readExclusions(search: string): number[] | null {
+export function readImport(search: string): {excludeIds: number[], name: string} | null {
   const params = new URLSearchParams(search);
   const data = params.get("data") ?? "";
   if (data.length > 8192) return null;
   try {
     const payload = JSON.parse(data);
-    if (!payload || Object.keys(payload).length !== 1 || !Array.isArray(payload.excludeIds) ||
+    if (!payload || Object.keys(payload).some(key => key !== "excludeIds" && key !== "name") ||
+        (payload.name !== undefined && typeof payload.name !== "string") || !Array.isArray(payload.excludeIds) ||
         payload.excludeIds.length === 0 ||
         !payload.excludeIds.every(Number.isSafeInteger)) return null;
-    return [...new Set<number>(payload.excludeIds)];
+    const name = Array.from<string>(payload.name || "PoB Codes");
+    return {
+      excludeIds: [...new Set<number>(payload.excludeIds)],
+      name: name.length > 50 ? `${name.slice(0, 47).join("")}...` : name.join(""),
+    };
   } catch {
     return null;
   }
+}
+
+function availableProfileName(baseName: string): string {
+  const names = loadProfileNames();
+  let name = baseName;
+  let suffix = 2;
+  // __proto__ cannot be stored as a profile key by the existing storage helper.
+  while (names.includes(name) || name === "__proto__") {
+    const ending = ` (${suffix++})`;
+    name = Array.from(baseName).slice(0, 50 - ending.length).join("") + ending;
+  }
+  return name;
 }
 
 export default function PobCodesImport() {
   const {lang} = useContext(ProfileContext);
   const {search} = useLocation();
   const navigate = useNavigate();
-  const [query] = useState(search);
+  const [payload] = useState(() => readImport(search));
+  const profileName = useMemo(() => payload ? availableProfileName(payload.name) : "", [payload]);
   const [mods, setMods] = useState<MapModsRegex["tokens"] | null>(null);
   const [error, setError] = useState("");
   const [saving, setSaving] = useState(false);
@@ -35,11 +53,11 @@ export default function PobCodesImport() {
   useEffect(() => {
     // Capture once and remove the payload from this history entry, including in Strict Mode.
     navigate("/import-pob-codes", {replace: true});
-    const ids = readExclusions(query);
-    if (!ids) {
+    if (!payload) {
       setError("Invalid PoB Codes import link. Open a new link from pob.codes.");
       return;
     }
+    const ids = payload.excludeIds;
     let active = true;
     loadMapMods(lang).then(catalog => {
       if (!active) return;
@@ -50,16 +68,13 @@ export default function PobCodesImport() {
       if (active) setError("Could not load map modifiers. Open the link again from pob.codes.");
     });
     return () => { active = false; };
-  }, [lang, navigate, query]);
+  }, [lang, navigate, payload]);
 
   function importProfile() {
-    if (!mods || saving) return;
+    if (!mods || !payload || saving) return;
     setSaving(true);
     try {
-      const names = loadProfileNames();
-      let name = "PoB Codes";
-      let suffix = 2;
-      while (names.includes(name)) name = `PoB Codes (${suffix++})`;
+      const name = availableProfileName(payload.name);
       updateSettings(name, () => ({
         ...defaultSettings, name, language: lang,
         map: {...defaultSettings.map, badIds: mods.map(mod => mod.id)},
@@ -80,8 +95,8 @@ export default function PobCodesImport() {
         {error && <p role="alert">{error}</p>}
         {!mods && !error && <p role="status">Loading map modifiers...</p>}
         {mods && <>
-          <p>Create a new profile excluding these {mods.length} map modifiers.
-            You can rename it on the Maps page.</p>
+          <p style={{overflowWrap: "anywhere"}}><strong>Profile name:</strong> {profileName}<br/>
+            Excludes these {mods.length} map modifiers. You can rename the profile on the Maps page.</p>
           <ul>{mods.map(mod => <li key={mod.id}>{mod.rawText.replaceAll("|", " · ")}</li>)}</ul>
         </>}
         <div>
