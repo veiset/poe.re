@@ -7,7 +7,7 @@ import * as mapData from "@poe/utils/loadData";
 import {defaultSettings} from "@poe/utils/SavedSettings";
 import catalog from "../../../generated/mapmods/Generated.Map.ENGLISH.json";
 import frenchCatalog from "../../../generated/mapmods/Generated.Map.FRENCH.json";
-import {readExclusions} from "./PobCodesImport";
+import {readImport} from "./PobCodesImport";
 import {loadGeneratedData} from "@shared/generatedData";
 
 const ids = [246480838, -2064669900];
@@ -52,16 +52,17 @@ describe("PoB Codes import", () => {
     "", "?data=e30", "?data=%%%", "?data=a",
     `?data=${"a".repeat(8193)}`, query(null), query({}),
     query({excludeIds: []}), query({excludeIds: [1.5]}), query({excludeIds: ["1"]}),
-    query({excludeIds: "invalid"}), query({excludeIds: ids, name: "ignored"}),
+    query({excludeIds: "invalid"}), query({excludeIds: ids, extra: "ignored"}),
+    ...[null, 42, [], {}].map(name => query({excludeIds: ids, name})),
   ])("rejects malformed or unsupported input (%#)", search => {
-    expect(readExclusions(search)).toBeNull();
+    expect(readImport(search)).toBeNull();
   });
 
   it("accepts catalog-sized input and deduplicates IDs", () => {
-    expect(readExclusions(query({excludeIds: [...ids, ids[0]]}))).toEqual(ids);
-    expect(readExclusions(query({excludeIds: Array(257).fill(ids[0])}))).toEqual([ids[0]]);
+    expect(readImport(query({excludeIds: [...ids, ids[0]]}))?.excludeIds).toEqual(ids);
+    expect(readImport(query({excludeIds: Array(257).fill(ids[0])}))?.excludeIds).toEqual([ids[0]]);
     const all = catalog.tokens.map(mod => mod.id);
-    expect(readExclusions(query({excludeIds: all}))).toEqual(all);
+    expect(readImport(query({excludeIds: all}))?.excludeIds).toEqual(all);
   });
 
   it("rejects a mixed known/unknown selection without saving any of it", async () => {
@@ -131,6 +132,53 @@ describe("PoB Codes import", () => {
     expect(Object.keys(profiles())).toEqual(["default", "PoB Codes", "PoB Codes (2)", "PoB Codes (3)"]);
     expect(profiles()["PoB Codes"].map.badIds).toEqual([]);
     expect(localStorage.getItem("selectedProfile")).toBe("PoB Codes (3)");
+  });
+
+  it.each([
+    ["My build", "My build"],
+    ["", "PoB Codes"],
+    ["a".repeat(50), "a".repeat(50)],
+    ["a".repeat(51), `${"a".repeat(47)}...`],
+    ["\u{1f525}".repeat(51), `${"\u{1f525}".repeat(47)}...`],
+  ])("imports the supplied name with a 50-character limit (%#)", async (name, expected) => {
+    mount(`/import-pob-codes${query({excludeIds: ids, name})}`);
+    const button = await confirm();
+    expect(screen.getByText("Profile name:").parentElement).toHaveTextContent(`Profile name: ${expected}`);
+    fireEvent.click(button);
+    expect(localStorage.getItem("selectedProfile")).toBe(expected);
+    expect(profiles()[expected]).toMatchObject({name: expected, map: {badIds: expect.arrayContaining(ids)}});
+  });
+
+  it("renders an HTML-looking name as plain text in the preview and saved profile", async () => {
+    const name = "<img src=x onerror=alert(1)>";
+    const page = mount(`/import-pob-codes${query({excludeIds: ids, name})}`);
+    const button = await confirm();
+    const preview = screen.getByText("Profile name:").parentElement!;
+    expect(preview).toHaveTextContent(`Profile name: ${name}`);
+    expect(preview.querySelector("img")).toBeNull();
+    fireEvent.click(button);
+    expect(profiles()[name].name).toBe(name);
+    page.unmount();
+    mount("/maps");
+    const option = await screen.findByRole("option", {name});
+    expect(option).toHaveTextContent(name);
+    expect(option.querySelector("img")).toBeNull();
+  });
+
+  it.each([
+    ["My build", "My build", "My build (2)"],
+    ["a".repeat(51), `${"a".repeat(47)}...`, `${"a".repeat(46)} (2)`],
+    ["__proto__", "default", "__proto__ (2)"],
+  ])("keeps imported names unique and within 50 characters (%#)", async (name, existing, expected) => {
+    localStorage.setItem("profiles", JSON.stringify({...profiles(), [existing]: {...defaultSettings, name: existing}}));
+    const old = profiles()[existing];
+    mount(`/import-pob-codes${query({excludeIds: ids, name})}`);
+    const button = await confirm();
+    expect(screen.getByText("Profile name:").parentElement).toHaveTextContent(`Profile name: ${expected}`);
+    fireEvent.click(button);
+    expect(localStorage.getItem("selectedProfile")).toBe(expected);
+    expect(profiles()[expected].name).toBe(expected);
+    expect(profiles()[existing]).toEqual(old);
   });
 
   it("shows a storage error without switching profiles and allows a retry", async () => {
