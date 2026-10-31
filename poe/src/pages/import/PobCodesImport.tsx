@@ -18,7 +18,7 @@ export function readImport(search: string): {excludeIds: number[], name: string}
         (payload.name !== undefined && typeof payload.name !== "string") || !Array.isArray(payload.excludeIds) ||
         payload.excludeIds.length === 0 ||
         !payload.excludeIds.every(Number.isSafeInteger)) return null;
-    const name = Array.from<string>(payload.name || "PoB Codes");
+    const name = Array.from<string>(payload.name?.trim() || "PoB Codes");
     return {
       excludeIds: [...new Set<number>(payload.excludeIds)],
       name: name.length > 50 ? `${name.slice(0, 47).join("")}...` : name.join(""),

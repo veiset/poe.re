@@ -137,6 +137,8 @@ describe("PoB Codes import", () => {
   it.each([
     ["My build", "My build"],
     ["", "PoB Codes"],
+    ["   ", "PoB Codes"],
+    [" My build ", "My build"],
     ["a".repeat(50), "a".repeat(50)],
     ["a".repeat(51), `${"a".repeat(47)}...`],
     ["\u{1f525}".repeat(51), `${"\u{1f525}".repeat(47)}...`],
