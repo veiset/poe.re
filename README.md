@@ -185,8 +185,9 @@ are managed in [`infra/cloudflare/`](infra/cloudflare/README.md).
 - **Code:** Copyright (C) 2022 Vegard Veiset, licensed under the
   [GNU AGPL v3](LICENSE). If you run a modified copy as a website, you must
   publish its source under the same license.
-- **Generated data** (https://data.poe.re and its copies in this repo): free for
-  small, non-commercial tools with credit; see [Data usage](DATA-LICENSE.md).
+- **Generated data** (https://data.poe.re and its copies in this repo): free to
+  use for testing, your own tools and small free tools, but not for a copy of
+  poe.re or poe2.re; see [Data usage](DATA-LICENSE.md).
 
 This product isn't affiliated with or endorsed by Grinding Gear Games in any
 way.

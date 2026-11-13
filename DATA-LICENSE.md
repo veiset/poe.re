@@ -7,15 +7,27 @@ trade id maps), and its copies in this repo (`poe/generated`,
 `poe2/public/generated`). The data isn't covered by the
 [AGPL-3.0 license](LICENSE), which applies to the code only.
 
-The game text in the data belongs to Grinding Gear Games.
+The data is copyrighted by Vegard Veiset, and the game text in it belongs to
+Grinding Gear Games. These terms aren't a formal license. They say what fair
+use of the data looks like, so you know when you need to ask.
 
-## Who may use it
+## Fair use, no need to ask
 
-A free, non-commercial tool with about 1,000 users or fewer may use the data
-without asking. A larger tool, or one that makes money (ads, subscriptions,
-paid features), needs permission. Ask on the
-[Discord](https://discord.gg/T8BzKnatY6) or open an
-[issue](https://github.com/veiset/poe.re/issues).
+- Testing, and building your own tool, addon or overlay.
+- Using it yourself or sharing it with friends.
+- A small, free tool with up to about 1,000 users.
+
+## Not fair use
+
+- Hosting a copy of poe.re or poe2.re, or a site that does the same thing with
+  this data. The code is open source, but the data isn't free to use for that.
+
+## Ask first
+
+A larger tool, or one that makes money (ads, subscriptions, paid features),
+needs permission. Ask on the [Discord](https://discord.gg/T8BzKnatY6) or open
+an [issue](https://github.com/veiset/poe.re/issues). Ask too if you're unsure
+whether your use is fair.
 
 ## How to use it
 
