@@ -13,8 +13,11 @@ For the generated data on https://data.poe.re and its copies in this repo. The
 
 For larger tools and tools that make money, ask on
 [Discord](https://discord.gg/T8BzKnatY6) or in an
-[issue](https://github.com/veiset/poe.re/issues). Don't use the data for a copy
-of poe.re or poe2.re.
+[issue](https://github.com/veiset/poe.re/issues).
+
+## Not allowed
+
+Using the data for a copy of poe.re or poe2.re.
 
 ## When you use it
 
