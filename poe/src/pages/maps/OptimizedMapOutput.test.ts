@@ -3,6 +3,12 @@ import {MapStaticStatRegex} from "@poe/utils/Languages";
 import type {Language} from "@shared/typedefs/Language";
 
 // 3.30.0.1 map tooltip lines, from the game's ClientStrings and AlternateQualityTypes
+const qualityQuantity: Partial<Record<Language, string>> = {
+  ENGLISH: "Quality (Quantity): +20% (augmented)",
+  RUSSIAN: "Качество (количество): +20% (augmented)",
+  CHINESE: "品質 (數量): +20% (augmented)",
+};
+
 const lines: Partial<Record<Language, { atlasDrops: string; threads: string; qualityThreads: string; others: string[] }>> = {
   ENGLISH: {
     atlasDrops: "Atlas Drops: +45% (augmented)",
@@ -50,5 +56,15 @@ describe("MapStaticStatRegex on 3.30 maps", () => {
         expect(matches(regex.quality_scarab, other, "\\d+")).toBe(false);
       }
     });
+
+    const quantity = qualityQuantity[language as Language];
+    if (quantity) {
+      it(`${language} matches Quality (Quantity), and not Quality (Threads) or Atlas Drops`, () => {
+        expect(matches(regex.quality_regular, quantity, "20")).toBe(true);
+        for (const other of [l.qualityThreads, l.atlasDrops, l.threads]) {
+          expect(matches(regex.quality_regular, other, "\\d+")).toBe(false);
+        }
+      });
+    }
   }
 });
