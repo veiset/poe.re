@@ -182,5 +182,9 @@ are managed in [`infra/cloudflare/`](infra/cloudflare/README.md).
 
 ## License
 
-[MIT](LICENSE). This product isn't affiliated with or endorsed by Grinding Gear
-Games in any way.
+- **Code:** [MIT](LICENSE).
+- **Generated data** (https://data.poe.re and its copies in this repo): free for
+  small, non-commercial tools with credit; see [Data usage](DATA-LICENSE.md).
+
+This product isn't affiliated with or endorsed by Grinding Gear Games in any
+way.
