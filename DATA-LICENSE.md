@@ -13,8 +13,9 @@ The game text in the data belongs to Grinding Gear Games.
 
 A free, non-commercial tool with about 1,000 users or fewer may use the data
 without asking. A larger tool, or one that makes money (ads, subscriptions,
-paid features), needs permission first: open an issue at
-https://github.com/veiset/poe.re/issues.
+paid features), needs permission. Ask on the
+[Discord](https://discord.gg/T8BzKnatY6) or open an
+[issue](https://github.com/veiset/poe.re/issues).
 
 ## How to use it
 
