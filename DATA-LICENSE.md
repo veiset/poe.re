@@ -9,7 +9,7 @@ For the generated data on https://data.poe.re and its copies in this repo. The
 - Sharing with friends
 - Small, free tools, up to about 1,000 users
 
-## Ask first
+## Needs permission
 
 For larger tools and tools that make money, ask on
 [Discord](https://discord.gg/T8BzKnatY6) or in an
