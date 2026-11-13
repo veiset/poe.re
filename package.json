@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "homepage": "https://poe.re",
   "private": true,
+  "license": "MIT",
   "type": "module",
   "repository": "https://github.com/veiset/poe.re.git",
   "dependencies": {

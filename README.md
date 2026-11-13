@@ -179,3 +179,8 @@ Ads on **poe.re** and **poe2.re** are served by NitroPay; the code lives in
 
 The R2 bucket, `economy.poe.re` custom domain, CORS policy, and CDN cache rule
 are managed in [`infra/cloudflare/`](infra/cloudflare/README.md).
+
+## License
+
+[MIT](LICENSE). This product isn't affiliated with or endorsed by Grinding Gear
+Games in any way.
