@@ -3,9 +3,6 @@
 For the generated data on https://data.poe.re and its copies in this repo. The
 [AGPL](LICENSE) covers the code, not the data.
 
-Copyright (C) Vegard Veiset, except the game text, which belongs to Grinding
-Gear Games.
-
 ## Fine without asking
 
 - Testing, and your own tools and addons
@@ -26,3 +23,6 @@ of poe.re or poe2.re.
 - Cache the files.
 
 The data can change or go away without notice.
+
+Copyright (C) Vegard Veiset, except the game text, which belongs to Grinding
+Gear Games.
