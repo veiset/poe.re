@@ -6,6 +6,7 @@ import githubIcon from "@shared/img/github-mark-white.png";
 import "@shared/styles/PageLinks.css";
 import {PageLink} from "./PageLink";
 import {getBugReportUrl} from "@shared/core/issueTracker";
+import {useGeneratedData} from "@shared/components/GeneratedData/GeneratedDataProvider";
 
 export interface NavigationItem {
   text: string;
@@ -31,6 +32,7 @@ const SupportLink = ({href, icon, text, className = ""}: {href: string; icon: st
 
 export const PageNavigation = ({title, otherGameLabel, otherGameUrl, items}: PageNavigationProps) => {
   const currentPage = useLocation().pathname;
+  const data = useGeneratedData();
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => setMobileOpen(false), [currentPage]);
@@ -82,7 +84,10 @@ export const PageNavigation = ({title, otherGameLabel, otherGameUrl, items}: Pag
         aria-label="Primary navigation"
       >
         <div className="page-link-header">
-          <span>{title}</span>
+          <div>
+            <span>{title}</span>
+            {data.source === "r2" && <div className="data-version">patch {data.patch} · {data.commit}</div>}
+          </div>
           <button type="button" className="mobile-navigation-close" aria-label="Close navigation"
                   onClick={() => setMobileOpen(false)}>×</button>
         </div>
