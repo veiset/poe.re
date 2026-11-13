@@ -54,7 +54,7 @@ interface TradeQuery {
         disabled: boolean;
         filters: {
           map_tier: { min: number };
-          map_iiq?: { min: number };
+          map_bonus?: { min: number };
           map_packsize?: { min: number };
           map_iir?: { min: number };
           map_blighted?: { option: "true" | "false" };
@@ -199,7 +199,6 @@ export function buildTradeQuery(settings: TradeSettings, tradeIds: TradeIds): Tr
   const mapPacksize = parseMinFilter(settings.packsize);
   const mapIir = parseMinFilter(settings.itemRarity);
   if (settings.anyYield) {
-    if (mapIiq) yieldFilters.push({id: "pseudo.pseudo_map_item_quantity", value: mapIiq});
     if (mapPacksize) yieldFilters.push({id: "pseudo.pseudo_map_pack_size", value: mapPacksize});
     if (mapIir) yieldFilters.push({id: "pseudo.pseudo_map_item_rarity", value: mapIir});
     if (yieldFilters.length > 1) stats.push({type: "count", filters: yieldFilters, value: {min: 1}});
@@ -257,10 +256,13 @@ export function buildTradeQuery(settings: TradeSettings, tradeIds: TradeIds): Tr
     query.query.stats = stats;
   }
 
-  if (!settings.anyYield && (mapIiq || mapPacksize || mapIir)) {
+  // Atlas Drops has a map filter but no pseudo stat, so it's required even when any yield matches
+  if (mapIiq) {
+    query.query.filters.map_filters.filters.map_bonus = mapIiq;
+  }
+  if (!settings.anyYield && (mapPacksize || mapIir)) {
     query.query.filters.map_filters.filters = {
       ...query.query.filters.map_filters.filters,
-      ...(mapIiq && { map_iiq: mapIiq }),
       ...(mapPacksize && { map_packsize: mapPacksize }),
       ...(mapIir && { map_iir: mapIir }),
     };

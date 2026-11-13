@@ -202,7 +202,7 @@ const OptimizedMapMods = () => {
       <p className="trade-info-text">* Fields marked with an asterisk are compatible with the Trade search.</p>
 
       <div className="filter-card-grid">
-        <FilterCard title="Quantity & Yield"
+        <FilterCard title="Atlas Drops & Yield"
                     headerControl={
                       <ExactOptimizedToggle name="yield-mode"
                                             optimized={optimizeQuant && optimizePacksize}
@@ -212,12 +212,12 @@ const OptimizedMapMods = () => {
                                             }}/>
                     }>
           <div className="mm-field-grid">
-            <NumberField id="quantity" label="Quantity" value={quantity} onChange={setQuantity} trade/>
+            <NumberField id="quantity" label="Atlas Drops" value={quantity} onChange={setQuantity} trade/>
             <NumberField id="pack-size" label="Pack Size" value={packsize} onChange={setPacksize} trade/>
             <NumberField id="mapdrop" label="More maps" value={mapDropChance} onChange={setMapDropChance} trade/>
             <NumberField id="itemRarity" label="Item rarity" value={itemRarity} onChange={setItemRarity} trade/>
             <NumberField id="currency" label="More currency" value={currency} onChange={setCurrency} trade/>
-            <NumberField id="scarab" label="More scarab" value={scarab} onChange={setScarab} trade/>
+            <NumberField id="scarab" label="More threads" value={scarab} onChange={setScarab} trade/>
             <NumberField id="divination" label="More divination" value={divination} onChange={setDivination} trade/>
           </div>
           <Checkbox label="Match any of the yield types (disable to match ALL selected yields)"
@@ -271,7 +271,7 @@ const OptimizedMapMods = () => {
                          onChange={(v) => setQuality({...quality, currency: v})} trade/>
             <NumberField id="qdiv" label="• Divination" value={quality.divination}
                          onChange={(v) => setQuality({...quality, divination: v})} trade/>
-            <NumberField id="qscarab" label="• Scarab" value={quality.scarab}
+            <NumberField id="qscarab" label="• Threads" value={quality.scarab}
                          onChange={(v) => setQuality({...quality, scarab: v})} trade/>
           </div>
           <Checkbox label="Match any of the quality types (disable to match ALL selected qualities)"
