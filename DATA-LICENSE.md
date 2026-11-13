@@ -7,9 +7,8 @@ trade id maps), and its copies in this repo (`poe/generated`,
 `poe2/public/generated`). The data isn't covered by the
 [AGPL-3.0 license](LICENSE), which applies to the code only.
 
-The data is copyrighted by Vegard Veiset, and the game text in it belongs to
-Grinding Gear Games. These terms aren't a formal license. They say what fair
-use of the data looks like, so you know when you need to ask.
+Copyright (C) Vegard Veiset, except the game text, which belongs to Grinding
+Gear Games.
 
 ## Fair use, no need to ask
 
