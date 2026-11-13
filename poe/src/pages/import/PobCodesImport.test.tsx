@@ -9,6 +9,7 @@ import catalog from "../../../generated/mapmods/Generated.Map.ENGLISH.json";
 import frenchCatalog from "../../../generated/mapmods/Generated.Map.FRENCH.json";
 import {readImport} from "./PobCodesImport";
 import {loadGeneratedData} from "@shared/generatedData";
+import {GeneratedDataProvider} from "@shared/components/GeneratedData/GeneratedDataProvider";
 
 const ids = [246480838, -2064669900];
 const query = (payload: unknown) => `?${new URLSearchParams({data: JSON.stringify(payload)})}`;
@@ -16,7 +17,7 @@ const valid = query({excludeIds: ids});
 const profiles = () => JSON.parse(localStorage.getItem("profiles")!);
 const mount = (path = `/import-pob-codes${valid}`) => {
   window.history.replaceState({idx: 0}, "", path);
-  return render(<StrictMode><BrowserRouter><Poe1Routes/></BrowserRouter></StrictMode>);
+  return render(<StrictMode><GeneratedDataProvider game="poe1"><BrowserRouter><Poe1Routes/></BrowserRouter></GeneratedDataProvider></StrictMode>);
 };
 const confirm = () => screen.findByRole("button", {name: "Import"});
 

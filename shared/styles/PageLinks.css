@@ -22,6 +22,14 @@
     padding-left: 10px;
 }
 
+.data-version {
+    margin-top: 2px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: normal;
+    color: var(--color-text-dim);
+}
+
 .support-icon {
     width: 24px;
     height: 24px;
