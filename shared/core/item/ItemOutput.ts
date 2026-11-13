@@ -35,11 +35,16 @@ function boundedValueRegex(value: string, numberIndex: number, affix: ItemAffixR
 export function generateMagicItemRegex(
   settings: ItemCraftingSettings,
   basetypes: ItemBase[],
+  matchSynthesised = false,
 ) {
   const itembase = settings.itembase;
   if (!itembase) return "";
 
-  const regex = generateRegexAffixes(settings, itembase);
+  // A synthesised item's name starts with "Synthesised", before the prefix:
+  // "Synthesised Sapphire Murderous Eye Jewel of Sin" (#406)
+  const regex = matchSynthesised
+    ? generateRegexAffixes(settings, itembase).replaceAll("^", "^(synthesised )?")
+    : generateRegexAffixes(settings, itembase);
 
   if (settings.matchSimilarBases) {
     return regex.replaceAll(itembase.item, itemGenericMatch(itembase, basetypes));

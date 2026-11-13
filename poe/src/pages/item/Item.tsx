@@ -145,7 +145,7 @@ const Item = () => {
       setResult(generateRareItemRegex(affixMap, currentSettings));
     }
     if (itembase && itembase.rarity === "Magic") {
-      setResult(generateMagicItemRegex(currentSettings, basetypes));
+      setResult(generateMagicItemRegex(currentSettings, basetypes, lang === "ENGLISH"));
     }
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({
       ...latest,

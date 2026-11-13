@@ -1,6 +1,7 @@
 import {describe, expect, test} from "vitest";
 import {generateBoundedValueRegex} from "@shared/core/regex/GenerateNumberRegex";
-import {generateRareItemRegex} from "./ItemOutput";
+import {generateMagicItemRegex, generateRareItemRegex} from "./ItemOutput";
+import {SelectedMagicMod} from "@shared/core/item/MagicItemSelect";
 import type {ItemAffixRegex} from "@shared/typedefs/Item";
 import {ItemCraftingSettings} from "@shared/types/Settings.types";
 
@@ -146,5 +147,50 @@ describe("generateRareItemRegex with mods that display a decimal value (#264)", 
       affixes: [{name: "Regenerate 1% of Life per second", desc: "of the Underground"}],
     });
     expect(generate(fixedLifeRegen)).toBe(`"^regenerate \\d+%"`);
+  });
+});
+
+describe("generateMagicItemRegex with synthesised items (#406)", () => {
+  const jewel = {baseType: "Abyss Jewels", item: "Murderous Eye Jewel", rarity: "Magic" as const};
+  const sapphire: SelectedMagicMod = {basetype: "Abyss Jewels", category: "prefix", affix: "PREFIX",
+    regex: {name: "+(32-34) to maximum Mana", desc: "Sapphire"}, desc: "Sapphire"};
+  const ofSin: SelectedMagicMod = {basetype: "Abyss Jewels", category: "suffix", affix: "SUFFIX",
+    regex: {name: "Adds (10-11) to (18-21) Chaos Damage to Attacks", desc: "of Sin"}, desc: "of Sin"};
+
+  const generate = (mods: SelectedMagicMod[], onlyIfBothPrefixAndSuffix: boolean, matchOpenAffix: boolean) =>
+    generateMagicItemRegex({
+      ...settings({}),
+      itembase: jewel,
+      matchSimilarBases: false,
+      selectedMagicMods: mods,
+      magicSettings: {onlyIfBothPrefixAndSuffix, matchOpenAffix},
+    }, [], true);
+  // The in-game search: every quoted term has to match a line of the item
+  const matches = (regex: string, name: string) => [...regex.matchAll(/"([^"]*)"/g)]
+    .every(([, term]) => ["Rarity: Magic", name, "Synthesised Item"].some((line) => new RegExp(term, "i").test(line)));
+
+  test("matches the prefix of a synthesised item", () => {
+    const regex = generate([sapphire], false, false);
+    expect(matches(regex, "Synthesised Sapphire Murderous Eye Jewel of Sin")).toBe(true);
+    expect(matches(regex, "Sapphire Murderous Eye Jewel of Sin")).toBe(true);
+    expect(matches(regex, "Synthesised Azure Murderous Eye Jewel of Sin")).toBe(false);
+  });
+
+  test("matches a synthesised item with both affixes or an open prefix", () => {
+    const regex = generate([sapphire, ofSin], true, true);
+    expect(matches(regex, "Synthesised Sapphire Murderous Eye Jewel of Sin")).toBe(true);
+    expect(matches(regex, "Synthesised Murderous Eye Jewel of Sin")).toBe(true);
+    expect(matches(regex, "Synthesised Azure Murderous Eye Jewel of Sin")).toBe(false);
+    expect(matches(regex, "Sapphire Murderous Eye Jewel of Sin")).toBe(true);
+  });
+
+  test("matches an open prefix on a synthesised item", () => {
+    const regex = generate([sapphire], false, true);
+    expect(matches(regex, "Synthesised Murderous Eye Jewel of Sin")).toBe(true);
+  });
+
+  test("leaves the regex unchanged when not asked to match synthesised items", () => {
+    expect(generateMagicItemRegex({...settings({}), itembase: jewel, selectedMagicMods: [sapphire]}, []))
+      .toBe(`"^Sapphire"`);
   });
 });

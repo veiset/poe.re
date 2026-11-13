@@ -154,7 +154,7 @@ export const useRenderedFavorites = (favorites: FavoriteRecord[], language: Lang
           if (!settings.itembase) return favorite;
           const generated = settings.itembase.rarity === "Rare"
             ? generateRareItemRegex(groupAffixes(data.targetRegex), settings)
-            : generateMagicItemRegex(settings, basetypes);
+            : generateMagicItemRegex(settings, basetypes, language === "ENGLISH");
           return {...favorite, regex: settings.customText.enabled && settings.customText.value ? `${generated} ${settings.customText.value}` : generated};
         } catch { return favorite; }
       }
