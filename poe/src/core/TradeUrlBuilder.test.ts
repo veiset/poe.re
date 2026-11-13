@@ -62,6 +62,12 @@ describe("buildTradeQuery", () => {
     });
   });
 
+  test.each([false, true])("filters Atlas Drops with the map_bonus map filter (anyYield %s)", (anyYield) => {
+    const q = build(baseSettings({quantity: "80", anyYield}));
+    expect(q.query.filters.map_filters.filters.map_bonus).toEqual({min: 80});
+    expect(q.query.stats ?? []).toEqual([]);
+  });
+
   test("uses the Divination Cards yield pseudostat", () => {
     const q = build(baseSettings({divination: "30"}));
     expect(q.query.stats).toEqual([
