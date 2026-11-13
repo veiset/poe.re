@@ -4,8 +4,8 @@ These terms cover the generated game data published at https://data.poe.re
 (mods, items, gems, maps, waystones, tablets, relics, their regexes and the
 trade id maps), and its copies in this repo (`poe/generated`,
 `poe/public/generated`, `poe/src/generated`, `poe2/generated` and
-`poe2/public/generated`). The data isn't covered by the [MIT license](LICENSE),
-which applies to the code only.
+`poe2/public/generated`). The data isn't covered by the
+[AGPL-3.0 license](LICENSE), which applies to the code only.
 
 The game text in the data belongs to Grinding Gear Games.
 
