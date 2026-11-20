@@ -20,11 +20,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
-      "@shared/*": ["shared/*"],
-      "@poe/*": ["poe/src/*"],
-      "@poe2/*": ["poe2/src/*"]
+      "@shared/*": ["./shared/*"],
+      "@poe/*": ["./poe/src/*"],
+      "@poe2/*": ["./poe2/src/*"]
     }
   },
   "include": [
