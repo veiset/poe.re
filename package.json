@@ -10,13 +10,13 @@
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
     "@dnd-kit/utilities": "^3.2.2",
-    "@fontsource/manrope": "^4.5.12",
+    "@fontsource/manrope": "^5.3.0",
     "classnames": "^2.5.1",
-    "dayjs": "^1.11.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.0.0",
-    "typescript": "^5.7.0"
+    "dayjs": "^1.11.23",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.6",
+    "typescript": "^7.0.2"
   },
   "scripts": {
     "dev": "vite",
@@ -28,19 +28,18 @@
     "preview": "vite preview",
     "preview:poe2": "vite preview --config vite.config.poe2.ts",
     "test": "vitest run",
-    "fetch-typedefs": "pnpm exec ts-node --esm --project scripts/tsconfig.json scripts/fetch-typedefs.ts"
+    "fetch-typedefs": "node scripts/fetch-typedefs.ts"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "~6.9.1",
-    "@testing-library/react": "^16.2.0",
-    "@testing-library/user-event": "^14.6.0",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "jsdom": "^26.0.0",
-    "ts-node": "^10.9.2",
-    "vite": "^7.0.0",
-    "vitest": "^3.0.0"
+    "@testing-library/jest-dom": "~8.0.0",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.13",
+    "@types/node": "^26.6.6",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "jsdom": "^31.0.1",
+    "vite": "^8.3.8",
+    "vitest": "^5.1.1"
   }
 }
