@@ -8,7 +8,7 @@ import {defaultSettings, UltimatumSettings} from "@poe/utils/SavedSettings";
 import {loadUltimatum} from "@poe/utils/loadData";
 import type {Ultimatum as UltimatumData} from "@shared/typedefs/poe1/Ultimatum";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
-import {generateUltimatumRegex} from "./UltimatumOutput";
+import {generateUltimatumRegex, ignoresSacrifices, uniqueRewardId} from "./UltimatumOutput";
 import "./Ultimatum.css";
 
 interface Option {
@@ -79,7 +79,8 @@ const Ultimatum = () => {
 
   return <>
     <HeaderWithLanguage text="Inscribed Ultimatum"/>
-    <RegexResultBox result={result} warning={undefined}
+    <RegexResultBox result={result}
+                    warning={ignoresSacrifices(settings) ? "Sacrifices are ignored with a unique item reward: it can only be found by excluding the other rewards." : undefined}
                     favorite={favoritePage.action(settings, {language: lang})}
                     reset={() => {
                       setAvoidModifiers(defaultSettings.ultimatum.avoidModifiers);
@@ -87,7 +88,10 @@ const Ultimatum = () => {
                       setSacrifices(defaultSettings.ultimatum.sacrifices);
                     }}/>
     <OptionList title="Rewards" selected={rewards} setSelected={setRewards}
-                options={(data?.rewards ?? []).map((reward) => ({id: reward.id, text: reward.reward}))}/>
+                options={[
+                  ...(data?.rewards ?? []).map((reward) => ({id: reward.id, text: reward.reward})),
+                  {id: uniqueRewardId, text: "Unique item", title: "Sacrifice a unique item for a random unique item"},
+                ]}/>
     <OptionList title="Sacrifices" selected={sacrifices} setSelected={setSacrifices}
                 options={(data?.sacrifices ?? []).map((sacrifice) => ({
                   id: sacrifice.id,

@@ -1,6 +1,6 @@
 import {describe, expect, it} from "vitest";
 import type {Ultimatum} from "@shared/typedefs/poe1/Ultimatum";
-import {generateUltimatumRegex} from "./UltimatumOutput";
+import {generateUltimatumRegex, ignoresSacrifices, uniqueRewardId} from "./UltimatumOutput";
 
 // Entries from generated/ultimatum/Generated.Ultimatum.ENGLISH.json
 const data: Ultimatum = {
@@ -13,6 +13,7 @@ const data: Ultimatum = {
     {id: "PlayerDebuffCancelFlaskEffectOnFlaskUse", name: "Drought", tier: 1, description: "", regex: "^dr"},
   ],
   rewards: [
+    {id: "DoubleDivinationCards1", reward: "Doubles sacrificed Divination Cards", regex: "iced d"},
     {id: "MirrorRare1", reward: "Item and Mirrored Copy", regex: ": it"},
     {id: "CurrencyChaos5", reward: "Doubles sacrificed Currency", regex: "ced c"},
   ],
@@ -48,9 +49,14 @@ Drought
 --------
 Can be used in a personal map device to open portals to the Trialmaster's Domain and attempt his challenge. Portals will close once the challenge begins. While viewing your Atlas, Right-click this item to pinpoint its location.`;
 
+// The same item with a unique reward, as the generator's matching text has it ("Reward: Mageblood")
+const uniqueItem = item
+  .replace("Requires Sacrifice: Divine Orb x1", "Requires Sacrifice: Mageblood")
+  .replace("Reward: Doubles sacrificed Currency", "Reward: Mageblood");
+
 // The in-game search: every quoted term must match a line, and a "!" term must match none
-const matchesItem = (search: string) => {
-  const lines = item.split("\n");
+const matchesItem = (search: string, text = item) => {
+  const lines = text.split("\n");
   return [...search.matchAll(/"([^"]*)"/g)].every(([, term]) => {
     const negated = term.startsWith("!");
     const regex = new RegExp(negated ? term.slice(1) : term, "i");
@@ -91,5 +97,25 @@ describe("generateUltimatumRegex", () => {
     expect(matchesItem(generateUltimatumRegex(settings([], [], ["Metadata/Items/Currency/CurrencyModValues"]), data))).toBe(true);
     expect(matchesItem(generateUltimatumRegex(settings([], ["CurrencyChaos5"]), data))).toBe(true);
     expect(matchesItem(generateUltimatumRegex(settings([], ["MirrorRare1"], ["Metadata/Items/Currency/CurrencyRerollRare"]), data))).toBe(false);
+  });
+
+  it("finds a unique reward by excluding the fixed rewards that aren't wanted", () => {
+    const unique = settings(["MonsterOverwhelm"], [uniqueRewardId]);
+    expect(generateUltimatumRegex(unique, data)).toBe(`"!^ov|iced d|: it|ced c"`);
+    expect(matchesItem(generateUltimatumRegex(unique, data), uniqueItem)).toBe(true);
+    expect(matchesItem(generateUltimatumRegex(unique, data))).toBe(false);
+  });
+
+  it("finds a unique reward or another wanted reward", () => {
+    const uniqueOrCurrency = settings([], [uniqueRewardId, "CurrencyChaos5"]);
+    expect(generateUltimatumRegex(uniqueOrCurrency, data)).toBe(`"!iced d|: it"`);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrCurrency, data), uniqueItem)).toBe(true);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrCurrency, data))).toBe(true);
+  });
+
+  it("ignores the sacrifices with a unique reward", () => {
+    const withSacrifice = settings([], [uniqueRewardId], ["Metadata/Items/Currency/CurrencyModValues"]);
+    expect(ignoresSacrifices(withSacrifice)).toBe(true);
+    expect(generateUltimatumRegex(withSacrifice, data)).toBe(`"!iced d|: it|ced c"`);
   });
 });
