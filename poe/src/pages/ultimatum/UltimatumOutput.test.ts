@@ -1,6 +1,6 @@
 import {describe, expect, it} from "vitest";
 import type {Ultimatum} from "@shared/typedefs/poe1/Ultimatum";
-import {generateUltimatumRegex, uniqueRewardId} from "./UltimatumOutput";
+import {generateUltimatumRegex, sacrificesNarrowReward, uniqueRewardId} from "./UltimatumOutput";
 
 // Entries from generated/ultimatum/Generated.Ultimatum.ENGLISH.json
 const data: Ultimatum = {
@@ -123,5 +123,13 @@ describe("generateUltimatumRegex", () => {
     expect(generateUltimatumRegex(uniqueOrChaos, data)).toBe(`"!iced d|: it|ne or"`);
     expect(matchesItem(generateUltimatumRegex(uniqueOrChaos, data), uniqueItem)).toBe(true);
     expect(matchesItem(generateUltimatumRegex(uniqueOrChaos, data))).toBe(false);
+  });
+
+  it("matches only the selected sacrifices when their reward is selected too", () => {
+    const divineOnly = settings([], ["CurrencyChaos5", "MirrorRare1"], ["Metadata/Items/Currency/CurrencyRerollRare"]);
+    expect(generateUltimatumRegex(divineOnly, data)).toBe(`": it|os o"`);
+    expect(matchesItem(generateUltimatumRegex(divineOnly, data))).toBe(false);
+    expect(sacrificesNarrowReward(divineOnly, data)).toBe("Doubles sacrificed Currency: only the selected sacrifices are matched.");
+    expect(sacrificesNarrowReward(settings([], ["CurrencyChaos5"]), data)).toBeUndefined();
   });
 });

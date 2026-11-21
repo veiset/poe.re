@@ -10,6 +10,21 @@ export const uniqueRewardId = "UniqueItem";
 const regexes = (entries: {id: string, regex: string}[], ids: string[]) =>
   entries.filter((entry) => ids.includes(entry.id)).map((entry) => entry.regex);
 
+/** The selected rewards that the selected sacrifices give, e.g. "Doubles sacrificed Currency" for a Divine Orb. */
+const rewardsOfSelectedSacrifices = (settings: UltimatumSettings, data: Ultimatum) => {
+  const sacrifices = data.sacrifices.filter((sacrifice) => settings.sacrifices.includes(sacrifice.id));
+  return data.rewards.filter((reward) =>
+    settings.rewards.includes(reward.id) && sacrifices.some((sacrifice) => sacrifice.reward === reward.reward));
+};
+
+/** A selected reward that the selected sacrifices give is only matched for those sacrifices, not for any sacrifice. */
+export const sacrificesNarrowReward = (settings: UltimatumSettings, data?: Ultimatum): string | undefined => {
+  const rewards = data ? rewardsOfSelectedSacrifices(settings, data) : [];
+  return rewards.length > 0
+    ? `${rewards.map((reward) => reward.reward).join(", ")}: only the selected sacrifices are matched.`
+    : undefined;
+};
+
 /**
  * With a unique reward, the item can only be found by what it doesn't show, so this excludes the fixed rewards that
  * aren't wanted and, when sacrifices are selected, the other sacrifices. A selected sacrifice wants its reward.
@@ -36,7 +51,9 @@ export const generateUltimatumRegex = (settings: UltimatumSettings, data?: Ultim
     const excluded = [...avoid, ...excludedForUniqueReward(settings, data)];
     return excluded.length > 0 ? `"!${excluded.join("|")}"` : "";
   }
-  const want = [...regexes(data.rewards, settings.rewards), ...regexes(data.sacrifices, settings.sacrifices)];
+  const narrowed = rewardsOfSelectedSacrifices(settings, data);
+  const rewards = data.rewards.filter((reward) => settings.rewards.includes(reward.id) && !narrowed.includes(reward));
+  const want = [...rewards.map((reward) => reward.regex), ...regexes(data.sacrifices, settings.sacrifices)];
   return [
     avoid.length > 0 ? `"!${avoid.join("|")}"` : "",
     want.length > 0 ? `"${want.join("|")}"` : "",
