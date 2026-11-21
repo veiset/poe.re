@@ -22,6 +22,7 @@ export interface UltimatumRewardRegex {
 
 export interface UltimatumSacrificeRegex {
   amounts: Array<number>;
+  icon: string;
   id: string;
   name: string;
   regex: string;

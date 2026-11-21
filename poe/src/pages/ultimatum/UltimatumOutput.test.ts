@@ -18,8 +18,8 @@ const data: Ultimatum = {
     {id: "CurrencyChaos5", reward: "Doubles sacrificed Currency", regex: "ced c"},
   ],
   sacrifices: [
-    {id: "Metadata/Items/Currency/CurrencyModValues", name: "Divine Orb", amounts: [1, 4, 8], reward: "Doubles sacrificed Currency", regex: "ne or"},
-    {id: "Metadata/Items/Currency/CurrencyRerollRare", name: "Chaos Orb", amounts: [5, 10, 20], reward: "Doubles sacrificed Currency", regex: "os o"},
+    {id: "Metadata/Items/Currency/CurrencyModValues", name: "Divine Orb", amounts: [1, 4, 8], reward: "Doubles sacrificed Currency", regex: "ne or", icon: "Art/2DItems/Currency/CurrencyModValues.png"},
+    {id: "Metadata/Items/Currency/CurrencyRerollRare", name: "Chaos Orb", amounts: [5, 10, 20], reward: "Doubles sacrificed Currency", regex: "os o", icon: "Art/2DItems/Currency/CurrencyRerollRare.png"},
   ],
 };
 

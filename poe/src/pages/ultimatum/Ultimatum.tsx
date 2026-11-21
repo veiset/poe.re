@@ -15,6 +15,7 @@ interface Option {
   id: string
   text: string
   title?: string
+  icon?: string
 }
 
 interface OptionListProps {
@@ -43,6 +44,7 @@ const OptionList = ({title, options, selected, setSelected, search: searchable}:
               <div key={option.id} title={option.title}
                    className={isSelected ? "selectable-item selected-mod" : "selectable-item"}
                    onClick={() => setSelected(isSelected ? selected.filter((s) => s !== option.id) : selected.concat(option.id))}>
+                {option.icon && <img className="ultimatum-icon" alt="" src={`https://web.poecdn.com/image/${option.icon}`}/>}
                 {option.text}
               </div>
             );
@@ -97,6 +99,7 @@ const Ultimatum = () => {
                   id: sacrifice.id,
                   text: `${sacrifice.name} (${sacrifice.amounts.join(", ")})`,
                   title: sacrifice.reward,
+                  icon: sacrifice.icon,
                 }))}/>
     <OptionList title="Modifiers to avoid" search selected={avoidModifiers} setSelected={setAvoidModifiers}
                 options={(data?.modifiers ?? []).map((modifier) => ({id: modifier.id, text: modifier.name, title: modifier.description}))}/>

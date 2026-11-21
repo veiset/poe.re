@@ -29,3 +29,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
 }
+
+.ultimatum-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 6px;
+    vertical-align: middle;
+}
