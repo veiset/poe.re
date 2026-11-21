@@ -11,6 +11,7 @@ export const POE1_FAVORITE_PAGE_KEYS = [
   "scarab",
   "jewel",
   "gems",
+  "ultimatum",
 ] as const;
 
 export type Poe1FavoritePageKey = (typeof POE1_FAVORITE_PAGE_KEYS)[number];

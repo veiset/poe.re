@@ -16,6 +16,7 @@ const Beast = page(() => import("../pages/beast/Beast"));
 const Tattoo = page(() => import("../pages/tattoo/Tattoo"));
 const Runegraft = page(() => import("../pages/runegraft/Runegraft"));
 const Favorites = page(() => import("../pages/favorites/Favorites"));
+const Ultimatum = page(() => import("../pages/ultimatum/Ultimatum"));
 const Gems = page(() => import("../pages/gems/Gems"));
 const Privacy = page(async () => ({default: (await import("@shared/components/privacy/Privacy")).Privacy}));
 
@@ -50,6 +51,7 @@ export const Poe1Routes = () => {
         }/>
         <Route path="tattoo" element={<Tattoo/>}/>
         <Route path="runegraft" element={<Runegraft/>}/>
+        <Route path="ultimatum" element={<Ultimatum/>}/>
         <Route path="privacy" element={<Privacy site="poe.re"/>}/>
         <Route path="jewel" element={
           <MovedContent title="[Moved] Jewels" newPath="/items" linkText="Items"

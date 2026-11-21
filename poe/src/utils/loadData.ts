@@ -5,6 +5,7 @@ import type {Expedition} from "@shared/typedefs/poe1/Expedition";
 import type {MapModsRegex} from "@shared/typedefs/poe1/MapMods";
 import type {Scarabs} from "@shared/typedefs/poe1/Scarabs";
 import type {GemsRegex} from "@shared/typedefs/poe1/Gems";
+import type {Ultimatum} from "@shared/typedefs/poe1/Ultimatum";
 import type {Language} from "@shared/typedefs/Language";
 import type {TradeIds} from "@shared/typedefs/TradeIds";
 import {createLanguageDataLoader} from "@shared/core/LanguageDataLoader";
@@ -50,6 +51,10 @@ const gems = createLanguageDataLoader<Language, GemsRegex>((language) =>
   fetchGeneratedFile<GemsRegex>(`gems/Generated.Gems.${language}.min.json`),
 );
 
+const ultimatum = createLanguageDataLoader<Language, Ultimatum>((language) =>
+  fetchGeneratedFile<Ultimatum>(`ultimatum/Generated.Ultimatum.${language}.min.json`),
+);
+
 export const loadItemBasetypes = (language: Language): Promise<ItemBase[]> => itemBasetypes(language);
 export const loadItemRegex = (language: Language): Promise<ItemRegex[]> => itemRegex(language);
 
@@ -63,6 +68,7 @@ export const loadExpedition = (): Promise<Expedition> => expedition();
 export const loadMapTradeIds = (): Promise<TradeIds> => mapTradeIds();
 export const loadScarabs = (language: Language): Promise<Scarabs> => scarabData(language);
 export const loadMapMods = (language: Language): Promise<MapModsRegex> => mapMods(language);
+export const loadUltimatum = (language: Language): Promise<Ultimatum> => ultimatum(language);
 export function loadGems(language: Language = "ENGLISH"): Promise<GemsRegex> {
   return gems(language);
 }

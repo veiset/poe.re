@@ -127,6 +127,7 @@ export interface SavedSettings {
   itemCrafting: ItemCraftingSettings;
   tattoo: TattooSettings;
   runegraft: RunegraftSettings;
+  ultimatum: UltimatumSettings;
 }
 
 export interface BeastSettings {
@@ -351,6 +352,12 @@ export interface VendorSettings {
     wand: boolean;
     shield: boolean;
   };
+}
+
+export interface UltimatumSettings {
+  avoidModifiers: string[];
+  rewards: string[];
+  sacrifices: string[];
 }
 
 export interface GemsSettings {
@@ -596,6 +603,11 @@ export const defaultSettings: SavedSettings = {
     minValue: "",
     maxValue: "",
     includeTattoos: false,
+  },
+  ultimatum: {
+    avoidModifiers: [],
+    rewards: [],
+    sacrifices: [],
   },
 };
 
