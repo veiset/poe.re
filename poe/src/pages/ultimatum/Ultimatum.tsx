@@ -8,7 +8,7 @@ import {defaultSettings, UltimatumSettings} from "@poe/utils/SavedSettings";
 import {loadUltimatum} from "@poe/utils/loadData";
 import type {Ultimatum as UltimatumData} from "@shared/typedefs/poe1/Ultimatum";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
-import {generateUltimatumRegex, ignoresSacrifices, uniqueRewardId} from "./UltimatumOutput";
+import {generateUltimatumRegex, uniqueRewardId} from "./UltimatumOutput";
 import "./Ultimatum.css";
 
 interface Option {
@@ -81,8 +81,7 @@ const Ultimatum = () => {
 
   return <>
     <HeaderWithLanguage text="Inscribed Ultimatum"/>
-    <RegexResultBox result={result}
-                    warning={ignoresSacrifices(settings) ? "Sacrifices are ignored with a unique item reward: it can only be found by excluding the other rewards." : undefined}
+    <RegexResultBox result={result} warning={undefined}
                     favorite={favoritePage.action(settings, {language: lang})}
                     reset={() => {
                       setAvoidModifiers(defaultSettings.ultimatum.avoidModifiers);

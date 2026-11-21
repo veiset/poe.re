@@ -1,6 +1,6 @@
 import {describe, expect, it} from "vitest";
 import type {Ultimatum} from "@shared/typedefs/poe1/Ultimatum";
-import {generateUltimatumRegex, ignoresSacrifices, uniqueRewardId} from "./UltimatumOutput";
+import {generateUltimatumRegex, uniqueRewardId} from "./UltimatumOutput";
 
 // Entries from generated/ultimatum/Generated.Ultimatum.ENGLISH.json
 const data: Ultimatum = {
@@ -113,9 +113,15 @@ describe("generateUltimatumRegex", () => {
     expect(matchesItem(generateUltimatumRegex(uniqueOrCurrency, data))).toBe(true);
   });
 
-  it("ignores the sacrifices with a unique reward", () => {
-    const withSacrifice = settings([], [uniqueRewardId], ["Metadata/Items/Currency/CurrencyModValues"]);
-    expect(ignoresSacrifices(withSacrifice)).toBe(true);
-    expect(generateUltimatumRegex(withSacrifice, data)).toBe(`"!iced d|: it|ced c"`);
+  it("finds a unique reward or a selected sacrifice by excluding the other sacrifices", () => {
+    const uniqueOrDivine = settings([], [uniqueRewardId, "CurrencyChaos5"], ["Metadata/Items/Currency/CurrencyModValues"]);
+    expect(generateUltimatumRegex(uniqueOrDivine, data)).toBe(`"!iced d|: it|os o"`);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrDivine, data), uniqueItem)).toBe(true);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrDivine, data))).toBe(true);
+
+    const uniqueOrChaos = settings([], [uniqueRewardId], ["Metadata/Items/Currency/CurrencyRerollRare"]);
+    expect(generateUltimatumRegex(uniqueOrChaos, data)).toBe(`"!iced d|: it|ne or"`);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrChaos, data), uniqueItem)).toBe(true);
+    expect(matchesItem(generateUltimatumRegex(uniqueOrChaos, data))).toBe(false);
   });
 });
