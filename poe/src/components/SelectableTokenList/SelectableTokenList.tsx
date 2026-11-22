@@ -13,12 +13,14 @@ export interface SelectableTokenListProps {
   colorFun?: (isSelected: boolean, token: Token<any>) => string
   displayFun?: (v: string) => string
   tagFn?: (token: Token<any>) => ReactNode | null
+  /** Shown after the token's text, at the end of the row. */
+  badgeFn?: (token: Token<any>) => ReactNode | null
   groupFn?: (token: Token<any>) => {key: string, label: string} | null
   groupOrder?: string[]
 }
 
 const SelectableTokenList = (props: SelectableTokenListProps) => {
-  const {elements, selected, setSelected, sortFn, colorFun, displayFun, tagFn, groupFn, groupOrder} = props;
+  const {elements, selected, setSelected, sortFn, colorFun, displayFun, tagFn, badgeFn, groupFn, groupOrder} = props;
   const [search, setSearch] = React.useState("");
   const sorting = sortFn ?? defaultSort;
   const colorFunction = colorFun ?? defaultColorFun;
@@ -55,6 +57,7 @@ const SelectableTokenList = (props: SelectableTokenListProps) => {
       >
         {tag}
         <span className="selectable-token-list-text">{displayValue(token.rawText.replaceAll("|", " · "))}</span>
+        {badgeFn?.(token)}
       </div>
     );
   };

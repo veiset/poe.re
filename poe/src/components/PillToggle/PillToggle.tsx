@@ -1,7 +1,7 @@
 import React from "react";
 import "./PillToggle.css";
 
-export type PillToggleVariant = "nightmare" | "affix" | "group";
+export type PillToggleVariant = "nightmare" | "affix" | "group" | "reward";
 
 export interface PillToggleProps {
   label: React.ReactNode;
