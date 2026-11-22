@@ -142,8 +142,9 @@ const OptimizedMapMods = () => {
     ? (token: Token<MapModsTokenOption>) => token.options.rewards.length === 0 ? null : (
         <span className="mod-reward-badges">
           {token.options.rewards.map((reward) => (
-            <span key={reward.type} className="mod-reward-badge" title={mapRewardText(reward)}>
-              {reward.type} {reward.value}%
+            <span key={reward.type} title={mapRewardText(reward)}
+                  className={`mod-reward-badge mod-reward-badge--${reward.type.toLowerCase()}`}>
+              {reward.type[0]}
             </span>
           ))}
         </span>

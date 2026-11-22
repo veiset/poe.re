@@ -170,23 +170,29 @@
 
 .mod-reward-badges {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
     gap: 3px;
     flex-shrink: 0;
-    max-width: 45%;
 }
 
 .mod-reward-badge {
-    padding: 2px 5px;
+    display: inline-block;
+    width: 18px;
+    text-align: center;
+    padding: 2px 0;
     border-radius: 2px;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 600;
     line-height: 1;
-    white-space: nowrap;
     color: #ffffff;
-    background-color: var(--color-correct);
+    background-color: var(--color-area-2);
+    cursor: help;
 }
+
+.mod-reward-badge--atlas { background-color: #2a7a6e; }
+.mod-reward-badge--rarity { background-color: #8a7420; }
+.mod-reward-badge--maps { background-color: #5a6470; }
+.mod-reward-badge--currency { background-color: #9a5a20; }
+.mod-reward-badge--threads { background-color: #6b3fa0; }
 
 @media (max-width: 700px) {
     .mm-mod-picker {
