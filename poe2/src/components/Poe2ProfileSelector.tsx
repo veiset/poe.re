@@ -11,13 +11,18 @@ import {decodeProfile, encodeProfile} from "./ProfileTransfer";
 import {migrateProfile} from "../migration/migrations";
 import {GGPKLanguage} from "@poe/utils/Languages";
 import type {Language} from "@shared/typedefs/Language";
+import {useLocation, useNavigate} from "react-router-dom";
+import {importPoe2Regex} from "../utils/ImportRegex";
+import type {RegexImportCandidate} from "@shared/core/regex/ParseRegex";
 
 interface Poe2ProfileSelectorProps {
   languageSelect?: boolean;
 }
 
 const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps) => {
-  const {currentProfile, setCurrentProfile, language, setLanguage} = useContext(Poe2ProfileContext);
+  const {currentProfile, setCurrentProfile, language, setLanguage, reloadProfile} = useContext(Poe2ProfileContext);
+  const location = useLocation();
+  const navigate = useNavigate();
   const [profiles, setProfiles] = useState<string[]>(() => loadProfileNames());
   const [showNew, setShowNew] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
@@ -85,8 +90,17 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
       saveSettings(migrated);
       setProfiles(loadProfileNames());
       changeProfile(migrated.name);
+      reloadProfile?.();
       setShowImport(false);
     });
+  };
+
+  const handleImportRegex = (candidate: RegexImportCandidate<Settings>) => {
+    saveSettings({...candidate.settings, name: currentProfile});
+    setSelectedProfile(currentProfile);
+    reloadProfile?.();
+    setShowImport(false);
+    navigate(candidate.route);
   };
 
   return (
@@ -174,6 +188,8 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
                                                 encode={encodeProfile} />}
         {showImport && <ProfileImportBox existingProfiles={profiles} setShow={setShowImport}
                                                  onImport={importProfile} decode={decodeProfile}
+                                                 parseRegex={(value) => importPoe2Regex(value, loadSettings(currentProfile), location.pathname)}
+                                                 onImportRegex={handleImportRegex}
                                                  expectedGame="poe2" profileType="PoE2 profile" />}
       </div>
     </div>

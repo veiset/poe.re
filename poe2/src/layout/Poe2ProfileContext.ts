@@ -6,6 +6,7 @@ export interface Poe2ProfileContextType {
   setCurrentProfile: (p: string) => void;
   language: Language;
   setLanguage: (language: Language) => void;
+  reloadProfile?: () => void;
 }
 
 export const Poe2ProfileContext = createContext<Poe2ProfileContextType>({
@@ -14,4 +15,5 @@ export const Poe2ProfileContext = createContext<Poe2ProfileContextType>({
   },
   language: "ENGLISH",
   setLanguage: () => {},
+  reloadProfile: () => {},
 });
