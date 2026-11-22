@@ -3,7 +3,7 @@ const defaultEconomyUrl = "https://economy.poe.re";
 const economyBaseUrl = (import.meta.env.VITE_ECONOMY_URL ?? defaultEconomyUrl)
   .replace(/\/$/, "");
 
-export type EconomyCategory = "expedition" | "beast" | "tattoo" | "runegraft" | "scarab";
+export type EconomyCategory = "expedition" | "beast" | "tattoo" | "runegraft" | "scarab" | "divination";
 
 /** Returns the public, CDN-backed URL for a periodically refreshed economy file. */
 export function economyUrl(path: string): string {
