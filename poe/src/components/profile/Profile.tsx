@@ -18,6 +18,8 @@ import {migrateProfile} from "../../migration/migrations";
 import LeagueSelect from "@shared/components/LeagueSelect";
 import {useLocation, useNavigate} from "react-router-dom";
 import type {Language} from "@shared/typedefs/Language";
+import {importPoe1Regex} from "../../utils/regex/ImportRegex";
+import type {RegexImportCandidate} from "@shared/core/regex/ParseRegex";
 
 interface ProfileProps {
   languageSelect?: boolean
@@ -26,7 +28,7 @@ interface ProfileProps {
 
 const Profile = (props: ProfileProps) => {
   const {languageSelect} = props;
-  const {setGlobalProfile, lang, setLang} = useContext(ProfileContext);
+  const {setGlobalProfile, lang, setLang, reloadProfile} = useContext(ProfileContext);
   const [profiles, setProfiles] = useState(loadProfileNames());
   const [profile, setProfile] = useState(selectedProfile());
   const [showNew, setShowNew] = useState(false);
@@ -131,8 +133,22 @@ const Profile = (props: ProfileProps) => {
 
       setProfile(migrated.name);
       saveSettings(migrated);
+      reloadProfile?.();
       setShowImport(false);
     });
+  };
+
+  const handleImportRegex = (candidate: RegexImportCandidate<SavedSettings>) => {
+    const targetName = candidate.settings.name || profile;
+    if (!profiles.includes(targetName)) {
+      setProfiles(profiles.concat(targetName));
+    }
+    saveSettings({...candidate.settings, name: targetName});
+    setProfile(targetName);
+    setSelectedProfile(targetName);
+    reloadProfile?.();
+    setShowImport(false);
+    navigate(candidate.route);
   };
 
   return (
@@ -234,7 +250,10 @@ const Profile = (props: ProfileProps) => {
         }
         {showImport &&
           <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile}
-                            decode={decodeProfile} expectedGame="poe" metadata={(settings) => [
+                            decode={decodeProfile} expectedGame="poe"
+                            parseRegex={(value) => importPoe1Regex(value, loadSettings(profile), location.pathname)}
+                            onImportRegex={handleImportRegex}
+                            metadata={(settings) => [
                               {label: "Name", value: settings.name},
                               {label: "Language", value: settings.language || "Not specified"},
                               {label: "Selected map mods", value: settings.map.goodIds.length + settings.map.badIds.length},

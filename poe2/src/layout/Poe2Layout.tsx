@@ -18,6 +18,7 @@ export const Poe2Layout = () => {
     return selectedProfile();
   });
   const [language, setLanguageState] = useState<Language>(() => loadSettings(selectedProfile()).language);
+  const [profileRevision, setProfileRevision] = useState(0);
   const setLanguage = (next: Language) => {
     updateSettings(currentProfile, (settings) => ({...settings, language: next}));
     setLanguageState(next);
@@ -28,7 +29,7 @@ export const Poe2Layout = () => {
   useRefreshOnFocus();
 
   return (
-    <Poe2ProfileContext.Provider value={{currentProfile, setCurrentProfile, language, setLanguage}}>
+    <Poe2ProfileContext.Provider value={{currentProfile, setCurrentProfile, language, setLanguage, reloadProfile: () => setProfileRevision((r) => r + 1)}}>
       <FavoritesProvider>
         <Poe2LeagueProvider>
           <div className="content-height-wrapper">
@@ -40,7 +41,7 @@ export const Poe2Layout = () => {
               <div className="content-main">
                 <div className="content-left-gfx"/>
                 <div className="content-main-area">
-                  <div className="page-content" key={`poe2-${currentProfile}`}>
+                  <div className="page-content" key={`poe2-${currentProfile}-${profileRevision}`}>
                     <GeneratedDataFileError language={language}/>
                     <Outlet/>
                   </div>
