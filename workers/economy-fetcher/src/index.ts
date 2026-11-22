@@ -30,6 +30,7 @@ function economyFiles(leagues: string[]): EconomyFile[] {
     ["tattoo", "Tattoo", "/poe1/api/economy/exchange/current/overview"],
     ["runegraft", "Runegraft", "/poe1/api/economy/exchange/current/overview"],
     ["scarab", "Scarab", "/poe1/api/economy/exchange/current/overview"],
+    ["divination", "DivinationCard", "/poe1/api/economy/exchange/current/overview"],
   ] as const;
   return leagues.flatMap((league) => categories.map(([category, type, path]) => ({
     key: economyKey(category, league, type),
