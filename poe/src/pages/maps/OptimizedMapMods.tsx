@@ -24,6 +24,7 @@ import MatchAnyAllToggle from "@shared/components/MatchAnyAllToggle/MatchAnyAllT
 import AsyncTradePriceRange from "@shared/components/AsyncTradePriceRange/AsyncTradePriceRange";
 import {useFavoritePage} from "@poe/core/favorites/useFavoritePage";
 import {MAP_TYPE_LABELS, MapType} from "./MapTypes";
+import {mapRewardText} from "./MapRewards";
 
 const OptimizedMapMods = () => {
   const {globalProfile} = useContext(ProfileContext);
@@ -54,6 +55,7 @@ const OptimizedMapMods = () => {
   const [mapDropChance, setMapDropChance] = useState(profile.map.mapDropChance);
   const [displayNightmareMods, setDisplayNightmareMods] = useState(profile.map.displayNightmareMods);
   const [displayAffixBadges, setDisplayAffixBadges] = useState(profile.map.displayAffixBadges);
+  const [displayRewardBadges, setDisplayRewardBadges] = useState(profile.map.displayRewardBadges);
   const [groupByAffix, setGroupByAffix] = useState(profile.map.groupByAffix);
   const [tradeEightModOnly, setTradeEightModOnly] = useState(profile.map.tradeEightModOnly);
   const [tradeExcludeValdo, setTradeExcludeValdo] = useState(profile.map.tradeExcludeValdo);
@@ -76,7 +78,7 @@ const OptimizedMapMods = () => {
   const settings: MapSettings = {
     badIds: selectedBadIds, goodIds: selectedGoodIds, allGoodMods: modGrouping,
     quantity, packsize, itemRarity, currency, scarab, divination, optimizeQuant, optimizePacksize, optimizeQuality,
-    rarity, corrupted, unidentified, quality, anyQuality, anyYield, displayNightmareMods, displayAffixBadges,
+    rarity, corrupted, unidentified, quality, anyQuality, anyYield, displayNightmareMods, displayAffixBadges, displayRewardBadges,
     groupByAffix, tradeEightModOnly, tradeExcludeValdo, mapTypes, mapTypesInRegex, asyncPriceRange,
     customText: {value: customTextStr, enabled: enableCustomText}, mapDropChance,
   };
@@ -126,12 +128,25 @@ const OptimizedMapMods = () => {
   useEffect(() => {
     if (!favoritePage.isEditingFavorite) updateSettings(globalProfile, (latest) => ({...latest, map: {...settings}}));
     setResult(regex ? generateMapModRegex(settings, regex, profile.language) : "");
-  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, divination, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, mapTypes, mapTypesInRegex, asyncPriceRange]);
+  }, [result, rarity, corrupted, unidentified, quality, anyQuality, anyYield, itemRarity, currency, scarab, divination, selectedBadIds, selectedGoodIds, modGrouping, quantity, packsize, optimizeQuant, optimizePacksize, optimizeQuality, customTextStr, enableCustomText, regex, mapDropChance, displayNightmareMods, displayAffixBadges, displayRewardBadges, groupByAffix, tradeEightModOnly, tradeExcludeValdo, mapTypes, mapTypesInRegex, asyncPriceRange]);
 
   const renderAffixTag = displayAffixBadges
     ? (token: Token<MapModsTokenOption>) => (
         <span className={`mod-affix-tag mod-affix-tag--${token.options.prefix ? "prefix" : "suffix"}`}>
           {token.options.prefix ? "P" : "S"}
+        </span>
+      )
+    : undefined;
+
+  const renderRewardBadges = displayRewardBadges
+    ? (token: Token<MapModsTokenOption>) => token.options.rewards.length === 0 ? null : (
+        <span className="mod-reward-badges">
+          {token.options.rewards.map((reward) => (
+            <span key={reward.type} data-tip={mapRewardText(reward)} aria-label={mapRewardText(reward)}
+                  className={`mod-reward-badge mod-reward-badge--${reward.type.toLowerCase()}`}>
+              {reward.type[0]}
+            </span>
+          ))}
         </span>
       )
     : undefined;
@@ -185,6 +200,7 @@ const OptimizedMapMods = () => {
           setMapDropChance(defaultSettings.map.mapDropChance);
           setDisplayNightmareMods(defaultSettings.map.displayNightmareMods);
           setDisplayAffixBadges(defaultSettings.map.displayAffixBadges);
+          setDisplayRewardBadges(defaultSettings.map.displayRewardBadges);
           setGroupByAffix(defaultSettings.map.groupByAffix);
           setTradeEightModOnly(defaultSettings.map.tradeEightModOnly);
           setTradeExcludeValdo(defaultSettings.map.tradeExcludeValdo);
@@ -316,6 +332,9 @@ const OptimizedMapMods = () => {
               <PillToggle variant="affix" label="P/S badges"
                           active={displayAffixBadges}
                           onToggle={() => setDisplayAffixBadges(!displayAffixBadges)}/>
+              <PillToggle variant="reward" label="Reward badges"
+                          active={displayRewardBadges}
+                          onToggle={() => setDisplayRewardBadges(!displayRewardBadges)}/>
               <PillToggle variant="group" label="Group by affix"
                           active={groupByAffix}
                           onToggle={() => setGroupByAffix(!groupByAffix)}/>
@@ -328,6 +347,7 @@ const OptimizedMapMods = () => {
             setSelected={setSelectedBadIds}
             selected={selectedBadIds}
             tagFn={renderAffixTag}
+            badgeFn={renderRewardBadges}
             groupFn={affixGroupFn}
             groupOrder={["prefix", "suffix"]}
           />
@@ -348,6 +368,7 @@ const OptimizedMapMods = () => {
             setSelected={setSelectedGoodIds}
             selected={selectedGoodIds}
             tagFn={renderAffixTag}
+            badgeFn={renderRewardBadges}
             groupFn={affixGroupFn}
             groupOrder={["prefix", "suffix"]}
           />

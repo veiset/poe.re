@@ -193,6 +193,7 @@ export interface MapSettings {
   optimizeQuality: boolean;
   displayNightmareMods: boolean;
   displayAffixBadges: boolean;
+  displayRewardBadges: boolean;
   groupByAffix: boolean;
   tradeEightModOnly: boolean;
   tradeExcludeValdo: boolean;
@@ -438,6 +439,7 @@ export const defaultSettings: SavedSettings = {
     optimizeQuality: false,
     displayNightmareMods: true,
     displayAffixBadges: false,
+    displayRewardBadges: false,
     groupByAffix: false,
     tradeEightModOnly: false,
     tradeExcludeValdo: true,

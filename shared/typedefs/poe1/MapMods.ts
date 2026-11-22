@@ -5,8 +5,13 @@ import type {RegexResult} from "../RegexResult";
 export interface MapOption {
   nm: boolean;
   prefix: boolean;
-  rewards: Array<string>;
+  rewards: Array<MapReward>;
   scary: number;
+}
+
+export interface MapReward {
+  type: string;
+  value: number;
 }
 
 export type MapModsRegex = RegexResult<MapOption>;

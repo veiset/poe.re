@@ -51,3 +51,15 @@
 .pill-toggle-group.pill-toggle-on:hover {
     background-color: #f3b576;
 }
+
+.pill-toggle-reward.pill-toggle-on {
+    background-color: var(--color-correct);
+    border-color: var(--color-correct);
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: 0 0 0 1px rgba(48, 115, 81, 0.35), 0 0 8px rgba(48, 115, 81, 0.4);
+}
+
+.pill-toggle-reward.pill-toggle-on:hover {
+    background-color: var(--color-correct-hover);
+}
