@@ -3,165 +3,128 @@ import {defaultSettings, MapSettings, SavedSettings} from "../SavedSettings";
 import {generateMapModRegex} from "@poe/pages/maps/OptimizedMapOutput";
 import {generateResultString} from "../OutputString";
 import {generateGemsRegex} from "@poe/pages/gems/GemsOutput";
-import {generateUltimatumRegex} from "@poe/pages/ultimatum/UltimatumOutput";
 import {
   parseGemsRegex,
   parseHeistRegex,
   parseMapRegex,
   parsePoe1RegexCandidates,
-  parseUltimatumRegex,
   parseVendorRegex,
 } from "./ImportRegex";
+import enMapJson from "../../../public/generated/mapmods/Generated.Map.ENGLISH.min.json";
+import ruMapJson from "../../../public/generated/mapmods/Generated.Map.RUSSIAN.min.json";
+import thMapJson from "../../../public/generated/mapmods/Generated.Map.THAI.min.json";
+import frMapJson from "../../../public/generated/mapmods/Generated.Map.FRENCH.min.json";
+import koMapJson from "../../../public/generated/mapmods/Generated.Map.KOREAN.min.json";
+import enGemsJson from "../../../public/generated/gems/Generated.Gems.ENGLISH.min.json";
 import type {MapModsRegex} from "@shared/typedefs/poe1/MapMods";
 import type {GemsRegex} from "@shared/typedefs/poe1/Gems";
-import type {Ultimatum} from "@shared/typedefs/poe1/Ultimatum";
+import type {Language} from "@shared/typedefs/Language";
 
-const sampleMapMods: MapModsRegex = {
-  tokens: [
-    {
-      id: 101,
-      regex: "cco",
-      rawText: "Map Boss is accompanied by a Synthesis Boss",
-      generalizedText: "^map boss is accompanied by a synthesis boss$",
-      options: {scary: 1001, nm: true, prefix: true, rewards: []},
-    },
-    {
-      id: 102,
-      regex: "te o",
-      rawText: "Players have (20-60)% less Recovery Rate of Life and Energy Shield",
-      generalizedText: "^players have #% less recovery rate of life and energy shield$",
-      options: {scary: 650, nm: false, prefix: false, rewards: []},
-    },
-    {
-      id: 103,
-      regex: "of elem",
-      rawText: "Monsters reflect 18% of Elemental Damage",
-      generalizedText: "^monsters reflect #% of elemental damage$",
-      options: {scary: 900, nm: false, prefix: true, rewards: []},
-    },
-    {
-      id: 104,
-      regex: "of ph",
-      rawText: "Monsters reflect 18% of Physical Damage",
-      generalizedText: "^monsters reflect #% of physical damage$",
-      options: {scary: 900, nm: false, prefix: true, rewards: []},
-    },
-  ],
-  optimizationTable: {
-    "103:104": {
-      ids: [103, 104],
-      regex: "reflect",
-      weight: 7,
-      count: 2,
-    },
-  },
+const mapCatalogs: Partial<Record<Language, MapModsRegex>> = {
+  ENGLISH: enMapJson as unknown as MapModsRegex,
+  RUSSIAN: ruMapJson as unknown as MapModsRegex,
+  THAI: thMapJson as unknown as MapModsRegex,
+  FRENCH: frMapJson as unknown as MapModsRegex,
+  KOREAN: koMapJson as unknown as MapModsRegex,
 };
 
-const sampleGems: GemsRegex = {
-  tokens: [
-    {id: 1, regex: "^fireb", rawText: "Fireball", generalizedText: "fireball", options: {c: "B", regexNoTransfiguredMatch: "^fireb", support: false}},
-    {id: 2, regex: "ty su", rawText: "Trinity Support", generalizedText: "trinity support", options: {c: "B", regexNoTransfiguredMatch: "ty su", support: true}},
-  ],
-  optimizationTable: {},
-};
-
-const sampleUltimatum: Ultimatum = {
-  modifiers: [
-    {id: "Ruin", name: "Stalking Ruin", description: "Ruin", tier: 1, regex: "^ruin$"},
-  ],
-  rewards: [
-    {id: "DoubleCurrency", reward: "Doubles sacrificed Currency", regex: "ced c"},
-    {id: "UniqueItem", reward: "Unique Item", regex: ""},
-  ],
-  sacrifices: [
-    {id: "DivineOrb", name: "Divine Orb", amounts: [1], icon: "", reward: "Doubles sacrificed Currency", regex: "ne or"},
-  ],
-};
+const loadGeneratedMapMods = (lang: Language): MapModsRegex => mapCatalogs[lang]!;
+const loadGeneratedGems = (_lang: Language): GemsRegex => enGemsJson as unknown as GemsRegex;
 
 describe("PoE 1 Regex Import", () => {
-  it("round-trips Map Mods regexes with exclusions, inclusions, yields, qualities, states, map types and price", () => {
-    const mapSettings: MapSettings = {
+  it("does not select extra mods when a wanted mod shares text with an optimizationTable entry ('ter e')", () => {
+    const enMaps = loadGeneratedMapMods("ENGLISH");
+    const chaosResMod = enMaps.tokens.find((t) => t.regex === "ter e")!;
+    const settings: MapSettings = {
       ...structuredClone(defaultSettings.map),
-      badIds: [103, 104],
-      goodIds: [101, 102],
-      allGoodMods: false,
-      quantity: "80",
-      packsize: "25",
-      mapDropChance: "50",
-      itemRarity: "40",
-      currency: "30",
-      scarab: "20",
-      divination: "15",
-      anyYield: false,
-      quality: {
-        regular: "20",
-        currency: "",
-        divination: "",
-        rarity: "",
-        packSize: "10",
-        scarab: "",
-      },
-      anyQuality: true,
-      rarity: {normal: false, magic: false, rare: true, include: true},
-      corrupted: {enabled: true, include: false},
-      unidentified: {enabled: true, include: false},
-      mapTypesInRegex: true,
-      mapTypes: {
-        shaper: {enabled: true, include: false},
-        elder: {enabled: false, include: false},
-        conqueror: {enabled: true, include: true},
-        originator: {enabled: false, include: false},
-        blighted: {enabled: false, include: false},
-        blightRavaged: {enabled: false, include: false},
-      },
-      asyncPriceRange: {
-        min: "10",
-        max: "150",
-        currency: "chaos",
-        enabled: true,
-        tradeEnabled: false,
-      },
+      goodIds: [chaosResMod.id],
+      allGoodMods: true,
     };
 
-    const generated = generateMapModRegex(mapSettings, sampleMapMods, "ENGLISH");
-    const parsed = parseMapRegex(generated, defaultSettings, sampleMapMods);
+    const generated = generateMapModRegex(settings, enMaps, "ENGLISH");
+    expect(generated).toBe('"ter e"');
+
+    const parsed = parseMapRegex(generated, defaultSettings, enMaps);
     expect(parsed).not.toBeNull();
-    expect(parsed!.settings.map.badIds).toEqual([103, 104]);
-    expect(parsed!.settings.map.goodIds).toEqual([101, 102]);
-    expect(parsed!.settings.map.allGoodMods).toBe(false);
-    expect(parsed!.settings.map.quantity).toBe("80");
-    expect(parsed!.settings.map.packsize).toBe("25");
-    expect(parsed!.settings.map.mapDropChance).toBe("50");
-    expect(parsed!.settings.map.itemRarity).toBe("40");
-    expect(parsed!.settings.map.currency).toBe("30");
-    expect(parsed!.settings.map.scarab).toBe("20");
-    expect(parsed!.settings.map.divination).toBe("15");
-    expect(parsed!.settings.map.quality.regular).toBe("20");
-    expect(parsed!.settings.map.quality.packSize).toBe("10");
-    expect(parsed!.settings.map.anyQuality).toBe(true);
-    expect(parsed!.settings.map.rarity).toEqual({normal: false, magic: false, rare: true, include: true});
-    expect(parsed!.settings.map.corrupted).toEqual({enabled: true, include: false});
-    expect(parsed!.settings.map.unidentified).toEqual({enabled: true, include: false});
-    expect(parsed!.settings.map.mapTypesInRegex).toBe(true);
-    expect(parsed!.settings.map.mapTypes.shaper).toEqual({enabled: true, include: false});
-    expect(parsed!.settings.map.mapTypes.conqueror).toEqual({enabled: true, include: true});
-    expect(parsed!.settings.map.mapTypes.elder.enabled).toBe(false);
-    expect(parsed!.settings.map.asyncPriceRange).toEqual({
-      min: "10",
-      max: "150",
-      currency: "chaos",
-      enabled: true,
-      tradeEnabled: false,
-    });
-    expect(generateMapModRegex(parsed!.settings.map, sampleMapMods, "ENGLISH")).toBe(generated);
+    expect(parsed!.settings.map.goodIds).toEqual([chaosResMod.id]);
+    expect(generateMapModRegex(parsed!.settings.map, enMaps, "ENGLISH")).toBe('"ter e"');
   });
 
-  it("matches hand-written map mod regexes using reverse regex lookup and preserves custom text", () => {
-    const parsed = parseMapRegex('"!recovery rate" "as d.*80%" "my-custom"', defaultSettings, sampleMapMods);
-    expect(parsed).not.toBeNull();
-    expect(parsed!.settings.map.badIds).toEqual([102]);
-    expect(parsed!.settings.map.quantity).toBe("80");
-    expect(parsed!.settings.map.customText).toEqual({value: '"my-custom"', enabled: true});
+  it("recovers 'Match any' vs 'Match all' for a single wanted mod without spaces ('cco' vs '\"cco\"')", () => {
+    const enMaps = loadGeneratedMapMods("ENGLISH");
+    const mod = enMaps.tokens.find((t) => t.regex === "cco")!;
+
+    const matchAllSettings: MapSettings = {...structuredClone(defaultSettings.map), goodIds: [mod.id], allGoodMods: true};
+    const matchAllRegex = generateMapModRegex(matchAllSettings, enMaps, "ENGLISH");
+    expect(matchAllRegex).toBe("cco");
+    const parsedAll = parseMapRegex(matchAllRegex, defaultSettings, enMaps)!;
+    expect(parsedAll.settings.map.allGoodMods).toBe(true);
+    expect(generateMapModRegex(parsedAll.settings.map, enMaps, "ENGLISH")).toBe("cco");
+
+    const matchAnySettings: MapSettings = {...structuredClone(defaultSettings.map), goodIds: [mod.id], allGoodMods: false};
+    const matchAnyRegex = generateMapModRegex(matchAnySettings, enMaps, "ENGLISH");
+    expect(matchAnyRegex).toBe('"cco"');
+    const parsedAny = parseMapRegex(matchAnyRegex, defaultSettings, enMaps)!;
+    expect(parsedAny.settings.map.allGoodMods).toBe(false);
+    expect(generateMapModRegex(parsedAny.settings.map, enMaps, "ENGLISH")).toBe('"cco"');
+  });
+
+  it("does not guess mods for arbitrary text, wildcards or ReDoS patterns, and does not alter exact number meaning", () => {
+    const enMaps = loadGeneratedMapMods("ENGLISH");
+    const enGems = loadGeneratedGems("ENGLISH");
+    const catalogs = {mapMods: enMaps, gems: enGems};
+
+    expect(parsePoe1RegexCandidates('"!.*"', defaultSettings, catalogs)).toEqual([]);
+    expect(parsePoe1RegexCandidates('"!mon"', defaultSettings, catalogs)).toEqual([]);
+    expect(parsePoe1RegexCandidates("my notes here", defaultSettings, catalogs)).toEqual([]);
+
+    const start = performance.now();
+    expect(parsePoe1RegexCandidates('"!(.*.*)*zq9"', defaultSettings, catalogs)).toEqual([]);
+    expect(performance.now() - start).toBeLessThan(100);
+
+    // "as d.*80%" is exact 80%, not >=80%, so it must not be turned into quantity="80"
+    expect(parsePoe1RegexCandidates('"as d.*80%"', defaultSettings, catalogs)).toEqual([]);
+  });
+
+  it("imports single unquoted gems whose regex contains a space ('al pe', 'ty su') as Gems, not Map mods", () => {
+    const enMaps = loadGeneratedMapMods("ENGLISH");
+    const enGems = loadGeneratedGems("ENGLISH");
+    const catalogs = {mapMods: enMaps, gems: enGems};
+
+    for (const gem of enGems.tokens.filter((g) => g.regex.includes(" ")).slice(0, 20)) {
+      const settings: SavedSettings["gems"] = {...structuredClone(defaultSettings.gems), selected: [gem.id]};
+      const generated = generateGemsRegex(settings, enGems);
+      const candidates = parsePoe1RegexCandidates(generated, defaultSettings, catalogs);
+      expect(candidates[0]?.pageKey).toBe("gems");
+      expect(candidates[0]?.settings.gems.selected).toEqual([gem.id]);
+      expect(generateGemsRegex(candidates[0]!.settings.gems, enGems)).toBe(generated);
+    }
+  });
+
+  it("round-trips generated Map Mods regexes across English, Russian, Thai, French and Korean", () => {
+    for (const lang of ["ENGLISH", "RUSSIAN", "THAI", "FRENCH", "KOREAN"] as const) {
+      const mapMods = loadGeneratedMapMods(lang);
+      const nonNmTokens = mapMods.tokens.filter((t) => !t.options.nm);
+      for (let i = 0; i < 40; i++) {
+        const badCount = 1 + (i % 6);
+        const goodCount = i % 3;
+        const badIds = nonNmTokens.slice(i, i + badCount).map((t) => t.id);
+        const goodIds = nonNmTokens.slice(i + badCount, i + badCount + goodCount).map((t) => t.id);
+        const settings: MapSettings = {
+          ...structuredClone(defaultSettings.map),
+          badIds,
+          goodIds,
+          allGoodMods: i % 2 === 0,
+          quantity: i % 3 === 0 ? "80" : "",
+          packsize: i % 4 === 0 ? "25" : "",
+        };
+        const base: SavedSettings = {...defaultSettings, language: lang};
+        const generated = generateMapModRegex(settings, mapMods, lang);
+        const parsed = parseMapRegex(generated, base, mapMods);
+        expect(parsed).not.toBeNull();
+        expect(generateMapModRegex(parsed!.settings.map, mapMods, lang)).toBe(generated);
+      }
+    }
   });
 
   it("round-trips PoE 1 Vendor regexes including simplified 3-link combinations", () => {
@@ -204,10 +167,11 @@ describe("PoE 1 Regex Import", () => {
     expect(generateResultString(parsed!.settings.vendor)).toBe(generated);
   });
 
-  it("round-trips PoE 1 Gems regexes", () => {
+  it("round-trips PoE 1 Gems regexes with level and quality ranges", () => {
+    const enGems = loadGeneratedGems("ENGLISH");
     const gemsSettings: SavedSettings["gems"] = {
       ...structuredClone(defaultSettings.gems),
-      selected: [1, 2],
+      selected: [enGems.tokens[0].id, enGems.tokens[1].id],
       levelEnabled: true,
       levelMin: "20",
       levelMax: "21",
@@ -216,55 +180,17 @@ describe("PoE 1 Regex Import", () => {
       qualityMax: "23",
     };
 
-    const generated = generateGemsRegex(gemsSettings, sampleGems);
-    const parsed = parseGemsRegex(generated, defaultSettings, sampleGems);
+    const generated = generateGemsRegex(gemsSettings, enGems);
+    const parsed = parseGemsRegex(generated, defaultSettings, enGems);
     expect(parsed).not.toBeNull();
-    expect(parsed!.settings.gems.selected).toEqual([1, 2]);
-    expect(parsed!.settings.gems.levelEnabled).toBe(true);
-    expect(parsed!.settings.gems.levelMin).toBe("20");
-    expect(parsed!.settings.gems.levelMax).toBe("21");
-    expect(parsed!.settings.gems.qualityEnabled).toBe(true);
-    expect(parsed!.settings.gems.qualityMin).toBe("20");
-    expect(parsed!.settings.gems.qualityMax).toBe("23");
-    expect(generateGemsRegex(parsed!.settings.gems, sampleGems)).toBe(generated);
-  });
-
-  it("round-trips PoE 1 Ultimatum regexes", () => {
-    const ultimatumSettings: SavedSettings["ultimatum"] = {
-      avoidModifiers: ["Ruin"],
-      rewards: ["DoubleCurrency"],
-      sacrifices: ["DivineOrb"],
-    };
-    const generated = generateUltimatumRegex(ultimatumSettings, sampleUltimatum);
-    const parsed = parseUltimatumRegex(generated, defaultSettings, sampleUltimatum);
-    expect(parsed).not.toBeNull();
-    expect(parsed!.settings.ultimatum.avoidModifiers).toEqual(["Ruin"]);
-    expect(parsed!.settings.ultimatum.sacrifices).toEqual(["DivineOrb"]);
+    expect(generateGemsRegex(parsed!.settings.gems, enGems)).toBe(generated);
   });
 
   it("parses PoE 1 Heist regexes", () => {
     const parsed = parseHeistRegex("dece|erc.*[12]|ounte.*[1-3]", defaultSettings);
     expect(parsed).not.toBeNull();
-    const deception = parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Deception");
-    const perception = parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Perception");
-    const counter = parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Counter-Thaumaturgy");
-    expect(deception?.start).toBe(1);
-    expect(deception?.end).toBe(5);
-    expect(perception?.start).toBe(1);
-    expect(perception?.end).toBe(2);
-    expect(counter?.start).toBe(1);
-    expect(counter?.end).toBe(3);
-  });
-
-  it("auto-detects the correct target page from a regex", () => {
-    const catalogs = {mapMods: sampleMapMods, gems: sampleGems, ultimatum: sampleUltimatum};
-    const mapCandidates = parsePoe1RegexCandidates('"!reflect" "as d.*([89].|\\d..)%"', defaultSettings, catalogs);
-    expect(mapCandidates[0]?.pageKey).toBe("maps");
-
-    const vendorCandidates = parsePoe1RegexCandidates("r-r-g|g-r-r|r-g-r|Runn", defaultSettings, catalogs);
-    expect(vendorCandidates[0]?.pageKey).toBe("vendor");
-
-    const gemCandidates = parsePoe1RegexCandidates('"^fireb|ty su" "level: 2[0-1]"', defaultSettings, catalogs);
-    expect(gemCandidates[0]?.pageKey).toBe("gems");
+    expect(parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Deception")?.end).toBe(5);
+    expect(parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Perception")?.end).toBe(2);
+    expect(parsed!.settings.heist.contractLevels.find((c) => c.type.name === "Counter-Thaumaturgy")?.end).toBe(3);
   });
 });

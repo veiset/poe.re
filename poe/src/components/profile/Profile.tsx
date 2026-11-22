@@ -139,8 +139,13 @@ const Profile = (props: ProfileProps) => {
   };
 
   const handleImportRegex = (candidate: RegexImportCandidate<SavedSettings>) => {
-    saveSettings({...candidate.settings, name: profile});
-    setSelectedProfile(profile);
+    const targetName = candidate.settings.name || profile;
+    if (!profiles.includes(targetName)) {
+      setProfiles(profiles.concat(targetName));
+    }
+    saveSettings({...candidate.settings, name: targetName});
+    setProfile(targetName);
+    setSelectedProfile(targetName);
     reloadProfile?.();
     setShowImport(false);
     navigate(candidate.route);

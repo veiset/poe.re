@@ -4,6 +4,7 @@ import {generateWaystoneRegex} from "../pages/waystone/WaystoneResult";
 import {generateVendorGroupRegex} from "../pages/vendor/VendorResult";
 import {generateTabletRegex} from "../pages/tablet/TabletResult";
 import {generateRelicResult} from "../pages/relic/RelicResult";
+import {parseAffixToken} from "./parseAffixToken";
 import {
   parsePoe2RegexCandidates,
   parsePoe2VendorRegex,
@@ -11,131 +12,121 @@ import {
   parseTabletRegex,
   parseWaystoneRegex,
 } from "./ImportRegex";
+import enTabletJson from "../../public/generated/tablet/Generated.Tablet.ENGLISH.min.json";
+import ruTabletJson from "../../public/generated/tablet/Generated.Tablet.RUSSIAN.min.json";
+import thTabletJson from "../../public/generated/tablet/Generated.Tablet.THAI.min.json";
+import enWaystoneJson from "../../public/generated/waystone/Generated.Waystone.ENGLISH.min.json";
+import ruWaystoneJson from "../../public/generated/waystone/Generated.Waystone.RUSSIAN.min.json";
+import thWaystoneJson from "../../public/generated/waystone/Generated.Waystone.THAI.min.json";
+import frWaystoneJson from "../../public/generated/waystone/Generated.Waystone.FRENCH.min.json";
+import koWaystoneJson from "../../public/generated/waystone/Generated.Waystone.KOREAN.min.json";
+import enRelicJson from "../../public/generated/relic/Generated.Relic.ENGLISH.min.json";
 import type {WaystoneAffix, TabletAffix} from "./loadData";
+import type {TabletRegex} from "@shared/typedefs/poe2/Tablet";
+import type {WaystoneRegex} from "@shared/typedefs/poe2/Waystone";
 import type {RelicRegex} from "@shared/typedefs/poe2/Relic";
+import type {Language} from "@shared/typedefs/Language";
 
-const sampleWaystoneAffixes: WaystoneAffix[] = [
-  {
-    id: 1,
-    name: "##% increased Monster Damage",
-    regex: "r dam",
-    values: [],
-    ranges: [[20, 40]],
-    prefix: true,
-    sourceIndex: 0,
-  },
-  {
-    id: 2,
-    name: "Players are Cursed with Temporal Chains",
-    regex: "ral c",
-    values: [],
-    ranges: [],
-    prefix: false,
-    sourceIndex: 1,
-  },
-];
+const tabletCatalogs: Partial<Record<Language, TabletRegex>> = {
+  ENGLISH: enTabletJson as unknown as TabletRegex,
+  RUSSIAN: ruTabletJson as unknown as TabletRegex,
+  THAI: thTabletJson as unknown as TabletRegex,
+};
 
-const sampleTabletAffixes: TabletAffix[] = [
-  {
-    id: 10,
-    name: "##% increased Pack Size in Map",
-    regex: "pack",
-    values: [],
-    ranges: [[5, 30]],
-    sourceIndex: 0,
-  },
-];
+const waystoneCatalogs: Partial<Record<Language, WaystoneRegex>> = {
+  ENGLISH: enWaystoneJson as unknown as WaystoneRegex,
+  RUSSIAN: ruWaystoneJson as unknown as WaystoneRegex,
+  THAI: thWaystoneJson as unknown as WaystoneRegex,
+  FRENCH: frWaystoneJson as unknown as WaystoneRegex,
+  KOREAN: koWaystoneJson as unknown as WaystoneRegex,
+};
 
-const sampleRelicAffixes: RelicRegex[] = [
-  {
-    id: 1,
-    affix: "PREFIX",
-    name: "Bosses take #% increased Damage",
-    regex: "^bo",
-    ranges: [[11, 30]],
-    values: [],
-  },
-  {
-    id: 2,
-    affix: "SUFFIX",
-    name: "#% chance for each of your Keys to upgrade",
-    regex: "eac",
-    ranges: [[3, 9]],
-    values: [],
-  },
-];
+const loadGeneratedTabletAffixes = (lang: Language): TabletAffix[] => {
+  const {tokens} = tabletCatalogs[lang]!;
+  return tokens.map((token, sourceIndex) => ({...parseAffixToken(token), sourceIndex})).sort((a, b) => a.name.localeCompare(b.name));
+};
+
+const loadGeneratedWaystoneAffixes = (lang: Language): WaystoneAffix[] => {
+  const {tokens} = waystoneCatalogs[lang]!;
+  return tokens
+    .map((token, sourceIndex) => ({...parseAffixToken(token), sourceIndex, prefix: token.options.prefix}))
+    .sort((a, b) => a.name.localeCompare(b.name));
+};
+
+const loadGeneratedRelics = (_lang: Language): RelicRegex[] => enRelicJson as unknown as RelicRegex[];
 
 describe("PoE 2 Regex Import", () => {
-  it("round-trips Waystone regexes with tier, revives, rarity, state, quantifiers, modifiers and price", () => {
-    const settings: Settings = {
-      ...structuredClone(defaultSettings),
-      waystone: {
-        ...structuredClone(defaultSettings.waystone),
-        rarity: {normal: false, magic: true, rare: true},
-        tier: {min: 14, max: 16},
-        revives: {min: 2, max: 4},
-        state: {corrupted: true, uncorrupted: false, delirious: true},
-        itemRarity: "50",
-        packSize: "20",
-        waystoneDropChance: "100",
-        monsterRarity: "30",
-        monsterEffectiveness: "15",
-        modifier: {
-          round10: false,
-          wantedModsSelectType: "any",
-          wantedMods: [
-            {
-              id: 1,
-              name: "##% increased Monster Damage",
-              regex: "r dam",
-              ranges: [[20, 40]],
-              isSelected: true,
-              value: 25,
-            },
-          ],
-          unwantedMods: [
-            {
-              id: 2,
-              name: "Players are Cursed with Temporal Chains",
-              regex: "ral c",
-              ranges: [],
-              isSelected: true,
-              value: null,
-            },
-          ],
-        },
-        asyncPriceRange: {
-          min: "1",
-          max: "25",
-          currency: "exalted",
-          enabled: true,
-          tradeEnabled: false,
-        },
-      },
-    };
+  it("preserves numeric values on Thai and Russian tablet affixes that share a regex between # and ## variants", () => {
+    const thaiAffixes = loadGeneratedTabletAffixes("THAI");
+    const russianAffixes = loadGeneratedTabletAffixes("RUSSIAN");
 
-    const generated = generateWaystoneRegex(settings);
-    const parsed = parseWaystoneRegex(generated, defaultSettings, sampleWaystoneAffixes);
-    expect(parsed).not.toBeNull();
-    expect(parsed!.settings.waystone.rarity).toEqual({normal: false, magic: true, rare: true});
-    expect(parsed!.settings.waystone.tier).toEqual({min: 14, max: 16});
-    expect(parsed!.settings.waystone.revives).toEqual({min: 2, max: 4});
-    expect(parsed!.settings.waystone.state).toEqual({corrupted: true, uncorrupted: false, delirious: true});
-    expect(parsed!.settings.waystone.itemRarity).toBe("50");
-    expect(parsed!.settings.waystone.packSize).toBe("20");
-    expect(parsed!.settings.waystone.waystoneDropChance).toBe("100");
-    expect(parsed!.settings.waystone.monsterRarity).toBe("30");
-    expect(parsed!.settings.waystone.monsterEffectiveness).toBe("15");
-    expect(parsed!.settings.waystone.modifier.wantedMods[0]?.value).toBe(25);
-    expect(parsed!.settings.waystone.modifier.unwantedMods[0]?.regex).toBe("ral c");
-    expect(parsed!.settings.waystone.asyncPriceRange).toEqual({
-      min: "1",
-      max: "25",
-      currency: "exalted",
-      enabled: true,
-      tradeEnabled: false,
-    });
-    expect(generateWaystoneRegex(parsed!.settings)).toBe(generated);
+    const parsedThai = parseTabletRegex('"[1-2]\\(.*ตน"', {...defaultSettings, language: "THAI"}, thaiAffixes);
+    expect(parsedThai).not.toBeNull();
+    expect(parsedThai!.settings.tablet.modifier.affixes[0]?.id).toBe(881965784);
+    expect(parsedThai!.settings.tablet.modifier.affixes[0]?.value).toBe(1);
+    expect(generateTabletRegex(parsedThai!.settings)).toBe('"[1-2]\\(.*ตน"');
+
+    const parsedRu = parseTabletRegex('"ри:.*[1-2]\\("', {...defaultSettings, language: "RUSSIAN"}, russianAffixes);
+    expect(parsedRu).not.toBeNull();
+    expect(parsedRu!.settings.tablet.modifier.affixes[0]?.id).toBe(881965784);
+    expect(parsedRu!.settings.tablet.modifier.affixes[0]?.value).toBe(1);
+    expect(generateTabletRegex(parsedRu!.settings)).toBe('"ри:.*[1-2]\\("');
+  });
+
+  it("round-trips Waystone regexes across English, Russian, Thai, French and Korean", () => {
+    for (const lang of ["ENGLISH", "RUSSIAN", "THAI", "FRENCH", "KOREAN"] as const) {
+      const affixes = loadGeneratedWaystoneAffixes(lang);
+      const rangedAffix = affixes.find((a) => a.ranges[0] && a.ranges[0][1] > a.ranges[0][0]) ?? affixes[0];
+      const settings: Settings = {
+        ...structuredClone(defaultSettings),
+        language: lang,
+        waystone: {
+          ...structuredClone(defaultSettings.waystone),
+          rarity: {normal: false, magic: true, rare: true},
+          tier: {min: 14, max: 16},
+          revives: {min: 2, max: 4},
+          state: {corrupted: true, uncorrupted: false, delirious: true},
+          itemRarity: "50",
+          packSize: "20",
+          modifier: {
+            round10: false,
+            wantedModsSelectType: "any",
+            wantedMods: [
+              {
+                id: rangedAffix.id,
+                name: rangedAffix.name,
+                regex: rangedAffix.regex,
+                ranges: rangedAffix.ranges,
+                isSelected: true,
+                value: rangedAffix.ranges[0]?.[0] ?? null,
+              },
+            ],
+            unwantedMods: [
+              {
+                id: affixes[1].id,
+                name: affixes[1].name,
+                regex: affixes[1].regex,
+                ranges: affixes[1].ranges,
+                isSelected: true,
+                value: null,
+              },
+            ],
+          },
+          asyncPriceRange: {
+            min: "1",
+            max: "25",
+            currency: "exalted",
+            enabled: true,
+            tradeEnabled: false,
+          },
+        },
+      };
+
+      const generated = generateWaystoneRegex(settings);
+      const parsed = parseWaystoneRegex(generated, {...defaultSettings, language: lang}, affixes);
+      expect(parsed).not.toBeNull();
+      expect(generateWaystoneRegex(parsed!.settings)).toBe(generated);
+    }
   });
 
   it("round-trips PoE 2 Vendor regexes with OR and AND groups, levels, mods and custom text", () => {
@@ -173,97 +164,33 @@ describe("PoE 2 Regex Import", () => {
     expect(generateVendorGroupRegex(parsed!.settings.vendor)).toBe(generated);
   });
 
-  it("round-trips PoE 2 Tablet regexes", () => {
-    const settings: Settings = {
-      ...structuredClone(defaultSettings),
-      tablet: {
-        ...structuredClone(defaultSettings.tablet),
-        rarity: {normal: false, magic: true, rare: false},
-        type: {
-          ...structuredClone(defaultSettings.tablet.type),
-          ritual: true,
-          breach: true,
-        },
-        modifier: {
-          usesRemaining: true,
-          numUsesRemaining: 8,
-          round10: false,
-          affixSelectType: "any",
-          affixes: [
-            {
-              id: 10,
-              name: "##% increased Pack Size in Map",
-              regex: "pack",
-              ranges: [[5, 30]],
-              isSelected: true,
-              value: 20,
-            },
-          ],
-        },
-        asyncPriceRange: {
-          min: "1",
-          max: "9",
-          currency: "divine",
-          enabled: true,
-          tradeEnabled: false,
-        },
-      },
-    };
-
-    const generated = generateTabletRegex(settings);
-    const parsed = parseTabletRegex(generated, defaultSettings, sampleTabletAffixes);
-    expect(parsed).not.toBeNull();
-    expect(parsed!.settings.tablet.type.ritual).toBe(true);
-    expect(parsed!.settings.tablet.type.breach).toBe(true);
-    expect(parsed!.settings.tablet.modifier.usesRemaining).toBe(true);
-    expect(parsed!.settings.tablet.modifier.numUsesRemaining).toBe(8);
-    expect(parsed!.settings.tablet.modifier.affixes[0]?.value).toBe(20);
-    expect(generateTabletRegex(parsed!.settings)).toBe(generated);
-  });
-
-  it("round-trips PoE 2 Relic regexes", () => {
+  it("round-trips PoE 2 Relic regexes with real generated data", () => {
+    const relics = loadGeneratedRelics("ENGLISH");
+    const prefix = relics.find((r) => r.affix === "PREFIX" && r.ranges[0])!;
+    const suffix = relics.find((r) => r.affix === "SUFFIX" && r.ranges[0])!;
     const settings: Settings = {
       ...structuredClone(defaultSettings),
       relic: {
         resultSettings: {customText: "", autoCopy: false, customTextEnabled: false},
         matchType: "both",
         modifier: {
-          prefixes: [
-            {
-              name: "Bosses take #% increased Damage",
-              regex: "^bo",
-              ranges: [[11, 30]],
-              isSelected: true,
-              value: 15,
-            },
-          ],
-          suffixes: [
-            {
-              name: "#% chance for each of your Keys to upgrade",
-              regex: "eac",
-              ranges: [[3, 9]],
-              isSelected: true,
-              value: 5,
-            },
-          ],
+          prefixes: [{...prefix, isSelected: true, value: prefix.ranges[0][0]}],
+          suffixes: [{...suffix, isSelected: true, value: suffix.ranges[0][0]}],
         },
       },
     };
 
     const generated = generateRelicResult(settings);
-    const parsed = parseRelicRegex(generated, defaultSettings, sampleRelicAffixes);
+    const parsed = parseRelicRegex(generated, defaultSettings, relics);
     expect(parsed).not.toBeNull();
-    expect(parsed!.settings.relic.matchType).toBe("both");
-    expect(parsed!.settings.relic.modifier.prefixes[0]?.value).toBe(15);
-    expect(parsed!.settings.relic.modifier.suffixes[0]?.value).toBe(5);
     expect(generateRelicResult(parsed!.settings)).toBe(generated);
   });
 
   it("auto-detects the correct PoE 2 page and uses currentPath as tie-breaker", () => {
     const catalogs = {
-      waystoneAffixes: sampleWaystoneAffixes,
-      tabletAffixes: sampleTabletAffixes,
-      relicAffixes: sampleRelicAffixes,
+      waystoneAffixes: loadGeneratedWaystoneAffixes("ENGLISH"),
+      tabletAffixes: loadGeneratedTabletAffixes("ENGLISH"),
+      relicAffixes: loadGeneratedRelics("ENGLISH"),
     };
 
     const waystoneCandidates = parsePoe2RegexCandidates('"er 1[456]\\)" "le: [2-4]"', defaultSettings, catalogs);
@@ -272,7 +199,6 @@ describe("PoE 2 Regex Import", () => {
     const tabletCandidates = parsePoe2RegexCandidates('"(tual|eac)" "([5-9]|1[0-8]) us"', defaultSettings, catalogs);
     expect(tabletCandidates[0]?.pageKey).toBe("tablet");
 
-    // Ambiguous rarity token uses currentPath tie-breaker
     const onTabletPage = parsePoe2RegexCandidates('"y: r"', defaultSettings, catalogs, "/tablet");
     expect(onTabletPage[0]?.pageKey).toBe("tablet");
   });

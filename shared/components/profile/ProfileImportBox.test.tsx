@@ -10,7 +10,7 @@ interface MockProfile {
 }
 
 describe("ProfileImportBox", () => {
-  it("detects a pasted regex, displays its preview metadata and imports it on click", async () => {
+  it("detects a pasted regex, asks before overwriting an existing profile, and imports on confirm", async () => {
     const onImport = vi.fn();
     const onImportRegex = vi.fn();
     const setShow = vi.fn();
@@ -53,12 +53,37 @@ describe("ProfileImportBox", () => {
 
     fireEvent.click(screen.getByRole("button", {name: "Import"}));
     await waitFor(() => {
-      expect(onImportRegex).toHaveBeenCalledWith(candidate);
+      expect(screen.getByRole("button", {name: "Overwrite"})).toBeInTheDocument();
     });
+    fireEvent.click(screen.getByRole("button", {name: "Overwrite"}));
+    expect(onImportRegex).toHaveBeenCalledWith(candidate);
     expect(onImport).not.toHaveBeenCalled();
   });
 
-  it("allows switching target page when a regex matches multiple pages", async () => {
+  it("shows an immediate warning when pasted text matches neither a profile nor a regex", async () => {
+    render(
+      <ProfileImportBox
+        existingProfiles={["default"]}
+        setShow={vi.fn()}
+        onImport={vi.fn()}
+        decode={() => {
+          throw new Error("Not a profile");
+        }}
+        expectedGame="poe"
+        parseRegex={vi.fn().mockResolvedValue([])}
+        onImportRegex={vi.fn()}
+      />,
+    );
+
+    const textarea = screen.getByPlaceholderText(/Paste profile export string or regex here/i);
+    fireEvent.change(textarea, {target: {value: "my notes here"}});
+
+    await waitFor(() => {
+      expect(screen.getByText(/Invalid or corrupted profile import string or regex/i)).toBeInTheDocument();
+    });
+  });
+
+  it("allows switching target page and importing as a new profile", async () => {
     const onImportRegex = vi.fn();
     const candidates: RegexImportCandidate<MockProfile>[] = [
       {
@@ -100,8 +125,12 @@ describe("ProfileImportBox", () => {
     fireEvent.change(pageSelect, {target: {value: "tablet"}});
 
     fireEvent.click(screen.getByRole("button", {name: "Import"}));
-    await waitFor(() => {
-      expect(onImportRegex).toHaveBeenCalledWith(candidates[1]);
+    const nameInput = await screen.findByDisplayValue("default");
+    fireEvent.change(nameInput, {target: {value: "my-tablets"}});
+    fireEvent.click(screen.getByRole("button", {name: "Import as New"}));
+    expect(onImportRegex).toHaveBeenCalledWith({
+      ...candidates[1],
+      settings: {name: "my-tablets", value: "tablet"},
     });
   });
 });

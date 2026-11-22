@@ -96,8 +96,10 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
   };
 
   const handleImportRegex = (candidate: RegexImportCandidate<Settings>) => {
-    saveSettings({...candidate.settings, name: currentProfile});
-    setSelectedProfile(currentProfile);
+    const targetName = candidate.settings.name || currentProfile;
+    saveSettings({...candidate.settings, name: targetName});
+    setProfiles(loadProfileNames());
+    changeProfile(targetName);
     reloadProfile?.();
     setShowImport(false);
     navigate(candidate.route);

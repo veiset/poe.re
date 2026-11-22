@@ -1,6 +1,4 @@
 import {generateNumberRegex} from "./GenerateNumberRegex";
-import type {PriceCurrency} from "@poe/utils/regex/GeneratePriceRangeRegex";
-import type {ProfileMetadata} from "@shared/components/profile/ProfileImportBox";
 
 export interface RegexToken {
   raw: string;
@@ -9,12 +7,17 @@ export interface RegexToken {
   quoted: boolean;
 }
 
+export interface RegexMetadataItem {
+  label: string;
+  value: string | number;
+}
+
 export interface RegexImportCandidate<TSettings> {
   pageKey: string;
   pageLabel: string;
   route: string;
   score: number;
-  metadata: ProfileMetadata[];
+  metadata: RegexMetadataItem[];
   settings: TSettings;
 }
 
@@ -73,9 +76,7 @@ export function tokenizeRegex(input: string): RegexToken[] {
       let value = negated ? raw.slice(1) : raw;
       const quoted = value.startsWith('"') && value.endsWith('"') && value.length >= 2;
       if (quoted) value = value.slice(1, -1);
-      if (value.startsWith("!")) {
-        value = value.slice(1);
-      }
+      if (value.startsWith("!")) value = value.slice(1);
       if (value.length > 0) {
         tokens.push({
           raw,
@@ -175,70 +176,30 @@ function getExactNumberLookup(): Map<string, { value: string; optimized: boolean
 }
 
 export function parseMinNumberFromRegex(pattern: string): { value: string; optimized: boolean } | null {
-  const trimmed = pattern.trim();
-  if (!trimmed) return null;
-  if (/^\d+$/.test(trimmed)) {
-    const n = Number(trimmed);
-    return n >= 1 && n <= 999 ? {value: String(n), optimized: false} : null;
-  }
-
-  const lookup = getExactNumberLookup();
-  const found = lookup.get(trimmed);
-  if (found) return found;
-
-  try {
-    const re = new RegExp(`^(?:${trimmed})$`);
-    for (let n = 1; n <= 999; n++) {
-      if (re.test(String(n))) {
-        return {value: String(n), optimized: false};
-      }
-    }
-  } catch {
-    return null;
-  }
-  return null;
+  return getExactNumberLookup().get(pattern.trim()) ?? null;
 }
 
-export function parseNumberRangeFromRegex(
+// Only allows safe digit-range patterns emitted by the site's number range generators (no * or + quantifiers).
+const SAFE_RANGE_PATTERN = /^[\d\[\]\-|()\\d?{},]{1,120}$/;
+
+export function parseSafeDigitRange(
   pattern: string,
   minDomain: number,
   maxDomain: number,
-  formatCandidate: (n: number) => string = String,
 ): { min: number; max: number } | null {
+  if (!SAFE_RANGE_PATTERN.test(pattern)) return null;
   try {
-    const re = new RegExp(`^(?:${pattern})$`, "i");
+    const re = new RegExp(`^(?:${pattern})$`);
     let min: number | undefined;
     let max: number | undefined;
     for (let n = minDomain; n <= maxDomain; n++) {
-      if (re.test(formatCandidate(n))) {
+      if (re.test(String(n))) {
         if (min === undefined) min = n;
         max = n;
       }
     }
-    if (min !== undefined && max !== undefined) {
-      return {min, max};
-    }
+    return min !== undefined && max !== undefined ? {min, max} : null;
   } catch {
     return null;
   }
-  return null;
-}
-
-export function parsePriceRangeToken<TCurrency extends PriceCurrency>(
-  token: RegexToken,
-  allowedCurrencies: readonly TCurrency[],
-): { min: string; max: string; currency: TCurrency } | null {
-  if (token.negated) return null;
-  const match = /^\\s(.+)\s+(chaos|divine|exalted)$/i.exec(token.value);
-  if (!match) return null;
-  const [, numPattern, rawCurrency] = match;
-  const currency = rawCurrency.toLowerCase() as TCurrency;
-  if (!allowedCurrencies.includes(currency)) return null;
-  const range = parseNumberRangeFromRegex(numPattern, 0, 999);
-  if (!range) return null;
-  return {
-    min: String(range.min),
-    max: String(range.max),
-    currency,
-  };
 }
