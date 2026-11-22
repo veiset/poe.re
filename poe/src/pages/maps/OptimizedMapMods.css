@@ -186,6 +186,26 @@
     color: #ffffff;
     background-color: var(--color-area-2);
     cursor: help;
+    position: relative;
+}
+
+/* Shown at once on hover, unlike a title; to the badge's left, so the list's scroll box doesn't clip it */
+.mod-reward-badge:hover::after {
+    content: attr(data-tip);
+    position: absolute;
+    right: calc(100% + 6px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--color-border-strong);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
 .mod-reward-badge--atlas { background-color: #2a7a6e; }

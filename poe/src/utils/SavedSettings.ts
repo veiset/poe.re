@@ -439,7 +439,7 @@ export const defaultSettings: SavedSettings = {
     optimizeQuality: false,
     displayNightmareMods: true,
     displayAffixBadges: false,
-    displayRewardBadges: true,
+    displayRewardBadges: false,
     groupByAffix: false,
     tradeEightModOnly: false,
     tradeExcludeValdo: true,
