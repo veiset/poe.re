@@ -85,7 +85,7 @@ export default function Share() {
   const shared = share?.createdAt && dayjs(share.createdAt).isValid() ? dayjs(share.createdAt).fromNow() : "";
 
   return (
-    <div className="full-size">
+    <div className="full-size share-page">
       <div className="share-heading">
         <h1>Shared profile</h1>
         {share && <button className="share-import" disabled={saving} onClick={openProfile}>Import profile</button>}

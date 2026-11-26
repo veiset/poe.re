@@ -1,5 +1,10 @@
+.share-page {
+  box-sizing: border-box;
+  max-width: 632px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
 .share-preview {
-  max-width: 640px;
   overflow-wrap: anywhere;
 }
 .share-preview h2 {
@@ -48,8 +53,9 @@
 .share-heading {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 18px;
-  margin: 20px 0 24px;
+  margin: 28px 0 20px;
 }
 /* The heading's own margins are uneven, which puts the button off its centre */
 .share-heading h1 {
