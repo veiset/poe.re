@@ -121,14 +121,73 @@
   color: var(--color-text-link);
 }
 .shared-profiles {
+  box-sizing: border-box;
+  width: 100%;
   padding: 0 14px 40px;
 }
-/* An empty Favorites page fills the window to centre its "No favorites yet". With shared profiles under it, it doesn't. */
+.shared-profiles .filter-card {
+  box-sizing: border-box;
+  width: min(570px, 100%);
+}
+/* One row for each share: its name, and when it was shared at the right edge */
+.shared-profiles ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.shared-profiles li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 7px 0;
+  overflow-wrap: anywhere;
+}
+.shared-profiles li + li {
+  border-top: 1px solid var(--color-border);
+}
+.shared-profiles a {
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+.shared-profiles a:hover {
+  text-decoration: underline;
+}
+.shared-profiles li span {
+  flex-shrink: 0;
+  color: var(--color-text-dim);
+  font-size: 13px;
+}
+/*
+ * An empty Favorites page fills the window to centre its "No favorites yet". With shared profiles under it, it is
+ * a compact box of the same width, above them: the star beside the heading, and the text left-aligned.
+ */
 main:has(+ .shared-profiles) {
   display: block;
   min-height: 0;
-  padding-bottom: 24px;
+  padding-bottom: 16px;
 }
 main:has(+ .shared-profiles) > [class$="favorites-empty"] {
-  margin: 24px auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4px 10px;
+  justify-self: start;
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  text-align: left;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > * {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > [class$="favorites-empty-icon"] {
+  grid-column: 1;
+  font-size: 20px;
+  line-height: 1;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > h2 {
+  grid-column: 2;
+  padding: 0;
+  font-size: 17px;
 }

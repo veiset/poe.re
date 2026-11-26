@@ -35,8 +35,9 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
     <div className="shared-profiles">
       <FilterCard title="Shared profiles">
         <ul>
-          {shares.map(({id, name, createdAt}) => <li key={id} style={{overflowWrap: "anywhere"}}>
-            <Link to={`/share/${id}`} style={{color: "var(--color-text-link)"}}>{String(name)}</Link> · shared {String(createdAt).slice(0, 10)}
+          {shares.map(({id, name, createdAt}) => <li key={id}>
+            <Link to={`/share/${id}`}>{String(name)}</Link>
+            <span>shared {String(createdAt).slice(0, 10)}</span>
           </li>)}
         </ul>
       </FilterCard>

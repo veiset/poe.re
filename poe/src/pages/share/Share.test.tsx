@@ -172,7 +172,7 @@ describe("Share page", () => {
     localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name, createdAt: share.createdAt}]));
     mount("/favorites");
     const link = await screen.findByRole("link", {name});
-    expect(link.parentElement).toHaveTextContent(`${name} · shared 2026-11-20`);
+    expect(link.parentElement).toHaveTextContent(`${name}shared 2026-11-20`);
     fireEvent.click(link);
     await open();
     expect(window.location.pathname).toBe(`/share/${share.id}`);
