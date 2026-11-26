@@ -151,6 +151,7 @@
   text-decoration: underline;
 }
 .shared-profiles li span {
+  margin-left: 12px;
   color: var(--color-text-dim);
   font-size: 13px;
   white-space: nowrap;
