@@ -55,7 +55,7 @@ describe("poe2 sharing", () => {
     // The first render also loads the lazy pages
     const button = await screen.findByRole("button", {name: "Import profile"}, {timeout: 5000});
     expect(screen.getByRole("heading", {name})).toBeInTheDocument();
-    expect(screen.getAllByRole("row").map((row) => row.textContent)).toEqual([
+    expect([...document.querySelectorAll(".share-categories li")].map((row) => row.textContent)).toEqual([
       "Waystonestier 15-16", "Tablets3 settings changed",
     ]);
     expect(localStorage.getItem("poe2.profiles")).toBe(before);

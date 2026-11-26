@@ -47,35 +47,23 @@
   white-space: pre-wrap;
 }
 /* Each row is a category and what it holds, one chip for each part */
-.share-preview table {
-  display: block;
+.share-categories {
   margin: 0 0 8px;
-}
-.share-preview tbody {
-  display: block;
-}
-.share-preview tr {
-  display: flex;
-  align-items: baseline;
-  padding: 5px 0;
-}
-.share-preview th,
-.share-preview td {
   padding: 0;
-  font-weight: normal;
-  text-align: left;
+  list-style: none;
 }
-.share-preview th {
-  flex: 0 0 110px;
-  white-space: nowrap;
-}
-.share-preview td {
-  flex: 1;
+.share-categories li {
   display: flex;
   flex-wrap: wrap;
+  align-items: baseline;
   gap: 6px;
+  padding: 5px 0;
 }
-.share-preview td span {
+.share-categories strong {
+  flex: 0 0 104px;
+  font-weight: normal;
+}
+.share-categories span {
   padding: 2px 9px;
   border: 1px solid var(--color-border);
   border-radius: 3px;

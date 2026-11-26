@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
-import "@shared/components/profile/Profile.css";
 import "./Share.css";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -100,11 +99,11 @@ export default function SharePage<Settings extends {name: string}>({config}: {co
             <p className="share-description">{share.description}</p>
           </>}
           <h3>Categories</h3>
-          <table>
-            <tbody>
-              {share.contents.map(({label, info}) => <tr key={label}><th scope="row">{label}</th><td>{info.map((part) => <span key={part}>{part}</span>)}</td></tr>)}
-            </tbody>
-          </table>
+          <ul className="share-categories">
+            {share.contents.map(({label, info}) => <li key={label}>
+              <strong>{label}</strong>{info.map((part) => <span key={part}>{part}</span>)}
+            </li>)}
+          </ul>
         </div>}
       </FilterCard>
       <p className="share-api-docs">

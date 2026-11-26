@@ -49,7 +49,6 @@ const Profile = (props: ProfileProps) => {
         setShowNew(false);
         setShowDelete(false);
         setShowEdit(false);
-        setShowShare(false);
       }
       if (event.key === 'Enter') {
         if (showNew) confirmAdd();

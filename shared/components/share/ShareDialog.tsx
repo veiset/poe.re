@@ -61,7 +61,8 @@ export default function ShareDialog<Settings extends {name: string}>({config, se
   const copy = () => navigator.clipboard.writeText(link).then(() => setCopied(true));
 
   return <div className="favorite-dialog-backdrop" role="presentation" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
-    <form className="favorite-dialog" role="dialog" aria-modal="true" aria-labelledby="share-dialog-title" onSubmit={share}>
+    <form className="favorite-dialog" role="dialog" aria-modal="true" aria-labelledby="share-dialog-title" onSubmit={share}
+          onKeyDown={(event) => { if (event.key === "Escape") onClose(); }}>
       <h2 id="share-dialog-title">Share profile</h2>
       {link ? <>
         <label className="favorite-dialog-field">Anyone with this link can open a copy of the profile
@@ -79,7 +80,7 @@ export default function ShareDialog<Settings extends {name: string}>({config, se
         </div>
       </> : <>
         <label className="favorite-dialog-field">Profile name
-          <input value={name} maxLength={50} onChange={(event) => setName(event.target.value)} required/>
+          <input autoFocus value={name} maxLength={50} onChange={(event) => setName(event.target.value)} required/>
         </label>
         <label className="favorite-dialog-field">Author
           <input value={author} maxLength={32} onChange={(event) => setAuthor(event.target.value)}/>
