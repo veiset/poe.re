@@ -94,7 +94,11 @@ export default function Share() {
           <button className="import-button" style={{margin: "0 0 14px"}} disabled={saving} onClick={openProfile}>Import</button>
           <h2>{availableProfileName(share.profile.name)}</h2>
           <p className="share-meta">{[share.author && `by ${share.author}`, shared].filter(Boolean).join(", ")}</p>
-          {share.description && <p className="share-description">{share.description}</p>}
+          {share.description && <>
+            <h3>Description</h3>
+            <p className="share-description">{share.description}</p>
+          </>}
+          <h3>Categories</h3>
           <table>
             <tbody>
               {share.contents.map(({label, info}) => <tr key={label}><th scope="row">{label}</th><td>{info}</td></tr>)}
