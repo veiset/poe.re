@@ -9,14 +9,18 @@ interface PoeProfilePayload {
   settings: Partial<SavedSettings>;
 }
 
-export const encodeProfile = (settings: SavedSettings): string => {
+/** The settings that differ from the defaults, with the name, language and version. */
+export const exportSettings = (settings: SavedSettings): Partial<SavedSettings> => {
   const transferableSettings = {...settings, favorites: parseFavoriteRecords(settings.favorites)};
   const minimalSettings = (createProfileDelta(transferableSettings, defaultSettings) ?? {}) as Partial<SavedSettings>;
   minimalSettings.name = settings.name;
   minimalSettings.language = settings.language;
   minimalSettings.version = settings.version;
+  return minimalSettings;
+};
 
-  const payload: PoeProfilePayload = {game: "poe", settings: minimalSettings};
+export const encodeProfile = (settings: SavedSettings): string => {
+  const payload: PoeProfilePayload = {game: "poe", settings: exportSettings(settings)};
   return btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
 };
 
