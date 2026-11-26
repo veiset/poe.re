@@ -34,7 +34,8 @@
   height: 1px;
 }
 .share-preview h3::after,
-.share-page .filter-card-title-divider {
+.share-page .filter-card-title-divider,
+.shared-profiles .filter-card-title-divider {
   background: var(--color-border);
 }
 .share-preview h3,
