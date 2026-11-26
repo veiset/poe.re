@@ -127,7 +127,7 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
             {section.label} <span className="favorite-dialog-help">({sectionInfo(section, settings)})</span>
           </label>)}
           {unchanged.length > 0 && <span className="favorite-dialog-help">
-            Nothing to share:<br/>{unchanged.map(({label}) => label).join(", ")}
+            No changes / nothing to share:<br/>{unchanged.map(({label}) => label).join(", ")}
           </span>}
         </div>
         <div className="favorite-dialog-error" role="alert">{error}</div>
