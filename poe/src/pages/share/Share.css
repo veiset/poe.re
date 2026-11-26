@@ -45,8 +45,18 @@
 .share-preview td {
   color: var(--color-text-muted);
 }
+.share-heading {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 20px 0 24px;
+}
+/* The heading's own margins are uneven, which puts the button off its centre */
+.share-heading h1 {
+  margin: 0;
+}
 .share-import {
-  padding: 11px 26px;
+  padding: 7px 22px;
   border: 1px solid var(--color-correct);
   border-radius: 4px;
   background: var(--color-correct);

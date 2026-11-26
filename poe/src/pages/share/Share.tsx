@@ -86,7 +86,7 @@ export default function Share() {
 
   return (
     <div className="full-size">
-      <div style={{display: "flex", alignItems: "center", gap: 16}}>
+      <div className="share-heading">
         <h1>Shared profile</h1>
         {share && <button className="share-import" disabled={saving} onClick={openProfile}>Import profile</button>}
       </div>
