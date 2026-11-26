@@ -18,7 +18,6 @@ const mount = (path = `/share/${share.id}`) => {
   return render(<StrictMode><GeneratedDataProvider game="poe1"><BrowserRouter><Poe1Routes/></BrowserRouter></GeneratedDataProvider></StrictMode>);
 };
 const open = () => screen.findByRole("button", {name: "Open"});
-const row = (label: string) => screen.getByText(`${label}:`).nextElementSibling!;
 
 describe("Share page", () => {
   beforeEach(async () => {
@@ -55,12 +54,12 @@ describe("Share page", () => {
     mount();
     await open();
     expect(fetch).toHaveBeenCalledWith(`/api/share/${share.id}`);
-    expect(row("Name")).toHaveTextContent(name);
-    expect(row("Author")).toHaveTextContent("veiset");
-    expect(row("Description").textContent).toBe(share.description);
-    expect(row("Shared")).toHaveTextContent("2026-11-20");
-    expect(row("Language")).toHaveTextContent("FRENCH");
-    expect(row("Selected map mods")).toHaveTextContent("4");
+    expect(screen.getByRole("heading", {name})).toBeInTheDocument();
+    expect(document.querySelector(".share-meta")).toHaveTextContent("By veiset · Shared 2026-11-20 · from poe.re · 🇫🇷 French");
+    expect(document.querySelector(".share-description")!.textContent).toBe(share.description);
+    expect(screen.getAllByRole("listitem").map((item) => item.textContent)).toEqual(expect.arrayContaining([
+      "Map mods (4 mods, quantity 80, pack size 35)", "Tattoo (1 setting changed)",
+    ]));
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });
@@ -85,7 +84,7 @@ describe("Share page", () => {
     localStorage.setItem("profiles", JSON.stringify({...profiles(), [name]: {...defaultSettings, name}}));
     mount();
     const button = await open();
-    expect(row("Name")).toHaveTextContent(`${name} (2)`);
+    expect(screen.getByRole("heading", {name: `${name} (2)`})).toBeInTheDocument();
     fireEvent.click(button);
     expect(profiles()[name].map.badIds).toEqual([]);
     expect(profiles()[`${name} (2)`]).toMatchObject({name: `${name} (2)`, map: {badIds: ids}});
@@ -104,9 +103,9 @@ describe("Share page", () => {
     answer.body = {...share, author: "<img src=x onerror=alert(1)>", description: {html: "<b>x</b>"}};
     mount();
     await open();
-    expect(row("Author")).toHaveTextContent("<img src=x onerror=alert(1)>");
-    expect(document.querySelector(".profile-metadata-grid img")).toBeNull();
-    expect(screen.queryByText("Description:")).toBeNull();
+    expect(document.querySelector(".share-meta")).toHaveTextContent("By <img src=x onerror=alert(1)> ·");
+    expect(document.querySelector(".share-preview img")).toBeNull();
+    expect(document.querySelector(".share-description")).toBeNull();
   });
 
   it.each([

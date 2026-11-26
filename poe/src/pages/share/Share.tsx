@@ -2,6 +2,9 @@ import React, {useEffect, useState} from "react";
 import {Link, useParams} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import "@shared/components/profile/Profile.css";
+import "./Share.css";
+import {profileContents} from "@poe/components/profile/ShareDialog";
+import {GGPKLanguage} from "@poe/utils/Languages";
 import {readProfile} from "@poe/components/profile/ProfileTransfer";
 import {migrateProfile} from "@poe/migration/migrations";
 import {availableProfileName} from "@poe/pages/import/PobCodesImport";
@@ -10,7 +13,8 @@ import type {SavedSettings} from "@poe/utils/SavedSettings";
 
 interface SharedProfile {
   profile: SavedSettings;
-  mapMods: number;
+  // What the profile holds, e.g. Map mods: "4 mods, quantity 80"
+  contents: {label: string, info: string}[];
   // Anyone can send these, so they are only ever shown as text
   author?: string;
   description?: string;
@@ -37,10 +41,8 @@ export async function loadShare(id: string): Promise<SharedProfile | string> {
     const shared = readProfile(share.profile);
     // If the migration fails, the profile is saved on its old version and migrated on the next visit
     const profile = await migrateProfile(shared).catch(() => shared);
-    const mapMods = profile.map.goodIds.length + profile.map.badIds.length;
-    if (!Number.isInteger(mapMods)) return "This share's profile is not valid.";
     return {
-      profile, mapMods, author: text(share.author), description: text(share.description),
+      profile, contents: profileContents(profile), author: text(share.author), description: text(share.description),
       source: text(share.source), createdAt: text(share.createdAt),
     };
   } catch {
@@ -79,16 +81,12 @@ export default function Share() {
     }
   }
 
-  const rows = share ? [
-    ["Name", availableProfileName(share.profile.name)],
-    ["Author", share.author],
-    ["Description", share.description],
-    ["Source", share.source],
-    ["Shared", share.createdAt?.slice(0, 10)],
-    ["Language", share.profile.language],
-    ["Selected map mods", share.mapMods],
-    ["Favorites", share.profile.favorites.length],
-  ] as const : [];
+  const language = share && GGPKLanguage[share.profile.language];
+  const meta = share ? [
+    share.createdAt && `Shared ${share.createdAt.slice(0, 10)}`,
+    share.source && `from ${share.source}`,
+    language ? `${language.flag} ${language.name}` : share.profile.language,
+  ].filter(Boolean).join(" · ") : "";
 
   return (
     <div className="full-size">
@@ -97,10 +95,12 @@ export default function Share() {
         {error && <p role="alert">{error}</p>}
         {!share && !error && <p role="status">Loading the shared profile...</p>}
         {share && <>
-          <div className="profile-metadata-grid" style={{overflowWrap: "anywhere", whiteSpace: "pre-wrap"}}>
-            {rows.filter(([, value]) => value !== undefined).map(([label, value]) => <React.Fragment key={label}>
-              <span>{label}:</span><strong>{value}</strong>
-            </React.Fragment>)}
+          <div className="share-preview">
+            <h2>{availableProfileName(share.profile.name)}</h2>
+            <p className="share-meta">{share.author && <>By <strong>{share.author}</strong> · </>}{meta}</p>
+            {share.description && <p className="share-description">{share.description}</p>}
+            <h3>{share.contents.length > 0 ? "In this profile" : "This profile has no changes from the defaults"}</h3>
+            <ul>{share.contents.map(({label, info}) => <li key={label}>{label} <span>({info})</span></li>)}</ul>
           </div>
           <p>Open saves it as a new profile and selects it. Your other profiles are not changed.</p>
         </>}
