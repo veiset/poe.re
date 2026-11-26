@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {Link} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import dayjs from "dayjs";
@@ -19,6 +19,8 @@ interface SharedProfile {
 const sharedAgo = (createdAt: unknown): string =>
   typeof createdAt === "string" && dayjs(createdAt).isValid() ? dayjs(createdAt).fromNow() : "";
 
+const CHANGED_EVENT = "shared-profiles-changed";
+
 // With the app's prefix for its localStorage keys, e.g. "poe2."
 const storageKey = (storagePrefix: string) => `${storagePrefix}sharedProfiles`;
 
@@ -37,10 +39,17 @@ export const saveSharedProfile = (storagePrefix: string, id: string, name: strin
   localStorage.setItem(storageKey(storagePrefix), JSON.stringify([
     {id, name, createdAt: new Date().toISOString(), ...(description && {description})}, ...others,
   ]));
+  // The list may be on the page the share is made from
+  window.dispatchEvent(new Event(CHANGED_EVENT));
 };
 
 export default function SharedProfiles({storagePrefix}: {storagePrefix: string}) {
   const [shares, setShares] = useState(() => loadSharedProfiles(storagePrefix));
+  useEffect(() => {
+    const reload = () => setShares(loadSharedProfiles(storagePrefix));
+    window.addEventListener(CHANGED_EVENT, reload);
+    return () => window.removeEventListener(CHANGED_EVENT, reload);
+  }, [storagePrefix]);
   if (shares.length === 0) return null;
 
   // Takes the share off this list. It still exists, and its link still works.

@@ -72,6 +72,16 @@ describe("poe2 sharing", () => {
     expect(Object.keys(profiles())).toEqual(["default"]);
   });
 
+  it("lists a share made on the Favorites page at once", async () => {
+    localStorage.setItem("poe2.profiles", JSON.stringify({
+      default: {...defaultSettings, waystone: {...defaultSettings.waystone, tier: {min: 15, max: 16}}},
+    }));
+    mount("/favorites");
+    fireEvent.click(await screen.findByRole("button", {name: "Share"}, {timeout: 5000}));
+    fireEvent.click(screen.getAllByRole("button", {name: "Share"}).at(-1)!);
+    expect((await screen.findByText("default", {selector: "a strong"})).closest("a")).toHaveAttribute("href", "/share/newShare01");
+  });
+
   it("shares a profile from the Share button, and lists it under Favorites", async () => {
     localStorage.setItem("poe2.profiles", JSON.stringify({
       default: {...defaultSettings, waystone: {...defaultSettings.waystone, tier: {min: 15, max: 16}}},
