@@ -113,10 +113,10 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
         <label className="favorite-dialog-field">Profile name
           <input value={name} maxLength={50} onChange={(event) => setName(event.target.value)} required/>
         </label>
-        <label className="favorite-dialog-field">Author <span className="favorite-dialog-help">Optional</span>
+        <label className="favorite-dialog-field">Author
           <input value={author} maxLength={32} onChange={(event) => setAuthor(event.target.value)}/>
         </label>
-        <label className="favorite-dialog-field">Description <span className="favorite-dialog-help">Optional</span>
+        <label className="favorite-dialog-field">Description
           <textarea value={description} maxLength={500} onChange={(event) => setDescription(event.target.value)}/>
         </label>
         <div className="favorite-dialog-field">Share
