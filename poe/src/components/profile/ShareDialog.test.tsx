@@ -64,6 +64,23 @@ describe("Share dialog", () => {
     });
   });
 
+  it("remembers the author of a share, and fills it in the next time", async () => {
+    fireEvent.change(screen.getByLabelText(/Author/), {target: {value: " veiset "}});
+    share();
+    await screen.findByRole("button", {name: "Copy link"});
+    cleanup();
+    render(<ShareDialog settings={settings} onClose={() => {}}/>);
+    expect(screen.getByLabelText(/Author/)).toHaveValue("veiset");
+  });
+
+  it("does not remember the author of a share that was refused", async () => {
+    answer = {status: 400, body: {error: "author is too long"}};
+    fireEvent.change(screen.getByLabelText(/Author/), {target: {value: "veiset"}});
+    share();
+    await screen.findByText("author is too long");
+    expect(localStorage.getItem("shareAuthor")).toBeNull();
+  });
+
   it("enables Share only when a section is ticked", () => {
     [/Map mods/, /Gems/, /Tattoo/].forEach((name) => fireEvent.click(section(name)));
     expect(screen.getByRole("button", {name: "Share"})).toBeDisabled();

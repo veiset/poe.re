@@ -67,7 +67,8 @@ interface ShareDialogProps {
 
 export default function ShareDialog({settings, onClose}: ShareDialogProps) {
   const [name, setName] = useState(settings.name);
-  const [author, setAuthor] = useState("");
+  // The author of the last share made in this browser
+  const [author, setAuthor] = useState(() => localStorage.getItem("shareAuthor") ?? "");
   const [description, setDescription] = useState("");
   const [excluded, setExcluded] = useState<SectionKey[]>([]);
   const [error, setError] = useState("");
@@ -99,6 +100,7 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
       if (response.ok && typeof answer.id === "string") {
         setLink(`${window.location.origin}/share/${answer.id}`);
         saveSharedProfile(answer.id, shared.name);
+        localStorage.setItem("shareAuthor", author.trim());
       } else setError(typeof answer.error === "string" ? answer.error : "Could not share the profile. Try again later.");
     } catch {
       setError("Could not share the profile. Try again later.");
