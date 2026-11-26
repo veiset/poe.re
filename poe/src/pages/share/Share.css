@@ -45,26 +45,39 @@
   margin: 0;
   white-space: pre-wrap;
 }
+/* Each row is its label, a faint dotted leader, and its value at the right edge */
 .share-preview table {
-  width: 100%;
+  display: block;
   margin: 0 0 8px;
-  border-collapse: collapse;
+}
+.share-preview tbody {
+  display: block;
+}
+.share-preview tr {
+  display: flex;
+  align-items: baseline;
+  padding: 4px 0;
 }
 .share-preview th,
 .share-preview td {
-  padding: 7px 0;
-  border-bottom: 1px solid var(--color-border);
-  text-align: left;
+  padding: 0;
   font-weight: normal;
-  vertical-align: top;
 }
 .share-preview th {
-  width: 1%;
-  padding-right: 32px;
+  flex: 1;
+  display: flex;
+  align-items: baseline;
   white-space: nowrap;
+}
+.share-preview th::after {
+  content: "";
+  flex: 1;
+  margin: 0 10px;
+  border-bottom: 1px dotted var(--color-border-strong);
 }
 .share-preview td {
   color: var(--color-text-muted);
+  text-align: right;
 }
 .share-heading {
   display: flex;
