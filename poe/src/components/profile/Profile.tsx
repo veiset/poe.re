@@ -11,7 +11,8 @@ import {
 import {defaultSettings} from "../../utils/SavedSettings";
 import {ProfileContext} from "./ProfileContext";
 import {GGPKLanguage, GGPKLanguageData} from "../../utils/Languages";
-import ShareDialog from "./ShareDialog";
+import ShareDialog from "@shared/components/share/ShareDialog";
+import {poeShare} from "../../pages/share/shareConfig";
 import LeagueSelect from "@shared/components/LeagueSelect";
 import {useLocation, useNavigate} from "react-router-dom";
 import type {Language} from "@shared/typedefs/Language";
@@ -201,7 +202,7 @@ const Profile = (props: ProfileProps) => {
       </select>
       <div className="profile-actions">
         <button className="import-button" onClick={() => setShowShare(true)}>Share</button>
-        {showShare && <ShareDialog settings={loadSettings(profile)} onClose={() => setShowShare(false)}/>}
+        {showShare && <ShareDialog config={poeShare} settings={loadSettings(profile)} onClose={() => setShowShare(false)}/>}
       </div>
 
     </div>

@@ -9,11 +9,12 @@ interface SharedProfile {
   createdAt: string;
 }
 
-const STORAGE_KEY = "sharedProfiles";
+// With the app's prefix for its localStorage keys, e.g. "poe2."
+const storageKey = (storagePrefix: string) => `${storagePrefix}sharedProfiles`;
 
-export const loadSharedProfiles = (): SharedProfile[] => {
+export const loadSharedProfiles = (storagePrefix: string): SharedProfile[] => {
   try {
-    const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "[]");
+    const stored = JSON.parse(localStorage.getItem(storageKey(storagePrefix)) ?? "[]");
     return Array.isArray(stored) ? stored.filter((share) => typeof share?.id === "string") : [];
   } catch {
     return [];
@@ -21,13 +22,13 @@ export const loadSharedProfiles = (): SharedProfile[] => {
 };
 
 /** Puts the share first in the list. Sharing the same profile again answers the same id, which is kept once. */
-export const saveSharedProfile = (id: string, name: string): void => {
-  const others = loadSharedProfiles().filter((share) => share.id !== id);
-  localStorage.setItem(STORAGE_KEY, JSON.stringify([{id, name, createdAt: new Date().toISOString()}, ...others]));
+export const saveSharedProfile = (storagePrefix: string, id: string, name: string): void => {
+  const others = loadSharedProfiles(storagePrefix).filter((share) => share.id !== id);
+  localStorage.setItem(storageKey(storagePrefix), JSON.stringify([{id, name, createdAt: new Date().toISOString()}, ...others]));
 };
 
-export default function SharedProfiles() {
-  const shares = loadSharedProfiles();
+export default function SharedProfiles({storagePrefix}: {storagePrefix: string}) {
+  const shares = loadSharedProfiles(storagePrefix);
   if (shares.length === 0) return null;
   return (
     <div style={{padding: "0 14px 40px"}}>

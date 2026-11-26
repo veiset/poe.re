@@ -6,6 +6,7 @@ import {ProfileContext} from "@poe/components/profile/ProfileContext";
 import {loadMapMods} from "@poe/utils/loadData";
 import {loadProfileNames, setSelectedProfile, updateSettings} from "@poe/utils/LocalStorage";
 import {defaultSettings} from "@poe/utils/SavedSettings";
+import {availableProfileName as availableName} from "@shared/components/profile/availableProfileName";
 import type {MapModsRegex} from "@shared/typedefs/poe1/MapMods";
 
 export function readImport(search: string): {excludeIds: number[], name: string} | null {
@@ -28,17 +29,7 @@ export function readImport(search: string): {excludeIds: number[], name: string}
   }
 }
 
-export function availableProfileName(baseName: string): string {
-  const names = loadProfileNames();
-  let name = baseName;
-  let suffix = 2;
-  // __proto__ cannot be stored as a profile key by the existing storage helper.
-  while (names.includes(name) || name === "__proto__") {
-    const ending = ` (${suffix++})`;
-    name = Array.from(baseName).slice(0, 50 - ending.length).join("") + ending;
-  }
-  return name;
-}
+const availableProfileName = (baseName: string) => availableName(baseName, loadProfileNames());
 
 export default function PobCodesImport() {
   const {lang} = useContext(ProfileContext);

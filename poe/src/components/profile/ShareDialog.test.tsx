@@ -2,7 +2,8 @@ import React from "react";
 import {afterEach, beforeEach, describe, expect, it, vi} from "vitest";
 import {cleanup, fireEvent, render, screen} from "@testing-library/react";
 import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
-import ShareDialog from "./ShareDialog";
+import ShareDialog from "@shared/components/share/ShareDialog";
+import {poeShare} from "../../pages/share/shareConfig";
 
 const settings: SavedSettings = {
   ...defaultSettings, name: "maps", language: "FRENCH",
@@ -20,7 +21,7 @@ describe("Share dialog", () => {
     localStorage.clear();
     answer = {status: 201, body: {id: "27ykeY8dL7"}};
     vi.stubGlobal("fetch", vi.fn(async () => ({ok: answer.status < 400, status: answer.status, json: async () => answer.body})));
-    render(<ShareDialog settings={settings} onClose={() => {}}/>);
+    render(<ShareDialog config={poeShare} settings={settings} onClose={() => {}}/>);
   });
   afterEach(() => {
     cleanup();
@@ -77,7 +78,7 @@ describe("Share dialog", () => {
     share();
     await screen.findByRole("button", {name: "Copy link"});
     cleanup();
-    render(<ShareDialog settings={settings} onClose={() => {}}/>);
+    render(<ShareDialog config={poeShare} settings={settings} onClose={() => {}}/>);
     expect(screen.getByLabelText(/Author/)).toHaveValue("veiset");
   });
 

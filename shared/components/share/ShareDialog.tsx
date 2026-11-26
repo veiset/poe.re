@@ -1,97 +1,46 @@
 import React, {useState} from "react";
 import "@shared/components/favorites/FavoriteDialog.css";
-import {createProfileDelta} from "@shared/components/profile/ProfileDelta";
-import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
-import {exportSettings} from "./ProfileTransfer";
-import {saveSharedProfile} from "../../pages/share/SharedProfiles";
+import {sectionInfo} from "./ShareConfig";
+import type {ShareConfig} from "./ShareConfig";
+import {saveSharedProfile} from "./SharedProfiles";
 
-type SectionKey = keyof Omit<SavedSettings, "name" | "language" | "version">;
-
-interface Section {
-  key: SectionKey;
-  label: string;
-  // What the section holds, e.g. "4 mods". Without it, the number of changed settings is shown.
-  info?: (settings: SavedSettings) => (string | false)[];
-}
-
-const count = (n: number, noun: string) => n > 0 && `${n} ${noun}${n === 1 ? "" : "s"}`;
-
-// The pages of the site. Settings of removed pages (boat, expedition, scarab, flask, item) are not shared.
-const sections: Section[] = [
-  {key: "favorites", label: "Favorites", info: ({favorites}) => [count(favorites.length, "favorite")]},
-  {key: "vendor", label: "Vendor"},
-  {key: "gems", label: "Gems", info: ({gems}) => [count(gems.selected.length, "gem")]},
-  {key: "map", label: "Map mods", info: ({map}) => [
-    count(map.goodIds.length + map.badIds.length, "mod"),
-    map.quantity && `quantity ${map.quantity}`,
-    map.packsize && `pack size ${map.packsize}`,
-  ]},
-  {key: "itemCrafting", label: "Items", info: ({itemCrafting}) => [
-    count(Object.keys(itemCrafting.selectedRareMods).length + itemCrafting.selectedMagicMods.length, "mod"),
-  ]},
-  {key: "heist", label: "Heist"},
-  {key: "beast", label: "Bestiary"},
-  {key: "tattoo", label: "Tattoo"},
-  {key: "runegraft", label: "Runegraft"},
-  {key: "ultimatum", label: "Ultimatum", info: ({ultimatum}) => [
-    count(ultimatum.avoidModifiers.length, "avoided modifier"),
-    count(ultimatum.rewards.length, "reward"),
-    count(ultimatum.sacrifices.length, "sacrifice"),
-  ]},
-];
-
-const changedSettings = (delta: unknown): number =>
-  delta && typeof delta === "object" && !Array.isArray(delta)
-    ? Object.values(delta).reduce<number>((sum, value) => sum + changedSettings(value), 0)
-    : 1;
-
-// Undefined for a section that is as the defaults, which has nothing to share
-const sectionInfo = (section: Section, settings: SavedSettings): string[] | undefined => {
-  const delta = createProfileDelta(settings[section.key], defaultSettings[section.key]);
-  if (delta === undefined) return undefined;
-  const info = (section.info?.(settings) ?? []).filter((part) => part !== false && part !== "");
-  return info.length > 0 ? info as string[] : [count(changedSettings(delta), "setting") + " changed"];
-};
-
-/** The sections of a profile that differ from the defaults, with what each holds. */
-export const profileContents = (settings: SavedSettings): {key: string, label: string, info: string[]}[] =>
-  sections.flatMap((section) => {
-    const info = sectionInfo(section, settings);
-    return info === undefined ? [] : [{key: section.key, label: section.label, info}];
-  });
-
-interface ShareDialogProps {
-  settings: SavedSettings;
+interface ShareDialogProps<Settings extends {name: string}> {
+  config: ShareConfig<Settings>;
+  settings: Settings;
   onClose: () => void;
 }
 
-export default function ShareDialog({settings, onClose}: ShareDialogProps) {
+/** Shares the parts of a profile that the user ticks, and shows the link to the share. */
+export default function ShareDialog<Settings extends {name: string}>({config, settings, onClose}: ShareDialogProps<Settings>) {
+  const {sections} = config;
+  const authorKey = `${config.storagePrefix}shareAuthor`;
   const [name, setName] = useState(settings.name);
   // The author of the last share made in this browser
-  const [author, setAuthor] = useState(() => localStorage.getItem("shareAuthor") ?? "");
+  const [author, setAuthor] = useState(() => localStorage.getItem(authorKey) ?? "");
   const [description, setDescription] = useState("");
-  const [excluded, setExcluded] = useState<SectionKey[]>([]);
+  const [excluded, setExcluded] = useState<string[]>([]);
   const [error, setError] = useState("");
   const [sharing, setSharing] = useState(false);
   const [link, setLink] = useState("");
   const [copied, setCopied] = useState(false);
 
-  const changed = sections.filter((section) => sectionInfo(section, settings) !== undefined);
+  const changed = sections.filter((section) => sectionInfo(config, section, settings) !== undefined);
   const unchanged = sections.filter((section) => !changed.includes(section));
 
   const share = async (event: React.FormEvent) => {
     event.preventDefault();
     setSharing(true);
     setError("");
-    const shared: SavedSettings = {...defaultSettings, name: name.trim(), language: settings.language, version: settings.version};
-    sections.filter(({key}) => !excluded.includes(key))
-      .forEach(({key}) => { (shared as unknown as Record<string, unknown>)[key] = settings[key]; });
+    // The defaults, with the ticked sections and what every share has
+    const shared: Settings = {...config.defaultSettings, name: name.trim()};
+    [...config.keep, ...sections.map(({key}) => key).filter((key) => !excluded.includes(key))]
+      .forEach((key) => { shared[key] = settings[key]; });
     try {
       const response = await fetch("/api/share", {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({
-          profile: exportSettings(shared), source: "poe.re",
+          profile: config.exportSettings(shared), source: config.site,
           ...(author.trim() && {author: author.trim()}),
           ...(description.trim() && {description: description.trim()}),
         }),
@@ -99,8 +48,8 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
       const answer = await response.json().catch(() => ({}));
       if (response.ok && typeof answer.id === "string") {
         setLink(`${window.location.origin}/share/${answer.id}`);
-        saveSharedProfile(answer.id, shared.name);
-        localStorage.setItem("shareAuthor", author.trim());
+        saveSharedProfile(config.storagePrefix, answer.id, shared.name);
+        localStorage.setItem(authorKey, author.trim());
       } else setError(typeof answer.error === "string" ? answer.error : "Could not share the profile. Try again later.");
     } catch {
       setError("Could not share the profile. Try again later.");
@@ -142,7 +91,7 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
             <input type="checkbox" style={{width: "auto", marginRight: 8}} checked={!excluded.includes(section.key)}
                    onChange={() => setExcluded(excluded.includes(section.key)
                      ? excluded.filter((key) => key !== section.key) : [...excluded, section.key])}/>
-            {section.label} <span className="favorite-dialog-help">({sectionInfo(section, settings)?.join(", ")})</span>
+            {section.label} <span className="favorite-dialog-help">({sectionInfo(config, section, settings)?.join(", ")})</span>
           </label>)}
           {unchanged.length > 0 && <span className="favorite-dialog-help">
             No changes / nothing to share:<br/>{unchanged.map(({label}) => label).join(", ")}
