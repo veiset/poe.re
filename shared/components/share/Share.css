@@ -130,35 +130,48 @@
   box-sizing: border-box;
   width: min(570px, 100%);
 }
-/* Each share is three lines: its name, when it was shared, and the start of its description */
+/* Each share is a card that links to its share page: its name, when it was shared, and the start of its description */
 .shared-profiles ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 10px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .shared-profiles li {
-  padding: 8px 0;
-}
-.shared-profiles li + li {
-  border-top: 1px solid var(--color-border);
+  min-width: 0;
 }
 .shared-profiles a {
-  overflow-wrap: anywhere;
-  color: var(--color-text-link);
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background: var(--color-area-2);
+  color: var(--color-text);
   text-decoration: none;
+  transition: border-color 0.15s ease;
 }
-.shared-profiles a:hover {
-  text-decoration: underline;
+.shared-profiles a:hover,
+.shared-profiles a:focus-visible {
+  border-color: var(--color-accent);
 }
-.shared-profiles li span {
+.shared-profiles a strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-weight: 600;
+  color: var(--color-text-link);
+}
+.shared-profiles a span {
   display: block;
   margin-top: 2px;
   color: var(--color-text-dim);
   font-size: 13px;
-  white-space: nowrap;
 }
-.shared-profiles li p {
-  margin: 4px 0 0;
+.shared-profiles a p {
+  margin: 6px 0 0;
   overflow: hidden;
   color: var(--color-text-muted);
   font-size: 13px;

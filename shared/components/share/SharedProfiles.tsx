@@ -47,9 +47,11 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
       <FilterCard title="Shared profiles">
         <ul>
           {shares.map(({id, name, createdAt, description}) => <li key={id}>
-            <Link to={`/share/${id}`}>{String(name)}</Link>
-            {sharedAgo(createdAt) && <span>{sharedAgo(createdAt)}</span>}
-            {typeof description === "string" && description && <p>{description}</p>}
+            <Link to={`/share/${id}`}>
+              <strong>{String(name)}</strong>
+              <span>{sharedAgo(createdAt)}</span>
+              {typeof description === "string" && description && <p>{description}</p>}
+            </Link>
           </li>)}
         </ul>
       </FilterCard>

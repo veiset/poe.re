@@ -88,6 +88,6 @@ describe("poe2 sharing", () => {
     });
     page.unmount();
     mount("/favorites");
-    expect(await screen.findByRole("link", {name: "default"})).toHaveAttribute("href", "/share/newShare01");
+    expect((await screen.findByText("default", {selector: "a strong"})).closest("a")).toHaveAttribute("href", "/share/newShare01");
   });
 });

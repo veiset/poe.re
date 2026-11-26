@@ -134,7 +134,7 @@ describe("Share page", () => {
     expect(Array.from(favorite.icon)).toHaveLength(4);
     page.unmount();
     mount("/favorites");
-    expect(await screen.findByRole("link", {name: html})).toHaveAttribute("href", `/share/${share.id}`);
+    expect((await screen.findByText(html, {selector: "a strong"})).closest("a")).toHaveAttribute("href", `/share/${share.id}`);
     await screen.findByRole("option", {name: html});
     expect(document.querySelectorAll("main img[src='x'], script:not([src])")).toHaveLength(0);
     expect(document.querySelectorAll("a[href^='javascript']")).toHaveLength(0);
@@ -171,8 +171,8 @@ describe("Share page", () => {
   it("lists the shares made in this browser under Favorites, linking to their share page", async () => {
     localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name, createdAt: share.createdAt, description: share.description}]));
     mount("/favorites");
-    const link = await screen.findByRole("link", {name});
-    expect(link.parentElement).toHaveTextContent(new RegExp(`^${name}.+ agoT17 juicing, 8-mod maps\\.`));
+    const link = (await screen.findByText(name, {selector: "a strong"})).closest("a")!;
+    expect(link).toHaveTextContent(new RegExp(`^${name}.+ agoT17 juicing, 8-mod maps\\.`));
     fireEvent.click(link);
     await open();
     expect(window.location.pathname).toBe(`/share/${share.id}`);
