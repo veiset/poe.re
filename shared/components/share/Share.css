@@ -130,7 +130,7 @@
   box-sizing: border-box;
   width: min(570px, 100%);
 }
-/* Each share is its name and when it was shared, and under them the start of its description */
+/* Each share is three lines: its name, when it was shared, and the start of its description */
 .shared-profiles ul {
   margin: 0;
   padding: 0;
@@ -151,13 +151,14 @@
   text-decoration: underline;
 }
 .shared-profiles li span {
-  margin-left: 12px;
+  display: block;
+  margin-top: 2px;
   color: var(--color-text-dim);
   font-size: 13px;
   white-space: nowrap;
 }
 .shared-profiles li p {
-  margin: 2px 0 0;
+  margin: 4px 0 0;
   overflow: hidden;
   color: var(--color-text-muted);
   font-size: 13px;
