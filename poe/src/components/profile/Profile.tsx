@@ -8,13 +8,11 @@ import {
   selectedProfile,
   setSelectedProfile
 } from "../../utils/LocalStorage";
-import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
+import {defaultSettings} from "../../utils/SavedSettings";
 import {ProfileContext} from "./ProfileContext";
 import {GGPKLanguage, GGPKLanguageData} from "../../utils/Languages";
-import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
-import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
-import {decodeProfile, encodeProfile} from "./ProfileTransfer";
-import {migrateProfile} from "../../migration/migrations";
+import ShareDialog from "@shared/components/share/ShareDialog";
+import {poeShare} from "../../pages/share/shareConfig";
 import LeagueSelect from "@shared/components/LeagueSelect";
 import {useLocation, useNavigate} from "react-router-dom";
 import type {Language} from "@shared/typedefs/Language";
@@ -32,8 +30,7 @@ const Profile = (props: ProfileProps) => {
   const [showNew, setShowNew] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
   const [showDelete, setShowDelete] = useState(false);
-  const [showExport, setShowExport] = useState(false);
-  const [showImport, setShowImport] = useState(false);
+  const [showShare, setShowShare] = useState(false);
   const [editName, setEditName] = useState("");
   const [copyCurrentProfile, setCopyCurrentProfile] = useState(false);
   const [warning, setWarning] = useState<string | undefined>(undefined);
@@ -52,8 +49,6 @@ const Profile = (props: ProfileProps) => {
         setShowNew(false);
         setShowDelete(false);
         setShowEdit(false);
-        setShowExport(false);
-        setShowImport(false);
       }
       if (event.key === 'Enter') {
         if (showNew) confirmAdd();
@@ -119,21 +114,6 @@ const Profile = (props: ProfileProps) => {
     deleteProfile(profile);
     setShowDelete(false);
   }
-
-  const handleImportProfile = (importedSettings: SavedSettings) => {
-    // If the migration fails, the profile is saved on its old version and migrated on the next visit
-    migrateProfile(importedSettings).catch(() => importedSettings).then((migrated) => {
-      console.log(`Saving profile: ${migrated.name}`);
-
-      if (!profiles.includes(migrated.name)) {
-        setProfiles(profiles.concat(migrated.name));
-      }
-
-      setProfile(migrated.name);
-      saveSettings(migrated);
-      setShowImport(false);
-    });
-  };
 
   return (
     <div className="profile-container">
@@ -220,27 +200,8 @@ const Profile = (props: ProfileProps) => {
         ))}
       </select>
       <div className="profile-actions">
-        <button className="export-button" onClick={() => {
-          setShowImport(false);
-          setShowExport(true);
-        }}>Export</button>
-        <button className="import-button" onClick={() => {
-          setShowExport(false);
-          setShowImport(true);
-        }}>Import</button>
-
-        {showExport &&
-          <ProfileExportBox settings={loadSettings(profile)} setShow={setShowExport} encode={encodeProfile} />
-        }
-        {showImport &&
-          <ProfileImportBox setShow={setShowImport} existingProfiles={profiles} onImport={handleImportProfile}
-                            decode={decodeProfile} expectedGame="poe" metadata={(settings) => [
-                              {label: "Name", value: settings.name},
-                              {label: "Language", value: settings.language || "Not specified"},
-                              {label: "Selected map mods", value: settings.map.goodIds.length + settings.map.badIds.length},
-                              {label: "Schema version", value: settings.version || "Not specified"},
-                            ]} />
-        }
+        <button className="import-button" onClick={() => setShowShare(true)}>Share</button>
+        {showShare && <ShareDialog config={poeShare} settings={loadSettings(profile)} onClose={() => setShowShare(false)}/>}
       </div>
 
     </div>

@@ -1,0 +1,221 @@
+.share-page {
+  box-sizing: border-box;
+  max-width: 632px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+.share-preview {
+  overflow-wrap: anywhere;
+}
+.share-preview h2 {
+  margin: 4px 0 6px;
+  padding: 0;
+}
+.share-meta {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+/* Description and Categories look as the card's own title, Profile, and all three are tinted */
+.share-preview h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 10px;
+  padding: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.share-preview h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+}
+.share-preview h3::after,
+.share-page .filter-card-title-divider,
+.shared-profiles .filter-card-title-divider {
+  background: var(--color-border);
+}
+.share-preview h3,
+.share-page .filter-card-title {
+  color: var(--color-text-link);
+}
+.share-description {
+  margin: 0;
+  white-space: pre-wrap;
+}
+/* Each row is a category and what it holds, one chip for each part */
+.share-categories {
+  margin: 0 0 8px;
+  padding: 0;
+  list-style: none;
+}
+.share-categories li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+  padding: 5px 0;
+}
+.share-categories strong {
+  flex: 0 0 104px;
+  font-weight: normal;
+}
+.share-categories span {
+  padding: 2px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-area-2);
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+.share-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin: 28px 0 20px;
+}
+/* The heading's own margins are uneven, which puts the button off its centre, and its padding indents it from the card */
+.share-heading h1 {
+  margin: 0;
+  padding: 0;
+}
+.share-import {
+  padding: 7px 22px;
+  border: 1px solid var(--color-correct);
+  border-radius: 4px;
+  background: var(--color-correct);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.share-import:hover {
+  filter: brightness(1.15);
+}
+.share-import:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.share-api-docs {
+  margin: 10px 2px 0;
+  color: var(--color-text-dim);
+  font-size: 12px;
+}
+.share-api-docs a {
+  color: var(--color-text-link);
+}
+.shared-profiles {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 14px 40px;
+}
+.shared-profiles .filter-card {
+  box-sizing: border-box;
+  width: min(570px, 100%);
+}
+/* Each share is a card that links to its share page: its name, when it was shared, and the start of its description */
+.shared-profiles ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.shared-profiles li {
+  position: relative;
+  min-width: 0;
+}
+/* On the card's right side. It is not in the link, so it doesn't open the share. */
+.shared-profiles li button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: none;
+  color: var(--color-text-dim);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.shared-profiles li button:hover,
+.shared-profiles li button:focus-visible {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+.shared-profiles a {
+  display: block;
+  box-sizing: border-box;
+  height: 100%;
+  padding: 8px 84px 8px 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+.shared-profiles a:hover,
+.shared-profiles a:focus-visible {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: var(--color-accent);
+}
+.shared-profiles a strong {
+  display: block;
+  overflow-wrap: anywhere;
+  font-weight: normal;
+  color: var(--color-deep-text);
+}
+.shared-profiles a span {
+  display: block;
+  margin-top: 2px;
+  color: var(--color-text-dim);
+  font-size: 13px;
+}
+.shared-profiles a p {
+  margin: 6px 0 0;
+  overflow: hidden;
+  color: var(--color-text-muted);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*
+ * An empty Favorites page fills the window to centre its "No favorites yet". With shared profiles under it, it is
+ * a compact box of the same width, above them: the star beside the heading, and the text left-aligned.
+ */
+main:has(+ .shared-profiles) {
+  display: block;
+  min-height: 0;
+  padding-bottom: 16px;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 4px 10px;
+  justify-self: start;
+  margin: 16px 0 0;
+  padding: 16px 18px;
+  text-align: left;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > * {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > [class$="favorites-empty-icon"] {
+  grid-column: 1;
+  font-size: 20px;
+  line-height: 1;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] > h2 {
+  grid-column: 2;
+  padding: 0;
+  font-size: 17px;
+}
