@@ -16,14 +16,27 @@
   color: var(--color-text-muted);
   font-size: 14px;
 }
+/* Description and Categories look as the card's own title, Profile, and all three are tinted */
 .share-preview h3 {
-  margin: 22px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 24px 0 10px;
   padding: 0;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.06em;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+}
+.share-preview h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, var(--color-border-soft), transparent);
+}
+.share-preview h3,
+.share-page .filter-card-title {
+  color: var(--color-text-link);
 }
 .share-description {
   margin: 0;
