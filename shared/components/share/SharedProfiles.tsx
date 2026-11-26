@@ -48,7 +48,7 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
         <ul>
           {shares.map(({id, name, createdAt, description}) => <li key={id}>
             <Link to={`/share/${id}`}>{String(name)}</Link>
-            <span>{sharedAgo(createdAt)}</span>
+            {sharedAgo(createdAt) && <span>, {sharedAgo(createdAt)}</span>}
             {typeof description === "string" && description && <p>{description}</p>}
           </li>)}
         </ul>

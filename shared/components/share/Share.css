@@ -130,17 +130,13 @@
   box-sizing: border-box;
   width: min(570px, 100%);
 }
-/* Each share is its name with when it was shared at the right edge, and under them the start of its description */
+/* Each share is its name and when it was shared, and under them the start of its description */
 .shared-profiles ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .shared-profiles li {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: baseline;
-  gap: 2px 16px;
   padding: 8px 0;
 }
 .shared-profiles li + li {
@@ -160,8 +156,7 @@
   white-space: nowrap;
 }
 .shared-profiles li p {
-  grid-column: 1 / -1;
-  margin: 0;
+  margin: 2px 0 0;
   overflow: hidden;
   color: var(--color-text-muted);
   font-size: 13px;
