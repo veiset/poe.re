@@ -45,3 +45,21 @@
 .share-preview td {
   color: var(--color-text-muted);
 }
+.share-import {
+  padding: 11px 26px;
+  border: 1px solid var(--color-correct);
+  border-radius: 4px;
+  background: var(--color-correct);
+  color: #fff;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.share-import:hover {
+  filter: brightness(1.15);
+}
+.share-import:disabled {
+  opacity: 0.6;
+  cursor: default;
+}

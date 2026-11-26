@@ -17,7 +17,7 @@ const mount = (path = `/share/${share.id}`) => {
   window.history.replaceState({idx: 0}, "", path);
   return render(<StrictMode><GeneratedDataProvider game="poe1"><BrowserRouter><Poe1Routes/></BrowserRouter></GeneratedDataProvider></StrictMode>);
 };
-const open = () => screen.findByRole("button", {name: "Import"});
+const open = () => screen.findByRole("button", {name: "Import profile"});
 
 describe("Share page", () => {
   beforeEach(async () => {
@@ -122,7 +122,7 @@ describe("Share page", () => {
     const before = localStorage.getItem("profiles");
     mount();
     expect(await screen.findByRole("alert")).toHaveTextContent(message);
-    expect(screen.queryByRole("button", {name: "Import"})).toBeNull();
+    expect(screen.queryByRole("button", {name: "Import profile"})).toBeNull();
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });

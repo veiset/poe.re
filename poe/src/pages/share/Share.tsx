@@ -88,7 +88,7 @@ export default function Share() {
     <div className="full-size">
       <div style={{display: "flex", alignItems: "center", gap: 16}}>
         <h1>Shared profile</h1>
-        {share && <button className="import-button" disabled={saving} onClick={openProfile}>Import</button>}
+        {share && <button className="share-import" disabled={saving} onClick={openProfile}>Import profile</button>}
       </div>
       <FilterCard title="Profile">
         {error && <p role="alert">{error}</p>}
