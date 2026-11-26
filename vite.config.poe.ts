@@ -10,8 +10,8 @@ export default mergeConfig(baseConfig, defineConfig({
   cacheDir: path.resolve(__dirname, 'node_modules/.vite/poe'),
   server: {
     fs: { allow: [path.resolve(__dirname)] },
-    // The share page fetches /api/share/<id>, which only poe.re serves
-    proxy: { '/api': { target: 'https://poe.re', changeOrigin: true } },
+    // The share page fetches /api/share/<id>, which only poe.re serves. SHARE_API points it at a local mock.
+    proxy: { '/api': { target: process.env.SHARE_API ?? 'https://poe.re', changeOrigin: true } },
   },
   build: {
     outDir: path.resolve(__dirname, 'dist/poe'),
