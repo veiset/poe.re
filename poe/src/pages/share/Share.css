@@ -45,7 +45,7 @@
   margin: 0;
   white-space: pre-wrap;
 }
-/* Each row is its label, a faint dotted leader up to the values' column, and its value */
+/* Each row is its label and its value, in two left-aligned columns */
 .share-preview table {
   display: block;
   margin: 0 0 8px;
@@ -62,24 +62,15 @@
 .share-preview td {
   padding: 0;
   font-weight: normal;
+  text-align: left;
 }
 .share-preview th {
   flex: 0 0 170px;
-  display: flex;
-  align-items: baseline;
   white-space: nowrap;
-}
-.share-preview th::after {
-  content: "";
-  flex: 1;
-  margin: 0 10px;
-  border-bottom: 1px dotted var(--color-border-strong);
-  opacity: 0.45;
 }
 .share-preview td {
   flex: 1;
   color: var(--color-text-muted);
-  text-align: left;
 }
 .share-heading {
   display: flex;
