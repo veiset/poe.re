@@ -1,6 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
+import "./Share.css";
 
 // The shares made in this browser. The profile itself is not kept: the share page fetches it by the id.
 interface SharedProfile {
@@ -31,7 +32,7 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
   const shares = loadSharedProfiles(storagePrefix);
   if (shares.length === 0) return null;
   return (
-    <div style={{padding: "0 14px 40px"}}>
+    <div className="shared-profiles">
       <FilterCard title="Shared profiles">
         <ul>
           {shares.map(({id, name, createdAt}) => <li key={id} style={{overflowWrap: "anywhere"}}>

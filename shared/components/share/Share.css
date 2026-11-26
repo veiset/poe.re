@@ -120,3 +120,15 @@
 .share-api-docs a {
   color: var(--color-text-link);
 }
+.shared-profiles {
+  padding: 0 14px 40px;
+}
+/* An empty Favorites page fills the window to centre its "No favorites yet". With shared profiles under it, it doesn't. */
+main:has(+ .shared-profiles) {
+  display: block;
+  min-height: 0;
+  padding-bottom: 24px;
+}
+main:has(+ .shared-profiles) > [class$="favorites-empty"] {
+  margin: 24px auto;
+}
