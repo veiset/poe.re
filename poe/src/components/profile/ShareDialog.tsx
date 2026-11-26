@@ -133,7 +133,7 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
         <div className="favorite-dialog-error" role="alert">{error}</div>
         <div className="favorite-dialog-actions">
           <button type="button" onClick={onClose}>Cancel</button>
-          <button className="favorite-dialog-save" type="submit" disabled={!name.trim() || sharing}>{sharing ? "Sharing…" : "Share"}</button>
+          <button className="favorite-dialog-save" type="submit" disabled={!name.trim() || sharing || changed.every(({key}) => excluded.includes(key))}>{sharing ? "Sharing…" : "Share"}</button>
         </div>
       </>}
     </form>

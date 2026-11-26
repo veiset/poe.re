@@ -62,6 +62,13 @@ describe("Share dialog", () => {
     });
   });
 
+  it("enables Share only when a section is ticked", () => {
+    [/Map mods/, /Gems/, /Tattoo/].forEach((name) => fireEvent.click(section(name)));
+    expect(screen.getByRole("button", {name: "Share"})).toBeDisabled();
+    fireEvent.click(section(/Gems/));
+    expect(screen.getByRole("button", {name: "Share"})).toBeEnabled();
+  });
+
   it("shows the API's error and no link when the share is refused", async () => {
     answer = {status: 429, body: {error: "Too many shares, try again in a minute"}};
     share();
