@@ -1,15 +1,18 @@
 import React, {useEffect, useState} from "react";
-import {Link, useParams} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import "@shared/components/profile/Profile.css";
 import "./Share.css";
 import {profileContents} from "@poe/components/profile/ShareDialog";
-import {GGPKLanguage} from "@poe/utils/Languages";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
 import {readProfile} from "@poe/components/profile/ProfileTransfer";
 import {migrateProfile} from "@poe/migration/migrations";
 import {availableProfileName} from "@poe/pages/import/PobCodesImport";
 import {setSelectedProfile, updateSettings} from "@poe/utils/LocalStorage";
 import type {SavedSettings} from "@poe/utils/SavedSettings";
+
+dayjs.extend(relativeTime);
 
 interface SharedProfile {
   profile: SavedSettings;
@@ -18,7 +21,6 @@ interface SharedProfile {
   // Anyone can send these, so they are only ever shown as text
   author?: string;
   description?: string;
-  source?: string;
   createdAt?: string;
 }
 
@@ -42,8 +44,7 @@ export async function loadShare(id: string): Promise<SharedProfile | string> {
     // If the migration fails, the profile is saved on its old version and migrated on the next visit
     const profile = await migrateProfile(shared).catch(() => shared);
     return {
-      profile, contents: profileContents(profile), author: text(share.author), description: text(share.description),
-      source: text(share.source), createdAt: text(share.createdAt),
+      profile, contents: profileContents(profile), author: text(share.author), description: text(share.description), createdAt: text(share.createdAt),
     };
   } catch {
     return "This share's profile is not valid.";
@@ -81,33 +82,25 @@ export default function Share() {
     }
   }
 
-  const language = share && GGPKLanguage[share.profile.language];
-  const meta = share ? [
-    share.createdAt && `Shared ${share.createdAt.slice(0, 10)}`,
-    share.source && `from ${share.source}`,
-    language ? `${language.flag} ${language.name}` : share.profile.language,
-  ].filter(Boolean).join(" · ") : "";
+  const shared = share?.createdAt && dayjs(share.createdAt).isValid() ? dayjs(share.createdAt).fromNow() : "";
 
   return (
     <div className="full-size">
       <h1>Shared profile</h1>
-      <FilterCard title="Profile">
+      <FilterCard title="Profile" headerControl={share &&
+        <button className="import-button" disabled={saving} onClick={openProfile}>Import</button>}>
         {error && <p role="alert">{error}</p>}
         {!share && !error && <p role="status">Loading the shared profile...</p>}
-        {share && <>
-          <div className="share-preview">
-            <h2>{availableProfileName(share.profile.name)}</h2>
-            <p className="share-meta">{share.author && <>By <strong>{share.author}</strong> · </>}{meta}</p>
-            {share.description && <p className="share-description">{share.description}</p>}
-            <h3>{share.contents.length > 0 ? "In this profile" : "This profile has no changes from the defaults"}</h3>
-            <ul>{share.contents.map(({label, info}) => <li key={label}>{label} <span>({info})</span></li>)}</ul>
-          </div>
-          <p>Open saves it as a new profile and selects it. Your other profiles are not changed.</p>
-        </>}
-        <div>
-          {share && <button className="import-button" disabled={saving} onClick={openProfile}>Open</button>}
-          <Link className="import-button" style={{backgroundColor: "#444e5b"}} to="/maps" replace>Cancel</Link>
-        </div>
+        {share && <div className="share-preview">
+          <h2>{availableProfileName(share.profile.name)}</h2>
+          <p className="share-meta">{[share.author && `by ${share.author}`, shared].filter(Boolean).join(", ")}</p>
+          {share.description && <p className="share-description">{share.description}</p>}
+          <table>
+            <tbody>
+              {share.contents.map(({label, info}) => <tr key={label}><th scope="row">{label}</th><td>{info}</td></tr>)}
+            </tbody>
+          </table>
+        </div>}
       </FilterCard>
     </div>
   );

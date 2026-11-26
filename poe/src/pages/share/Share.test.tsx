@@ -17,7 +17,7 @@ const mount = (path = `/share/${share.id}`) => {
   window.history.replaceState({idx: 0}, "", path);
   return render(<StrictMode><GeneratedDataProvider game="poe1"><BrowserRouter><Poe1Routes/></BrowserRouter></GeneratedDataProvider></StrictMode>);
 };
-const open = () => screen.findByRole("button", {name: "Open"});
+const open = () => screen.findByRole("button", {name: "Import"});
 
 describe("Share page", () => {
   beforeEach(async () => {
@@ -55,11 +55,11 @@ describe("Share page", () => {
     await open();
     expect(fetch).toHaveBeenCalledWith(`/api/share/${share.id}`);
     expect(screen.getByRole("heading", {name})).toBeInTheDocument();
-    expect(document.querySelector(".share-meta")).toHaveTextContent("By veiset · Shared 2026-11-20 · from poe.re · 🇫🇷 French");
+    expect(document.querySelector(".share-meta")).toHaveTextContent(/^by veiset, .+/);
     expect(document.querySelector(".share-description")!.textContent).toBe(share.description);
-    expect(screen.getAllByRole("listitem").map((item) => item.textContent)).toEqual(expect.arrayContaining([
-      "Map mods (4 mods, quantity 80, pack size 35)", "Tattoo (1 setting changed)",
-    ]));
+    expect(screen.getAllByRole("row").map((row) => row.textContent)).toEqual([
+      "Map mods4 mods, quantity 80, pack size 35", "Tattoo1 setting changed",
+    ]);
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });
@@ -103,7 +103,7 @@ describe("Share page", () => {
     answer.body = {...share, author: "<img src=x onerror=alert(1)>", description: {html: "<b>x</b>"}};
     mount();
     await open();
-    expect(document.querySelector(".share-meta")).toHaveTextContent("By <img src=x onerror=alert(1)> ·");
+    expect(document.querySelector(".share-meta")).toHaveTextContent("by <img src=x onerror=alert(1)>,");
     expect(document.querySelector(".share-preview img")).toBeNull();
     expect(document.querySelector(".share-description")).toBeNull();
   });
@@ -122,7 +122,7 @@ describe("Share page", () => {
     const before = localStorage.getItem("profiles");
     mount();
     expect(await screen.findByRole("alert")).toHaveTextContent(message);
-    expect(screen.queryByRole("button", {name: "Open"})).toBeNull();
+    expect(screen.queryByRole("button", {name: "Import"})).toBeNull();
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });
