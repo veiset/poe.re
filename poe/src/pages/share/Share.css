@@ -45,7 +45,7 @@
   margin: 0;
   white-space: pre-wrap;
 }
-/* Each row is its label and its value, in two left-aligned columns */
+/* Each row is a category and what it holds, one chip for each part */
 .share-preview table {
   display: block;
   margin: 0 0 8px;
@@ -56,7 +56,7 @@
 .share-preview tr {
   display: flex;
   align-items: baseline;
-  padding: 4px 0;
+  padding: 5px 0;
 }
 .share-preview th,
 .share-preview td {
@@ -65,12 +65,22 @@
   text-align: left;
 }
 .share-preview th {
-  flex: 0 0 170px;
+  flex: 0 0 110px;
   white-space: nowrap;
 }
 .share-preview td {
   flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.share-preview td span {
+  padding: 2px 9px;
+  border: 1px solid var(--color-border);
+  border-radius: 3px;
+  background: var(--color-area-2);
   color: var(--color-text-muted);
+  font-size: 13px;
 }
 .share-heading {
   display: flex;

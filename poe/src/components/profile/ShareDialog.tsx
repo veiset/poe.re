@@ -46,15 +46,15 @@ const changedSettings = (delta: unknown): number =>
     : 1;
 
 // Undefined for a section that is as the defaults, which has nothing to share
-const sectionInfo = (section: Section, settings: SavedSettings): string | undefined => {
+const sectionInfo = (section: Section, settings: SavedSettings): string[] | undefined => {
   const delta = createProfileDelta(settings[section.key], defaultSettings[section.key]);
   if (delta === undefined) return undefined;
-  const info = (section.info?.(settings) ?? []).filter(Boolean);
-  return info.length > 0 ? info.join(", ") : count(changedSettings(delta), "setting") + " changed";
+  const info = (section.info?.(settings) ?? []).filter((part) => part !== false && part !== "");
+  return info.length > 0 ? info as string[] : [count(changedSettings(delta), "setting") + " changed"];
 };
 
 /** The sections of a profile that differ from the defaults, with what each holds. */
-export const profileContents = (settings: SavedSettings): {label: string, info: string}[] =>
+export const profileContents = (settings: SavedSettings): {label: string, info: string[]}[] =>
   sections.flatMap((section) => {
     const info = sectionInfo(section, settings);
     return info === undefined ? [] : [{label: section.label, info}];
@@ -134,7 +134,7 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
             <input type="checkbox" style={{width: "auto", marginRight: 8}} checked={!excluded.includes(section.key)}
                    onChange={() => setExcluded(excluded.includes(section.key)
                      ? excluded.filter((key) => key !== section.key) : [...excluded, section.key])}/>
-            {section.label} <span className="favorite-dialog-help">({sectionInfo(section, settings)})</span>
+            {section.label} <span className="favorite-dialog-help">({sectionInfo(section, settings)?.join(", ")})</span>
           </label>)}
           {unchanged.length > 0 && <span className="favorite-dialog-help">
             No changes / nothing to share:<br/>{unchanged.map(({label}) => label).join(", ")}

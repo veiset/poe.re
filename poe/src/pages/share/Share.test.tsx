@@ -58,7 +58,7 @@ describe("Share page", () => {
     expect(document.querySelector(".share-meta")).toHaveTextContent(/^by veiset, .+/);
     expect(document.querySelector(".share-description")!.textContent).toBe(share.description);
     expect(screen.getAllByRole("row").map((row) => row.textContent)).toEqual([
-      "Map mods4 mods, quantity 80, pack size 35", "Tattoo1 setting changed",
+      "Map mods4 modsquantity 80pack size 35", "Tattoo1 setting changed",
     ]);
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");

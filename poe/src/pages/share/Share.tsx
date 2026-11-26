@@ -17,7 +17,7 @@ dayjs.extend(relativeTime);
 interface SharedProfile {
   profile: SavedSettings;
   // What the profile holds, e.g. Map mods: "4 mods, quantity 80"
-  contents: {label: string, info: string}[];
+  contents: {label: string, info: string[]}[];
   // Anyone can send these, so they are only ever shown as text
   author?: string;
   description?: string;
@@ -103,7 +103,7 @@ export default function Share() {
           <h3>Categories</h3>
           <table>
             <tbody>
-              {share.contents.map(({label, info}) => <tr key={label}><th scope="row">{label}</th><td>{info}</td></tr>)}
+              {share.contents.map(({label, info}) => <tr key={label}><th scope="row">{label}</th><td>{info.map((part) => <span key={part}>{part}</span>)}</td></tr>)}
             </tbody>
           </table>
         </div>}
