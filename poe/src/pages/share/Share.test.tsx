@@ -129,6 +129,16 @@ describe("Share page", () => {
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });
 
+  it("lists the shares made in this browser under Favorites, linking to their share page", async () => {
+    localStorage.setItem("sharedProfiles", JSON.stringify([{id: "27ykeY8dL7", name: "maps", createdAt: "2026-11-26T09:18:24.498Z"}]));
+    mount("/favorites");
+    const link = await screen.findByRole("link", {name: "maps"});
+    expect(link.parentElement).toHaveTextContent("maps · shared 2026-11-26");
+    fireEvent.click(link);
+    await open();
+    expect(window.location.pathname).toBe("/share/27ykeY8dL7");
+  });
+
   it("shows a message when the API can't be reached", async () => {
     answer.status = 0;
     mount();

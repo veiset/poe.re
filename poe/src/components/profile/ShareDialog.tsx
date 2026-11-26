@@ -3,6 +3,7 @@ import "@shared/components/favorites/FavoriteDialog.css";
 import {createProfileDelta} from "@shared/components/profile/ProfileDelta";
 import {defaultSettings, SavedSettings} from "../../utils/SavedSettings";
 import {exportSettings} from "./ProfileTransfer";
+import {saveSharedProfile} from "../../pages/share/SharedProfiles";
 
 type SectionKey = keyof Omit<SavedSettings, "name" | "language" | "version">;
 
@@ -88,8 +89,10 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
         }),
       });
       const answer = await response.json().catch(() => ({}));
-      if (response.ok && typeof answer.id === "string") setLink(`${window.location.origin}/share/${answer.id}`);
-      else setError(typeof answer.error === "string" ? answer.error : "Could not share the profile. Try again later.");
+      if (response.ok && typeof answer.id === "string") {
+        setLink(`${window.location.origin}/share/${answer.id}`);
+        saveSharedProfile(answer.id, shared.name);
+      } else setError(typeof answer.error === "string" ? answer.error : "Could not share the profile. Try again later.");
     } catch {
       setError("Could not share the profile. Try again later.");
     }

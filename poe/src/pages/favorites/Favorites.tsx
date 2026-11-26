@@ -8,6 +8,7 @@ import React, {
 } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { HeaderWithLanguage } from "@poe/components/Header";
+import SharedProfiles from "@poe/pages/share/SharedProfiles";
 import { FavoriteDialog } from "@shared/components/favorites/FavoriteDialog";
 import { FavoriteGroupDialog } from "@shared/components/favorites/FavoriteGroupDialog";
 import { StaticFavoriteDialog } from "@shared/components/favorites/StaticFavoriteDialog";
@@ -240,6 +241,7 @@ const Favorites = () => {
           </Suspense>
         )}
       </main>
+      <SharedProfiles />
       {details && detailsData && (
         <FavoriteDetailsDialog
           favorite={detailsData}

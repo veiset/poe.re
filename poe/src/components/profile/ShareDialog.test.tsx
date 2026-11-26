@@ -17,6 +17,7 @@ const share = () => fireEvent.click(screen.getByRole("button", {name: "Share"}))
 
 describe("Share dialog", () => {
   beforeEach(() => {
+    localStorage.clear();
     answer = {status: 201, body: {id: "27ykeY8dL7"}};
     vi.stubGlobal("fetch", vi.fn(async () => ({ok: answer.status < 400, status: answer.status, json: async () => answer.body})));
     render(<ShareDialog settings={settings} onClose={() => {}}/>);
@@ -38,6 +39,7 @@ describe("Share dialog", () => {
   it("shares the settings that differ from the defaults, and shows the link", async () => {
     share();
     expect(await screen.findByDisplayValue(`${window.location.origin}/share/27ykeY8dL7`)).toBeInTheDocument();
+    expect(JSON.parse(localStorage.getItem("sharedProfiles")!)).toEqual([{id: "27ykeY8dL7", name: "maps", createdAt: expect.any(String)}]);
     expect(fetch).toHaveBeenCalledWith("/api/share", expect.objectContaining({method: "POST", headers: {"Content-Type": "application/json"}}));
     expect(body()).toEqual({
       source: "poe.re",
@@ -74,6 +76,7 @@ describe("Share dialog", () => {
     share();
     expect(await screen.findByText("Too many shares, try again in a minute")).toBeInTheDocument();
     expect(screen.queryByRole("button", {name: "Copy link"})).toBeNull();
+    expect(localStorage.getItem("sharedProfiles")).toBeNull();
     expect(screen.getByRole("button", {name: "Share"})).toBeEnabled();
   });
 
