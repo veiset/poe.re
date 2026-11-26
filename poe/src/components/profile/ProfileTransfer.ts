@@ -30,9 +30,14 @@ export const decodeProfile = (value: string): SavedSettings => {
   if (payload.game && payload.game !== "poe") throw new Error("This is not a PoE profile export");
   if (!payload.game && "settings" in payload) throw new Error("Profile game is missing");
   const settings = payload.game === "poe" ? payload.settings : parsed;
-  if (!settings || typeof settings !== "object") throw new Error("Profile settings are missing");
 
   // Unwrapped exports are supported for backwards compatibility.
+  return readProfile(settings);
+};
+
+/** Fills a profile's exported settings in from the defaults. Throws when they are not a profile. */
+export const readProfile = (settings: unknown): SavedSettings => {
+  if (!settings || typeof settings !== "object" || Array.isArray(settings)) throw new Error("Profile settings are missing");
   const profile = hydrateProfileDelta(settings, defaultSettings) as SavedSettings;
   if (typeof profile.name !== "string" || !profile.name.trim()) {
     throw new Error("Profile name is missing");

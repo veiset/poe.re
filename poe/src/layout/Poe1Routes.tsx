@@ -7,6 +7,7 @@ import RemovedContent from "../pages/moved/RemovedContent";
 const {page, preload} = lazyPages();
 
 const PobCodesImport = page(() => import("../pages/import/PobCodesImport"));
+const Share = page(() => import("../pages/share/Share"));
 const Vendor = page(() => import("../pages/vendor/Vendor"));
 const OptimizedMapMods = page(() => import("../pages/maps/OptimizedMapMods"));
 const Item = page(() => import("../pages/item/Item"));
@@ -32,6 +33,7 @@ export const Poe1Routes = () => {
         <Route path="vendor" element={<Vendor/>}/>
         <Route path="gems" element={<Gems/>}/>
         <Route path="import-pob-codes" element={<PobCodesImport/>}/>
+        <Route path="share/:id" element={<Share/>}/>
         <Route path="maps" element={<OptimizedMapMods/>}/>
         <Route path="boat" element={
           <RemovedContent title="[Removed in 3.30] Boat" reason="The boat page is not available after patch 3.30."/>

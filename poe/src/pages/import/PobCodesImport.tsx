@@ -28,7 +28,7 @@ export function readImport(search: string): {excludeIds: number[], name: string}
   }
 }
 
-function availableProfileName(baseName: string): string {
+export function availableProfileName(baseName: string): string {
   const names = loadProfileNames();
   let name = baseName;
   let suffix = 2;
