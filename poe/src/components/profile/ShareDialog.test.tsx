@@ -64,6 +64,14 @@ describe("Share dialog", () => {
     });
   });
 
+  it("opens the share's page in a new tab", async () => {
+    const openWindow = vi.spyOn(window, "open").mockImplementation(() => null);
+    share();
+    fireEvent.click(await screen.findByRole("button", {name: "Open"}));
+    expect(openWindow).toHaveBeenCalledWith(`${window.location.origin}/share/27ykeY8dL7`, "_blank", "noopener");
+    openWindow.mockRestore();
+  });
+
   it("remembers the author of a share, and fills it in the next time", async () => {
     fireEvent.change(screen.getByLabelText(/Author/), {target: {value: " veiset "}});
     share();

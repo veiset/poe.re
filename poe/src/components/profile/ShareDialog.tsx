@@ -119,6 +119,12 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
         </label>
         <div className="favorite-dialog-actions">
           <button type="button" onClick={onClose}>Close</button>
+          <button type="button" onClick={() => window.open(link, "_blank", "noopener")}>
+            Open <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2"
+                      strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{verticalAlign: "-1px", marginLeft: 4}}>
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/>
+            </svg>
+          </button>
           <button className="favorite-dialog-save" type="button" onClick={copy}>{copied ? "Copied✓" : "Copy link"}</button>
         </div>
       </> : <>
