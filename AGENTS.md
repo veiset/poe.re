@@ -53,6 +53,8 @@ Profiles and favorites are saved in localStorage and migrated by version at star
 - Two dev servers of the same app in one checkout share its Vite cache (`node_modules/.vite/poe` or `poe2`) and break React ("Invalid hook call"). Run one at a time, or restart with `--force`.
 - Stopping a background `pnpm dev` can leave Vite running on port 3000, and the next dev server starts on 3001. Kill the old one by its command line.
 - Each PR gets a Cloudflare Pages preview, linked in the "Deploying ..." comment on the PR.
+- The share API (`/api/share`, https://poe.re/api) is only on poe.re. `pnpm dev` answers it from a mock (`poe/mockShareApi.ts`) with the shares in `poe/src/pages/share/shareFixtures.ts`, e.g. http://localhost:3000/share/mockT17map, and keeps new shares in memory. http://localhost:3000/api/mock/seed fills the "Shared profiles" list on Favorites with them. `SHARE_API=https://poe.re pnpm dev` uses the real API instead, for reading only: its docs say it refuses creates from other origins.
+- To compare a share on the local run and on poe.re, serve the same fixture on poe.re with playwright's `page.route("**/api/share/<id>", ...)`, so both show the same share.
 
 ## Verifying a change
 

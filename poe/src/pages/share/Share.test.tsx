@@ -4,18 +4,16 @@ import {cleanup, fireEvent, render, screen} from "@testing-library/react";
 import {BrowserRouter} from "react-router-dom";
 import {Poe1Routes} from "@poe/layout/Poe1Routes";
 import {defaultSettings} from "@poe/utils/SavedSettings";
+import {shareFixtures} from "./shareFixtures";
 import {loadGeneratedData} from "@shared/generatedData";
 import {GeneratedDataProvider} from "@shared/components/GeneratedData/GeneratedDataProvider";
 
-const ids = [246480838, -2064669900];
-const share = {
-  id: "27ykeY8dL7", game: "poe", source: "poe.re", author: "veiset", description: "T17 juicing\nsecond line",
-  createdAt: "2026-11-26T09:18:24.498Z", imports: 12,
-  profile: {name: "maps", version: 2, language: "FRENCH", map: {badIds: ids, quantity: "80"}},
-};
+const share = shareFixtures[0];
+const name = share.profile.name;
+const ids = share.profile.map.badIds;
 let answer: {status: number, body: unknown};
 const profiles = () => JSON.parse(localStorage.getItem("profiles")!);
-const mount = (path = "/share/27ykeY8dL7") => {
+const mount = (path = `/share/${share.id}`) => {
   window.history.replaceState({idx: 0}, "", path);
   return render(<StrictMode><GeneratedDataProvider game="poe1"><BrowserRouter><Poe1Routes/></BrowserRouter></GeneratedDataProvider></StrictMode>);
 };
@@ -56,13 +54,13 @@ describe("Share page", () => {
     const before = localStorage.getItem("profiles");
     mount();
     await open();
-    expect(fetch).toHaveBeenCalledWith("/api/share/27ykeY8dL7");
-    expect(row("Name")).toHaveTextContent("maps");
+    expect(fetch).toHaveBeenCalledWith(`/api/share/${share.id}`);
+    expect(row("Name")).toHaveTextContent(name);
     expect(row("Author")).toHaveTextContent("veiset");
-    expect(row("Description").textContent).toBe("T17 juicing\nsecond line");
-    expect(row("Shared")).toHaveTextContent("2026-11-26");
+    expect(row("Description").textContent).toBe(share.description);
+    expect(row("Shared")).toHaveTextContent("2026-11-20");
     expect(row("Language")).toHaveTextContent("FRENCH");
-    expect(row("Selected map mods")).toHaveTextContent("2");
+    expect(row("Selected map mods")).toHaveTextContent("4");
     expect(localStorage.getItem("profiles")).toBe(before);
     expect(localStorage.getItem("selectedProfile")).toBe("default");
   });
@@ -73,24 +71,25 @@ describe("Share page", () => {
     const button = await open();
     fireEvent.click(button);
     fireEvent.click(button);
-    expect(Object.keys(profiles())).toEqual(["default", "maps"]);
-    expect(profiles().maps).toEqual({
-      ...defaultSettings, name: "maps", language: "FRENCH",
-      map: {...defaultSettings.map, badIds: ids, quantity: "80"},
+    expect(Object.keys(profiles())).toEqual(["default", name]);
+    expect(profiles()[name]).toEqual({
+      ...defaultSettings, name, language: "FRENCH",
+      map: {...defaultSettings.map, ...share.profile.map},
+      tattoo: {...defaultSettings.tattoo, ...share.profile.tattoo},
     });
     expect(profiles().default).toEqual(old);
-    expect(localStorage.getItem("selectedProfile")).toBe("maps");
+    expect(localStorage.getItem("selectedProfile")).toBe(name);
   });
 
   it("keeps an existing profile of the same name, and opens the share beside it", async () => {
-    localStorage.setItem("profiles", JSON.stringify({...profiles(), maps: {...defaultSettings, name: "maps"}}));
+    localStorage.setItem("profiles", JSON.stringify({...profiles(), [name]: {...defaultSettings, name}}));
     mount();
     const button = await open();
-    expect(row("Name")).toHaveTextContent("maps (2)");
+    expect(row("Name")).toHaveTextContent(`${name} (2)`);
     fireEvent.click(button);
-    expect(profiles().maps.map.badIds).toEqual([]);
-    expect(profiles()["maps (2)"]).toMatchObject({name: "maps (2)", map: {badIds: ids}});
-    expect(localStorage.getItem("selectedProfile")).toBe("maps (2)");
+    expect(profiles()[name].map.badIds).toEqual([]);
+    expect(profiles()[`${name} (2)`]).toMatchObject({name: `${name} (2)`, map: {badIds: ids}});
+    expect(localStorage.getItem("selectedProfile")).toBe(`${name} (2)`);
   });
 
   it("migrates a share from an older version before it is saved", async () => {
@@ -130,13 +129,13 @@ describe("Share page", () => {
   });
 
   it("lists the shares made in this browser under Favorites, linking to their share page", async () => {
-    localStorage.setItem("sharedProfiles", JSON.stringify([{id: "27ykeY8dL7", name: "maps", createdAt: "2026-11-26T09:18:24.498Z"}]));
+    localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name, createdAt: share.createdAt}]));
     mount("/favorites");
-    const link = await screen.findByRole("link", {name: "maps"});
-    expect(link.parentElement).toHaveTextContent("maps · shared 2026-11-26");
+    const link = await screen.findByRole("link", {name});
+    expect(link.parentElement).toHaveTextContent(`${name} · shared 2026-11-20`);
     fireEvent.click(link);
     await open();
-    expect(window.location.pathname).toBe("/share/27ykeY8dL7");
+    expect(window.location.pathname).toBe(`/share/${share.id}`);
   });
 
   it("shows a message when the API can't be reached", async () => {
@@ -157,6 +156,6 @@ describe("Share page", () => {
     expect(localStorage.getItem("selectedProfile")).toBe("default");
     fail.mockRestore();
     fireEvent.click(button);
-    expect(localStorage.getItem("selectedProfile")).toBe("maps");
+    expect(localStorage.getItem("selectedProfile")).toBe(name);
   });
 });
