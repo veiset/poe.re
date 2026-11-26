@@ -87,11 +87,11 @@ export default function Share() {
   return (
     <div className="full-size">
       <h1>Shared profile</h1>
-      <FilterCard title="Profile" headerControl={share &&
-        <button className="import-button" disabled={saving} onClick={openProfile}>Import</button>}>
+      <FilterCard title="Profile">
         {error && <p role="alert">{error}</p>}
         {!share && !error && <p role="status">Loading the shared profile...</p>}
         {share && <div className="share-preview">
+          <button className="import-button" style={{margin: "0 0 14px"}} disabled={saving} onClick={openProfile}>Import</button>
           <h2>{availableProfileName(share.profile.name)}</h2>
           <p className="share-meta">{[share.author && `by ${share.author}`, shared].filter(Boolean).join(", ")}</p>
           {share.description && <p className="share-description">{share.description}</p>}
