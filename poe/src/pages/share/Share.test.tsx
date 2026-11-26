@@ -178,16 +178,16 @@ describe("Share page", () => {
     expect(window.location.pathname).toBe(`/share/${share.id}`);
   });
 
-  it("hides a shared profile from the list, and from localStorage", async () => {
+  it("dismisses a shared profile from the list, and from localStorage", async () => {
     localStorage.setItem("sharedProfiles", JSON.stringify([
       {id: share.id, name, createdAt: share.createdAt}, {id: "mockLeague", name: "league start", createdAt: share.createdAt},
     ]));
     mount("/favorites");
-    fireEvent.click(await screen.findByRole("button", {name: `Hide ${name}`}));
+    fireEvent.click(await screen.findByRole("button", {name: `Dismiss ${name}`}));
     expect(screen.queryByText(name, {selector: "a strong"})).toBeNull();
     expect(JSON.parse(localStorage.getItem("sharedProfiles")!).map((shared: {id: string}) => shared.id)).toEqual(["mockLeague"]);
     expect(window.location.pathname).toBe("/favorites");
-    fireEvent.click(screen.getByRole("button", {name: "Hide league start"}));
+    fireEvent.click(screen.getByRole("button", {name: "Dismiss league start"}));
     expect(screen.queryByText("Shared profiles")).toBeNull();
     expect(localStorage.getItem("sharedProfiles")).toBe("[]");
   });

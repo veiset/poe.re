@@ -44,7 +44,7 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
   if (shares.length === 0) return null;
 
   // Takes the share off this list. It still exists, and its link still works.
-  const hide = (id: string) => {
+  const dismiss = (id: string) => {
     const kept = loadSharedProfiles(storagePrefix).filter((share) => share.id !== id);
     localStorage.setItem(storageKey(storagePrefix), JSON.stringify(kept));
     setShares(kept);
@@ -60,7 +60,8 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
               <span>{sharedAgo(createdAt)}</span>
               {typeof description === "string" && description && <p>{description}</p>}
             </Link>
-            <button type="button" onClick={() => hide(id)} aria-label={`Hide ${String(name)}`}>Hide</button>
+            <button type="button" onClick={() => dismiss(id)} aria-label={`Dismiss ${String(name)}`}
+                    title="Removes it from this list only. The link keeps working.">Dismiss</button>
           </li>)}
         </ul>
       </FilterCard>
