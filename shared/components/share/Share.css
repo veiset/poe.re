@@ -182,7 +182,7 @@
   display: block;
   overflow-wrap: anywhere;
   font-weight: normal;
-  color: var(--color-text-link);
+  color: var(--color-deep-text);
 }
 .shared-profiles a span {
   display: block;
