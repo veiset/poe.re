@@ -10,6 +10,7 @@ const Poe2Waystone = page(async () => ({default: (await import("../pages/wayston
 const Poe2Tablet = page(async () => ({default: (await import("../pages/tablet/Tablet")).Tablet}));
 const Poe2Relic = page(async () => ({default: (await import("../pages/relic/Relic")).Relic}));
 const Poe2Item = page(async () => ({default: (await import("../pages/item/Item")).Item}));
+const Share = page(() => import("../pages/share/Share"));
 const Favorites = page(() => import("../pages/favorites/Favorites"));
 const Privacy = page(async () => ({default: (await import("@shared/components/privacy/Privacy")).Privacy}));
 
@@ -27,6 +28,7 @@ export const Poe2Routes = () => {
         <Route path="tablet" element={<Poe2Tablet/>}/>
         <Route path="relic" element={<Poe2Relic/>}/>
         <Route path="item" element={<Poe2Item/>}/>
+        <Route path="share/:id" element={<Share/>}/>
         <Route path="privacy" element={<Privacy site="poe2.re"/>}/>
       </Route>
 

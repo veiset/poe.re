@@ -1,17 +1,7 @@
-// Shares as GET /api/share/<id> answers them. The dev server's mock API (poe/mockShareApi.ts) serves them,
+// Shares as GET /api/share/<id> answers them. The dev server's mock API (shared/mockShareApi.ts) serves them,
 // and tests and browser checks use them, so that every run sees the same shares.
-// No imports here: the Vite config loads this file.
-
-export interface ShareAnswer {
-  id: string;
-  game: string;
-  source: string;
-  author?: string;
-  description?: string;
-  createdAt: string;
-  imports: number;
-  profile: {name: string} & Record<string, unknown>;
-}
+// Only this type import here: the Vite config loads this file.
+import type {ShareAnswer} from "../../../../shared/components/share/ShareAnswer";
 
 export const shareFixtures = [
   {

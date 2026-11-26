@@ -1,19 +1,28 @@
 import type {Plugin} from 'vite';
-import {removedShareId, shareFixtures} from './src/pages/share/shareFixtures';
-import type {ShareAnswer} from './src/pages/share/shareFixtures';
+import type {ShareAnswer} from './components/share/ShareAnswer';
+
+interface MockShareApiOptions {
+  // The `game` of the shares made here, e.g. "poe2"
+  game: string;
+  // Before the app's localStorage keys, e.g. "poe2."
+  storagePrefix: string;
+  fixtures: readonly ShareAnswer[];
+  // An id that no share has
+  removedShareId: string;
+}
 
 /**
- * Answers /api/share on the dev server, as poe.re does (https://poe.re/api), from the share fixtures.
- * New shares are kept in memory until the server stops. It does not check what the real API checks,
+ * Answers /api/share on the dev server, as poe.re and poe2.re do (https://poe.re/api), from the app's share
+ * fixtures. New shares are kept in memory until the server stops. It does not check what the real API checks,
  * such as sizes, unknown fields and rate limits.
  *
  * GET /api/mock/seed fills the browser's list of shared profiles with the fixtures, and opens Favorites.
  */
-export function mockShareApi(): Plugin {
+export function mockShareApi({game, storagePrefix, fixtures, removedShareId}: MockShareApiOptions): Plugin {
   return {
     name: 'mock-share-api',
     configureServer(server) {
-      const shares = new Map<string, ShareAnswer>(shareFixtures.map((share) => [share.id, {...share}]));
+      const shares = new Map<string, ShareAnswer>(fixtures.map((share) => [share.id, {...share}]));
 
       server.middlewares.use('/api', (req, res) => {
         const json = (status: number, body: unknown) => {
@@ -23,11 +32,11 @@ export function mockShareApi(): Plugin {
         const path = (req.url ?? '').split('?')[0];
 
         if (req.method === 'GET' && path === '/mock/seed') {
-          const list = shareFixtures.map(({id, profile, createdAt}: ShareAnswer) => ({id, name: profile.name, createdAt}))
+          const list = fixtures.map(({id, profile, createdAt}) => ({id, name: profile.name, createdAt}))
             .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
             .concat({id: removedShareId, name: 'removed share', createdAt: '2026-10-02T09:00:00.000Z'});
           res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-          res.end(`<script>localStorage.setItem("sharedProfiles", ${JSON.stringify(JSON.stringify(list))}); location.replace("/favorites");</script>`);
+          res.end(`<script>localStorage.setItem(${JSON.stringify(`${storagePrefix}sharedProfiles`)}, ${JSON.stringify(JSON.stringify(list))}); location.replace("/favorites");</script>`);
         } else if (req.method === 'GET' && path.startsWith('/share/')) {
           const share = shares.get(path.slice('/share/'.length));
           if (!share) return json(404, {error: "This share doesn't exist or was removed"});
@@ -44,7 +53,7 @@ export function mockShareApi(): Plugin {
               }
               const id = `mock${Math.random().toString(36).slice(2, 8).padEnd(6, '0')}`;
               shares.set(id, {
-                id, game: 'poe', source, ...(author && {author}), ...(description && {description}),
+                id, game, source, ...(author && {author}), ...(description && {description}),
                 createdAt: new Date().toISOString(), imports: 0, profile,
               });
               json(201, {id});

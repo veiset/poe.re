@@ -4,11 +4,9 @@ import "@shared/components/profile/Profile.css";
 import ProfileEditBox from "@shared/components/profile/ProfileEditBox";
 import {deleteProfile, loadProfileNames, loadSettings, saveSettings, setSelectedProfile} from "../localStorage";
 import {Poe2ProfileContext} from "../layout/Poe2ProfileContext";
-import {defaultSettings, Settings} from "../settings";
-import ProfileExportBox from "@shared/components/profile/ProfileExportBox";
-import ProfileImportBox from "@shared/components/profile/ProfileImportBox";
-import {decodeProfile, encodeProfile} from "./ProfileTransfer";
-import {migrateProfile} from "../migration/migrations";
+import {defaultSettings} from "../settings";
+import ShareDialog from "@shared/components/share/ShareDialog";
+import {poe2Share} from "../pages/share/shareConfig";
 import {GGPKLanguage} from "@poe/utils/Languages";
 import type {Language} from "@shared/typedefs/Language";
 
@@ -21,8 +19,7 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
   const [profiles, setProfiles] = useState<string[]>(() => loadProfileNames());
   const [showNew, setShowNew] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
-  const [showExport, setShowExport] = useState(false);
-  const [showImport, setShowImport] = useState(false);
+  const [showShare, setShowShare] = useState(false);
   const [editName, setEditName] = useState("");
   const [copyCurrentProfile, setCopyCurrentProfile] = useState(false);
   const [warning, setWarning] = useState<string | undefined>(undefined);
@@ -77,16 +74,6 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
     setProfiles(names);
     const next = names.includes("default") ? "default" : (names[0] ?? "default");
     changeProfile(next);
-  };
-
-  const importProfile = (settings: Settings) => {
-    // If the migration fails, the profile is saved on its old version and migrated on the next visit
-    migrateProfile(settings).catch(() => settings).then((migrated) => {
-      saveSettings(migrated);
-      setProfiles(loadProfileNames());
-      changeProfile(migrated.name);
-      setShowImport(false);
-    });
   };
 
   return (
@@ -157,24 +144,13 @@ const Poe2ProfileSelector = ({languageSelect = false}: Poe2ProfileSelectorProps)
         ))}
       </select>
       <div className="profile-actions">
-        <button className="export-button" onClick={() => {
-          setShowNew(false);
-          setShowEdit(false);
-          setShowImport(false);
-          setShowExport(true);
-        }}>Export</button>
         <button className="import-button" onClick={() => {
           setShowNew(false);
           setShowEdit(false);
-          setShowExport(false);
-          setShowImport(true);
-        }}>Import</button>
-
-        {showExport && <ProfileExportBox settings={loadSettings(currentProfile)} setShow={setShowExport}
-                                                encode={encodeProfile} />}
-        {showImport && <ProfileImportBox existingProfiles={profiles} setShow={setShowImport}
-                                                 onImport={importProfile} decode={decodeProfile}
-                                                 expectedGame="poe2" profileType="PoE2 profile" />}
+          setShowShare(true);
+        }}>Share</button>
+        {showShare && <ShareDialog config={poe2Share} settings={loadSettings(currentProfile)}
+                                   onClose={() => setShowShare(false)}/>}
       </div>
     </div>
   );

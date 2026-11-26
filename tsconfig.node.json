@@ -13,7 +13,9 @@
     "vite.config.base.ts",
     "vite.config.poe.ts",
     "vite.config.poe2.ts",
-    "poe/mockShareApi.ts",
-    "poe/src/pages/share/shareFixtures.ts"
+    "shared/mockShareApi.ts",
+    "shared/components/share/ShareAnswer.ts",
+    "poe/src/pages/share/shareFixtures.ts",
+    "poe2/src/pages/share/shareFixtures.ts"
   ]
 }

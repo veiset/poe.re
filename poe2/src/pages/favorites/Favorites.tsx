@@ -1,6 +1,8 @@
 import React, { lazy, Suspense, useContext, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Poe2Header from "@poe2/components/Poe2Header";
+import SharedProfiles from "@shared/components/share/SharedProfiles";
+import { poe2Share } from "@poe2/pages/share/shareConfig";
 import { FavoriteDialog } from "@shared/components/favorites/FavoriteDialog";
 import { FavoriteGroupDialog } from "@shared/components/favorites/FavoriteGroupDialog";
 import { StaticFavoriteDialog } from "@shared/components/favorites/StaticFavoriteDialog";
@@ -214,6 +216,7 @@ const Favorites = () => {
           </Suspense>
         )}
       </main>
+      <SharedProfiles storagePrefix={poe2Share.storagePrefix} />
       {details && detailsData && (
         <FavoriteDetailsDialog
           favorite={detailsData}

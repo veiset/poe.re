@@ -88,6 +88,8 @@ describe("Share page", () => {
   ])("goes to the first page the profile has settings for (%#)", async (body, page) => {
     answer.body = body;
     const replace = vi.fn();
+    // The stub is a copy of the location, so the address has to be the share's before it is made
+    window.history.replaceState({idx: 0}, "", `/share/${share.id}`);
     vi.stubGlobal("location", {...window.location, origin: window.location.origin, replace});
     mount();
     fireEvent.click(await open());
