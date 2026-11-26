@@ -32,7 +32,10 @@
   content: "";
   flex: 1;
   height: 1px;
-  background: linear-gradient(to right, var(--color-border-soft), transparent);
+}
+.share-preview h3::after,
+.share-page .filter-card-title-divider {
+  background: var(--color-border);
 }
 .share-preview h3,
 .share-page .filter-card-title {
