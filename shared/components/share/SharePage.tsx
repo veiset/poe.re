@@ -107,6 +107,9 @@ export default function SharePage<Settings extends {name: string}>({config}: {co
           </table>
         </div>}
       </FilterCard>
+      <p className="share-api-docs">
+        API docs: <a href="https://poe.re/api" target="_blank" rel="noopener noreferrer">https://poe.re/api</a>
+      </p>
     </div>
   );
 }

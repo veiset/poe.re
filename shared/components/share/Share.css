@@ -112,3 +112,11 @@
   opacity: 0.6;
   cursor: default;
 }
+.share-api-docs {
+  margin: 10px 2px 0;
+  color: var(--color-text-dim);
+  font-size: 12px;
+}
+.share-api-docs a {
+  color: var(--color-text-link);
+}
