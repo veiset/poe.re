@@ -74,6 +74,7 @@
   flex: 1;
   margin: 0 10px;
   border-bottom: 1px dotted var(--color-border-strong);
+  opacity: 0.45;
 }
 .share-preview td {
   color: var(--color-text-muted);
