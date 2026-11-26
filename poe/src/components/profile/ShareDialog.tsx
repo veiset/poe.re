@@ -44,9 +44,10 @@ const changedSettings = (delta: unknown): number =>
     ? Object.values(delta).reduce<number>((sum, value) => sum + changedSettings(value), 0)
     : 1;
 
-const sectionInfo = (section: Section, settings: SavedSettings): string => {
+// Undefined for a section that is as the defaults, which has nothing to share
+const sectionInfo = (section: Section, settings: SavedSettings): string | undefined => {
   const delta = createProfileDelta(settings[section.key], defaultSettings[section.key]);
-  if (delta === undefined) return "no changes";
+  if (delta === undefined) return undefined;
   const info = (section.info?.(settings) ?? []).filter(Boolean);
   return info.length > 0 ? info.join(", ") : count(changedSettings(delta), "setting") + " changed";
 };
@@ -65,6 +66,9 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
   const [sharing, setSharing] = useState(false);
   const [link, setLink] = useState("");
   const [copied, setCopied] = useState(false);
+
+  const changed = sections.filter((section) => sectionInfo(section, settings) !== undefined);
+  const unchanged = sections.filter((section) => !changed.includes(section));
 
   const share = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -116,12 +120,15 @@ export default function ShareDialog({settings, onClose}: ShareDialogProps) {
           <textarea value={description} maxLength={500} onChange={(event) => setDescription(event.target.value)}/>
         </label>
         <div className="favorite-dialog-field">Share
-          {sections.map((section) => <label key={section.key} style={{color: "var(--color-text)", cursor: "pointer"}}>
+          {changed.map((section) => <label key={section.key} style={{color: "var(--color-text)", cursor: "pointer"}}>
             <input type="checkbox" style={{width: "auto", marginRight: 8}} checked={!excluded.includes(section.key)}
                    onChange={() => setExcluded(excluded.includes(section.key)
                      ? excluded.filter((key) => key !== section.key) : [...excluded, section.key])}/>
             {section.label} <span className="favorite-dialog-help">({sectionInfo(section, settings)})</span>
           </label>)}
+          {unchanged.length > 0 && <span className="favorite-dialog-help">
+            Nothing to share: {unchanged.map(({label}) => label).join(", ")}
+          </span>}
         </div>
         <div className="favorite-dialog-error" role="alert">{error}</div>
         <div className="favorite-dialog-actions">

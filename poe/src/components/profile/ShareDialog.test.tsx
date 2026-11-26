@@ -26,12 +26,13 @@ describe("Share dialog", () => {
     vi.unstubAllGlobals();
   });
 
-  it("lists every section ticked, with what it holds", () => {
+  it("lists the changed sections ticked, with what they hold, and names the rest", () => {
     expect(screen.getAllByRole("checkbox").every((box) => (box as HTMLInputElement).checked)).toBe(true);
     expect(section(/Map mods/).parentElement).toHaveTextContent("Map mods (4 mods, quantity 80)");
     expect(section(/Gems/).parentElement).toHaveTextContent("Gems (1 gem)");
     expect(section(/Tattoo/).parentElement).toHaveTextContent("Tattoo (1 setting changed)");
-    expect(section(/Vendor/).parentElement).toHaveTextContent("Vendor (no changes)");
+    expect(screen.getAllByRole("checkbox")).toHaveLength(3);
+    expect(screen.getByText("Nothing to share: Favorites, Vendor, Items, Heist, Bestiary, Runegraft, Ultimatum")).toBeInTheDocument();
   });
 
   it("shares the settings that differ from the defaults, and shows the link", async () => {
