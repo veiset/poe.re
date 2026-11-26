@@ -80,6 +80,20 @@ describe("Share page", () => {
     expect(localStorage.getItem("selectedProfile")).toBe(name);
   });
 
+  it.each([
+    [shareFixtures[0], "/maps"],
+    [{...share, profile: {name: "tattoos and vendor", tattoo: {minValue: "5"}, vendor: {anySixLink: true}}}, "/tattoo"],
+    [shareFixtures[1], "/vendor"],
+    [{...share, profile: {name: "defaults"}}, "/favorites"],
+  ])("goes to the first page the profile has settings for (%#)", async (body, page) => {
+    answer.body = body;
+    const replace = vi.fn();
+    vi.stubGlobal("location", {...window.location, origin: window.location.origin, replace});
+    mount();
+    fireEvent.click(await open());
+    expect(replace).toHaveBeenCalledWith(page);
+  });
+
   it("keeps an existing profile of the same name, and opens the share beside it", async () => {
     localStorage.setItem("profiles", JSON.stringify({...profiles(), [name]: {...defaultSettings, name}}));
     mount();

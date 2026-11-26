@@ -17,12 +17,18 @@ dayjs.extend(relativeTime);
 interface SharedProfile {
   profile: SavedSettings;
   // What the profile holds, e.g. Map mods: "4 mods, quantity 80"
-  contents: {label: string, info: string[]}[];
+  contents: {key: string, label: string, info: string[]}[];
   // Anyone can send these, so they are only ever shown as text
   author?: string;
   description?: string;
   createdAt?: string;
 }
+
+// Where Import goes: the first of these pages that the profile has settings for, or else Favorites
+const landingPages = [
+  ["map", "/maps"], ["itemCrafting", "/items"], ["beast", "/beast"], ["tattoo", "/tattoo"], ["ultimatum", "/ultimatum"],
+  ["runegraft", "/runegraft"], ["heist", "/heist"], ["gems", "/gems"], ["vendor", "/vendor"],
+];
 
 const text = (value: unknown): string | undefined => typeof value === "string" && value ? value : undefined;
 
@@ -74,8 +80,9 @@ export default function Share() {
       const name = availableProfileName(share.profile.name);
       updateSettings(name, () => ({...share.profile, name}));
       setSelectedProfile(name);
+      const landing = landingPages.find(([key]) => share.contents.some((section) => section.key === key));
       // The page must mount with the new profile before its autosave effects run.
-      window.location.replace("/maps");
+      window.location.replace(landing?.[1] ?? "/favorites");
     } catch {
       setError("Could not save the profile. Check that browser storage is available and try again.");
       setSaving(false);

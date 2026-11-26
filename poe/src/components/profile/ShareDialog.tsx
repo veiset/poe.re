@@ -54,10 +54,10 @@ const sectionInfo = (section: Section, settings: SavedSettings): string[] | unde
 };
 
 /** The sections of a profile that differ from the defaults, with what each holds. */
-export const profileContents = (settings: SavedSettings): {label: string, info: string[]}[] =>
+export const profileContents = (settings: SavedSettings): {key: string, label: string, info: string[]}[] =>
   sections.flatMap((section) => {
     const info = sectionInfo(section, settings);
-    return info === undefined ? [] : [{label: section.label, info}];
+    return info === undefined ? [] : [{key: section.key, label: section.label, info}];
   });
 
 interface ShareDialogProps {
