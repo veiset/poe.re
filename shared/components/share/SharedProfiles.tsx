@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import {Link} from "react-router-dom";
 import FilterCard from "@shared/components/FilterCard/FilterCard";
 import dayjs from "dayjs";
@@ -40,8 +40,16 @@ export const saveSharedProfile = (storagePrefix: string, id: string, name: strin
 };
 
 export default function SharedProfiles({storagePrefix}: {storagePrefix: string}) {
-  const shares = loadSharedProfiles(storagePrefix);
+  const [shares, setShares] = useState(() => loadSharedProfiles(storagePrefix));
   if (shares.length === 0) return null;
+
+  // Takes the share off this list. It still exists, and its link still works.
+  const hide = (id: string) => {
+    const kept = loadSharedProfiles(storagePrefix).filter((share) => share.id !== id);
+    localStorage.setItem(storageKey(storagePrefix), JSON.stringify(kept));
+    setShares(kept);
+  };
+
   return (
     <div className="shared-profiles">
       <FilterCard title="Shared profiles">
@@ -52,6 +60,7 @@ export default function SharedProfiles({storagePrefix}: {storagePrefix: string})
               <span>{sharedAgo(createdAt)}</span>
               {typeof description === "string" && description && <p>{description}</p>}
             </Link>
+            <button type="button" onClick={() => hide(id)} aria-label={`Hide ${String(name)}`}>Hide</button>
           </li>)}
         </ul>
       </FilterCard>

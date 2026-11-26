@@ -139,13 +139,33 @@
   list-style: none;
 }
 .shared-profiles li {
+  position: relative;
   min-width: 0;
+}
+/* On the card's right side. It is not in the link, so it doesn't open the share. */
+.shared-profiles li button {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  padding: 2px 8px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background: none;
+  color: var(--color-text-dim);
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.shared-profiles li button:hover,
+.shared-profiles li button:focus-visible {
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
 }
 .shared-profiles a {
   display: block;
   box-sizing: border-box;
   height: 100%;
-  padding: 8px 12px;
+  padding: 8px 64px 8px 12px;
   border: 1px solid var(--color-border-strong);
   border-radius: 4px;
   background: rgba(255, 255, 255, 0.035);

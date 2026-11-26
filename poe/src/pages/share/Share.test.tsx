@@ -178,6 +178,20 @@ describe("Share page", () => {
     expect(window.location.pathname).toBe(`/share/${share.id}`);
   });
 
+  it("hides a shared profile from the list, and from localStorage", async () => {
+    localStorage.setItem("sharedProfiles", JSON.stringify([
+      {id: share.id, name, createdAt: share.createdAt}, {id: "mockLeague", name: "league start", createdAt: share.createdAt},
+    ]));
+    mount("/favorites");
+    fireEvent.click(await screen.findByRole("button", {name: `Hide ${name}`}));
+    expect(screen.queryByText(name, {selector: "a strong"})).toBeNull();
+    expect(JSON.parse(localStorage.getItem("sharedProfiles")!).map((shared: {id: string}) => shared.id)).toEqual(["mockLeague"]);
+    expect(window.location.pathname).toBe("/favorites");
+    fireEvent.click(screen.getByRole("button", {name: "Hide league start"}));
+    expect(screen.queryByText("Shared profiles")).toBeNull();
+    expect(localStorage.getItem("sharedProfiles")).toBe("[]");
+  });
+
   it("shows a message when the API can't be reached", async () => {
     answer.status = 0;
     mount();
