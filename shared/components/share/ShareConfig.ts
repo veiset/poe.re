@@ -34,6 +34,13 @@ export interface ShareConfig<Settings extends {name: string}> {
   saveProfile: (profile: Settings) => void;
 }
 
+/**
+ * The address of the app's share API. It is on the site itself, and the dev servers mock it there. A Cloudflare
+ * Pages preview (*.pages.dev) has none, so it uses the live site's, which allows those origins.
+ */
+export const shareApiUrl = (config: {site: string}): string =>
+  `${window.location.hostname.endsWith(".pages.dev") ? `https://${config.site}` : ""}/api/share`;
+
 /** "3 mods", "1 mod", or false for none. */
 export const count = (n: number, noun: string) => n > 0 && `${n} ${noun}${n === 1 ? "" : "s"}`;
 

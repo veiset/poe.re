@@ -65,6 +65,13 @@ describe("poe2 sharing", () => {
     expect(replace).toHaveBeenCalledWith("/waystone");
   });
 
+  it("uses the live site's API on a Cloudflare Pages preview", async () => {
+    window.history.replaceState({idx: 0}, "", `/share/${share.id}`);
+    vi.stubGlobal("location", {...window.location, origin: window.location.origin, hostname: "veiset-share-page.poe2-production.pages.dev"});
+    mount(`/share/${share.id}`);
+    await vi.waitFor(() => expect(fetch).toHaveBeenCalledWith(`https://poe2.re/api/share/${share.id}`), {timeout: 5000});
+  });
+
   it("does not open a poe.re share", async () => {
     answer.body = {...share, game: "poe"};
     mount(`/share/${share.id}`);

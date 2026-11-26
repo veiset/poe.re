@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "@shared/components/favorites/FavoriteDialog.css";
-import {sectionInfo} from "./ShareConfig";
+import {sectionInfo, shareApiUrl} from "./ShareConfig";
 import type {ShareConfig} from "./ShareConfig";
 import {saveSharedProfile} from "./SharedProfiles";
 
@@ -36,7 +36,7 @@ export default function ShareDialog<Settings extends {name: string}>({config, se
     [...config.keep, ...sections.map(({key}) => key).filter((key) => !excluded.includes(key))]
       .forEach((key) => { shared[key] = settings[key]; });
     try {
-      const response = await fetch("/api/share", {
+      const response = await fetch(shareApiUrl(config), {
         method: "POST",
         headers: {"Content-Type": "application/json"},
         body: JSON.stringify({

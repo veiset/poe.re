@@ -5,7 +5,7 @@ import "./Share.css";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import {availableProfileName} from "@shared/components/profile/availableProfileName";
-import {profileContents} from "./ShareConfig";
+import {profileContents, shareApiUrl} from "./ShareConfig";
 import type {ShareConfig} from "./ShareConfig";
 
 dayjs.extend(relativeTime);
@@ -28,7 +28,7 @@ export async function loadShare<Settings extends {name: string}>(
 ): Promise<SharedProfile<Settings> | string> {
   let share;
   try {
-    const response = await fetch(`/api/share/${encodeURIComponent(id)}`);
+    const response = await fetch(`${shareApiUrl(config)}/${encodeURIComponent(id)}`);
     if (response.status === 404) return "This share doesn't exist or was removed.";
     if (response.status === 429) return "Too many requests. Wait a minute and open the link again.";
     if (!response.ok) return "Could not load the share. Try again later.";
