@@ -32,7 +32,7 @@ describe("Share dialog", () => {
     expect(section(/Gems/).parentElement).toHaveTextContent("Gems (1 gem)");
     expect(section(/Tattoo/).parentElement).toHaveTextContent("Tattoo (1 setting changed)");
     expect(screen.getAllByRole("checkbox")).toHaveLength(3);
-    expect(screen.getByText("Nothing to share: Favorites, Vendor, Items, Heist, Bestiary, Runegraft, Ultimatum")).toBeInTheDocument();
+    expect(screen.getByText(/Nothing to share:/)).toHaveTextContent("Nothing to share:Favorites, Vendor, Items, Heist, Bestiary, Runegraft, Ultimatum");
   });
 
   it("shares the settings that differ from the defaults, and shows the link", async () => {
