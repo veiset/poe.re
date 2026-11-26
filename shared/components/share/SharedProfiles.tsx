@@ -15,7 +15,7 @@ const storageKey = (storagePrefix: string) => `${storagePrefix}sharedProfiles`;
 export const loadSharedProfiles = (storagePrefix: string): SharedProfile[] => {
   try {
     const stored = JSON.parse(localStorage.getItem(storageKey(storagePrefix)) ?? "[]");
-    return Array.isArray(stored) ? stored.filter((share) => typeof share?.id === "string") : [];
+    return Array.isArray(stored) ? stored.filter((share) => typeof share?.id === "string" && /^[A-Za-z0-9_-]+$/.test(share.id)) : [];
   } catch {
     return [];
   }

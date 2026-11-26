@@ -106,6 +106,13 @@ describe("Share dialog", () => {
     expect(screen.getByRole("button", {name: "Share"})).toBeEnabled();
   });
 
+  it("does not make a link of an id that is not plain characters", async () => {
+    answer = {status: 201, body: {id: "x/../../maps?a=<script>"}};
+    share();
+    expect(await screen.findByText("Could not share the profile. Try again later.")).toBeInTheDocument();
+    expect(localStorage.getItem("sharedProfiles")).toBeNull();
+  });
+
   it("shows a message when the API can't be reached", async () => {
     vi.mocked(fetch).mockRejectedValue(new TypeError("Failed to fetch"));
     share();

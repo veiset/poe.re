@@ -46,7 +46,8 @@ export default function ShareDialog<Settings extends {name: string}>({config, se
         }),
       });
       const answer = await response.json().catch(() => ({}));
-      if (response.ok && typeof answer.id === "string") {
+      // The id becomes part of a link, so only an id of plain characters is taken
+      if (response.ok && typeof answer.id === "string" && /^[A-Za-z0-9_-]+$/.test(answer.id)) {
         setLink(`${window.location.origin}/share/${answer.id}`);
         saveSharedProfile(config.storagePrefix, answer.id, shared.name);
         localStorage.setItem(authorKey, author.trim());

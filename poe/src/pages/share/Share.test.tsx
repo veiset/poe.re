@@ -115,6 +115,31 @@ describe("Share page", () => {
     expect(profiles().old).toMatchObject({version: defaultSettings.version, map: {badIds: ids}});
   });
 
+  it("shows HTML and scripts in a share as text, in the preview and after it is imported", async () => {
+    const html = "<img src=x onerror=alert(1)><script>alert(2)</script>";
+    answer.body = {...share, author: html, description: html, profile: {
+      ...share.profile, name: html,
+      favorites: [{schemaVersion: 1, kind: "static", id: "f1", name: html, description: html, color: "red;background:url(javascript:alert(3))",
+        icon: html, tags: [html], regex: html}],
+    }};
+    localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name: html, createdAt: html}, {id: "javascript:alert(4)", name: "x", createdAt: ""}]));
+    const page = mount();
+    const button = await open();
+    expect(screen.getByRole("heading", {name: html})).toBeInTheDocument();
+    expect(document.querySelector(".share-description")!.textContent).toBe(html);
+    expect(document.querySelectorAll(".share-page img, .share-page script")).toHaveLength(0);
+    fireEvent.click(button);
+    const favorite = profiles()[html].favorites[0];
+    expect(favorite.color).toMatch(/^#[0-9a-f]{6}$/);
+    expect(Array.from(favorite.icon)).toHaveLength(4);
+    page.unmount();
+    mount("/favorites");
+    expect(await screen.findByRole("link", {name: html})).toHaveAttribute("href", `/share/${share.id}`);
+    await screen.findByRole("option", {name: html});
+    expect(document.querySelectorAll("main img[src='x'], script:not([src])")).toHaveLength(0);
+    expect(document.querySelectorAll("a[href^='javascript']")).toHaveLength(0);
+  });
+
   it("shows the author and description as plain text", async () => {
     answer.body = {...share, author: "<img src=x onerror=alert(1)>", description: {html: "<b>x</b>"}};
     mount();
