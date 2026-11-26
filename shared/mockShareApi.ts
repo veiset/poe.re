@@ -32,7 +32,7 @@ export function mockShareApi({game, storagePrefix, fixtures, removedShareId}: Mo
         const path = (req.url ?? '').split('?')[0];
 
         if (req.method === 'GET' && path === '/mock/seed') {
-          const list = fixtures.map(({id, profile, createdAt}) => ({id, name: profile.name, createdAt}))
+          const list = fixtures.map(({id, profile, createdAt, description}): Record<string, string> => ({id, name: profile.name, createdAt, ...(description && {description})}))
             .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
             .concat({id: removedShareId, name: 'removed share', createdAt: '2026-10-02T09:00:00.000Z'});
           res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});

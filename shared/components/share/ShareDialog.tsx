@@ -49,7 +49,7 @@ export default function ShareDialog<Settings extends {name: string}>({config, se
       // The id becomes part of a link, so only an id of plain characters is taken
       if (response.ok && typeof answer.id === "string" && /^[A-Za-z0-9_-]+$/.test(answer.id)) {
         setLink(`${window.location.origin}/share/${answer.id}`);
-        saveSharedProfile(config.storagePrefix, answer.id, shared.name);
+        saveSharedProfile(config.storagePrefix, answer.id, shared.name, description.trim());
         localStorage.setItem(authorKey, author.trim());
       } else setError(typeof answer.error === "string" ? answer.error : "Could not share the profile. Try again later.");
     } catch {

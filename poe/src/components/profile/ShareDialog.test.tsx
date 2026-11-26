@@ -41,6 +41,12 @@ describe("Share dialog", () => {
     share();
     expect(await screen.findByDisplayValue(`${window.location.origin}/share/27ykeY8dL7`)).toBeInTheDocument();
     expect(JSON.parse(localStorage.getItem("sharedProfiles")!)).toEqual([{id: "27ykeY8dL7", name: "maps", createdAt: expect.any(String)}]);
+    cleanup();
+    render(<ShareDialog config={poeShare} settings={settings} onClose={() => {}}/>);
+    fireEvent.change(screen.getByLabelText(/Description/), {target: {value: "T17 juicing"}});
+    share();
+    await screen.findByRole("button", {name: "Copy link"});
+    expect(JSON.parse(localStorage.getItem("sharedProfiles")!)[0]).toMatchObject({name: "maps", description: "T17 juicing"});
     expect(fetch).toHaveBeenCalledWith("/api/share", expect.objectContaining({method: "POST", headers: {"Content-Type": "application/json"}}));
     expect(body()).toEqual({
       source: "poe.re",

@@ -130,24 +130,21 @@
   box-sizing: border-box;
   width: min(570px, 100%);
 }
-/* One row for each share: its name, and when it was shared at the right edge */
+/* Each share is its name, and under it when it was shared and the start of its description */
 .shared-profiles ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
 .shared-profiles li {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 7px 0;
-  overflow-wrap: anywhere;
+  padding: 8px 0;
 }
 .shared-profiles li + li {
   border-top: 1px solid var(--color-border);
 }
 .shared-profiles a {
+  display: block;
+  overflow-wrap: anywhere;
   color: var(--color-text-link);
   text-decoration: none;
 }
@@ -155,9 +152,13 @@
   text-decoration: underline;
 }
 .shared-profiles li span {
-  flex-shrink: 0;
+  display: block;
+  margin-top: 2px;
+  overflow: hidden;
   color: var(--color-text-dim);
   font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*
  * An empty Favorites page fills the window to centre its "No favorites yet". With shared profiles under it, it is

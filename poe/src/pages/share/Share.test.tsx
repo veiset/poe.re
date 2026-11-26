@@ -169,10 +169,10 @@ describe("Share page", () => {
   });
 
   it("lists the shares made in this browser under Favorites, linking to their share page", async () => {
-    localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name, createdAt: share.createdAt}]));
+    localStorage.setItem("sharedProfiles", JSON.stringify([{id: share.id, name, createdAt: share.createdAt, description: share.description}]));
     mount("/favorites");
     const link = await screen.findByRole("link", {name});
-    expect(link.parentElement).toHaveTextContent(`${name}shared 2026-11-20`);
+    expect(link.parentElement).toHaveTextContent(new RegExp(`^${name}.+ ago, T17 juicing, 8-mod maps\\.`));
     fireEvent.click(link);
     await open();
     expect(window.location.pathname).toBe(`/share/${share.id}`);
