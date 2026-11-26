@@ -57,9 +57,10 @@
   gap: 18px;
   margin: 28px 0 20px;
 }
-/* The heading's own margins are uneven, which puts the button off its centre */
+/* The heading's own margins are uneven, which puts the button off its centre, and its padding indents it from the card */
 .share-heading h1 {
   margin: 0;
+  padding: 0;
 }
 .share-import {
   padding: 7px 22px;
