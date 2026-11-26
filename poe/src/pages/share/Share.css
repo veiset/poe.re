@@ -45,7 +45,7 @@
   margin: 0;
   white-space: pre-wrap;
 }
-/* Each row is its label, a faint dotted leader, and its value at the right edge */
+/* Each row is its label, a faint dotted leader up to the values' column, and its value */
 .share-preview table {
   display: block;
   margin: 0 0 8px;
@@ -64,7 +64,7 @@
   font-weight: normal;
 }
 .share-preview th {
-  flex: 1;
+  flex: 0 0 170px;
   display: flex;
   align-items: baseline;
   white-space: nowrap;
@@ -77,8 +77,9 @@
   opacity: 0.45;
 }
 .share-preview td {
+  flex: 1;
   color: var(--color-text-muted);
-  text-align: right;
+  text-align: left;
 }
 .share-heading {
   display: flex;
