@@ -15,6 +15,7 @@ const MovedContent = page(() => import("../pages/moved/MovedContent"));
 const Heist = page(() => import("../pages/heist/Heist"));
 const Beast = page(() => import("../pages/beast/Beast"));
 const Tattoo = page(() => import("../pages/tattoo/Tattoo"));
+const DivinationCards = page(() => import("../pages/divination/DivinationCards"));
 const Runegraft = page(() => import("../pages/runegraft/Runegraft"));
 const Favorites = page(() => import("../pages/favorites/Favorites"));
 const Ultimatum = page(() => import("../pages/ultimatum/Ultimatum"));
@@ -52,6 +53,7 @@ export const Poe1Routes = () => {
           <RemovedContent title="[Removed in 3.30] Scarabs" reason="Scarabs have been removed from the game and replaced by Threads."/>
         }/>
         <Route path="tattoo" element={<Tattoo/>}/>
+        <Route path="divination" element={<DivinationCards/>}/>
         <Route path="runegraft" element={<Runegraft/>}/>
         <Route path="ultimatum" element={<Ultimatum/>}/>
         <Route path="privacy" element={<Privacy site="poe.re"/>}/>
