@@ -1,0 +1,103 @@
+.divination-price-info {
+  margin: 8px 12px;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.divination-options-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 12px;
+}
+
+.divination-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.divination-field input {
+  width: 100px;
+  padding: 6px 10px;
+}
+
+.divination-action-button {
+  padding: 8px 14px;
+  border: 0;
+  border-radius: 3px;
+  background: var(--color-accent);
+  color: #fff;
+  cursor: pointer;
+}
+
+.divination-action-button:hover {
+  background: var(--color-accent-hover);
+}
+
+.divination-action-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.divination-card {
+  width: calc(100% - 24px);
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 14px 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 4px;
+  background: var(--color-card-bg);
+}
+
+.divination-card h2 {
+  margin: 0 0 8px;
+  padding: 0 4px 12px;
+  border-bottom: 1px solid var(--color-border-soft);
+  color: var(--color-deep-text);
+  font-size: 16px;
+}
+
+.divination-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+  gap: 2px 12px;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.divination-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 3px;
+  overflow-wrap: anywhere;
+}
+
+.divination-item > :first-child {
+  flex: 1;
+}
+
+.divination-price {
+  color: #ea8269;
+  white-space: nowrap;
+}
+
+.divination-item-selected {
+  background: #c0ecfa;
+  color: #000;
+}
+
+.divination-item-selected .divination-price {
+  color: #713b12;
+}
+
+.divination-included {
+  font-size: 12px;
+}

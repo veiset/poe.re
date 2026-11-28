@@ -124,6 +124,7 @@ export interface SavedSettings {
   vendor: VendorSettings;
   gems: GemsSettings;
   scarab: ScarabSettings;
+  divination: DivinationSettings;
   itemCrafting: ItemCraftingSettings;
   tattoo: TattooSettings;
   runegraft: RunegraftSettings;
@@ -272,6 +273,11 @@ export interface ScarabSettings {
 export interface TattooSettings {
   minValue: string;
   maxValue: string;
+}
+
+export interface DivinationSettings {
+  minPrice: string;
+  maxPrice: string;
 }
 
 export interface VendorSettings {
@@ -597,6 +603,10 @@ export const defaultSettings: SavedSettings = {
     minPrice: "0.00",
   },
   itemCrafting: itemCraftingDefault,
+  divination: {
+    minPrice: "0",
+    maxPrice: "999",
+  },
   tattoo: {
     minValue: "",
     maxValue: "",

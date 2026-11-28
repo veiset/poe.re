@@ -7,6 +7,7 @@ import heistIcon from "@shared/img/linkicons/blueprint.png";
 import gemIcon from "@shared/img/gem.png";
 import beastIcon from "@shared/img/BestiaryOrbFull.png";
 import tattooIcon from "@shared/img/tattoo.png";
+import divinationCardIcon from "@shared/img/divination-card.png";
 import runegraftIcon from "@shared/img/runegraft.png";
 import ultimatumIcon from "@shared/img/linkicons/compass.png";
 import favoriteIcon from "@shared/img/linkicons/favorite.svg";
@@ -20,6 +21,7 @@ const items: NavigationItem[] = [
   {text: "Heist", icon: heistIcon, route: "/heist"},
   {text: "Bestiary", icon: beastIcon, route: "/beast"},
   {text: "Tattoo", icon: tattooIcon, route: "/tattoo"},
+  {text: "Divination Card", icon: divinationCardIcon, route: "/divination"},
   {text: "Runegraft", icon: runegraftIcon, route: "/runegraft"},
   {text: "Ultimatum", icon: ultimatumIcon, route: "/ultimatum"},
 ];

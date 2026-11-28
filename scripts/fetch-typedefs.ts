@@ -13,7 +13,9 @@ const TYPEDEFS_URL = `${DATA_URL}/typedefs`;
 const OUTPUT_DIR = path.join(__dirname, '../shared/typedefs');
 
 async function download(url: string): Promise<Buffer> {
-  const response = await fetch(url);
+  const response = await fetch(url, {
+    headers: {"User-Agent": "fetch-typedefs/1.0 (terminal)"},
+  });
   if (!response.ok) {
     throw new Error(`Failed to fetch ${url}: ${response.status} ${response.statusText}`);
   }
